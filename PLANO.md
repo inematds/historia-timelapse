@@ -5,7 +5,7 @@ O Nei pediu para aprender a fazer histórias no formato do vídeo de timelapse 3
 
 ## O que já existe
 - Motor completo e dados de Porto Alegre (ver README).
-- Piloto narrado de ~95 s em 4 versões (bot v3: msg 2189, 2191, 2197, 2199). **Nenhuma publicada.**
+- Piloto narrado de ~95 s em 4 versões (bot v3: msg 2189, 2191, 2197, 2199). **A v4 foi publicada no lives10 (eventosextremos-inema) em 21/10 a pedido do Nei: https://www.youtube.com/watch?v=MBBZXnTh6Lg** (link no inemaytbot, msg 2537).
 - 4 revisões independentes (notas 6, 6, 7,5 e 8); a v4 foi aprovada pelo revisor e **reprovada pelo Nei** → `CORRECOES-NEI.md`.
 
 ## Decisões da conversa de 21/10 (ainda não executadas)
