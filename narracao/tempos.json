@@ -1,0 +1,56 @@
+{
+ "capa": {
+  "dur": 6.475,
+  "wav": "/home/nmaldaner/projetos/output/historia-poa/narracao/build/capa.wav",
+  "texto": "Duas vezes, o Guaíba tomou Porto Alegre. Pra entender por quê, a gente volta duzentos e cinquenta anos.",
+  "ouvido": "Duas vezes, o Guaíba tomou Porto Alegre. Para entender por que, a gente volta 250 anos."
+ },
+ "nasce": {
+  "dur": 9.193,
+  "wav": "/home/nmaldaner/projetos/output/historia-poa/narracao/build/nasce.wav",
+  "texto": "Em mil setecentos e setenta e dois, na ponta desta península, casais açorianos formam uma freguesia. Um ano depois, ela já é a capital.",
+  "ouvido": "Em 1772, na ponta desta península, casais açorianos formam uma freguesia. Um ano depois, ela já é a capital."
+ },
+ "cerco": {
+  "dur": 10.393,
+  "wav": "/home/nmaldaner/projetos/output/historia-poa/narracao/build/cerco.wav",
+  "texto": "Na Revolução Farroupilha, Porto Alegre fica com o Império. Resiste a três cercos, até mil oitocentos e quarenta, e ganha o título de Leal e Valerosa.",
+  "ouvido": "Na Revolução Farroupilha, Porto Alegre fica com o Império, resiste a três cercos até 1840 e ganha o título de Leal e Valerosa."
+ },
+ "cresce": {
+  "dur": 6.642,
+  "wav": "/home/nmaldaner/projetos/output/historia-poa/narracao/build/cresce.wav",
+  "texto": "Chegam o trem, o bonde, as fábricas. Em mil novecentos e quarenta, já são duzentos e setenta e dois mil moradores.",
+  "ouvido": "Chegam o trem, o bonde, as fábricas. Em 1940, já são 272 mil moradores."
+ },
+ "cheia1941": {
+  "dur": 8.847,
+  "wav": "/home/nmaldaner/projetos/output/historia-poa/narracao/build/cheia1941.wav",
+  "texto": "Então, em maio de mil novecentos e quarenta e um, o Guaíba sobe até quatro metros e setenta e seis. Setenta mil pessoas perdem a casa.",
+  "ouvido": "Então, em maio de 1941, o Guaíba sobe até 4 ,76 metros. 70 mil pessoas perdem a casa."
+ },
+ "muro": {
+  "dur": 7.179,
+  "wav": "/home/nmaldaner/projetos/output/historia-poa/narracao/build/muro.wav",
+  "texto": "A cidade reage: aterra o Guaíba e constrói um muro de concreto de mais de dois quilômetros e meio na frente do Centro.",
+  "ouvido": "A cidade reage, aterra o Guaíba e constrói um muro de concreto de mais de 2 ,5 km na frente do centro."
+ },
+ "pico": {
+  "dur": 4.49,
+  "wav": "/home/nmaldaner/projetos/output/historia-poa/narracao/build/pico.wav",
+  "texto": "Em dois mil e dez, Porto Alegre passa de um milhão e quatrocentos mil moradores.",
+  "ouvido": "Em 2010, Porto Alegre passa de 1 milhão e 400 mil moradores."
+ },
+ "cheia2024": {
+  "dur": 12.913,
+  "wav": "/home/nmaldaner/projetos/output/historia-poa/narracao/build/cheia2024.wav",
+  "texto": "Maio de dois mil e vinte e quatro. O Guaíba chega a cinco metros e trinta e sete, a maior cheia já medida. A água entra pelas comportas e cobre quase um terço da cidade.",
+  "ouvido": "Maio de 2024. O Guaíba chega a 5 metros e 37 a maior cheia já medida. A água entra pelas comportas e cobre quase um terço da cidade."
+ },
+ "fecho": {
+  "dur": 6.237,
+  "wav": "/home/nmaldaner/projetos/output/historia-poa/narracao/build/fecho.wav",
+  "texto": "Essa é Porto Alegre. Duzentos e cinquenta anos, duas cheias, e uma cidade que não desiste.",
+  "ouvido": "Essa é Porto Alegre. 250 anos, duas cheias e uma cidade que não desiste."
+ }
+}

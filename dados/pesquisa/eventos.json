@@ -1,0 +1,167 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-21",
+    "coordenadas": "lat/lon de Wikipédia (prop. coordinates) ou OpenStreetMap/Nominatim — campo local.coord_fonte diz qual",
+    "nota": "10 candidatos principais + 2 de reserva. Escolher 5–6."
+  },
+  "eventos": [
+    {
+      "id": "casais-1752",
+      "ano": 1752,
+      "data_exata": "janeiro de 1752 (60 casais); novas levas por volta de junho de 1752",
+      "titulo_curto_PT": "CHEGAM OS AÇORIANOS",
+      "legenda": "60 casais dos Açores desembarcam no Porto de Viamão — nasce o Porto dos Casais",
+      "local": {"nome": "Largo dos Açorianos (junto à antiga foz do Arroio Dilúvio, onde ficava o atracadouro; terra firme em 1752 — ponto aproximado)", "lat": -30.0380933, "lon": -51.2284117, "coord_fonte": "OSM/Nominatim"},
+      "recurso_visual": "barcos chegando pela água; primeiros pontos de luz na ponta da península",
+      "numero_impacto": "60 CASAIS",
+      "fontes": ["https://biblioteca.ibge.gov.br/visualizacao/dtb/riograndedosul/portoalegre.pdf", "https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_Porto_Alegre"],
+      "confianca": "alta",
+      "obs": "IBGE/DTB: 60 casais (~300 pessoas) chegaram em jan/1752. ptwiki: ~500 pessoas se fixaram em 1752. Não é a data oficial de fundação."
+    },
+    {
+      "id": "fundacao-1772",
+      "ano": 1772,
+      "data_exata": "26/03/1772",
+      "titulo_curto_PT": "NASCE PORTO ALEGRE",
+      "legenda": "26 de março de 1772: o povoado vira Freguesia de São Francisco do Porto dos Casais",
+      "local": {"nome": "Praça da Matriz (Praça Marechal Deodoro)", "lat": -30.0328553, "lon": -51.2301234, "coord_fonte": "OSM/Nominatim"},
+      "recurso_visual": "marco/pin pulsando + traçado do quadrilátero urbano (~141 ha separados em 1772)",
+      "numero_impacto": "26/03/1772",
+      "fontes": ["https://biblioteca.ibge.gov.br/visualizacao/dtb/riograndedosul/portoalegre.pdf", "https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_Porto_Alegre"],
+      "confianca": "alta",
+      "obs": "Data OFICIAL de fundação = criação da freguesia (provisão régia de 26/03/1772). 1752 é a chegada dos casais."
+    },
+    {
+      "id": "capital-1773",
+      "ano": 1773,
+      "data_exata": "24/07/1773 (Aviso do governador, segundo IBGE/DTB) — ptwiki diz 25/07/1773",
+      "titulo_curto_PT": "VIRA CAPITAL",
+      "legenda": "1773: o governador Marcelino de Figueiredo traz a sede da capitania de Viamão",
+      "local": {"nome": "Palácio Piratini (área do antigo Palácio de Barro)", "lat": -30.03388889, "lon": -51.23083333, "coord_fonte": "en.wikipedia (Piratini Palace)"},
+      "recurso_visual": "coroa/selo de capital; linha animada Viamão → Porto Alegre",
+      "numero_impacto": "1773",
+      "fontes": ["https://biblioteca.ibge.gov.br/visualizacao/dtb/riograndedosul/portoalegre.pdf", "https://pt.wikipedia.org/wiki/Porto_Alegre"],
+      "confianca": "alta",
+      "obs": "Ano certo; dia diverge (24 × 25 de julho). Na narração, dizer só '1773' ou 'julho de 1773'. Nome muda para N. Sra. Madre de Deus de Porto Alegre no mesmo ano."
+    },
+    {
+      "id": "farrapos-cerco-1836",
+      "ano": 1836,
+      "data_exata": "ocupada pelos farroupilhas 21/09/1835; retomada pelos imperiais 15/06/1836; três cercos jun/1836–dez/1840; título 'Leal e Valerosa' pelo Decreto nº 103 de 19/10/1841",
+      "titulo_curto_PT": "A CIDADE SITIADA",
+      "legenda": "Retomada pelo Império em 1836, resiste a 3 cercos farroupilhas até 1840",
+      "local": {"nome": "Azenha (ponte onde houve o 1º combate, 20/09/1835)", "lat": -30.0475728, "lon": -51.2137378, "coord_fonte": "OSM/Nominatim (Avenida da Azenha)"},
+      "recurso_visual": "cerco/tropas: linha de trincheiras/muralha em volta do núcleo; mancha urbana CONGELADA até 1845",
+      "numero_impacto": "LEAL E VALEROSA",
+      "fontes": ["https://biblioteca.ibge.gov.br/visualizacao/dtb/riograndedosul/portoalegre.pdf", "https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_Porto_Alegre", "https://en.wikipedia.org/wiki/Third_siege_of_Porto_Alegre", "https://anpuh.org.br/uploads/anais-simposios/pdf/2019-01/1548856594_103adb163f764853cc0a20dd6d39a431.pdf"],
+      "confianca": "alta",
+      "obs": "ptwiki 'Porto Alegre' diz cercos 'até 1838'; enwiki e artigo ANPUH: jun/1836–dez/1840 (adotado). Malha urbana só volta a crescer em 1845 com a derrubada das muralhas (ptwiki). Grafia oficial do título no IBGE: 'Leal e Valerosa'."
+    },
+    {
+      "id": "cais-aterro-1911",
+      "ano": 1911,
+      "data_exata": "1911–1913 (1º trecho, frente à Praça da Alfândega); pórtico e armazéns A/B 1919–1922; demais armazéns 1917–1927",
+      "titulo_curto_PT": "A CIDADE AVANÇA NO RIO",
+      "legenda": "Aterro e Cais do Porto empurram a margem do Guaíba; o Centro triplica de área",
+      "local": {"nome": "Pórtico Central do Cais Mauá", "lat": -30.0274362, "lon": -51.2319968, "coord_fonte": "OSM/Nominatim"},
+      "recurso_visual": "aterro avançando: faixa de terra crescendo sobre a água ao longo da Av. Mauá",
+      "numero_impacto": "~300 M DE MARGEM",
+      "fontes": ["https://pt.wikipedia.org/wiki/Cais_Mau%C3%A1", "https://www.ihu.unisinos.br/639540-em-quase-dois-seculos-porto-alegre-aterrou-trechos-do-guaiba-para-triplicar-o-centro-historico"],
+      "confianca": "media",
+      "obs": "'~300 m' é o avanço total da margem desde a Rua dos Andradas (Folha/IHU 2024), somando aterros do séc. XIX e XX — não só o do cais. Datas do cais: ptwiki Cais Mauá."
+    },
+    {
+      "id": "gasometro-1928",
+      "ano": 1928,
+      "data_exata": "15/11/1928 (inauguração; pedra fundamental 16/04/1926)",
+      "titulo_curto_PT": "NASCE O GASÔMETRO",
+      "legenda": "Usina do Gasômetro inaugurada: 20 mil kW e chaminé à beira do Guaíba",
+      "local": {"nome": "Usina do Gasômetro", "lat": -30.0340842, "lon": -51.2410902, "coord_fonte": "OSM/Nominatim"},
+      "recurso_visual": "chaminé subindo + luzes da cidade acendendo em onda",
+      "numero_impacto": "20 MIL kW",
+      "fontes": ["https://pt.wikipedia.org/wiki/Usina_do_Gas%C3%B4metro"],
+      "confianca": "media",
+      "obs": "Fonte única (ptwiki, citando IPHAE). Era o 'novo Gasômetro' — havia geração elétrica antes (CEERG 1923, usinas anteriores): não dizer que a cidade 'ganhou luz' em 1928. Altura da chaminé não verificada — não usar número de altura."
+    },
+    {
+      "id": "enchente-1941",
+      "ano": 1941,
+      "data_exata": "pico em 08/05/1941; cidade inundada ~22 dias (fim de abril a meados de maio)",
+      "titulo_curto_PT": "A CIDADE AFUNDA",
+      "legenda": "Maio de 1941: Guaíba chega a 4,76 m e 70 mil pessoas ficam sem casa",
+      "local": {"nome": "Cais Mauá / Centro Histórico", "lat": -30.0275, "lon": -51.23194, "coord_fonte": "pt.wikipedia (Cais Mauá)"},
+      "recurso_visual": "água sobe até a cota 4,76 m cobrindo o Centro; barcos nas ruas",
+      "numero_impacto": "4,76 M",
+      "fontes": ["https://pt.wikipedia.org/wiki/Enchente_de_1941_em_Porto_Alegre", "https://en.wikipedia.org/wiki/1941_Porto_Alegre_floods", "https://pt.wikipedia.org/wiki/Muro_da_Mau%C3%A1", "https://www.migalhas.com.br/quentes/407478/ha-83-anos-70-mil-pessoas-ficaram-desalojadas-apos-chuvas-no-rs"],
+      "confianca": "alta",
+      "obs": "4,76 m (Wikipédia/IBGE-era) × 4,75 m (parte da imprensa). 70 mil desabrigados ≈ 1/4 dos 272 mil habitantes (ptwiki, cita Guimaraens 'A Enchente de 1941'); enwiki 'History' fala em 80 mil. Data do pico 08/05 vem de imprensa (2024) — confianca media para o dia."
+    },
+    {
+      "id": "muro-maua-1974",
+      "ano": 1974,
+      "data_exata": "obra 1971–1974 (convênio DNOS–Estado–Prefeitura formalizado em 28/04/1973); conclusão oficial 1974",
+      "titulo_curto_PT": "O MURO CONTRA O RIO",
+      "legenda": "Muro da Mauá: 2.647 m de concreto e 3 m de altura para nunca repetir 1941",
+      "local": {"nome": "Avenida Mauá", "lat": -30.0265931, "lon": -51.2292419, "coord_fonte": "OSM/Nominatim"},
+      "recurso_visual": "muro se erguendo como barreira cinza entre o cais e a cidade",
+      "numero_impacto": "2.647 M",
+      "fontes": ["https://pt.wikipedia.org/wiki/Muro_da_Mau%C3%A1", "https://www.jornaldocomercio.com/_conteudo/geral/2021/05/792430-como-a-enchente-de-1941-gerou-o-muro-da-maua.html", "https://ahpoa.blogspot.com/2015/06/fontes-de-pesquisa-sobre-o-muro-da-maua.html"],
+      "confianca": "alta",
+      "obs": "O muro é parte de um sistema maior de diques e casas de bombas (pós-1941 e pós-1967)."
+    },
+    {
+      "id": "fsm-2001",
+      "ano": 2001,
+      "data_exata": "25–30/01/2001",
+      "titulo_curto_PT": "O MUNDO VEM PRA CÁ",
+      "legenda": "1º Fórum Social Mundial: delegados de mais de 100 países em Porto Alegre",
+      "local": {"nome": "PUCRS (principal sede do FSM 2001 — confirmar)", "lat": -30.05778, "lon": -51.17444, "coord_fonte": "pt.wikipedia (PUCRS)"},
+      "recurso_visual": "linhas/arcos de conexão saindo de POA para o globo",
+      "numero_impacto": "117 PAÍSES",
+      "fontes": ["https://pt.wikipedia.org/wiki/F%C3%B3rum_Social_Mundial", "https://siac.fpabramo.org.br/uploads/acervo/J_EM_TEMPO_2001_0320.pdf", "https://repositorio.ufmg.br/bitstream/1843/VCSA-6XYQDP/2/terceiro_capitulo.pdf"],
+      "confianca": "media",
+      "obs": "Participantes divergem: 10–15 mil (ptwiki), 16 mil credenciados (Em Tempo), 18 mil (Conselho do FSM via UFMG). Países: 117 (Em Tempo) ou ~120. Datas: 25–30 (maioria) × 25–31. Sede na PUCRS não confirmada nas fontes lidas."
+    },
+    {
+      "id": "enchente-2024",
+      "ano": 2024,
+      "data_exata": "pico na tarde de 05/05/2024 (chuvas desde 27/04/2024); cota de 1941 superada em 03/05/2024",
+      "titulo_curto_PT": "A ÁGUA VOLTA AO CENTRO",
+      "legenda": "Maio de 2024: Guaíba bate 5,37 m, comportas falham e a água cobre quase 30% da cidade",
+      "local": {"nome": "Cais Mauá (régua do Cais) — bairros mais atingidos: Sarandi, Humaitá, Centro", "lat": -30.0275, "lon": -51.23194, "coord_fonte": "pt.wikipedia (Cais Mauá); Sarandi -29.9985923,-51.1249560 e Humaitá -29.9794491,-51.1868816 via OSM"},
+      "recurso_visual": "água sobe acima da marca de 1941 (linha 4,76 m fica visível) e invade zona norte e Centro",
+      "numero_impacto": "5,37 M",
+      "fontes": ["https://www.ihu.unisinos.br/643260-guaiba-alcancou-5-37m-na-enchente-de-maio-diz-servico-geologico-do-brasil-em-novo-estudo", "https://pt.wikipedia.org/wiki/Enchentes_no_Rio_Grande_do_Sul_em_2024", "https://prefeitura.poa.br/sites/default/files/usu_doc/noticias/2024/06/06/oficio_presidencia.pdf", "https://www.jornaldocomercio.com/geral/2024/05/1157029-exercito-instala-novas-marcacoes-de-onde-chegou-o-guaiba-no-cais.html"],
+      "confianca": "alta",
+      "obs": "MECANISMO: o sistema (muro + diques) foi projetado para a cota ~6 m; 5,37 m ficou abaixo. A água entrou sobretudo por comportas sem manutenção e casas de bombas que pararam — NÃO dizer que 'passou por cima do muro' (fontes: https://ihu.unisinos.br/639233-negligencia-e-manejo-errado-das-comportas-pioraram-enchente-na-capital-entrevista-com-gino-gehling ; https://ihu.unisinos.br/639719-eu-nao-teria-aberto-as-comportas-diz-ex-diretor-do-dep-e-do-dmae). Cota: 5,37 m (SGB, marcas de cheia no Cais Mauá, estudo set/2024) × 5,35 m (régua Sema/ANA em tempo real) × 5,33 m (6/5, imprensa). Régua do Cais foi perdida. POA: 160.210 pessoas AFETADAS, 138 km² (~30% do território), 93.952 domicílios (ofício da Prefeitura, 06/06/2024, preliminar) — não há número oficial de desabrigados só de POA. RS: 183 mortes (DC 20/08/2024; 184 em abr/2025), ~2,4 milhões afetados, >442 mil fora de casa (~18 mil em abrigos + ~423 mil desalojados), 478 municípios."
+    }
+  ],
+  "reserva": [
+    {
+      "id": "trem-1874",
+      "ano": 1874,
+      "data_exata": "14/04/1874",
+      "titulo_curto_PT": "CHEGA O TREM",
+      "legenda": "1ª ferrovia do RS liga Porto Alegre a São Leopoldo, terra dos colonos alemães",
+      "local": {"nome": "Navegantes (estação/zona da ferrovia)", "lat": -29.99888889, "lon": -51.20083333, "coord_fonte": "en.wikipedia (Navegantes)"},
+      "recurso_visual": "linha férrea se desenhando para o norte; casas surgindo ao longo dela (Navegantes/São João)",
+      "numero_impacto": "33,7 KM",
+      "fontes": ["https://www.jornaldocomercio.com/jornal-cidades/2024/04/1151256-os-150-anos-da-primeira-ferrovia-inaugurada-no-rio-grande-do-sul.html", "https://pt.wikipedia.org/wiki/Navegantes_(Porto_Alegre)"],
+      "confianca": "media",
+      "obs": "Imigrantes alemães (1824) foram para São Leopoldo (chegada 25/07/1824, 39 pessoas), não para POA — não chamar de 'chegada dos alemães a POA'. Extensão a Novo Hamburgo em 1876."
+    },
+    {
+      "id": "praia-de-belas-1960",
+      "ano": 1960,
+      "data_exata": "aterro concluído em 1960 (ptwiki); ampliação por convênio de 1973; Parque Marinha inaugurado 1976 (UFRGS) ou 09/12/1978 (ptwiki)",
+      "titulo_curto_PT": "TERRA ONDE ERA ÁGUA",
+      "legenda": "Aterro Praia de Belas cria um bairro inteiro sobre o Guaíba após a cheia de 1941",
+      "local": {"nome": "Parque Marinha do Brasil / Praia de Belas", "lat": -30.05694444, "lon": -51.23222222, "coord_fonte": "en.wikipedia (Marinha do Brasil Park)"},
+      "recurso_visual": "aterro avançando: margem sul empurrada ~4 km de extensão",
+      "numero_impacto": "229 HA",
+      "fontes": ["https://pt.wikipedia.org/wiki/Praia_de_Belas_(Porto_Alegre)", "https://seer.ufrgs.br/index.php/bgg/article/view/37982", "https://www.jornaldocomercio.com/colunas/pensar-a-cidade/2024/05/1153639-aterro-feito-em-porto-alegre-apos-cheia-de-1941-tambem-alagou.html"],
+      "confianca": "media",
+      "obs": "229 ha = área aterrada no projeto Praia do Guaíba (artigo UFRGS/BGG). Ano exato do início do aterro não confirmado (década de 1950)."
+    }
+  ]
+}

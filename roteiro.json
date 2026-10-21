@@ -1,0 +1,443 @@
+{
+ "titulo": "Porto Alegre — 250 anos em 3D",
+ "voz": {
+  "engine": "chatterbox",
+  "voz": "nei",
+  "exaggeration": 0.6,
+  "cfg_weight": 0.6,
+  "atempo": 1.08
+ },
+ "blocos": [
+  {
+   "id": "capa",
+   "fala": "Duas vezes, o Guaíba tomou Porto Alegre. Pra entender por quê, a gente volta 250 anos.",
+   "tts": "Duas vezes, o Guaíba tomou Porto Alegre. Pra entender por quê, a gente volta duzentos e cinquenta anos.",
+   "anos": [
+    2024.36,
+    2024.36
+   ],
+   "cam": [
+    {
+     "lon": -51.214,
+     "lat": -30.014,
+     "zoom": 13.5,
+     "pitch": 60,
+     "bearing": 18
+    },
+    {
+     "lon": -51.214,
+     "lat": -30.014,
+     "zoom": 13.62,
+     "pitch": 60,
+     "bearing": 14
+    }
+   ],
+   "capa": {
+    "kicker": "Porto Alegre · 1772 → 2024",
+    "titulo": "Duas vezes<br><b>debaixo d'água</b>",
+    "sub": "250 anos da cidade, do nascimento às duas cheias",
+    "segura": 5.0
+   },
+   "cheia": {
+    "nivel": [
+     [
+      0,
+      5.37
+     ],
+     [
+      1,
+      5.37
+     ]
+    ],
+    "baixa_no_fim": true
+   }
+  },
+  {
+   "id": "rebobina",
+   "fala": "",
+   "tts": "",
+   "dur_min": 2.6,
+   "anos": [
+    2024,
+    1772
+   ],
+   "cam": [
+    {
+     "lon": -51.214,
+     "lat": -30.014,
+     "zoom": 13.62,
+     "pitch": 60,
+     "bearing": 14
+    },
+    {
+     "lon": -51.229,
+     "lat": -30.034,
+     "zoom": 14.6,
+     "pitch": 56,
+     "bearing": -40
+    }
+   ],
+   "tom": {
+    "cor": "#c9b48a",
+    "forca": 0.25
+   }
+  },
+  {
+   "id": "nasce",
+   "fala": "Em 1772, na ponta desta península, casais açorianos formam uma freguesia. Um ano depois, ela já é a capital.",
+   "tts": "Em mil setecentos e setenta e dois, na ponta desta península, casais açorianos formam uma freguesia. Um ano depois, ela já é a capital.",
+   "anos": [
+    1772,
+    1772.2,
+    1773.6
+   ],
+   "cam": [
+    {
+     "lon": -51.229,
+     "lat": -30.034,
+     "zoom": 14.6,
+     "pitch": 56,
+     "bearing": -40
+    },
+    {
+     "lon": -51.229,
+     "lat": -30.035,
+     "zoom": 15.1,
+     "pitch": 58,
+     "bearing": -55
+    }
+   ],
+   "cartao": {
+    "titulo": "Nasce <b>Porto Alegre</b>",
+    "legenda": "26/03/1772 · freguesia criada por casais açorianos; capital em 1773",
+    "fonte": "IBGE"
+   },
+   "rotulos": [
+    {
+     "lon": -51.243,
+     "lat": -30.041,
+     "texto": "GUAÍBA",
+     "z": 40,
+     "tam": 30
+    }
+   ],
+   "pulo": 0.8
+  },
+  {
+   "id": "cerco",
+   "fala": "Na Revolução Farroupilha, Porto Alegre fica com o Império. Resiste a três cercos, até 1840, e ganha o título de Leal e Valerosa.",
+   "tts": "Na Revolução Farroupilha, Porto Alegre fica com o Império. Resiste a três cercos, até mil oitocentos e quarenta, e ganha o título de Leal e Valerosa.",
+   "anos": [
+    1773,
+    1836,
+    1840.9
+   ],
+   "cam": [
+    {
+     "lon": -51.226,
+     "lat": -30.036,
+     "zoom": 14.4,
+     "pitch": 58,
+     "bearing": -50
+    },
+    {
+     "lon": -51.222,
+     "lat": -30.037,
+     "zoom": 13.9,
+     "pitch": 58,
+     "bearing": -35
+    }
+   ],
+   "cartao": {
+    "titulo": "A cidade <b>sitiada</b>",
+    "legenda": "3 cercos farroupilhas, 1836–1840 · título de \"Leal e Valerosa\" em 1841",
+    "fonte": "IBGE; ANPUH",
+    "de": 0
+   },
+   "tropas": {
+    "lon": -51.226,
+    "lat": -30.034,
+    "raio_km": 1.6,
+    "n": 420,
+    "a0": -2.2,
+    "a1": 1.4,
+    "cor": [
+     196,
+     38,
+     30
+    ]
+   },
+   "tom": {
+    "cor": "#d8c08f",
+    "forca": 0.35
+   }
+  },
+  {
+   "id": "cresce",
+   "fala": "Chegam o trem, o bonde, as fábricas. Em 1940, já são 272 mil moradores.",
+   "tts": "Chegam o trem, o bonde, as fábricas. Em mil novecentos e quarenta, já são duzentos e setenta e dois mil moradores.",
+   "anos": [
+    1841,
+    1940.0,
+    1940.0
+   ],
+   "cam": [
+    {
+     "lon": -51.222,
+     "lat": -30.037,
+     "zoom": 13.9,
+     "pitch": 58,
+     "bearing": -35
+    },
+    {
+     "lon": -51.205,
+     "lat": -30.035,
+     "zoom": 12.9,
+     "pitch": 58,
+     "bearing": -10
+    }
+   ],
+   "pulo": 3.0,
+   "cartao": {
+    "titulo": "<b>272 mil</b> moradores",
+    "legenda": "Censo de 1940",
+    "fonte": "IBGE"
+   }
+  },
+  {
+   "id": "cheia1941",
+   "fala": "Então, em maio de 1941, o Guaíba sobe até 4 metros e 76. Setenta mil pessoas perdem a casa.",
+   "tts": "Então, em maio de mil novecentos e quarenta e um, o Guaíba sobe até quatro metros e setenta e seis. Setenta mil pessoas perdem a casa.",
+   "anos": [
+    1941.3,
+    1941.42
+   ],
+   "cam": [
+    {
+     "lon": -51.208,
+     "lat": -30.03,
+     "zoom": 12.95,
+     "pitch": 58,
+     "bearing": 0
+    },
+    {
+     "lon": -51.212,
+     "lat": -30.024,
+     "zoom": 13.2,
+     "pitch": 60,
+     "bearing": 10
+    }
+   ],
+   "cartao": {
+    "titulo": "A cidade <b>afunda</b>",
+    "legenda": "Maio de 1941 · Guaíba a 4,76 m · 70 mil desabrigados",
+    "fonte": "Enchente de 1941 em Porto Alegre (Wikipédia); Migalhas"
+   },
+   "cheia": {
+    "nivel": [
+     [
+      0,
+      0.0
+     ],
+     [
+      0.55,
+      4.76
+     ],
+     [
+      1,
+      4.76
+     ]
+    ],
+    "baixa_no_fim": true
+   },
+   "tom": {
+    "cor": "#8aa0b4",
+    "forca": 0.3
+   }
+  },
+  {
+   "id": "muro",
+   "fala": "A cidade reage: aterra o Guaíba e constrói um muro de concreto de mais de dois quilômetros e meio na frente do Centro.",
+   "tts": "A cidade reage: aterra o Guaíba e constrói um muro de concreto de mais de dois quilômetros e meio na frente do Centro.",
+   "anos": [
+    1941.5,
+    1968,
+    1978
+   ],
+   "cam": [
+    {
+     "lon": -51.232,
+     "lat": -30.045,
+     "zoom": 14.2,
+     "pitch": 60,
+     "bearing": -60
+    },
+    {
+     "lon": -51.226,
+     "lat": -30.032,
+     "zoom": 14.5,
+     "pitch": 62,
+     "bearing": -25
+    }
+   ],
+   "cartao": {
+    "titulo": "O muro contra <b>o Guaíba</b>",
+    "legenda": "Aterro da Praia de Belas (1960–1978) · Muro da Mauá, 2.647 m (1971–1974)",
+    "fonte": "UFRGS; Jornal do Comércio",
+    "de": 0
+   },
+   "muro_destaque": true,
+   "rotulos": [
+    {
+     "lon": -51.22987,
+     "lat": -30.027,
+     "texto": "MURO DA MAUÁ",
+     "z": 45,
+     "tam": 30,
+     "cor": [
+      255,
+      255,
+      255
+     ],
+     "de": 1971
+    }
+   ]
+  },
+  {
+   "id": "pico",
+   "fala": "Em 2010, Porto Alegre passa de um milhão e quatrocentos mil moradores.",
+   "tts": "Em dois mil e dez, Porto Alegre passa de um milhão e quatrocentos mil moradores.",
+   "anos": [
+    1979,
+    2010.05,
+    2010.3
+   ],
+   "cam": [
+    {
+     "lon": -51.215,
+     "lat": -30.045,
+     "zoom": 12.6,
+     "pitch": 56,
+     "bearing": -20
+    },
+    {
+     "lon": -51.195,
+     "lat": -30.055,
+     "zoom": 12.35,
+     "pitch": 55,
+     "bearing": -25
+    }
+   ],
+   "cartao": {
+    "titulo": "<b>1,4 milhão</b>",
+    "legenda": "Censo de 2010: o maior número de moradores da história",
+    "fonte": "IBGE",
+    "de": 0.45
+   },
+   "rotulos": [
+    {
+     "lon": -51.25,
+     "lat": -30.06,
+     "texto": "LAGO GUAÍBA",
+     "z": 40,
+     "tam": 30
+    }
+   ],
+   "pulo": 3.0
+  },
+  {
+   "id": "cheia2024",
+   "fala": "Maio de 2024. O Guaíba chega a 5 metros e 37, a maior cheia já medida. A água entra pelas comportas e cobre quase um terço da cidade.",
+   "tts": "Maio de dois mil e vinte e quatro. O Guaíba chega a cinco metros e trinta e sete, a maior cheia já medida. A água entra pelas comportas e cobre quase um terço da cidade.",
+   "anos": [
+    2011,
+    2024.3,
+    2024.36
+   ],
+   "cam": [
+    {
+     "lon": -51.2,
+     "lat": -30.04,
+     "zoom": 12.4,
+     "pitch": 58,
+     "bearing": -5
+    },
+    {
+     "lon": -51.212,
+     "lat": -30.022,
+     "zoom": 13.0,
+     "pitch": 60,
+     "bearing": 12
+    }
+   ],
+   "cartao": {
+    "titulo": "A água <b>volta ao Centro</b>",
+    "legenda": "Maio de 2024 · Guaíba a 5,37 m · cerca de 30% da cidade alagada",
+    "fonte": "Serviço Geológico do Brasil; Prefeitura de Porto Alegre",
+    "de": 0
+   },
+   "cheia": {
+    "nivel": [
+     [
+      0,
+      0.0
+     ],
+     [
+      0.5,
+      5.37
+     ],
+     [
+      1,
+      5.37
+     ]
+    ]
+   },
+   "tom": {
+    "cor": "#7f93a8",
+    "forca": 0.3
+   }
+  },
+  {
+   "id": "fecho",
+   "fala": "Essa é Porto Alegre. Duzentos e cinquenta anos, duas cheias, e uma cidade que não desiste.",
+   "tts": "Essa é Porto Alegre. Duzentos e cinquenta anos, duas cheias, e uma cidade que não desiste.",
+   "anos": [
+    2024.36,
+    2024.6
+   ],
+   "cam": [
+    {
+     "lon": -51.212,
+     "lat": -30.022,
+     "zoom": 13.0,
+     "pitch": 60,
+     "bearing": 12
+    },
+    {
+     "lon": -51.205,
+     "lat": -30.045,
+     "zoom": 12.5,
+     "pitch": 52,
+     "bearing": -10
+    }
+   ],
+   "cheia": {
+    "nivel": [
+     [
+      0,
+      5.37
+     ],
+     [
+      0.6,
+      0.0
+     ],
+     [
+      1,
+      0.0
+     ]
+    ]
+   },
+   "dur_extra": 3.0
+  }
+ ]
+}

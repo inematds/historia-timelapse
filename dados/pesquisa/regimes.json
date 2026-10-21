@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-21",
+    "arquivos_bandeira": "Nomes conferidos no Wikimedia Commons (URL: https://commons.wikimedia.org/wiki/File:<arquivo>). SVG direto: https://commons.wikimedia.org/wiki/Special:FilePath/<arquivo>",
+    "porto_alegre_foi_farroupilha": "NÃO como parte da República. Os farroupilhas ocuparam a cidade de 21/09/1835 a 15/06/1836 (ainda revolta provincial, sem república). A República Rio-Grandense só foi proclamada em 11/09/1836, quase 3 meses DEPOIS da retomada imperial. De 1836 a 1840 Porto Alegre ficou imperial e sitiada pelos farroupilhas — daí o título 'Leal e Valerosa' (Decreto nº 103, 19/10/1841). Fontes: https://biblioteca.ibge.gov.br/visualizacao/dtb/riograndedosul/portoalegre.pdf ; https://pt.wikipedia.org/wiki/Revolu%C3%A7%C3%A3o_Farroupilha ; https://en.wikipedia.org/wiki/Third_siege_of_Porto_Alegre"
+  },
+  "regimes": [
+    {
+      "inicio": 1752, "fim": 1815,
+      "data_inicio": "1752 (início do vídeo)", "data_fim": "16/12/1815",
+      "nome_tela": "BRASIL COLÔNIA",
+      "nome_longo": "Brasil Colônia — Reino de Portugal",
+      "bandeira_arquivo": "Flag_of_Portugal_(1750).svg",
+      "bandeira_descricao": "branca com o brasão real português coroado ao centro",
+      "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "confianca": "alta",
+      "obs": "Alternativa histórica: Flag_of_Portugal_(1707).svg (também existe no Commons)"
+    },
+    {
+      "inicio": 1815, "fim": 1822,
+      "data_inicio": "16/12/1815", "data_fim": "07/09/1822",
+      "nome_tela": "REINO UNIDO",
+      "nome_longo": "Reino Unido de Portugal, Brasil e Algarves",
+      "bandeira_arquivo": "Flag_of_the_United_Kingdom_of_Portugal,_Brazil,_and_the_Algarves_(1815-1825).svg",
+      "bandeira_descricao": "branca; esfera armilar dourada sobre fundo azul, com o escudo português e a coroa real",
+      "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "confianca": "alta",
+      "obs": "A bandeira própria do Reino Unido é de 13/05/1816; de dez/1815 a mai/1816 seguia a portuguesa — irrelevante na escala do vídeo"
+    },
+    {
+      "inicio": 1822, "fim": 1889,
+      "data_inicio": "07/09/1822", "data_fim": "15/11/1889",
+      "nome_tela": "IMPÉRIO DO BRASIL",
+      "nome_longo": "Império do Brasil",
+      "bandeira_arquivo": "Flag_of_Empire_of_Brazil_(1822-1870).svg",
+      "bandeira_arquivo_apos_1870": "Flag_of_Empire_of_Brazil_(1870-1889).svg",
+      "bandeira_descricao": "verde com losango amarelo e as armas imperiais (coroa, esfera armilar, ramos de café e tabaco); a versão de 1870 tem 20 estrelas no círculo azul",
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta",
+      "obs": "Porto Alegre vira 'cidade' em 14/11/1822 (IBGE/DTB)"
+    },
+    {
+      "inicio": 1835, "fim": 1836,
+      "data_inicio": "21/09/1835", "data_fim": "15/06/1836",
+      "nome_tela": "OCUPADA PELOS FARRAPOS",
+      "nome_longo": "Ocupação farroupilha (antes da proclamação da República Rio-Grandense)",
+      "tipo": "badge_opcional_sobreposto",
+      "bandeira_arquivo": "Flag_of_Piratini_Republic.svg",
+      "bandeira_descricao": "diagonal verde-vermelho-amarelo (bandeira da República Rio-Grandense, só adotada depois de 11/09/1836)",
+      "fonte": "https://biblioteca.ibge.gov.br/visualizacao/dtb/riograndedosul/portoalegre.pdf",
+      "confianca": "alta",
+      "obs": "Tecnicamente anacrônico mostrar a bandeira republicana em 1835–36; se usar, tratar como 'revolta farroupilha' e não 'República'. Para 1836–1840 usar badge 'SITIADA' sobre a bandeira do Império."
+    },
+    {
+      "inicio": 1889, "fim": null,
+      "data_inicio": "15/11/1889", "data_fim": "—",
+      "nome_tela": "REPÚBLICA",
+      "nome_longo": "República dos Estados Unidos do Brasil (1889–1967) / República Federativa do Brasil",
+      "bandeira_arquivo": "Flag_of_Brazil_(1889–1960).svg",
+      "bandeiras_seguintes": [
+        {"de": 1960, "ate": 1968, "arquivo": "Flag_of_Brazil_(1960–1968).svg"},
+        {"de": 1968, "ate": 1992, "arquivo": "Flag_of_Brazil_(1968–1992).svg"},
+        {"de": 1992, "ate": null, "arquivo": "Flag_of_Brazil.svg"}
+      ],
+      "bandeira_descricao": "verde, losango amarelo, círculo azul com céu estrelado e faixa 'ORDEM E PROGRESSO' (21 estrelas em 1889; 27 hoje)",
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta",
+      "obs": "A bandeira atual (modelo) é de 19/11/1889; de 15 a 19/11 houve bandeira provisória (Flag_of_Brazil_15-19_November.svg citado na enwiki, nome NÃO conferido no Commons). Para o HUD basta a de 1889–1960 e trocar pela atual em 1992."
+    }
+  ],
+  "extras_hud": {
+    "bandeira_municipal": {"arquivo": "Bandeira_de_Porto_Alegre.svg", "conferido": true},
+    "bandeira_estadual": {"arquivo": "Flag_of_Rio_Grande_do_Sul.svg", "conferido": true}
+  }
+}
