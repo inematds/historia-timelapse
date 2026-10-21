@@ -15,8 +15,10 @@ const TIPOS = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'applic
 
 const srv = http.createServer((req, res) => {
   const u = decodeURIComponent(req.url.split('?')[0]);
-  const f = u === '/cena.js' ? path.resolve(pasta, 'cena.js') : path.join(aqui, u === '/' ? 'mapa.html' : u);
-  if (!f.startsWith(aqui) && !f.startsWith(path.resolve(pasta))) { res.writeHead(403); return res.end(); }
+  const daCidade = u.startsWith('/assets/') ? path.resolve(pasta, '..', u.slice(1)) : null;
+  const f = u === '/cena.js' ? path.resolve(pasta, 'cena.js')
+    : (daCidade && fs.existsSync(daCidade)) ? daCidade : path.join(aqui, u === '/' ? 'mapa.html' : u);
+  if (!f.startsWith(aqui) && !f.startsWith(path.resolve(pasta, '..'))) { res.writeHead(403); return res.end(); }
   fs.readFile(f, (e, b) => { if (e) { res.writeHead(404); return res.end(); }
     res.writeHead(200, { 'Content-Type': TIPOS[path.extname(f)] || 'application/octet-stream' }); res.end(b); });
 }).listen(0, '127.0.0.1');

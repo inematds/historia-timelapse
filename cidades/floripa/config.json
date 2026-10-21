@@ -1,0 +1,82 @@
+{
+ "nome": "Florianópolis",
+ "bbox": [
+  -48.66,
+  -27.86,
+  -48.33,
+  -27.36
+ ],
+ "pbf": "dl/sul.osm.pbf",
+ "municipio_osm": "Florianópolis",
+ "centro_antigo": [
+  -48.549,
+  -27.5965
+ ],
+ "agua_baixa_m": 6.0,
+ "efeitos": {
+  "linhas": {
+   "hercilio": {
+    "nome_osm": "Ponte Hercílio Luz"
+   },
+   "colombo": {
+    "nome_osm": "Ponte Governador Colombo Machado Salles"
+   },
+   "pedroivo": {
+    "nome_osm": "Ponte Governador Pedro Ivo Campos"
+   }
+  },
+  "fortes": {
+   "anhatomirim": {
+    "ponto": [
+     -48.5656,
+     -27.427
+    ],
+    "lado_m": 120
+   },
+   "ratones": {
+    "ponto": [
+     -48.5604,
+     -27.4746
+    ],
+    "lado_m": 90
+   },
+   "ponta_grossa": {
+    "nome_osm": "Fortaleza de São José da Ponta Grossa"
+   },
+   "aracatuba": {
+    "nome_osm": "Fortaleza de Nossa Senhora da Conceição de Araçatuba"
+   },
+   "santana": {
+    "nome_osm": "Forte Santana"
+   }
+  },
+  "areas": {
+   "baia_sul": {
+    "faixa": {
+     "bbox": [
+      -48.567,
+      -27.607,
+      -48.538,
+      -27.592
+     ],
+     "dist_m": 330,
+     "zmax": 5
+    },
+    "faixas": 7
+   },
+   "beira_mar": {
+    "faixa": {
+     "bbox": [
+      -48.556,
+      -27.592,
+      -48.52,
+      -27.57
+     ],
+     "dist_m": 200,
+     "zmax": 5
+    },
+    "faixas": 6
+   }
+  }
+ }
+}

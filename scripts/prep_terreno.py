@@ -14,22 +14,27 @@ from PIL import Image, ImageDraw, ImageFilter
 from scipy import ndimage
 from shapely.geometry import shape
 
-W, S, E, N = -51.36, -30.30, -50.95, -29.90
 PX = 1 / 3600  # 1 segundo de arco
 TEX = 3  # textura 3x a grade do relevo
-raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-os.makedirs(f"{raiz}/motor/assets", exist_ok=True)
+import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+from cidade import *  # noqa
+
+
+def bloco(lat_ll, lon_ll):
+    return f"{RAIZ}/dl/dem_S{-lat_ll:02d}_W{-lon_ll:03d}.tif"
 
 
 def mosaico():
-    # blocos: lat_topo -29 (S30) e -30 (S31); lon_esq -52 (W052) e -51 (W051)
-    big = np.zeros((7200, 7200), np.float32)
-    for la, top in (("S30", 0), ("S31", 3600)):
-        for lo, left in (("W052", 0), ("W051", 3600)):
-            big[top:top + 3600, left:left + 3600] = tifffile.imread(f"{raiz}/dl/dem_{la}_{lo}.tif")
-    # big cobre lon -52..-50, lat -29..-31
-    c0 = int(round((W + 52) / PX)); c1 = int(round((E + 52) / PX))
-    r0 = int(round((-29 - N) / PX)); r1 = int(round((-29 - S) / PX))
+    import math
+    lats = range(math.floor(S), math.floor(N) + 1)        # canto inferior de cada bloco de 1°
+    lons = range(math.floor(W), math.floor(E) + 1)
+    top_lat, left_lon = max(lats) + 1, min(lons)
+    big = np.zeros((3600 * len(lats), 3600 * len(lons)), np.float32)
+    for i, la in enumerate(sorted(lats, reverse=True)):
+        for j, lo in enumerate(lons):
+            big[i * 3600:(i + 1) * 3600, j * 3600:(j + 1) * 3600] = tifffile.imread(bloco(la, lo))
+    c0 = int(round((W - left_lon) / PX)); c1 = int(round((E - left_lon) / PX))
+    r0 = int(round((top_lat - N) / PX)); r1 = int(round((top_lat - S) / PX))
     return big[r0:r1, c0:c1]
 
 
@@ -40,7 +45,7 @@ def mascara_agua(h, w, escala):
     def xy(lon, lat):
         return ((lon - W) / (E - W) * w * escala, (N - lat) / (N - S) * h * escala)
 
-    for f in json.load(open(f"{raiz}/dados/brutos/agua.geojson"))["features"]:
+    for f in json.load(open(f"{BRUTOS}/agua.geojson"))["features"]:
         g = shape(f["geometry"])
         if f["properties"]["tipo"] == "linha":
             largura = max(1, int(1.2 * escala))
@@ -55,26 +60,38 @@ def mascara_agua(h, w, escala):
     return np.asarray(img) > 127
 
 
+def mar(dsm):
+    # oceano no Copernicus = 0 m; componentes ligados à borda ou com mais de ~1 km²
+    z = ndimage.binary_opening(dsm <= 0.15, iterations=1)
+    lab, n = ndimage.label(z)
+    if n == 0:
+        return z
+    tam = ndimage.sum(z, lab, range(1, n + 1))
+    borda = set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))) - {0}
+    ok = [i + 1 for i in range(n) if tam[i] > 1100 or (i + 1) in borda]
+    return np.isin(lab, ok)
+
+
 def main():
     dsm = mosaico()
     h, w = dsm.shape
-    agua = mascara_agua(h, w, 1)
+    agua = mascara_agua(h, w, 1) | mar(dsm)
     # chão aproximado: abertura morfológica tira prédios e copas (~150 m), depois suaviza
     chao = ndimage.grey_opening(dsm, size=(5, 5))
     chao = ndimage.grey_closing(chao, size=(7, 7))   # fecha covas (açudes, cavas) que viram poços escuros
     chao = ndimage.gaussian_filter(chao, 1.2)
-    baixa = agua & (chao < 6.0)                     # só rebaixa água das áreas baixas (lago, rios, delta)
+    baixa = agua & (chao < CFG.get("agua_baixa_m", 6.0))                     # só rebaixa água das áreas baixas (lago, rios, delta)
     chao = np.where(baixa, -1.0, np.maximum(chao, 1.0))
     chao = ndimage.gaussian_filter(chao, 0.6)
-    np.save(f"{raiz}/dados/chao.npy", chao.astype(np.float32))
+    np.save(f"{DADOS}/chao.npy", chao.astype(np.float32))
 
     v = chao + 32768.0
     r = np.floor(v / 256); g = np.floor(v - r * 256); b = np.floor((v - np.floor(v)) * 256)
-    Image.fromarray(np.dstack([r, g, b]).astype(np.uint8)).save(f"{raiz}/motor/assets/elev.png")
+    Image.fromarray(np.dstack([r, g, b]).astype(np.uint8)).save(f"{ASSETS}/elev.png")
 
     # textura
     hs = ndimage.zoom(chao, TEX, order=1)
-    aguaT = mascara_agua(h, w, TEX)
+    aguaT = mascara_agua(h, w, TEX) | (ndimage.zoom(mar(dsm).astype(np.uint8), TEX, order=0) > 0)
     gy, gx = np.gradient(hs, 30.0 / TEX)
     az, alt = np.radians(315), np.radians(40)
     sl = np.arctan(np.hypot(gx, gy) * 2.0)
@@ -98,10 +115,10 @@ def main():
     cor_agua = np.array([86, 140, 168]) * (1 - m) + np.array([38, 82, 118]) * m
     img = np.where(aguaT[..., None], cor_agua, terra)
     img = np.clip(img, 0, 255).astype(np.uint8)
-    Image.fromarray(img).filter(ImageFilter.SMOOTH).save(f"{raiz}/motor/assets/textura.jpg", quality=90)
+    Image.fromarray(img).filter(ImageFilter.SMOOTH).save(f"{ASSETS}/textura.jpg", quality=90)
     json.dump({"bbox": [W, S, E, N], "w": w, "h": h, "tex": [w * TEX, h * TEX],
                "zmin": float(chao.min()), "zmax": float(chao.max())},
-              open(f"{raiz}/motor/assets/terreno.json", "w"))
+              open(f"{ASSETS}/terreno.json", "w"))
     print(f"ok relevo {w}x{h} z {chao.min():.1f}..{chao.max():.1f} m · textura {w*TEX}x{h*TEX} · água {agua.mean()*100:.1f}%")
 
 

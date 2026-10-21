@@ -394,7 +394,7 @@ window.CENA = {
    1332570
   ],
   [
-   2025,
+   2026,
    1332570
   ]
  ],
@@ -615,10 +615,6 @@ window.CENA = {
    61.929
   ]
  ],
- "aterro": {
-  "ano0": 1960,
-  "ano1": 1978
- },
  "falas": [
   {
    "id": "capa",
@@ -666,9 +662,11 @@ window.CENA = {
    "dur": 6.237
   }
  ],
+ "frotas": [],
+ "pulsos": [],
  "regimes": [
   {
-   "ano": 1700,
+   "ano": 1500,
    "nome": "Brasil Colônia",
    "bandeira": "portugal"
   },
@@ -698,6 +696,13 @@ window.CENA = {
    "bandeira": "brasil"
   }
  ],
+ "aterro": {
+  "ano0": 1960,
+  "ano1": 1978
+ },
+ "fortes": [],
+ "linhas": [],
+ "areas": [],
  "capa": {
   "kicker": "Porto Alegre · 1772 → 2024",
   "titulo": "Duas vezes<br><b>debaixo d'água</b>",

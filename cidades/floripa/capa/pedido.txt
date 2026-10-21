@@ -1,0 +1,11 @@
+Gere 1 imagem com a ferramenta de geração de imagem (image_gen) e salve nesta pasta como capa.png, formato PAISAGEM 16:9 (o maior tamanho horizontal disponível).
+
+Cena: vista aérea cinematográfica e realista da Ilha de Santa Catarina (Florianópolis, Brasil) ao entardecer, com a Ponte Hercílio Luz (ponte pênsil branca/prateada, iluminada) em primeiro plano ligando a ilha ao continente, o mar calmo da baía refletindo o céu dourado, morros verdes da ilha ao fundo e o centro da cidade com prédios baixos e médios junto à água. Luz quente de fim de tarde, mas cores naturais (sem amarelado exagerado), alto contraste, aspecto de fotografia aérea premium.
+
+Texto DESENHADO dentro da arte, em português, à esquerda, em duas linhas grandes, letra sans-serif geométrica extra-bold (estilo Sora/Montserrat ExtraBold), com sombra para legibilidade:
+Linha 1 (branca, enorme): DE DESTERRO
+Linha 2 (amarela #FACC15, enorme): A FLORIANÓPOLIS
+Abaixo, menor, branco: A HISTÓRIA DA ILHA EM 3D
+Grafia exata, com acento em FLORIANÓPOLIS e HISTÓRIA. Nenhum outro texto, logotipo ou marca d'água.
+
+Não mexa em nenhum outro arquivo da pasta. Ao final, liste os arquivos salvos.

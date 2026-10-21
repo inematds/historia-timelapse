@@ -1,82 +1,103 @@
-"""roteiro.json (+ narracao/tempos.json, se existir) → cenas/poa/cena.js
+"""roteiro.json (+ narracao/tempos.json, se existir) → cidades/<id>/cena/cena.js
 
-Duração de cada bloco = fala medida (ou estimada a 2,5 palavras/s) + respiro, no mínimo dur_min.
-Uso: .venv/bin/python -I scripts/gerar_cena.py [--saida cenas/poa]
+Duração do bloco: `dur` fixo (vídeo sem narração) ou fala medida/estimada + respiro (narrado).
+Com 3 anos no bloco, o tempo avança rápido no 'pulo' (s) antes do evento; cartão, efeitos e fala entram depois.
+Uso: CIDADE=<id> .venv/bin/python -I scripts/gerar_cena.py [--saida pasta]
 """
 import json
 import os
 import sys
 
-raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-saida = sys.argv[sys.argv.index("--saida") + 1] if "--saida" in sys.argv else f"{raiz}/cenas/poa"
+import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+from cidade import *  # noqa
+saida = sys.argv[sys.argv.index("--saida") + 1] if "--saida" in sys.argv else f"{DIR}/cena"
 RESPIRO = 0.6
+REGIMES_BR = [
+    {"ano": 1500, "nome": "Brasil Colônia", "bandeira": "portugal"},
+    {"ano": 1815.95, "nome": "Reino Unido de Portugal e Brasil", "bandeira": "reino"},
+    {"ano": 1822.7, "nome": "Império do Brasil", "bandeira": "imperio"},
+    {"ano": 1870, "nome": "Império do Brasil", "bandeira": "imperio2"},
+    {"ano": 1889.87, "nome": "República", "bandeira": "republica"},
+    {"ano": 1960, "nome": "República", "bandeira": "brasil"}]
 
 
 def main():
-    rot = json.load(open(f"{raiz}/roteiro.json"))
-    tf = f"{raiz}/narracao/tempos.json"
+    rot = json.load(open(f"{DIR}/roteiro.json"))
+    tf = f"{DIR}/narracao/tempos.json"
     tempos = json.load(open(tf)) if os.path.exists(tf) else {}
-    pop = [[int(p["ano"]), int(p["pop"])] for p in json.load(open(f"{raiz}/dados/pesquisa/populacao.json"))["serie"]]
-    pop.append([2025, pop[-1][1]])
+    pop = [[int(p["ano"]), int(p["pop"])] for p in json.load(open(f"{PESQ}/populacao.json"))["serie"]]
+    pop.append([2026, pop[-1][1]])
 
-    C = {"exz": 1.6, "exb": 1.5, "nascer": 2.5, "ajusteAgua": 0.5, "muroAlt": 22,
+    C = {"exz": rot.get("exz", 1.6), "exb": rot.get("exb", 1.5), "nascer": 2.5, "ajusteAgua": 0.5, "muroAlt": 22,
          "anos": [], "cam": [], "pop": pop, "cartoes": [], "cheias": [], "rotulos": [], "tropas": [], "tons": [],
-         "muroDestaque": [], "aterro": {"ano0": 1960, "ano1": 1978}, "falas": [],
-         "regimes": [
-             {"ano": 1700, "nome": "Brasil Colônia", "bandeira": "portugal"},
-             {"ano": 1815.95, "nome": "Reino Unido de Portugal e Brasil", "bandeira": "reino"},
-             {"ano": 1822.7, "nome": "Império do Brasil", "bandeira": "imperio"},
-             {"ano": 1870, "nome": "Império do Brasil", "bandeira": "imperio2"},
-             {"ano": 1889.87, "nome": "República", "bandeira": "republica"},
-             {"ano": 1960, "nome": "República", "bandeira": "brasil"}]}
+         "muroDestaque": [], "falas": [], "frotas": [], "pulsos": [],
+         "regimes": rot.get("regimes", REGIMES_BR)}
+    for k in ("aterro", "globo", "linha", "fim", "hud_de", "ultimoCenso", "corLonge", "teto"):
+        if k in rot:
+            C[k] = rot[k]
+    C.setdefault("aterro", {"ano0": 1960, "ano1": 1978}) if CFG.get("feicoes", {}).get("aterro") else None
+    for k in ("fortes", "linhas", "areas"):
+        C[k] = [dict(x, destaque=[]) for x in rot.get(k, [])]
+    idx = {(k, x["id"]): x for k in ("fortes", "linhas", "areas") for x in C[k]}
+
     t = 0.0
     for b in rot["blocos"]:
+        tts = b.get("tts", "")
         if b["id"] in tempos:
             fala = tempos[b["id"]]["dur"]
         else:
-            fala = len(b["tts"].split()) / 2.5 if b["tts"] else 0.0
+            fala = len(tts.split()) / 2.5 if tts else 0.0
         an = b["anos"]
-        pre = b.get("pulo", 1.6) if len(an) == 3 else 0.0   # avanço rápido do tempo antes da fala
-        dur = pre + max(fala + (RESPIRO if fala else 0), b.get("dur_min", 0)) + b.get("dur_extra", 0)
+        pre = b.get("pulo", 1.6) if len(an) == 3 else 0.0
+        corpo = b["dur"] if "dur" in b else max(fala + (RESPIRO if fala else 0), b.get("dur_min", 0))
+        dur = pre + corpo + b.get("dur_extra", 0)
         t0, t1 = t, t + dur
-        if C["cam"]:
-            b["cam"][0] = C["cam"][-1][1]   # câmera contínua: começa onde o bloco anterior parou
+        if C["cam"] and not b.get("corte"):
+            b["cam"][0] = C["cam"][-1][1]
         if pre:
             C["anos"] += [[round(t0, 3), an[0]], [round(t0 + pre, 3), an[1]], [round(t1 - 0.001, 3), an[2]]]
         else:
             C["anos"] += [[round(t0, 3), an[0]], [round(t1 - 0.001, 3), an[1]]]
         C["cam"] += [[round(t0, 3), b["cam"][0]], [round(t1 - 0.001, 3), b["cam"][1]]]
-        if b["tts"]:
-            C["falas"].append({"id": b["id"], "t0": round(t0 + pre, 3), "dur": round(fala, 3)})
+        te = t0 + pre                         # início do evento (depois do pulo)
+        if tts:
+            C["falas"].append({"id": b["id"], "t0": round(te, 3), "dur": round(fala, 3)})
         if "capa" in b:
             C["capa"] = {**b["capa"], "t1": b["capa"]["segura"]}
         if "cartao" in b:
             de = b["cartao"].get("de", 0)
-            C["cartoes"].append({**b["cartao"], "t0": round(t0 + pre + 0.4 + de * (dur - pre), 3), "t1": round(t1 - 0.2, 3)})
+            C["cartoes"].append({**b["cartao"], "t0": round(te + 0.4 + de * (dur - pre), 3), "t1": round(t1 - 0.2, 3)})
+            loc = b["cartao"].get("local") or b.get("local")
+            if loc and b.get("pulso", True):
+                C["pulsos"].append({"lon": loc[0], "lat": loc[1], "t0": round(te + 0.3, 3), "t1": round(min(t1, te + 4.5), 3), "r": b.get("pulso_r", 450)})
         if "cheia" in b:
             ch = b["cheia"]
-            niv = [[round(t0 + pre + k * (dur - pre), 3), v] for k, v in ch["nivel"]]
+            niv = [[round(te + k * (dur - pre), 3), v] for k, v in ch["nivel"]]
             fim = t1
             if ch.get("baixa_no_fim"):
                 niv.append([round(t1 + 1.8, 3), 0.0]); fim = t1 + 1.8
             C["cheias"].append({"t0": round(t0, 3), "t1": round(fim, 3), "nivel": niv})
         for r in b.get("rotulos", []):
-            C["rotulos"].append({**r, "t0": round(t0 + pre, 3), "t1": round(t1, 3)})
+            C["rotulos"].append({**r, "t0": round(te, 3), "t1": round(t1, 3)})
         if "tropas" in b:
-            C["tropas"].append({**b["tropas"], "t0": round(t0 + pre, 3), "t1": round(t1, 3)})
+            C["tropas"].append({**b["tropas"], "t0": round(te, 3), "t1": round(t1, 3)})
+        if "frota" in b:
+            fr = b["frota"]
+            C["frotas"].append({**fr, "t0": round(te, 3), "t1": round(te + fr.get("dura", corpo * 0.7), 3)})
         if "tom" in b:
-            C["tons"].append({**b["tom"], "t0": round(t0 + pre, 3), "t1": round(t1, 3)})
+            C["tons"].append({**b["tom"], "t0": round(te, 3), "t1": round(t1, 3)})
         if b.get("muro_destaque"):
-            C["muroDestaque"].append([round(t0 + pre, 3), round(t1, 3)])
+            C["muroDestaque"].append([round(te, 3), round(t1, 3)])
+        for d in b.get("destaca", []):
+            tipo, i = d.split(":")
+            idx[({"forte": "fortes", "linha": "linhas", "area": "areas"}[tipo], i)]["destaque"].append([round(te, 3), round(t1, 3)])
         t = t1
     C["duracao"] = round(t, 3)
-    # rótulo fixo do Guaíba fora da capa e do cartão de nascimento
+    if "linha" in C and "marcas" not in C["linha"]:
+        C["linha"]["marcas"] = sorted({round(b["anos"][-2] if len(b["anos"]) == 3 else b["anos"][0]) for b in rot["blocos"] if "cartao" in b})
     os.makedirs(saida, exist_ok=True)
     open(f"{saida}/cena.js", "w").write("window.CENA = " + json.dumps(C, ensure_ascii=False, indent=1) + ";\n")
-    print(f"cena {saida}/cena.js · duração {t:.1f} s · blocos {len(rot['blocos'])} · "
-          f"{'tempos medidos' if tempos else 'tempos ESTIMADOS'}")
-    for f in C["falas"]:
-        print(f"  {f['id']:10s} {f['t0']:6.1f} s  fala {f['dur']:.1f} s")
+    print(f"cena {saida}/cena.js · duração {t:.1f} s · blocos {len(rot['blocos'])} · cartões {len(C['cartoes'])}")
 
 
 if __name__ == "__main__":

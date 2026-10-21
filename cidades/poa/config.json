@@ -1,0 +1,9 @@
+{
+  "nome": "Porto Alegre",
+  "bbox": [-51.36, -30.30, -50.95, -29.90],
+  "pbf": "dl/sul.osm.pbf",
+  "municipio_osm": "Porto Alegre",
+  "centro_antigo": [-51.2306, -30.0333],
+  "agua_baixa_m": 6.0,
+  "feicoes": {"muro": {"nome_osm": "Muro da Mauá"}, "aterro": {"bairros_osm": ["Praia de Belas"]}}
+}

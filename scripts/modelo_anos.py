@@ -11,8 +11,9 @@ import unicodedata
 
 import numpy as np
 
-raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MATRIZ = (-51.2306, -30.0333)  # Praça da Matriz (aprox.)
+import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+from cidade import *  # noqa
+MATRIZ = tuple(CFG["centro_antigo"])
 KM_LON, KM_LAT = 96.3, 111.0
 
 
@@ -22,7 +23,7 @@ def norm(s):
 
 
 def curva_pop():
-    f = f"{raiz}/dados/pesquisa/populacao.json"
+    f = f"{PESQ}/populacao.json"
     if os.path.exists(f):
         pts = sorted((int(p["ano"]), float(p["pop"])) for p in json.load(open(f))["serie"])
     else:
@@ -35,12 +36,12 @@ def curva_pop():
 
 
 def main():
-    m = np.load(f"{raiz}/dados/predios_meta.npz", allow_pickle=True)
+    m = np.load(f"{DADOS}/predios_meta.npz", allow_pickle=True)
     lon, lat, poa, bairro, nomes = m["lon"], m["lat"], m["poa"], m["bairro"], m["nomes"]
     d = np.hypot((lon - MATRIZ[0]) * KM_LON, (lat - MATRIZ[1]) * KM_LAT)
     rng = np.random.default_rng(11)
 
-    f = f"{raiz}/dados/pesquisa/bairros_epocas.json"
+    f = f"{PESQ}/bairros_epocas.json"
     if os.path.exists(f):
         bj = json.load(open(f))
         tab = {norm(b["bairro"]): float(b["ano_aprox_ocupacao"]) for b in bj["bairros"] if b.get("ano_aprox_ocupacao")}
@@ -76,7 +77,7 @@ def main():
     fora = np.where(~poa)[0]
     ordf = fora[np.argsort(d[fora] + rng.normal(0, 1.5, len(fora)))]
     ano[ordf] = 1930 + 90 * ((np.arange(len(ordf)) + 1) / len(ordf)) ** 1.3
-    ano.astype(np.float32).tofile(f"{raiz}/motor/assets/pred_ano.f32")
+    ano.astype(np.float32).tofile(f"{ASSETS}/pred_ano.f32")
     for y in (1772, 1800, 1850, 1900, 1941, 1970, 2000, 2024):
         print(y, int((ano[poa] <= y).sum()), end=" · ")
     print(f"\nfonte={fonte} n={len(ano)}")

@@ -16,3 +16,16 @@ narracao/.obra/
 cenas/*/q_*.jpg
 cenas/*/.mapa.html
 *.log
+cidades/*/dados/brutos/
+cidades/*/dados/chao.npy
+cidades/*/dados/predios_meta.npz
+cidades/*/assets/elev.png
+cidades/*/assets/textura.jpg
+cidades/*/assets/terreno.json
+cidades/*/assets/pred_*
+cidades/*/assets/efeitos.json
+cidades/*/final/
+cidades/*/narracao/build/
+cidades/*/narracao/.obra/
+cidades/*/*/q_*.jpg
+cidades/*/capa/codex.log

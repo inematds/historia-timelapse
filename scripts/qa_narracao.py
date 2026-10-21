@@ -1,8 +1,9 @@
 """Confere se cada ano/número da fala de tela foi ouvido pela transcrição (lição: 2024 já saiu 2004)."""
 import json, re, os, sys
-raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-rot = {b["id"]: b for b in json.load(open(f"{raiz}/roteiro.json"))["blocos"]}
-tem = json.load(open(f"{raiz}/narracao/tempos.json"))
+import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+from cidade import *  # noqa
+rot = {b["id"]: b for b in json.load(open(f"{DIR}/roteiro.json"))["blocos"]}
+tem = json.load(open(f"{DIR}/narracao/tempos.json"))
 erros = []
 for k, v in tem.items():
     anos = re.findall(r"\b1[78]\d\d\b|\b19\d\d\b|\b20\d\d\b", rot[k]["fala"])

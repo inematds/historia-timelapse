@@ -10,7 +10,9 @@ import osmium
 from osmium.geom import GeoJSONFactory
 from shapely.geometry import box, mapping, shape
 
-BBOX = (-51.36, -30.30, -50.95, -29.90)  # oeste, sul, leste, norte
+import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+from cidade import *  # noqa
+BBOX = (W, S, E, N)
 CAIXA = box(*BBOX)
 geo = GeoJSONFactory()
 RUAS = {"motorway", "trunk", "primary", "secondary", "tertiary", "motorway_link", "trunk_link"}
@@ -86,7 +88,7 @@ class Coleta(osmium.SimpleHandler):
                  "geometry": mapping(g.simplify(0.00005))}
             if t.get("admin_level") == "10":
                 self.bairros.append(f)
-            elif t.get("name") == "Porto Alegre":
+            elif t.get("name") == CFG["municipio_osm"]:
                 self.muni.append(f)
 
 

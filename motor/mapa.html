@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root { --amb:#FACC15; --ink:#0c0c10; }
   html,body { margin:0; width:1920px; height:1080px; overflow:hidden; background:#9fc3dc; }
@@ -9,53 +9,71 @@
   #nevoa { position:absolute; inset:0; pointer-events:none;
     background:linear-gradient(rgba(214,228,236,1) 0%, rgba(214,228,236,.92) 14%, rgba(214,228,236,.4) 28%, rgba(214,228,236,0) 42%); }
   #tom { position:absolute; inset:0; pointer-events:none; mix-blend-mode:multiply; opacity:0; }
-  .sombra { text-shadow:0 2px 6px rgba(0,0,0,.65), 0 0 2px rgba(0,0,0,.8); }
-  #reg { position:absolute; left:56px; top:48px; display:flex; align-items:center; gap:18px; color:#fff;
-    font:700 34px Inter; opacity:1; }
-  #reg img { width:84px; height:56px; object-fit:cover; box-shadow:0 2px 10px rgba(0,0,0,.45); border-radius:3px; }
-  #tempo { position:absolute; right:60px; top:40px; text-align:right; color:#fff; }
-  #ano { font:800 64px Sora; letter-spacing:-.01em; line-height:1; }
-  #ano small { font:600 30px Sora; opacity:.85; margin-right:10px; }
-  #pop { font:700 36px Inter; margin-top:10px; font-variant-numeric:tabular-nums; }
-  #pop span { font:600 22px Inter; opacity:.85; margin-left:8px; }
-  #faixa { position:absolute; left:0; right:0; bottom:0; height:340px; pointer-events:none; opacity:0;
-    background:linear-gradient(rgba(12,12,16,0), rgba(12,12,16,.72) 55%, rgba(12,12,16,.85)); }
-  #popf { font:600 22px Inter; opacity:.8; margin-top:6px; }
+  .sombra { text-shadow:0 2px 8px rgba(0,0,0,.75), 0 0 3px rgba(0,0,0,.9); }
+  /* HUD: números grandes e cor forte */
+  #reg { position:absolute; left:56px; top:78px; display:flex; align-items:center; gap:18px; color:#fff; font:800 36px Sora; }
+  #reg img { width:96px; height:64px; object-fit:cover; box-shadow:0 2px 10px rgba(0,0,0,.45); border-radius:4px; }
+  #tempo { position:absolute; right:60px; top:62px; text-align:right; color:#fff; }
+  #ano { font:800 118px/0.95 Sora; letter-spacing:-.02em; color:var(--amb); }
+  #ano small { font:700 34px Sora; color:#fff; margin-right:12px; letter-spacing:0; }
+  #pop { font:800 56px Sora; margin-top:6px; font-variant-numeric:tabular-nums; color:#fff; }
+  #pop span { font:700 26px Inter; opacity:.9; margin-left:10px; }
+  #popf { font:600 22px Inter; opacity:.92; margin-top:6px; }
+  /* linha do tempo no topo */
+  #linha { position:absolute; left:56px; right:56px; top:22px; height:40px; opacity:0; }
+  #linha .trilho { position:absolute; left:0; right:0; top:14px; height:8px; border-radius:6px; background:rgba(255,255,255,.35); box-shadow:0 1px 6px rgba(0,0,0,.35); }
+  #linha .feito { position:absolute; left:0; top:14px; height:8px; border-radius:6px; background:var(--amb); }
+  #linha .cur { position:absolute; top:6px; width:24px; height:24px; margin-left:-12px; border-radius:50%; background:var(--amb); box-shadow:0 0 0 4px rgba(12,12,16,.55), 0 0 18px rgba(250,204,21,.9); }
+  #linha .m { position:absolute; top:12px; width:12px; height:12px; margin-left:-6px; border-radius:50%; background:#fff; box-shadow:0 0 0 2px rgba(12,12,16,.6); }
+  #linha .m.ok { background:var(--amb); }
+  #linha .sec { position:absolute; top:30px; font:700 16px Inter; color:#fff; transform:translateX(-50%); text-shadow:0 1px 4px #000; }
+  #faixa { position:absolute; left:0; right:0; bottom:0; height:420px; pointer-events:none; opacity:0;
+    background:linear-gradient(rgba(12,12,16,0), rgba(12,12,16,.74) 50%, rgba(12,12,16,.88)); }
   #fimt { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; opacity:0; }
-  #fimt .t { font:800 84px Sora; } #fimt .s { font:600 30px Inter; opacity:.85; margin-top:14px; }
-  #cartao { position:absolute; left:0; right:0; bottom:70px; text-align:center; color:#fff; opacity:0; }
+  #fimt .t { font:800 96px Sora; } #fimt .s { font:700 34px Inter; color:var(--amb); margin-top:14px; }
+  #cartao { position:absolute; left:120px; right:120px; bottom:64px; text-align:center; color:#fff; opacity:0; }
+  #cartao .n { font:800 112px/1 Sora; color:var(--amb); letter-spacing:-.02em; margin-bottom:6px; }
   #cartao .t { font:800 66px Sora; letter-spacing:.01em; text-transform:uppercase; }
   #cartao .t b { color:var(--amb); font-weight:800; }
-  #cartao .l { font:600 30px Inter; margin-top:10px; }
-  #cartao .f { font:600 24px Inter; opacity:.85; margin-top:8px; }
+  #cartao .l { font:700 32px Inter; margin-top:10px; }
+  #cartao .d { font:600 27px/1.35 Inter; margin:10px auto 0; max-width:1380px; opacity:.95; }
+  #cartao .f { font:600 22px Inter; opacity:.8; margin-top:10px; }
   #capa { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding-left:110px;
     color:#fff; opacity:0; background:linear-gradient(90deg, rgba(12,12,16,.78) 0%, rgba(12,12,16,.35) 55%, rgba(12,12,16,0) 80%); }
+  #capa.img { padding:0; background-size:cover; background-position:center; }
   #capa .k { font:700 30px Inter; letter-spacing:.18em; text-transform:uppercase; opacity:.9; }
   #capa .t { font:800 118px/1.0 Sora; letter-spacing:-.02em; margin-top:18px; max-width:1100px; }
   #capa .t b { color:var(--amb); }
   #capa .s { font:600 36px Inter; margin-top:26px; max-width:980px; }
-  #marca { position:absolute; right:60px; bottom:40px; color:#fff; font:700 22px Sora; opacity:.85; }
+  #globo { position:absolute; inset:0; opacity:0; }
+  #marca { position:absolute; right:60px; bottom:30px; color:#fff; font:700 22px Sora; opacity:.85; }
   #marca i { color:var(--amb); font-style:normal; }
 </style>
 <script src="assets/deck.min.js"></script>
+<script src="assets/d3-array.min.js"></script>
+<script src="assets/d3-geo.min.js"></script>
+<script src="assets/topojson-client.min.js"></script>
 <script src="cena.js"></script>
 </head><body>
 <div id="ceu"></div><div id="mapa"></div><div id="nevoa"></div><div id="tom"></div>
+<div id="linha"><div class="trilho"></div><div class="feito"></div></div>
 <div id="reg" class="sombra"><span id="bandeira"></span><span id="regnome"></span></div>
-<div id="tempo" class="sombra"><div id="ano"></div><div id="pop"></div><div id="popf">fonte: IBGE e estimativas históricas</div></div>
+<div id="tempo" class="sombra"><div id="ano"></div><div id="pop"></div><div id="popf"></div></div>
 <div id="faixa"></div>
-<div id="cartao" class="sombra"><div class="t"></div><div class="l"></div><div class="f"></div></div>
+<div id="cartao" class="sombra"><div class="n"></div><div class="t"></div><div class="l"></div><div class="d"></div><div class="f"></div></div>
+<canvas id="globo" width="1920" height="1080"></canvas>
 <div id="capa"><div class="k"></div><div class="t"></div><div class="s"></div></div>
 <div id="fim" style="position:absolute;inset:0;background:#0c0c10;opacity:0"></div>
-<div id="fimt"><div class="t">Porto Alegre</div><div class="s">1772 – 2024</div></div>
+<div id="fimt"><div class="t"></div><div class="s"></div></div>
 <div id="marca" class="sombra">INEMA<i>.</i>CLUB</div>
 <script>
 const C = window.CENA;
 const EXZ = C.exz || 1.6, EXB = C.exb || 1.5;
 const lerp = (a, b, k) => a + (b - a) * k;
 const ease = k => k < 0 ? 0 : k > 1 ? 1 : k * k * (3 - 2 * k);
+const clamp01 = k => Math.max(0, Math.min(1, k));
+const $ = id => document.getElementById(id);
 
-// interpolação por chaves [[t, valor], ...] — valor número ou objeto de números
 function chave(lista, t, suave = true) {
   if (t <= lista[0][0]) return lista[0][1];
   for (let i = 0; i < lista.length - 1; i++) {
@@ -73,16 +91,14 @@ function popEm(ano) {
   const p = C.pop; if (ano <= p[0][0]) return p[0][1];
   for (let i = 0; i < p.length - 1; i++) if (ano <= p[i + 1][0]) {
     const k = (ano - p[i][0]) / (p[i + 1][0] - p[i][0]);
-    return p[i][1] * Math.pow(p[i + 1][1] / p[i][1], k);   // crescimento geométrico entre censos
+    return p[i][1] * Math.pow(p[i + 1][1] / p[i][1], k);
   }
   return p[p.length - 1][1];
 }
-// teto de altura por época: cidade baixa até 1900, verticaliza depois
-const tetoEm = ano => chave([[1700, 9], [1900, 10], [1930, 24], [1950, 45], [1975, 120], [2000, 180]], ano, false);
-
+const tetoEm = ano => chave(C.teto || [[1700, 9], [1900, 10], [1930, 24], [1950, 45], [1975, 120], [2000, 180]], ano, false);
 const fmt = n => Math.round(n).toLocaleString('pt-BR');
 const buf = async f => (await fetch('assets/' + f)).arrayBuffer();
-let mapa, D = {}, tAtual = 0, aguardando = null, tetoAtual = -1;
+let mapa, D = {}, tAtual = 0, aguardando = null;
 
 async function carrega() {
   D.T = await (await fetch('assets/terreno.json')).json();
@@ -95,133 +111,229 @@ async function carrega() {
   for (let i = 2; i < POS.length; i += 3) POS[i] *= EXZ;
   const anoV = new Float32Array(nv), cor = new Uint8Array(nv * 3);
   for (let p = 0; p < n; p++) {
-    const h = ((p * 2654435761) >>> 0) / 4294967296;            // variação estável por prédio
+    const h = ((p * 2654435761) >>> 0) / 4294967296;
     const alto = Math.min(1, D.ALT[p] / 40);
     const c = [lerp(226, 238, h) + alto * 10, lerp(122, 150, h) + alto * 70, lerp(58, 82, h) + alto * 80];
     for (let v = INI[p]; v < INI[p + 1]; v++) { anoV[v] = ANO[p]; cor.set(c, v * 3); }
   }
   D.pred = { length: n, startIndices: INI,
-    attributes: { getPolygon: { value: POS, size: 3 }, getFillColor: { value: cor, size: 3 },
-                  getFilterValue: { value: anoV, size: 1 } } };
+    attributes: { getPolygon: { value: POS, size: 3 }, getFillColor: { value: cor, size: 3 }, getFilterValue: { value: anoV, size: 1 } } };
+  if (C.globo) {
+    const mundo = await (await fetch('assets/mundo-50m.json')).json();
+    D.paises = topojson.feature(mundo, mundo.objects.countries).features;
+    D.ufs = (await (await fetch('assets/brasil-uf.geojson')).json()).features;
+    for (const f of D.ufs) if (d3.geoArea(f) > 2 * Math.PI) {   // anel na orientação errada = "o mundo menos o estado"
+      const g = f.geometry; const inv = pol => pol.map(r => r.slice().reverse());
+      g.coordinates = g.type === 'Polygon' ? inv(g.coordinates) : g.coordinates.map(inv); }
+  }
+  if (C.capa && C.capa.imagem) await new Promise(r => { const i = new Image(); i.onload = i.onerror = r; i.src = C.capa.imagem; });
 }
 
 const luz = new deck.LightingEffect({
   amb: new deck.AmbientLight({ color: [255, 255, 255], intensity: 1.0 }),
   sol: new deck.DirectionalLight({ color: [255, 244, 228], intensity: 1.6, direction: [-2, -3, -4] }),
 });
+const dentro = (t, j) => j && j.some(([a, b]) => t >= a && t <= b);
+const AMB = [250, 204, 21];
 
 function camadas(t) {
   const ano = anoEm(t), teto = Math.round(tetoEm(ano) * 2) / 2;
   const L = [];
   const [w0, s0, e0, n0] = D.T.bbox;
   L.push(new deck.SolidPolygonLayer({ id: 'chao-longe', data: [[[w0 - 1, s0 - 1, -3], [e0 + 1, s0 - 1, -3], [e0 + 1, n0 + 1, -3], [w0 - 1, n0 + 1, -3]]],
-    getPolygon: d => d, getFillColor: [150, 172, 168], material: false, shadowEnabled: false }));
+    getPolygon: d => d, getFillColor: C.corLonge || [150, 172, 168], material: false }));
   L.push(new deck.TerrainLayer({ id: 'terreno', elevationData: 'assets/elev.png', texture: 'assets/textura.jpg',
     bounds: D.T.bbox, meshMaxError: 1.2,
     elevationDecoder: { rScaler: 256 * EXZ, gScaler: EXZ, bScaler: EXZ / 256, offset: -32768 * EXZ },
     operation: 'terrain+draw',
     loadOptions: { terrain: { workerUrl: location.origin + '/assets/terrain-worker.js', skirtHeight: 40 } }, material: { ambient: .5, diffuse: .55, shininess: 4 } }));
   L.push(new deck.SolidPolygonLayer({ id: 'predios', data: D.pred, _normalize: false, extruded: true,
-    getElevation: (_, { index }) => Math.min(D.ALT[index], teto) * EXB,
-    updateTriggers: { getElevation: teto },
+    getElevation: (_, { index }) => Math.min(D.ALT[index], teto) * EXB, updateTriggers: { getElevation: teto },
     material: { ambient: .72, diffuse: .5, shininess: 12, specularColor: [40, 40, 40] },
     extensions: [new deck.DataFilterExtension({ filterSize: 1 })],
     filterRange: [1500, ano], filterSoftRange: [1500, ano - (C.nascer || 2.5)] }));
-  // aterro da Praia de Belas: água até ano0, vira terra até ano1
-  if (C.aterro && ano < C.aterro.ano1) {
+
+  // ÁREAS (aterros) em faixas: água antes, faixa a faixa vira cor forte, depois volta ao normal
+  for (const a of (C.areas || [])) {
+    const fx = (D.F.areas || {})[a.id]; if (!fx) continue;
+    const n = fx.length, sai = a.sai || 6;
+    if (ano > a.ano1 + sai) continue;
+    const data = fx.map((p, k) => {
+      const ak = a.ano0 + (k + 1) / n * (a.ano1 - a.ano0);
+      if (ano < ak - 0.6) return { p, c: [52, 98, 132, 235] };
+      const kk = clamp01((ano - (ak - 0.6)) / 0.6), some = 1 - clamp01((ano - a.ano1) / sai);
+      const cor = a.cor || [250, 176, 40];
+      return { p, c: [lerp(52, cor[0], kk), lerp(98, cor[1], kk), lerp(132, cor[2], kk), Math.round(lerp(235, 230, kk) * (ano > a.ano1 ? some : 1))] };
+    });
+    L.push(new deck.SolidPolygonLayer({ id: 'area-' + a.id, data, getPolygon: d => d.p, getFillColor: d => d.c,
+      updateTriggers: { getFillColor: Math.round(ano * 20) }, extensions: [new deck._TerrainExtension()], material: false }));
+  }
+  // FORTES: sobem no ano; amarelo no destaque
+  for (const f of (C.fortes || [])) {
+    const g = (D.F.fortes || {})[f.id]; if (!g || ano < f.ano) continue;
+    const k = clamp01((ano - f.ano) / 2), dest = dentro(t, f.destaque);
+    L.push(new deck.SolidPolygonLayer({ id: 'forte-' + f.id, data: g, getPolygon: d => d.map(p => [p[0], p[1], p[2] * EXZ]),
+      extruded: true, getElevation: k * (f.alt || 18) * EXB, getFillColor: dest ? AMB : [214, 206, 188],
+      updateTriggers: { getElevation: k, getFillColor: dest }, material: { ambient: .7, diffuse: .5 } }));
+  }
+  // LINHAS (pontes, ferrovias): desenham-se no ano; grossas e amarelas no destaque
+  for (const l of (C.linhas || [])) {
+    const g = (D.F.linhas || {})[l.id]; if (!g || ano < l.ano) continue;
+    const k = clamp01((ano - l.ano) / (l.desenha || 1.5)), dest = dentro(t, l.destaque);
+    const parte = g.map(p => { const m = Math.max(2, Math.ceil(p.length * k)); return p.slice(0, m); });
+    L.push(new deck.PathLayer({ id: 'linha-' + l.id, data: parte, getPath: d => d.map(p => [p[0], p[1], (p[2] + (l.sobe || 30)) * EXZ]),
+      getColor: dest ? AMB : (l.cor || [236, 236, 236]), getWidth: dest ? 9 : 5, widthUnits: 'pixels', capRounded: true, jointRounded: true,
+      updateTriggers: { getColor: dest, getWidth: dest, getPath: k } }));
+  }
+  // LEGADO (POA): aterro único e muro
+  if (C.aterro && D.F.aterro && ano < C.aterro.ano1) {
     const k = ano <= C.aterro.ano0 ? 1 : 1 - (ano - C.aterro.ano0) / (C.aterro.ano1 - C.aterro.ano0);
     L.push(new deck.SolidPolygonLayer({ id: 'aterro', data: D.F.aterro, getPolygon: d => d,
-      getFillColor: [52, 98, 132, Math.round(235 * k)], extensions: [new deck._TerrainExtension()], material: false,
-      updateTriggers: { getFillColor: Math.round(k * 50) } }));
+      getFillColor: [52, 98, 132, Math.round(235 * k)], extensions: [new deck._TerrainExtension()], material: false, updateTriggers: { getFillColor: Math.round(k * 50) } }));
   }
-  // Muro da Mauá: sobe de 1971 a 1974; destaque amarelo no cartão
-  if (ano >= 1971) {
-    const h = Math.min(1, (ano - 1971) / 3) * (C.muroAlt || 14);
-    const dest = (C.muroDestaque || []).some(([a, b]) => t >= a && t <= b);
+  if (D.F.muro && ano >= 1971) {
+    const h = Math.min(1, (ano - 1971) / 3) * (C.muroAlt || 14), dest = dentro(t, C.muroDestaque);
     L.push(new deck.SolidPolygonLayer({ id: 'muro', data: D.F.muro, getPolygon: d => d.map(p => [p[0], p[1], p[2] * EXZ]),
-      extruded: true, getElevation: h, getFillColor: dest ? [250, 204, 21] : [205, 205, 198],
-      updateTriggers: { getElevation: h, getFillColor: dest }, material: { ambient: .7, diffuse: .5 } }));
+      extruded: true, getElevation: h, getFillColor: dest ? AMB : [205, 205, 198], updateTriggers: { getElevation: h, getFillColor: dest }, material: { ambient: .7, diffuse: .5 } }));
   }
-  // tropas: pontos em anel em volta da cidade
+  // TROPAS em anel
   for (const tr of (C.tropas || [])) {
     if (t < tr.t0 || t > tr.t1) continue;
     const o = Math.min(1, (t - tr.t0) / .8, (tr.t1 - t) / .8);
     if (!tr._pts) { tr._pts = []; let sd = 7; const rnd = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
       for (let i = 0; i < tr.n; i++) { const a = tr.a0 + (tr.a1 - tr.a0) * rnd(), r = tr.raio_km * (0.85 + 0.3 * rnd());
         tr._pts.push([tr.lon + r * Math.cos(a) / 96.3, tr.lat + r * Math.sin(a) / 111]); } }
-    const ap = Math.min(1, (t - tr.t0) / 2.5);   // cerco fecha
+    const ap = Math.min(1, (t - tr.t0) / 2.5);
     L.push(new deck.ScatterplotLayer({ id: 'tropas-' + tr.t0, data: tr._pts.slice(0, Math.ceil(tr._pts.length * ap)),
       getPosition: d => d, getRadius: tr.r || 28, getFillColor: [...(tr.cor || [200, 40, 30]), Math.round(255 * o)],
       radiusMinPixels: 2.5, extensions: [new deck._TerrainExtension()], updateTriggers: { getFillColor: o } }));
   }
+  // FROTAS: navios (pontos) vindo do mar até o destino
+  for (const fr of (C.frotas || [])) {
+    if (t < fr.t0 || t > fr.t1 + 1) continue;
+    if (!fr._d) { fr._d = []; let sd = 11; const rnd = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
+      for (let i = 0; i < fr.n; i++) fr._d.push([(rnd() - .5) * (fr.espalha_km || 3), (rnd() - .5) * (fr.espalha_km || 3), rnd() * .35]); }
+    const o = Math.min(1, (t - fr.t0) / .6, (fr.t1 + 1 - t) / 1);
+    const pts = fr._d.map(([dx, dy, atraso]) => { const k = ease(clamp01((t - fr.t0) / (fr.t1 - fr.t0) * 1.35 - atraso));
+      return [lerp(fr.de[0], fr.para[0], k) + dx / 96.3 * (1 - k * .7), lerp(fr.de[1], fr.para[1], k) + dy / 111 * (1 - k * .7), 4]; });
+    L.push(new deck.ScatterplotLayer({ id: 'frota-' + fr.t0, data: pts, getPosition: d => d, getRadius: fr.r || 60,
+      getFillColor: [...(fr.cor || [255, 255, 255]), Math.round(255 * o)], getLineColor: [12, 12, 16, Math.round(220 * o)], stroked: true,
+      lineWidthMinPixels: 1.5, radiusMinPixels: 4, updateTriggers: { getFillColor: o, getLineColor: o } }));
+  }
+  // PULSOS: anel no local do evento
+  const pul = (C.pulsos || []).filter(p => t >= p.t0 && t <= p.t1);
+  if (pul.length) L.push(new deck.ScatterplotLayer({ id: 'pulsos', data: pul, getPosition: p => [p.lon, p.lat],
+    getRadius: p => (p.r || 400) * (0.3 + 0.7 * (((t - p.t0) / 1.6) % 1)), stroked: true, filled: false,
+    getLineColor: p => [...(p.cor || AMB), Math.round(255 * (1 - (((t - p.t0) / 1.6) % 1)))], lineWidthMinPixels: 4,
+    extensions: [new deck._TerrainExtension()], updateTriggers: { getRadius: t, getLineColor: t } }));
+  // CHEIAS
   for (const e of (C.cheias || [])) {
     if (t < e.t0 || t > e.t1) continue;
-    const nivel = chave(e.nivel, t);
-    const [W, S, E, N] = D.T.bbox, z = (nivel + (C.ajusteAgua ?? 0.5)) * EXZ;
+    const nivel = chave(e.nivel, t), [W, S, E, N] = D.T.bbox, z = (nivel + (C.ajusteAgua ?? 0.5)) * EXZ;
     L.push(new deck.SolidPolygonLayer({ id: 'cheia-' + e.t0, data: [[[W - 1, S - 1, z], [E + 1, S - 1, z], [E + 1, N + 1, z], [W - 1, N + 1, z]]],
-      getPolygon: d => d, getFillColor: e.cor || [38, 112, 178, 238], material: false, shadowEnabled: false }));
+      getPolygon: d => d, getFillColor: e.cor || [38, 112, 178, 238], material: false }));
   }
   const rot = (C.rotulos || []).filter(r => ano >= (r.de ?? -9e9) && ano <= (r.ate ?? 9e9) && t >= (r.t0 ?? -1) && t <= (r.t1 ?? 9e9));
   if (rot.length) L.push(new deck.TextLayer({ id: 'rotulos', data: rot, getPosition: r => [r.lon, r.lat, (r.z || 20) * EXZ],
     getText: r => r.texto, getSize: r => r.tam || 30, getColor: r => r.cor || [255, 255, 255],
-    fontFamily: 'Inter', fontWeight: 700, characterSet: 'auto', fontSettings: { sdf: true, fontSize: 64, buffer: 8 },
-    outlineWidth: 4, outlineColor: [0, 0, 0, 170], billboard: true, shadowEnabled: false, getTextAnchor: 'middle', getAlignmentBaseline: 'center' }));
+    fontFamily: 'Inter', fontWeight: 800, characterSet: 'auto', fontSettings: { sdf: true, fontSize: 64, buffer: 8 },
+    outlineWidth: 5, outlineColor: [0, 0, 0, 200], billboard: true, getTextAnchor: 'middle', getAlignmentBaseline: 'center' }));
   return L;
 }
 
-const BANDEIRAS = {
-  portugal: `<svg viewBox="0 0 90 60"><rect width="90" height="60" fill="#f4f4f0"/><circle cx="45" cy="30" r="15" fill="none" stroke="#c9a227" stroke-width="3"/><rect x="39" y="20" width="12" height="18" rx="2" fill="#2a4d9b"/><path d="M39 20 h12 v-5 h-12z" fill="#c9a227"/></svg>`,
-  reino: `<svg viewBox="0 0 90 60"><rect width="90" height="60" fill="#f4f4f0"/><circle cx="45" cy="30" r="16" fill="#2a4d9b"/><circle cx="45" cy="30" r="12" fill="none" stroke="#c9a227" stroke-width="3"/><path d="M38 14 h14 v-6 h-14z" fill="#c9a227"/></svg>`,
-  imperio: `<svg viewBox="0 0 90 60"><rect width="90" height="60" fill="#1f7a3a"/><path d="M45 6 L84 30 L45 54 L6 30z" fill="#f2c318"/><rect x="38" y="20" width="14" height="20" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><path d="M38 20 h14 v-6 h-14z" fill="#c9a227"/></svg>`,
-  republica: `<svg viewBox="0 0 90 60"><rect width="90" height="60" fill="#1f8a3e"/><path d="M45 6 L84 30 L45 54 L6 30z" fill="#f7d117"/><circle cx="45" cy="30" r="12" fill="#1a3a8a"/><path d="M33 28 Q45 23 57 31" stroke="#fff" stroke-width="2" fill="none"/></svg>`,
-};
+// GLOBO (abertura): d3 ortográfico, zoom exponencial do planeta até a cidade
+function globo(t) {
+  const G = C.globo, cv = $('globo');
+  if (!G || t > G.t1 + 0.05) { cv.style.opacity = 0; return; }
+  cv.style.opacity = Math.min(1, (G.t1 - t) / (G.some || 1.2));
+  const v = chave(G.chaves, t), s = Math.exp(v.ls);
+  const ctx = cv.getContext('2d');
+  const g = ctx.createRadialGradient(960, 540, 100, 960, 540, 1300); g.addColorStop(0, '#0b1a2e'); g.addColorStop(1, '#03060c');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, 1920, 1080);
+  if (!D._estrelas) { D._estrelas = []; let sd = 3; const r = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
+    for (let i = 0; i < 260; i++) D._estrelas.push([r() * 1920, r() * 1080, r() * 1.6 + .3]); }
+  ctx.fillStyle = 'rgba(255,255,255,.7)'; for (const [x, y, r] of D._estrelas) { ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill(); }
+  const pr = d3.geoOrthographic().rotate([-v.lon, -v.lat]).scale(s).translate([960, 540]);
+  const path0 = d3.geoPath(pr, ctx); const path = g => { try { path0(g); } catch (e) {} };
+  ctx.beginPath(); path({ type: 'Sphere' }); ctx.fillStyle = '#1d5a86'; ctx.fill();
+  ctx.shadowColor = 'rgba(120,190,255,.55)'; ctx.shadowBlur = 40; ctx.strokeStyle = 'rgba(160,210,255,.6)'; ctx.lineWidth = 3; ctx.stroke(); ctx.shadowBlur = 0;
+  ctx.beginPath(); path(d3.geoGraticule10()); ctx.strokeStyle = 'rgba(255,255,255,.07)'; ctx.lineWidth = 1; ctx.stroke();
+  for (const f of D.paises) { ctx.beginPath(); path(f); ctx.fillStyle = f.properties.name === 'Brazil' ? '#7aa556' : '#5f8a4a'; ctx.fill();
+    ctx.strokeStyle = 'rgba(20,40,20,.45)'; ctx.lineWidth = 1; ctx.stroke(); }
+  const kBR = clamp01((v.ls - Math.log(G.brasil_de || 700)) / 0.8);
+  for (const f of D.ufs) { ctx.beginPath(); path(f);
+    if (f.properties.uf === G.uf) { ctx.fillStyle = `rgba(250,204,21,${0.85 * clamp01((v.ls - Math.log(G.uf_de || 2200)) / 0.6) * clamp01((Math.log(G.uf_ate || 30000) - v.ls) / 0.7)})`; ctx.fill(); }
+    ctx.strokeStyle = `rgba(255,255,255,${0.5 * kBR})`; ctx.lineWidth = 1.2; ctx.stroke(); }
+  const br = D.paises.find(f => f.properties.name === 'Brazil');
+  ctx.beginPath(); path(br); ctx.strokeStyle = `rgba(250,204,21,${0.9 * clamp01((v.ls - Math.log(300)) / 0.5)})`; ctx.lineWidth = 4; ctx.stroke();
+  ctx.textAlign = 'center'; ctx.fillStyle = '#fff'; ctx.shadowColor = 'rgba(0,0,0,.8)'; ctx.shadowBlur = 8;
+  for (const r of (G.rotulos || [])) {
+    const a = clamp01((v.ls - Math.log(r.de)) / 0.4) * clamp01((Math.log(r.ate) - v.ls) / 0.4); if (a <= 0) continue;
+    const p = pr([r.lon, r.lat]); if (!p) continue;
+    ctx.globalAlpha = a; ctx.font = `800 ${r.tam || 64}px Sora`; ctx.fillStyle = r.cor || '#fff'; ctx.fillText(r.texto, p[0], p[1]);
+    if (r.ponto) { ctx.beginPath(); ctx.arc(p[0], p[1] + 30, 12, 0, 7); ctx.fillStyle = '#FACC15'; ctx.fill(); }
+  }
+  ctx.globalAlpha = 1; ctx.shadowBlur = 0;
+}
+
+function linhaDoTempo(t, ano) {
+  const LT = C.linha, el = $('linha'); if (!LT) return;
+  if (!D._ltOk) { D._ltOk = true;
+    for (const m of LT.marcas) { const d = document.createElement('div'); d.className = 'm'; d.dataset.ano = m; d.style.left = (100 * (m - LT.de) / (LT.ate - LT.de)) + '%'; el.appendChild(d); }
+    for (let s = Math.ceil(LT.de / 50) * 50; s <= LT.ate; s += 50) { const d = document.createElement('div'); d.className = 'sec'; d.textContent = s; d.style.left = (100 * (s - LT.de) / (LT.ate - LT.de)) + '%'; el.appendChild(d); }
+    const c = document.createElement('div'); c.className = 'cur'; el.appendChild(c); }
+  const k = clamp01((ano - LT.de) / (LT.ate - LT.de));
+  el.querySelector('.feito').style.width = (100 * k) + '%'; el.querySelector('.cur').style.left = (100 * k) + '%';
+  for (const m of el.querySelectorAll('.m')) m.classList.toggle('ok', +m.dataset.ano <= ano);
+}
 
 function html(t) {
   const ano = anoEm(t);
-  document.getElementById('ano').innerHTML = `<small>ano</small>${Math.floor(ano)}`;
-  document.getElementById('pop').innerHTML = `${fmt(popEm(ano))}<span>habitantes</span>`;
-  document.getElementById('popf').textContent = ano >= 2022 ? 'último censo: 2022 · fonte: IBGE' : 'fonte: IBGE e estimativas históricas';
+  const hud = C.hud_de ?? 0, kh = clamp01((t - hud) / 0.8);
+  $('ano').innerHTML = `<small>ano</small>${Math.floor(ano)}`;
+  $('pop').innerHTML = `${fmt(popEm(ano))}<span>habitantes</span>`;
+  $('popf').textContent = ano >= (C.ultimoCenso || 2022) ? `último censo: ${C.ultimoCenso || 2022} · fonte: IBGE` : 'fonte: IBGE e estimativas históricas';
   const r = [...C.regimes].reverse().find(x => ano >= x.ano) || C.regimes[0];
-  if (document.getElementById('regnome').textContent !== r.nome) {
-    document.getElementById('regnome').textContent = r.nome;
-    document.getElementById('bandeira').innerHTML = `<img src="assets/bandeiras/${r.bandeira}.svg">`;
-  }
-  const cart = document.getElementById('cartao');
-  const c = (C.cartoes || []).find(x => t >= x.t0 && t <= x.t1);
+  if ($('regnome').textContent !== r.nome) { $('regnome').textContent = r.nome; $('bandeira').innerHTML = `<img src="assets/bandeiras/${r.bandeira}.svg">`; }
+  linhaDoTempo(t, ano);
+  const cart = $('cartao'), c = (C.cartoes || []).find(x => t >= x.t0 && t <= x.t1);
   if (c) {
+    cart.querySelector('.n').textContent = c.numero || ''; cart.querySelector('.n').style.display = c.numero ? '' : 'none';
     cart.querySelector('.t').innerHTML = c.titulo; cart.querySelector('.l').textContent = c.legenda || '';
-    cart.querySelector('.f').textContent = c.fonte ? 'Fonte: ' + c.fonte : '';
+    cart.querySelector('.d').textContent = c.detalhe || ''; cart.querySelector('.f').textContent = c.fonte ? 'Fonte: ' + c.fonte : '';
     cart.style.opacity = Math.min(1, (t - c.t0) / .5, (c.t1 - t) / .5);
   } else cart.style.opacity = 0;
-  document.getElementById('faixa').style.opacity = cart.style.opacity;
-  const cap = document.getElementById('capa'), k = C.capa;
+  $('faixa').style.opacity = cart.style.opacity;
+  const cap = $('capa'), k = C.capa; let kc = 0;
   if (k && t <= k.t1) {
-    cap.querySelector('.k').textContent = k.kicker || ''; cap.querySelector('.t').innerHTML = k.titulo;
-    cap.querySelector('.s').textContent = k.sub || '';
-    cap.style.opacity = Math.min(1, (k.t1 - t) / .6);
-    for (const id of ['reg', 'tempo']) document.getElementById(id).style.opacity = 1 - Math.min(1, (k.t1 - t) / .6);
-  } else { cap.style.opacity = 0; for (const id of ['reg', 'tempo']) document.getElementById(id).style.opacity = 1; }
+    if (k.imagem) { cap.className = 'img'; cap.style.backgroundImage = `url(${k.imagem})`; cap.querySelector('.t').innerHTML = ''; cap.querySelector('.k').textContent = ''; cap.querySelector('.s').textContent = ''; }
+    else { cap.querySelector('.k').textContent = k.kicker || ''; cap.querySelector('.t').innerHTML = k.titulo; cap.querySelector('.s').textContent = k.sub || ''; }
+    kc = Math.min(1, (k.t1 - t) / (k.some || .6));
+  }
+  cap.style.opacity = kc;
+  for (const id of ['reg', 'tempo', 'linha']) $(id).style.opacity = Math.min(kh, 1 - kc);
+  globo(t);
   const kf = Math.max(0, Math.min(1, (t - (C.duracao - 3.2)) / 1.0));
-  document.getElementById('fim').style.opacity = kf;
-  document.getElementById('fimt').style.opacity = Math.max(0, Math.min(kf, (C.duracao - 0.2 - t) / 0.6));
-  const tom = document.getElementById('tom'), f = (C.tons || []).find(x => t >= x.t0 && t <= x.t1);
-  if (f) { tom.style.background = f.cor; tom.style.opacity = f.forca * Math.min(1, (t - f.t0) / .8, (f.t1 - t) / .8); }
-  else tom.style.opacity = 0;
+  $('fim').style.opacity = kf;
+  $('fimt').querySelector('.t').textContent = (C.fim || {}).titulo || '';
+  $('fimt').querySelector('.s').textContent = (C.fim || {}).sub || '';
+  $('fimt').style.opacity = Math.max(0, Math.min(kf, (C.duracao - 0.2 - t) / 0.6));
+  const tom = $('tom'), f = (C.tons || []).find(x => t >= x.t0 && t <= x.t1);
+  if (f) { tom.style.background = f.cor; tom.style.opacity = f.forca * Math.min(1, (t - f.t0) / .8, (f.t1 - t) / .8); } else tom.style.opacity = 0;
 }
 
 window.render = t => new Promise(res => {
   tAtual = t; aguardando = res;
   const v = chave(C.cam, t);
-  mapa.setProps({ viewState: { longitude: v.lon, latitude: v.lat, zoom: v.zoom, pitch: v.pitch, bearing: v.bearing },
-                  layers: camadas(t) });
+  mapa.setProps({ viewState: { longitude: v.lon, latitude: v.lat, zoom: v.zoom, pitch: v.pitch, bearing: v.bearing }, layers: camadas(t) });
   mapa.redraw(true);
 });
 
 window.pronto = (async () => {
-  await Promise.all([document.fonts.load('700 40px Inter'), document.fonts.load('800 60px Sora'), document.fonts.load('600 30px Inter')]);
+  await Promise.all([document.fonts.load('700 40px Inter'), document.fonts.load('800 60px Sora'), document.fonts.load('800 40px Inter'), document.fonts.load('600 30px Inter')]);
   await carrega();
-  mapa = new deck.Deck({ parent: document.getElementById('mapa'), width: 1920, height: 1080, controller: false,
-    useDevicePixels: 1, effects: [luz], initialViewState: { longitude: -51.2, latitude: -30.05, zoom: 11, pitch: 50 },
+  mapa = new deck.Deck({ parent: $('mapa'), width: 1920, height: 1080, controller: false,
+    useDevicePixels: 1, effects: [luz], initialViewState: { longitude: C.cam[0][1].lon, latitude: C.cam[0][1].lat, zoom: 11, pitch: 50 },
     parameters: { clearColor: [0, 0, 0, 0] }, layers: camadas(0),
     onAfterRender: () => { if (!aguardando) return; const r = aguardando; aguardando = null; html(tAtual); requestAnimationFrame(() => r(true)); } });
   await new Promise(r => { const iv = setInterval(() => {

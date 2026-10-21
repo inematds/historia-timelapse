@@ -14,9 +14,9 @@ import numpy as np
 from shapely import STRtree, points
 from shapely.geometry import shape
 
-raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-W, S, E, N = -51.36, -30.30, -50.95, -29.90
-chao = np.load(f"{raiz}/dados/chao.npy")
+import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+from cidade import *  # noqa
+chao = np.load(f"{DADOS}/chao.npy")
 H, Wd = chao.shape
 PADRAO = {"house": 6, "residential": 7, "detached": 6, "garage": 3, "shed": 3, "roof": 4, "industrial": 9,
           "warehouse": 9, "commercial": 10, "retail": 7, "apartments": 15, "church": 16, "school": 8,
@@ -30,7 +30,7 @@ def z_chao(lon, lat):
 
 
 def main():
-    pred = json.load(open(f"{raiz}/dados/brutos/predios.json"))
+    pred = json.load(open(f"{BRUTOS}/predios.json"))
     pred = [p for p in pred if p["area"] >= 12 and len(p["poly"]) >= 4]
     lon = np.array([p["lon"] for p in pred]); lat = np.array([p["lat"] for p in pred])
     alt = []
@@ -53,21 +53,21 @@ def main():
         for x, y in anel:
             pos += [x, y, float(z)]
         ini.append(ini[-1] + len(anel))
-    np.array(pos, np.float32).tofile(f"{raiz}/motor/assets/pred_pos.f32")
-    np.array(ini, np.uint32).tofile(f"{raiz}/motor/assets/pred_ini.u32")
-    alt.tofile(f"{raiz}/motor/assets/pred_alt.f32")
+    np.array(pos, np.float32).tofile(f"{ASSETS}/pred_pos.f32")
+    np.array(ini, np.uint32).tofile(f"{ASSETS}/pred_ini.u32")
+    alt.tofile(f"{ASSETS}/pred_alt.f32")
 
-    muni = shape(json.load(open(f"{raiz}/dados/brutos/municipio.geojson"))["features"][0]["geometry"])
+    muni = shape(json.load(open(f"{BRUTOS}/municipio.geojson"))["features"][0]["geometry"])
     pts = points(lon, lat)
     em_poa = np.array([muni.contains(pt) for pt in pts])
-    bfeat = json.load(open(f"{raiz}/dados/brutos/bairros.geojson"))["features"]
+    bfeat = json.load(open(f"{BRUTOS}/bairros.geojson"))["features"]
     bgeo = [shape(f["geometry"]) for f in bfeat]
     nomes = [f["properties"]["nome"] for f in bfeat]
     arv = STRtree(bgeo)
     bidx = np.full(len(pred), -1, np.int32)
     ip, ig = arv.query(pts, predicate="within")
     bidx[ip] = ig
-    np.savez(f"{raiz}/dados/predios_meta.npz", lon=lon, lat=lat, alt=alt, area=np.array([p["area"] for p in pred]),
+    np.savez(f"{DADOS}/predios_meta.npz", lon=lon, lat=lat, alt=alt, area=np.array([p["area"] for p in pred]),
              poa=em_poa, bairro=bidx, nomes=np.array(nomes, dtype=object),
              tipo=np.array([p["tipo"] or "" for p in pred], dtype=object))
     print(f"predios={len(pred)} vertices={len(pos)//3} em_poa={em_poa.sum()} com_bairro={(bidx>=0).sum()} "
