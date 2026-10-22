@@ -11,7 +11,7 @@ Timelapse 3D da história de cidades (mapa real + prédios do OSM + cartões com
 - Tudo local: sem API paga. Downloads de arquivos públicos (Geofabrik, Copernicus DEM, Wikimedia Commons) são permitidos; consultas a APIs (IBGE, Wikipédia, Overpass) precisam de autorização do Nei.
 - Design INEMA: ler `~/projetos/inema-design/DESIGN.md` e `video/*` antes de mudar o visual.
 - Todo número na tela tem fonte escrita; divergências entre fontes ficam em `dados/pesquisa/RESUMO.md`.
-- Mostrar quadros-chave ao Nei antes do render completo; publicar (Aventuras, lives26) só com OK dele.
+- Mostrar quadros-chave ao Nei antes do render completo (e seguir trabalhando, sem esperar resposta); publicar (Aventuras, lives26) só com OK dele.
 - Revisão: revisor independente (`~/.claude/runbooks/revisor-independente.md`) com a lista `REVISAO-LISTA.md`; registrar notas no `~/projetos/wifi/scripts/revisor-nota.py --fluxo historia-timelapse`.
 
 ## Regra do motor: versão narrada = camada de áudio (Nei, 21/10/2026)
@@ -25,6 +25,7 @@ Timelapse 3D da história de cidades (mapa real + prédios do OSM + cartões com
 Quando o Nei corrigir algo ou eu pegar um erro meu: antes de continuar, acrescentar a lição como uma linha no TOPO da seção Lessons abaixo.
 
 ## Lessons
+- Mostrar quadros-chave ao Nei é aviso, não trava: mostrar e seguir com render/música/montagem no mesmo turno; só parar para publicar (Nei: "pq tem te dizer para continuar"). (22/10/2026)
 - Motor é único para qualquer lugar, inclusive outros países: nada preso a Brasil/hemisfério/cidade no código; o que muda vai no config da cidade, com padrão igual ao de Floripa. Nunca remendar caso a caso (ex.: `longe.sul` só para Itaguaí). (22/10/2026)
 - Ponte/linha que "nasce" num bloco: `desenha` (em anos) tem que caber no avanço do ano dentro do bloco, senão ela fica pela metade e as torres não aparecem; câmera lateral = bearing perpendicular à ponte (Hercílio do norte, bearing −180, alvo ~200 m ao sul dela). Conferir o quadro depois da chegada da câmera (45% do bloco). (22/10/2026)
 - Globo: desenhar a Terra pixel a pixel (ortográfica inversa) com Blue Marble + recorte regional em alta + textura da cidade, terminando no mesmo m/px do mapa 3D (ls ≈ zoom + log2 do cos da latitude); BitmapLayer grande do deck (satélite ao redor) não apareceu — usar fundo de duas cores com a cor tirada do quadro. Igualar a cor média da textura ao satélite (`cor_satelite`) some com o retângulo. (21/10/2026)
