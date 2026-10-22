@@ -1,0 +1,2055 @@
+{
+ "_meta": {
+  "gerado_em": "2026-10-22",
+  "o_que_e": "Ano aproximado em que cada bairro do município do Rio passa a ter OCUPAÇÃO URBANA (para acender a mancha no timelapse). 139 dos 165 bairros têm data com fonte; os 26 restantes estão em 'bairros_sem_dado' e o motor (scripts/modelo_anos.py) preenche pela distância ao centro antigo — não inventar datas.",
+  "regra_de_escolha": "O motor ordena os prédios pelo ano do bairro e depois reparte a curva de população por essa ordem — quem tem ano antigo 'gasta' a população dos primeiros séculos. Por isso o ano é o da ocupação URBANA (estação de trem, bonde, túnel, loteamento, conjunto), e não a sesmaria/engenho colonial de um bairro que era rural: a data colonial vai em 'ano_colonial' (o motor ignora). Exceções deliberadas: Centro (1567), Saúde/Lapa/Catumbi/Cidade Nova (núcleo colonial e joanino), São Cristóvão (1810, Quinta), Santa Cruz (1808, fazenda real), Paquetá, Pedra de Guaratiba, Freguesia (Ilha) e Freguesia/Jacarepaguá (núcleos de freguesia).",
+  "nomes_osm": "O campo 'bairro' usa exatamente o nome dos polígonos de cidades/rio/dados/brutos/bairros.geojson (campo 'nome') que caem >50% dentro de municipio.geojson — 165 polígonos, conferido em 22/10/2026 (o geojson também traz bairros de Niterói, Nova Iguaçu, Itaguaí etc., e repete nomes como 'Centro'). Lugares que NÃO são polígono entram só como texto na evidência do bairro que os contém: Morro da Providência (Gamboa), Morro do Castelo (Centro), 'Leopoldina' (região, não bairro), Engenho Velho (Tijuca).",
+  "coordenadas": "lat/lon = representative_point do polígono OSM (shapely). O motor não usa lat/lon deste arquivo (casa só pelo nome).",
+  "ajuste_linear": "Para o Rio a regressão ano × distância do motor é fraca: Santa Cruz (~56 km) e Campo Grande (~40 km) são longe mas antigos (fazenda real 1808; estação 1878) e a Barra (~23 km) é perto mas de 1969. Por isso as datas explícitas desses bairros importam.",
+  "criterios": {
+   "assentamento": "núcleo de povoamento documentado (ou 'ocupado a partir de' na fonte)",
+   "equipamento": "estação, bonde, túnel, estrada, fábrica, conjunto ou palácio que ancorou a ocupação",
+   "loteamento": "loteamento/arruamento/plano urbanístico datado",
+   "limite_superior": "a fonte só prova que o lugar já existia naquele ano (ocupação começou antes)"
+  },
+  "fonte_padrao": "Wikipédia em português, página de cada bairro (HTML lido em 22/10/2026, URL em 'fonte'); Ralph M. Giesbrecht, Estações Ferroviárias do Brasil (https://www.estacoesferroviarias.com.br/ — índices da Linha do Centro, Linha Auxiliar, E. F. Rio d'Ouro e Leopoldina Linha do Norte); L. C. Soares, 'Prostitution in Nineteenth-Century Rio de Janeiro', ILAS/Univ. of London (expansão urbana depois de 1808). Datas oficiais de criação dos bairros (decreto nº 3.158 de 23/07/1981, decreto nº 5.280 de 23/08/1985, leis de 1993) NÃO foram usadas como ocupação.",
+  "divergencias": "ver RESUMO-POP.md (seção Bairros)"
+ },
+ "bairros": [
+  {
+   "bairro": "Centro",
+   "ano_aprox_ocupacao": 1567,
+   "criterio": "assentamento",
+   "evidencia": "em 1567 os portugueses que fundaram a cidade dois anos antes no Morro Cara de Cão se transferem para o Morro do Castelo (berço da cidade); freguesia de São Sebastião criada em 1569, Candelária em 1621/1634",
+   "fonte": "https://pt.wikipedia.org/wiki/Centro_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9054,
+   "lon": -43.1798,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Pedra de Guaratiba",
+   "ano_aprox_ocupacao": 1626,
+   "criterio": "limite_superior",
+   "evidencia": "Igreja de N. S. do Desterro de 1626 (vila de pescadores); sesmaria de 1579",
+   "fonte": "https://pt.wikipedia.org/wiki/Pedra_de_Guaratiba",
+   "ano_colonial": 1579,
+   "lat": -22.998,
+   "lon": -43.6388,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Freguesia (Jacarepaguá)",
+   "ano_aprox_ocupacao": 1661,
+   "criterio": "assentamento",
+   "evidencia": "primeira freguesia da Baixada de Jacarepaguá, fundada em 1661",
+   "fonte": "https://pt.wikipedia.org/wiki/Freguesia_%28Jacarepagu%C3%A1%29",
+   "lat": -22.93,
+   "lon": -43.3348,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Jacarepaguá",
+   "ano_aprox_ocupacao": 1661,
+   "criterio": "limite_superior",
+   "evidencia": "freguesia de Jacarepaguá de 1661 (ptwiki Freguesia); aterro de pântanos e divisão em chácaras do fim do séc. XIX até os anos 1960",
+   "fonte": "https://pt.wikipedia.org/wiki/Freguesia_(Jacarepagu%C3%A1)",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Jacarepagu%C3%A1_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.9418,
+   "lon": -43.4245,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Paquetá",
+   "ano_aprox_ocupacao": 1697,
+   "criterio": "limite_superior",
+   "evidencia": "capela de São Roque construída em 1697; ilha dividida em duas sesmarias em 1565",
+   "fonte": "https://pt.wikipedia.org/wiki/Paquet%C3%A1_%28bairro_do_Rio_de_Janeiro%29",
+   "ano_colonial": 1565,
+   "lat": -22.7561,
+   "lon": -43.1171,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Freguesia (Ilha)",
+   "ano_aprox_ocupacao": 1710,
+   "criterio": "assentamento",
+   "evidencia": "freguesia de N. S. da Ajuda criada em 1710; barcas a vapor a partir de 1838; bonde chega em 1935",
+   "fonte": "https://pt.wikipedia.org/wiki/Freguesia_%28Ilha_do_Governador%29",
+   "lat": -22.7865,
+   "lon": -43.1707,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Lapa",
+   "ano_aprox_ocupacao": 1723,
+   "criterio": "equipamento",
+   "evidencia": "Aqueduto da Carioca (Arcos da Lapa) construído em 1723",
+   "fonte": "https://pt.wikipedia.org/wiki/Lapa_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9141,
+   "lon": -43.1779,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Saúde",
+   "ano_aprox_ocupacao": 1774,
+   "criterio": "equipamento",
+   "evidencia": "a partir de 1774 a região do Cais do Valongo vira o ponto de desembarque de africanos escravizados (antes era a Praça XV); Fortaleza da Conceição construída em 1713 no alto do morro",
+   "fonte": "https://pt.wikipedia.org/wiki/Sa%C3%BAde_%28bairro_do_Rio_de_Janeiro%29",
+   "ano_colonial": 1713,
+   "lat": -22.8971,
+   "lon": -43.1848,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Gamboa",
+   "ano_aprox_ocupacao": 1790,
+   "criterio": "assentamento",
+   "evidencia": "'entre o final do século XVIII e boa parte do século XIX' arrabalde escolhido pela aristocracia (ano = fim do séc. XVIII, aproximado). Morro da Providência (dividido entre Gamboa, Santo Cristo e Centro): povoamento 'na década de 1890' por despejados de cortiço e soldados de Canudos (1897) — primeira 'favela'",
+   "fonte": "https://pt.wikipedia.org/wiki/Gamboa_%28bairro_do_Rio_de_Janeiro%29",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Morro_da_Provid%C3%AAncia"
+   ],
+   "lat": -22.8977,
+   "lon": -43.1923,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Catete",
+   "ano_aprox_ocupacao": 1808,
+   "criterio": "assentamento",
+   "evidencia": "mesma expansão pós-1808 para o sul (Soares); Rugendas pinta a rua do Catete em 1835; Palácio do Catete sede do governo em 1897",
+   "fonte": "https://sas-space.sas.ac.uk/3384/1/B55_-_Prostitution_in_Nineteenth-Century_Rio_de_Janeiro.pdf",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Catete_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.9277,
+   "lon": -43.1806,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Cosme Velho",
+   "ano_aprox_ocupacao": 1808,
+   "criterio": "assentamento",
+   "evidencia": "parte alta do vale de Laranjeiras, mesma expansão pós-1808 (Soares); sesmarias às margens do rio Carioca desde 1567 (ptwiki Cosme Velho)",
+   "fonte": "https://sas-space.sas.ac.uk/3384/1/B55_-_Prostitution_in_Nineteenth-Century_Rio_de_Janeiro.pdf",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Cosme_Velho_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1567,
+   "lat": -22.9404,
+   "lon": -43.2003,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Flamengo",
+   "ano_aprox_ocupacao": 1808,
+   "criterio": "assentamento",
+   "evidencia": "Soares cita o Flamengo entre as orlas 'antes desocupadas' ocupadas depois de 1808; casa de pedra de Pero Lopes (1531) e estrada do séc. XVII do Engenho d'El Rei",
+   "fonte": "https://sas-space.sas.ac.uk/3384/1/B55_-_Prostitution_in_Nineteenth-Century_Rio_de_Janeiro.pdf",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Flamengo_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1531,
+   "lat": -22.9347,
+   "lon": -43.1749,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Glória",
+   "ano_aprox_ocupacao": 1808,
+   "criterio": "assentamento",
+   "evidencia": "depois da chegada da Corte (1808) a área urbana se estende às praias antes desocupadas (Flamengo, Botafogo) e ao vale de Laranjeiras; no fim dos anos 1830 a cidade ia de São Cristóvão a Botafogo. Ano = 1808, início da expansão citada (aproximado)",
+   "fonte": "https://sas-space.sas.ac.uk/3384/1/B55_-_Prostitution_in_Nineteenth-Century_Rio_de_Janeiro.pdf",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Gl%C3%B3ria_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.9183,
+   "lon": -43.1749,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Jardim Botânico",
+   "ano_aprox_ocupacao": 1808,
+   "criterio": "equipamento",
+   "evidencia": "Jardim Botânico (Real Horto) criado por decreto de dom João de 13/06/1808 (primeira palmeira-imperial plantada em 1809) junto ao antigo Engenho de N. S. da Conceição da Lagoa (1575)",
+   "fonte": "https://pt.wikipedia.org/wiki/Jardim_Bot%C3%A2nico_do_Rio_de_Janeiro",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Jardim_Bot%C3%A2nico_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1575,
+   "lat": -22.9635,
+   "lon": -43.2236,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Laranjeiras",
+   "ano_aprox_ocupacao": 1808,
+   "criterio": "assentamento",
+   "evidencia": "Soares cita o 'vale de Laranjeiras' na expansão pós-1808; as terras foram divididas em sesmarias a partir de 1567 (ptwiki)",
+   "fonte": "https://sas-space.sas.ac.uk/3384/1/B55_-_Prostitution_in_Nineteenth-Century_Rio_de_Janeiro.pdf",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Laranjeiras_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1567,
+   "lat": -22.9363,
+   "lon": -43.1865,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Santa Cruz",
+   "ano_aprox_ocupacao": 1808,
+   "criterio": "equipamento",
+   "evidencia": "a Fazenda de Santa Cruz (dos jesuítas até 1759, depois da Coroa) vira residência de veraneio da Família Real a partir de 1808; estação Santa Cruz em 02/12/1878. Jesuítas na fazenda desde o séc. XVI (ptwiki: 'criado em 30/12/1567, extra-oficial')",
+   "fonte": "https://pt.wikipedia.org/wiki/Santa_Cruz_%28bairro_do_Rio_de_Janeiro%29",
+   "ano_colonial": 1567,
+   "lat": -22.9165,
+   "lon": -43.7233,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Tijuca",
+   "ano_aprox_ocupacao": 1808,
+   "criterio": "assentamento",
+   "evidencia": "Soares cita o 'Engenho Velho' (atual Tijuca) entre as áreas ocupadas depois de 1808; em 1759 as fazendas dos jesuítas foram vendidas a centenas de sitiantes",
+   "fonte": "https://sas-space.sas.ac.uk/3384/1/B55_-_Prostitution_in_Nineteenth-Century_Rio_de_Janeiro.pdf",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Tijuca"
+   ],
+   "ano_colonial": 1759,
+   "lat": -22.9318,
+   "lon": -43.2376,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "São Cristóvão",
+   "ano_aprox_ocupacao": 1810,
+   "criterio": "equipamento",
+   "evidencia": "a partir de 1810 o príncipe-regente dom João adota o Paço da Quinta da Boa Vista como residência oficial; igreja de São Cristóvão (1627) marca o povoamento português; estação de 1858",
+   "fonte": "https://pt.wikipedia.org/wiki/S%C3%A3o_Crist%C3%B3v%C3%A3o_%28bairro_do_Rio_de_Janeiro%29",
+   "ano_colonial": 1627,
+   "lat": -22.8984,
+   "lon": -43.2182,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Cidade Nova",
+   "ano_aprox_ocupacao": 1811,
+   "criterio": "assentamento",
+   "evidencia": "decreto do Príncipe Regente de 26/04/1811 incentiva construir no aterrado do Mangue; Canal do Mangue em 1857; bairro proletário a partir de 1860; aterro dos pântanos completado em 1895",
+   "fonte": "https://pt.wikipedia.org/wiki/Cidade_Nova_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9096,
+   "lon": -43.203,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Botafogo",
+   "ano_aprox_ocupacao": 1816,
+   "criterio": "limite_superior",
+   "evidencia": "Taunay pinta a enseada de Botafogo com casas na praia em 1816 (imagem e03); Soares cita Botafogo na expansão pós-1808; sesmaria de Antônio Francisco Velho vendida em 1590 a João Pereira de Souza Botafogo",
+   "fonte": "https://commons.wikimedia.org/wiki/File:Nicolas-Antoine_Taunay_-_Vista_da_enseada_de_Botafogo,_1816.jpg",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Botafogo_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1590,
+   "lat": -22.9511,
+   "lon": -43.1867,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Catumbi",
+   "ano_aprox_ocupacao": 1816,
+   "criterio": "limite_superior",
+   "evidencia": "'um dos bairros mais antigos da cidade'; Debret pinta 'Meu ateliê do Catumby' em 1816",
+   "fonte": "https://pt.wikipedia.org/wiki/Catumbi_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9199,
+   "lon": -43.1973,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Humaitá",
+   "ano_aprox_ocupacao": 1825,
+   "criterio": "assentamento",
+   "evidencia": "em 1825 Joaquim Marques Batista de Leão compra a fazenda da olaria e mais tarde a loteia; capela de São Clemente em 1657",
+   "fonte": "https://pt.wikipedia.org/wiki/Humait%C3%A1_%28bairro_do_Rio_de_Janeiro%29",
+   "ano_colonial": 1657,
+   "lat": -22.9557,
+   "lon": -43.2003,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Caju",
+   "ano_aprox_ocupacao": 1830,
+   "criterio": "assentamento",
+   "evidencia": "'entre 1830 e 1940 foi um bairro nobre'; cemitério São Francisco Xavier da Santa Casa a partir de 1851; fábrica de tecidos em 1880",
+   "fonte": "https://pt.wikipedia.org/wiki/Caju_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8835,
+   "lon": -43.2248,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Santa Teresa",
+   "ano_aprox_ocupacao": 1850,
+   "criterio": "assentamento",
+   "evidencia": "surge do convento de Santa Teresa (séc. XVIII); 'por volta de 1850' é intensamente ocupado por quem fugia da febre amarela; bonde em 1872",
+   "fonte": "https://pt.wikipedia.org/wiki/Santa_Teresa_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9319,
+   "lon": -43.1967,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Cascadura",
+   "ano_aprox_ocupacao": 1858,
+   "criterio": "equipamento",
+   "evidencia": "estação Cascadura inaugurada em 29/03/1858, fim do primeiro trecho suburbano da E. F. D. Pedro II",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/cascadura.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Cascadura_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.886,
+   "lon": -43.3313,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Engenho Novo",
+   "ano_aprox_ocupacao": 1858,
+   "criterio": "equipamento",
+   "evidencia": "estação Engenho Novo de 1858 (primeiro trecho da E. F. D. Pedro II); capela de 1720 e freguesia do Engenho Novo criada em 1783",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/engenho.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Engenho_Novo_%28Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1720,
+   "lat": -22.9083,
+   "lon": -43.2681,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Deodoro",
+   "ano_aprox_ocupacao": 1859,
+   "criterio": "equipamento",
+   "evidencia": "estação Sapopemba (atual Deodoro) inaugurada em 08/03/1859; engenho Sapopemba de 1612",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/deodoro.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Deodoro_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1612,
+   "lat": -22.8518,
+   "lon": -43.386,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "São Francisco Xavier",
+   "ano_aprox_ocupacao": 1861,
+   "criterio": "equipamento",
+   "evidencia": "estação São Francisco Xavier inaugurada em 16/05/1861, em terras do Engenho Novo dos Jesuítas (1707)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/sfxavier.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/S%C3%A3o_Francisco_Xavier_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1707,
+   "lat": -22.9022,
+   "lon": -43.2434,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Encantado",
+   "ano_aprox_ocupacao": 1868,
+   "criterio": "equipamento",
+   "evidencia": "estação Encantado inaugurada em 15/04/1868",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/encantado.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Encantado_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8965,
+   "lon": -43.3042,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Todos os Santos",
+   "ano_aprox_ocupacao": 1868,
+   "criterio": "equipamento",
+   "evidencia": "estação Todos os Santos de 1868",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/todos.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Todos_os_Santos_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8954,
+   "lon": -43.2837,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Mangueira",
+   "ano_aprox_ocupacao": 1869,
+   "criterio": "equipamento",
+   "evidencia": "estação Mangueira inaugurada em 1869 (Estações Ferroviárias); a ptwiki dá 1889 — ver RESUMO-POP",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/mangueira.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Mangueira_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.9037,
+   "lon": -43.2368,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Riachuelo",
+   "ano_aprox_ocupacao": 1869,
+   "criterio": "equipamento",
+   "evidencia": "estação Riachuelo de 1869",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/riachuelo.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Riachuelo_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.9022,
+   "lon": -43.2554,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Rocha",
+   "ano_aprox_ocupacao": 1870,
+   "criterio": "loteamento",
+   "evidencia": "urbanização entre 1870 e 1875; estação de 1885",
+   "fonte": "https://pt.wikipedia.org/wiki/Rocha_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8987,
+   "lon": -43.2489,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Vila Isabel",
+   "ano_aprox_ocupacao": 1872,
+   "criterio": "loteamento",
+   "evidencia": "bairro fundado em 03/01/1872 pelo Barão de Drummond; Companhia Arquitetônica de Vila Isabel em 1873",
+   "fonte": "https://pt.wikipedia.org/wiki/Vila_Isabel_%28Rio_de_Janeiro%29",
+   "lat": -22.916,
+   "lon": -43.2493,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Engenho de Dentro",
+   "ano_aprox_ocupacao": 1873,
+   "criterio": "equipamento",
+   "evidencia": "estação Engenho de Dentro de 1873; região da Freguesia de Inhaúma desde o séc. XVIII",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/engdentro.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Engenho_de_Dentro_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.9017,
+   "lon": -43.2975,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Maracanã",
+   "ano_aprox_ocupacao": 1873,
+   "criterio": "assentamento",
+   "evidencia": "a partir de 1873 inicia-se a urbanização da área; Derby Club fundado em 1885",
+   "fonte": "https://pt.wikipedia.org/wiki/Maracan%C3%A3_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9145,
+   "lon": -43.2274,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Piedade",
+   "ano_aprox_ocupacao": 1873,
+   "criterio": "equipamento",
+   "evidencia": "estação Piedade inaugurada em 11/04/1873; sesmaria de 1779; primeiro bairro do subúrbio com luz elétrica (1905)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/piedade.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Piedade_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1779,
+   "lat": -22.8931,
+   "lon": -43.3103,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Andaraí",
+   "ano_aprox_ocupacao": 1875,
+   "criterio": "equipamento",
+   "evidencia": "primeira rua aberta, a Estrada do Andarahy (atual Barão de Mesquita), em 1875",
+   "fonte": "https://pt.wikipedia.org/wiki/Andara%C3%AD_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9289,
+   "lon": -43.2503,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Quintino Bocaiúva",
+   "ano_aprox_ocupacao": 1876,
+   "criterio": "equipamento",
+   "evidencia": "estação (Cupertino) inaugurada em 01/05/1876",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/quintino.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Quintino_Bocai%C3%BAva_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8957,
+   "lon": -43.3262,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Campo Grande",
+   "ano_aprox_ocupacao": 1878,
+   "criterio": "equipamento",
+   "evidencia": "estação Campo Grande inaugurada em 02/12/1878; ocupação remonta a 1603 (trabalhos jesuíticos, ptwiki) e a região era da freguesia de Irajá em 1644",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/campo.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Campo_Grande_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1603,
+   "lat": -22.8876,
+   "lon": -43.5702,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Realengo",
+   "ano_aprox_ocupacao": 1878,
+   "criterio": "equipamento",
+   "evidencia": "estação Realengo inaugurada em 02/12/1878; terras realengas concedidas em 1814",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/realengo.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Realengo_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1814,
+   "lat": -22.8782,
+   "lon": -43.4305,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Colégio",
+   "ano_aprox_ocupacao": 1883,
+   "criterio": "equipamento",
+   "evidencia": "estação do Colégio aberta com a Rio d'Ouro em 15/01/1883; sesmaria de Irajá de 1568",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_riodeouro/colegio.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Col%C3%A9gio_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1568,
+   "lat": -22.8403,
+   "lon": -43.3367,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Irajá",
+   "ano_aprox_ocupacao": 1883,
+   "criterio": "equipamento",
+   "evidencia": "estação Irajá da Rio d'Ouro de 15/01/1883; igreja matriz de N. S. da Apresentação instituída em 30/12/1644 e engenho de 1568 (ptwiki)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_riodeouro/iraja.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Iraj%C3%A1_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1644,
+   "lat": -22.8338,
+   "lon": -43.3233,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Vicente de Carvalho",
+   "ano_aprox_ocupacao": 1883,
+   "criterio": "equipamento",
+   "evidencia": "estação Vicente de Carvalho da E. F. Rio d'Ouro inaugurada em 15/01/1883",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_riodeouro/vicente.htm",
+   "lat": -22.8566,
+   "lon": -43.3166,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Sepetiba",
+   "ano_aprox_ocupacao": 1884,
+   "criterio": "equipamento",
+   "evidencia": "em 1884 a Companhia Ferro Carril passa a levar bonde de tração animal até o cais de Sepetiba; loteamento 'Vila Balneário Globo' nos anos 1960",
+   "fonte": "https://pt.wikipedia.org/wiki/Sepetiba",
+   "lat": -22.9686,
+   "lon": -43.6965,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Sampaio",
+   "ano_aprox_ocupacao": 1885,
+   "criterio": "equipamento",
+   "evidencia": "estação Sampaio de 1885",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/sampaio.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Sampaio_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.9032,
+   "lon": -43.2608,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Bonsucesso",
+   "ano_aprox_ocupacao": 1886,
+   "criterio": "equipamento",
+   "evidencia": "estação Bonsucesso da Leopoldina de 23/10/1886; loteamento das terras do Engenho da Pedra por Guilherme Maxwell por volta de 1914",
+   "fonte": "https://www.estacoesferroviarias.com.br/efl_rj_petropolis/bonsucesso_rj.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Bonsucesso"
+   ],
+   "lat": -22.8666,
+   "lon": -43.2528,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Brás de Pina",
+   "ano_aprox_ocupacao": 1886,
+   "criterio": "equipamento",
+   "evidencia": "estação Brás de Pina com data 23/10/1886 no site (a ptwiki diz parada inaugurada em 1910 — ver RESUMO-POP)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efl_rj_petropolis/bras.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Br%C3%A1s_de_Pina"
+   ],
+   "lat": -22.8293,
+   "lon": -43.2926,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Manguinhos",
+   "ano_aprox_ocupacao": 1886,
+   "criterio": "equipamento",
+   "evidencia": "estação Manguinhos da E. F. Leopoldina inaugurada em 23/10/1886",
+   "fonte": "https://www.estacoesferroviarias.com.br/efl_rj_petropolis/manguinhos.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Manguinhos_%28Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8784,
+   "lon": -43.248,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Olaria",
+   "ano_aprox_ocupacao": 1886,
+   "criterio": "equipamento",
+   "evidencia": "estação Olaria inaugurada em 1886 (Leopoldina, 23/10/1886)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efl_rj_petropolis/olaria.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Olaria_%28Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8464,
+   "lon": -43.2682,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Penha",
+   "ano_aprox_ocupacao": 1886,
+   "criterio": "equipamento",
+   "evidencia": "estação Penha da Leopoldina de 23/10/1886; igreja de N. S. da Penha erguida em 1635 por Baltasar de Abreu Cardoso",
+   "fonte": "https://www.estacoesferroviarias.com.br/efl_rj_petropolis/penha.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Penha_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1635,
+   "lat": -22.836,
+   "lon": -43.272,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Ramos",
+   "ano_aprox_ocupacao": 1886,
+   "criterio": "equipamento",
+   "evidencia": "estação Ramos da Leopoldina inaugurada em 23/10/1886 (a ptwiki dá o mesmo dia)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efl_rj_petropolis/ramos.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Ramos"
+   ],
+   "lat": -22.8508,
+   "lon": -43.2554,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Vigário Geral",
+   "ano_aprox_ocupacao": 1886,
+   "criterio": "equipamento",
+   "evidencia": "estação criada em 1886 (ptwiki e Estações Ferroviárias, 23/10/1886); favela ao lado da linha no fim dos anos 1940",
+   "fonte": "https://www.estacoesferroviarias.com.br/efl_rj_petropolis/vigario.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Vig%C3%A1rio_Geral"
+   ],
+   "lat": -22.8101,
+   "lon": -43.3095,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Méier",
+   "ano_aprox_ocupacao": 1889,
+   "criterio": "equipamento",
+   "evidencia": "estação do Méier inaugurada em 13/05/1889 — data usada como fundação do bairro",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/meier.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/M%C3%A9ier"
+   ],
+   "lat": -22.9013,
+   "lon": -43.2792,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Bangu",
+   "ano_aprox_ocupacao": 1890,
+   "criterio": "equipamento",
+   "evidencia": "estação Bangu inaugurada em 01/05/1890; Fábrica Bangu inaugurada em 1893; Fazenda Bangu de 1673",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/bangu.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Bangu"
+   ],
+   "ano_colonial": 1673,
+   "lat": -22.865,
+   "lon": -43.4705,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Madureira",
+   "ano_aprox_ocupacao": 1890,
+   "criterio": "equipamento",
+   "evidencia": "estação Madureira inaugurada em 15/06/1890; a fazenda vem de 1613 (ptwiki)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/madureira.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Madureira_%28Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1613,
+   "lat": -22.8711,
+   "lon": -43.3353,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Santíssimo",
+   "ano_aprox_ocupacao": 1890,
+   "criterio": "equipamento",
+   "evidencia": "estação Santíssimo de 1890; capela com Santíssimo Sacramento desde 1750",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/santissimo.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Sant%C3%ADssimo_%28Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1750,
+   "lat": -22.8793,
+   "lon": -43.5202,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Tanque",
+   "ano_aprox_ocupacao": 1890,
+   "criterio": "assentamento",
+   "evidencia": "o Largo do Tanque 'surgiu no final do século XIX' com os bondes de tração animal; reservatório de 1875 (ano aproximado)",
+   "fonte": "https://pt.wikipedia.org/wiki/Tanque_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9139,
+   "lon": -43.3573,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Copacabana",
+   "ano_aprox_ocupacao": 1892,
+   "criterio": "equipamento",
+   "evidencia": "Túnel Velho (Morro de Vila Rica) inaugurado em 06/07/1892 pela Cia. Ferro-Carril do Jardim Botânico; depois bondes até o Leme e a Igreja de Copacabana e a Av. Atlântica",
+   "fonte": "https://pt.wikipedia.org/wiki/Copacabana_%28Rio_de_Janeiro%29",
+   "lat": -22.9732,
+   "lon": -43.1903,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Leme",
+   "ano_aprox_ocupacao": 1892,
+   "criterio": "loteamento",
+   "evidencia": "terras compradas a partir de 1873 por Alexandre Wagner; primeiro loteamento entre 1892 e 1894 (rua Gustavo Sampaio)",
+   "fonte": "https://pt.wikipedia.org/wiki/Leme_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9619,
+   "lon": -43.1666,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Ipanema",
+   "ano_aprox_ocupacao": 1894,
+   "criterio": "loteamento",
+   "evidencia": "Villa Ipanema fundada em 1894 por José Antônio Moreira Filho, Conde de Ipanema",
+   "fonte": "https://pt.wikipedia.org/wiki/Ipanema_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9844,
+   "lon": -43.2046,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Del Castilho",
+   "ano_aprox_ocupacao": 1895,
+   "criterio": "equipamento",
+   "evidencia": "estação Del Castilho da Linha Auxiliar inaugurada em 01/11/1895 (e da Rio d'Ouro em 23/08/1898)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/delcastilho.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Del_Castilho"
+   ],
+   "lat": -22.8796,
+   "lon": -43.2711,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Engenheiro Leal",
+   "ano_aprox_ocupacao": 1895,
+   "criterio": "equipamento",
+   "evidencia": "estação Engenheiro Leal de 01/11/1895",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/engleal.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Engenheiro_Leal"
+   ],
+   "lat": -22.8748,
+   "lon": -43.3259,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Honório Gurgel",
+   "ano_aprox_ocupacao": 1895,
+   "criterio": "equipamento",
+   "evidencia": "estação Munguengue (atual Honório Gurgel) de 01/11/1895",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/honorio.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Hon%C3%B3rio_Gurgel_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8462,
+   "lon": -43.356,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Pilares",
+   "ano_aprox_ocupacao": 1895,
+   "criterio": "equipamento",
+   "evidencia": "estação Cintra Vidal (Linha Auxiliar) de 01/11/1895 (a ptwiki diz 1898)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/cintra.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Pilares_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8801,
+   "lon": -43.2939,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Tomás Coelho",
+   "ano_aprox_ocupacao": 1895,
+   "criterio": "equipamento",
+   "evidencia": "estação Thomas Coelho (Linha Auxiliar) de 01/11/1895; a ptwiki cita a estação Engenho do Mato da Rio d'Ouro (1876)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/thomas.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Tom%C3%A1s_Coelho_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8672,
+   "lon": -43.3063,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Turiaçu",
+   "ano_aprox_ocupacao": 1895,
+   "criterio": "equipamento",
+   "evidencia": "estação Turiassu de 01/11/1895 (a ptwiki diz 1898)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/turiassu.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Turia%C3%A7u_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8619,
+   "lon": -43.3426,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Anchieta",
+   "ano_aprox_ocupacao": 1896,
+   "criterio": "equipamento",
+   "evidencia": "bairro fundado em 01/10/1896 junto com a estação (inicialmente 'Nazareth')",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/anchieta.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Anchieta_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8245,
+   "lon": -43.3989,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Paciência",
+   "ano_aprox_ocupacao": 1897,
+   "criterio": "equipamento",
+   "evidencia": "estação Paciência inaugurada em 01/06/1897; grandes loteamentos nos anos 1950",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/paciencia.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Paci%C3%AAncia_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8978,
+   "lon": -43.6369,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Alto da Boa Vista",
+   "ano_aprox_ocupacao": 1898,
+   "criterio": "equipamento",
+   "evidencia": "linha de bondes do Alto da Boa Vista operou de 1898 a 1967; chácaras e mansões desde o séc. XIX",
+   "fonte": "https://pt.wikipedia.org/wiki/Alto_da_Boa_Vista_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9594,
+   "lon": -43.2623,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Costa Barros",
+   "ano_aprox_ocupacao": 1898,
+   "criterio": "equipamento",
+   "evidencia": "estação Costa Barros inaugurada em 28/03/1898",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/costa.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Costa_Barros"
+   ],
+   "lat": -22.8243,
+   "lon": -43.3694,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Inhaúma",
+   "ano_aprox_ocupacao": 1898,
+   "criterio": "equipamento",
+   "evidencia": "estação Inhaúma da Rio d'Ouro de 23/08/1898; sesmaria da 'tapera de Inhaúma' em 1565 e freguesia de Inhaúma criada em 1743",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_riodeouro/inhauma.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Inha%C3%BAma_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1743,
+   "lat": -22.8702,
+   "lon": -43.2797,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Osvaldo Cruz",
+   "ano_aprox_ocupacao": 1898,
+   "criterio": "equipamento",
+   "evidencia": "estação Rio das Pedras (atual Osvaldo Cruz) inaugurada em 17/04/1898; antiga freguesia de Irajá (1644)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/osvaldo.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Osvaldo_Cruz_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "ano_colonial": 1644,
+   "lat": -22.8707,
+   "lon": -43.3498,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Barros Filho",
+   "ano_aprox_ocupacao": 1904,
+   "criterio": "equipamento",
+   "evidencia": "estação Barros Filho inaugurada em 25/07/1904 (a ptwiki diz 1908)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/barros.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Barros_Filho"
+   ],
+   "lat": -22.8362,
+   "lon": -43.3653,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Rocha Miranda",
+   "ano_aprox_ocupacao": 1905,
+   "criterio": "equipamento",
+   "evidencia": "estação Sapê (atual Rocha Miranda) inaugurada em 17/03/1905",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/rochamir.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Rocha_Miranda_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8489,
+   "lon": -43.345,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Cavalcanti",
+   "ano_aprox_ocupacao": 1908,
+   "criterio": "equipamento",
+   "evidencia": "estação Cavalcanti inaugurada em 15/02/1908",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/cavalcanti.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Cavalcanti_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8716,
+   "lon": -43.3165,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Cordovil",
+   "ano_aprox_ocupacao": 1910,
+   "criterio": "equipamento",
+   "evidencia": "inauguração da estação em 05/10/1910 (data de aniversário do bairro, ptwiki); loteamento em 1912. O site de estações dá 23/10/1886 — ver RESUMO-POP",
+   "fonte": "https://pt.wikipedia.org/wiki/Cordovil",
+   "lat": -22.8198,
+   "lon": -43.2919,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Pavuna",
+   "ano_aprox_ocupacao": 1910,
+   "criterio": "equipamento",
+   "evidencia": "estação Pavuna inaugurada em 07/07/1910",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_auxiliar/pavuna.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Pavuna"
+   ],
+   "lat": -22.8145,
+   "lon": -43.3671,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Vila Militar",
+   "ano_aprox_ocupacao": 1910,
+   "criterio": "equipamento",
+   "evidencia": "estação Vila Militar inaugurada em 18/08/1910; construção da Vila iniciada em 1904–1908",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/vlmilitar.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Vila_Militar_%28Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8619,
+   "lon": -43.4033,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Campo dos Afonsos",
+   "ano_aprox_ocupacao": 1911,
+   "criterio": "equipamento",
+   "evidencia": "em outubro de 1911 começa a funcionar ali o Aeroclube Brasileiro; Escola de Aviação Militar em 1919",
+   "fonte": "https://pt.wikipedia.org/wiki/Campo_dos_Afonsos",
+   "lat": -22.877,
+   "lon": -43.383,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Inhoaíba",
+   "ano_aprox_ocupacao": 1912,
+   "criterio": "equipamento",
+   "evidencia": "estação Engenheiro Trindade (atual Inhoaíba) inaugurada em 01/09/1912",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/inhoaiba.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Inhoa%C3%ADba"
+   ],
+   "lat": -22.9118,
+   "lon": -43.595,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "São Conrado",
+   "ano_aprox_ocupacao": 1912,
+   "criterio": "equipamento",
+   "evidencia": "bairro surge com a estrada aberta por Charles Armstrong em 1912; igreja de São Conrado (1903); loteamento nos anos 1920–30",
+   "fonte": "https://pt.wikipedia.org/wiki/S%C3%A3o_Conrado_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9915,
+   "lon": -43.2684,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Marechal Hermes",
+   "ano_aprox_ocupacao": 1913,
+   "criterio": "equipamento",
+   "evidencia": "bairro operário planejado inaugurado em 01/05/1913 junto com a estação",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/malhermes.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Marechal_Hermes"
+   ],
+   "lat": -22.8612,
+   "lon": -43.3705,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Ribeira",
+   "ano_aprox_ocupacao": 1913,
+   "criterio": "limite_superior",
+   "evidencia": "Igreja da Sagrada Família construída em 1913; ponto de partida do bonde Ribeira–Cocotá (1922)",
+   "fonte": "https://pt.wikipedia.org/wiki/Ribeira_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8261,
+   "lon": -43.1703,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Ricardo de Albuquerque",
+   "ano_aprox_ocupacao": 1913,
+   "criterio": "equipamento",
+   "evidencia": "estação inaugurada em 01/07/1913",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/ricardo.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Ricardo_de_Albuquerque"
+   ],
+   "lat": -22.8367,
+   "lon": -43.3917,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Bento Ribeiro",
+   "ano_aprox_ocupacao": 1914,
+   "criterio": "equipamento",
+   "evidencia": "estação Bento Ribeiro inaugurada em 07/11/1914",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_linha_centro/bento.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Bento_Ribeiro_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8673,
+   "lon": -43.3601,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Grajaú",
+   "ano_aprox_ocupacao": 1914,
+   "criterio": "loteamento",
+   "evidencia": "bairro criado em 15/08/1914; primeiro loteamento desenhado a partir dos anos 1920",
+   "fonte": "https://pt.wikipedia.org/wiki/Graja%C3%BA_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9298,
+   "lon": -43.2684,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Magalhães Bastos",
+   "ano_aprox_ocupacao": 1914,
+   "criterio": "equipamento",
+   "evidencia": "estação Magalhães Bastos de 1914; desapropriação da Fazenda Sapopemba em 1907",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/magalhaes.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Magalh%C3%A3es_Bastos"
+   ],
+   "lat": -22.8721,
+   "lon": -43.4143,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Senador Vasconcelos",
+   "ano_aprox_ocupacao": 1914,
+   "criterio": "equipamento",
+   "evidencia": "estação Augusto (Senador) Vasconcelos inaugurada em 07/11/1914",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/augusto.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Senador_Vasconcelos"
+   ],
+   "lat": -22.8955,
+   "lon": -43.528,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Guaratiba",
+   "ano_aprox_ocupacao": 1918,
+   "criterio": "equipamento",
+   "evidencia": "linha de bondes elétricos Campo Grande–Guaratiba de 1918 a 1964; freguesia antiga (doação à matriz de São Salvador do Mundo em 1750)",
+   "fonte": "https://pt.wikipedia.org/wiki/Guaratiba",
+   "ano_colonial": 1750,
+   "lat": -22.9975,
+   "lon": -43.6089,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Ilha de Guaratiba",
+   "ano_aprox_ocupacao": 1918,
+   "criterio": "equipamento",
+   "evidencia": "mesma linha de bondes de Campo Grande (1918–1964)",
+   "fonte": "https://pt.wikipedia.org/wiki/Ilha_de_Guaratiba",
+   "lat": -22.9967,
+   "lon": -43.568,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Leblon",
+   "ano_aprox_ocupacao": 1919,
+   "criterio": "loteamento",
+   "evidencia": "a Companhia Construtora Ipanema dividiu os terrenos em lotes e começou a vendê-los em 26/07/1919, já com o nome 'Leblon'; antes, chácaras (Carlos Leblon, desde 1845)",
+   "fonte": "https://pt.wikipedia.org/wiki/Leblon",
+   "ano_colonial": 1603,
+   "lat": -22.9825,
+   "lon": -43.2242,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Jacaré",
+   "ano_aprox_ocupacao": 1920,
+   "criterio": "assentamento",
+   "evidencia": "'a partir da década de 1920 o bairro passa a ser efetivamente urbanizado e ocupado'",
+   "fonte": "https://pt.wikipedia.org/wiki/Jacar%C3%A9_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8931,
+   "lon": -43.2561,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Jardim Carioca",
+   "ano_aprox_ocupacao": 1920,
+   "criterio": "loteamento",
+   "evidencia": "nasce do loteamento do mesmo nome lançado na década de 1920 (ano aproximado)",
+   "fonte": "https://pt.wikipedia.org/wiki/Jardim_Carioca",
+   "lat": -22.8054,
+   "lon": -43.1931,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Lagoa",
+   "ano_aprox_ocupacao": 1920,
+   "criterio": "equipamento",
+   "evidencia": "na década de 1920 o bairro ganha a Av. Epitácio Pessoa em volta da lagoa; Fábrica de Pólvora em 1808; favelas da Praia do Pinto e Catacumba removidas em 1969–70",
+   "fonte": "https://pt.wikipedia.org/wiki/Lagoa_%28bairro_do_Rio_de_Janeiro%29",
+   "ano_colonial": 1808,
+   "lat": -22.97,
+   "lon": -43.21,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Praça da Bandeira",
+   "ano_aprox_ocupacao": 1920,
+   "criterio": "assentamento",
+   "evidencia": "povoamento rápido a partir de 1920, com casas; edifícios a partir de 1933; estação Praça da Bandeira de 1907",
+   "fonte": "https://pt.wikipedia.org/wiki/Pra%C3%A7a_da_Bandeira_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9118,
+   "lon": -43.2137,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Vasco da Gama",
+   "ano_aprox_ocupacao": 1920,
+   "criterio": "assentamento",
+   "evidencia": "'estima-se que os primeiros moradores chegaram por volta de 1920', em maioria imigrantes portugueses; bairro criado em 1998",
+   "fonte": "https://pt.wikipedia.org/wiki/Vasco_da_Gama_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8926,
+   "lon": -43.2251,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Vaz Lobo",
+   "ano_aprox_ocupacao": 1920,
+   "criterio": "loteamento",
+   "evidencia": "'no início dos anos 1920' abrem-se as ruas e surgem as primeiras casas de alvenaria; bondes desde a década de 1910",
+   "fonte": "https://pt.wikipedia.org/wiki/Vaz_Lobo",
+   "lat": -22.8595,
+   "lon": -43.3281,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Cocotá",
+   "ano_aprox_ocupacao": 1922,
+   "criterio": "equipamento",
+   "evidencia": "bonde Ribeira–Cocotá começa a circular em 1922",
+   "fonte": "https://pt.wikipedia.org/wiki/Cocot%C3%A1",
+   "lat": -22.8053,
+   "lon": -43.1807,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Pitangueiras",
+   "ano_aprox_ocupacao": 1922,
+   "criterio": "equipamento",
+   "evidencia": "bonde elétrico Ribeira–Cocotá passando pelo bairro em 1922; forte na Ponta do Tiro em 1920",
+   "fonte": "https://pt.wikipedia.org/wiki/Pitangueiras_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8165,
+   "lon": -43.1809,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Urca",
+   "ano_aprox_ocupacao": 1922,
+   "criterio": "loteamento",
+   "evidencia": "plano geral de arruamento e loteamento da Urca aprovado em 1922 (sobre aterro). A cidade foi fundada ali, ao pé do Pão de Açúcar, em 01/03/1565, mas o núcleo mudou para o Castelo em 1567; Hospício Pedro II na Praia Vermelha em 1852",
+   "fonte": "https://pt.wikipedia.org/wiki/Urca",
+   "ano_colonial": 1565,
+   "lat": -22.9501,
+   "lon": -43.1593,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Senador Camará",
+   "ano_aprox_ocupacao": 1923,
+   "criterio": "equipamento",
+   "evidencia": "estação Senador Camará inaugurada em 01/06/1923; capela de N. S. da Lapa de 1725",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/senador.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Senador_Camar%C3%A1"
+   ],
+   "ano_colonial": 1725,
+   "lat": -22.898,
+   "lon": -43.4961,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Penha Circular",
+   "ano_aprox_ocupacao": 1924,
+   "criterio": "equipamento",
+   "evidencia": "estação Penha Circular inaugurada em 10/08/1924",
+   "fonte": "https://www.estacoesferroviarias.com.br/efl_rj_petropolis/penhacirc.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Penha_Circular"
+   ],
+   "lat": -22.8328,
+   "lon": -43.2842,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Maria da Graça",
+   "ano_aprox_ocupacao": 1925,
+   "criterio": "loteamento",
+   "evidencia": "arruamento e loteamento do 'Bairro-Jardim Maria da Graça' em 1925; estação de 1929",
+   "fonte": "https://pt.wikipedia.org/wiki/Maria_da_Gra%C3%A7a_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8828,
+   "lon": -43.2627,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Acari",
+   "ano_aprox_ocupacao": 1926,
+   "criterio": "equipamento",
+   "evidencia": "estação Acari inaugurada em 15/05/1926; Av. Brasil (1946) aumenta a população",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_riodeouro/acari.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Acari_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.8216,
+   "lon": -43.3414,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Rocinha",
+   "ano_aprox_ocupacao": 1927,
+   "criterio": "loteamento",
+   "evidencia": "a região foi loteada em 1927 por Castro Guidas & Cia.; a 'roça' foi tomada pela mancha urbana na década de 1920",
+   "fonte": "https://pt.wikipedia.org/wiki/Rocinha_%28Rio_de_Janeiro%29",
+   "lat": -22.9898,
+   "lon": -43.2477,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Vila Valqueire",
+   "ano_aprox_ocupacao": 1927,
+   "criterio": "loteamento",
+   "evidencia": "ruas abertas no loteamento projetado por Alencar Lima em 1927; Engenho Valqueire no séc. XVIII",
+   "fonte": "https://pt.wikipedia.org/wiki/Vila_Valqueire_%28Rio_de_Janeiro%29",
+   "lat": -22.8901,
+   "lon": -43.3663,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Cosmos",
+   "ano_aprox_ocupacao": 1928,
+   "criterio": "equipamento",
+   "evidencia": "estação Cosmos inaugurada em 01/07/1928",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/cosmos.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Cosmos_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "lat": -22.9099,
+   "lon": -43.6162,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Vila Kosmos",
+   "ano_aprox_ocupacao": 1928,
+   "criterio": "loteamento",
+   "evidencia": "Imobiliária Kosmos ergue a Vila Florença em 1928; Av. Automóvel Clube aberta em 1926",
+   "fonte": "https://pt.wikipedia.org/wiki/Vila_Kosmos",
+   "lat": -22.8535,
+   "lon": -43.3031,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Joá",
+   "ano_aprox_ocupacao": 1929,
+   "criterio": "equipamento",
+   "evidencia": "Estrada do Joá construída em 1929 pelo prefeito Prado Júnior",
+   "fonte": "https://pt.wikipedia.org/wiki/Jo%C3%A1",
+   "lat": -23.009,
+   "lon": -43.2902,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Tauá",
+   "ano_aprox_ocupacao": 1930,
+   "criterio": "loteamento",
+   "evidencia": "três projetos de arruamento na década de 1930; bonde estendido até o bairro em 1935",
+   "fonte": "https://pt.wikipedia.org/wiki/Tau%C3%A1_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.7974,
+   "lon": -43.1859,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Engenho da Rainha",
+   "ano_aprox_ocupacao": 1931,
+   "criterio": "equipamento",
+   "evidencia": "estação Engenho da Rainha de 1931; antiga Freguesia de Inhaúma (1743)",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_riodeouro/engenho.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Engenho_da_Rainha"
+   ],
+   "ano_colonial": 1743,
+   "lat": -22.8625,
+   "lon": -43.2947,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Praia da Bandeira",
+   "ano_aprox_ocupacao": 1931,
+   "criterio": "loteamento",
+   "evidencia": "loteamento lançado em 1931; localidade da Tapera surgida por volta de 1890",
+   "fonte": "https://pt.wikipedia.org/wiki/Praia_da_Bandeira_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8106,
+   "lon": -43.1805,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Parada de Lucas",
+   "ano_aprox_ocupacao": 1932,
+   "criterio": "limite_superior",
+   "evidencia": "agremiações Aprendizes de Lucas (1932) e Unidos da Capela (1933) já existiam; data da estação incerta nas fontes",
+   "fonte": "https://pt.wikipedia.org/wiki/Parada_de_Lucas",
+   "lat": -22.8159,
+   "lon": -43.2982,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Higienópolis",
+   "ano_aprox_ocupacao": 1936,
+   "criterio": "loteamento",
+   "evidencia": "primeiros lotes vendidos em 21/11/1936 (data de criação do bairro)",
+   "fonte": "https://pt.wikipedia.org/wiki/Higien%C3%B3polis_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8738,
+   "lon": -43.2622,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Guadalupe",
+   "ano_aprox_ocupacao": 1940,
+   "criterio": "assentamento",
+   "evidencia": "origem na década de 1940, com a abertura da Av. Brasil",
+   "fonte": "https://pt.wikipedia.org/wiki/Guadalupe_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8379,
+   "lon": -43.3757,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Maré",
+   "ano_aprox_ocupacao": 1940,
+   "criterio": "assentamento",
+   "evidencia": "comunidade do Morro do Timbau (anos 1940); Baixa do Sapateiro (1947); ocupação toma impulso com a Av. Brasil (meados dos anos 1940); Vila do João (1982)",
+   "fonte": "https://pt.wikipedia.org/wiki/Mar%C3%A9_%28bairro%29",
+   "lat": -22.8595,
+   "lon": -43.2424,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Padre Miguel",
+   "ano_aprox_ocupacao": 1940,
+   "criterio": "equipamento",
+   "evidencia": "estação Moça Bonita (atual Padre Miguel) inaugurada em 06/04/1940 (ptwiki diz 1939); Vila Vintém cresce depois dela",
+   "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/padre.htm",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Padre_Miguel"
+   ],
+   "lat": -22.8799,
+   "lon": -43.4491,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Bancários",
+   "ano_aprox_ocupacao": 1945,
+   "criterio": "equipamento",
+   "evidencia": "conjunto habitacional do IAPB construído 'nas décadas de 1940-1950' (ano aproximado)",
+   "fonte": "https://pt.wikipedia.org/wiki/Banc%C3%A1rios_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.7922,
+   "lon": -43.1806,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Jardim Sulacap",
+   "ano_aprox_ocupacao": 1945,
+   "criterio": "loteamento",
+   "evidencia": "'segundo históricos, sua fundação data do ano de 1945'",
+   "fonte": "https://pt.wikipedia.org/wiki/Jardim_Sulacap",
+   "lat": -22.893,
+   "lon": -43.393,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Cidade Universitária",
+   "ano_aprox_ocupacao": 1949,
+   "criterio": "equipamento",
+   "evidencia": "ilha do Fundão criada por aterro de um arquipélago de 8 ilhas durante a construção do câmpus a partir de 1949",
+   "fonte": "https://pt.wikipedia.org/wiki/Cidade_Universit%C3%A1ria_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8535,
+   "lon": -43.2331,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Coelho Neto",
+   "ano_aprox_ocupacao": 1950,
+   "criterio": "assentamento",
+   "evidencia": "'a região começou a se desenvolver principalmente a partir da década de 1950' (a data da estação no site está com erro de digitação, '15.01.8983')",
+   "fonte": "https://pt.wikipedia.org/wiki/Coelho_Neto_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8312,
+   "lon": -43.3503,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Complexo do Alemão",
+   "ano_aprox_ocupacao": 1950,
+   "criterio": "assentamento",
+   "evidencia": "expansão das favelas em dois momentos: a partir da década de 1950 e em meados dos anos 1970",
+   "fonte": "https://pt.wikipedia.org/wiki/Complexo_do_Alem%C3%A3o_%28Rio_de_Janeiro%29",
+   "lat": -22.861,
+   "lon": -43.2764,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Jardim Guanabara",
+   "ano_aprox_ocupacao": 1950,
+   "criterio": "loteamento",
+   "evidencia": "urbanização intensa nos anos 1950–60 (Companhia Imobiliária Santa Cruz)",
+   "fonte": "https://pt.wikipedia.org/wiki/Jardim_Guanabara_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8129,
+   "lon": -43.2023,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Vista Alegre",
+   "ano_aprox_ocupacao": 1950,
+   "criterio": "loteamento",
+   "evidencia": "nome vem de um conjunto habitacional da década de 1950",
+   "fonte": "https://pt.wikipedia.org/wiki/Vista_Alegre_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8292,
+   "lon": -43.3162,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Anil",
+   "ano_aprox_ocupacao": 1953,
+   "criterio": "loteamento",
+   "evidencia": "em 1953 José Padilha Coimbra loteia suas terras (Vitória-Régia, Gardênia Azul); engenho d'Água e igreja de 1616",
+   "fonte": "https://pt.wikipedia.org/wiki/Anil_%28bairro_do_Rio_de_Janeiro%29",
+   "ano_colonial": 1616,
+   "lat": -22.9575,
+   "lon": -43.3398,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Gardênia Azul",
+   "ano_aprox_ocupacao": 1953,
+   "criterio": "loteamento",
+   "evidencia": "mesmo loteamento de Padilha (1953) no fim da Estrada do Capão",
+   "fonte": "https://pt.wikipedia.org/wiki/Gard%C3%AAnia_Azul",
+   "lat": -22.9578,
+   "lon": -43.35,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Recreio dos Bandeirantes",
+   "ano_aprox_ocupacao": 1953,
+   "criterio": "loteamento",
+   "evidencia": "Projeto de Urbanização do Recreio dos Bandeirantes (PA 6028) lançado em 11/02/1953; Predial Bandeirantes fundada em 1934",
+   "fonte": "https://pt.wikipedia.org/wiki/Recreio_dos_Bandeirantes",
+   "lat": -23.0152,
+   "lon": -43.4702,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Moneró",
+   "ano_aprox_ocupacao": 1956,
+   "criterio": "loteamento",
+   "evidencia": "loteamento dos irmãos Moneró ('Jardim Ipatinga') em 1956; urbanização desde a década de 1950",
+   "fonte": "https://pt.wikipedia.org/wiki/Moner%C3%B3",
+   "lat": -22.7967,
+   "lon": -43.1972,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Parque Colúmbia",
+   "ano_aprox_ocupacao": 1956,
+   "criterio": "loteamento",
+   "evidencia": "PAL misto, proletário e industrial de 1956 junto à Via Dutra; bairro oficial em 1999",
+   "fonte": "https://pt.wikipedia.org/wiki/Parque_Col%C3%BAmbia",
+   "lat": -22.8151,
+   "lon": -43.3411,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Praça Seca",
+   "ano_aprox_ocupacao": 1956,
+   "criterio": "equipamento",
+   "evidencia": "conjunto do IPASE: obras iniciadas em 1956, primeiros moradores dois anos depois (o largo é mais antigo, sem data na fonte)",
+   "fonte": "https://pt.wikipedia.org/wiki/Pra%C3%A7a_Seca",
+   "lat": -22.8981,
+   "lon": -43.3536,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Curicica",
+   "ano_aprox_ocupacao": 1957,
+   "criterio": "loteamento",
+   "evidencia": "urbanização em 1957 com o loteamento Parque Curicica",
+   "fonte": "https://pt.wikipedia.org/wiki/Curicica_%28Rio_de_Janeiro%29",
+   "lat": -22.9504,
+   "lon": -43.3848,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Jardim América",
+   "ano_aprox_ocupacao": 1957,
+   "criterio": "loteamento",
+   "evidencia": "bairro criado em 1957 a partir de um PAL Proletário (a ptwiki de Vigário Geral fala em loteamento de parte da Fazenda Botafogo em 1950)",
+   "fonte": "https://pt.wikipedia.org/wiki/Jardim_Am%C3%A9rica_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.8103,
+   "lon": -43.3242,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Cidade de Deus",
+   "ano_aprox_ocupacao": 1960,
+   "criterio": "equipamento",
+   "evidencia": "ao longo da década de 1960 recebe moradores removidos de favelas pelo governo Lacerda (ano aproximado = início da década)",
+   "fonte": "https://pt.wikipedia.org/wiki/Cidade_de_Deus_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.9475,
+   "lon": -43.366,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Vila Kennedy",
+   "ano_aprox_ocupacao": 1964,
+   "criterio": "equipamento",
+   "evidencia": "conjunto inaugurado em 20/01/1964 pelo governador Carlos Lacerda (remoções de favelas)",
+   "fonte": "https://pt.wikipedia.org/wiki/Vila_Kennedy",
+   "lat": -22.8562,
+   "lon": -43.4872,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Jabour",
+   "ano_aprox_ocupacao": 1965,
+   "criterio": "loteamento",
+   "evidencia": "Abrahão Jabour começa a construir o bairro em meados dos anos 1960",
+   "fonte": "https://pt.wikipedia.org/wiki/Jabour",
+   "lat": -22.8808,
+   "lon": -43.4935,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Portuguesa",
+   "ano_aprox_ocupacao": 1965,
+   "criterio": "loteamento",
+   "evidencia": "urbanização recente: rua Haroldo Lobo aberta em 1965, expansão nos anos 1970",
+   "fonte": "https://pt.wikipedia.org/wiki/Portuguesa_%28bairro_do_Rio_de_Janeiro%29",
+   "lat": -22.7978,
+   "lon": -43.2065,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "media"
+  },
+  {
+   "bairro": "Barra da Tijuca",
+   "ano_aprox_ocupacao": 1969,
+   "criterio": "loteamento",
+   "evidencia": "Plano Piloto da Barra da Tijuca de 1969; Autoestrada Lagoa–Barra (Túnel do Joá) nos anos 1970",
+   "fonte": "https://pt.wikipedia.org/wiki/Barra_da_Tijuca_%28bairro_do_Rio_de_Janeiro%29",
+   "ano_colonial": 1667,
+   "lat": -22.9983,
+   "lon": -43.3721,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "alta"
+  },
+  {
+   "bairro": "Grumari",
+   "ano_aprox_ocupacao": 1970,
+   "criterio": "equipamento",
+   "evidencia": "na década de 1970 é aberta a Av. Estado da Guanabara ligando ao Recreio (bairro quase todo parque)",
+   "fonte": "https://pt.wikipedia.org/wiki/Grumari",
+   "lat": -23.0548,
+   "lon": -43.543,
+   "coord_fonte": "representative_point do polígono OSM (bairros.geojson)",
+   "confianca": "baixa"
+  }
+ ],
+ "bairros_so_com_lei": {
+  "_obs": "vazio de propósito: os bairros do Rio foram oficializados todos juntos pelo decreto 3.158/1981 (e 5.280/1985, leis de 1993) — essas datas não dizem nada sobre ocupação e não devem virar 'lei − 15'."
+ },
+ "bairros_sem_dado": [
+  {
+   "bairro": "Abolição",
+   "nota": "sem data de ocupação nas fontes lidas (ptwiki e Estações Ferroviárias)",
+   "lat": -22.8852,
+   "lon": -43.2995,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Barra Olímpica",
+   "nota": "autódromo de 1977 a 2012; bairro criado depois; sem data de ocupação",
+   "lat": -22.9742,
+   "lon": -43.3975,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Barra de Guaratiba",
+   "nota": "doação de 1750 à freguesia de Guaratiba; chácaras de veraneio nos anos 1960–70; sem data de ocupação",
+   "lat": -23.0413,
+   "lon": -43.5522,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Benfica",
+   "nota": "sem data de ocupação na fonte (só Pedregulho, projeto de 1947)",
+   "lat": -22.8907,
+   "lon": -43.2399,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Cachambi",
+   "nota": "sem data de ocupação nas fontes lidas (ptwiki e Estações Ferroviárias)",
+   "lat": -22.8908,
+   "lon": -43.2734,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Cacuia",
+   "nota": "sem data (o bonde de 1922 passa pelo Cocotá vizinho)",
+   "lat": -22.8221,
+   "lon": -43.1834,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Camorim",
+   "nota": "engenho do Camorim (igreja de 1625) e açude de 1908; ocupação urbana sem data",
+   "lat": -22.9688,
+   "lon": -43.433,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Campinho",
+   "nota": "sem data de ocupação nas fontes lidas (ptwiki e Estações Ferroviárias)",
+   "lat": -22.8846,
+   "lon": -43.3462,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Estácio",
+   "nota": "'Berço do Samba' (Deixa Falar, 1928) — sem data de ocupação",
+   "lat": -22.9179,
+   "lon": -43.2043,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Galeão",
+   "nota": "Coutada Real (1811), Colônia de Alienados (1888), Base Aérea; ponte para o continente em 1948/1950; sem data de bairro residencial",
+   "lat": -22.8088,
+   "lon": -43.2386,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Gericinó",
+   "nota": "sem data de ocupação nas fontes lidas (ptwiki e Estações Ferroviárias)",
+   "lat": -22.8416,
+   "lon": -43.4772,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Gávea",
+   "nota": "ptwiki só traz corridas de 1926–45 e o Túnel Dois Irmãos (1970); sem data de ocupação",
+   "lat": -22.9806,
+   "lon": -43.2366,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Itanhangá",
+   "nota": "sem data de ocupação na fonte",
+   "lat": -22.9854,
+   "lon": -43.3122,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Jacarezinho",
+   "nota": "favela; ptwiki só cita o aterro do rio Jacaré nos anos 1940",
+   "lat": -22.8881,
+   "lon": -43.2593,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Lins de Vasconcelos",
+   "nota": "sem data de ocupação nas fontes lidas (ptwiki e Estações Ferroviárias)",
+   "lat": -22.9127,
+   "lon": -43.2848,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Parque Anchieta",
+   "nota": "sem data de ocupação nas fontes lidas (ptwiki e Estações Ferroviárias)",
+   "lat": -22.8361,
+   "lon": -43.4107,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Pechincha",
+   "nota": "desmembrado de Jacarepaguá em 1993; sem data de ocupação",
+   "lat": -22.9309,
+   "lon": -43.355,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Rio Comprido",
+   "nota": "Alvará de 1811 (isenção para sobrados em ruas novas) é geral da cidade; Av. Paulo de Frontin 1919; sem data própria",
+   "lat": -22.9277,
+   "lon": -43.2073,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Santo Cristo",
+   "nota": "vizinho da Gamboa/Saúde; parte do Morro da Providência (povoado na década de 1890) — sem data própria",
+   "lat": -22.9007,
+   "lon": -43.2046,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Taquara",
+   "nota": "engenho de Salvador Correia de Sá desde 1569 (casa-grande de 1738), mas era rural; sem data de ocupação urbana — não usar 1569 para não acender o bairro com o Centro",
+   "lat": -22.9248,
+   "lon": -43.3776,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Vargem Grande",
+   "nota": "latifúndio beneditino vendido em 1891 e 1936; ocupação urbana recente sem data",
+   "lat": -22.9764,
+   "lon": -43.4959,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Vargem Pequena",
+   "nota": "fazenda beneditina desde 1667; ocupação urbana recente sem data",
+   "lat": -22.9796,
+   "lon": -43.4577,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Vidigal",
+   "nota": "sem data de ocupação nas fontes lidas (ptwiki e Estações Ferroviárias)",
+   "lat": -22.9947,
+   "lon": -43.2395,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Vila da Penha",
+   "nota": "ptwiki confusa ('Vila da Penha de 1600'); antigo Salgueiro, loteamento sem data",
+   "lat": -22.8435,
+   "lon": -43.3112,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Zumbi",
+   "nota": "sem data de ocupação nas fontes lidas (ptwiki e Estações Ferroviárias)",
+   "lat": -22.8221,
+   "lon": -43.1759,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  },
+  {
+   "bairro": "Água Santa",
+   "nota": "fonte hidromineral descoberta em 1888 — não é dado de ocupação",
+   "lat": -22.9106,
+   "lon": -43.3127,
+   "coord_fonte": "representative_point OSM",
+   "confianca": "baixa"
+  }
+ ],
+ "aterros": [
+  {
+   "periodo": "1659–1660",
+   "ano_inicio": 1659,
+   "ano_fim": 1660,
+   "o_que": "aterro do trecho de mar entre a Ilha da Trindade e o continente, por ordem de Salvador Correia de Sá e Benevides, formando parte da atual Urca",
+   "area_ha": null,
+   "fonte": "https://pt.wikipedia.org/wiki/Urca",
+   "confianca": "media"
+  },
+  {
+   "periodo": "1811–1895",
+   "ano_inicio": 1811,
+   "ano_fim": 1895,
+   "o_que": "aterrado do Mangue / Cidade Nova: decreto de 1811, Canal do Mangue em 1857, aterro dos pântanos completado em 1895 com terra do desmonte do Morro do Senado",
+   "area_ha": null,
+   "fonte": "https://pt.wikipedia.org/wiki/Cidade_Nova_%28bairro_do_Rio_de_Janeiro%29",
+   "confianca": "media"
+  },
+  {
+   "periodo": "1949–(anos 1950)",
+   "ano_inicio": 1949,
+   "ano_fim": 1960,
+   "o_que": "Ilha do Fundão (Cidade Universitária) criada pelo aterro de um arquipélago de 8 ilhas",
+   "area_ha": null,
+   "area_obs": "ano_fim aproximado (a fonte fala da construção do câmpus a partir de 1949)",
+   "fonte": "https://pt.wikipedia.org/wiki/Cidade_Universit%C3%A1ria_%28bairro_do_Rio_de_Janeiro%29",
+   "confianca": "media"
+  },
+  {
+   "periodo": "anos 1970",
+   "ano_inicio": 1970,
+   "ano_fim": 1979,
+   "o_que": "aterros (ilegais, segundo a fonte) na Lagoa Rodrigo de Freitas — a lagoa teria perdido 80% da área original (no total histórico)",
+   "area_ha": null,
+   "fonte": "https://pt.wikipedia.org/wiki/Lagoa_%28bairro_do_Rio_de_Janeiro%29",
+   "confianca": "baixa"
+  }
+ ],
+ "aterros_obs": "Desmonte do Morro do Castelo (1920–22, aterro da Esplanada/Calabouço), Aterro do Flamengo (1954–65) e Porto/Praça Mauá (1904–11) não foram conferidos por mim — ficam com o agente dos eventos (RESUMO.md).",
+ "pontes": [
+  {
+   "nome": "Ponte Rio–Niterói (Presidente Costa e Silva)",
+   "ano_inicio": 1968,
+   "ano_fim": 1974,
+   "evidencia": "decreto de 23/08/1968 autoriza a construção; fotos da obra em 1971; selo comemorativo da inauguração em 1974; 13.300 m",
+   "fonte": "https://pt.wikipedia.org/wiki/Ponte_Rio-Niter%C3%B3i",
+   "fontes_extra": [
+    "https://commons.wikimedia.org/wiki/File:Constru%C3%A7%C3%A3o_da_Ponte_Rio-Niter%C3%B3i.tif"
+   ],
+   "confianca": "alta"
+  },
+  {
+   "nome": "Ponte Ilha do Governador–continente (Av. Brasil)",
+   "ano_inicio": 1948,
+   "ano_fim": 1948,
+   "evidencia": "ptwiki Galeão: ponte projetada por Salgado Filho, inaugurada em janeiro de 1948; ptwiki Praia da Bandeira fala em 'primeira ponte que ligou a ilha ao continente, em 1950' (divergência)",
+   "fonte": "https://pt.wikipedia.org/wiki/Gale%C3%A3o_%28bairro_do_Rio_de_Janeiro%29",
+   "fontes_extra": [
+    "https://pt.wikipedia.org/wiki/Praia_da_Bandeira_%28bairro_do_Rio_de_Janeiro%29"
+   ],
+   "confianca": "media"
+  }
+ ]
+}

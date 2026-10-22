@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "bandeiras_disponiveis": ["portugal.svg", "reino.svg", "imperio.svg", "imperio2.svg", "republica.svg", "brasil.svg", "espanha.svg"],
+    "arquivos_bandeira": "bandeira_arquivo usa SÓ os arquivos locais de motor/assets/bandeiras/ (mesmas chaves de REGIMES_BR em scripts/gerar_cena.py: portugal → reino 1815.95 → imperio 1822.7 → imperio2 1870 → republica 1889.87 → brasil 1960). O nome do arquivo no Commons fica em bandeira_commons, só como referência. Nada foi baixado.",
+    "franca_antartica": "Não há bandeira francesa em motor/assets/bandeiras/. A faixa 1555–1567 é opcional (ver 'faixas_extras'). Arquivo que a ptwiki França Antártica usa na infobox: File:Royal_flag_of_France.svg (página https://commons.wikimedia.org/wiki/File:Royal_flag_of_France.svg). Licença CONFERIDA na página HTML do Commons (22/10/2026): CC BY-SA 3.0 — NÃO é domínio público; pode ser usada com crédito ao autor e mesma licença. File:Royal_Standard_of_the_King_of_France.svg (usada na ptwiki Batalha 1711) também é CC BY-SA 3.0. A única francesa em domínio público achada (File:Flag_of_the_Kingdom_of_France_(1814-1830).svg, PD-shape, toda branca) é de outra época — não serve.",
+    "portugal_1500s": "portugal.svg é a bandeira de 1750 (a mesma de POA/Floripa/Itaguaí). Para o séc. XVI a ptwiki França Antártica usa File:Flag_of_Portugal_(1521).svg — opcional, não baixado; licença conferida no Commons: domínio público (PD-old).",
+    "espanha_nao_usada": "espanha.svg não se aplica: o Rio nunca foi ocupado pela Espanha. A União Ibérica (1580–1640) foi união de coroas e não trocou a bandeira local (mesma decisão de Itaguaí).",
+    "capital": "O Rio foi capital do Brasil de 1763 a 1960 (ptwiki História da cidade do Rio de Janeiro); sede do Reino Unido de 1815 a 1821; capital do Império 1822–1889 e da República 1889–1960. Por isso o HUD mostra, além do regime nacional, o status da cidade (extras_hud.status_da_cidade).",
+    "fontes_gerais": [
+      "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro",
+      "https://pt.wikipedia.org/wiki/Município_Neutro",
+      "https://pt.wikipedia.org/wiki/Estado_da_Guanabara"
+    ]
+  },
+  "regimes": [
+    {
+      "inicio": 1500, "fim": 1815.96,
+      "data_inicio": "1500 (início do vídeo; nome Rio de Janeiro em 1º/01/1502; cidade em 1º/03/1565)", "data_fim": "16/12/1815",
+      "nome_tela": "BRASIL COLÔNIA",
+      "nome_longo": "Brasil Colônia — Reino de Portugal (Capitania Real do Rio de Janeiro; sede do Estado do Brasil a partir de 1763)",
+      "bandeira_arquivo": "portugal.svg",
+      "bandeira_commons": "Flag_of_Portugal_(1750).svg (a mesma do piloto POA/Floripa/Itaguaí)",
+      "bandeira_descricao": "branca com o brasão real português coroado ao centro",
+      "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "confianca": "alta",
+      "obs": "Antes de 1565 a baía é território tupinambá/temiminó. A bandeira pode entrar só em 1502 (nome) ou 1565 (fundação). Entre 1555 e 1567 os franceses ocupam a ilha de Serigipe (faixa extra opcional)."
+    },
+    {
+      "inicio": 1815.96, "fim": 1822.78,
+      "data_inicio": "16/12/1815", "data_fim": "12/10/1822 (aclamação de Pedro I no Rio; Independência em 07/09/1822)",
+      "nome_tela": "REINO UNIDO",
+      "nome_longo": "Reino Unido de Portugal, Brasil e Algarves — o Rio é a sede da monarquia",
+      "bandeira_arquivo": "reino.svg",
+      "bandeira_commons": "Flag_of_the_United_Kingdom_of_Portugal,_Brazil,_and_the_Algarves_(1815-1825).svg",
+      "bandeira_descricao": "branca com o brasão real sobre a esfera armilar dourada em fundo azul",
+      "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "confianca": "alta",
+      "obs": "REGIMES_BR do motor troca para Império em 1822.7 (setembro); para o Rio, a troca em 1822.78 (aclamação no Campo de Santana) casa com o evento imperio-1822. Qualquer um dos dois serve — decidir no roteiro."
+    },
+    {
+      "inicio": 1822.78, "fim": 1889.87,
+      "data_inicio": "12/10/1822", "data_fim": "15/11/1889",
+      "nome_tela": "IMPÉRIO DO BRASIL",
+      "nome_longo": "Império do Brasil — o Rio é a capital (a 'Corte'); Município Neutro a partir de 12/08/1834",
+      "bandeira_arquivo": "imperio.svg",
+      "bandeira_arquivo_apos_1870": "imperio2.svg",
+      "bandeira_commons": "Flag_of_Empire_of_Brazil_(1822-1870).svg / Flag_of_Empire_of_Brazil_(1870-1889).svg",
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta",
+      "obs": "A Proclamação da República (15/11/1889) acontece no próprio Rio, no Campo de Santana."
+    },
+    {
+      "inicio": 1889.87, "fim": null,
+      "data_inicio": "15/11/1889", "data_fim": "—",
+      "nome_tela": "REPÚBLICA",
+      "nome_longo": "República dos Estados Unidos do Brasil (1889–1967) / República Federativa do Brasil",
+      "bandeira_arquivo": "republica.svg",
+      "bandeiras_seguintes": [
+        {"de": 1960, "ate": null, "arquivo": "brasil.svg", "obs": "o motor usa brasil.svg de 1960 em diante (REGIMES_BR); as variações de 1968 e 1992 só mudam o número de estrelas"}
+      ],
+      "bandeira_commons": "Flag_of_Brazil_(1889–1960).svg → Flag_of_Brazil.svg",
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta",
+      "obs": "Coincidência útil: a bandeira troca para brasil.svg em 1960, o mesmo ano em que o Rio deixa de ser capital."
+    }
+  ],
+  "faixas_extras": [
+    {
+      "inicio": 1555.86, "fim": 1567.05,
+      "data_inicio": "10/11/1555 (ptwiki; 1º/11 na enwiki)", "data_fim": "20/01/1567 (Uruçumirim; o forte cai em 15/03/1560, mas os franceses ficam na baía até 1567)",
+      "nome_tela": "FRANÇA ANTÁRTICA",
+      "nome_longo": "França Antártica — colônia francesa na ilha de Serigipe (Forte Coligny), aliada aos tamoios",
+      "bandeira_arquivo": null,
+      "bandeira_commons": "Royal_flag_of_France.svg",
+      "bandeira_commons_pagina": "https://commons.wikimedia.org/wiki/File:Royal_flag_of_France.svg",
+      "bandeira_descricao": "flores-de-lis douradas (bandeira real francesa); a ptwiki chama de 'Estandarte Real da França'",
+      "licenca_conferida": true,
+      "licenca": "CC BY-SA 3.0 (não é domínio público; exige crédito)",
+      "uso": "opcional e LOCAL: só como segunda bandeira pequena sobre a ilha de Villegagnon, não troca a bandeira principal do HUD (a baía continua portuguesa pela coroa).",
+      "fonte": "https://pt.wikipedia.org/wiki/França_Antártica",
+      "confianca": "media",
+      "obs": "ptwiki França Antártica: infobox '1555 – c. 1575' (c. 1575 = Batalha de Cabo Frio, fora do mapa). Para o Rio, a presença francesa termina em 1567."
+    }
+  ],
+  "extras_hud": {
+    "status_da_cidade": [
+      {"de": 1565.16, "ate": 1763, "nome": "SÃO SEBASTIÃO DO RIO DE JANEIRO", "curto": "S. SEBASTIÃO DO RIO", "data": "fundação 01/03/1565", "fonte": "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro", "obs": "capitania real (não de donatário), segundo a mesma página. Antes de 1565: sem nome de cidade (só 'RIO DE JANEIRO' sobre a baía, desde 1502)."},
+      {"de": 1763, "ate": 1815.96, "nome": "CAPITAL DO BRASIL COLÔNIA", "data": "1763 (Pombal transfere a sede de Salvador para o Rio)", "fonte": "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro", "obs": "sede do vice-reino; o Paço dos Vice-Reis é a antiga Casa dos Governadores (ptwiki Paço Imperial)"},
+      {"de": 1808.18, "ate": 1815.96, "nome": "SEDE DA CORTE PORTUGUESA", "opcional": true, "data": "08/03/1808", "fonte": "https://pt.wikipedia.org/wiki/Transferência_da_corte_portuguesa_para_o_Brasil", "obs": "opcional: pode substituir 'Capital do Brasil Colônia' entre 1808 e 1815"},
+      {"de": 1815.96, "ate": 1822.78, "nome": "CAPITAL DO REINO UNIDO", "data": "16/12/1815", "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves", "obs": "ptwiki História da cidade: sediou o Reino Unido 'entre 1815 e abril de 1821' (volta de D. João VI); depois disso o príncipe Pedro governa do Rio como regente — manter o nome até 1822"},
+      {"de": 1822.78, "ate": 1834.61, "nome": "CAPITAL DO IMPÉRIO", "data": "12/10/1822 (aclamação)", "fonte": "https://pt.wikipedia.org/wiki/Pedro_I_do_Brasil", "obs": ""},
+      {"de": 1834.61, "ate": 1891.15, "nome": "MUNICÍPIO NEUTRO", "curto": "MUNICÍPIO NEUTRO (CORTE)", "data": "12/08/1834 (Ato Adicional)", "fonte": "https://pt.wikipedia.org/wiki/Município_Neutro", "obs": "Continua 'Município Neutro' depois de 15/11/1889 até a Constituição de 24/02/1891 (ptwiki Estado da Guanabara). A infobox da ptwiki Município Neutro fecha em 1889 — ver RESUMO."},
+      {"de": 1891.15, "ate": 1960.3, "nome": "DISTRITO FEDERAL", "curto": "DISTRITO FEDERAL (CAPITAL)", "data": "24/02/1891 (1ª Constituição republicana)", "fonte": "https://pt.wikipedia.org/wiki/Estado_da_Guanabara", "obs": "O pedido citava 1889; a fonte dá 1891. Se o roteiro preferir trocar junto com a República, usar 'CAPITAL DA REPÚBLICA' de 1889.87 a 1891.15."},
+      {"de": 1960.3, "ate": 1975.2, "nome": "ESTADO DA GUANABARA", "data": "21/04/1960 (capital vai para Brasília; Lei 3.752 de 14/04/1960)", "fonte": "https://pt.wikipedia.org/wiki/Distrito_Federal_(1891–1960)", "obs": "cidade-estado: o estado tinha um município só (plebiscito de 21/04/1963 manteve isso — ptwiki Estado da Guanabara)"},
+      {"de": 1975.2, "ate": null, "nome": "CAPITAL DO ESTADO DO RIO DE JANEIRO", "curto": "CAPITAL DO ESTADO DO RJ", "data": "15/03/1975 (fusão, Lei Complementar nº 20)", "fonte": "https://pt.wikipedia.org/wiki/Rio_de_Janeiro", "obs": "Niterói deixa de ser capital estadual (era desde 1834)"}
+    ],
+    "bandeiras_locais_encontradas": [
+      {"arquivo": "Bandeira_do_Município_Neutro_(Rio_de_Janeiro)_(1831–1889).svg", "periodo": "1834–1889", "pagina": "https://pt.wikipedia.org/wiki/Município_Neutro", "conferido": false},
+      {"arquivo": "Bandeira_do_Distrito_Federal_(Brasil)_(1891–1960).svg", "periodo": "1891–1960", "pagina": "https://pt.wikipedia.org/wiki/Distrito_Federal_(1891–1960)", "conferido": false},
+      {"arquivo": "Bandeira_do_estado_da_Guanabara_(1960–1975).svg", "periodo": "1960–1975", "pagina": "https://pt.wikipedia.org/wiki/Estado_da_Guanabara", "conferido": false},
+      {"arquivo": "Bandeira_do_estado_do_Rio_de_Janeiro.svg", "periodo": "1975–", "pagina": "https://pt.wikipedia.org/wiki/Rio_de_Janeiro", "conferido": false},
+      {"arquivo": "Bandeira_da_cidade_do_Rio_de_Janeiro.svg", "periodo": "bandeira municipal (enwiki Timeline: desenho adotado em 1908)", "pagina": "https://pt.wikipedia.org/wiki/Rio_de_Janeiro", "conferido": false}
+    ],
+    "obs_bandeiras_locais": "Nomes de arquivo lidos no HTML das páginas citadas (links 'Ficheiro:'). Nenhuma está em motor/assets/bandeiras/, nenhuma foi baixada e a licença de nenhuma foi conferida. Se o HUD for mostrar bandeira local, baixar do Commons e conferir licença antes."
+  }
+}

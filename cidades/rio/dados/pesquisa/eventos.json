@@ -1,0 +1,818 @@
+{
+ "_meta": {
+  "gerado_em": "2026-10-22",
+  "coordenadas": "lat/lon de páginas HTML da Wikipédia (wgCoordinates/infobox ou link geohack/Especial:Map) ou da página HTML do item no Wikidata (legenda do mapa) — local.coord_fonte diz qual. Nenhuma coordenada inventada. Quando o lugar exato não tem coordenada publicada, usa-se o centro antigo (Praça XV, lat -22.9033 lon -43.1747 = centro_antigo do config) marcado 'genérico', ou o ponto publicado mais próximo, marcado 'aproximação'. Todos os pontos dentro do bbox do config (lon -43.82 a -43.04, lat -23.10 a -22.72).",
+  "nota": "40 eventos (22 antes de 1850) + 8 de reserva. Títulos ≤ 30 caracteres (MAIÚSCULAS), legenda ≤ 95, detalhe ≤ 220 — validados por script local. Fontes lidas como página HTML (pt/en.wikipedia.org/wiki/..., wikidata.org/wiki/Q...); nenhuma API usada.",
+  "anos_fracionados": "ano com fração = mês (ex.: 1808.18 = 8 de março), só para ordenar eventos do mesmo ano. Na tela mostrar só o ano inteiro.",
+  "anos_aproximados": "ano 1500 (tupinambás) e 1504 (feitoria, 1503–1504) são posição na linha do tempo; 1567.3 (cidade no Castelo) é só o ano, sem mês na fonte.",
+  "fora_do_bbox": "A 1ª ferrovia (Mauá, 1854) fica em Magé, fora do bbox — não usada; no lugar, a E. F. D. Pedro II (1858), que parte da Central do Brasil."
+ },
+ "eventos": [
+  {
+   "id": "tupinambas-1500",
+   "ano": 1500,
+   "data_exata": "início do séc. XVI (aproximado; tupis no litoral desde ~ano 1000)",
+   "titulo_curto_PT": "A BAÍA DOS TUPINAMBÁS",
+   "legenda": "Antes dos portugueses, aldeias tupinambás (tamoios) cercavam a baía; temiminós na Paranapuã",
+   "detalhe": "Guanabara vem do tupi: 'guana' (seio) + 'bara' (mar), o mar do seio, pelo formato redondo e a fartura de peixe. Uma aldeia, a Karióka, ficava na foz do rio que daria nome aos cariocas.",
+   "local": {"nome": "Baía de Guanabara (centro)", "lat": -22.790278, "lon": -43.155556, "coord_fonte": "enwiki Guanabara Bay (infobox)"},
+   "recurso_visual": "mapa escuro; fogueiras de aldeias nas margens e ilhas; palavra GUANA + BARA sobre a água",
+   "numero_impacto": "MAR DO SEIO",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Baía_de_Guanabara",
+    "https://pt.wikipedia.org/wiki/Rio_Carioca"
+   ],
+   "confianca": "media",
+   "obs": "Etimologia tem 3 versões na ptwiki Baía de Guanabara (Iguaá-Mbara, guana-bara, kûárana pará); usada a 'seio do mar', que o pedido cita. Paranapuã = atual Ilha do Governador (ptwiki História da cidade). Ano 1500 só posição."
+  },
+  {
+   "id": "rio-de-janeiro-1502",
+   "ano": 1502,
+   "data_exata": "1º/01/1502",
+   "titulo_curto_PT": "UM RIO EM JANEIRO",
+   "legenda": "Navegadores portugueses entram na baía, acham que é a foz de um rio e o chamam Rio de Janeiro",
+   "detalhe": "A expedição de reconhecimento da costa, com Américo Vespúcio a bordo, chegou em 1º de janeiro de 1502. Quem comandava é controverso: Gaspar de Lemos ou Gonçalo Coelho.",
+   "local": {"nome": "entrada da baía, junto ao Pão de Açúcar (aproximação)", "lat": -22.9494, "lon": -43.1567, "coord_fonte": "enwiki Sugarloaf Mountain (infobox)"},
+   "recurso_visual": "caravelas entram pela barra entre o Pão de Açúcar e Niterói; rótulo RIO DE JANEIRO aparece sobre a baía",
+   "numero_impacto": "1º/1/1502",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Gaspar_de_Lemos"
+   ],
+   "confianca": "alta",
+   "obs": "Data igual nas duas páginas; o comandante diverge (ver RESUMO). Não pôr nome de comandante na tela."
+  },
+  {
+   "id": "feitoria-1504",
+   "ano": 1504,
+   "data_exata": "1503–1504 (2ª expedição, de Gonçalo Coelho); operou até 1516",
+   "titulo_curto_PT": "A FEITORIA DO PAU-BRASIL",
+   "legenda": "Portugueses erguem uma feitoria de pau-brasil na praia, perto da foz do rio Carioca",
+   "detalhe": "Casas de taipa cobertas de palha e roças, entre as atuais praias do Flamengo e da Glória. A feitoria funcionou até 1516. O local exato é discutido: há quem a ponha junto ao morro da Viúva.",
+   "local": {"nome": "foz do rio Carioca, Flamengo (aproximação)", "lat": -22.93556, "lon": -43.1694, "coord_fonte": "ptwiki Rio Carioca (wgCoordinates)"},
+   "recurso_visual": "toras vermelhas empilhadas na praia; casinha de palha; nau ancorada",
+   "numero_impacto": "1503–1504",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Feitoria_da_Baía_de_Guanabara",
+    "https://pt.wikipedia.org/wiki/Rio_Carioca"
+   ],
+   "confianca": "media",
+   "obs": "A feitoria não tem coordenada; usado o rio Carioca. A tese 'carioca = casa de branco' (ptwiki Feitoria) é rejeitada por linguistas (ptwiki Rio Carioca: kariîó + oka, casa dos carijós) — não pôr na tela."
+  },
+  {
+   "id": "franca-antartica-1555",
+   "ano": 1555.86,
+   "data_exata": "10/11/1555 (ptwiki); 1º/11/1555 (enwiki)",
+   "titulo_curto_PT": "A FRANÇA ANTÁRTICA",
+   "legenda": "O almirante Villegagnon ocupa a ilha de Serigipe e ergue o Forte Coligny, aliado aos tamoios",
+   "detalhe": "Os franceses saíram de Le Havre em 6/5/1555 com duas naus e cerca de 200 soldados e colonos. A ilha hoje leva o nome de Villegagnon. Em 1557 chegaram mais 3 navios com quase 300 pessoas.",
+   "local": {"nome": "Ilha de Villegagnon (Serigipe)", "lat": -22.913889, "lon": -43.159722, "coord_fonte": "ptwiki Ilha de Villegagnon (wgCoordinates)"},
+   "recurso_visual": "2 naus com bandeira francesa; forte de madeira nasce na ilha; canoas tamoias em volta",
+   "numero_impacto": "2 NAUS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Nicolas_Durand_de_Villegagnon",
+    "https://pt.wikipedia.org/wiki/Ilha_de_Villegagnon",
+    "https://en.wikipedia.org/wiki/France_Antarctique"
+   ],
+   "confianca": "alta",
+   "obs": "Dia diverge (1º × 10/11); mostrar só 1555. '200 soldados e colonos' e '2 navios' vêm da enwiki; reforço de 1557: ~300 pessoas (ptwiki Villegagnon) × 290 colonos (ptwiki Forte Coligny)."
+  },
+  {
+   "id": "forte-coligny-1560",
+   "ano": 1560.2,
+   "data_exata": "15/03/1560 (ptwiki Ilha de Villegagnon, enwiki); 16/03/1560 (infobox ptwiki França Antártica)",
+   "titulo_curto_PT": "MEM DE SÁ ATACA O FORTE",
+   "legenda": "O governador-geral bombardeia e toma o Forte Coligny em três dias, mas não expulsa os franceses",
+   "detalhe": "Com reforços de São Vicente, Mem de Sá desembarcou tropas e artilharia na ilha. Os franceses e tamoios fugiram para o continente e continuaram na baía por mais sete anos.",
+   "local": {"nome": "Forte Coligny, Ilha de Villegagnon", "lat": -22.9139, "lon": -43.15972, "coord_fonte": "ptwiki Forte Coligny (wgCoordinates)"},
+   "recurso_visual": "frota portuguesa cerca a ilha; fumaça de canhões; forte em chamas",
+   "numero_impacto": "26 NAVIOS",
+   "fontes": [
+    "https://en.wikipedia.org/wiki/France_Antarctique",
+    "https://pt.wikipedia.org/wiki/Ilha_de_Villegagnon",
+    "https://pt.wikipedia.org/wiki/França_Antártica"
+   ],
+   "confianca": "media",
+   "obs": "26 navios e 2.000 soldados só na enwiki France Antarctique; ptwiki não dá números."
+  },
+  {
+   "id": "fundacao-1565",
+   "ano": 1565.16,
+   "data_exata": "1º/03/1565",
+   "titulo_curto_PT": "NASCE SÃO SEBASTIÃO DO RIO",
+   "legenda": "Estácio de Sá funda a cidade na várzea entre o Morro Cara de Cão e o Pão de Açúcar",
+   "detalhe": "Ergueu uma paliçada e uma igreja de pau a pique. Foi a 2ª cidade do Brasil, depois de Salvador. O nome homenageia o rei D. Sebastião e o santo. Era uma base de guerra contra os franceses.",
+   "local": {"nome": "Morro Cara de Cão (Urca)", "lat": -22.9403, "lon": -43.153681, "coord_fonte": "ptwiki Morro Cara de Cão (geohack)"},
+   "recurso_visual": "paliçada de madeira nasce no istmo; cruz; bandeira portuguesa; zoom no Pão de Açúcar",
+   "numero_impacto": "1º/3/1565",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Estácio_de_Sá",
+    "https://pt.wikipedia.org/wiki/Mem_de_Sá"
+   ],
+   "confianca": "alta",
+   "obs": "Data igual nas três páginas. Estácio saiu do Espírito Santo em 20/01/1565."
+  },
+  {
+   "id": "urucumirim-1567",
+   "ano": 1567.05,
+   "data_exata": "20/01/1567 (batalha); morte de Estácio em 20/02/1567",
+   "titulo_curto_PT": "A BATALHA DE URUÇUMIRIM",
+   "legenda": "Portugueses e temiminós de Arariboia tomam a paliçada franco-tamoia do outeiro da Glória",
+   "detalhe": "Mem de Sá chegou com reforços e índios reunidos por Anchieta e Nóbrega. Estácio levou uma flechada no olho e morreu um mês depois. Os franceses foram expulsos de vez.",
+   "local": {"nome": "Outeiro da Glória (Uruçumirim)", "lat": -22.92139, "lon": -43.17556, "coord_fonte": "ptwiki Igreja de Nossa Senhora da Glória do Outeiro (wgCoordinates)"},
+   "recurso_visual": "paliçada no morrinho da Glória; flechas e fumaça; canoas temiminós na praia do Flamengo",
+   "numero_impacto": "20/1/1567",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Entrincheiramento_de_Uruçumirim",
+    "https://pt.wikipedia.org/wiki/Estácio_de_Sá",
+    "https://pt.wikipedia.org/wiki/Arariboia"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki História da cidade põe Uruçumirim na 'Praia do Flamengo'; ptwiki Entrincheiramento, no outeiro da Glória (vizinhos). Usada a Glória."
+  },
+  {
+   "id": "castelo-1567",
+   "ano": 1567.3,
+   "data_exata": "1567 (sem dia/mês na fonte)",
+   "titulo_curto_PT": "A CIDADE SOBE O MORRO",
+   "legenda": "Mem de Sá muda a cidade para o alto do Morro do Descanso, depois chamado Morro do Castelo",
+   "detalhe": "Lá no alto, de frente para a ilha de Villegagnon, era mais fácil se defender. Igreja, fortaleza e colégio dos jesuítas nasceram no topo; a cidade desceu depois para a várzea.",
+   "local": {"nome": "Morro do Castelo (arrasado em 1922)", "lat": -22.906927, "lon": -43.174532, "coord_fonte": "ptwiki Morro do Castelo (geohack) = Wikidata Q10332478"},
+   "recurso_visual": "o morro (hoje inexistente) se ergue no centro; casinhas e muralha nascem no topo",
+   "numero_impacto": "1567",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Morro_do_Castelo",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "O morro não existe mais: o motor precisa recriar o relevo até 1922 (ver castelo-1922)."
+  },
+  {
+   "id": "niteroi-1573",
+   "ano": 1573.89,
+   "data_exata": "22/11/1573 (fundação de Niterói)",
+   "titulo_curto_PT": "ARARIBOIA FUNDA NITERÓI",
+   "legenda": "Do outro lado da baía, o chefe temiminó recebe terras e funda a aldeia de São Lourenço",
+   "detalhe": "Arariboia, batizado Martim Afonso de Sousa, lutou ao lado dos portugueses em 1567. A igreja de São Lourenço é o marco do 1º aldeamento jesuíta da capitania; ali Anchieta encenou um auto em 1587.",
+   "local": {"nome": "Igreja de São Lourenço dos Índios, Niterói", "lat": -22.887317, "lon": -43.110131, "coord_fonte": "Wikidata Q123900902 (página HTML)"},
+   "recurso_visual": "aldeia e capela no morro de Niterói; canoas cruzam a baía",
+   "numero_impacto": "22/11/1573",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Niterói",
+    "https://pt.wikipedia.org/wiki/Arariboia",
+    "https://pt.wikipedia.org/wiki/Igreja_de_São_Lourenço_dos_Índios"
+   ],
+   "confianca": "alta",
+   "obs": "Niterói é outro município, dentro do bbox; dizer na tela 'do outro lado da baía'."
+  },
+  {
+   "id": "engenho-lagoa-1575",
+   "ano": 1575,
+   "data_exata": "governo de António Salema (1575–1578)",
+   "titulo_curto_PT": "O ENGENHO D'EL-REY",
+   "legenda": "O governador Salema planta cana na beira da Lagoa e monta um engenho de açúcar",
+   "detalhe": "Os índios da Lagoa foram expulsos para abrir o canavial. No fim do séc. XVI havia só 3 engenhos na capitania; no fim do séc. XVII, cerca de cem, no Recôncavo da baía e em Campos.",
+   "local": {"nome": "Lagoa Rodrigo de Freitas", "lat": -22.971117, "lon": -43.211717, "coord_fonte": "ptwiki Lagoa Rodrigo de Freitas (wgCoordinates)"},
+   "recurso_visual": "canavial verde nasce em volta da lagoa; chaminé do engenho; depois pontinhos de engenhos pelo fundo da baía",
+   "numero_impacto": "3 → ~100 ENGENHOS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Lagoa_Rodrigo_de_Freitas",
+    "https://pt.wikipedia.org/wiki/História_do_Rio_de_Janeiro"
+   ],
+   "confianca": "media",
+   "obs": "ptwiki Lagoa conta que Salema espalhou roupas de doentes de varíola para exterminar os índios — relato sem data exata; NÃO pôr como fato na tela. '~100 engenhos' é da capitania inteira (inclui Campos, fora do mapa)."
+  },
+  {
+   "id": "santo-antonio-1608",
+   "ano": 1608.42,
+   "data_exata": "04/06/1608 (início da obra); inaugurado em 1620",
+   "titulo_curto_PT": "OS FRADES NO MORRO",
+   "legenda": "Franciscanos começam o Convento de Santo Antônio no alto de um morro do centro",
+   "detalhe": "A colina foi dada aos frades em 1607; o convento ficou pronto em 1620. Ruelas ligavam as igrejas ao Paço e ao cais: a cidade descia do Castelo para a várzea.",
+   "local": {"nome": "Convento de Santo Antônio (Largo da Carioca)", "lat": -22.90725, "lon": -43.179139, "coord_fonte": "Wikidata Q14947966 (página HTML)"},
+   "recurso_visual": "convento branco nasce no morro; ruelas de terra ligam os morros do Castelo, Santo Antônio e São Bento",
+   "numero_impacto": "1608",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Convento_de_Santo_Antônio_(Rio_de_Janeiro)"
+   ],
+   "confianca": "alta",
+   "obs": "Evento de 'tecido urbano' do séc. XVII (o pedido quer início detalhado). 'Ruelas ligavam as igrejas ao Paço e ao cais' = ptwiki História da cidade (séc. XVII)."
+  },
+  {
+   "id": "duclerc-1710",
+   "ano": 1710.72,
+   "data_exata": "19/09/1710",
+   "titulo_curto_PT": "OS FRANCESES VOLTAM",
+   "legenda": "O corsário Duclerc ataca a cidade do ouro e é derrotado por soldados e milícias",
+   "detalhe": "O Rio era o porto do ouro de Minas Gerais. Os franceses perderam centenas de homens entre mortos e presos. Duclerc foi assassinado no cativeiro em 18/03/1711, por autores desconhecidos.",
+   "local": {"nome": "centro da cidade (batalha de 1710)", "lat": -22.9098, "lon": -43.1763, "coord_fonte": "enwiki Battle of Rio de Janeiro (1710) (infobox)"},
+   "recurso_visual": "6 navios na costa; fila de soldados entra na cidade; combate nas ruas; prisioneiros",
+   "numero_impacto": "6 NAVIOS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Batalha_do_Rio_de_Janeiro_(1710)",
+    "https://en.wikipedia.org/wiki/Battle_of_Rio_de_Janeiro_(1710)",
+    "https://pt.wikipedia.org/wiki/Jean-François_Duclerc"
+   ],
+   "confianca": "media",
+   "obs": "Efetivo diverge: 1.500 homens (infobox pt/en) × 800–1.200 (ptwiki Duclerc); por isso a tela mostra só os 6 navios (igual nas três). Ponto de desembarque não está nas páginas lidas — não desenhar Guaratiba."
+  },
+  {
+   "id": "duguay-trouin-1711",
+   "ano": 1711.7,
+   "data_exata": "12 a 22/09/1711",
+   "titulo_curto_PT": "DUGUAY-TROUIN TOMA O RIO",
+   "legenda": "Uma frota francesa força a barra, ocupa a cidade e só sai depois de receber um resgate",
+   "detalhe": "O governador pagou para evitar a destruição; parte do resgate saiu do bolso dos moradores. Quatro navios portugueses foram perdidos. O saque foi estimado em 4 milhões de libras.",
+   "local": {"nome": "centro da cidade e porto (batalha de 1711)", "lat": -22.9098, "lon": -43.1763, "coord_fonte": "enwiki Battle of Rio de Janeiro (1711) (infobox)"},
+   "recurso_visual": "fila de navios entra pela barra sob fogo dos fortes; bombardeio; baús de ouro saem da cidade",
+   "numero_impacto": "16 A 18 NAVIOS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Batalha_do_Rio_de_Janeiro_(1711)",
+    "https://en.wikipedia.org/wiki/Battle_of_Rio_de_Janeiro_(1711)",
+    "https://pt.wikipedia.org/wiki/René_Duguay-Trouin"
+   ],
+   "confianca": "media",
+   "obs": "Navios: 18 (infobox ptwiki) × 17 ou 16 (ptwiki Duguay-Trouin: 11+4+1 armados; 'outros relatos' 17) × 16 (enwiki, Boxer). Homens: 3.800 × 2.800–3.700 × 5.824/5.674. Ver RESUMO."
+  },
+  {
+   "id": "arcos-1750",
+   "ano": 1750,
+   "data_exata": "inaugurado em 1750 (1º aqueduto pronto em 1723; reconstrução ordenada em 1744)",
+   "titulo_curto_PT": "OS ARCOS DA CARIOCA",
+   "legenda": "Um aqueduto de pedra leva a água do rio Carioca do morro de Santa Teresa até o centro",
+   "detalhe": "São 42 arcos duplos e 270 metros de comprimento, feitos por trabalho escravizado indígena e africano. A água saía em 16 bicas de bronze, no chafariz junto ao Convento de Santo Antônio.",
+   "local": {"nome": "Arcos da Lapa (Aqueduto da Carioca)", "lat": -22.912594, "lon": -43.17985, "coord_fonte": "ptwiki Aqueduto da Carioca (wgCoordinates)"},
+   "recurso_visual": "arcos brancos nascem um a um entre os morros; fio de água corre até o chafariz",
+   "numero_impacto": "42 ARCOS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Aqueduto_da_Carioca",
+    "https://en.wikipedia.org/wiki/Carioca_Aqueduct"
+   ],
+   "confianca": "alta",
+   "obs": "Altura diverge: 17,6 m (ptwiki) × 64 m (enwiki) — não mostrar altura. 270 m igual nas duas."
+  },
+  {
+   "id": "capital-1763",
+   "ano": 1763,
+   "data_exata": "1763",
+   "titulo_curto_PT": "O RIO VIRA CAPITAL",
+   "legenda": "Pombal tira a sede do Brasil de Salvador e a passa para o Rio, porto do ouro de Minas",
+   "detalhe": "A Casa dos Governadores, na atual Praça XV, virou o Paço dos Vice-Reis. O Rio seria capital do Brasil por quase 200 anos, até 1960.",
+   "local": {"nome": "Paço Imperial (Paço dos Vice-Reis)", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "recurso_visual": "estrela de capital acende sobre a Praça XV; rota de navios de ouro saindo da baía",
+   "numero_impacto": "1763",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Paço_Imperial",
+    "https://en.wikipedia.org/wiki/Timeline_of_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "HUD passa a 'CAPITAL DO BRASIL COLÔNIA' (regimes.json)."
+  },
+  {
+   "id": "corte-1808",
+   "ano": 1808.18,
+   "data_exata": "chegada em 07–08/03/1808 (ptwiki: chegou e desembarcou no cais do Largo do Paço em 8/3)",
+   "titulo_curto_PT": "A CORTE CHEGA AO RIO",
+   "legenda": "Fugindo de Napoleão, a família real portuguesa desembarca no cais do Largo do Paço",
+   "detalhe": "A frota saiu de Lisboa em 29/11/1807, passou por Salvador e chegou ao Rio. Quantos vieram é discutido: de 4 a 7 mil (estudo recente) até cerca de 10 mil pessoas (relatos da época).",
+   "local": {"nome": "Paço Imperial / cais do Largo do Paço", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "recurso_visual": "frota entra na baía; desembarque no cais; a cidade acende de luzes",
+   "numero_impacto": "17 NAVIOS DE GUERRA",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Transferência_da_corte_portuguesa_para_o_Brasil",
+    "https://en.wikipedia.org/wiki/Transfer_of_the_Portuguese_court_to_Brazil",
+    "https://pt.wikipedia.org/wiki/Paço_Imperial"
+   ],
+   "confianca": "media",
+   "obs": "17 = 8 naus + 5 fragatas + 4 menores da Marinha portuguesa (enwiki), sem contar os navios mercantes e as 4 naus britânicas da escolta. Pessoas: ~10.000 (enwiki) × 4–7 mil (ptwiki, Pedreira e Costa) — ver RESUMO."
+  },
+  {
+   "id": "jardim-botanico-1808",
+   "ano": 1808.45,
+   "data_exata": "13/06/1808",
+   "titulo_curto_PT": "NASCE O JARDIM BOTÂNICO",
+   "legenda": "D. João toma o antigo engenho da Lagoa e cria ali o Real Horto e uma fábrica de pólvora",
+   "detalhe": "O Horto aclimatava plantas de outras partes do mundo. Hoje o Jardim Botânico tem cerca de 6.500 espécies em 54 hectares.",
+   "local": {"nome": "Jardim Botânico do Rio de Janeiro", "lat": -22.9675, "lon": -43.223889, "coord_fonte": "enwiki Rio de Janeiro Botanical Garden (infobox)"},
+   "recurso_visual": "o canavial da Lagoa vira aleias de palmeiras; galpão da pólvora",
+   "numero_impacto": "13/6/1808",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Jardim_Botânico_do_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Lagoa_Rodrigo_de_Freitas"
+   ],
+   "confianca": "alta",
+   "obs": "enwiki Timeline: 'opens' em 1822 (abertura ao público); fundação 13/06/1808 (infobox ptwiki)."
+  },
+  {
+   "id": "valongo-1811",
+   "ano": 1811,
+   "data_exata": "1811 (construção) a 1831 (fim legal do tráfico)",
+   "titulo_curto_PT": "O CAIS DO VALONGO",
+   "legenda": "Abre o maior porto de chegada de africanos escravizados das Américas",
+   "detalhe": "Em 20 anos, desembarcaram ali entre 500 mil e 1 milhão de africanos. Enterrado por aterros, o cais foi achado em 2011 e virou Patrimônio Mundial da UNESCO em 2017.",
+   "local": {"nome": "Cais do Valongo (Saúde)", "lat": -22.897111, "lon": -43.187394, "coord_fonte": "ptwiki Cais do Valongo (wgCoordinates)"},
+   "recurso_visual": "cais de pedra nasce na Saúde; navios negreiros chegam em sequência; contador de pessoas",
+   "numero_impacto": "500 MIL A 1 MILHÃO",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Cais_do_Valongo",
+    "https://en.wikipedia.org/wiki/Valongo_Wharf"
+   ],
+   "confianca": "alta",
+   "obs": "A mesma ptwiki diz 'cerca de um milhão' e 'entre 500 mil e um milhão'; usada a faixa (= enwiki). Escavação 2011 = enwiki infobox."
+  },
+  {
+   "id": "reino-unido-1815",
+   "ano": 1815.96,
+   "data_exata": "16/12/1815",
+   "titulo_curto_PT": "CAPITAL DE UM REINO",
+   "legenda": "O Brasil é elevado a Reino Unido com Portugal e Algarves; o Rio vira a sede da monarquia",
+   "detalhe": "Com a corte instalada desde 1808, o Rio vira a sede do Reino Unido. A bandeira muda: o brasão real passa a ficar sobre a esfera armilar dourada em fundo azul.",
+   "local": {"nome": "Paço Imperial (Paço Real)", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "recurso_visual": "bandeira do HUD troca para a do Reino Unido; coroa sobre o Paço",
+   "numero_impacto": "16/12/1815",
+   "fontes": [
+    "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki História da cidade: entre 1815 e abril de 1821 sediou o Reino Unido. Descrição da bandeira = regimes.json (enwiki Flag of Brazil)."
+  },
+  {
+   "id": "fico-1822",
+   "ano": 1822.02,
+   "data_exata": "09/01/1822",
+   "titulo_curto_PT": "O DIA DO FICO",
+   "legenda": "No Paço, o príncipe Pedro desobedece Lisboa e anuncia que fica no Brasil",
+   "detalhe": "As Cortes portuguesas exigiam a volta dele. Um abaixo-assinado reuniu cerca de oito mil assinaturas pedindo que ficasse. Foi o primeiro passo da Independência.",
+   "local": {"nome": "Paço Imperial", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "recurso_visual": "multidão na Praça XV; papel de abaixo-assinado; balão de fala FICO",
+   "numero_impacto": "~8 MIL ASSINATURAS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Dia_do_Fico",
+    "https://pt.wikipedia.org/wiki/Paço_Imperial"
+   ],
+   "confianca": "alta",
+   "obs": "A frase 'Diga ao povo que fico' não aparece na ptwiki lida — não usar na tela."
+  },
+  {
+   "id": "imperio-1822",
+   "ano": 1822.78,
+   "data_exata": "12/10/1822 (aclamação); coroação em 1º/12/1822",
+   "titulo_curto_PT": "CAPITAL DO IMPÉRIO",
+   "legenda": "Um mês após o grito do Ipiranga, Pedro I é aclamado imperador no Campo de Santana",
+   "detalhe": "A Independência foi proclamada em São Paulo em 7/9/1822, mas o Império nasceu no Rio: aclamação no Campo de Santana e coroação em 1º de dezembro. A cidade segue capital.",
+   "local": {"nome": "Campo de Santana (Campo da Aclamação)", "lat": -22.906701, "lon": -43.188563, "coord_fonte": "Wikidata Q10353440 (página HTML)"},
+   "recurso_visual": "bandeira do HUD troca para a do Império; multidão no campo; fogos",
+   "numero_impacto": "12/10/1822",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Pedro_I_do_Brasil",
+    "https://pt.wikipedia.org/wiki/Campo_de_Santana_(Rio_de_Janeiro)"
+   ],
+   "confianca": "media",
+   "obs": "Data da infobox ptwiki Pedro I (início do reinado). A legenda de pintura na ptwiki Campo de Santana diz '12 de novembro de 1822' — ver RESUMO."
+  },
+  {
+   "id": "municipio-neutro-1834",
+   "ano": 1834.61,
+   "data_exata": "12/08/1834 (Ato Adicional à Constituição de 1824)",
+   "titulo_curto_PT": "O MUNICÍPIO NEUTRO",
+   "legenda": "A capital é separada da província do Rio, que ganha Niterói como capital",
+   "detalhe": "Para que o governo do Império não ficasse dentro de uma província, a cidade virou o Município Neutro (a 'Corte'). Os limites do atual município do Rio vêm daí.",
+   "local": {"nome": "Município Neutro (ponto da infobox)", "lat": -22.9, "lon": -43.183333, "coord_fonte": "enwiki Neutral Municipality (infobox)"},
+   "recurso_visual": "linha de limite se desenha em volta do município; Niterói ganha cor própria do outro lado da baía",
+   "numero_impacto": "12/8/1834",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Município_Neutro",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "'Limites vêm daí': o Município Neutro virou Distrito Federal (1891) e depois Guanabara (1960), no mesmo território (ptwiki Estado da Guanabara). HUD: 'MUNICÍPIO NEUTRO'."
+  },
+  {
+   "id": "ferrovia-1858",
+   "ano": 1858.24,
+   "data_exata": "29/03/1858",
+   "titulo_curto_PT": "O TREM SAI DA CORTE",
+   "legenda": "A Estrada de Ferro D. Pedro II parte da estação do Campo rumo ao interior",
+   "detalhe": "A ferrovia ligava a capital às fazendas de café do Vale do Paraíba. A estação do Campo virou a Central do Brasil; o prédio atual, com o relógio, é de 1943.",
+   "local": {"nome": "Estação Central do Brasil", "lat": -22.903733, "lon": -43.192711, "coord_fonte": "ptwiki Estação Central do Brasil (geohack)"},
+   "recurso_visual": "linha férrea se desenha da Central para oeste e sai do quadro; trem a vapor",
+   "numero_impacto": "29/3/1858",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Estação_Central_do_Brasil",
+    "https://pt.wikipedia.org/wiki/Estrada_de_Ferro_Dom_Pedro_II"
+   ],
+   "confianca": "alta",
+   "obs": "A 1ª ferrovia do Brasil (Mauá, 1854) fica em Magé, fora do bbox. Extensão do 1º trecho não está nas páginas lidas."
+  },
+  {
+   "id": "abolicao-1888",
+   "ano": 1888.36,
+   "data_exata": "13/05/1888",
+   "titulo_curto_PT": "A LEI ÁUREA",
+   "legenda": "No Paço da cidade, a princesa Isabel assina a lei que acaba com a escravidão no Brasil",
+   "detalhe": "A lei tinha dois artigos: 'É declarada extinta a escravidão no Brasil' e 'Revogam-se as disposições em contrário'. O povo lotou o largo em frente ao Paço.",
+   "local": {"nome": "Paço Imperial", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "recurso_visual": "multidão na Praça XV; o cais do Valongo (já fechado) escurece; luz sobre o Paço",
+   "numero_impacto": "13/5/1888",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Lei_Áurea",
+    "https://pt.wikipedia.org/wiki/Paço_Imperial"
+   ],
+   "confianca": "alta",
+   "obs": "Local da assinatura: ptwiki Paço Imperial ('numa das salas do Paço'). Texto da lei: ptwiki Lei Áurea (grafia atualizada)."
+  },
+  {
+   "id": "republica-1889",
+   "ano": 1889.87,
+   "data_exata": "15/11/1889",
+   "titulo_curto_PT": "A REPÚBLICA NO CAMPO",
+   "legenda": "Tropas de Deodoro se reúnem no Campo de Santana e derrubam a monarquia",
+   "detalhe": "Foi um golpe militar com apoio de republicanos civis. A família imperial foi banida. A capital do Império virou capital da República.",
+   "local": {"nome": "Campo de Santana", "lat": -22.906701, "lon": -43.188563, "coord_fonte": "Wikidata Q10353440 (página HTML)"},
+   "recurso_visual": "tropas em formação no campo; bandeira do HUD troca para a republicana",
+   "numero_impacto": "15/11/1889",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Proclamação_da_República_do_Brasil",
+    "https://pt.wikipedia.org/wiki/Campo_de_Santana_(Rio_de_Janeiro)"
+   ],
+   "confianca": "alta",
+   "obs": "O nome 'Distrito Federal' só vem com a Constituição de 24/02/1891 (ver regimes.json)."
+  },
+  {
+   "id": "armada-1893",
+   "ano": 1893.68,
+   "data_exata": "06/09/1893 a março de 1894",
+   "titulo_curto_PT": "A MARINHA SE REVOLTA",
+   "legenda": "Navios rebeldes trocam tiros com os fortes da baía durante meses (Revolta da Armada)",
+   "detalhe": "Oficiais da Marinha exigiam novas eleições contra o governo de Floriano. A fortaleza de Villegagnon ficou em ruínas e houve combates em Niterói. Os rebeldes se renderam em março de 1894.",
+   "local": {"nome": "Ilha de Villegagnon (fortaleza bombardeada)", "lat": -22.913889, "lon": -43.159722, "coord_fonte": "ptwiki Ilha de Villegagnon (wgCoordinates)"},
+   "recurso_visual": "navios de guerra na baía; clarões entre os navios e os fortes das duas margens",
+   "numero_impacto": "6 MESES",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Revolta_da_Armada"
+   ],
+   "confianca": "media",
+   "obs": "'6 meses' = 6/9/1893 a 13/3/1894 (asilo dado por Castilho). 'Contra Floriano' é contexto da revolta (FGV citada na ptwiki); se o revisor pedir, tirar o nome."
+  },
+  {
+   "id": "avenida-central-1904",
+   "ano": 1904.2,
+   "data_exata": "obras desde março de 1904; inaugurada em 07/09/1904; aberta ao tráfego em 15/11/1905",
+   "titulo_curto_PT": "O BOTA-ABAIXO",
+   "legenda": "Para abrir a Avenida Central, a reforma de Pereira Passos derruba casas e cortiços do centro",
+   "detalhe": "A avenida tinha 1.800 m por 33 m de largura, do porto ao mar. Quase 3.900 pessoas foram desalojadas; muitas subiram os morros da Saúde e da Providência.",
+   "local": {"nome": "Avenida Rio Branco (antiga Avenida Central)", "lat": -22.904722, "lon": -43.1775, "coord_fonte": "Wikidata Q4828121 (página HTML)"},
+   "recurso_visual": "casinhas coloniais somem numa faixa reta; prédios ecléticos nascem dos dois lados",
+   "numero_impacto": "641 CASAS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Avenida_Rio_Branco_(Rio_de_Janeiro)",
+    "https://pt.wikipedia.org/wiki/Pereira_Passos",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro"
+   ],
+   "confianca": "media",
+   "obs": "A mesma ptwiki diz 641 casas demolidas e, em outro trecho, '300 casas coloniais arrasadas' — ver RESUMO. 'Subiram os morros' = ptwiki História da cidade."
+  },
+  {
+   "id": "vacina-1904",
+   "ano": 1904.86,
+   "data_exata": "10 a 16/11/1904",
+   "titulo_curto_PT": "A REVOLTA DA VACINA",
+   "legenda": "Contra a vacina obrigatória e a reforma, o povo vira bondes e ergue barricadas",
+   "detalhe": "Houve 945 presos e 461 deportados para o Acre. Uma tentativa de golpe militar foi derrotada e a vacinação obrigatória acabou suspensa.",
+   "local": {"nome": "Praça da República (Campo de Santana)", "lat": -22.906701, "lon": -43.188563, "coord_fonte": "Wikidata Q10353440 (página HTML)"},
+   "recurso_visual": "bonde virado na praça; fumaça; barricadas nas ruas do centro",
+   "numero_impacto": "30 MORTOS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Revolta_da_Vacina",
+    "https://pt.wikipedia.org/wiki/Campo_de_Santana_(Rio_de_Janeiro)"
+   ],
+   "confianca": "alta",
+   "obs": "Números da infobox ptwiki. Foto do bonde virado na Praça da República (legenda ptwiki)."
+  },
+  {
+   "id": "chibata-1910",
+   "ano": 1910.89,
+   "data_exata": "22 a 26/11/1910",
+   "titulo_curto_PT": "A REVOLTA DA CHIBATA",
+   "legenda": "Marinheiros tomam os navios de guerra na baía contra os castigos com chicote",
+   "detalhe": "Começou depois de 250 chibatadas dadas a um marinheiro. Liderados por João Cândido, os rebeldes apontaram os canhões para a capital e conseguiram a anistia — depois traída.",
+   "local": {"nome": "Ilha das Cobras (base naval)", "lat": -22.895, "lon": -43.172222, "coord_fonte": "enwiki Ilha das Cobras (infobox)"},
+   "recurso_visual": "encouraçados Minas Geraes e São Paulo na baía; canhões virados para a cidade",
+   "numero_impacto": "1.500 A 2.000",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Revolta_da_Chibata"
+   ],
+   "confianca": "alta",
+   "obs": "1.500–2.000 marinheiros revoltosos (infobox ptwiki). O cartão precisa dizer 'marinheiros' junto do número."
+  },
+  {
+   "id": "forte-copacabana-1922",
+   "ano": 1922.51,
+   "data_exata": "05 e 06/07/1922",
+   "titulo_curto_PT": "OS 18 DO FORTE",
+   "legenda": "Tenentes rebeldes saem do Forte de Copacabana e enfrentam as tropas do governo na praia",
+   "detalhe": "Bombardeados, poucos não se renderam e caminharam pela Avenida Atlântica. Só Siqueira Campos e Eduardo Gomes sobreviveram entre os tenentes. O número 18 virou lenda; os reais eram menos.",
+   "local": {"nome": "Forte de Copacabana", "lat": -22.986763, "lon": -43.187674, "coord_fonte": "ptwiki Forte de Copacabana (wgCoordinates)"},
+   "recurso_visual": "forte na ponta da praia; pequena fila de homens caminha pela orla; tiros",
+   "numero_impacto": "18 (LENDA)",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Revolta_dos_18_do_Forte_de_Copacabana"
+   ],
+   "confianca": "media",
+   "obs": "ptwiki: 'É famoso o número de 18 ... mas a quantidade real era provavelmente menor'; restaram 28 no forte antes da saída. Se o '18 (LENDA)' ficar feio, usar '5/7/1922'."
+  },
+  {
+   "id": "castelo-1922",
+   "ano": 1922.68,
+   "data_exata": "arrasado em 1922; Exposição do Centenário aberta em 07/09/1922",
+   "titulo_curto_PT": "O MORRO DO CASTELO SOME",
+   "legenda": "O berço da cidade é arrasado para abrir espaço à Exposição do Centenário da Independência",
+   "detalhe": "O prefeito Carlos Sampaio derrubou casarões, cortiços e a velha igreja de São Sebastião. A terra aterrou partes da Urca, da Lagoa e do Jardim Botânico. A Exposição teve 14 países.",
+   "local": {"nome": "Morro do Castelo (hoje bairro do Castelo)", "lat": -22.906927, "lon": -43.174532, "coord_fonte": "ptwiki Morro do Castelo (geohack) = Wikidata Q10332478"},
+   "recurso_visual": "o morro baixa até virar chão plano; pavilhões da Exposição nascem no lugar e no aterro",
+   "numero_impacto": "1922",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Morro_do_Castelo",
+    "https://pt.wikipedia.org/wiki/Exposição_Internacional_do_Centenário_da_Independência",
+    "https://en.wikipedia.org/wiki/Timeline_of_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "O desmonte começou antes (foto de 1921 com o morro ainda inteiro) — mostrar só 1922. Número de moradores removidos não está nas páginas lidas."
+  },
+  {
+   "id": "cristo-1931",
+   "ano": 1931.78,
+   "data_exata": "12/10/1931",
+   "titulo_curto_PT": "O CRISTO NO CORCOVADO",
+   "legenda": "É inaugurada no alto do Corcovado a estátua do Cristo Redentor, de concreto e pedra-sabão",
+   "detalhe": "A estátua tem 30 metros, 38 com o pedestal. Obra de Heitor da Silva Costa, Paul Landowski e Carlos Oswald, com o rosto de Gheorghe Leonida.",
+   "local": {"nome": "Cristo Redentor (Corcovado)", "lat": -22.951916, "lon": -43.210464, "coord_fonte": "ptwiki Cristo Redentor (wgCoordinates)"},
+   "recurso_visual": "a estátua sobe no topo do morro; câmera gira em volta; a cidade lá embaixo",
+   "numero_impacto": "38 METROS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Cristo_Redentor",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "Data diverge: 12/10/1931 (ptwiki Cristo) × 12/08/1931 (ptwiki História da cidade) — ver RESUMO. Autores: ptwiki Cristo (Silva Costa, Oswald, Landowski, Caquot, Leonida)."
+  },
+  {
+   "id": "maracana-1950",
+   "ano": 1950.54,
+   "data_exata": "inaugurado em 16/06/1950; final em 16/07/1950",
+   "titulo_curto_PT": "O MARACANAÇO",
+   "legenda": "Na final da Copa, um público recorde até hoje vê o Uruguai vencer o Brasil por 2 a 1",
+   "detalhe": "O estádio foi erguido para a Copa de 1950. Na final, foram 199.854 presentes, dos quais 173.850 pagantes. O Rio continuava a maior cidade do país, até ser passado por São Paulo nos anos 1950.",
+   "local": {"nome": "Estádio do Maracanã", "lat": -22.9122, "lon": -43.2303, "coord_fonte": "enwiki Maracanã Stadium (infobox)"},
+   "recurso_visual": "o anel do estádio nasce; pontinhos de público enchem a arquibancada; silêncio",
+   "numero_impacto": "199.854 PESSOAS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Estádio_do_Maracanã",
+    "https://pt.wikipedia.org/wiki/Maracanaço",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "Recorde: ptwiki Maracanaço ('aproximadamente 200 mil pessoas, um recorde mantido até hoje'). Presentes × pagantes no RESUMO."
+  },
+  {
+   "id": "guanabara-1960",
+   "ano": 1960.3,
+   "data_exata": "21/04/1960 (capital vai para Brasília); Lei 3.752 de 14/04/1960",
+   "titulo_curto_PT": "ADEUS, CAPITAL",
+   "legenda": "A capital vai para Brasília e o antigo Distrito Federal vira o Estado da Guanabara",
+   "detalhe": "Depois de quase 200 anos como capital, o Rio virou uma cidade-estado, o menor estado do Brasil. O governo federal mudou aos poucos; parte dele ficou anos no Rio.",
+   "local": {"nome": "centro antigo — genérico", "lat": -22.9033, "lon": -43.1747, "coord_fonte": "genérico: centro_antigo do config (Praça XV)"},
+   "recurso_visual": "estrela de capital apaga sobre o Rio e voa para fora do quadro a noroeste; HUD troca para ESTADO DA GUANABARA",
+   "numero_impacto": "197 ANOS CAPITAL",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Estado_da_Guanabara",
+    "https://pt.wikipedia.org/wiki/Distrito_Federal_(1891–1960)",
+    "https://en.wikipedia.org/wiki/Timeline_of_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "197 = 1960 − 1763 (conta, não citação). 'Menor estado' = enwiki Timeline. Data 21/04 (ptwiki DF) × lei de 14/04 (ptwiki Guanabara) — ver RESUMO."
+  },
+  {
+   "id": "aterro-1965",
+   "ano": 1965.79,
+   "data_exata": "17/10/1965 (inauguração); ano dos 400 anos da cidade",
+   "titulo_curto_PT": "O ATERRO DO FLAMENGO",
+   "legenda": "Nos 400 anos da cidade, um parque nasce sobre a baía aterrada, do centro a Botafogo",
+   "detalhe": "O Parque do Flamengo foi feito sobre aterros sucessivos na Baía de Guanabara, do aeroporto Santos Dumont até Botafogo. Tem 1,2 milhão de metros quadrados.",
+   "local": {"nome": "Aterro do Flamengo (Parque Brigadeiro Eduardo Gomes)", "lat": -22.921111, "lon": -43.17, "coord_fonte": "ptwiki Aterro do Flamengo (coordenadas da infobox, 22°55′16″S 43°10′12″O)"},
+   "recurso_visual": "a linha da praia avança sobre a água; faixa verde de jardins e pistas nasce no aterro",
+   "numero_impacto": "1,2 MILHÃO DE M²",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Parque_do_Flamengo",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "400 anos: selo de 1965 citado na ptwiki História da cidade. A ptwiki diz 'aterros sucessivos' — a obra durou anos; o motor pode usar o efeito 'aterro' (ano0/ano1)."
+  },
+  {
+   "id": "ponte-1974",
+   "ano": 1974.17,
+   "data_exata": "04/03/1974 (obras desde janeiro de 1969)",
+   "titulo_curto_PT": "A PONTE RIO–NITERÓI",
+   "legenda": "Uma ponte atravessa a Baía de Guanabara e liga as duas cidades por terra",
+   "detalhe": "A ponte tem 26,6 m de largura e 75 m de altura máxima, com um vão livre de 300 m para os navios passarem. As obras começaram em 1969.",
+   "local": {"nome": "Ponte Rio–Niterói", "lat": -22.871213, "lon": -43.153406, "coord_fonte": "enwiki Rio–Niterói Bridge (infobox)"},
+   "recurso_visual": "a ponte se desenha de margem a margem sobre a água; carros acendem",
+   "numero_impacto": "13,29 KM",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Ponte_Rio-Niterói",
+    "https://en.wikipedia.org/wiki/Rio–Niterói_Bridge"
+   ],
+   "confianca": "alta",
+   "obs": "Lição de Floripa: o 'desenha' (em anos) tem que caber no avanço do ano do bloco."
+  },
+  {
+   "id": "fusao-1975",
+   "ano": 1975.2,
+   "data_exata": "15/03/1975 (Lei Complementar nº 20)",
+   "titulo_curto_PT": "A FUSÃO",
+   "legenda": "A Guanabara se funde com o antigo estado do Rio; a cidade vira a capital do novo estado",
+   "detalhe": "Niterói deixou de ser a capital fluminense. Na fusão, a Guanabara tinha cerca de 4,86 milhões de habitantes (estimativa de 1975).",
+   "local": {"nome": "centro antigo — genérico", "lat": -22.9033, "lon": -43.1747, "coord_fonte": "genérico: centro_antigo do config (Praça XV)"},
+   "recurso_visual": "o limite da Guanabara some e a cor se junta à do estado; Niterói perde a estrela de capital",
+   "numero_impacto": "15/3/1975",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Estado_da_Guanabara"
+   ],
+   "confianca": "alta",
+   "obs": "4.858.000 = 'estimativa 1975' da infobox ptwiki/enwiki Guanabara (não é censo)."
+  },
+  {
+   "id": "eco92-1992",
+   "ano": 1992.43,
+   "data_exata": "03 a 14/06/1992",
+   "titulo_curto_PT": "A ECO-92",
+   "legenda": "O Rio recebe a conferência da ONU sobre meio ambiente, com líderes do mundo todo",
+   "detalhe": "A Rio-92 ajudou a espalhar a ideia de desenvolvimento sustentável e gerou as convenções do clima e da biodiversidade. A ptwiki fala em delegações de 175 países.",
+   "local": {"nome": "Riocentro (Barra/Jacarepaguá)", "lat": -22.978083, "lon": -43.411325, "coord_fonte": "ptwiki Riocentro (wgCoordinates)"},
+   "recurso_visual": "bandeiras de vários países em volta do Riocentro; globo verde no HUD",
+   "numero_impacto": "108 CHEFES DE ESTADO",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Conferência_das_Nações_Unidas_sobre_o_Meio_Ambiente_e_o_Desenvolvimento",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Riocentro"
+   ],
+   "confianca": "media",
+   "obs": "Sede: ptwiki Riocentro lista a ECO-92 entre os eventos sediados. 108 chefes × 175 países são medidas diferentes."
+  },
+  {
+   "id": "olimpiadas-2016",
+   "ano": 2016.6,
+   "data_exata": "05 a 21/08/2016",
+   "titulo_curto_PT": "OLIMPÍADA NO RIO",
+   "legenda": "O Rio recebe os primeiros Jogos Olímpicos da América do Sul",
+   "detalhe": "A abertura foi no Maracanã. O Parque Olímpico ficou na Barra da Tijuca. Na véspera, o Rio já tinha sediado o Pan de 2007 e a final da Copa de 2014.",
+   "local": {"nome": "Parque Olímpico da Barra", "lat": -22.977, "lon": -43.394, "coord_fonte": "ptwiki Parque Olímpico do Rio de Janeiro (geohack)"},
+   "recurso_visual": "arenas nascem no Parque Olímpico; arcos olímpicos; linha até o Maracanã",
+   "numero_impacto": "11.238 ATLETAS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Jogos_Olímpicos_de_Verão_de_2016",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "11.238 atletas = infobox ptwiki (cita olympics.com)."
+  },
+  {
+   "id": "censo-2022",
+   "ano": 2022,
+   "data_exata": "Censo IBGE 2022",
+   "titulo_curto_PT": "6,2 MILHÕES DE CARIOCAS",
+   "legenda": "O Censo de 2022 conta 6.211.223 moradores: a 2ª maior cidade do Brasil",
+   "detalhe": "Pela primeira vez a população encolheu: eram 6.320.446 em 2010 (−1,7%). Em 1872 eram 274.972.",
+   "local": {"nome": "município do Rio de Janeiro (ponto da infobox)", "lat": -22.9028, "lon": -43.20778, "coord_fonte": "ptwiki Rio de Janeiro (wgCoordinates)"},
+   "recurso_visual": "contador para em 6.211.223; zoom out mostra a baía, a ponte e Niterói",
+   "numero_impacto": "6.211.223",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Censo_demográfico_do_Brasil_de_1872"
+   ],
+   "confianca": "alta",
+   "obs": "Tabela 'Censos demográficos do IBGE' na ptwiki Rio de Janeiro: 1872 274.972 … 2010 6.320.446, 2022 6.211.223 (−1,7%). 'Pela primeira vez': ptwiki diz 'após décadas de crescimento, a população encolheu 1,72%'. IBGE Cidades não consultado (seria API/site JS)."
+  }
+ ],
+ "reserva": [
+  {
+   "id": "sao-bento-1586",
+   "ano": 1586,
+   "data_exata": "1586 (doação do terreno); obras do mosteiro atual a partir de 1633",
+   "titulo_curto_PT": "OS MONGES DE SÃO BENTO",
+   "legenda": "Beneditinos recebem um morro junto ao porto e começam ali o seu mosteiro",
+   "detalhe": "O terreno foi doado por Manoel de Brito e seu filho Diogo. O mosteiro que se vê hoje começou em 1633, com projeto de 1617.",
+   "local": {"nome": "Mosteiro de São Bento", "lat": -22.897035, "lon": -43.178051, "coord_fonte": "Wikidata Q2820360 (página HTML)"},
+   "recurso_visual": "mosteiro nasce no morro de frente para o porto",
+   "numero_impacto": "1586",
+   "fontes": ["https://pt.wikipedia.org/wiki/Mosteiro_de_São_Bento_(Rio_de_Janeiro)"],
+   "confianca": "alta",
+   "obs": "O pedido cita 1590; a ptwiki diz 1586 (doação) — usado 1586."
+  },
+  {
+   "id": "cachaca-1660",
+   "ano": 1660.85,
+   "data_exata": "novembro de 1660 a abril de 1661",
+   "titulo_curto_PT": "A REVOLTA DA CACHAÇA",
+   "legenda": "Produtores de aguardente se revoltam contra novos impostos cobrados pelo governo da cidade",
+   "detalhe": "A cobrança começou pela freguesia de São Gonçalo, onde os irmãos Barbalho se recusaram a pagar. Também é chamada de Revolta do Barbalho ou Bernarda.",
+   "local": {"nome": "centro antigo — genérico", "lat": -22.9033, "lon": -43.1747, "coord_fonte": "genérico: centro_antigo do config (Praça XV)"},
+   "recurso_visual": "barris de cachaça; multidão na praça",
+   "numero_impacto": "1660",
+   "fontes": ["https://pt.wikipedia.org/wiki/Revolta_da_Cachaça"],
+   "confianca": "media",
+   "obs": "São Gonçalo fica na borda leste do bbox; sem coordenada do levante — genérico."
+  },
+  {
+   "id": "paco-1743",
+   "ano": 1743,
+   "data_exata": "obras 1738–1743",
+   "titulo_curto_PT": "A CASA DOS GOVERNADORES",
+   "legenda": "Fica pronta na beira do cais a Casa dos Governadores, futuro Paço Imperial",
+   "detalhe": "Projeto de José Fernandes Pinto Alpoim. Até 1808 a Casa da Moeda e o Real Armazém funcionavam no térreo. Foi sede do governo colonial, real e imperial.",
+   "local": {"nome": "Paço Imperial", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "recurso_visual": "sobrado branco nasce na praça junto ao mar",
+   "numero_impacto": "1743",
+   "fontes": ["https://pt.wikipedia.org/wiki/Paço_Imperial"],
+   "confianca": "alta",
+   "obs": ""
+  },
+  {
+   "id": "passeio-1783",
+   "ano": 1783,
+   "data_exata": "obras entre 1779 e 1783",
+   "titulo_curto_PT": "O PASSEIO PÚBLICO",
+   "legenda": "Mestre Valentim constrói o primeiro parque público das Américas, perto da Lapa",
+   "detalhe": "O vice-rei Luís de Vasconcelos encomendou o parque, inspirado no Passeio Público de Lisboa. O Chafariz do Menino é original de 1783.",
+   "local": {"nome": "Passeio Público", "lat": -22.913797, "lon": -43.175986, "coord_fonte": "ptwiki Passeio Público (geohack)"},
+   "recurso_visual": "jardim geométrico com obeliscos e chafariz nasce junto ao mar",
+   "numero_impacto": "1º PARQUE DAS AMÉRICAS",
+   "fontes": ["https://pt.wikipedia.org/wiki/Passeio_Público_(Rio_de_Janeiro)", "https://en.wikipedia.org/wiki/Timeline_of_Rio_de_Janeiro"],
+   "confianca": "media",
+   "obs": "'Primeiro parque público das Américas' = ptwiki Passeio Público. Obras 1779–1783 (enwiki Timeline: 1783)."
+  },
+  {
+   "id": "censo-1872",
+   "ano": 1872.58,
+   "data_exata": "1º/08/1872 (data de referência do 1º censo)",
+   "titulo_curto_PT": "O PRIMEIRO CENSO",
+   "legenda": "O 1º recenseamento do Brasil conta 274.972 moradores no Município Neutro",
+   "detalhe": "Era a cidade mais populosa do país. Entre 1872 e 1890 a população quase dobrou, para 522 mil.",
+   "local": {"nome": "Município Neutro (ponto da infobox)", "lat": -22.9, "lon": -43.183333, "coord_fonte": "enwiki Neutral Municipality (infobox)"},
+   "recurso_visual": "contador de população acende",
+   "numero_impacto": "274.972",
+   "fontes": ["https://pt.wikipedia.org/wiki/Censo_demográfico_do_Brasil_de_1872", "https://pt.wikipedia.org/wiki/Rio_de_Janeiro"],
+   "confianca": "alta",
+   "obs": "1890 = 522.651 (tabela ptwiki Rio de Janeiro). Melhor como valor do contador de população que como cartão."
+  },
+  {
+   "id": "providencia-1897",
+   "ano": 1897,
+   "data_exata": "1897 (volta dos soldados de Canudos); ocupação desde a década de 1890",
+   "titulo_curto_PT": "A PRIMEIRA FAVELA",
+   "legenda": "Soldados de Canudos e despejados de um cortiço ocupam o Morro da Providência",
+   "detalhe": "O morro passou a ser chamado de Morro da Favela, nome de um morro de Canudos coberto por um arbusto. É a favela mais antiga do Brasil.",
+   "local": {"nome": "Morro da Providência", "lat": -22.900833, "lon": -43.196389, "coord_fonte": "ptwiki Morro da Providência (wgCoordinates)"},
+   "recurso_visual": "casinhas sobem a encosta do morro",
+   "numero_impacto": "1897",
+   "fontes": ["https://pt.wikipedia.org/wiki/Morro_da_Providência"],
+   "confianca": "alta",
+   "obs": "Boa candidata a voltar para a lista principal se algum evento cair."
+  },
+  {
+   "id": "bondinho-1912",
+   "ano": 1912.82,
+   "data_exata": "27/10/1912 (1º trecho, Praia Vermelha–Morro da Urca)",
+   "titulo_curto_PT": "O BONDINHO",
+   "legenda": "O caminho aéreo do Pão de Açúcar começa a funcionar entre a Praia Vermelha e a Urca",
+   "detalhe": "O bondinho virou um dos símbolos da cidade. Sai de perto de onde Estácio de Sá fundou o Rio em 1565.",
+   "local": {"nome": "Bondinho do Pão de Açúcar", "lat": -22.94917, "lon": -43.1575, "coord_fonte": "ptwiki Bondinho do Pão de Açúcar (wgCoordinates)"},
+   "recurso_visual": "cabo e cabine se desenham até o morro",
+   "numero_impacto": "27/10/1912",
+   "fontes": ["https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro", "https://pt.wikipedia.org/wiki/Bondinho_do_Pão_de_Açúcar"],
+   "confianca": "alta",
+   "obs": ""
+  },
+  {
+   "id": "metro-1979",
+   "ano": 1979.17,
+   "data_exata": "05/03/1979",
+   "titulo_curto_PT": "O METRÔ",
+   "legenda": "Abre o metrô do Rio: uma linha com cinco estações",
+   "detalhe": "Hoje são 41 estações e cerca de 57 km em três linhas.",
+   "local": {"nome": "Metrô do Rio (ponto do sistema)", "lat": -22.911111, "lon": -43.205556, "coord_fonte": "Wikidata Q1133623 (página HTML)"},
+   "recurso_visual": "linha laranja subterrânea se desenha no centro",
+   "numero_impacto": "5 ESTAÇÕES",
+   "fontes": ["https://pt.wikipedia.org/wiki/Metrô_do_Rio_de_Janeiro", "https://en.wikipedia.org/wiki/Rio_de_Janeiro_Metro"],
+   "confianca": "alta",
+   "obs": "Extensão: 57 km (ptwiki) × 58 km (enwiki). Quais eram as 5 estações não foi conferido."
+  }
+ ]
+}

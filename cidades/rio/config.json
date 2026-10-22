@@ -1,0 +1,117 @@
+{
+ "nome": "Rio de Janeiro",
+ "bbox": [
+  -43.82,
+  -23.1,
+  -43.04,
+  -22.72
+ ],
+ "pbf": "dl/sudeste.osm.pbf",
+ "pbf_url": "https://download.geofabrik.de/south-america/brazil/sudeste-latest.osm.pbf",
+ "municipio_osm": "Rio de Janeiro",
+ "centro_antigo": [
+  -43.1747,
+  -22.9033
+ ],
+ "agua_baixa_m": 6.0,
+ "efeitos": {
+  "linhas": {
+   "ponte": {
+    "nome_osm": "Ponte Rio-Niterói"
+   },
+   "trem": {
+    "nome_osm": "",
+    "tipos": [
+     "ferrovia"
+    ],
+    "bbox": [
+     -43.36,
+     -22.915,
+     -43.188,
+     -22.874
+    ]
+   }
+  },
+  "fortes": {
+   "coligny": {
+    "ponto": [
+     -43.1675,
+     -22.9115
+    ],
+    "lado_m": 150
+   },
+   "santacruz": {
+    "nome_osm": "Fortaleza de Santa Cruz da Barra"
+   },
+   "copacabana": {
+    "nome_osm": "Forte de Copacabana"
+   },
+   "cristo": {
+    "ponto": [
+     -43.2105,
+     -22.9519
+    ],
+    "lado_m": 70
+   },
+   "maracana": {
+    "nome_osm": "Estádio Jornalista Mário Filho"
+   },
+   "arcos": {
+    "nome_osm": "Arcos da Lapa"
+   },
+   "paco": {
+    "nome_osm": "Paço Imperial"
+   },
+   "valongo": {
+    "nome_osm": "Cais do Valongo"
+   },
+   "quinta": {
+    "ponto": [
+     -43.2246,
+     -22.9056
+    ],
+    "lado_m": 120
+   }
+  },
+  "areas": {
+   "flamengo": {
+    "faixa": {
+     "bbox": [
+      -43.182,
+      -22.945,
+      -43.165,
+      -22.905
+     ],
+     "dist_m": 380,
+     "zmax": 6
+    },
+    "faixas": 6
+   }
+  }
+ },
+ "tex": 2,
+ "musicas": [
+  "~/projetos/output/musicas/balao-exploracao-20260818/faixa-1.mp3",
+  "~/projetos/output/musicas/balao-exploracao-20260818/faixa-2.mp3"
+ ],
+ "cor_satelite": true,
+ "feicoes_nomes": [
+  "Cristo Redentor",
+  "Estádio Jornalista Mário Filho",
+  "Maracanã",
+  "Arcos da Lapa",
+  "Paço Imperial",
+  "Avenida Rio Branco",
+  "Avenida Presidente Vargas",
+  "Theatro Municipal",
+  "Cais do Valongo",
+  "Quinta da Boa Vista",
+  "Aterro do Flamengo",
+  "Parque do Flamengo"
+ ],
+ "feicoes_ferrovias": true,
+ "vizinhos_anos": [
+  1850,
+  2020
+ ]
+}

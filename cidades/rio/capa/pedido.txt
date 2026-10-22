@@ -1,0 +1,11 @@
+Gere 1 imagem com a ferramenta de geração de imagem (image_gen) e salve nesta pasta como capa.png, formato PAISAGEM 16:9 (o maior tamanho horizontal disponível).
+
+Cena: vista aérea cinematográfica e realista da Baía de Guanabara, no Rio de Janeiro (Brasil), ao entardecer: o Pão de Açúcar à direita, a enseada de Botafogo e o centro da cidade com prédios ao fundo, o Corcovado com o Cristo Redentor ao longe sobre as montanhas verdes, veleiros e um antigo navio à vela na baía. Luz quente de fim de tarde, mas cores naturais (sem amarelado exagerado), alto contraste, aspecto de fotografia aérea premium.
+
+Texto DESENHADO dentro da arte, em português, à esquerda, em duas linhas grandes, letra sans-serif geométrica extra-bold (estilo Sora/Montserrat ExtraBold), com sombra para legibilidade:
+Linha 1 (branca, enorme): DA BAÍA
+Linha 2 (amarela #FACC15, enorme): À METRÓPOLE
+Abaixo, menor, branco: A HISTÓRIA DO RIO DE JANEIRO EM 3D
+Grafia exata, com acento em BAÍA, METRÓPOLE e HISTÓRIA. Nenhum outro texto, logotipo ou marca d'água.
+
+Não mexa em nenhum outro arquivo da pasta. Ao final, liste os arquivos salvos.
