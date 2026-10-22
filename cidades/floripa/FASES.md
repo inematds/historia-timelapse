@@ -6,7 +6,7 @@ O vídeo-base (fase 1) não muda. As fases 2 e 3 são camadas por cima do mesmo 
 |---|---|---|
 | 1 | Vídeo sem narração, só música (`final/floripa-v4.mp4`, 375,8 s) | publicado no lives26: https://www.youtube.com/watch?v=auBCnC78Xtk |
 | 2 | Fase 1 + narração na voz do Nei (camada de áudio, sem avatar) | publicado no lives26: https://www.youtube.com/watch?v=GBJRZvfHRVU (`final/floripa-narrado.mp4`) |
-| 3 | Fase 2 + avatar do Nei pequeno, **embaixo da bandeira** (canto superior esquerdo) | em andamento: avatar HeyGen id 5203be52cd054c99825f267a7c537c41 (título historia-floripa-narrado-v2) baixando para `avatar/avatar.mp4`; montar com `scripts/montar_avatar.py` |
+| 3 | Fase 2 + avatar do Nei pequeno, **embaixo da bandeira** (canto superior esquerdo) | publicado no lives26: https://www.youtube.com/watch?v=adGn7FY6wGc (`final/floripa-avatar.mp4`; avatar HeyGen 5203be52…, montado com `scripts/montar_avatar.py`) |
 
 Publicar as três no lives26 (`yt-pubx publicar … --canal aventuras`), links no inemaytbot dizendo "lives26 (Aventuras)", 540p no bot v3.
 
