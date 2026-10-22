@@ -256,7 +256,7 @@
   <div class="step"><div class="b">4</div><div>
     <h3>Prepara el mapa</h3>
     <p>Recorta edificios, agua y barrios, arma el relieve con el mar, da a cada edificio un año de nacimiento y prepara puentes, fuertes y rellenos.</p>
-<pre><span class="k">.venv/bin/python -I scripts/extrai_osm.py</span> dl/sul.osm.pbf cidades/floripa/dados/brutos
+<pre><span class="k">.venv/bin/python -I scripts/extrai_osm.py</span>   <span class="c"># usa el "pbf" del config</span>
 <span class="k">.venv/bin/python -I scripts/extrai_msbuild.py</span>   <span class="c"># solo si descargaste los edificios de Microsoft</span>
 <span class="k">.venv/bin/python -I scripts/prep_terreno.py</span>
 <span class="k">.venv/bin/python -I scripts/prep_predios.py</span>
@@ -275,6 +275,10 @@
   "cartao": { "numero": "821 METROS", "titulo": "A ponte <b>Hercílio Luz</b>",
               "legenda": "...", "detalhe": "...", "fonte": "IBGE" },
   "destaca": ["linha:hercilio"] }
+<span class="c"># anos: [inicio, año del evento, fin]; "pulo": segundos en que el tiempo corre hasta el año del evento</span>
+<span class="c"># cam: lon/lat del centro, zoom (12 = barrio, 14 = manzana), pitch (inclinación 0–60), bearing (rumbo en grados)</span>
+<span class="c"># "destaca": "linha:&lt;id&gt;" | "forte:&lt;id&gt;" | "area:&lt;id&gt;" — ids definidos en "efeitos" del config y listados al inicio del guion</span>
+<span class="c"># ajusta la cámara mirando los cuadros del paso 6</span>
 <span class="k">python3</span> cidades/floripa/roteiro_floripa.py
 <span class="k">.venv/bin/python -I scripts/gerar_cena.py</span>   <span class="c"># genera cidades/floripa/cena/cena.js</span></pre>
   </div></div>
@@ -298,7 +302,9 @@
   <div class="step"><div class="b">8</div><div>
     <h3>Versión narrada (opcional)</h3>
     <p>La narración es una capa de audio sobre el mismo video: un texto por bloque en <code>cidades/&lt;id&gt;/narracao.json</code>, encajado al inicio de cada evento. La grabación usa un motor de voz local del autor (<code>cardshorts</code>, fuera de este repositorio); con otra voz, graba un archivo por bloque y completa <code>narracao/tempos.json</code>.</p>
-<pre><span class="k">python3 scripts/narrar.py</span> && <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span></pre>
+<pre><span class="c"># narracao/tempos.json, si grabas con otra voz: {"&lt;bloque&gt;": {"dur": 6.2, "wav": "ruta.wav", "texto": "...", "ouvido": "..."}}</span>
+<span class="k">python3 scripts/narrar.py</span> && <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span>
+<span class="k">ffmpeg</span> -i cidades/floripa/final/video.mp4 -i cidades/floripa/final/audio-narrado.wav -map 0:v -map 1:a -c:v copy -c:a aac -shortest cidades/floripa/final/floripa-narrado.mp4</pre>
   </div></div>
 </div></section>
 

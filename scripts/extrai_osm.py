@@ -97,7 +97,8 @@ def grava(path, feats):
 
 
 if __name__ == "__main__":
-    pbf, out = sys.argv[1], sys.argv[2]
+    pbf = sys.argv[1] if len(sys.argv) > 1 else f"{RAIZ}/{CFG['pbf']}"
+    out = sys.argv[2] if len(sys.argv) > 2 else BRUTOS
     h = Coleta()
     h.apply_file(pbf, locations=True)
     json.dump(h.predios, open(f"{out}/predios.json", "w"))

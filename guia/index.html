@@ -256,7 +256,7 @@
   <div class="step"><div class="b">4</div><div>
     <h3>Prepare o mapa</h3>
     <p>Recorta prédios, água e bairros, monta o relevo com o mar, dá a cada prédio um ano de nascimento e prepara pontes, fortes e aterros.</p>
-<pre><span class="k">.venv/bin/python -I scripts/extrai_osm.py</span> dl/sul.osm.pbf cidades/floripa/dados/brutos
+<pre><span class="k">.venv/bin/python -I scripts/extrai_osm.py</span>   <span class="c"># usa o "pbf" do config</span>
 <span class="k">.venv/bin/python -I scripts/extrai_msbuild.py</span>   <span class="c"># só se baixou os prédios da Microsoft</span>
 <span class="k">.venv/bin/python -I scripts/prep_terreno.py</span>
 <span class="k">.venv/bin/python -I scripts/prep_predios.py</span>
@@ -275,6 +275,10 @@
   "cartao": { "numero": "821 METROS", "titulo": "A ponte <b>Hercílio Luz</b>",
               "legenda": "...", "detalhe": "...", "fonte": "IBGE" },
   "destaca": ["linha:hercilio"] }
+<span class="c"># anos: [início, ano do evento, fim]; "pulo": segundos em que o tempo corre até o ano do evento</span>
+<span class="c"># cam: lon/lat do centro, zoom (12 = bairro, 14 = quadra), pitch (inclinação 0–60), bearing (rumo em graus)</span>
+<span class="c"># "destaca": "linha:&lt;id&gt;" | "forte:&lt;id&gt;" | "area:&lt;id&gt;" — ids definidos em "efeitos" no config e listados no topo do roteiro</span>
+<span class="c"># ajuste a câmera olhando os quadros do passo 6</span>
 <span class="k">python3</span> cidades/floripa/roteiro_floripa.py
 <span class="k">.venv/bin/python -I scripts/gerar_cena.py</span>   <span class="c"># gera cidades/floripa/cena/cena.js</span></pre>
   </div></div>
@@ -298,7 +302,9 @@
   <div class="step"><div class="b">8</div><div>
     <h3>Versão narrada (opcional)</h3>
     <p>A narração é uma camada de áudio sobre o mesmo vídeo: um texto por bloco em <code>cidades/&lt;id&gt;/narracao.json</code>, encaixado no início de cada evento. A gravação usa um motor de voz local do autor (<code>cardshorts</code>, fora deste repositório); com outra voz, grave um arquivo por bloco e preencha <code>narracao/tempos.json</code>.</p>
-<pre><span class="k">python3 scripts/narrar.py</span> && <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span></pre>
+<pre><span class="c"># narracao/tempos.json, se gravar com outra voz: {"&lt;bloco&gt;": {"dur": 6.2, "wav": "caminho.wav", "texto": "...", "ouvido": "..."}}</span>
+<span class="k">python3 scripts/narrar.py</span> && <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span>
+<span class="k">ffmpeg</span> -i cidades/floripa/final/video.mp4 -i cidades/floripa/final/audio-narrado.wav -map 0:v -map 1:a -c:v copy -c:a aac -shortest cidades/floripa/final/floripa-narrado.mp4</pre>
   </div></div>
 </div></section>
 

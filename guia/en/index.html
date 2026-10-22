@@ -156,7 +156,7 @@
       <h3>Florianópolis — from Desterro to the capital</h3>
       <p>6 min, no narration: shell mounds (sambaquis), Dias Velho, fortresses, Azorean settlers, the Spanish invasion of 1777, the name change in 1894, the bridges and the landfills. <a href="https://www.youtube.com/watch?v=wg8jaN-sSXw" target="_blank" rel="noopener">Open on YouTube</a></p></div>
     <div class="vid"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/MBBZXnTh6Lg" title="Porto Alegre in 3D" loading="lazy" allowfullscreen></iframe></div>
-      <h3>Porto Alegre — 1772 a 2024</h3>
+      <h3>Porto Alegre — 1772 to 2024</h3>
       <p>1 min 35 s, narrated: the founding, the Farroupilha sieges, the 1941 flood, the Mauá Wall and the 2024 flood. <a href="https://www.youtube.com/watch?v=MBBZXnTh6Lg" target="_blank" rel="noopener">Open on YouTube</a></p></div>
   </div>
 </div></section>
@@ -256,7 +256,7 @@
   <div class="step"><div class="b">4</div><div>
     <h3>Prepare the map</h3>
     <p>Cuts out buildings, water and neighborhoods, builds the terrain with the sea, gives each building a birth year and prepares bridges, forts and landfills.</p>
-<pre><span class="k">.venv/bin/python -I scripts/extrai_osm.py</span> dl/sul.osm.pbf cidades/floripa/dados/brutos
+<pre><span class="k">.venv/bin/python -I scripts/extrai_osm.py</span>   <span class="c"># uses "pbf" from the config</span>
 <span class="k">.venv/bin/python -I scripts/extrai_msbuild.py</span>   <span class="c"># only if you downloaded the Microsoft buildings</span>
 <span class="k">.venv/bin/python -I scripts/prep_terreno.py</span>
 <span class="k">.venv/bin/python -I scripts/prep_predios.py</span>
@@ -275,6 +275,10 @@
   "cartao": { "numero": "821 METROS", "titulo": "A ponte <b>Hercílio Luz</b>",
               "legenda": "...", "detalhe": "...", "fonte": "IBGE" },
   "destaca": ["linha:hercilio"] }
+<span class="c"># anos: [start, event year, end]; "pulo": seconds in which time runs up to the event year</span>
+<span class="c"># cam: center lon/lat, zoom (12 = neighborhood, 14 = block), pitch (tilt 0–60), bearing (heading in degrees)</span>
+<span class="c"># "destaca": "linha:&lt;id&gt;" | "forte:&lt;id&gt;" | "area:&lt;id&gt;" — ids defined in "efeitos" in the config and listed at the top of the script</span>
+<span class="c"># adjust the camera by looking at the frames from step 6</span>
 <span class="k">python3</span> cidades/floripa/roteiro_floripa.py
 <span class="k">.venv/bin/python -I scripts/gerar_cena.py</span>   <span class="c"># generates cidades/floripa/cena/cena.js</span></pre>
   </div></div>
@@ -298,7 +302,9 @@
   <div class="step"><div class="b">8</div><div>
     <h3>Narrated version (optional)</h3>
     <p>The narration is an audio layer over the same video: one text per block in <code>cidades/&lt;id&gt;/narracao.json</code>, fitted to the start of each event. The recording uses the author's local voice engine (<code>cardshorts</code>, outside this repository); with another voice, record one file per block and fill in <code>narracao/tempos.json</code>.</p>
-<pre><span class="k">python3 scripts/narrar.py</span> && <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span></pre>
+<pre><span class="c"># narracao/tempos.json, if you record with another voice: {"&lt;block&gt;": {"dur": 6.2, "wav": "path.wav", "texto": "...", "ouvido": "..."}}</span>
+<span class="k">python3 scripts/narrar.py</span> && <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span>
+<span class="k">ffmpeg</span> -i cidades/floripa/final/video.mp4 -i cidades/floripa/final/audio-narrado.wav -map 0:v -map 1:a -c:v copy -c:a aac -shortest cidades/floripa/final/floripa-narrado.mp4</pre>
   </div></div>
 </div></section>
 
