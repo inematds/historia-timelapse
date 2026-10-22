@@ -14,7 +14,10 @@ C = json.loads(re.sub(r"^window.CENA = |;\s*$", "", (D / "cena/cena.js").read_te
 BT = C["blocos_t"]; falas = {k: v for k, v in json.loads((D / "narracao.json").read_text()).items() if not k.startswith("_") and v}
 saida = sys.argv[sys.argv.index("--saida") + 1] if "--saida" in sys.argv else f"{ID}-avatar.mp4"
 LEAD, FOLGA, MAXV = 0.3, 0.8, 1.15          # mesmo início da narrada; acelera no máximo 15% se não couber
-X, Y, LADO = 56, 200, 250                    # moldura embaixo da bandeira
+AVC = CFG.get("avatar", {})                  # config "avatar": {x, y, lado, so_voz: [blocos sem imagem, ex. globo]}
+X, Y, LADO = AVC.get("x", 56), AVC.get("y", 200), AVC.get("lado", 250)   # padrão: embaixo da bandeira
+SO_VOZ = set(AVC.get("so_voz", []))
+POS = AVC.get("pos_bloco", {})               # {bloco: {x, y}}: outra posição só naquele bloco (ex. fecho acima da galeria)
 
 
 def norm(s):
@@ -64,9 +67,12 @@ ins = ["-i", str(D / CFG.get("video_base", "final/video.mp4")), "-i", str(D / "f
 fv, fa, ult = [], [], "[0:v]"
 for i, (k, s) in enumerate(info.items()):
     ins += ["-itsoffset", f"{s['t']:.3f}", "-i", s["arq"]]; j = i + 2; t0, t1 = s["t"], s["t"] + s["dur"]
+    if k in SO_VOZ:                          # só a voz: sem moldura nem rosto neste bloco
+        ms = int(t0 * 1000); fa.append(f"[{j}:a]aresample=48000,adelay={ms}|{ms},apad[s{i}]"); continue
+    x, y = POS.get(k, {}).get("x", X), POS.get(k, {}).get("y", Y)
     fv.append(f"[{j}:v]format=yuva420p,fade=t=in:st={t0:.3f}:d=0.25:alpha=1,fade=t=out:st={t1 - 0.25:.3f}:d=0.25:alpha=1[a{i}]")
-    fv.append(f"{ult}drawbox=x={X - 4}:y={Y - 4}:w={LADO + 8}:h={LADO + 8}:color=0xFACC15:t=fill:enable='between(t,{t0:.3f},{t1:.3f})'[b{i}]")
-    fv.append(f"[b{i}][a{i}]overlay={X}:{Y}:eof_action=pass:enable='between(t,{t0:.3f},{t1:.3f})'[v{i}]"); ult = f"[v{i}]"
+    fv.append(f"{ult}drawbox=x={x - 4}:y={y - 4}:w={LADO + 8}:h={LADO + 8}:color=0xFACC15:t=fill:enable='between(t,{t0:.3f},{t1:.3f})'[b{i}]")
+    fv.append(f"[b{i}][a{i}]overlay={x}:{y}:eof_action=pass:enable='between(t,{t0:.3f},{t1:.3f})'[v{i}]"); ult = f"[v{i}]"
     ms = int(t0 * 1000); fa.append(f"[{j}:a]aresample=48000,adelay={ms}|{ms},apad[s{i}]")
 n = len(info)
 fa.append("".join(f"[s{i}]" for i in range(n)) + f"amix=inputs={n}:normalize=0,atrim=0:{C['duracao']},asplit=2[voz][sc]")

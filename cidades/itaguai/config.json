@@ -198,5 +198,14 @@
   "BR-101",
   "BR-493"
  ],
- "feicoes_ferrovias": true
+ "feicoes_ferrovias": true,
+ "avatar": {
+  "x": 1640,
+  "y": 575,
+  "lado": 220,
+  "so_voz": [
+   "globo"
+  ],
+  "_nota": "à direita, acima do INEMA.CLUB e da faixa de texto/galeria; no globo só a voz"
+ }
 }
