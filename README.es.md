@@ -14,7 +14,7 @@ Guía completa (landing + paso a paso): **https://inematds.github.io/historia-ti
 
 ## 🎬 Videos
 
-- Florianópolis — de Desterro a capital (6 min, sin narración): https://www.youtube.com/watch?v={{FLORIPA_YT}}
+- Florianópolis — de Desterro a capital (6 min, sin narración): https://www.youtube.com/watch?v=wg8jaN-sSXw
 - Porto Alegre — 1772 a 2024 (narrado): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
 ## Estructura

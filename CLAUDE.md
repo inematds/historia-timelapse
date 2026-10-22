@@ -10,6 +10,13 @@ Timelapse 3D da história de cidades (mapa real + prédios do OSM + cartões com
 - Mostrar quadros-chave ao Nei antes do render completo; publicar (Aventuras, lives26) só com OK dele.
 - Revisão: revisor independente (`~/.claude/runbooks/revisor-independente.md`) com a lista `REVISAO-LISTA.md`; registrar notas no `~/projetos/wifi/scripts/revisor-nota.py --fluxo historia-timelapse`.
 
+## Regra do motor: versão narrada = camada de áudio (Nei, 21/10/2026)
+- O vídeo-base é sempre o **sem narração** (cartões contam a história). A versão narrada **não mexe no motor nem nos tempos**: é o mesmo `video.mp4` com outra trilha.
+- Narração por **bloco** (`cidades/<id>/narracao.json`: `{id_do_bloco: texto}`), entrando no início do evento (depois do pulo). Blocos sem texto ficam só com música — silêncio é permitido.
+- Cada fala cabe no bloco (≤ duração do bloco − 1 s, ~16–18 palavras); se não couber, encurtar ou dividir, nunca esticar o vídeo.
+- A fala complementa o cartão (o porquê), não lê o cartão. Anos por extenso na voz; conferência por transcrição (`qa_narracao.py`).
+- Música abaixa sob a voz (sidechain) e volta nos silêncios; final −14 LUFS.
+
 ## Self-learning
 Quando o Nei corrigir algo ou eu pegar um erro meu: antes de continuar, acrescentar a lição como uma linha no TOPO da seção Lessons abaixo.
 

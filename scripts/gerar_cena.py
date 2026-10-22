@@ -103,6 +103,7 @@ def main():
         for d in b.get("destaca", []):
             tipo, i = d.split(":")
             idx[({"forte": "fortes", "linha": "linhas", "area": "areas"}[tipo], i)]["destaque"].append([round(te, 3), round(t1, 3)])
+        C.setdefault("blocos_t", {})[b["id"]] = [round(te, 3), round(t1, 3)]
         t = t1
     C["duracao"] = round(t, 3)
     if "linha" in C and "marcas" not in C["linha"]:
