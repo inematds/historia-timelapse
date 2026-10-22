@@ -1,7 +1,8 @@
-"""Recorta do OSM da região Sul o que o timelapse de Porto Alegre precisa.
+"""Recorta do OSM (recorte regional do config "pbf") o que o timelapse da cidade precisa.
+Níveis administrativos do config: "nivel_municipio" (padrão "8") e "nivel_bairro" (padrão "10", convenção do Brasil).
 
 Saída em dados/brutos/: predios.json, agua.geojson, ruas.geojson, bairros.geojson, municipio.geojson
-Uso: .venv/bin/python -I scripts/extrai_osm.py dl/sul.osm.pbf dados/brutos
+Uso: CIDADE=<id> .venv/bin/python -I scripts/extrai_osm.py [pbf] [saida]
 """
 import json
 import sys
@@ -15,6 +16,7 @@ from cidade import *  # noqa
 BBOX = (W, S, E, N)
 CAIXA = box(*BBOX)
 geo = GeoJSONFactory()
+NIV_MUNI, NIV_BAIRRO = str(CFG.get("nivel_municipio", "8")), str(CFG.get("nivel_bairro", "10"))
 RUAS = {"motorway", "trunk", "primary", "secondary", "tertiary", "motorway_link", "trunk_link"}
 
 
@@ -52,7 +54,7 @@ class Coleta(osmium.SimpleHandler):
         is_b = "building" in t
         is_w = t.get("natural") == "water" or t.get("water") is not None or t.get("waterway") == "riverbank" \
             or t.get("landuse") in ("reservoir", "basin")
-        adm = t.get("boundary") == "administrative" and t.get("admin_level") in ("8", "10")
+        adm = t.get("boundary") == "administrative" and t.get("admin_level") in (NIV_MUNI, NIV_BAIRRO)
         if not (is_b or is_w or adm):
             return
         try:
@@ -86,9 +88,9 @@ class Coleta(osmium.SimpleHandler):
         elif adm:
             f = {"type": "Feature", "properties": {"nome": t.get("name", ""), "nivel": t.get("admin_level")},
                  "geometry": mapping(g.simplify(0.00005))}
-            if t.get("admin_level") == "10":
+            if t.get("admin_level") == NIV_BAIRRO:
                 self.bairros.append(f)
-            elif t.get("name") == CFG["municipio_osm"]:
+            elif t.get("name") == CFG["municipio_osm"] and t.get("admin_level") == NIV_MUNI:
                 self.muni.append(f)
 
 

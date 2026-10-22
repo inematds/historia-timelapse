@@ -17,6 +17,10 @@ Guía completa (landing + paso a paso): **https://inematds.github.io/historia-ti
 - Florianópolis — de Desterro a capital (6 min, sin narración): https://www.youtube.com/watch?v=auBCnC78Xtk
 - Porto Alegre — 1772 a 2024 (narrado): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
+## Cualquier lugar del mundo
+
+Nada en el motor está atado a una ciudad o país: todo lo que cambia vive en `cidades/<id>/config.json` — `bbox`, `centro_antigo`, `pbf_url`/`pbf`, `municipio_osm`, `nivel_municipio`/`nivel_bairro` (niveles admin de OSM, por defecto 8/10), `regiao_bbox` (ventana NASA Blue Marble, por defecto ciudad ± 10°), `pais_microsoft`, `km_lon`, `vizinhos_anos`. En el guion: `globo.pais`, `globo.uf` + `globo.subdiv_arquivo`/`subdiv_prop`, `longe.auto`. Las banderas en `cidades/<id>/assets/bandeiras/` tienen prioridad sobre las del motor.
+
 ## Estructura
 
 - `motor/` — página deck.gl (`mapa.html`) y render (`render.mjs`, Playwright + Chrome/GPU)

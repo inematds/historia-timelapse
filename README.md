@@ -17,6 +17,16 @@ Guia completo (landing + passo a passo): **https://inematds.github.io/historia-t
 - Florianópolis — de Desterro à capital (6 min, sem narração): https://www.youtube.com/watch?v=auBCnC78Xtk
 - Porto Alegre — 1772 a 2024 (narrado): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
+## Qualquer lugar do mundo
+
+O motor não tem nada preso a uma cidade ou país: tudo o que muda fica em `cidades/<id>/config.json`.
+- `bbox`, `centro_antigo`, `pbf_url`/`pbf` (recorte Geofabrik da região), `municipio_osm`
+- `nivel_municipio` / `nivel_bairro` (níveis `admin_level` do OSM; padrão 8 e 10, como no Brasil)
+- `regiao_bbox` (janela do satélite NASA Blue Marble; padrão: cidade ± 10°), `pais_microsoft` (prédios da Microsoft)
+- `km_lon` (opcional; padrão calculado pela latitude), `vizinhos_anos` (padrão 1930–2020)
+- No roteiro: `globo.pais` (nome no Natural Earth, padrão Brazil), `globo.uf` + `globo.subdiv_arquivo`/`subdiv_prop` (estados/províncias, padrão `brasil-uf.geojson`), `longe.auto` (fundo além do mapa pelo contorno dos países)
+- Bandeiras: `cidades/<id>/assets/bandeiras/<nome>.svg` tem prioridade sobre `motor/assets/bandeiras/`
+
 ## Estrutura
 
 - `motor/` — página deck.gl (`mapa.html`) e render (`render.mjs`, Playwright + Chrome/GPU)

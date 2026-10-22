@@ -2,7 +2,7 @@
 
 Ordem espacial: ano de ocupação do bairro (pesquisa) + distância dentro do bairro ao ponto mais antigo.
 Depois a ordem é remapeada na curva de população, para que a mancha cresça no mesmo ritmo do contador.
-Sem dados/pesquisa/bairros_epocas.json usa só a distância à Praça da Matriz (versão provisória).
+Sem dados/pesquisa/bairros_epocas.json usa só a distância ao centro antigo (versão provisória).
 Uso: .venv/bin/python -I scripts/modelo_anos.py
 """
 import json
@@ -14,7 +14,9 @@ import numpy as np
 import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
 from cidade import *  # noqa
 MATRIZ = tuple(CFG["centro_antigo"])
-KM_LON, KM_LAT = 96.3, 111.0
+import math
+KM_LAT = 111.0
+KM_LON = CFG.get("km_lon", 111.32 * math.cos(math.radians(MATRIZ[1])))   # km por grau de longitude na latitude da cidade
 
 
 def norm(s):
@@ -37,7 +39,8 @@ def curva_pop():
 
 def main():
     m = np.load(f"{DADOS}/predios_meta.npz", allow_pickle=True)
-    lon, lat, poa, bairro, nomes = m["lon"], m["lat"], m["poa"], m["bairro"], m["nomes"]
+    lon, lat, bairro, nomes = m["lon"], m["lat"], m["bairro"], m["nomes"]
+    muni = m["muni"] if "muni" in m else m["poa"]   # npz antigo usava a chave "poa"
     d = np.hypot((lon - MATRIZ[0]) * KM_LON, (lat - MATRIZ[1]) * KM_LAT)
     rng = np.random.default_rng(11)
 
@@ -51,35 +54,39 @@ def main():
             for nm in nomes_lei:  # lei = limite superior; ocupação ~15 anos antes
                 tab.setdefault(norm(nm), float(lei[:4]) - 15)
         base = np.array([tab.get(norm(nomes[b]), np.nan) if b >= 0 else np.nan for b in bairro])
-        sem = sorted({str(nomes[b]) for b in bairro[poa & np.isnan(base)] if b >= 0})
-        print("bairros de POA sem data:", len(sem), sem[:30])
-        ok = ~np.isnan(base) & poa
+        sem = sorted({str(nomes[b]) for b in bairro[muni & np.isnan(base)] if b >= 0})
+        print("bairros do município sem data:", len(sem), sem[:30])
+        ok = ~np.isnan(base) & muni
         a, b0 = np.polyfit(d[ok], base[ok], 1)
         base = np.where(np.isnan(base), b0 + a * d, base)
         # dentro do bairro: do ponto mais perto do centro antigo para fora, ao longo de ~metade do tempo restante
         score = base.copy()
-        for bi in np.unique(bairro[poa]):
-            m_ = poa & (bairro == bi)
+        for bi in np.unique(bairro[muni]):
+            m_ = muni & (bairro == bi)
             dd = d[m_]
             r = (dd - dd.min()) / (np.ptp(dd) + 1e-9)
             espalha = np.clip((2020 - base[m_]) * 0.45, 5, 70)
             score[m_] = base[m_] + r * espalha
         score += rng.normal(0, 2.5, len(d))
         fonte = "bairros"
+    else:   # sem pesquisa de bairros: só a distância ao centro antigo
+        score = d + rng.normal(0, 0.15, len(d))
+        fonte = "distancia"
     anos, pop = curva_pop()
     ano = np.full(len(d), 2030.0, np.float32)
-    # Porto Alegre: rank → fração da população final → ano
-    idx = np.where(poa)[0]
+    # município: rank → fração da população final → ano
+    idx = np.where(muni)[0]
     ordem = idx[np.argsort(score[idx])]
     frac = (np.arange(len(ordem)) + 1) / len(ordem)
     ano[ordem] = np.interp(frac * pop[-1], pop, anos)
-    # vizinhos (Canoas, Viamão, Guaíba...): crescem de 1930 a 2020 pela distância ao próprio centro mais denso
-    fora = np.where(~poa)[0]
+    # vizinhos (fora do município): crescem entre config "vizinhos_anos" (padrão 1930–2020) pela distância ao centro antigo
+    fora = np.where(~muni)[0]
     ordf = fora[np.argsort(d[fora] + rng.normal(0, 1.5, len(fora)))]
-    ano[ordf] = 1930 + 90 * ((np.arange(len(ordf)) + 1) / len(ordf)) ** 1.3
+    V0, V1 = CFG.get("vizinhos_anos", [1930, 2020])
+    ano[ordf] = V0 + (V1 - V0) * ((np.arange(len(ordf)) + 1) / len(ordf)) ** 1.3
     ano.astype(np.float32).tofile(f"{ASSETS}/pred_ano.f32")
     for y in (1772, 1800, 1850, 1900, 1941, 1970, 2000, 2024):
-        print(y, int((ano[poa] <= y).sum()), end=" · ")
+        print(y, int((ano[muni] <= y).sum()), end=" · ")
     print(f"\nfonte={fonte} n={len(ano)}")
 
 

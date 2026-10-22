@@ -91,5 +91,12 @@
   "~/projetos/output/musicas/balao-exploracao-20260818/faixa-1.mp3",
   "~/projetos/output/musicas/balao-exploracao-20260818/faixa-2.mp3"
  ],
- "cor_satelite": true
+ "cor_satelite": true,
+ "km_lon": 96.3,
+ "regiao_bbox": [
+  -60,
+  -35,
+  -40,
+  -15
+ ]
 }

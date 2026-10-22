@@ -1,6 +1,7 @@
 """Baixa os dados públicos da cidade (arquivos, sem API) com os nomes que os scripts esperam:
 - recorte regional do OSM (config "pbf_url" → config "pbf")
 - blocos de relevo Copernicus GLO-30 que cobrem o "bbox" → dl/dem_S28_W049.tif …
+- blocos do NASA Blue Marble que cobrem a janela regional → dl/bm_B2.jpg …
 - (opcional, --microsoft) prédios da Microsoft Global ML Building Footprints → dl/msbuild/qk<quadkey>.csv.gz
 Uso: CIDADE=<id> .venv/bin/python -I scripts/baixar_dados.py [--microsoft]"""
 import csv, io, math, os, sys, urllib.request
@@ -21,6 +22,10 @@ for la in range(math.floor(S), math.floor(N) + 1):
         ns, ew = ("S", "N")[la >= 0], ("W", "E")[lo >= 0]
         nome = f"Copernicus_DSM_COG_10_{ns}{abs(la):02d}_00_{ew}{abs(lo):03d}_00_DEM"
         baixa(f"https://copernicus-dem-30m.s3.amazonaws.com/{nome}/{nome}.tif", f"{RAIZ}/dl/dem_{ns}{abs(la):02d}_{ew}{abs(lo):03d}.tif")
+# satélite regional (NASA Blue Marble) para o globo e a cor da textura
+from prep_terreno import regiao_bbox, bm_blocos, BM_URL  # noqa: E402
+for nome, _, _ in bm_blocos(regiao_bbox()):
+    baixa(BM_URL.format(nome), f"{RAIZ}/dl/bm_{nome}.jpg")
 if "--microsoft" in sys.argv:
     def qk(lon, lat, z=9):
         x = int((lon + 180) / 360 * 2 ** z)

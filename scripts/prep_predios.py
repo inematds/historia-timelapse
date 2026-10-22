@@ -4,7 +4,7 @@ Saída em motor/assets/:
   pred_pos.f32   vértices [lon, lat, z_chão] (anel externo, sem repetir o 1º ponto)
   pred_ini.u32   índice inicial de cada prédio (n+1 valores)
   pred_alt.f32   altura real em metros (OSM height / levels*3 / padrão pelo tipo)
-dados/predios_meta.npz  lon, lat, area, alt, municipio(bool POA), bairro(idx) para o modelo de anos
+dados/predios_meta.npz  lon, lat, area, alt, muni (bool: dentro do município), bairro(idx) para o modelo de anos
 Uso: .venv/bin/python -I scripts/prep_predios.py
 """
 import json
@@ -59,7 +59,7 @@ def main():
 
     muni = shape(json.load(open(f"{BRUTOS}/municipio.geojson"))["features"][0]["geometry"])
     pts = points(lon, lat)
-    em_poa = np.array([muni.contains(pt) for pt in pts])
+    em_muni = np.array([muni.contains(pt) for pt in pts])
     bfeat = json.load(open(f"{BRUTOS}/bairros.geojson"))["features"]
     bgeo = [shape(f["geometry"]) for f in bfeat]
     nomes = [f["properties"]["nome"] for f in bfeat]
@@ -68,9 +68,9 @@ def main():
     ip, ig = arv.query(pts, predicate="within")
     bidx[ip] = ig
     np.savez(f"{DADOS}/predios_meta.npz", lon=lon, lat=lat, alt=alt, area=np.array([p["area"] for p in pred]),
-             poa=em_poa, bairro=bidx, nomes=np.array(nomes, dtype=object),
+             muni=em_muni, bairro=bidx, nomes=np.array(nomes, dtype=object),
              tipo=np.array([p["tipo"] or "" for p in pred], dtype=object))
-    print(f"predios={len(pred)} vertices={len(pos)//3} em_poa={em_poa.sum()} com_bairro={(bidx>=0).sum()} "
+    print(f"predios={len(pred)} vertices={len(pos)//3} em_muni={em_muni.sum()} com_bairro={(bidx>=0).sum()} "
           f"alt_media={alt.mean():.1f} m · MB={len(pos)*4/1e6:.0f}")
 
 

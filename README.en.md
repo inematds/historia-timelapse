@@ -17,6 +17,10 @@ Full guide (landing + step by step): **https://inematds.github.io/historia-timel
 - Florianópolis — from Desterro to capital (6 min, no narration): https://www.youtube.com/watch?v=auBCnC78Xtk
 - Porto Alegre — 1772 to 2024 (narrated): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
+## Anywhere in the world
+
+Nothing in the engine is tied to one city or country: everything that changes lives in `cidades/<id>/config.json` — `bbox`, `centro_antigo`, `pbf_url`/`pbf`, `municipio_osm`, `nivel_municipio`/`nivel_bairro` (OSM admin levels, default 8/10), `regiao_bbox` (NASA Blue Marble window, default city ± 10°), `pais_microsoft`, `km_lon`, `vizinhos_anos`. In the script: `globo.pais`, `globo.uf` + `globo.subdiv_arquivo`/`subdiv_prop`, `longe.auto`. Flags in `cidades/<id>/assets/bandeiras/` override the engine ones.
+
 ## Layout
 
 - `motor/` — deck.gl page (`mapa.html`) and renderer (`render.mjs`, Playwright + Chrome/GPU)

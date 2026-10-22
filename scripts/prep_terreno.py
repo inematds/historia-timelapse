@@ -1,9 +1,9 @@
 """Relevo + textura do terreno para o motor deck.gl.
 
 Entrada: dl/dem_*.tif (Copernicus GLO-30, 1"), dados/brutos/agua.geojson
-Saída em motor/assets/: elev.png (Terrarium), textura.jpg, terreno.json (bbox, tamanhos)
+Saída em cidades/<id>/assets/: elev.png (Terrarium), textura.jpg, regiao.jpg (satélite regional), terreno.json (bbox, tamanhos, janela regional)
          dados/chao.npy (altitude do chão em metros, grade do elev.png, para apoiar os prédios)
-Uso: .venv/bin/python -I scripts/prep_terreno.py
+Uso: CIDADE=<id> .venv/bin/python -I scripts/prep_terreno.py
 """
 import json
 import os
@@ -21,7 +21,59 @@ TEX = CFG.get("tex", 3)  # textura N× a grade do relevo
 
 
 def bloco(lat_ll, lon_ll):
-    return f"{RAIZ}/dl/dem_S{-lat_ll:02d}_W{-lon_ll:03d}.tif"
+    ns, ew = ("S", "N")[lat_ll >= 0], ("W", "E")[lon_ll >= 0]
+    return f"{RAIZ}/dl/dem_{ns}{abs(lat_ll):02d}_{ew}{abs(lon_ll):03d}.tif"
+
+
+def le_bloco(la, lo):
+    """Bloco de 1° com 3600 colunas (acima de 50° de latitude o Copernicus tem menos colunas: reamostra)."""
+    a = tifffile.imread(bloco(la, lo)).astype(np.float32)
+    if a.shape != (3600, 3600):
+        a = ndimage.zoom(a, (3600 / a.shape[0], 3600 / a.shape[1]), order=1)[:3600, :3600]
+    return a
+
+
+BM_URL = "https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73909/world.topo.bathy.200412.3x21600x21600.{}.jpg"
+
+
+def regiao_bbox():
+    """Janela do satélite regional (NASA Blue Marble, 240 px/grau): config "regiao_bbox" ou cidade ± 10°."""
+    if CFG.get("regiao_bbox"):
+        return CFG["regiao_bbox"]
+    cx, cy = (W + E) / 2, (S + N) / 2
+    return [max(-180, round(cx) - 10), max(-90, round(cy) - 10), min(180, round(cx) + 10), min(90, round(cy) + 10)]
+
+
+def bm_blocos(rb):
+    """Blocos A1..D2 do Blue Marble (90° × 90°; A = −180..−90, 1 = norte) que cobrem a janela."""
+    out = []
+    for i, c in enumerate("ABCD"):
+        for j, r in enumerate("12"):
+            w0, n0 = -180 + 90 * i, 90 - 90 * j
+            if rb[0] < w0 + 90 and rb[2] > w0 and rb[1] < n0 and rb[3] > n0 - 90:
+                out.append((c + r, w0, n0))
+    return out
+
+
+def regiao():
+    """assets/regiao.jpg: recorte do Blue Marble na janela regional (usado no globo e na cor da textura)."""
+    rb = regiao_bbox()
+    dest = f"{ASSETS}/regiao.jpg"
+    if os.path.exists(dest):
+        return rb
+    Image.MAX_IMAGE_PIXELS = None
+    PX_G = 240
+    out = Image.new("RGB", (int((rb[2] - rb[0]) * PX_G), int((rb[3] - rb[1]) * PX_G)))
+    for nome, w0, n0 in bm_blocos(rb):
+        f = f"{RAIZ}/dl/bm_{nome}.jpg"
+        if not os.path.exists(f):
+            raise SystemExit(f"falta {f}: rode scripts/baixar_dados.py ({BM_URL.format(nome)})")
+        x0, x1 = max(rb[0], w0), min(rb[2], w0 + 90)
+        y1, y0 = max(rb[1], n0 - 90), min(rb[3], n0)          # y0 = borda norte
+        rec = Image.open(f).crop((int((x0 - w0) * PX_G), int((n0 - y0) * PX_G), int((x1 - w0) * PX_G), int((n0 - y1) * PX_G)))
+        out.paste(rec, (int((x0 - rb[0]) * PX_G), int((rb[3] - y0) * PX_G)))
+    out.save(dest, quality=90)
+    return rb
 
 
 def mosaico():
@@ -32,7 +84,7 @@ def mosaico():
     big = np.zeros((3600 * len(lats), 3600 * len(lons)), np.float32)
     for i, la in enumerate(sorted(lats, reverse=True)):
         for j, lo in enumerate(lons):
-            big[i * 3600:(i + 1) * 3600, j * 3600:(j + 1) * 3600] = tifffile.imread(bloco(la, lo))
+            big[i * 3600:(i + 1) * 3600, j * 3600:(j + 1) * 3600] = le_bloco(la, lo)
     c0 = int(round((W - left_lon) / PX)); c1 = int(round((E - left_lon) / PX))
     r0 = int(round((top_lat - N) / PX)); r1 = int(round((top_lat - S) / PX))
     return big[r0:r1, c0:c1]
@@ -73,6 +125,7 @@ def mar(dsm):
 
 
 def main():
+    rb = regiao()
     dsm = mosaico()
     h, w = dsm.shape
     agua = mascara_agua(h, w, 1) | mar(dsm)
@@ -117,9 +170,10 @@ def main():
     if CFG.get("cor_satelite"):   # iguala a cor média da textura à do satélite (sem trazer a cidade moderna da foto)
         from PIL import Image as _I
         _I.MAX_IMAGE_PIXELS = None
-        sat = np.asarray(_I.open(f"{RAIZ}/motor/assets/terra/sul_br.jpg").convert("RGB")).astype(np.float32)
-        sx0, sx1 = int((W + 60) / 20 * sat.shape[1]), int((E + 60) / 20 * sat.shape[1])
-        sy0, sy1 = int((-15 - N) / 20 * sat.shape[0]), int((-15 - S) / 20 * sat.shape[0])
+        rw, rs, re_, rn = rb
+        sat = np.asarray(_I.open(f"{ASSETS}/regiao.jpg").convert("RGB")).astype(np.float32)
+        sx0, sx1 = int((W - rw) / (re_ - rw) * sat.shape[1]), int((E - rw) / (re_ - rw) * sat.shape[1])
+        sy0, sy1 = int((rn - N) / (rn - rs) * sat.shape[0]), int((rn - S) / (rn - rs) * sat.shape[0])
         rec = np.asarray(_I.fromarray(sat[sy0:sy1, sx0:sx1].astype(np.uint8)).resize((img.shape[1], img.shape[0]))).astype(np.float32)
         for msk in (aguaT, ~aguaT):
             alvo = rec[msk].mean(0); atual = img[msk].mean(0)
@@ -127,7 +181,7 @@ def main():
     img = np.clip(img, 0, 255).astype(np.uint8)
     Image.fromarray(img).filter(ImageFilter.SMOOTH).save(f"{ASSETS}/textura.jpg", quality=90)
     json.dump({"bbox": [W, S, E, N], "w": w, "h": h, "tex": [w * TEX, h * TEX],
-               "zmin": float(chao.min()), "zmax": float(chao.max())},
+               "zmin": float(chao.min()), "zmax": float(chao.max()), "regiao": rb},
               open(f"{ASSETS}/terreno.json", "w"))
     print(f"ok relevo {w}x{h} z {chao.min():.1f}..{chao.max():.1f} m · textura {w*TEX}x{h*TEX} · água {agua.mean()*100:.1f}%")
 

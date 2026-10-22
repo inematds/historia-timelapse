@@ -140,10 +140,20 @@ async function carrega() {
   }
   D.pred = { length: n, startIndices: INI,
     attributes: { getPolygon: { value: POS, size: 3 }, getFillColor: { value: cor, size: 3 }, getFilterValue: { value: anoV, size: 1 } } };
+  if (C.longe && C.longe.auto) {   // contorno de terra perto da cidade (Natural Earth 1:50m), um pouco acima do mar de fundo
+    const mundo = await (await fetch('assets/mundo-50m.json')).json(), [w0, s0, e0, n0] = D.T.bbox;
+    D.longeTerra = [];
+    for (const f of topojson.feature(mundo, mundo.objects.countries).features) {
+      const [[a, b], [c, d]] = d3.geoBounds(f); if (a > e0 + 1.5 || c < w0 - 1.5 || b > n0 + 1.5 || d < s0 - 1.5) continue;
+      const pols = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
+      for (const pol of pols) D.longeTerra.push(pol.map(r => r.map(([x, y]) => [x, y, -2.5])));
+    }
+  }
   if (C.globo) {
     const mundo = await (await fetch('assets/mundo-50m.json')).json();
     D.paises = topojson.feature(mundo, mundo.objects.countries).features;
-    D.ufs = (await (await fetch('assets/brasil-uf.geojson')).json()).features;
+    const rs = await fetch('assets/' + (C.globo.subdiv_arquivo || 'brasil-uf.geojson'));   // estados/províncias do país (opcional)
+    D.ufs = rs.ok ? (await rs.json()).features : [];
     for (const f of D.ufs) if (d3.geoArea(f) > 2 * Math.PI) {   // anel na orientação errada = "o mundo menos o estado"
       const g = f.geometry; const inv = pol => pol.map(r => r.slice().reverse());
       g.coordinates = g.type === 'Polygon' ? inv(g.coordinates) : g.coordinates.map(inv); }
@@ -151,7 +161,7 @@ async function carrega() {
   if (C.globo && C.globo.raster) {
     const dados = async src => { const im = new Image(); im.src = src; await im.decode(); const c = document.createElement('canvas');
       c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); return { w: im.width, h: im.height, d: x.getImageData(0, 0, im.width, im.height).data }; };
-    D.bm = await dados('assets/terra/blue_marble.jpg'); D.sul = await dados('assets/terra/sul_br.jpg'); D.tx = await dados('assets/textura.jpg');
+    D.bm = await dados('assets/terra/blue_marble.jpg'); D.reg = D.T.regiao ? await dados('assets/regiao.jpg') : null; D.tx = await dados('assets/textura.jpg');
   }
   if (C.satLonge) { D.sat = new Image(); D.sat.src = C.satLonge.img; await D.sat.decode(); }
   for (const im of (C.imagens || [])) await new Promise(r => { const i = new Image(); i.onload = i.onerror = r; i.src = im.src; });
@@ -180,8 +190,10 @@ function camadas(t) {
   const ano = anoEm(t), teto = Math.round(tetoEm(ano) * 2) / 2;
   const L = [];
   const [w0, s0, e0, n0] = D.T.bbox;
-  const lg = C.longe;   // fundo além do recorte: terra a oeste de lg.oeste, mar no resto
-  const longe = lg ? [{ p: [[w0 - 1, s0 - 1, -3], [lg.oeste, s0 - 1, -3], [lg.oeste, n0 + 1, -3], [w0 - 1, n0 + 1, -3]], c: lg.terra },
+  const lg = C.longe;   // fundo além do recorte: auto (terra = contorno dos países, mar no resto) ou legado (terra a oeste de lg.oeste)
+  const ret = [[w0 - 1, s0 - 1, -3], [e0 + 1, s0 - 1, -3], [e0 + 1, n0 + 1, -3], [w0 - 1, n0 + 1, -3]];
+  const longe = lg && lg.auto ? [{ p: ret, c: lg.mar || [62, 99, 143] }, ...D.longeTerra.map(p => ({ p, c: lg.terra || [112, 120, 72] }))]
+    : lg ? [{ p: [[w0 - 1, s0 - 1, -3], [lg.oeste, s0 - 1, -3], [lg.oeste, n0 + 1, -3], [w0 - 1, n0 + 1, -3]], c: lg.terra },
                       { p: [[lg.oeste, s0 - 1, -3], [e0 + 1, s0 - 1, -3], [e0 + 1, n0 + 1, -3], [lg.oeste, n0 + 1, -3]], c: lg.mar }]
                    : [{ p: [[w0 - 1, s0 - 1, -3], [e0 + 1, s0 - 1, -3], [e0 + 1, n0 + 1, -3], [w0 - 1, n0 + 1, -3]], c: C.corLonge || [150, 172, 168] }];
   if (C.satLonge) L.push(new deck.BitmapLayer({ id: 'sat-longe', image: D.sat, bounds: C.satLonge.bounds,
@@ -329,6 +341,7 @@ function globo(t) {
     const x = Math.min(f.w - 1.001, Math.max(0, u)), y = Math.min(f.h - 1.001, Math.max(0, w)), xi = x | 0, yi = y | 0, fx = x - xi, fy = y - yi;
     const i00 = (yi * f.w + xi) * 4, i10 = i00 + 4, i01 = i00 + f.w * 4, i11 = i01 + 4, d = f.d;
     return [0, 1, 2].map(c => d[i00 + c] * (1 - fx) * (1 - fy) + d[i10 + c] * fx * (1 - fy) + d[i01 + c] * (1 - fx) * fy + d[i11 + c] * fx * fy); };
+  const [RW, RS, RE, RN] = D.T.regiao || [0, 0, 0, 0];
   for (let y = y0; y < y1; y++) {
     const yp = (540 - y) / R, half = Math.sqrt(Math.max(0, 1 - yp * yp)) * R;
     const xa = Math.max(0, Math.floor(960 - half)), xb = Math.min(1920, Math.ceil(960 + half));
@@ -339,7 +352,7 @@ function globo(t) {
       let lon = (l0 + Math.atan2(xp * sc, rho * cp * cc - yp * sp * sc)) / rad; lon = ((lon + 540) % 360) - 180;
       let px;
       if (lon >= TW && lon <= TE && lat >= TS && lat <= TN) px = amostra(D.tx, (lon - TW) / (TE - TW) * D.tx.w, (TN - lat) / (TN - TS) * D.tx.h);
-      else if (lon >= -60 && lon <= -40 && lat >= -35 && lat <= -15) px = amostra(D.sul, (lon + 60) / 20 * D.sul.w, (-15 - lat) / 20 * D.sul.h);
+      else if (D.reg && lon >= RW && lon <= RE && lat >= RS && lat <= RN) px = amostra(D.reg, (lon - RW) / (RE - RW) * D.reg.w, (RN - lat) / (RN - RS) * D.reg.h);
       else { const u = (lon + 180) / 360 * D.bm.w, w = (90 - lat) / 180 * D.bm.h, i = ((w | 0) * D.bm.w + (u | 0)) * 4; px = [D.bm.d[i], D.bm.d[i + 1], D.bm.d[i + 2]]; }
       const k = R < 3000 ? 0.45 + 0.55 * Math.pow(cc, 0.6) : 1, j = (y * 1920 + x) * 4;
       o[j] = px[0] * k; o[j + 1] = px[1] * k; o[j + 2] = px[2] * k; o[j + 3] = 255;
@@ -350,9 +363,9 @@ function globo(t) {
   // contornos e rótulos
   const pr = d3.geoOrthographic().rotate([-v.lon, -v.lat]).scale(R).translate([960, 540]);
   const path0 = d3.geoPath(pr, ctx), path = f => { try { path0(f); } catch (e) {} };
-  const br = D.paises.find(f => f.properties.name === 'Brazil');
+  const br = D.paises.find(f => f.properties.name === (C.globo.pais || 'Brazil'));
   ctx.beginPath(); path(br); ctx.strokeStyle = `rgba(250,204,21,${0.95 * clamp01((v.ls - Math.log(300)) / 0.5) * clamp01((Math.log(G.br_ate || 9000) - v.ls) / 0.6)})`; ctx.lineWidth = 3; ctx.stroke();
-  const uf = D.ufs.find(f => f.properties.uf === G.uf);
+  const uf = D.ufs.find(f => f.properties[G.subdiv_prop || 'uf'] === G.uf);
   if (uf) { ctx.beginPath(); path(uf); ctx.strokeStyle = `rgba(250,204,21,${clamp01((v.ls - Math.log(G.uf_de || 1800)) / 0.6) * clamp01((Math.log(G.uf_ate || 60000) - v.ls) / 0.7)})`; ctx.lineWidth = 3.5; ctx.stroke(); }
   ctx.textAlign = 'center'; ctx.shadowColor = 'rgba(0,0,0,.9)'; ctx.shadowBlur = 10;
   for (const r of (G.rotulos || [])) {
@@ -380,13 +393,13 @@ function globoVetor(t) {
   ctx.beginPath(); path({ type: 'Sphere' }); ctx.fillStyle = '#1d5a86'; ctx.fill();
   ctx.shadowColor = 'rgba(120,190,255,.55)'; ctx.shadowBlur = 40; ctx.strokeStyle = 'rgba(160,210,255,.6)'; ctx.lineWidth = 3; ctx.stroke(); ctx.shadowBlur = 0;
   ctx.beginPath(); path(d3.geoGraticule10()); ctx.strokeStyle = 'rgba(255,255,255,.07)'; ctx.lineWidth = 1; ctx.stroke();
-  for (const f of D.paises) { ctx.beginPath(); path(f); ctx.fillStyle = f.properties.name === 'Brazil' ? '#7aa556' : '#5f8a4a'; ctx.fill();
+  for (const f of D.paises) { ctx.beginPath(); path(f); ctx.fillStyle = f.properties.name === (G.pais || 'Brazil') ? '#7aa556' : '#5f8a4a'; ctx.fill();
     ctx.strokeStyle = 'rgba(20,40,20,.45)'; ctx.lineWidth = 1; ctx.stroke(); }
   const kBR = clamp01((v.ls - Math.log(G.brasil_de || 700)) / 0.8);
   for (const f of D.ufs) { ctx.beginPath(); path(f);
-    if (f.properties.uf === G.uf) { ctx.fillStyle = `rgba(250,204,21,${0.85 * clamp01((v.ls - Math.log(G.uf_de || 2200)) / 0.6) * clamp01((Math.log(G.uf_ate || 30000) - v.ls) / 0.7)})`; ctx.fill(); }
+    if (f.properties[G.subdiv_prop || 'uf'] === G.uf) { ctx.fillStyle = `rgba(250,204,21,${0.85 * clamp01((v.ls - Math.log(G.uf_de || 2200)) / 0.6) * clamp01((Math.log(G.uf_ate || 30000) - v.ls) / 0.7)})`; ctx.fill(); }
     ctx.strokeStyle = `rgba(255,255,255,${0.5 * kBR})`; ctx.lineWidth = 1.2; ctx.stroke(); }
-  const br = D.paises.find(f => f.properties.name === 'Brazil');
+  const br = D.paises.find(f => f.properties.name === (C.globo.pais || 'Brazil'));
   ctx.beginPath(); path(br); ctx.strokeStyle = `rgba(250,204,21,${0.9 * clamp01((v.ls - Math.log(300)) / 0.5)})`; ctx.lineWidth = 4; ctx.stroke();
   ctx.textAlign = 'center'; ctx.fillStyle = '#fff'; ctx.shadowColor = 'rgba(0,0,0,.8)'; ctx.shadowBlur = 8;
   for (const r of (G.rotulos || [])) {

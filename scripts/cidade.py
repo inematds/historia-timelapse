@@ -1,9 +1,9 @@
-"""Caminhos e configuração da cidade ativa (env CIDADE, padrão 'poa')."""
+"""Caminhos e configuração da cidade ativa (env CIDADE obrigatório: cidades/<CIDADE>/config.json)."""
 import json
 import os
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ID = os.environ.get("CIDADE", "poa")
+ID = os.environ.get("CIDADE") or exit("defina CIDADE=<id> (pasta em cidades/)")
 DIR = f"{RAIZ}/cidades/{ID}"
 CFG = json.load(open(f"{DIR}/config.json"))
 W, S, E, N = CFG["bbox"]
