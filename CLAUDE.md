@@ -2,6 +2,10 @@
 
 Timelapse 3D da história de cidades (mapa real + prédios do OSM + cartões com fonte). Leia `PLANO.md` (decisões e perguntas abertas) e `CORRECOES-NEI.md` antes de mexer. Como rodar: `README.md`.
 
+## Começar do zero (sem /prime)
+- "Faz o timelapse de <cidade>": siga a skill `historia-timelapse` (`~/.claude/skills/historia-timelapse/SKILL.md`), copiando o padrão de `cidades/floripa/` (aprovado em 22/10/2026).
+- Toda cidade sai em 3 fases, todas publicadas: 1 sem narração (música); 2 com a narração do Nei por cima; 3 com o avatar do Nei embaixo da bandeira. Plano e estado de Florianópolis em `cidades/floripa/FASES.md` (fase 1 publicada, fases 2 e 3 a fazer).
+
 ## Regras do projeto
 - Commits e push: conta **inematds** (`inematds <inematds@gmail.com>`).
 - Tudo local: sem API paga. Downloads de arquivos públicos (Geofabrik, Copernicus DEM, Wikimedia Commons) são permitidos; consultas a APIs (IBGE, Wikipédia, Overpass) precisam de autorização do Nei.
