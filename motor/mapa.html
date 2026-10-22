@@ -470,7 +470,7 @@ function html(t) {
   if (im) { if (ep.dataset.src !== im.src) { ep.querySelector('img').src = im.src; ep.dataset.src = im.src;
       ep.querySelector('.c').innerHTML = `${im.legenda}<small>${im.credito}</small>`; }
     ep.style.opacity = Math.min(1, (t - im.t0) / .6, (im.t1 - t) / .6); } else ep.style.opacity = 0;
-  const cp = cart.querySelector('.cp'); cp.style.left = im ? '500px' : '200px'; cp.style.right = im ? '250px' : '200px';
+  const cp = cart.querySelector('.cp'); cp.style.left = im ? '500px' : '200px'; cp.style.right = Math.max(im ? 250 : 200, C.cp_direita || 0) + 'px';  // cp_direita: reserva à direita (fase 3, avatar no canto)
   // GALERIA final
   const ga = $('galeria'), GL = C.galeria;
   if (GL && t >= GL.t0 - 1 && t <= GL.t1 + 1) {

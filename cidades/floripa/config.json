@@ -99,5 +99,20 @@
   -40,
   -15
  ],
- "video_base": "final/video-v4.mp4"
+ "video_base": "final/video-v4.mp4",
+ "avatar": {
+  "x": 1610,
+  "y": 752,
+  "lado": 250,
+  "so_voz": [
+   "globo"
+  ],
+  "pos_bloco": {
+   "fecho": {
+    "x": 1610,
+    "y": 586
+   }
+  },
+  "video_base": "final/avatar-base/video.mp4"
+ }
 }

@@ -63,7 +63,7 @@ for n, k in enumerate(ks):
 (AV / "segmentos.json").write_text(json.dumps(info, ensure_ascii=False, indent=1))
 if avisos: print("AVISO (acelerado no limite, pode invadir o próximo bloco):\n" + "\n".join(avisos))
 # 4. compõe: vídeo-base + moldura + avatar por trecho; voz do avatar + música com sidechain
-ins = ["-i", str(D / CFG.get("video_base", "final/video.mp4")), "-i", str(D / "final/audio.wav")]
+ins = ["-i", str(D / AVC.get("video_base", CFG.get("video_base", "final/video.mp4"))), "-i", str(D / "final/audio.wav")]
 fv, fa, ult = [], [], "[0:v]"
 for i, (k, s) in enumerate(info.items()):
     ins += ["-itsoffset", f"{s['t']:.3f}", "-i", s["arq"]]; j = i + 2; t0, t1 = s["t"], s["t"] + s["dur"]
