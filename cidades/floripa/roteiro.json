@@ -7,7 +7,11 @@
  },
  "fim": {
   "titulo": "Florianópolis",
-  "sub": "1673 – 2024"
+  "sub": "1673 – 2024",
+  "marca": "INEMA<span>.CLUB</span>",
+  "fica": true,
+  "escuro": 0.25,
+  "dura": 7.0
  },
  "longe": {
   "oeste": -48.66,
@@ -114,19 +118,26 @@
   {
    "id": "hercilio",
    "ano": 1926.36,
-   "desenha": 1.2,
-   "sobe": 30
+   "desenha": 0.25,
+   "sobe": 30,
+   "torres": {
+    "em": [
+     0.29,
+     0.71
+    ],
+    "alt": 45
+   }
   },
   {
    "id": "colombo",
    "ano": 1975.18,
-   "desenha": 0.6,
+   "desenha": 0.3,
    "sobe": 18
   },
   {
    "id": "pedroivo",
    "ano": 1991.18,
-   "desenha": 0.6,
+   "desenha": 0.3,
    "sobe": 18
   }
  ],
@@ -1537,14 +1548,14 @@
      "bearing": -40
     },
     {
-     "lon": -48.57,
-     "lat": -27.602,
-     "zoom": 13.7,
-     "pitch": 60,
-     "bearing": -70
+     "lon": -48.5655,
+     "lat": -27.596,
+     "zoom": 16.3,
+     "pitch": 62,
+     "bearing": -180
     }
    ],
-   "dur": 9.5,
+   "dur": 11.5,
    "cartao": {
     "titulo": "A PONTE <b>HERCÍLIO LUZ</b>",
     "numero": "821 METROS",
@@ -1763,14 +1774,14 @@
      "bearing": -60
     },
     {
-     "lon": -48.57,
-     "lat": -27.602,
-     "zoom": 13.7,
-     "pitch": 60,
-     "bearing": -70
+     "lon": -48.5646,
+     "lat": -27.5968,
+     "zoom": 16.2,
+     "pitch": 64,
+     "bearing": 0
     }
    ],
-   "dur": 8.5,
+   "dur": 10.5,
    "cartao": {
     "titulo": "PONTE <b>COLOMBO SALLES</b>",
     "numero": "1.227 METROS",
@@ -1840,14 +1851,14 @@
      "bearing": -10
     },
     {
-     "lon": -48.57,
-     "lat": -27.602,
-     "zoom": 13.7,
-     "pitch": 60,
-     "bearing": -70
+     "lon": -48.565,
+     "lat": -27.597,
+     "zoom": 16.1,
+     "pitch": 63,
+     "bearing": 14
     }
    ],
-   "dur": 8.5,
+   "dur": 9.5,
    "cartao": {
     "titulo": "PONTE <b>PEDRO IVO CAMPOS</b>",
     "numero": "1.252 METROS",
@@ -1925,6 +1936,7 @@
    ],
    "dur": 14.0,
    "galeria": {
+    "fica": true,
     "titulo": "Imagens <b>da época</b>",
     "itens": [
      "assets/epoca/e00.jpg",

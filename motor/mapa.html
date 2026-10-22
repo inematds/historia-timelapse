@@ -32,12 +32,12 @@
   #fimt { position:absolute; left:0; right:0; top:0; bottom:300px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; opacity:0; }
   #fimt .t { font:800 92px Sora; text-shadow:0 4px 22px rgba(0,0,0,.9); } #fimt .m { font:800 168px/1 Sora; color:var(--amb); letter-spacing:.01em; margin-top:26px; text-shadow:0 6px 30px rgba(0,0,0,.9); } #fimt .m span { color:#fff; } #fimt .s { font:700 34px Inter; color:var(--amb); margin-top:14px; }
   #cartao { position:absolute; inset:0; text-align:center; color:#fff; opacity:0; pointer-events:none; }
-  #cartao .cg { position:absolute; left:120px; right:120px; top:262px; text-shadow:0 4px 22px rgba(0,0,0,.9), 0 0 4px #000; }
+  #cartao .cg { position:absolute; left:560px; right:540px; top:66px; white-space:nowrap; text-shadow:0 4px 22px rgba(0,0,0,.9), 0 0 4px #000; }
   #cartao .cp { position:absolute; left:200px; right:200px; bottom:24px; }
-  #topoc { position:absolute; left:0; right:0; top:0; height:600px; pointer-events:none; opacity:0;
-    background:linear-gradient(rgba(12,12,16,.55), rgba(12,12,16,.42) 55%, rgba(12,12,16,0)); }
-  #cartao .n { font:800 112px/1 Sora; color:var(--amb); letter-spacing:-.02em; margin-bottom:6px; }
-  #cartao .t { font:800 66px Sora; letter-spacing:.01em; text-transform:uppercase; }
+  #topoc { position:absolute; left:0; right:0; top:0; height:330px; pointer-events:none; opacity:0;
+    background:linear-gradient(rgba(12,12,16,.5), rgba(12,12,16,.3) 70%, rgba(12,12,16,0)); }
+  #cartao .n { font:800 100px/1 Sora; color:var(--amb); letter-spacing:-.02em; margin-bottom:6px; }
+  #cartao .t { font:800 54px/1.1 Sora; letter-spacing:.01em; text-transform:uppercase; }
   #cartao .t b { color:var(--amb); font-weight:800; }
   #cartao .l { font:700 32px Inter; margin-top:10px; }
   #cartao .d { font:600 25px/1.32 Inter; margin:6px auto 0; max-width:1300px; opacity:.95; }
@@ -421,6 +421,8 @@ function html(t) {
   if (c) {
     cart.querySelector('.n').textContent = c.numero || ''; cart.querySelector('.n').style.display = c.numero ? '' : 'none';
     cart.querySelector('.t').innerHTML = c.titulo; cart.querySelector('.l').textContent = c.legenda || '';
+    for (const q of cart.querySelectorAll('.cg > div')) { q.style.transform = ''; const w = q.scrollWidth, m = q.clientWidth;
+      if (w > m) { q.style.transform = `scale(${m / w})`; q.style.transformOrigin = 'left top'; } }
     cart.querySelector('.d').textContent = c.detalhe || ''; cart.querySelector('.f').textContent = c.fonte ? 'Fonte: ' + c.fonte : '';
     cart.style.opacity = Math.min(1, (t - c.t0) / .5, (c.t1 - t) / .5);
   } else cart.style.opacity = 0;
@@ -443,7 +445,7 @@ function html(t) {
   if (vp) for (const a of alvo) {
     const [x, y] = vp.project(a.p); if (!(x > -50 && x < 1970 && y > 0 && y < 1080)) continue;
     const esq = x > 1050, ex = esq ? Math.max(60, x - 420) : x + 150;   // perto do painel da direita: etiqueta vai para a esquerda
-    const ey = Math.max(c ? 470 : (esq ? 360 : 280), y - 150);
+    const ey = Math.max(c ? 300 : (esq ? 360 : 280), y - 150);
     svg += `<line x1="${x}" y1="${y}" x2="${ex}" y2="${ey + 24}" stroke="#FACC15" stroke-width="3" opacity="${a.o}"/><circle cx="${x}" cy="${y}" r="7" fill="#FACC15" opacity="${a.o}"/>`;
     htm += `<div class="et" style="left:${ex}px;top:${ey}px;opacity:${a.o}">${a.txt}${a.sub ? `<small>${a.sub}</small>` : ''}</div>`;
   }
