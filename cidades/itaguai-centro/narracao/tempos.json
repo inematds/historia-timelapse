@@ -1,9 +1,9 @@
 {
  "globo": {
-  "dur": 5.154,
+  "dur": 5.616,
   "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/globo.wav",
-  "texto": "Na Baixada de Sepetiba, um morro pequeno guarda o coração de uma cidade inteira.",
-  "ouvido": "Na Baixada de Sepetiba, um morro pequeno guarda o coração de uma cidade inteira."
+  "texto": "Itaguaí, na Baixada de Sepetiba: um morro pequeno guarda o coração da cidade inteira.",
+  "ouvido": "Itaguaí, na Baixada de Sepetiba, um morro pequeno guarda o coração da cidade inteira."
  },
  "capela-1688": {
   "dur": 5.235,
@@ -54,10 +54,10 @@
   "ouvido": "Uma viajante inglesa desenha o que viu. A igreja no alto e as casas descendo o morro."
  },
  "porto-1841": {
-  "dur": 4.245,
+  "dur": 4.378,
   "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/porto-1841.wav",
-  "texto": "Com o café descendo para o porto, a vila quase quadruplica de tamanho.",
-  "ouvido": "Com o café descendo para o porto, a vila quase quadrúplica de tamanho."
+  "texto": "Com o café descendo para o porto, a vila cresce quase quatro vezes.",
+  "ouvido": "Com o café descendo para o porto, a vila cresce quase quatro vezes."
  },
  "chafariz-1847": {
   "dur": 5.304,
@@ -120,16 +120,16 @@
   "ouvido": "O colégio jesuíta de 200 anos é derrubado para dar lugar a um prédio moderno."
  },
  "relogio-1967": {
-  "dur": 5.052,
+  "dur": 4.685,
   "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/relogio-1967.wav",
-  "texto": "Um andarilho paraguaio deixa de presente um relógio de sol diante do cemitério.",
-  "ouvido": "Um andarino paraguaio deixa de presente um relógio de sol diante do cemitério."
+  "texto": "Um viajante paraguaio deixa de presente um relógio de sol diante do cemitério.",
+  "ouvido": "Um viajante paraguaio deixa de presente um relógio de sol diante do cemitério."
  },
  "se-1980": {
-  "dur": 3.595,
+  "dur": 3.666,
   "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/se-1980.wav",
-  "texto": "A diocese nasce, e a velha Matriz vira catedral.",
-  "ouvido": "A diócese nasce e a velha matriz vira catedral."
+  "texto": "Itaguaí ganha um bispo, e a velha Matriz vira catedral.",
+  "ouvido": "Itaguaí ganha um bispo e a velha matriz vira catedral."
  },
  "trem-fim-1980": {
   "dur": 5.185,

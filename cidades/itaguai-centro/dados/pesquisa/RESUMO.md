@@ -65,3 +65,6 @@ Outros limites:
 - A nota do Bendito Guia (Praça Vicente Cicarino, 216) também foi lida só pelo resultado de busca.
 - O livro municipal (Coletânea, 2010) é um PDF escaneado sem texto. Li só as páginas 107–125 e o índice, como imagem.
 - A Monografia IBGE 509 tem uma planta de c. 1971 com 30 prédios cívicos numerados. A lista está em `predios_historicos.json → referencia_1971`, mas a planta não foi georreferenciada.
+
+## Correção (22/10/2026, revisor)
+- Biblioteca de 1880: a fonte diz 'dia dos 50 anos de D. Pedro II', mas ele nasceu em 2/12/1825 e fazia 55 anos em 2/12/1880. Na tela: 'aniversário de D. Pedro II (55 anos)'.

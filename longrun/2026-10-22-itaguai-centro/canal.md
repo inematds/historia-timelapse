@@ -13,3 +13,11 @@ Formato: `- AAAA-MM-DD HH:MM · fato|aprendizado|glossário|armadilha · texto`
 - "Casa do Pai" = Instituto Casa do Pai (ONG 2007, Monte Serrat) — incluído como bloco; pergunta ao Nei em aberto.
 - Ordem: modelo_anos → limpa_marcos (senão caixas atravessam os marcos).
 - Fable faz centro/motor/marcos.js + vitrine; eu integro (MARCOS.camadas já chamado no camadas()).
+
+## 22/10 11:15 — estado (faixa 50%)
+- 3 fases prontas em cidades/itaguai-centro/final/: itaguai-centro-v1.mp4 (música, pico limitado -2,2 dBFS), -narrado.mp4, -avatar.mp4 (+ -540p). Enviadas ao bot v3.
+- Publicação lives26 BLOQUEADA: YouTube 400 uploadLimitExceeded (limite diário do canal). Planos prontos: ~/.local/share/yt-pubx/trabalhos/20261022-071116-itaguai-centro-v1-mp4/plano.json e 20261022-080404-itaguai-centro-narrado-mp4/plano.json → `./yt-pubx publicar <mp4> --plano <plano.json>` quando liberar. Nei pediu só fases 1 e 2 no lives26 (11:0x).
+- Revisor independente: 5 → 6 → 6 (registrado em revisor-nota). Pendências apontadas na 3ª: período colonial vazio/campo liso, etiqueta "tombada pelo INEPAC" antes de 2006, legenda 1823 no bloco de 1818, contador de habitantes cai 1841–1873, futuro sem VLT visível, Quintino sem prédio.
+- Refazer cena: `bash centro/refaz.sh`; render: `bash centro/motor/render_trechos.sh cidades/itaguai-centro/cena cidades/itaguai-centro/final/video.mp4 60`; fase 3: trocar narracao.json por narracao_avatar.json, rodar centro/scripts/montar_avatar.py, voltar (avatar/ajustes.json corrige 110–124 s que o Whisper pulou).
+- Armadilhas: halo/sombra com _TerrainExtension + position z desloca → halos sem ext; textura de perto borra → chão liso (centro/scripts/textura_lisa.py) + ruas vetoriais; avatar drawbox fill dava clarão amarelo → só borda (cópia em centro/scripts).
+- Tokens (medido 11:12): centro 96,1 M (saída 427 mil); POA 66,7 M; Floripa 167,2 M + 63,6 M (com Itaguaí município).

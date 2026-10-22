@@ -62,9 +62,12 @@ trem = linemerge(trem) if trem.geom_type == "MultiLineString" else trem
 perto = trem.intersection(Point(0, 0).buffer(900))
 partes = list(perto.geoms) if hasattr(perto, "geoms") else [perto]
 vlt = max(partes, key=lambda g: g.length)
+est = Point(*ll2m(-43.777518, -22.874347))          # estação-castelo: o bonde passa por ela logo no começo
+from shapely.ops import substring
+pe = vlt.project(est); vlt = substring(vlt, max(0, pe - 110), min(vlt.length, pe + 650))
 cam = [list(m2ll(*c)) for c in vlt.coords]
 zv = round(float(np.median([z(*c) for c in cam])), 2)
-elem.append({"id": "vlt", "tipo": "vlt", "caminho": cam, "vel": 8, "comp": 24, "z": zv})
+elem.append({"id": "vlt", "tipo": "vlt", "caminho": cam, "vel": 6, "comp": 24, "z": zv})
 corredor_vlt = vlt.buffer(9)
 
 # 2. parque linear no Canal do Viana (trechos a até 900 m)
@@ -83,7 +86,7 @@ elem.append({"id": "parque", "tipo": "parque", "poligono": [list(m2ll(*c)) for c
 fim[[parque.contains(Point(x, y)) for x, y in zip(xs, ys)]] = ANO_SOME
 
 # 3. ruas principais (ciclovia + árvores de calçada)
-ruas = [f for f in json.load(open(f"{BRUTOS}/ruas_todas.geojson"))["features"] if f["properties"]["hw"] in ("primary", "secondary", "tertiary")]
+ruas = [f for f in json.load(open(f"{BRUTOS}/ruas_todas.geojson"))["features"] if f["properties"]["hw"] in ("primary", "secondary", "tertiary", "residential")]
 linhas = [em_m(LineString(f["geometry"]["coordinates"])) for f in ruas]
 linhas = [l.intersection(Point(0, 0).buffer(650)) for l in linhas]
 linhas = [g for l in linhas for g in (l.geoms if hasattr(l, "geoms") else [l]) if not l.is_empty and g.length > 30]
@@ -98,10 +101,10 @@ for l in linhas:
     for lado in (6.5, -6.5):
         o = l.parallel_offset(abs(lado), "left" if lado > 0 else "right")
         for g in (o.geoms if hasattr(o, "geoms") else [o]):
-            n = int(g.length // 16)
+            n = int(g.length // 12)
             for i in range(n):
-                p = g.interpolate((i + 0.5) * 16)
-                if corredor_vlt.contains(p) or any(math.hypot(p.x - a, p.y - b) < 10 for a, b in usadas[-40:]):
+                p = g.interpolate((i + 0.5) * 12)
+                if corredor_vlt.contains(p) or any(math.hypot(p.x - a, p.y - b) < 8 for a, b in usadas[-40:]):
                     continue
                 usadas.append((p.x, p.y)); lo, la = m2ll(p.x, p.y)
                 arv.append({"lon": round(lo, 7), "lat": round(la, 7), "z": z(lo, la), "esc": round(float(rng.uniform(.8, 1.15)), 2),
@@ -116,16 +119,16 @@ for i in cand:
     p = Point(xs[i], ys[i])
     if any(math.hypot(xs[i] - a, ys[i] - b) < 70 for a, b in marcos) or parque.buffer(15).contains(p) or corredor_vlt.buffer(10).contains(p):
         continue
-    if any(math.hypot(xs[i] - xs[j], ys[i] - ys[j]) < 110 for j in esc):
+    if any(math.hypot(xs[i] - xs[j], ys[i] - ys[j]) < 80 for j in esc):
         continue
     esc.append(i)
-    if len(esc) == 8:
+    if len(esc) == 14:
         break
 for k, i in enumerate(esc):
     lo, la = float(lon[i]), float(lat[i]); lado = float(np.clip(math.sqrt(area[i]), 14, 24))
-    tipo = "torre_vidro" if k < 3 else "telhado_verde"
+    tipo = "torre_vidro" if k < 4 else "telhado_verde"
     e = {"id": f"f{k}", "tipo": tipo, "lon": lo, "lat": la, "z": z(lo, la), "rumo": int(rng.integers(0, 4)) * 90 + 10,
-         "larg": round(lado, 1), "comp": round(lado * (1 if tipo == "torre_vidro" else .7), 1), "andares": [10, 8, 9][k] if tipo == "torre_vidro" else int(rng.integers(4, 6))}
+         "larg": round(lado, 1), "comp": round(lado * (1 if tipo == "torre_vidro" else .7), 1), "andares": [10, 8, 9, 7][k] if tipo == "torre_vidro" else int(rng.integers(4, 6))}
     elem.append(e)
     fim[np.hypot(xs - xs[i], ys - ys[i]) < lado * 0.85] = ANO_SOME
 fim.tofile(f"{ASSETS}/pred_fim.f32")
