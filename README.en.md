@@ -16,6 +16,7 @@ Full guide (landing + step by step): **https://inematds.github.io/historia-timel
 
 - Florianópolis — from Desterro to capital (6 min, no narration): https://www.youtube.com/watch?v=auBCnC78Xtk
 - Itaguaí — from village to port (6 min, no narration): https://www.youtube.com/watch?v=NY7K_vMYLx8
+  - narrated: https://www.youtube.com/watch?v=CNwLpoIqQ_A · with presenter: https://www.youtube.com/watch?v=X4u-dDnNc64
 - Porto Alegre — 1772 to 2024 (narrated): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
 ## Anywhere in the world

@@ -40,6 +40,11 @@ for n, k in enumerate(ks):                   # fala sem nenhuma palavra casada: 
     if k not in ini:
         a = fim.get(ks[n - 1], 0) if n else 0; b = next((ini[x] for x in ks[n + 1:] if x in ini), a + 4)
         ini[k], fim[k] = a + 0.1, b - 0.1
+# ajuste manual opcional: avatar/ajustes.json {bloco: {"ini": s, "fim": s}} (tempos no avatar.mp4), p/ quando o alinhamento erra
+AJ = AV / "ajustes.json"
+for k, v in (json.loads(AJ.read_text()).items() if AJ.exists() else []):
+    if k in ini and not k.startswith("_"):
+        ini[k], fim[k] = v.get("ini", ini[k]), v.get("fim", fim[k])
 # 3. corta cada fala; confere que cabe
 info, avisos = {}, []
 for n, k in enumerate(ks):

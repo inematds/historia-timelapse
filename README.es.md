@@ -16,6 +16,7 @@ Guía completa (landing + paso a paso): **https://inematds.github.io/historia-ti
 
 - Florianópolis — de Desterro a capital (6 min, sin narración): https://www.youtube.com/watch?v=auBCnC78Xtk
 - Itaguaí — de la aldea al puerto (6 min, sin narración): https://www.youtube.com/watch?v=NY7K_vMYLx8
+  - narrada: https://www.youtube.com/watch?v=CNwLpoIqQ_A · con presentador: https://www.youtube.com/watch?v=X4u-dDnNc64
 - Porto Alegre — 1772 a 2024 (narrado): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
 ## Cualquier lugar del mundo
