@@ -3,8 +3,11 @@ import json, os, re, subprocess
 import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
 from cidade import *  # noqa
 C = json.loads(re.sub(r"^window.CENA = |;\s*$", "", open(f"{DIR}/cena/cena.js").read()))
-M = os.path.expanduser("~/projetos/output/musicas")
-FAIXAS = [f"{M}/balao-exploracao-20260818/faixa-1.mp3", f"{M}/balao-exploracao-20260818/faixa-2.mp3"]
+import glob
+# faixas: config "musicas" (caminhos) ou os .mp3/.wav de cidades/<id>/musica/ em ordem alfabética
+FAIXAS = [os.path.join(RAIZ, os.path.expanduser(f)) for f in CFG.get("musicas", [])] or sorted(glob.glob(f"{DIR}/musica/*.mp3") + glob.glob(f"{DIR}/musica/*.wav"))
+if not FAIXAS:
+    raise SystemExit(f"sem música: ponha .mp3 instrumentais em {DIR}/musica/ (ou liste em config 'musicas')")
 dur, XF = C["duracao"], 4
 seq, tot, i = [], 0.0, 0
 while tot < dur + 5:

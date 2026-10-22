@@ -196,69 +196,108 @@
 <section id="pre"><div class="wrap">
   <span class="chip">Pré-requisitos</span>
   <h2>O que precisa</h2>
-  <p class="sub">Linux com placa de vídeo, Python 3 e Node 20+. Os dados são arquivos públicos.</p>
+  <p class="sub">Linux com placa de vídeo, Python 3, Node 20+ e ffmpeg. Os dados são arquivos públicos baixados por um script; não há API nem custo.</p>
   <div class="grid g3">
-    <div class="card"><h3>Python</h3><p>Para recortar o mapa e preparar os dados.</p><pre><span class="k">python3 -m venv .venv</span>
-<span class="k">.venv/bin/pip install</span> osmium tifffile imagecodecs shapely numpy pyproj scipy pillow</pre></div>
-    <div class="card"><h3>Node + Chrome</h3><p>O render usa Playwright com o Chromium.</p><pre><span class="k">cd motor && npm i</span>
-<span class="k">npx playwright install chromium</span></pre></div>
-    <div class="card"><h3>Dados públicos</h3><p>Recorte regional do OSM (Geofabrik) e blocos de relevo Copernicus GLO-30 em <code>dl/</code>.</p><pre><span class="c"># exemplo: Sul do Brasil + 1 bloco de relevo</span>
-<span class="s">https://download.geofabrik.de/south-america/brazil/sul-latest.osm.pbf</span>
-<span class="s">https://copernicus-dem-30m.s3.amazonaws.com/</span></pre></div>
+    <div class="card"><h3>Programas</h3><p>Python, Node, ffmpeg e git.</p><pre><span class="k">sudo apt install</span> python3-venv nodejs npm ffmpeg git</pre></div>
+    <div class="card"><h3>Placa de vídeo</h3><p>O render usa o Chrome com a GPU (Vulkan). Sem Vulkan, rode com <code>GL="--use-angle=gl"</code> antes do comando (mais lento).</p><pre><span class="c"># ~0,1 s por quadro em 1080p numa GPU NVIDIA</span></pre></div>
+    <div class="card"><h3>Espaço em disco</h3><p>O recorte regional do OSM tem centenas de MB (o Sul do Brasil, ~430 MB). Cada bloco de relevo tem 20–50 MB.</p><pre><span class="c"># tudo fica na pasta dl/ (fora do git)</span></pre></div>
   </div>
 </div></section>
 
 <section id="guia"><div class="wrap">
   <span class="chip">Guia de uso · passo a passo</span>
   <h2>Faça o vídeo da sua cidade</h2>
-  <p class="sub">Cada cidade mora em <code>cidades/&lt;id&gt;/</code>. Os scripts leem a cidade pela variável <code>CIDADE</code>.</p>
+  <p class="sub">Cada cidade mora em <code>cidades/&lt;id&gt;/</code>. Os scripts leem a cidade pela variável <code>CIDADE</code>. Os exemplos usam Florianópolis (<code>floripa</code>).</p>
+
+  <div class="step"><div class="b">0</div><div>
+    <h3>Baixe o projeto e instale</h3>
+    <p>Cria o ambiente Python (venv = uma pasta com as bibliotecas só deste projeto) e instala o Playwright, que abre o Chrome para gravar os quadros.</p>
+<pre><span class="k">git clone</span> https://github.com/inematds/historia-timelapse && <span class="k">cd</span> historia-timelapse
+<span class="k">python3 -m venv .venv</span>
+<span class="k">.venv/bin/pip install</span> osmium tifffile imagecodecs \
+    shapely numpy pyproj scipy pillow
+<span class="k">cd motor && npm i && npx playwright install chromium && cd ..</span></pre>
+  </div></div>
 
   <div class="step"><div class="b">1</div><div>
     <h3>Crie a configuração da cidade</h3>
-    <p>Recorte do mapa (oeste, sul, leste, norte), nome do município no OSM e o ponto onde a cidade começou.</p>
+    <p><code>bbox</code> é o retângulo do mapa em graus: oeste, sul, leste, norte (dá para desenhar em bboxfinder.com). <code>municipio_osm</code> é o nome exato do município no OpenStreetMap. <code>centro_antigo</code> é o ponto onde a cidade começou.</p>
 <pre><span class="c"># cidades/floripa/config.json</span>
 { "nome": "Florianópolis", "bbox": [-48.80, -27.92, -48.33, -27.33],
-  "pbf": "dl/sul.osm.pbf", "municipio_osm": "Florianópolis",
-  "centro_antigo": [-48.5490, -27.5965] }</pre>
+  "pbf": "dl/sul.osm.pbf",
+  "pbf_url": "https://download.geofabrik.de/south-america/brazil/sul-latest.osm.pbf",
+  "municipio_osm": "Florianópolis", "centro_antigo": [-48.5490, -27.5965],
+  "musicas": ["cidades/floripa/musica/faixa-1.mp3"] }
+<span class="c"># opcionais: "efeitos" (pontes, fortes, aterros), "tex" (tamanho da textura),</span>
+<span class="c"># "agua_baixa_m", "pop_modelo_extra" — veja cidades/floripa/config.json</span></pre>
   </div></div>
 
   <div class="step"><div class="b">2</div><div>
-    <h3>Faça a pesquisa histórica</h3>
-    <p>Em <code>cidades/&lt;id&gt;/dados/pesquisa/</code>: <code>populacao.json</code> (censos e estimativas), <code>eventos.json</code> (eventos com fonte e coordenada) e <code>bairros_epocas.json</code> (ano de ocupação de cada bairro). Use os de Porto Alegre e Florianópolis como modelo.</p>
-<pre><span class="k">ls</span> cidades/floripa/dados/pesquisa/   <span class="c"># populacao, eventos, bairros_epocas, regimes, imagens, RESUMO.md</span></pre>
+    <h3>Baixe os dados públicos</h3>
+    <p>O script baixa o recorte do OSM (formato <code>.pbf</code>), os blocos de relevo que cobrem o seu <code>bbox</code> e, com <code>--microsoft</code>, os prédios da Microsoft para onde o OSM tem pouco prédio.</p>
+<pre><span class="k">export CIDADE=floripa</span>
+<span class="k">.venv/bin/python -I scripts/baixar_dados.py</span> --microsoft</pre>
   </div></div>
 
   <div class="step"><div class="b">3</div><div>
-    <h3>Recorte o mapa e prepare os dados</h3>
-    <p>Prédios, água, bairros, relevo com o mar, ano de nascimento de cada prédio e efeitos (pontes, fortes, aterros).</p>
-<pre><span class="k">export CIDADE=floripa</span>
-<span class="k">.venv/bin/python -I scripts/extrai_osm.py</span> dl/sul.osm.pbf cidades/floripa/dados/brutos
-<span class="k">.venv/bin/python -I scripts/extrai_msbuild.py</span>   <span class="c"># opcional: prédios da Microsoft onde o OSM é ralo</span>
-<span class="k">.venv/bin/python -I scripts/prep_terreno.py</span>
-<span class="k">.venv/bin/python -I scripts/prep_predios.py</span>
-<span class="k">.venv/bin/python -I scripts/modelo_anos.py</span>
-<span class="k">.venv/bin/python -I scripts/extrai_feicoes.py</span> && <span class="k">.venv/bin/python -I scripts/prep_efeitos.py</span></pre>
+    <h3>Faça a pesquisa histórica</h3>
+    <p>Em <code>cidades/&lt;id&gt;/dados/pesquisa/</code> vão três arquivos. Copie os de Florianópolis como modelo e troque o conteúdo.</p>
+<pre><span class="c"># populacao.json — censos e estimativas</span>
+{ "serie": [ { "ano": 1872, "pop": 25709, "fonte_url": "https://..." } ] }
+<span class="c"># eventos.json — um evento por item, com coordenada e fonte</span>
+{ "eventos": [ { "id": "ponte-hercilio", "ano": 1926, "titulo_curto_PT": "A PONTE HERCÍLIO LUZ",
+    "legenda": "...", "detalhe": "...", "numero_impacto": "821 METROS",
+    "local": { "lat": -27.5935, "lon": -48.5649 }, "fontes": ["https://..."] } ] }
+<span class="c"># bairros_epocas.json — ano em que cada bairro passou a ser ocupado</span>
+{ "bairros": [ { "bairro": "Trindade", "ano_aprox_ocupacao": 1960 } ] }</pre>
   </div></div>
 
   <div class="step"><div class="b">4</div><div>
-    <h3>Escreva o roteiro e gere a cena</h3>
-    <p>O roteiro é uma lista de blocos: anos, câmera, cartão e efeitos. Em Florianópolis ele é montado por <code>roteiro_floripa.py</code> a partir da pesquisa.</p>
-<pre><span class="k">python3</span> cidades/floripa/roteiro_floripa.py
-<span class="k">.venv/bin/python -I scripts/gerar_cena.py</span>   <span class="c"># cidades/floripa/cena/cena.js</span></pre>
+    <h3>Prepare o mapa</h3>
+    <p>Recorta prédios, água e bairros, monta o relevo com o mar, dá a cada prédio um ano de nascimento e prepara pontes, fortes e aterros.</p>
+<pre><span class="k">.venv/bin/python -I scripts/extrai_osm.py</span> dl/sul.osm.pbf cidades/floripa/dados/brutos
+<span class="k">.venv/bin/python -I scripts/extrai_msbuild.py</span>   <span class="c"># só se baixou os prédios da Microsoft</span>
+<span class="k">.venv/bin/python -I scripts/prep_terreno.py</span>
+<span class="k">.venv/bin/python -I scripts/prep_predios.py</span>
+<span class="k">.venv/bin/python -I scripts/modelo_anos.py</span>
+<span class="k">.venv/bin/python -I scripts/extrai_feicoes.py</span>
+<span class="k">.venv/bin/python -I scripts/prep_efeitos.py</span></pre>
   </div></div>
 
   <div class="step"><div class="b">5</div><div>
-    <h3>Confira quadros antes do render</h3>
-    <p>Renderize só alguns segundos para olhar enquadramento, cartões e efeitos.</p>
-<pre><span class="k">cd motor && node render.mjs</span> ../cidades/floripa/cena --quadros 20,60,120   <span class="c"># q_*.jpg na pasta da cena</span></pre>
+    <h3>Escreva o roteiro e gere a cena</h3>
+    <p>O <code>roteiro.json</code> é uma lista de blocos. Cada bloco tem os anos (início, ano do evento, fim), a câmera de ida e de chegada, a duração e o cartão. Em Florianópolis ele é montado por <code>roteiro_floripa.py</code> a partir da pesquisa; use como modelo.</p>
+<pre><span class="c"># um bloco do roteiro.json</span>
+{ "id": "ponte-hercilio", "anos": [1895, 1926, 1927], "pulo": 2.0, "dur": 9.5,
+  "cam": [ {"lon": -48.552, "lat": -27.600, "zoom": 14, "pitch": 58, "bearing": -40},
+           {"lon": -48.570, "lat": -27.602, "zoom": 13.7, "pitch": 60, "bearing": -70} ],
+  "cartao": { "numero": "821 METROS", "titulo": "A ponte <b>Hercílio Luz</b>",
+              "legenda": "...", "detalhe": "...", "fonte": "IBGE" },
+  "destaca": ["linha:hercilio"] }
+<span class="k">python3</span> cidades/floripa/roteiro_floripa.py
+<span class="k">.venv/bin/python -I scripts/gerar_cena.py</span>   <span class="c"># gera cidades/floripa/cena/cena.js</span></pre>
   </div></div>
 
   <div class="step"><div class="b">6</div><div>
-    <h3>Renderize e junte a trilha</h3>
-    <p>Sem narração: música em laço com transição. Com narração: veja <code>cidades/poa/narracao/</code>.</p>
-<pre><span class="k">node render.mjs</span> ../cidades/floripa/cena ../cidades/floripa/final/video.mp4
-<span class="k">CIDADE=floripa ../.venv/bin/python -I ../scripts/montar_musica.py</span>
-<span class="k">ffmpeg</span> -i ../cidades/floripa/final/video.mp4 -i ../cidades/floripa/final/audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -shortest final.mp4</pre>
+    <h3>Confira alguns quadros</h3>
+    <p>Grava só os segundos pedidos, para olhar enquadramento, cartões e efeitos antes do vídeo inteiro.</p>
+<pre><span class="k">cd motor && node render.mjs</span> ../cidades/floripa/cena --quadros 20,60,120 && <span class="k">cd ..</span>
+<span class="c"># as imagens q_*.jpg ficam em cidades/floripa/cena/</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">7</div><div>
+    <h3>Renderize, ponha a música e junte</h3>
+    <p>O render é feito em trechos de 60 s (o navegador reinicia entre eles, para não faltar memória). Ponha músicas instrumentais suas em <code>cidades/floripa/musica/</code> ou liste em <code>"musicas"</code> no config.</p>
+<pre><span class="k">bash motor/render_trechos.sh</span> cidades/floripa/cena cidades/floripa/final/video.mp4
+<span class="k">.venv/bin/python -I scripts/montar_musica.py</span>   <span class="c"># cidades/floripa/final/audio.wav</span>
+<span class="k">ffmpeg</span> -i cidades/floripa/final/video.mp4 -i cidades/floripa/final/audio.wav \
+  -map 0:v -map 1:a -c:v copy -c:a aac -shortest cidades/floripa/final/floripa.mp4</pre>
+  </div></div>
+
+  <div class="step"><div class="b">8</div><div>
+    <h3>Versão narrada (opcional)</h3>
+    <p>A narração é uma camada de áudio sobre o mesmo vídeo: um texto por bloco em <code>cidades/&lt;id&gt;/narracao.json</code>, encaixado no início de cada evento. A gravação usa um motor de voz local do autor (<code>cardshorts</code>, fora deste repositório); com outra voz, grave um arquivo por bloco e preencha <code>narracao/tempos.json</code>.</p>
+<pre><span class="k">python3 scripts/narrar.py</span> && <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span></pre>
   </div></div>
 </div></section>
 

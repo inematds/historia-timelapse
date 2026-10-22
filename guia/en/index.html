@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>historia-timelapse — a city's history in 3D</title>
-<meta name="description" content="A local engine that turns a city's history into a 3D timelapse: real terrain, OpenStreetMap buildings appearing year by year, a timeline and cards with sources. Examples: Porto Alegre and Florianópolis.">
+<title>historia-timelapse — the history of a city in 3D</title>
+<meta name="description" content="A local engine that turns the history of a city into a 3D timelapse: real terrain, OpenStreetMap buildings appearing year by year, a timeline and cards with sources. Examples: Porto Alegre and Florianópolis.">
 <link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/historia-timelapse/guia/">
 <link rel="alternate" hreflang="en" href="https://inematds.github.io/historia-timelapse/guia/en/">
 <link rel="alternate" hreflang="es" href="https://inematds.github.io/historia-timelapse/guia/es/">
@@ -131,7 +131,7 @@
   <div class="wrap">
     <div>
       <span class="chip">3D timelapse · 100% local</span>
-      <h1>A city's history, growing <span class="amb">on the map</span></h1>
+      <h1>The history of a city, growing <span class="amb">on the map</span></h1>
       <p class="lead">From the first settlement to today: the city is born and grows in 3D, with the year, population, the flag of each era and cards with sources. No video AI and no render cost.</p>
       <div class="cta">
         <a class="btn" href="#exemplos">Watch the videos</a>
@@ -144,7 +144,7 @@
 
 <section id="resumo" class="resumo"><div class="wrap">
   <span class="chip">In short</span>
-  <p>historia-timelapse is a set of scripts that turns a city's history into a 3D video, as a timelapse. It uses the real terrain relief and the OpenStreetMap buildings: each building "is born" in the year its neighborhood was settled, and the city grows on screen along with the IBGE population counter. Events appear on cards with a number, an explanation and a source. To use it, you need a computer with a graphics card, Python and Node, and some historical research on the city.</p>
+  <p>historia-timelapse is a set of scripts that turns the history of a city into a 3D video, as a timelapse. It uses the real terrain relief and the OpenStreetMap buildings: each building "is born" in the year its neighborhood was settled, and the city grows on screen along with the IBGE population counter. Events appear in cards with a number, an explanation and a source. To use it, you need a computer with a graphics card, Python and Node, and historical research on the city.</p>
 </div></section>
 
 <section id="exemplos"><div class="wrap">
@@ -153,8 +153,8 @@
   <p class="sub">Made with this engine. Watch them on YouTube.</p>
   <div class="grid g2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
     <div class="vid"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/wg8jaN-sSXw" title="Florianópolis in 3D" loading="lazy" allowfullscreen></iframe></div>
-      <h3>Florianópolis — from Desterro to the state capital</h3>
-      <p>6 min, no narration: shell mounds, Dias Velho, fortresses, the Azorean settlers, the Spanish invasion of 1777, the name change in 1894, the bridges and the landfills. <a href="https://www.youtube.com/watch?v=wg8jaN-sSXw" target="_blank" rel="noopener">Open on YouTube</a></p></div>
+      <h3>Florianópolis — from Desterro to the capital</h3>
+      <p>6 min, no narration: shell mounds (sambaquis), Dias Velho, fortresses, Azorean settlers, the Spanish invasion of 1777, the name change in 1894, the bridges and the landfills. <a href="https://www.youtube.com/watch?v=wg8jaN-sSXw" target="_blank" rel="noopener">Open on YouTube</a></p></div>
     <div class="vid"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/MBBZXnTh6Lg" title="Porto Alegre in 3D" loading="lazy" allowfullscreen></iframe></div>
       <h3>Porto Alegre — 1772 a 2024</h3>
       <p>1 min 35 s, narrated: the founding, the Farroupilha sieges, the 1941 flood, the Mauá Wall and the 2024 flood. <a href="https://www.youtube.com/watch?v=MBBZXnTh6Lg" target="_blank" rel="noopener">Open on YouTube</a></p></div>
@@ -164,7 +164,7 @@
 <section id="oque"><div class="wrap">
   <span class="chip">What it is</span>
   <h2>A history engine on a 3D map</h2>
-  <p class="sub">Real data instead of invented images.</p>
+  <p class="sub">Real data instead of made-up images.</p>
   <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-en.jpg" alt="Banner with the features of historia-timelapse" loading="lazy" style="width:100%;display:block"></figure>
   <div class="grid g3">
     <div class="card"><h3>🏙️ The city is born year by year</h3><p>30 m Copernicus terrain and OpenStreetMap buildings (with Microsoft's open dataset where OSM has little). Each building gets a year from its neighborhood and the population curve.</p></div>
@@ -186,79 +186,118 @@
     <span>Render + soundtrack</span>
   </div>
   <div class="grid g2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:22px">
-    <figure style="margin:0"><img src="../assets/ex-globo.jpg" alt="Opening with the globe" loading="lazy" style="width:100%;border-radius:12px"><figcaption style="color:var(--mut);font-size:.9rem">Opening: a globe zooming in to the city</figcaption></figure>
+    <figure style="margin:0"><img src="../assets/ex-globo.jpg" alt="Opening with the globe" loading="lazy" style="width:100%;border-radius:12px"><figcaption style="color:var(--mut);font-size:.9rem">Opening: globe zooming in to the city</figcaption></figure>
     <figure style="margin:0"><img src="../assets/ex-floripa-forte.jpg" alt="Anhatomirim Fortress highlighted" loading="lazy" style="width:100%;border-radius:12px"><figcaption style="color:var(--mut);font-size:.9rem">Anhatomirim Fortress (1739) highlighted</figcaption></figure>
     <figure style="margin:0"><img src="../assets/ex-floripa-ufsc.jpg" alt="Florianópolis in 1961" loading="lazy" style="width:100%;border-radius:12px"><figcaption style="color:var(--mut);font-size:.9rem">Florianópolis in 1961: UFSC is founded</figcaption></figure>
-    <figure style="margin:0"><img src="../assets/ex-poa-cheia.jpg" alt="Porto Alegre during the 2024 flood" loading="lazy" style="width:100%;border-radius:12px"><figcaption style="color:var(--mut);font-size:.9rem">Porto Alegre, May 2024: the water returns to the downtown</figcaption></figure>
+    <figure style="margin:0"><img src="../assets/ex-poa-cheia.jpg" alt="Porto Alegre during the 2024 flood" loading="lazy" style="width:100%;border-radius:12px"><figcaption style="color:var(--mut);font-size:.9rem">Porto Alegre, May 2024: the water returns to the city center</figcaption></figure>
   </div>
 </div></section>
 
 <section id="pre"><div class="wrap">
   <span class="chip">Prerequisites</span>
   <h2>What you need</h2>
-  <p class="sub">Linux with a graphics card, Python 3 and Node 20+. The data are public files.</p>
+  <p class="sub">Linux with a graphics card, Python 3, Node 20+ and ffmpeg. The data are public files downloaded by a script; there is no API and no cost.</p>
   <div class="grid g3">
-    <div class="card"><h3>Python</h3><p>To cut out the map and prepare the data.</p><pre><span class="k">python3 -m venv .venv</span>
-<span class="k">.venv/bin/pip install</span> osmium tifffile imagecodecs shapely numpy pyproj scipy pillow</pre></div>
-    <div class="card"><h3>Node + Chrome</h3><p>The render uses Playwright with Chromium.</p><pre><span class="k">cd motor && npm i</span>
-<span class="k">npx playwright install chromium</span></pre></div>
-    <div class="card"><h3>Public data</h3><p>A regional OSM extract (Geofabrik) and Copernicus GLO-30 terrain tiles in <code>dl/</code>.</p><pre><span class="c"># example: Southern Brazil + 1 terrain tile</span>
-<span class="s">https://download.geofabrik.de/south-america/brazil/sul-latest.osm.pbf</span>
-<span class="s">https://copernicus-dem-30m.s3.amazonaws.com/</span></pre></div>
+    <div class="card"><h3>Software</h3><p>Python, Node, ffmpeg and git.</p><pre><span class="k">sudo apt install</span> python3-venv nodejs npm ffmpeg git</pre></div>
+    <div class="card"><h3>Graphics card</h3><p>The render uses Chrome with the GPU (Vulkan). Without Vulkan, run with <code>GL="--use-angle=gl"</code> before the command (slower).</p><pre><span class="c"># ~0.1 s per frame at 1080p on an NVIDIA GPU</span></pre></div>
+    <div class="card"><h3>Disk space</h3><p>The regional OSM extract is hundreds of MB (southern Brazil, ~430 MB). Each terrain tile is 20–50 MB.</p><pre><span class="c"># everything stays in the dl/ folder (outside git)</span></pre></div>
   </div>
 </div></section>
 
 <section id="guia"><div class="wrap">
   <span class="chip">User guide · step by step</span>
   <h2>Make the video of your city</h2>
-  <p class="sub">Each city lives in <code>cidades/&lt;id&gt;/</code>. The scripts read the city from the <code>CIDADE</code> variable.</p>
+  <p class="sub">Each city lives in <code>cidades/&lt;id&gt;/</code>. The scripts read the city from the <code>CIDADE</code> variable. The examples use Florianópolis (<code>floripa</code>).</p>
+
+  <div class="step"><div class="b">0</div><div>
+    <h3>Download the project and install</h3>
+    <p>Creates the Python environment (venv = a folder with the libraries for this project only) and installs Playwright, which opens Chrome to record the frames.</p>
+<pre><span class="k">git clone</span> https://github.com/inematds/historia-timelapse && <span class="k">cd</span> historia-timelapse
+<span class="k">python3 -m venv .venv</span>
+<span class="k">.venv/bin/pip install</span> osmium tifffile imagecodecs \
+    shapely numpy pyproj scipy pillow
+<span class="k">cd motor && npm i && npx playwright install chromium && cd ..</span></pre>
+  </div></div>
 
   <div class="step"><div class="b">1</div><div>
     <h3>Create the city configuration</h3>
-    <p>The map bounding box (west, south, east, north), the municipality name in OSM and the point where the city began.</p>
+    <p><code>bbox</code> is the map rectangle in degrees: west, south, east, north (you can draw it at bboxfinder.com). <code>municipio_osm</code> is the exact name of the municipality in OpenStreetMap. <code>centro_antigo</code> is the point where the city began.</p>
 <pre><span class="c"># cidades/floripa/config.json</span>
 { "nome": "Florianópolis", "bbox": [-48.80, -27.92, -48.33, -27.33],
-  "pbf": "dl/sul.osm.pbf", "municipio_osm": "Florianópolis",
-  "centro_antigo": [-48.5490, -27.5965] }</pre>
+  "pbf": "dl/sul.osm.pbf",
+  "pbf_url": "https://download.geofabrik.de/south-america/brazil/sul-latest.osm.pbf",
+  "municipio_osm": "Florianópolis", "centro_antigo": [-48.5490, -27.5965],
+  "musicas": ["cidades/floripa/musica/faixa-1.mp3"] }
+<span class="c"># optional: "efeitos" (bridges, forts, landfills), "tex" (texture size),</span>
+<span class="c"># "agua_baixa_m", "pop_modelo_extra" — see cidades/floripa/config.json</span></pre>
   </div></div>
 
   <div class="step"><div class="b">2</div><div>
-    <h3>Do the historical research</h3>
-    <p>In <code>cidades/&lt;id&gt;/dados/pesquisa/</code>: <code>populacao.json</code> (censuses and estimates), <code>eventos.json</code> (events with a source and coordinates) and <code>bairros_epocas.json</code> (the settlement year of each neighborhood). Use the Porto Alegre and Florianópolis ones as a model.</p>
-<pre><span class="k">ls</span> cidades/floripa/dados/pesquisa/   <span class="c"># population, events, neighborhood eras, regimes, images, RESUMO.md</span></pre>
+    <h3>Download the public data</h3>
+    <p>The script downloads the OSM extract (<code>.pbf</code> format), the terrain tiles that cover your <code>bbox</code> and, with <code>--microsoft</code>, the Microsoft buildings for places where OSM has few buildings.</p>
+<pre><span class="k">export CIDADE=floripa</span>
+<span class="k">.venv/bin/python -I scripts/baixar_dados.py</span> --microsoft</pre>
   </div></div>
 
   <div class="step"><div class="b">3</div><div>
-    <h3>Cut out the map and prepare the data</h3>
-    <p>Buildings, water, neighborhoods, terrain with the sea, the birth year of each building and effects (bridges, forts, landfills).</p>
-<pre><span class="k">export CIDADE=floripa</span>
-<span class="k">.venv/bin/python -I scripts/extrai_osm.py</span> dl/sul.osm.pbf cidades/floripa/dados/brutos
-<span class="k">.venv/bin/python -I scripts/extrai_msbuild.py</span>   <span class="c"># optional: Microsoft buildings where OSM is sparse</span>
-<span class="k">.venv/bin/python -I scripts/prep_terreno.py</span>
-<span class="k">.venv/bin/python -I scripts/prep_predios.py</span>
-<span class="k">.venv/bin/python -I scripts/modelo_anos.py</span>
-<span class="k">.venv/bin/python -I scripts/extrai_feicoes.py</span> && <span class="k">.venv/bin/python -I scripts/prep_efeitos.py</span></pre>
+    <h3>Do the historical research</h3>
+    <p>Three files go in <code>cidades/&lt;id&gt;/dados/pesquisa/</code>. Copy the Florianópolis ones as a template and replace the content.</p>
+<pre><span class="c"># populacao.json — censuses and estimates</span>
+{ "serie": [ { "ano": 1872, "pop": 25709, "fonte_url": "https://..." } ] }
+<span class="c"># eventos.json — one event per item, with coordinates and source</span>
+{ "eventos": [ { "id": "ponte-hercilio", "ano": 1926, "titulo_curto_PT": "A PONTE HERCÍLIO LUZ",
+    "legenda": "...", "detalhe": "...", "numero_impacto": "821 METROS",
+    "local": { "lat": -27.5935, "lon": -48.5649 }, "fontes": ["https://..."] } ] }
+<span class="c"># bairros_epocas.json — year each neighborhood began to be settled</span>
+{ "bairros": [ { "bairro": "Trindade", "ano_aprox_ocupacao": 1960 } ] }</pre>
   </div></div>
 
   <div class="step"><div class="b">4</div><div>
-    <h3>Write the script and generate the scene</h3>
-    <p>The script is a list of blocks: years, camera, card and effects. For Florianópolis it is built by <code>roteiro_floripa.py</code> from the research.</p>
-<pre><span class="k">python3</span> cidades/floripa/roteiro_floripa.py
-<span class="k">.venv/bin/python -I scripts/gerar_cena.py</span>   <span class="c"># cidades/floripa/cena/cena.js</span></pre>
+    <h3>Prepare the map</h3>
+    <p>Cuts out buildings, water and neighborhoods, builds the terrain with the sea, gives each building a birth year and prepares bridges, forts and landfills.</p>
+<pre><span class="k">.venv/bin/python -I scripts/extrai_osm.py</span> dl/sul.osm.pbf cidades/floripa/dados/brutos
+<span class="k">.venv/bin/python -I scripts/extrai_msbuild.py</span>   <span class="c"># only if you downloaded the Microsoft buildings</span>
+<span class="k">.venv/bin/python -I scripts/prep_terreno.py</span>
+<span class="k">.venv/bin/python -I scripts/prep_predios.py</span>
+<span class="k">.venv/bin/python -I scripts/modelo_anos.py</span>
+<span class="k">.venv/bin/python -I scripts/extrai_feicoes.py</span>
+<span class="k">.venv/bin/python -I scripts/prep_efeitos.py</span></pre>
   </div></div>
 
   <div class="step"><div class="b">5</div><div>
-    <h3>Check frames before rendering</h3>
-    <p>Render just a few seconds to check the framing, cards and effects.</p>
-<pre><span class="k">cd motor && node render.mjs</span> ../cidades/floripa/cena --quadros 20,60,120   <span class="c"># q_*.jpg in the scene folder</span></pre>
+    <h3>Write the script and generate the scene</h3>
+    <p><code>roteiro.json</code> is a list of blocks. Each block has the years (start, event year, end), the starting and arriving camera, the duration and the card. In Florianópolis it is assembled by <code>roteiro_floripa.py</code> from the research; use it as a template.</p>
+<pre><span class="c"># one block of roteiro.json</span>
+{ "id": "ponte-hercilio", "anos": [1895, 1926, 1927], "pulo": 2.0, "dur": 9.5,
+  "cam": [ {"lon": -48.552, "lat": -27.600, "zoom": 14, "pitch": 58, "bearing": -40},
+           {"lon": -48.570, "lat": -27.602, "zoom": 13.7, "pitch": 60, "bearing": -70} ],
+  "cartao": { "numero": "821 METROS", "titulo": "A ponte <b>Hercílio Luz</b>",
+              "legenda": "...", "detalhe": "...", "fonte": "IBGE" },
+  "destaca": ["linha:hercilio"] }
+<span class="k">python3</span> cidades/floripa/roteiro_floripa.py
+<span class="k">.venv/bin/python -I scripts/gerar_cena.py</span>   <span class="c"># generates cidades/floripa/cena/cena.js</span></pre>
   </div></div>
 
   <div class="step"><div class="b">6</div><div>
-    <h3>Render and add the soundtrack</h3>
-    <p>Without narration: looped music with a transition. With narration: see <code>cidades/poa/narracao/</code>.</p>
-<pre><span class="k">node render.mjs</span> ../cidades/floripa/cena ../cidades/floripa/final/video.mp4
-<span class="k">CIDADE=floripa ../.venv/bin/python -I ../scripts/montar_musica.py</span>
-<span class="k">ffmpeg</span> -i ../cidades/floripa/final/video.mp4 -i ../cidades/floripa/final/audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -shortest final.mp4</pre>
+    <h3>Check a few frames</h3>
+    <p>Records only the requested seconds, so you can look at framing, cards and effects before the whole video.</p>
+<pre><span class="k">cd motor && node render.mjs</span> ../cidades/floripa/cena --quadros 20,60,120 && <span class="k">cd ..</span>
+<span class="c"># the q_*.jpg images stay in cidades/floripa/cena/</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">7</div><div>
+    <h3>Render, add the music and join</h3>
+    <p>The render is done in 60 s chunks (the browser restarts between them, to avoid running out of memory). Put your own instrumental tracks in <code>cidades/floripa/musica/</code> or list them in <code>"musicas"</code> in the config.</p>
+<pre><span class="k">bash motor/render_trechos.sh</span> cidades/floripa/cena cidades/floripa/final/video.mp4
+<span class="k">.venv/bin/python -I scripts/montar_musica.py</span>   <span class="c"># cidades/floripa/final/audio.wav</span>
+<span class="k">ffmpeg</span> -i cidades/floripa/final/video.mp4 -i cidades/floripa/final/audio.wav \
+  -map 0:v -map 1:a -c:v copy -c:a aac -shortest cidades/floripa/final/floripa.mp4</pre>
+  </div></div>
+
+  <div class="step"><div class="b">8</div><div>
+    <h3>Narrated version (optional)</h3>
+    <p>The narration is an audio layer over the same video: one text per block in <code>cidades/&lt;id&gt;/narracao.json</code>, fitted to the start of each event. The recording uses the author's local voice engine (<code>cardshorts</code>, outside this repository); with another voice, record one file per block and fill in <code>narracao/tempos.json</code>.</p>
+<pre><span class="k">python3 scripts/narrar.py</span> && <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span></pre>
   </div></div>
 </div></section>
 
@@ -267,8 +306,8 @@
   <h2>Next steps</h2>
   <p class="sub">What already exists and what is coming.</p>
   <div class="phase"><div class="tag">Done</div><div class="d"><strong>Porto Alegre and Florianópolis</strong><span>Engine with globe, timeline, cards with sources, floods, sieges, fortresses, bridges and landfills.</span></div></div>
-  <div class="phase"><div class="tag">Next</div><div class="d"><strong>Version with old images</strong><span>Public-domain engravings and historical photos appearing alongside the events.</span></div></div>
-  <div class="phase"><div class="tag">Later</div><div class="d"><strong>More cities and a skill</strong><span>Turn the workflow into a skill so a new city needs only the research.</span></div></div>
+  <div class="phase"><div class="tag">Next</div><div class="d"><strong>Version with historical images</strong><span>Public-domain engravings and historical photos appearing alongside the events.</span></div></div>
+  <div class="phase"><div class="tag">Later</div><div class="d"><strong>More cities and a skill</strong><span>Turn the workflow into a skill to make a new city from the research alone.</span></div></div>
 </div></section>
 
 <footer>

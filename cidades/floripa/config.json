@@ -85,5 +85,10 @@
    40
   ]
  ],
- "tex": 2
+ "tex": 2,
+ "pbf_url": "https://download.geofabrik.de/south-america/brazil/sul-latest.osm.pbf",
+ "musicas": [
+  "~/projetos/output/musicas/balao-exploracao-20260818/faixa-1.mp3",
+  "~/projetos/output/musicas/balao-exploracao-20260818/faixa-2.mp3"
+ ]
 }

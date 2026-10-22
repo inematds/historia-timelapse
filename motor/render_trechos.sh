@@ -2,8 +2,8 @@
 # Render em trechos (navegador novo a cada trecho) para não estourar memória em vídeos longos.
 # Uso: bash render_trechos.sh <pasta-da-cena> <saida.mp4> [segundos-por-trecho]
 set -euo pipefail
+CENA=$(realpath "$1"); SAIDA=$(realpath -m "$2"); PASSO=${3:-60}
 cd "$(dirname "$0")"
-CENA=$1; SAIDA=$2; PASSO=${3:-60}
 DUR=$(python3 -c "import json,re,sys;print(json.loads(re.sub(r'^window.CENA = |;\s*$','',open('$CENA/cena.js').read()))['duracao'])")
 TMP=$(dirname "$SAIDA")/trechos; mkdir -p "$TMP"; rm -f "$TMP"/*.mp4 "$TMP"/lista.txt
 i=0; de=0
