@@ -101,7 +101,7 @@ def main():
         for c in b.get("chamadas", []):
             C["chamadas"].append({**c, "t0": round(te + 0.5, 3), "t1": round(t1 - 0.3, 3)})
         if "galeria" in b:
-            C["galeria"] = {**b["galeria"], "t0": round(te + 0.3, 3), "t1": round(t1 - 3.4, 3)}
+            C["galeria"] = {**b["galeria"], "t0": round(te + 0.3, 3), "t1": round(t1 if b["galeria"].get("fica") else t1 - 3.4, 3)}
         if "tom" in b:
             C["tons"].append({**b["tom"], "t0": round(te, 3), "t1": round(t1, 3)})
         if b.get("muro_destaque"):

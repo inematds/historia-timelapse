@@ -21,6 +21,7 @@ Timelapse 3D da história de cidades (mapa real + prédios do OSM + cartões com
 Quando o Nei corrigir algo ou eu pegar um erro meu: antes de continuar, acrescentar a lição como uma linha no TOPO da seção Lessons abaixo.
 
 ## Lessons
+- Ponte/linha que "nasce" num bloco: `desenha` (em anos) tem que caber no avanço do ano dentro do bloco, senão ela fica pela metade e as torres não aparecem; câmera lateral = bearing perpendicular à ponte (Hercílio do norte, bearing −180, alvo ~200 m ao sul dela). Conferir o quadro depois da chegada da câmera (45% do bloco). (22/10/2026)
 - Globo: desenhar a Terra pixel a pixel (ortográfica inversa) com Blue Marble + recorte regional em alta + textura da cidade, terminando no mesmo m/px do mapa 3D (ls ≈ zoom + log2 do cos da latitude); BitmapLayer grande do deck (satélite ao redor) não apareceu — usar fundo de duas cores com a cor tirada do quadro. Igualar a cor média da textura ao satélite (`cor_satelite`) some com o retângulo. (21/10/2026)
 - Render longo (6 min) perdeu o terreno no quadro ~4.500 ("Array buffer allocation failed" no terreno-mesh): objetos de prop (elevationDecoder, loadOptions, material, extensions) criados uma vez, textura menor e render em trechos de 60 s (`motor/render_trechos.sh`, que para no 1º erro). Conferir o log antes de publicar. (21/10/2026)
 - Ano no contador tem que estar no valor que a fala/cartão cita quando ele aparece: avanço rápido do tempo ANTES do evento; efeitos (tropas, cartão, rótulo do muro) só depois do avanço e só a partir do ano real. (21/10/2026)

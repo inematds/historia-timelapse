@@ -27,16 +27,20 @@
   #linha .m { position:absolute; top:12px; width:12px; height:12px; margin-left:-6px; border-radius:50%; background:#fff; box-shadow:0 0 0 2px rgba(12,12,16,.6); }
   #linha .m.ok { background:var(--amb); }
   #linha .sec { position:absolute; top:30px; font:700 16px Inter; color:#fff; transform:translateX(-50%); text-shadow:0 1px 4px #000; }
-  #faixa { position:absolute; left:0; right:0; bottom:0; height:420px; pointer-events:none; opacity:0;
+  #faixa { position:absolute; left:0; right:0; bottom:0; height:260px; pointer-events:none; opacity:0;
     background:linear-gradient(rgba(12,12,16,0), rgba(12,12,16,.74) 50%, rgba(12,12,16,.88)); }
-  #fimt { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; opacity:0; }
-  #fimt .t { font:800 96px Sora; } #fimt .s { font:700 34px Inter; color:var(--amb); margin-top:14px; }
-  #cartao { position:absolute; left:120px; right:120px; bottom:64px; text-align:center; color:#fff; opacity:0; }
+  #fimt { position:absolute; left:0; right:0; top:0; bottom:300px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; opacity:0; }
+  #fimt .t { font:800 92px Sora; text-shadow:0 4px 22px rgba(0,0,0,.9); } #fimt .m { font:800 168px/1 Sora; color:var(--amb); letter-spacing:.01em; margin-top:26px; text-shadow:0 6px 30px rgba(0,0,0,.9); } #fimt .m span { color:#fff; } #fimt .s { font:700 34px Inter; color:var(--amb); margin-top:14px; }
+  #cartao { position:absolute; inset:0; text-align:center; color:#fff; opacity:0; pointer-events:none; }
+  #cartao .cg { position:absolute; left:120px; right:120px; top:262px; text-shadow:0 4px 22px rgba(0,0,0,.9), 0 0 4px #000; }
+  #cartao .cp { position:absolute; left:200px; right:200px; bottom:24px; }
+  #topoc { position:absolute; left:0; right:0; top:0; height:600px; pointer-events:none; opacity:0;
+    background:linear-gradient(rgba(12,12,16,.55), rgba(12,12,16,.42) 55%, rgba(12,12,16,0)); }
   #cartao .n { font:800 112px/1 Sora; color:var(--amb); letter-spacing:-.02em; margin-bottom:6px; }
   #cartao .t { font:800 66px Sora; letter-spacing:.01em; text-transform:uppercase; }
   #cartao .t b { color:var(--amb); font-weight:800; }
   #cartao .l { font:700 32px Inter; margin-top:10px; }
-  #cartao .d { font:600 27px/1.35 Inter; margin:10px auto 0; max-width:1380px; opacity:.95; }
+  #cartao .d { font:600 25px/1.32 Inter; margin:6px auto 0; max-width:1300px; opacity:.95; }
   #cartao .f { font:600 22px Inter; opacity:.8; margin-top:10px; }
   #capa { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding-left:110px;
     color:#fff; opacity:0; background:linear-gradient(90deg, rgba(12,12,16,.78) 0%, rgba(12,12,16,.35) 55%, rgba(12,12,16,0) 80%); }
@@ -52,16 +56,16 @@
   #chamadas .et { position:absolute; background:rgba(12,12,16,.82); border:2px solid var(--amb); border-radius:10px; padding:8px 14px;
     color:#fff; font:700 24px Inter; white-space:nowrap; box-shadow:0 4px 16px rgba(0,0,0,.5); }
   #chamadas .et small { display:block; font:600 18px Inter; color:var(--amb); }
-  #epoca { position:absolute; left:56px; top:190px; width:540px; opacity:0; }
+  #epoca { position:absolute; left:32px; bottom:26px; width:440px; opacity:0; z-index:1; }
   #epoca .q { border:3px solid #e9dcc0; border-radius:6px; box-shadow:0 12px 40px rgba(0,0,0,.6); background:#111; overflow:hidden; }
-  #epoca img { display:block; width:100%; max-height:380px; object-fit:cover; }
-  #epoca .c { margin-top:10px; color:#fff; font:700 22px Inter; }
-  #epoca .c small { display:block; font:500 17px Inter; opacity:.85; margin-top:3px; }
-  #galeria { position:absolute; inset:0; background:#0c0c10; opacity:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-  #galeria .gt { color:#fff; font:800 56px Sora; margin-bottom:26px; } #galeria .gt b { color:var(--amb); }
-  #galeria .gg { display:grid; grid-template-columns:repeat(4, 380px); gap:16px; }
-  #galeria .gg div { height:200px; background-size:cover; background-position:center; border-radius:6px; border:2px solid #e9dcc0; }
-  #galeria .gc { color:#cfcfd6; font:500 17px Inter; margin-top:22px; max-width:1600px; text-align:center; }
+  #epoca img { display:block; width:100%; max-height:280px; object-fit:cover; }
+  #epoca .c { margin-top:8px; color:#fff; font:700 20px Inter; }
+  #epoca .c small { display:block; font:500 15px Inter; opacity:.85; margin-top:3px; }
+  #galeria { position:absolute; inset:0; background:linear-gradient(rgba(12,12,16,0) 50%, rgba(12,12,16,.88)); opacity:0; }
+  #galeria .gt { position:absolute; left:0; right:0; bottom:236px; text-align:center; color:#fff; font:800 34px Sora; text-shadow:0 2px 8px #000; } #galeria .gt b { color:var(--amb); }
+  #galeria .gg { position:absolute; left:50%; bottom:62px; transform:translateX(-50%); display:grid; grid-template-columns:repeat(8, 212px); gap:12px; }
+  #galeria .gg div { height:158px; background-size:cover; background-position:center; border-radius:6px; border:2px solid #e9dcc0; }
+  #galeria .gc { position:absolute; left:160px; right:160px; bottom:26px; color:#cfcfd6; font:500 15px Inter; text-align:center; }
   #marca { position:absolute; right:60px; bottom:30px; color:#fff; font:700 22px Sora; opacity:.85; }
   #marca i { color:var(--amb); font-style:normal; }
 </style>
@@ -76,12 +80,12 @@
 <div id="reg" class="sombra"><span id="bandeira"></span><span id="regnome"></span></div>
 <div id="tempo" class="sombra"><div id="ano"></div><div id="pop"></div><div id="popf"></div></div>
 <div id="faixa"></div>
-<div id="cartao" class="sombra"><div class="n"></div><div class="t"></div><div class="l"></div><div class="d"></div><div class="f"></div></div>
+<div id="topoc"></div><div id="cartao" class="sombra"><div class="cg"><div class="n"></div><div class="t"></div></div><div class="cp"><div class="l"></div><div class="d"></div><div class="f"></div></div></div>
 <canvas id="globo" width="1920" height="1080"></canvas>
 <div id="capa"><div class="k"></div><div class="t"></div><div class="s"></div></div>
 <div id="galeria"><div class="gt"></div><div class="gg"></div><div class="gc"></div></div>
 <div id="fim" style="position:absolute;inset:0;background:#0c0c10;opacity:0"></div>
-<div id="fimt"><div class="t"></div><div class="s"></div></div>
+<div id="fimt" class="sombra"><div class="t"></div><div class="s"></div><div class="m"></div></div>
 <div id="marca" class="sombra">INEMA<i>.</i>CLUB</div>
 <script>
 const C = window.CENA;
@@ -220,8 +224,26 @@ function camadas(t) {
     const k = clamp01((ano - l.ano) / (l.desenha || 1.5)), dest = dentro(t, l.destaque);
     const parte = g.map(p => { const m = Math.max(2, Math.ceil(p.length * k)); return p.slice(0, m); });
     L.push(new deck.PathLayer({ id: 'linha-' + l.id, data: parte, getPath: d => d.map(p => [p[0], p[1], (p[2] + (l.sobe || 30)) * EXZ]),
-      getColor: dest ? AMB : (l.cor || [236, 236, 236]), getWidth: dest ? 9 : 5, widthUnits: 'pixels', capRounded: true, jointRounded: true,
+      getColor: dest ? AMB : (l.cor || [236, 236, 236]), getWidth: dest ? 12 : 6, widthUnits: 'pixels', capRounded: true, jointRounded: true,
       updateTriggers: { getColor: dest, getWidth: dest, getPath: k } }));
+    if (l.torres && k >= 1) {
+      const p = g[0], cum = [0]; for (let i = 1; i < p.length; i++) cum.push(cum[i - 1] + Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]));
+      const em = f => { const d = f * cum[cum.length - 1]; let i = 1; while (i < p.length - 1 && cum[i] < d) i++;
+        const u = (d - cum[i - 1]) / ((cum[i] - cum[i - 1]) || 1); return [0, 1, 2].map(j => p[i - 1][j] + (p[i][j] - p[i - 1][j]) * u); };
+      const T = l.torres, so = l.sobe || 30, alt = T.alt || 45, a = em(T.em[0]), b = em(T.em[1]);
+      const topo = q => [q[0], q[1], (q[2] + so + alt) * EXZ], base = q => [q[0], q[1], (q[2] + so) * EXZ];
+      const cabo = [base(em(0)), topo(a)];
+      for (let i = 1; i < 24; i++) { const u = i / 24, f = T.em[0] + (T.em[1] - T.em[0]) * u, q = em(f), z = q[2] + so + alt * (0.1 + 0.9 * (2 * u - 1) ** 2);
+        cabo.push([q[0], q[1], z * EXZ]); }
+      cabo.push(topo(b), base(em(1)));
+      const cor = dest ? AMB : (l.cor || [236, 236, 236]);
+      const qd = (q, r) => { const z = (q[2] + so - 6) * EXZ, dl = r / 111320, dn = r / (111320 * Math.cos(q[1] * Math.PI / 180));
+        return [[q[0] - dn, q[1] - dl, z], [q[0] + dn, q[1] - dl, z], [q[0] + dn, q[1] + dl, z], [q[0] - dn, q[1] + dl, z]]; };
+      L.push(new deck.SolidPolygonLayer({ id: 'torres-' + l.id, data: [qd(a, 7), qd(b, 7)], getPolygon: d => d, extruded: true,
+        getElevation: (alt + 8) * EXZ, getFillColor: cor, material: { ambient: .7, diffuse: .5 }, updateTriggers: { getFillColor: dest } }));
+      L.push(new deck.PathLayer({ id: 'cabo-' + l.id, data: [cabo], getPath: d => d, getColor: cor, getWidth: 4, widthUnits: 'pixels',
+        jointRounded: true, updateTriggers: { getColor: dest } }));
+    }
   }
   // LEGADO (POA): aterro único e muro
   if (C.aterro && D.F.aterro && ano < C.aterro.ano1) {
@@ -402,7 +424,7 @@ function html(t) {
     cart.querySelector('.d').textContent = c.detalhe || ''; cart.querySelector('.f').textContent = c.fonte ? 'Fonte: ' + c.fonte : '';
     cart.style.opacity = Math.min(1, (t - c.t0) / .5, (c.t1 - t) / .5);
   } else cart.style.opacity = 0;
-  $('faixa').style.opacity = cart.style.opacity;
+  $('faixa').style.opacity = cart.style.opacity; $('topoc').style.opacity = cart.style.opacity;
   const cap = $('capa'), k = C.capa; let kc = 0;
   if (k && t <= k.t1) {
     if (k.imagem) { cap.className = 'img'; cap.style.backgroundImage = `url(${k.imagem})`; cap.querySelector('.t').innerHTML = ''; cap.querySelector('.k').textContent = ''; cap.querySelector('.s').textContent = ''; }
@@ -421,7 +443,7 @@ function html(t) {
   if (vp) for (const a of alvo) {
     const [x, y] = vp.project(a.p); if (!(x > -50 && x < 1970 && y > 0 && y < 1080)) continue;
     const esq = x > 1050, ex = esq ? Math.max(60, x - 420) : x + 150;   // perto do painel da direita: etiqueta vai para a esquerda
-    const ey = Math.max(esq ? 360 : 280, y - 150);
+    const ey = Math.max(c ? 470 : (esq ? 360 : 280), y - 150);
     svg += `<line x1="${x}" y1="${y}" x2="${ex}" y2="${ey + 24}" stroke="#FACC15" stroke-width="3" opacity="${a.o}"/><circle cx="${x}" cy="${y}" r="7" fill="#FACC15" opacity="${a.o}"/>`;
     htm += `<div class="et" style="left:${ex}px;top:${ey}px;opacity:${a.o}">${a.txt}${a.sub ? `<small>${a.sub}</small>` : ''}</div>`;
   }
@@ -431,19 +453,21 @@ function html(t) {
   if (im) { if (ep.dataset.src !== im.src) { ep.querySelector('img').src = im.src; ep.dataset.src = im.src;
       ep.querySelector('.c').innerHTML = `${im.legenda}<small>${im.credito}</small>`; }
     ep.style.opacity = Math.min(1, (t - im.t0) / .6, (im.t1 - t) / .6); } else ep.style.opacity = 0;
+  const cp = cart.querySelector('.cp'); cp.style.left = im ? '500px' : '200px'; cp.style.right = im ? '250px' : '200px';
   // GALERIA final
   const ga = $('galeria'), GL = C.galeria;
   if (GL && t >= GL.t0 - 1 && t <= GL.t1 + 1) {
     if (!ga.dataset.ok) { ga.dataset.ok = 1; ga.querySelector('.gt').innerHTML = GL.titulo; ga.querySelector('.gc').textContent = GL.creditos;
       ga.querySelector('.gg').innerHTML = GL.itens.map(i => `<div style="background-image:url(${i})"></div>`).join(''); }
-    ga.style.opacity = Math.max(0, Math.min(1, (t - GL.t0) / .8, (GL.t1 - t) / .8));
+    ga.style.opacity = Math.max(0, Math.min(1, (t - GL.t0) / .8, GL.fica ? 1 : (GL.t1 - t) / .8));
   } else ga.style.opacity = 0;
   globo(t);
-  const kf = Math.max(0, Math.min(1, (t - (C.duracao - 3.2)) / 1.0));
-  $('fim').style.opacity = kf;
+  const FM = C.fim || {}, kf = Math.max(0, Math.min(1, (t - (C.duracao - (FM.dura || 3.2))) / 1.0));
+  $('fim').style.opacity = kf * (FM.escuro ?? 1);
+  $('fimt').querySelector('.m').innerHTML = FM.marca || ''; $('marca').style.opacity = FM.marca ? .85 * (1 - kf) : .85;
   $('fimt').querySelector('.t').textContent = (C.fim || {}).titulo || '';
   $('fimt').querySelector('.s').textContent = (C.fim || {}).sub || '';
-  $('fimt').style.opacity = Math.max(0, Math.min(kf, (C.duracao - 0.2 - t) / 0.6));
+  $('fimt').style.opacity = FM.fica ? kf : Math.max(0, Math.min(kf, (C.duracao - 0.2 - t) / 0.6));
   const tom = $('tom'), f = (C.tons || []).find(x => t >= x.t0 && t <= x.t1);
   if (f) { tom.style.background = f.cor; tom.style.opacity = f.forca * Math.min(1, (t - f.t0) / .8, (f.t1 - t) / .8); } else tom.style.opacity = 0;
 }
@@ -451,7 +475,7 @@ function html(t) {
 window.render = t => new Promise(res => {
   tAtual = t; aguardando = res;
   const v = chave(C.cam, t);
-  mapa.setProps({ viewState: { longitude: v.lon, latitude: v.lat, zoom: v.zoom, pitch: v.pitch, bearing: v.bearing }, layers: camadas(t) });
+  mapa.setProps({ viewState: { longitude: v.lon, latitude: v.lat, zoom: v.zoom, pitch: v.pitch, bearing: v.bearing, maxPitch: 85 }, layers: camadas(t) });
   mapa.redraw(true);
 });
 

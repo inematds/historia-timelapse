@@ -40,6 +40,10 @@ CANASV = cam(-48.468, -27.455, 12.4, 55, -10)
 RIBEIRAO = cam(-48.540, -27.712, 12.8, 55, -20)
 PONTES = cam(-48.570, -27.602, 13.7, 60, -70)
 TRINDADE = cam(-48.528, -27.603, 13.3, 57, -25)
+# pontes de lado: Hercílio Luz vista do norte (olhando para o sul); Colombo/Pedro Ivo vistas do sul (a Hercílio fica ao fundo)
+PONTE_N = cam(-48.5655, -27.5960, 16.3, 62, -180)
+PONTE_S = cam(-48.5646, -27.5968, 16.2, 64, 0)
+PONTE_S2 = cam(-48.5650, -27.5970, 16.1, 63, 14)
 ESTREITO = cam(-48.580, -27.598, 13.3, 57, -80)
 
 
@@ -127,16 +131,16 @@ blocos = [
           legenda="Floriano manda o coronel Moreira César; presos são fuzilados na fortaleza de Anhatomirim",
           destaca=["forte:anhatomirim"], tom={"cor": "#6a2a2a", "forca": 0.35}),
     bloco(I["nome"], [1894.5, 1894.75, 1895], ANHA, CENTRO, 9.0, pulo=0.4, destaque=1, numero="1º/10/1894"),
-    bloco(I["hercilio"], [1895, 1926.36, 1927], CENTRO, PONTES, 9.5, pulo=2.0, destaca=["linha:hercilio"], destaque=2),
+    bloco(I["hercilio"], [1895, 1926.36, 1927], CENTRO, PONTE_N, 11.5, pulo=2.0, destaca=["linha:hercilio"], destaque=2),
     bloco(I["estreito"], [1927, 1944, 1945], PONTES, ESTREITO, 8.5, pulo=1.5, destaque=2),
     bloco(I["ufsc"], [1945, 1960.96, 1962], ESTREITO, TRINDADE, 8.5, pulo=1.5),
     bloco(I["beiramar"], [1962, 1963, 1968.5], TRINDADE, cam(-48.540, -27.592, 13.6, 60, -25), 9.0, pulo=0.6, destaca=["area:beira_mar"], destaque=2,
           detalhe="Cerca de 70 hectares de mar viram avenida e bairro na Baía Norte (área aproximada no mapa)."),
     bloco(I["baiasul"], [1968.5, 1972, 1975], cam(-48.540, -27.592, 13.6, 60, -25), cam(-48.556, -27.606, 13.8, 60, -60), 9.0, pulo=0.6,
           destaca=["area:baia_sul"], destaque=2, detalhe="O centro avança sobre a Baía Sul em camadas (área aproximada no mapa)."),
-    bloco(I["colombo"], [1975, 1975.2, 1976], cam(-48.556, -27.606, 13.8, 60, -60), PONTES, 8.5, pulo=0.3, destaca=["linha:colombo"], destaque=2),
+    bloco(I["colombo"], [1975, 1975.2, 1976], cam(-48.556, -27.606, 13.8, 60, -60), PONTE_S, 10.5, pulo=0.3, destaca=["linha:colombo"], destaque=2),
     bloco(I["norte"], [1976, 1980, 1990], PONTES, CANASV, 9.0, pulo=1.0, titulo="O norte vira <b>praia</b>", numero="ANOS 1970"),
-    bloco(I["pedroivo"], [1990, 1991.2, 1992], CANASV, PONTES, 8.5, pulo=0.6, destaca=["linha:pedroivo"], destaque=3),
+    bloco(I["pedroivo"], [1990, 1991.2, 1992], CANASV, PONTE_S2, 9.5, pulo=0.6, destaca=["linha:pedroivo"], destaque=3),
     bloco(I["2022"], [1992, 2022, 2024], PONTES, ILHA, 10.0, pulo=5.0, titulo="<b>537 mil</b> moradores"),
     {"id": "fecho", "anos": [2024, 2024], "cam": [ILHA, cam(-48.50, -27.63, 10.0, 45, -5)], "dur": 6.0},
 ]
@@ -161,7 +165,7 @@ for b in blocos:
         b["imagem"] = IMG[b["id"]]
     if b["id"] == "fecho":
         b["dur"] = 14.0
-        b["galeria"] = {"titulo": "Imagens <b>da época</b>", "itens": [f"assets/epoca/e{i:02d}.jpg" for i in (0, 2, 5, 6, 8, 9, 11, 15)],
+        b["galeria"] = {"fica": True, "titulo": "Imagens <b>da época</b>", "itens": [f"assets/epoca/e{i:02d}.jpg" for i in (0, 2, 5, 6, 8, 9, 11, 15)],
                         "creditos": "Victor Meirelles, Joseph Brüggemann, Vicente Pietro, Manuel Cristóbal del Canto, S. W. Schley, Correio da Manhã (Arquivo Nacional) · domínio público, via Wikimedia Commons"}
     if b["id"] in ROT:
         nm, lo, la = ROT[b["id"]]
@@ -175,7 +179,7 @@ roteiro = {
     "titulo": "Florianópolis — de Desterro à capital, em 3D",
     "hud_de_bloco": I["cab"],
     "linha": {"de": 1500, "ate": 2024},
-    "fim": {"titulo": "Florianópolis", "sub": "1673 – 2024"},
+    "fim": {"titulo": "Florianópolis", "sub": "1673 – 2024", "marca": "INEMA<span>.CLUB</span>", "fica": True, "escuro": 0.25, "dura": 7.0},
     "longe": {"oeste": -48.66, "terra": [112, 120, 72], "mar": [62, 99, 143]},
     "regimes": [
         {"ano": 1500, "nome": "Terra dos carijós", "bandeira": "portugal"},
@@ -191,8 +195,8 @@ roteiro = {
         {"ano": 1960, "nome": "República", "bandeira": "brasil"}],
     "fortes": [{"id": "anhatomirim", "ano": 1739.5, "alt": 34, "rotulo": "Fortaleza de Anhatomirim", "sub": "1739 · 36 canhões"}, {"id": "ponta_grossa", "ano": 1740.3, "alt": 34, "rotulo": "Fortaleza de Ponta Grossa", "sub": "1740"}, {"id": "ratones", "ano": 1740.6, "alt": 34, "rotulo": "Fortaleza de Ratones", "sub": "1740"},
                {"id": "aracatuba", "ano": 1742}, {"id": "santana", "ano": 1763}],
-        "linhas": [{"id": "hercilio", "ano": 1926.36, "desenha": 1.2, "sobe": 30}, {"id": "colombo", "ano": 1975.18, "desenha": 0.6, "sobe": 18},
-               {"id": "pedroivo", "ano": 1991.18, "desenha": 0.6, "sobe": 18}],
+        "linhas": [{"id": "hercilio", "ano": 1926.36, "desenha": 0.25, "sobe": 30, "torres": {"em": [0.29, 0.71], "alt": 45}}, {"id": "colombo", "ano": 1975.18, "desenha": 0.3, "sobe": 18},
+               {"id": "pedroivo", "ano": 1991.18, "desenha": 0.3, "sobe": 18}],
     "areas": [{"id": "beira_mar", "ano0": 1963, "ano1": 1968, "sai": 8}, {"id": "baia_sul", "ano0": 1972, "ano1": 1974.5, "sai": 8}],
     "blocos": blocos,
 }
