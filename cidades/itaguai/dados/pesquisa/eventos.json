@@ -1,0 +1,715 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "coordenadas": "lat/lon de páginas HTML da Wikipédia (link Especial:Map/infobox ou texto de Geografia) ou da página HTML do item no Wikidata — local.coord_fonte diz qual. Nenhuma coordenada inventada. Quando o lugar exato não tem coordenada publicada (aldeia de Itinga, estação, matriz, emancipação de Paracambi), usa-se o centro do município (ptwiki Itaguaí, 22°51'07\"S 43°46'30\"O = centro_antigo do config) e isso está marcado como 'genérico'. Todos os pontos estão dentro do bbox do config (Paracambi fica fora, por isso o evento dele usa o centro).",
+    "nota": "35 eventos (18 antes de 1850) + 8 de reserva. Títulos ≤ 30 caracteres (MAIÚSCULAS), legenda ≤ 95, detalhe ≤ 220 — validados por script local. Fontes lidas como página HTML/PDF; nenhuma API usada.",
+    "santa_cruz": "Eventos da Fazenda de Santa Cruz (1556–1833) acontecem no atual bairro carioca de Santa Cruz, dentro do bbox; até 30/12/1833 o curato de Santa Cruz chegou a pertencer ao termo de Itaguaí. Na tela, deixar claro que hoje é município do Rio.",
+    "anos_aproximados": "ano 1500 (tupinambás) e 1520 (nome tupi) são só posição na linha do tempo — não mostrar o número na tela."
+  },
+  "eventos": [
+    {
+      "id": "tupinambas",
+      "ano": 1500,
+      "data_exata": "séc. XVI (aproximado; povos já presentes na chegada dos portugueses)",
+      "titulo_curto_PT": "A TERRA DOS TUPINAMBÁS",
+      "legenda": "Antes dos portugueses, aldeias tupis ocupavam toda a costa entre São Sebastião e Cabo Frio",
+      "detalhe": "Os tupinambás (chamados de tamoios pelos portugueses) dominavam o litoral do Rio. A Baía de Sepetiba guarda sambaquis, sinais de povos ainda mais antigos.",
+      "local": {"nome": "Baía de Sepetiba (centro — genérico)", "lat": -22.970833, "lon": -43.8775, "coord_fonte": "Wikidata Q16496144 (página HTML)"},
+      "recurso_visual": "mapa escuro; pontinhos de fogueira nas margens da baía e nas ilhas",
+      "numero_impacto": "séc. XVI",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Tupinamb%C3%A1s",
+        "https://pt.wikipedia.org/wiki/Ba%C3%ADa_de_Sepetiba"
+      ],
+      "confianca": "media",
+      "obs": "ptwiki Tupinambás: território do rio Juqueriquerê (SP) ao cabo de São Tomé (RJ). Sambaquis em Sepetiba sem datação na fonte — não pôr ano dos sambaquis."
+    },
+    {
+      "id": "nome-tupi",
+      "ano": 1520,
+      "data_exata": "sem data — topônimo de origem tupi",
+      "titulo_curto_PT": "ITAGUAÍ, NOME TUPI",
+      "legenda": "Itá (pedra) + kûá (enseada) + 'y (rio): o \"rio da enseada da pedra\"",
+      "detalhe": "O nome vem do tupi antigo, segundo o dicionário de Eduardo Navarro. Outros nomes da região também são tupis: Sepetiba, Marambaia, Mazomba, Itacuruçá.",
+      "local": {"nome": "Itaguaí (centro do município — genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "palavra ITAGUAÍ se decompõe em ITÁ + KÛÁ + 'Y sobre o rio e a enseada",
+      "numero_impacto": "ITÁ · KÛÁ · 'Y",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Itagua%C3%AD",
+        "https://en.wikipedia.org/wiki/Itagua%C3%AD"
+      ],
+      "confianca": "alta",
+      "obs": "Etimologia: Navarro, Método moderno de tupi antigo (2005), via ptwiki/enwiki. O ano 1520 é só posição no vídeo. Marambaia: ptwiki dá duas etimologias — não traduzir na tela."
+    },
+    {
+      "id": "sesmaria-1556",
+      "ano": 1556,
+      "data_exata": "30/12/1556 (doação da sesmaria)",
+      "titulo_curto_PT": "A SESMARIA DE SEPETIBA",
+      "legenda": "Cristóvão Monteiro ganha terras da orla de Sepetiba até perto de Itacuruçá",
+      "detalhe": "Prêmio por lutar contra os franceses na Guanabara: cerca de 4 léguas de largura por 10 de extensão, para fazer açúcar. A sede começou a ser erguida em 1570.",
+      "local": {"nome": "Fazenda de Santa Cruz (sede; hoje bairro de Santa Cruz, Rio)", "lat": -22.91667, "lon": -43.68333, "coord_fonte": "ptwiki Fazenda Imperial de Santa Cruz (Especial:Map)"},
+      "recurso_visual": "retângulo de terra se desenha da orla de Sepetiba até Itacuruçá",
+      "numero_impacto": "10 léguas",
+      "fontes": ["https://pt.wikipedia.org/wiki/Fazenda_Imperial_de_Santa_Cruz"],
+      "confianca": "media",
+      "obs": "Medidas 'cerca de 4 × 10 léguas' segundo a ptwiki (nota [4]). Sede começou em 1570 (nota [5])."
+    },
+    {
+      "id": "jesuitas-1589",
+      "ano": 1589,
+      "data_exata": "1589 (terras passam ao Colégio dos Jesuítas do Rio)",
+      "titulo_curto_PT": "OS JESUÍTAS EM SANTA CRUZ",
+      "legenda": "A viúva de Cristóvão Monteiro doa as terras aos padres da Companhia de Jesus",
+      "detalhe": "Os jesuítas juntam sesmarias e marcam o latifúndio com uma grande cruz de madeira: a Santa Cruz. Vira o maior complexo agropastoril do Brasil no séc. XVIII.",
+      "local": {"nome": "Fazenda de Santa Cruz (sede)", "lat": -22.91667, "lon": -43.68333, "coord_fonte": "ptwiki Fazenda Imperial de Santa Cruz (Especial:Map)"},
+      "recurso_visual": "uma cruz de madeira se ergue; a mancha da fazenda cresce de Guaratiba até Mangaratiba",
+      "numero_impacto": "1589",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Fazenda_Imperial_de_Santa_Cruz",
+        "https://www.ifch.unicamp.br/ihb/marciaamantino.pdf"
+      ],
+      "confianca": "media",
+      "obs": "Ano 1589 vem de Amantino (Unicamp), que lista 'Santa Cruz (1589)'. A ptwiki não dá o ano da doação de Marquesa Ferreira."
+    },
+    {
+      "id": "jaguaramenom",
+      "ano": 1620,
+      "data_exata": "1ª metade do séc. XVII (aproximado; governo de Martim de Sá: 1602–08 e 1623–32)",
+      "titulo_curto_PT": "DA ILHA PARA ITACURUÇÁ",
+      "legenda": "Índios da ilha de Jaguaramenom, atraídos por Martim de Sá, mudam para Piaçavera, hoje Itacuruçá",
+      "detalhe": "É o começo do povoamento contado por Monsenhor Pizarro. Da ilha, mais tarde, eles passaram ao continente, entre os rios Tiguaçu e Itaguaí.",
+      "local": {"nome": "Ilha de Itacuruçá (antiga Piaçavera)", "lat": -22.9, "lon": -43.9, "coord_fonte": "Wikidata Q10301150 (página HTML)"},
+      "recurso_visual": "canoas atravessam da ilha para Itacuruçá; nome PIAÇAVERA sobre a ilha",
+      "numero_impacto": "PIAÇAVERA",
+      "fontes": [
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf",
+        "https://pt.wikipedia.org/wiki/Martim_de_S%C3%A1"
+      ],
+      "confianca": "baixa",
+      "obs": "IBGE só diz 'meados do séc. XVII'. 1620 é posição aproximada. Localização da ilha de Jaguaramenom não encontrada — não desenhar."
+    },
+    {
+      "id": "aldeia-itinga",
+      "ano": 1627,
+      "data_exata": "1627 (data da lista de Amantino); igreja da aldeia concluída antes de 1688 (IBGE)",
+      "titulo_curto_PT": "A ALDEIA DE ITINGA",
+      "legenda": "No continente, os índios chamam a terra de Y-tinga; os jesuítas erguem ali uma igreja",
+      "detalhe": "Nasce a aldeia de São Francisco Xavier de Itinga, dos padres da Fazenda de Santa Cruz. A primeira igreja ficou pronta antes de 1688. É a semente da cidade.",
+      "local": {"nome": "entre os rios Tiguaçu e Itaguaí (centro do município — genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "uma aldeia acende perto do rio; capela pequena; nome Y-TINGA",
+      "numero_impacto": "Y-TINGA",
+      "fontes": [
+        "https://www.ifch.unicamp.br/ihb/marciaamantino.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf",
+        "https://anpuh.org.br/uploads/anais-simposios/pdf/2024-05/1716454800_b1d22ce0d211035982fd291c9b620910.pdf"
+      ],
+      "confianca": "baixa",
+      "obs": "1627 só aparece numa lista (Amantino). IBGE: igreja 'anterior a 1688'. Ponto exato da 1ª aldeia desconhecido."
+    },
+    {
+      "id": "aldeia-desce-1718",
+      "ano": 1718,
+      "data_exata": "antes de 1718 (IBGE não precisa a data)",
+      "titulo_curto_PT": "A ALDEIA VAI PARA PERTO DO MAR",
+      "legenda": "Os jesuítas levam todos os moradores da aldeia para terras da fazenda mais perto do oceano",
+      "detalhe": "As terras da Fazenda de Santa Cruz, junto ao mar, serviam melhor de núcleo do aldeamento. O arraial antigo foi esvaziado e um novo começou onde hoje é o centro.",
+      "local": {"nome": "Centro de Itaguaí (genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "pontos da aldeia antiga apagam e reacendem no morro do centro atual",
+      "numero_impacto": "antes de 1718",
+      "fontes": ["https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"],
+      "confianca": "baixa",
+      "obs": "A monografia IBGE nº 509 diz apenas 'em época anterior a 1718'. Mostrar 'antes de 1718', não '1718'."
+    },
+    {
+      "id": "caminho-1725",
+      "ano": 1725,
+      "data_exata": "por volta de 1725 (início da construção)",
+      "titulo_curto_PT": "O CAMINHO PARA SÃO PAULO",
+      "legenda": "Abre-se por terra o caminho Rio–São Paulo, fugindo dos piratas da Ilha Grande",
+      "detalhe": "A viagem por mar de Paraty ao Rio era perigosa por causa dos corsários. O novo caminho passava por Itaguaí: terreno firme, poucos alagadiços e muita água para os animais.",
+      "local": {"nome": "Itaguaí (centro — genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "linha de trilha se desenha do Rio até a serra passando pela aldeia; tropas de mulas",
+      "numero_impacto": "c. 1725",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Itagua%C3%AD",
+        "https://pt.wikipedia.org/wiki/Fazenda_Imperial_de_Santa_Cruz"
+      ],
+      "confianca": "media",
+      "obs": "ptwiki Itaguaí: 'Por volta de 1725, iniciou-se a construção deste caminho'. A ptwiki Fazenda chama a trilha de Caminho dos Jesuítas → Caminho das Minas → Estrada Real de Santa Cruz, até o porto de Sepetiba."
+    },
+    {
+      "id": "igreja-1729",
+      "ano": 1729,
+      "data_exata": "1729 (igreja concluída)",
+      "titulo_curto_PT": "IGREJA DE S. FRANCISCO XAVIER",
+      "legenda": "Índios e jesuítas terminam a igreja de São Francisco Xavier, no alto da colina",
+      "detalhe": "De lá se vê a baixada de Santa Cruz. A igreja deu nome à povoação e hoje é a matriz (catedral desde 1980) no centro de Itaguaí.",
+      "local": {"nome": "Igreja Matriz de São Francisco Xavier (centro — genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map) — a matriz não tem coordenada própria publicada"},
+      "recurso_visual": "igreja branca nasce no morro do centro; luz no topo",
+      "numero_impacto": "1729",
+      "fontes": [
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf",
+        "https://pt.wikipedia.org/wiki/Diocese_de_Itagua%C3%AD"
+      ],
+      "confianca": "media",
+      "obs": "Divergência na própria monografia IBGE: parte histórica diz 'concluída em 1729'; parte turística diz 'fundada a 3 de dezembro de 1759'. Usado 1729."
+    },
+    {
+      "id": "ponte-jesuitas-1752",
+      "ano": 1752,
+      "data_exata": "1752 (data gravada na obra)",
+      "titulo_curto_PT": "A PONTE DOS JESUÍTAS",
+      "legenda": "No rio Guandu, os jesuítas erguem uma ponte-represa para conter as enchentes",
+      "detalhe": "A Ponte do Guandu tem colunas de granito, esculturas barrocas e o símbolo IHS da Companhia de Jesus com a data 1752. Está quase intacta e é tombada pelo IPHAN.",
+      "local": {"nome": "Ponte dos Jesuítas, rio Guandu (Santa Cruz, Rio)", "lat": -22.8722556, "lon": -43.6770639, "coord_fonte": "ptwiki Ponte do Guandu (Especial:Map)"},
+      "recurso_visual": "ponte de pedra aparece sobre o Guandu; água represada",
+      "numero_impacto": "1752",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Ponte_dos_Jesu%C3%ADtas",
+        "https://pt.wikipedia.org/wiki/Fazenda_Imperial_de_Santa_Cruz"
+      ],
+      "confianca": "alta",
+      "obs": "Hoje no município do Rio (Santa Cruz)."
+    },
+    {
+      "id": "expulsao-1759",
+      "ano": 1759,
+      "data_exata": "1759 (lei de expulsão de Pombal)",
+      "titulo_curto_PT": "JESUÍTAS EXPULSOS",
+      "legenda": "Pombal expulsa a Companhia de Jesus; a fazenda e a aldeia passam para a Coroa",
+      "detalhe": "Os padres perdem o controle da povoação e são forçados a sair. A Fazenda de Santa Cruz vira Fazenda Real, subordinada aos vice-reis.",
+      "local": {"nome": "Fazenda de Santa Cruz (sede)", "lat": -22.91667, "lon": -43.68333, "coord_fonte": "ptwiki Fazenda Imperial de Santa Cruz (Especial:Map)"},
+      "recurso_visual": "a cruz dos jesuítas escurece; brasão real português aparece sobre a fazenda",
+      "numero_impacto": "1759",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Fazenda_Imperial_de_Santa_Cruz",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "confianca": "alta",
+      "obs": ""
+    },
+    {
+      "id": "freguesia-1795",
+      "ano": 1795,
+      "data_exata": "Ordem Régia de 22/12/1795",
+      "titulo_curto_PT": "NASCE A FREGUESIA",
+      "legenda": "A aldeia vira freguesia de São Francisco Xavier de Itaguaí, ligada ao Rio e a Angra",
+      "detalhe": "Primeiro degrau oficial da futura cidade: a paróquia de São Francisco Xavier de Itaguaí, subordinada ao Rio de Janeiro e a Angra dos Reis (Ilha Grande).",
+      "local": {"nome": "Centro de Itaguaí (genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "nome S. FRANCISCO XAVIER DE ITAGUAÍ escrito sobre a vila",
+      "numero_impacto": "22/12/1795",
+      "fontes": [
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "confianca": "alta",
+      "obs": "DTB chama de 'distrito criado por ordem régia'; a monografia, de 'freguesia'."
+    },
+    {
+      "id": "corte-1808",
+      "ano": 1808,
+      "data_exata": "a partir de 1808/1809 (corte no Brasil; Santa Cruz vira veraneio)",
+      "titulo_curto_PT": "O REI VEM PASSAR O VERÃO",
+      "legenda": "D. João transforma o antigo convento de Santa Cruz em palácio de veraneio",
+      "detalhe": "A fazenda tinha 23 mil hectares. D. João ficava meses ali, despachando e dando audiências. Em 1812, chineses vieram plantar chá no Morro do Chá.",
+      "local": {"nome": "Palácio Real de Santa Cruz (sede da fazenda)", "lat": -22.91667, "lon": -43.68333, "coord_fonte": "ptwiki Fazenda Imperial de Santa Cruz (Especial:Map)"},
+      "recurso_visual": "carruagem chega; o palácio acende; bandeira do Reino",
+      "numero_impacto": "23 mil ha",
+      "fontes": ["https://pt.wikipedia.org/wiki/Fazenda_Imperial_de_Santa_Cruz"],
+      "confianca": "alta",
+      "obs": "ptwiki: 'A partir de 1809, passou a ser o refúgio de verão' e, em outro trecho, chegada da família real em 1808. 400 chineses autorizados em 1812 (parte foi ao chá)."
+    },
+    {
+      "id": "vila-1818",
+      "ano": 1818,
+      "data_exata": "Alvará de 05/07/1818 (DTB também cita 05/06/1818); suprimida em 13/11/1818, restaurada em 13/11/1819, instalada em 11/02/1820",
+      "titulo_curto_PT": "NASCE A VILA DE ITAGUAÍ",
+      "legenda": "A aldeia vira Vila de São Francisco Xavier de Itaguaí, separada do Rio e de Angra",
+      "detalhe": "Abrangia as freguesias de Itaguaí, Marapicu e Mangaratiba e o Ribeirão das Lajes. Foi extinta meses depois e refeita em 1819; instalada de vez em 1820.",
+      "local": {"nome": "Centro de Itaguaí (genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "limite do novo município se desenha (grande, até Mangaratiba e Lajes); bandeira do Reino Unido",
+      "numero_impacto": "05/07/1818",
+      "fontes": [
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf",
+        "https://pt.wikipedia.org/wiki/Itagua%C3%AD"
+      ],
+      "confianca": "alta",
+      "obs": "5 de julho é a data da ptwiki, do histórico do DTB e da festa municipal (Praça Cinco de Julho, Expo na semana de 5/7); o mesmo DTB, na formação administrativa, escreve 05-06-1818."
+    },
+    {
+      "id": "dom-pedro-1822",
+      "ano": 1822,
+      "data_exata": "15/08/1822 (reunião em Santa Cruz, início da viagem a São Paulo)",
+      "titulo_curto_PT": "D. PEDRO PASSA POR AQUI",
+      "legenda": "A caminho de São Paulo, onde proclamaria a Independência, D. Pedro pernoita em Itaguaí",
+      "detalhe": "Antes, reuniu-se com José Bonifácio em Santa Cruz (15/08/1822). Na vila, parou para descansar e dar água aos cavalos, perto da Igreja Matriz.",
+      "local": {"nome": "Centro de Itaguaí, perto da matriz (genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "comitiva a cavalo atravessa a vila rumo à serra; bandeira troca para Império logo depois",
+      "numero_impacto": "15/08/1822",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Fazenda_Imperial_de_Santa_Cruz",
+        "https://pt.wikipedia.org/wiki/Itagua%C3%AD",
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf"
+      ],
+      "confianca": "media",
+      "obs": "A data 15/08 é da reunião em Santa Cruz (ptwiki Fazenda). A data exata do pernoite em Itaguaí não foi achada."
+    },
+    {
+      "id": "mangaratiba-1831",
+      "ano": 1831,
+      "data_exata": "decreto de 31/10 ou 11/11/1831 (complementado em 26/03/1832; instalada 24/05/1833)",
+      "titulo_curto_PT": "MANGARATIBA SE SEPARA",
+      "legenda": "A freguesia de Mangaratiba vira vila e leva parte do território de Itaguaí",
+      "detalhe": "Mangaratiba foi formada com terras de São João Marcos, Angra dos Reis e Itaguaí. Na República foi extinta e recriada (1892), de novo com terras de Itaguaí.",
+      "local": {"nome": "Mangaratiba (sede)", "lat": -22.959722, "lon": -44.040556, "coord_fonte": "ptwiki Mangaratiba (seção Geografia: 22º57'35\" S, 44º02'26\" O)"},
+      "recurso_visual": "o limite municipal recua do oeste; Mangaratiba ganha cor própria",
+      "numero_impacto": "1831",
+      "fontes": [
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/mangaratiba.pdf",
+        "https://pt.wikipedia.org/wiki/Mangaratiba"
+      ],
+      "confianca": "alta",
+      "obs": "ptwiki Mangaratiba dá fundação 11/11/1831. O ponto fica na borda oeste do bbox."
+    },
+    {
+      "id": "fim-aldeia-1834",
+      "ano": 1834,
+      "data_exata": "1834 (aldeia declarada extinta)",
+      "titulo_curto_PT": "O FIM DA ALDEIA DE ITINGA",
+      "legenda": "Depois de anos de conflito por terra, a aldeia indígena é declarada extinta",
+      "detalhe": "Fazendeiros disputavam as terras da aldeia. Pesquisas recentes mostram que os indígenas continuaram na região mesmo depois do fim oficial da aldeia.",
+      "local": {"nome": "Centro de Itaguaí (genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "pontos da aldeia se apagam, mas alguns continuam acesos nas matas em volta",
+      "numero_impacto": "1834",
+      "fontes": ["https://anpuh.org.br/uploads/anais-simposios/pdf/2024-05/1716454800_b1d22ce0d211035982fd291c9b620910.pdf"],
+      "confianca": "media",
+      "obs": "Fonte: artigo ANPUH (2024) citando Ferreira (UFRRJ, 2016). O 'massacre dos Itingas' e José Pires Tavares (ptwiki) aparecem lá como a LENDA de Quiva e Laiá — não usar como fato."
+    },
+    {
+      "id": "quintino-1836",
+      "ano": 1836,
+      "data_exata": "04/12/1836",
+      "titulo_curto_PT": "NASCE QUINTINO BOCAIÚVA",
+      "legenda": "Na vila nasce o jornalista que seria um dos líderes da Proclamação da República",
+      "detalhe": "Quintino Bocaiúva foi o primeiro ministro das Relações Exteriores da República e depois senador. A casa onde nasceu aparece na monografia do IBGE.",
+      "local": {"nome": "Vila de São Francisco Xavier de Itaguaí (centro — genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "retrato em domínio público + ponto na vila",
+      "numero_impacto": "04/12/1836",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Quintino_Bocai%C3%BAva",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "confianca": "alta",
+      "obs": ""
+    },
+    {
+      "id": "cafe-1850",
+      "ano": 1850,
+      "data_exata": "séc. XIX, até 1880 (auge agrícola)",
+      "titulo_curto_PT": "CAFÉ, AÇÚCAR E FARINHA",
+      "legenda": "Com mão de obra escravizada, Itaguaí exporta cereais, café, farinha, açúcar e aguardente",
+      "detalhe": "Ponto de passagem para Minas e São Paulo, a vila viveu de agricultura e comércio até 1880. Em 1851 nasce a freguesia do Bananal, hoje Seropédica.",
+      "local": {"nome": "Itaguaí (centro — genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "campos verdes se espalham pela baixada; carros de boi indo à vila",
+      "numero_impacto": "até 1880",
+      "fontes": [
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "confianca": "media",
+      "obs": "Ano 1850 é posição (fonte: 'no século passado, até 1880'). Bananal: lei provincial nº 549 de 30/08/1851 (DTB)."
+    },
+    {
+      "id": "abolicao-1888",
+      "ano": 1888,
+      "data_exata": "13/05/1888 (Lei Áurea)",
+      "titulo_curto_PT": "ABOLIÇÃO E DECADÊNCIA",
+      "legenda": "Com o fim da escravidão, os libertos deixam as fazendas e as grandes lavouras somem",
+      "detalhe": "Sem transporte e com a baixada insalubre (malária), a economia desabou. Itaguaí ganharia o apelido de 'Município Abandonado' até os anos 1950.",
+      "local": {"nome": "Itaguaí (centro — genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "campos da baixada escurecem; vila para de crescer",
+      "numero_impacto": "13/05/1888",
+      "fontes": [
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf",
+        "https://pt.wikipedia.org/wiki/Itagua%C3%AD"
+      ],
+      "confianca": "media",
+      "obs": "Apelido 'Município Abandonado' na ptwiki, sem nota de rodapé própria."
+    },
+    {
+      "id": "cidade-1892",
+      "ano": 1892,
+      "data_exata": "Decreto estadual nº 1-A, de 03/06/1892",
+      "titulo_curto_PT": "A VILA VIRA CIDADE",
+      "legenda": "Já na República, São Francisco Xavier de Itaguaí vira a cidade de Itaguaí",
+      "detalhe": "O mesmo decreto encurta o nome para só Itaguaí e cria o distrito de Ribeirão das Lajes (depois Macacos e, em 1901, Paracambi).",
+      "local": {"nome": "Centro de Itaguaí (genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "nome no HUD troca de S. F. XAVIER DE ITAGUAÍ para ITAGUAÍ",
+      "numero_impacto": "03/06/1892",
+      "fontes": ["https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf"],
+      "confianca": "alta",
+      "obs": ""
+    },
+    {
+      "id": "trem-1910",
+      "ano": 1910,
+      "data_exata": "14/11/1910 (inauguração da estação Itaguaí)",
+      "titulo_curto_PT": "CHEGA O TREM",
+      "legenda": "O Ramal de Mangaratiba da Central do Brasil chega a Itaguaí; Coroa Grande ganha estação em 1911",
+      "detalhe": "A estação de Itaguaí, no km 65,7, abriu em 14/11/1910; a de Coroa Grande em 17/11/1911. Hoje o ramal leva minério ao porto e a Mangaratiba.",
+      "local": {"nome": "Estação Itaguaí (centro — genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map) — a estação não tem coordenada em página wiki"},
+      "recurso_visual": "linha férrea se desenha de Santa Cruz pela costa até Coroa Grande; trem a vapor",
+      "numero_impacto": "14/11/1910",
+      "fontes": [
+        "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/itaguai.htm",
+        "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/coroa.htm",
+        "https://pt.wikipedia.org/wiki/Mangaratiba"
+      ],
+      "confianca": "media",
+      "obs": "Datas do site Estações Ferroviárias do Brasil (Ralph Giesbrecht) — fonte secundária, não oficial."
+    },
+    {
+      "id": "rio-sp-1928",
+      "ano": 1928,
+      "data_exata": "05/05/1928 (inauguração da antiga Rio–São Paulo, hoje BR-465)",
+      "titulo_curto_PT": "A ESTRADA RIO–SÃO PAULO",
+      "legenda": "A rodovia Rio–São Paulo corta o município e traz indústria e loteamentos",
+      "detalhe": "Passava pelo distrito de Seropédica, então parte de Itaguaí. Junto com o saneamento da baixada, ajudou o município a sair da decadência.",
+      "local": {"nome": "antiga Rio–São Paulo, km 47 (campus da UFRRJ, Seropédica)", "lat": -22.7635417, "lon": -43.6886139, "coord_fonte": "ptwiki Universidade Federal Rural do Rio de Janeiro (Especial:Map)"},
+      "recurso_visual": "linha de estrada atravessa a baixada no norte do mapa",
+      "numero_impacto": "05/05/1928",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/BR-465",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "confianca": "media",
+      "obs": "Divergência: ptwiki BR-465 dá inauguração 05/05/1928; ptwiki Seropédica diz 'Em 1938, foi aberta a estrada Rio-São Paulo'. Usado 1928."
+    },
+    {
+      "id": "japoneses-1938",
+      "ano": 1938,
+      "data_exata": "1938",
+      "titulo_curto_PT": "CHEGAM OS JAPONESES",
+      "legenda": "Colonos japoneses começam a plantar na baixada; no mesmo ano nasce a obra da Rural",
+      "detalhe": "Vieram por acordo do governo Vargas com a Cooperativa de Cotia. Itaguaí ainda tem uma das maiores colônias japonesas do estado. A UFRRJ começou a ser erguida em 1938.",
+      "local": {"nome": "baixada de Santa Cruz / Itaguaí (genérico: sede da antiga Fazenda)", "lat": -22.91667, "lon": -43.68333, "coord_fonte": "ptwiki Fazenda Imperial de Santa Cruz (Especial:Map)"},
+      "recurso_visual": "hortas em quadradinhos se acendem na baixada; tomates",
+      "numero_impacto": "1938",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Itagua%C3%AD",
+        "https://diariodorio.com/100-anos-de-imigrao-japonesa-o-bairro-de-santa-cruz-faz-parte-dessa-histria/",
+        "https://pt.wikipedia.org/wiki/Serop%C3%A9dica"
+      ],
+      "confianca": "media",
+      "obs": "ptwiki Itaguaí: japoneses 'em 1938'. A colônia de 1938 é a do Núcleo Colonial de Santa Cruz (36 famílias, segundo trabalho acadêmico citado em busca — não conferido). Ponto exato das hortas não achado."
+    },
+    {
+      "id": "paracambi-1960",
+      "ano": 1960,
+      "data_exata": "Lei estadual nº 4.426, de 08/08/1960 (instalado em 13/11/1960)",
+      "titulo_curto_PT": "PARACAMBI SE EMANCIPA",
+      "legenda": "O distrito de Paracambi deixa Itaguaí e vira município com terras de Vassouras",
+      "detalhe": "Era o antigo Ribeirão das Lajes, no norte. Mesmo assim, entre 1960 e 1970 a população de Itaguaí cresceu 29,6%.",
+      "local": {"nome": "Itaguaí (centro — genérico; Paracambi fica fora do recorte do mapa)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "seta para o norte com o nome PARACAMBI saindo do quadro",
+      "numero_impacto": "+29,6% (1960–70)",
+      "fontes": [
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/paracambi.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "confianca": "alta",
+      "obs": "Paracambi (ptwiki: 22°36'S) está fora do bbox — por isso o centro de Itaguaí."
+    },
+    {
+      "id": "inga-1962",
+      "ano": 1962,
+      "data_exata": "1962 (início das atividades, tese PUC-Rio); monografia IBGE diz fundada em 1958 / instalada em 1965",
+      "titulo_curto_PT": "A FÁBRICA DE ZINCO DA INGÁ",
+      "legenda": "Na Ilha da Madeira, a Ingá vira a primeira usina do Brasil de zinco eletrolítico",
+      "detalhe": "Empregava a maioria dos trabalhadores locais. Em 1996 chegou a ter cerca de 30% do mercado brasileiro de zinco — e deixou montanhas de resíduos com cádmio.",
+      "local": {"nome": "Ilha da Madeira (aprox.: coordenada do Complexo Naval, na mesma ilha)", "lat": -22.929454, "lon": -43.846863, "coord_fonte": "ptwiki Complexo Naval de Itaguaí (Especial:Map) — usada como aproximação da Ilha da Madeira"},
+      "recurso_visual": "chaminé na ilha; mancha cinza de resíduos cresce ao lado",
+      "numero_impacto": "~30% do zinco",
+      "fontes": [
+        "https://www.maxwell.vrac.puc-rio.br/60868/60868_4.PDF",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "confianca": "media",
+      "obs": "Três datas: 1958 (fundada), 1965 (instalada) — ambas na monografia IBGE — e 1962 (início, tese PUC). Usado 1962."
+    },
+    {
+      "id": "rio-santos-1974",
+      "ano": 1974,
+      "data_exata": "1974 (Rodovia Rio–Santos, trecho da BR-101)",
+      "titulo_curto_PT": "ABRE A RIO–SANTOS",
+      "legenda": "A BR-101 liga Itaguaí ao litoral sul e vira o acesso principal do futuro porto",
+      "detalhe": "A estrada facilitou a ligação com Mangaratiba, Angra e Paraty e, depois, com o porto de Sepetiba, que tem na BR-101 seu acesso principal.",
+      "local": {"nome": "Itaguaí (centro — genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "linha da rodovia se desenha pela costa de Santa Cruz a Mangaratiba",
+      "numero_impacto": "BR-101",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/BR-101",
+        "https://pt.wikipedia.org/wiki/Itagua%C3%AD",
+        "https://pt.wikipedia.org/wiki/Porto_de_Itagua%C3%AD"
+      ],
+      "confianca": "media",
+      "obs": "ptwiki BR-101 (infobox): '1974 (Rodovia Rio–Santos)'; ptwiki Itaguaí só diz 'década de 1970'."
+    },
+    {
+      "id": "nuclep-1975",
+      "ano": 1975,
+      "data_exata": "Decreto nº 76.805, de 16/12/1975 (infobox: 12/04/1975)",
+      "titulo_curto_PT": "NASCE A NUCLEP",
+      "legenda": "A estatal de caldeiraria pesada se instala para o programa nuclear brasileiro",
+      "detalhe": "A Nuclebrás Equipamentos Pesados faz peças gigantes de aço. Hoje forja as seções do casco dos submarinos montados ao lado, no Complexo Naval.",
+      "local": {"nome": "Nuclep, Itaguaí", "lat": -22.8879333, "lon": -43.829028, "coord_fonte": "ptwiki Nuclebrás Equipamentos Pesados (Especial:Map)"},
+      "recurso_visual": "galpões enormes nascem à beira da baía",
+      "numero_impacto": "1975",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Nuclebr%C3%A1s_Equipamentos_Pesados",
+        "https://pt.wikipedia.org/wiki/Complexo_Naval_de_Itagua%C3%AD"
+      ],
+      "confianca": "alta",
+      "obs": "Divergência interna da ptwiki: infobox 12/04/1975, texto 16/12/1975 (decreto). Mostrar só o ano."
+    },
+    {
+      "id": "porto-1982",
+      "ano": 1982,
+      "data_exata": "07/05/1982 (obras desde 1976)",
+      "titulo_curto_PT": "O PORTO DE SEPETIBA",
+      "legenda": "Inaugurado o porto, para descarregar carvão da CSN e alumina da Valesul",
+      "detalhe": "Dragagem e aterro hidráulico desde 1977. Em 2005 virou oficialmente Porto de Itaguaí. Em 2021 movimentou 51,7 milhões de toneladas, com 8 berços.",
+      "local": {"nome": "Porto de Itaguaí", "lat": -22.93111, "lon": -43.83556, "coord_fonte": "ptwiki Porto de Itaguaí (Especial:Map)"},
+      "recurso_visual": "cais e pátios aterrados avançam sobre a baía; navios graneleiros",
+      "numero_impacto": "51,7 mi t (2021)",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Porto_de_Itagua%C3%AD",
+        "https://portosrio.gov.br/en/ports/port-of-itaguai/history"
+      ],
+      "confianca": "alta",
+      "obs": "Nome: Lei 11.200/2005 (PortosRio) × '2006' (ptwiki Porto). Usado 2005. Tonelagem 2021 na infobox da ptwiki (fonte: navalportoestaleiro.com)."
+    },
+    {
+      "id": "seropedica-1995",
+      "ano": 1995,
+      "data_exata": "Lei estadual nº 2.446, de 12/10/1995 (instalado em 01/01/1997)",
+      "titulo_curto_PT": "SEROPÉDICA SE EMANCIPA",
+      "legenda": "O distrito de Seropédica, onde fica a Rural, deixa Itaguaí e vira município",
+      "detalhe": "Em 1970 Seropédica já tinha 28.175 moradores, mais que a sede de Itaguaí (23.527). O nome vem da seda: o antigo distrito Patioba virou Seropédica em 1926.",
+      "local": {"nome": "Seropédica (sede)", "lat": -22.74389, "lon": -43.70778, "coord_fonte": "ptwiki Seropédica (Especial:Map)"},
+      "recurso_visual": "o limite municipal recua no nordeste; Seropédica ganha cor própria",
+      "numero_impacto": "28.175 (1970)",
+      "fontes": [
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/seropedica.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "confianca": "alta",
+      "obs": "População 1970 por distrito: monografia IBGE nº 509. ptwiki Itaguaí diz 'em 1844 foi fundado o distrito de Seropédica' — não confere com o DTB (Bananal 1851 → Patioba 1924 → Seropédica 1926)."
+    },
+    {
+      "id": "dique-inga-1996",
+      "ano": 1996,
+      "data_exata": "fevereiro de 1996 (rompimento); falência em 1998",
+      "titulo_curto_PT": "VENENO NA BAÍA",
+      "legenda": "Chuvas rompem o dique da Ingá e metais pesados vazam na Baía de Sepetiba",
+      "detalhe": "Mariscos tinham zinco e cádmio até 60 vezes acima do limite. A Ingá faliu em 1998 e deixou um passivo ambiental de R$ 20 milhões na Ilha da Madeira.",
+      "local": {"nome": "Ilha da Madeira (aprox.: coordenada do Complexo Naval)", "lat": -22.929454, "lon": -43.846863, "coord_fonte": "ptwiki Complexo Naval de Itaguaí (Especial:Map) — aproximação"},
+      "recurso_visual": "mancha escura se espalha na água a partir da ilha",
+      "numero_impacto": "60× o limite",
+      "fontes": [
+        "https://www.maxwell.vrac.puc-rio.br/60868/60868_4.PDF",
+        "https://pt.wikipedia.org/wiki/Ba%C3%ADa_de_Sepetiba"
+      ],
+      "confianca": "media",
+      "obs": "Tese PUC-Rio, cap. 3, citando O Globo (1996) e Pinto (2005). Em 2011 a Usiminas comprou o terreno (ptwiki Itaguaí)."
+    },
+    {
+      "id": "prosub-2008",
+      "ano": 2008,
+      "data_exata": "acordo Brasil–França de dezembro de 2008; contrato do complexo em 03/09/2009; obras desde 2010",
+      "titulo_curto_PT": "ESTALEIRO DE SUBMARINOS",
+      "legenda": "Brasil e França fecham o ProSub: 4 submarinos convencionais e 1 nuclear feitos em Itaguaí",
+      "detalhe": "O complexo naval ocupa 750 mil m² junto à Nuclep, com estaleiro e base para até 10 submarinos. A fábrica de estruturas (UFEM) foi inaugurada em 1º/03/2013.",
+      "local": {"nome": "Complexo Naval de Itaguaí (Ilha da Madeira)", "lat": -22.929454, "lon": -43.846863, "coord_fonte": "ptwiki Complexo Naval de Itaguaí (Especial:Map)"},
+      "recurso_visual": "aterro avança na baía; galpões e cais do estaleiro surgem",
+      "numero_impacto": "4 + 1 submarinos",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Programa_de_Desenvolvimento_de_Submarinos",
+        "https://pt.wikipedia.org/wiki/Complexo_Naval_de_Itagua%C3%AD"
+      ],
+      "confianca": "alta",
+      "obs": "Área total 750 mil m² (ptwiki ProSub, nota 114)."
+    },
+    {
+      "id": "arco-2014",
+      "ano": 2014,
+      "data_exata": "01/07/2014 (primeiro trecho)",
+      "titulo_curto_PT": "O ARCO METROPOLITANO",
+      "legenda": "Abre o anel rodoviário de 145 km que liga o porto de Itaguaí ao resto do país",
+      "detalhe": "O 1º trecho, de cerca de 71 km, vai da Rio-Santos, em Itaguaí, à Washington Luís, sem passar pela cidade do Rio. Projeto dos anos 1970, com obras desde 2008.",
+      "local": {"nome": "Itaguaí (centro — genérico; ponta oeste do Arco)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "linha laranja sai do porto para o norte e some no quadro",
+      "numero_impacto": "145 km",
+      "fontes": ["https://pt.wikipedia.org/wiki/Arco_Metropolitano_do_Rio_de_Janeiro"],
+      "confianca": "alta",
+      "obs": "No mesmo ano foi inaugurado o terminal privado Porto Sudeste (ptwiki) — ver reserva."
+    },
+    {
+      "id": "riachuelo-2018",
+      "ano": 2018,
+      "data_exata": "14/12/2018 (lançamento ao mar)",
+      "titulo_curto_PT": "O SUBMARINO RIACHUELO",
+      "legenda": "Sai do estaleiro de Itaguaí o primeiro submarino do ProSub, com 70 m e 1.740 t",
+      "detalhe": "Foi incorporado em 2022. Seguiram Humaitá (2020), Tonelero (2024) e Almirante Karam. A base de submarinos da Ilha da Madeira abriu em 17/07/2020.",
+      "local": {"nome": "Complexo Naval de Itaguaí", "lat": -22.929454, "lon": -43.846863, "coord_fonte": "ptwiki Complexo Naval de Itaguaí (Especial:Map)"},
+      "recurso_visual": "submarino desce pelo elevador e entra na baía",
+      "numero_impacto": "1.740 t",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Riachuelo_(S-40)",
+        "https://pt.wikipedia.org/wiki/Complexo_Naval_de_Itagua%C3%AD"
+      ],
+      "confianca": "alta",
+      "obs": "1.740 t na superfície e 'mais de 70 m' (ptwiki Complexo Naval). ptwiki ProSub dá 71 m e 1.850 t (outra medida de deslocamento) — usar 1.740 t."
+    },
+    {
+      "id": "censo-2022",
+      "ano": 2022,
+      "data_exata": "Censo IBGE 2022",
+      "titulo_curto_PT": "116 MIL ITAGUAIENSES",
+      "legenda": "O censo conta 116.841 moradores na 'Cidade do Porto'",
+      "detalhe": "O município perdeu Paracambi (1960) e Seropédica (1995) e hoje tem 282,6 km², 2 distritos (Itaguaí e Ibituporanga) e cerca de 41 bairros.",
+      "local": {"nome": "Itaguaí (centro)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "contador para em 116.841; zoom out mostrando porto, base naval e cidade",
+      "numero_impacto": "116.841",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Itagua%C3%AD",
+        "https://www.ibge.gov.br/cidades-e-estados/rj/itaguai.html",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "confianca": "alta",
+      "obs": "116.841 = Censo 2022 (página IBGE Cidades, conferida via resultado de busca; o site deu 403 ao script) e ptwiki. Apelido 'Cidade do Porto' na infobox da ptwiki. Série completa no populacao.json."
+    }
+  ],
+  "reserva": [
+    {
+      "id": "cha-1812",
+      "ano": 1812,
+      "data_exata": "1812",
+      "titulo_curto_PT": "CHINESES PLANTAM CHÁ",
+      "legenda": "D. João autoriza 400 chineses; parte vai plantar chá no Morro do Chá, em Santa Cruz",
+      "detalhe": "A plantação experimental durou quase um século, mas o chá brasileiro saiu amargo e de pouco valor, ao contrário do café.",
+      "local": {"nome": "Fazenda de Santa Cruz (sede)", "lat": -22.91667, "lon": -43.68333, "coord_fonte": "ptwiki Fazenda Imperial de Santa Cruz (Especial:Map)"},
+      "recurso_visual": "fileiras de chá no morro",
+      "numero_impacto": "400 chineses",
+      "fontes": ["https://pt.wikipedia.org/wiki/Fazenda_Imperial_de_Santa_Cruz"],
+      "confianca": "media",
+      "obs": "Hoje no município do Rio."
+    },
+    {
+      "id": "santa-cruz-1833",
+      "ano": 1833,
+      "data_exata": "Decreto de 30/12/1833",
+      "titulo_curto_PT": "SANTA CRUZ VAI PARA O RIO",
+      "legenda": "A pedido dos moradores, o curato de Santa Cruz sai do termo de Itaguaí e passa ao Rio",
+      "detalhe": "No mesmo ano (04/11/1833), Cantagalo e Cunhanga, antigas terras dos carmelitas, foram incluídas no termo da vila de Itaguaí.",
+      "local": {"nome": "Santa Cruz (sede da antiga fazenda)", "lat": -22.91667, "lon": -43.68333, "coord_fonte": "ptwiki Fazenda Imperial de Santa Cruz (Especial:Map)"},
+      "recurso_visual": "limite recua a leste",
+      "numero_impacto": "30/12/1833",
+      "fontes": ["https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"],
+      "confianca": "alta",
+      "obs": ""
+    },
+    {
+      "id": "comarca-1877",
+      "ano": 1877,
+      "data_exata": "Decreto nº 2.243, de 29/09/1877",
+      "titulo_curto_PT": "ITAGUAÍ GANHA COMARCA",
+      "legenda": "É criada a comarca de Itaguaí; extinta em 1904 e restaurada em 1924",
+      "detalhe": "Hoje é comarca de 2ª entrância e inclui Mangaratiba.",
+      "local": {"nome": "Centro de Itaguaí (genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "fórum",
+      "numero_impacto": "1877",
+      "fontes": ["https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"],
+      "confianca": "alta",
+      "obs": "Monografia de 1971; situação atual não conferida."
+    },
+    {
+      "id": "rural-1948",
+      "ano": 1948,
+      "data_exata": "1948 (Escola Nacional de Agronomia ocupa o campus definitivo)",
+      "titulo_curto_PT": "A RURAL EM SEROPÉDICA",
+      "legenda": "A futura UFRRJ muda para o km 47 da Rio–São Paulo, então município de Itaguaí",
+      "detalhe": "As terras eram da antiga Fazenda Imperial de Santa Cruz. A obra começou em 1938 e puxou a ocupação urbana de Seropédica.",
+      "local": {"nome": "UFRRJ, Seropédica", "lat": -22.7635417, "lon": -43.6886139, "coord_fonte": "ptwiki Universidade Federal Rural do Rio de Janeiro (Especial:Map)"},
+      "recurso_visual": "prédios em estilo colonial no meio do campo",
+      "numero_impacto": "1948",
+      "fontes": [
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf",
+        "https://pt.wikipedia.org/wiki/Serop%C3%A9dica"
+      ],
+      "confianca": "alta",
+      "obs": ""
+    },
+    {
+      "id": "diocese-1980",
+      "ano": 1980,
+      "data_exata": "criada em 14/03/1980; instalada em 22/06/1980",
+      "titulo_curto_PT": "A DIOCESE DE ITAGUAÍ",
+      "legenda": "A matriz de São Francisco Xavier vira catedral de uma nova diocese",
+      "detalhe": "Desmembrada das dioceses de Barra do Piraí–Volta Redonda e Nova Iguaçu. Primeiro bispo: Vital Wilderink.",
+      "local": {"nome": "Catedral de São Francisco Xavier (centro — genérico)", "lat": -22.85194, "lon": -43.775, "coord_fonte": "ptwiki Itaguaí (Especial:Map)"},
+      "recurso_visual": "igreja do centro brilha",
+      "numero_impacto": "1980",
+      "fontes": ["https://pt.wikipedia.org/wiki/Diocese_de_Itagua%C3%AD"],
+      "confianca": "alta",
+      "obs": ""
+    },
+    {
+      "id": "ufem-2013",
+      "ano": 2013,
+      "data_exata": "01/03/2013",
+      "titulo_curto_PT": "A FÁBRICA DOS CASCOS",
+      "legenda": "Inaugurada a UFEM, onde se montam as seções dos submarinos",
+      "detalhe": "As seções são forjadas na Nuclep, preenchidas na UFEM e unidas no estaleiro (prédio principal inaugurado em 12/12/2014).",
+      "local": {"nome": "Complexo Naval de Itaguaí", "lat": -22.929454, "lon": -43.846863, "coord_fonte": "ptwiki Complexo Naval de Itaguaí (Especial:Map)"},
+      "recurso_visual": "galpão",
+      "numero_impacto": "01/03/2013",
+      "fontes": ["https://pt.wikipedia.org/wiki/Complexo_Naval_de_Itagua%C3%AD"],
+      "confianca": "alta",
+      "obs": ""
+    },
+    {
+      "id": "porto-sudeste-2014",
+      "ano": 2014,
+      "data_exata": "2014",
+      "titulo_curto_PT": "O PORTO SUDESTE",
+      "legenda": "Abre o terminal privado de minério de ferro na Ilha da Madeira",
+      "detalhe": "Hoje operado por Mubadala e Trafigura; exporta minério de Minas Gerais e faz transbordo de petróleo.",
+      "local": {"nome": "Porto Sudeste", "lat": -22.9137, "lon": -43.8270139, "coord_fonte": "ptwiki Porto Sudeste (Especial:Map)"},
+      "recurso_visual": "píer longo",
+      "numero_impacto": "2014",
+      "fontes": ["https://pt.wikipedia.org/wiki/Porto_Sudeste"],
+      "confianca": "alta",
+      "obs": ""
+    },
+    {
+      "id": "base-2020",
+      "ano": 2020,
+      "data_exata": "17/07/2020 (base); 12/07/2021 (Comando da Força de Submarinos transferido)",
+      "titulo_curto_PT": "BASE DE SUBMARINOS",
+      "legenda": "Inaugurada a Base de Submarinos da Ilha da Madeira; o comando da força vem para cá em 2021",
+      "detalhe": "Em abril de 2024 o estaleiro e base estavam com 77% da obra; a conclusão foi adiada para 2031.",
+      "local": {"nome": "Complexo Naval de Itaguaí", "lat": -22.929454, "lon": -43.846863, "coord_fonte": "ptwiki Complexo Naval de Itaguaí (Especial:Map)"},
+      "recurso_visual": "submarinos atracados",
+      "numero_impacto": "17/07/2020",
+      "fontes": ["https://pt.wikipedia.org/wiki/Complexo_Naval_de_Itagua%C3%AD"],
+      "confianca": "alta",
+      "obs": ""
+    }
+  ]
+}

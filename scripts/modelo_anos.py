@@ -26,7 +26,9 @@ def norm(s):
 
 def curva_pop():
     f = f"{PESQ}/populacao.json"
-    if os.path.exists(f):
+    if CFG.get("pop_modelo"):   # curva só para o crescimento dos prédios (ex.: território atual quando o município perdeu distritos)
+        pts = sorted(tuple(x) for x in CFG["pop_modelo"])
+    elif os.path.exists(f):
         pts = sorted([(int(p["ano"]), float(p["pop"])) for p in json.load(open(f))["serie"]] + [tuple(x) for x in CFG.get("pop_modelo_extra", [])])
     else:
         pts = [(1772, 1500), (1803, 3900), (1858, 20000), (1872, 43998), (1900, 73674), (1920, 179263),

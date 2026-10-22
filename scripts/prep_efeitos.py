@@ -1,7 +1,9 @@
 """Efeitos geográficos da cidade → assets/efeitos.json
 
 config["efeitos"]:
-  linhas: {id: {nome_osm}}                      pontes/ferrovias (linhas do OSM com esse nome, em feicoes.geojson)
+  linhas: {id: {nome_osm, tipos?}}              pontes/ferrovias/rodovias (linhas do OSM com esse nome em feicoes.geojson;
+                                                tipos padrão ["ponte"]; use ["nome"] p/ feicoes_nomes, ["ref"] p/ feicoes_refs,
+                                                ["ferrovia"] com nome_osm "" p/ ferrovias sem nome; bbox opcional recorta o trecho)
   fortes: {id: {nome_osm} | {ponto:[lon,lat], lado_m}}   polígonos para extrudar
   areas:  {id: {faixa: {bbox:[w,s,e,n], dist_m, zmax}, faixas: n}}   aterro = terra baixa junto ao mar atual,
           fatiada da margem antiga (longe do mar) até a costa atual
@@ -41,7 +43,10 @@ fe = json.load(open(f"{BRUTOS}/feicoes.geojson"))["features"] if (EF.get("linhas
 if EF.get("linhas"):
     out["linhas"] = {}
     for lid, spec in EF["linhas"].items():
-        geoms = [shape(f["geometry"]) for f in fe if f["properties"]["nome"] == spec["nome_osm"] and f["properties"]["tipo"] == "ponte"]
+        geoms = [shape(f["geometry"]) for f in fe if f["properties"]["nome"] == spec["nome_osm"] and f["properties"]["tipo"] in spec.get("tipos", ["ponte"])]
+        if spec.get("bbox"):   # só o trecho dentro da caixa [w, s, e, n]
+            cx = box(*spec["bbox"]); geoms = [g.intersection(cx) for g in geoms if g.intersects(cx)]
+            geoms = [x for g in geoms for x in (g.geoms if hasattr(g, "geoms") else [g]) if x.geom_type == "LineString"]
         u = unary_union(geoms) if geoms else None
         m = (linemerge(u) if u is not None and u.geom_type == "MultiLineString" else u)
         linhas = list(m.geoms) if m is not None and m.geom_type == "MultiLineString" else ([m] if m is not None else [])

@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "bandeiras_disponiveis": ["portugal.svg", "reino.svg", "imperio.svg", "imperio2.svg", "republica.svg", "brasil.svg", "espanha.svg"],
+    "arquivos_bandeira": "bandeira_arquivo usa SÓ os arquivos locais de motor/assets/bandeiras/ (mesmas chaves de REGIMES_BR em scripts/gerar_cena.py: portugal → reino 1815.95 → imperio 1822.7 → imperio2 1870 → republica 1889.87 → brasil 1960). O nome do arquivo no Commons fica em bandeira_commons, só como referência.",
+    "espanha_nao_usada": "espanha.svg (bandeira Bourbon 1760–1785) não se aplica a Itaguaí: a região nunca foi ocupada pela Espanha. A União Ibérica (1580–1640) foi união de coroas, com Portugal mantendo a própria administração e bandeira — não há faixa espanhola.",
+    "capital": "Itaguaí nunca foi capital. Pertenceu ao termo do Rio de Janeiro e de Angra dos Reis (Ilha Grande) até a vila de 1818. Província do Rio de Janeiro no Império; estado do Rio de Janeiro na República (DTB Itaguaí).",
+    "fontes_gerais": [
+      "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf"
+    ]
+  },
+  "regimes": [
+    {
+      "inicio": 1500, "fim": 1815,
+      "data_inicio": "1500 (início do vídeo; sesmaria de Sepetiba em 1556)", "data_fim": "16/12/1815",
+      "nome_tela": "BRASIL COLÔNIA",
+      "nome_longo": "Brasil Colônia — Reino de Portugal (Capitania do Rio de Janeiro; termo do Rio e da vila de Ilha Grande/Angra dos Reis)",
+      "bandeira_arquivo": "portugal.svg",
+      "bandeira_commons": "Flag_of_Portugal_(1750).svg (a mesma do piloto POA/Floripa)",
+      "bandeira_descricao": "branca com o brasão real português coroado ao centro",
+      "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "confianca": "alta",
+      "obs": "Antes de 1556 o mapa é território tupinambá; a bandeira pode entrar só com a sesmaria (1556) se o vídeo quiser marcar a chegada portuguesa."
+    },
+    {
+      "inicio": 1815, "fim": 1822,
+      "data_inicio": "16/12/1815", "data_fim": "07/09/1822",
+      "nome_tela": "REINO UNIDO",
+      "nome_longo": "Reino Unido de Portugal, Brasil e Algarves",
+      "bandeira_arquivo": "reino.svg",
+      "bandeira_commons": "Flag_of_the_United_Kingdom_of_Portugal,_Brazil,_and_the_Algarves_(1815-1825).svg",
+      "bandeira_descricao": "branca com o brasão real sobre a esfera armilar dourada em fundo azul",
+      "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "confianca": "alta",
+      "obs": "A vila de São Francisco Xavier de Itaguaí nasce nesta faixa (alvará de 05/07/1818)."
+    },
+    {
+      "inicio": 1822, "fim": 1889,
+      "data_inicio": "07/09/1822", "data_fim": "15/11/1889",
+      "nome_tela": "IMPÉRIO DO BRASIL",
+      "nome_longo": "Império do Brasil — Província do Rio de Janeiro",
+      "bandeira_arquivo": "imperio.svg",
+      "bandeira_arquivo_apos_1870": "imperio2.svg",
+      "bandeira_commons": "Flag_of_Empire_of_Brazil_(1822-1870).svg / Flag_of_Empire_of_Brazil_(1870-1889).svg",
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta",
+      "obs": "D. Pedro passou por Itaguaí em agosto de 1822, semanas antes da troca de bandeira."
+    },
+    {
+      "inicio": 1889, "fim": null,
+      "data_inicio": "15/11/1889", "data_fim": "—",
+      "nome_tela": "REPÚBLICA",
+      "nome_longo": "República dos Estados Unidos do Brasil (1889–1967) / República Federativa do Brasil — Estado do Rio de Janeiro",
+      "bandeira_arquivo": "republica.svg",
+      "bandeiras_seguintes": [
+        {"de": 1960, "ate": null, "arquivo": "brasil.svg", "obs": "o motor usa brasil.svg de 1960 em diante (REGIMES_BR); as variações de 1968 e 1992 só mudam o número de estrelas"}
+      ],
+      "bandeira_commons": "Flag_of_Brazil_(1889–1960).svg → Flag_of_Brazil.svg",
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta",
+      "obs": "Itaguaí vira cidade e perde o 'São Francisco Xavier' do nome pelo decreto estadual 1-A de 03/06/1892."
+    }
+  ],
+  "extras_hud": {
+    "bandeira_municipal": {"arquivo": "Bandeira de Itaguaí.jpg", "conferido": false, "obs": "nome do arquivo tirado da infobox da ptwiki Itaguaí; é JPG, não SVG, e não há cópia em motor/assets/bandeiras/ — não usar sem baixar e conferir licença"},
+    "bandeira_estadual": {"arquivo": null, "conferido": false, "obs": "bandeira do estado do RJ não está em motor/assets/bandeiras/"},
+    "nome_da_cidade_no_hud": [
+      {"de": 1627, "ate": 1795, "nome": "ALDEIA DE ITINGA", "curto": "ITINGA", "obs": "aldeia jesuítica de São Francisco Xavier de Itinga (Amantino; ANPUH 2024). Opcional — pode ficar sem nome antes de 1795."},
+      {"de": 1795, "ate": 1892, "nome": "SÃO FRANCISCO XAVIER DE ITAGUAÍ", "curto": "S. F. XAVIER DE ITAGUAÍ", "obs": "freguesia pela Ordem Régia de 22/12/1795; vila pelo alvará de 05/07/1818"},
+      {"de": 1892, "ate": null, "nome": "ITAGUAÍ", "obs": "decreto estadual nº 1-A, de 03/06/1892 (cidade e novo nome)"}
+    ]
+  }
+}

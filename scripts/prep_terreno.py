@@ -179,9 +179,16 @@ def main():
             alvo = rec[msk].mean(0); atual = img[msk].mean(0)
             img = np.where(msk[..., None], img * (alvo / np.maximum(atual, 1)), img)
     img = np.clip(img, 0, 255).astype(np.uint8)
+    # cor média da faixa da borda (terra e água): fundo além do recorte sem emenda (longe.auto)
+    bd = np.zeros(aguaT.shape, bool); m_ = max(4, aguaT.shape[0] // 40)
+    bd[:m_], bd[-m_:], bd[:, :m_], bd[:, -m_:] = True, True, True, True
+    cores = {}
+    for nome, msk in (("cor_agua", bd & aguaT), ("cor_terra", bd & ~aguaT)):
+        if msk.sum() > 100:
+            cores[nome] = [int(v) for v in img[msk].mean(0)]
     Image.fromarray(img).filter(ImageFilter.SMOOTH).save(f"{ASSETS}/textura.jpg", quality=90)
     json.dump({"bbox": [W, S, E, N], "w": w, "h": h, "tex": [w * TEX, h * TEX],
-               "zmin": float(chao.min()), "zmax": float(chao.max()), "regiao": rb},
+               "zmin": float(chao.min()), "zmax": float(chao.max()), "regiao": rb, **cores},
               open(f"{ASSETS}/terreno.json", "w"))
     print(f"ok relevo {w}x{h} z {chao.min():.1f}..{chao.max():.1f} m · textura {w*TEX}x{h*TEX} · água {agua.mean()*100:.1f}%")
 

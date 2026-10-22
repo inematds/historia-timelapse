@@ -1,0 +1,202 @@
+{
+ "nome": "Itaguaí",
+ "bbox": [
+  -44.2,
+  -23.15,
+  -43.45,
+  -22.6
+ ],
+ "pbf": "dl/sudeste.osm.pbf",
+ "pbf_url": "https://download.geofabrik.de/south-america/brazil/sudeste-latest.osm.pbf",
+ "municipio_osm": "Itaguaí",
+ "centro_antigo": [
+  -43.7753,
+  -22.8522
+ ],
+ "agua_baixa_m": 6.0,
+ "efeitos": {
+  "linhas": {
+   "riosp": {
+    "nome_osm": "BR-465",
+    "tipos": [
+     "ref"
+    ],
+    "bbox": [
+     -44.2,
+     -22.86,
+     -43.6,
+     -22.6
+    ]
+   },
+   "riosantos": {
+    "nome_osm": "BR-101",
+    "tipos": [
+     "ref"
+    ],
+    "bbox": [
+     -44.2,
+     -23.15,
+     -43.7,
+     -22.86
+    ]
+   },
+   "arco": {
+    "nome_osm": "BR-493",
+    "tipos": [
+     "ref"
+    ]
+   },
+   "trem_a": {
+    "nome_osm": "",
+    "tipos": [
+     "ferrovia"
+    ],
+    "bbox": [
+     -43.8,
+     -22.9,
+     -43.69,
+     -22.84
+    ]
+   },
+   "trem_b": {
+    "nome_osm": "",
+    "tipos": [
+     "ferrovia"
+    ],
+    "bbox": [
+     -43.86,
+     -22.9,
+     -43.8,
+     -22.86
+    ]
+   },
+   "trem_c": {
+    "nome_osm": "",
+    "tipos": [
+     "ferrovia"
+    ],
+    "bbox": [
+     -43.97,
+     -22.95,
+     -43.86,
+     -22.88
+    ]
+   }
+  },
+  "fortes": {
+   "palacio": {
+    "ponto": [
+     -43.6846,
+     -22.9068
+    ],
+    "lado_m": 160
+   },
+   "ponte_jes": {
+    "ponto": [
+     -43.6768,
+     -22.8725
+    ],
+    "lado_m": 90
+   },
+   "nuclep": {
+    "nome_osm": "NUCLEP"
+   },
+   "inga": {
+    "ponto": [
+     -43.8469,
+     -22.9295
+    ],
+    "lado_m": 220
+   }
+  },
+  "areas": {
+   "porto": {
+    "faixa": {
+     "bbox": [
+      -43.86,
+      -22.945,
+      -43.8,
+      -22.9
+     ],
+     "dist_m": 450,
+     "zmax": 6
+    },
+    "faixas": 6
+   }
+  }
+ },
+ "tex": 2,
+ "musicas": [
+  "~/projetos/output/musicas/balao-exploracao-20260818/faixa-1.mp3",
+  "~/projetos/output/musicas/balao-exploracao-20260818/faixa-2.mp3"
+ ],
+ "cor_satelite": true,
+ "pop_modelo": [
+  [
+   1700,
+   300
+  ],
+  [
+   1820,
+   2000
+  ],
+  [
+   1840,
+   3000
+  ],
+  [
+   1900,
+   3000
+  ],
+  [
+   1940,
+   5000
+  ],
+  [
+   1950,
+   9000
+  ],
+  [
+   1960,
+   15000
+  ],
+  [
+   1970,
+   30000
+  ],
+  [
+   1980,
+   50000
+  ],
+  [
+   1991,
+   62000
+  ],
+  [
+   2000,
+   82003
+  ],
+  [
+   2010,
+   109163
+  ],
+  [
+   2022,
+   116841
+  ]
+ ],
+ "_pop_modelo": "Só para o crescimento dos prédios (território atual, sem Seropédica/Paracambi): 2000–2022 = censos; antes, estimativa grosseira tirando Seropédica e Paracambi da série do IBGE. Não aparece na tela.",
+ "vizinhos_anos": [
+  1900,
+  2020
+ ],
+ "feicoes_nomes": [
+  "nuclep"
+ ],
+ "feicoes_refs": [
+  "BR-465",
+  "BR-101",
+  "BR-493"
+ ],
+ "feicoes_ferrovias": true
+}

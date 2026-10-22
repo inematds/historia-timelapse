@@ -1,0 +1,1939 @@
+{
+ "titulo": "Itaguaí — da aldeia ao porto, em 3D",
+ "hud_de_bloco": "sesmaria-1556",
+ "linha": {
+  "de": 1500,
+  "ate": 2024
+ },
+ "fim": {
+  "titulo": "Itaguaí",
+  "sub": "1818 – 2024",
+  "marca": "INEMA<span>.CLUB</span>",
+  "fica": true,
+  "escuro": 0.25,
+  "dura": 7.0
+ },
+ "longe": {
+  "auto": true
+ },
+ "regimes": [
+  {
+   "ano": 1500,
+   "nome": "Terra dos tupinambás",
+   "bandeira": "portugal"
+  },
+  {
+   "ano": 1556,
+   "nome": "Brasil Colônia",
+   "bandeira": "portugal"
+  },
+  {
+   "ano": 1815.95,
+   "nome": "Reino Unido de Portugal e Brasil",
+   "bandeira": "reino"
+  },
+  {
+   "ano": 1822.7,
+   "nome": "Império do Brasil",
+   "bandeira": "imperio"
+  },
+  {
+   "ano": 1870,
+   "nome": "Império do Brasil",
+   "bandeira": "imperio2"
+  },
+  {
+   "ano": 1889.87,
+   "nome": "República",
+   "bandeira": "republica"
+  },
+  {
+   "ano": 1960,
+   "nome": "República",
+   "bandeira": "brasil"
+  }
+ ],
+ "fortes": [
+  {
+   "id": "ponte_jes",
+   "ano": 1752,
+   "alt": 14,
+   "rotulo": "Ponte dos Jesuítas",
+   "sub": "1752 · rio Guandu"
+  },
+  {
+   "id": "palacio",
+   "ano": 1589.5,
+   "alt": 22,
+   "rotulo": "Fazenda de Santa Cruz",
+   "sub": "sede dos jesuítas · palácio em 1808"
+  },
+  {
+   "id": "inga",
+   "ano": 1962,
+   "alt": 40,
+   "rotulo": "Fábrica da Ingá",
+   "sub": "zinco · Ilha da Madeira (aprox.)"
+  },
+  {
+   "id": "nuclep",
+   "ano": 1975.5,
+   "alt": 30,
+   "rotulo": "NUCLEP",
+   "sub": "1975"
+  }
+ ],
+ "linhas": [
+  {
+   "id": "trem_a",
+   "ano": 1910.87,
+   "desenha": 0.12,
+   "sobe": 4,
+   "cor": [
+    60,
+    40,
+    30
+   ],
+   "largura": 5
+  },
+  {
+   "id": "trem_b",
+   "ano": 1910.87,
+   "desenha": 0.12,
+   "sobe": 4,
+   "cor": [
+    60,
+    40,
+    30
+   ],
+   "largura": 5
+  },
+  {
+   "id": "trem_c",
+   "ano": 1910.87,
+   "desenha": 0.12,
+   "sobe": 4,
+   "cor": [
+    60,
+    40,
+    30
+   ],
+   "largura": 5
+  },
+  {
+   "id": "riosp",
+   "ano": 1928.34,
+   "desenha": 0.5,
+   "sobe": 3,
+   "cor": [
+    190,
+    150,
+    90
+   ],
+   "largura": 4
+  },
+  {
+   "id": "riosantos",
+   "ano": 1974,
+   "desenha": 0.9,
+   "sobe": 4,
+   "cor": [
+    236,
+    236,
+    236
+   ],
+   "largura": 5
+  },
+  {
+   "id": "arco",
+   "ano": 2014,
+   "desenha": 0.9,
+   "sobe": 6,
+   "cor": [
+    255,
+    150,
+    60
+   ],
+   "largura": 6
+  }
+ ],
+ "areas": [
+  {
+   "id": "porto",
+   "ano0": 1977,
+   "ano1": 1982.8,
+   "sai": 8
+  }
+ ],
+ "blocos": [
+  {
+   "id": "capa",
+   "anos": [
+    1500,
+    1500
+   ],
+   "cam": [
+    {
+     "lon": -43.83,
+     "lat": -22.875,
+     "zoom": 11.45,
+     "pitch": 0,
+     "bearing": 0
+    },
+    {
+     "lon": -43.83,
+     "lat": -22.875,
+     "zoom": 11.45,
+     "pitch": 0,
+     "bearing": 0
+    }
+   ],
+   "dur": 5.5,
+   "capa": {
+    "imagem": "assets/capa_full.jpg",
+    "segura": 5.5,
+    "some": 0.8
+   }
+  },
+  {
+   "id": "globo",
+   "anos": [
+    1500,
+    1500
+   ],
+   "cam": [
+    {
+     "lon": -43.83,
+     "lat": -22.875,
+     "zoom": 11.45,
+     "pitch": 0,
+     "bearing": 0
+    },
+    {
+     "lon": -43.83,
+     "lat": -22.875,
+     "zoom": 11.45,
+     "pitch": 0,
+     "bearing": 0
+    }
+   ],
+   "dur": 9.0,
+   "corte": true,
+   "globo": {
+    "raster": true,
+    "uf": "RJ",
+    "uf_de": 1500,
+    "uf_ate": 60000,
+    "br_ate": 9000,
+    "some": 1.2,
+    "chaves": [
+     [
+      0,
+      {
+       "lon": -30,
+       "lat": -6,
+       "ls": 5.95
+      }
+     ],
+     [
+      0.3,
+      {
+       "lon": -42,
+       "lat": -16,
+       "ls": 6.6
+      }
+     ],
+     [
+      0.65,
+      {
+       "lon": -43.5,
+       "lat": -22.5,
+       "ls": 8.6
+      }
+     ],
+     [
+      1,
+      {
+       "lon": -43.83,
+       "lat": -22.875,
+       "ls": 11.725
+      }
+     ]
+    ],
+    "rotulos": [
+     {
+      "lon": -51,
+      "lat": -11,
+      "texto": "BRASIL",
+      "de": 380,
+      "ate": 3500,
+      "tam": 84
+     },
+     {
+      "lon": -42.6,
+      "lat": -22.15,
+      "texto": "RIO DE JANEIRO",
+      "de": 2600,
+      "ate": 40000,
+      "tam": 64
+     },
+     {
+      "lon": -43.775,
+      "lat": -22.8,
+      "texto": "ITAGUAÍ",
+      "de": 30000,
+      "ate": 2000000.0,
+      "tam": 72,
+      "ponto": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "tupinambas",
+   "anos": [
+    1500,
+    1500
+   ],
+   "cam": [
+    {
+     "lon": -43.83,
+     "lat": -22.875,
+     "zoom": 11.45,
+     "pitch": 0,
+     "bearing": 0
+    },
+    {
+     "lon": -43.88,
+     "lat": -22.96,
+     "zoom": 11.9,
+     "pitch": 52,
+     "bearing": -10
+    }
+   ],
+   "dur": 9.5,
+   "cartao": {
+    "titulo": "A terra dos <b>tupinambás</b>",
+    "numero": "SÉC. XVI",
+    "legenda": "Antes dos portugueses, aldeias tupis ocupavam toda a costa entre São Sebastião e Cabo Frio",
+    "detalhe": "Os tupinambás (chamados de tamoios pelos portugueses) dominavam o litoral do Rio. A Baía de Sepetiba guarda sambaquis, sinais de povos ainda mais antigos.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.8775,
+     -22.970833
+    ]
+   },
+   "pulso_r": 2500
+  },
+  {
+   "id": "nome-tupi",
+   "anos": [
+    1500,
+    1500
+   ],
+   "cam": [
+    {
+     "lon": -43.88,
+     "lat": -22.96,
+     "zoom": 11.9,
+     "pitch": 52,
+     "bearing": -10
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.862,
+     "zoom": 13.2,
+     "pitch": 56,
+     "bearing": -15
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "Itaguaí, nome <b>tupi</b>",
+    "numero": "ITÁ · KÛÁ · 'Y",
+    "legenda": "Itá (pedra) + kûá (enseada) + 'y (rio): o \"rio da enseada da pedra\"",
+    "detalhe": "O nome vem do tupi antigo, segundo o dicionário de Eduardo Navarro. Outros nomes da região também são tupis: Sepetiba, Marambaia, Mazomba, Itacuruçá.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   }
+  },
+  {
+   "id": "sesmaria-1556",
+   "anos": [
+    1500,
+    1556,
+    1557
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.862,
+     "zoom": 13.2,
+     "pitch": 56,
+     "bearing": -15
+    },
+    {
+     "lon": -43.688,
+     "lat": -22.915,
+     "zoom": 13.5,
+     "pitch": 57,
+     "bearing": -30
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "A SESMARIA <b>DE SEPETIBA</b>",
+    "numero": "10 léguas",
+    "legenda": "Cristóvão Monteiro ganha terras da orla de Sepetiba até perto de Itacuruçá",
+    "detalhe": "Prêmio por lutar contra os franceses na Guanabara: cerca de 4 léguas de largura por 10 de extensão, para fazer açúcar. A sede começou a ser erguida em 1570.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.68333,
+     -22.91667
+    ]
+   },
+   "pulo": 1.5,
+   "frota": {
+    "de": [
+     -43.62,
+     -23.06
+    ],
+    "para": [
+     -43.7,
+     -22.96
+    ],
+    "n": 1,
+    "r": 110,
+    "dura": 6,
+    "rotulo": "Cristóvão Monteiro",
+    "sub": "1556 · sesmaria"
+   },
+   "rotulos": [
+    {
+     "lon": -43.6846,
+     "lat": -22.9068,
+     "texto": "SANTA CRUZ",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "jesuitas-1589",
+   "anos": [
+    1557,
+    1589,
+    1590
+   ],
+   "cam": [
+    {
+     "lon": -43.688,
+     "lat": -22.915,
+     "zoom": 13.5,
+     "pitch": 57,
+     "bearing": -30
+    },
+    {
+     "lon": -43.688,
+     "lat": -22.915,
+     "zoom": 13.5,
+     "pitch": 57,
+     "bearing": -30
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "OS JESUÍTAS EM <b>SANTA CRUZ</b>",
+    "numero": "1589",
+    "legenda": "A viúva de Cristóvão Monteiro doa as terras aos padres da Companhia de Jesus",
+    "detalhe": "Os jesuítas juntam sesmarias e marcam o latifúndio com uma grande cruz de madeira: a Santa Cruz. Vira o maior complexo agropastoril do Brasil no séc. XVIII.",
+    "fonte": "Wikipédia; ifch.unicamp.br",
+    "local": [
+     -43.68333,
+     -22.91667
+    ]
+   },
+   "pulo": 1.2,
+   "rotulos": [
+    {
+     "lon": -43.6846,
+     "lat": -22.9068,
+     "texto": "FAZENDA DE SANTA CRUZ",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "jaguaramenom",
+   "anos": [
+    1590,
+    1620,
+    1621
+   ],
+   "cam": [
+    {
+     "lon": -43.688,
+     "lat": -22.915,
+     "zoom": 13.5,
+     "pitch": 57,
+     "bearing": -30
+    },
+    {
+     "lon": -43.9,
+     "lat": -22.935,
+     "zoom": 12.9,
+     "pitch": 55,
+     "bearing": -10
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "DA ILHA PARA <b>ITACURUÇÁ</b>",
+    "numero": "PIAÇAVERA",
+    "legenda": "Índios da ilha de Jaguaramenom, atraídos por Martim de Sá, mudam para Piaçavera, hoje Itacuruçá",
+    "detalhe": "É o começo do povoamento contado por Monsenhor Pizarro. Da ilha, mais tarde, eles passaram ao continente, entre os rios Tiguaçu e Itaguaí.",
+    "fonte": "IBGE; Wikipédia",
+    "local": [
+     -43.9,
+     -22.9
+    ]
+   },
+   "pulo": 1.0,
+   "frota": {
+    "de": [
+     -43.95,
+     -22.97
+    ],
+    "para": [
+     -43.9,
+     -22.925
+    ],
+    "n": 5,
+    "r": 40,
+    "dura": 5,
+    "icone": "canoa",
+    "rotulo": "Aldeia indígena",
+    "sub": "da ilha para o continente"
+   },
+   "rotulos": [
+    {
+     "lon": -43.905,
+     "lat": -22.952,
+     "texto": "ILHA DE ITACURUÇÁ",
+     "z": 320,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "aldeia-itinga",
+   "anos": [
+    1621,
+    1627,
+    1628
+   ],
+   "cam": [
+    {
+     "lon": -43.9,
+     "lat": -22.935,
+     "zoom": 12.9,
+     "pitch": 55,
+     "bearing": -10
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.862,
+     "zoom": 13.2,
+     "pitch": 56,
+     "bearing": -15
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "A ALDEIA DE <b>ITINGA</b>",
+    "numero": "Y-TINGA",
+    "legenda": "No continente, os índios chamam a terra de Y-tinga; os jesuítas erguem ali uma igreja",
+    "detalhe": "Nasce a aldeia de São Francisco Xavier de Itinga, dos padres da Fazenda de Santa Cruz. A primeira igreja ficou pronta antes de 1688. É a semente da cidade.",
+    "fonte": "ifch.unicamp.br; IBGE; anpuh.org.br",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 0.8,
+   "rotulos": [
+    {
+     "lon": -43.775,
+     "lat": -22.852,
+     "texto": "ALDEIA DE ITINGA",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "aldeia-desce-1718",
+   "anos": [
+    1628,
+    1718,
+    1719
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.862,
+     "zoom": 13.2,
+     "pitch": 56,
+     "bearing": -15
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "A aldeia desce para <b>perto do mar</b>",
+    "numero": "ANTES DE 1718",
+    "legenda": "Os jesuítas levam todos os moradores da aldeia para terras da fazenda mais perto do oceano",
+    "detalhe": "As terras da Fazenda de Santa Cruz, junto ao mar, serviam melhor de núcleo do aldeamento. O arraial antigo foi esvaziado e um novo começou onde hoje é o centro.",
+    "fonte": "IBGE",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 1.6,
+   "rotulos": [
+    {
+     "lon": -43.775,
+     "lat": -22.852,
+     "texto": "ITAGUAÍ",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "caminho-1725",
+   "anos": [
+    1719,
+    1725,
+    1726
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    },
+    {
+     "lon": -43.75,
+     "lat": -22.83,
+     "zoom": 12.3,
+     "pitch": 52,
+     "bearing": -15
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "O CAMINHO PARA <b>SÃO PAULO</b>",
+    "numero": "c. 1725",
+    "legenda": "Abre-se por terra o caminho Rio–São Paulo, fugindo dos piratas da Ilha Grande",
+    "detalhe": "A viagem por mar de Paraty ao Rio era perigosa por causa dos corsários. O novo caminho passava por Itaguaí: terreno firme, poucos alagadiços e muita água para os animais.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 0.6,
+   "imagem": {
+    "src": "assets/epoca/e00.jpg",
+    "legenda": "A capitania do Rio de Janeiro, 1757",
+    "credito": "M. Leveux, capitão de engenharia · 1757 · domínio público (Wikimedia Commons)"
+   }
+  },
+  {
+   "id": "igreja-1729",
+   "anos": [
+    1726,
+    1729,
+    1730
+   ],
+   "cam": [
+    {
+     "lon": -43.75,
+     "lat": -22.83,
+     "zoom": 12.3,
+     "pitch": 52,
+     "bearing": -15
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "Igreja de S. Francisco <b>Xavier</b>",
+    "numero": "1729",
+    "legenda": "Índios e jesuítas terminam a igreja de São Francisco Xavier, no alto da colina",
+    "detalhe": "De lá se vê a baixada de Santa Cruz. A igreja deu nome à povoação e hoje é a matriz (catedral desde 1980) no centro de Itaguaí.",
+    "fonte": "IBGE; Wikipédia",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 0.5,
+   "rotulos": [
+    {
+     "lon": -43.775,
+     "lat": -22.852,
+     "texto": "MATRIZ",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "ponte-jesuitas-1752",
+   "anos": [
+    1730,
+    1752,
+    1753
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    },
+    {
+     "lon": -43.6768,
+     "lat": -22.8745,
+     "zoom": 15.6,
+     "pitch": 60,
+     "bearing": 0
+    }
+   ],
+   "dur": 9.5,
+   "cartao": {
+    "titulo": "A PONTE <b>DOS JESUÍTAS</b>",
+    "numero": "1752",
+    "legenda": "No rio Guandu, os jesuítas erguem uma ponte-represa para conter as enchentes",
+    "detalhe": "A Ponte do Guandu tem colunas de granito, esculturas barrocas e o símbolo IHS da Companhia de Jesus com a data 1752. Está quase intacta e é tombada pelo IPHAN.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.6770639,
+     -22.8722556
+    ]
+   },
+   "pulo": 1.2,
+   "destaca": [
+    "forte:ponte_jes"
+   ],
+   "rotulos": [
+    {
+     "lon": -43.6768,
+     "lat": -22.8725,
+     "texto": "PONTE DOS JESUÍTAS",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "expulsao-1759",
+   "anos": [
+    1753,
+    1759,
+    1760
+   ],
+   "cam": [
+    {
+     "lon": -43.6768,
+     "lat": -22.8745,
+     "zoom": 15.6,
+     "pitch": 60,
+     "bearing": 0
+    },
+    {
+     "lon": -43.688,
+     "lat": -22.915,
+     "zoom": 13.5,
+     "pitch": 57,
+     "bearing": -30
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "JESUÍTAS <b>EXPULSOS</b>",
+    "numero": "1759",
+    "legenda": "Pombal expulsa a Companhia de Jesus; a fazenda e a aldeia passam para a Coroa",
+    "detalhe": "Os padres perdem o controle da povoação e são forçados a sair. A Fazenda de Santa Cruz vira Fazenda Real, subordinada aos vice-reis.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -43.68333,
+     -22.91667
+    ]
+   },
+   "pulo": 0.6,
+   "destaca": [
+    "forte:palacio"
+   ],
+   "tom": {
+    "cor": "#8a6a6a",
+    "forca": 0.25
+   },
+   "imagem": {
+    "src": "assets/epoca/e01.jpg",
+    "legenda": "A baía e a Marambaia, 1767",
+    "credito": "Manuel Vieira Leão · 1767 · domínio público (Wikimedia Commons)"
+   }
+  },
+  {
+   "id": "freguesia-1795",
+   "anos": [
+    1760,
+    1795,
+    1796
+   ],
+   "cam": [
+    {
+     "lon": -43.688,
+     "lat": -22.915,
+     "zoom": 13.5,
+     "pitch": 57,
+     "bearing": -30
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    }
+   ],
+   "dur": 8.0,
+   "cartao": {
+    "titulo": "NASCE A <b>FREGUESIA</b>",
+    "numero": "22/12/1795",
+    "legenda": "A aldeia vira freguesia de São Francisco Xavier de Itaguaí, ligada ao Rio e a Angra",
+    "detalhe": "Primeiro degrau oficial da futura cidade: a paróquia de São Francisco Xavier de Itaguaí, subordinada ao Rio de Janeiro e a Angra dos Reis (Ilha Grande).",
+    "fonte": "IBGE",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 1.2,
+   "imagem": {
+    "src": "assets/epoca/e02.jpg",
+    "legenda": "A costa e a Baía de Sepetiba, 1785",
+    "credito": "Simão Antônio da Rosa Pinheiro; ed. A. Dalrymple, 1790 · 1785 · domínio público (Wikimedia Commons)"
+   }
+  },
+  {
+   "id": "corte-1808",
+   "anos": [
+    1796,
+    1808.2,
+    1809
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    },
+    {
+     "lon": -43.688,
+     "lat": -22.915,
+     "zoom": 13.5,
+     "pitch": 57,
+     "bearing": -30
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "O REI VEM PASSAR <b>O VERÃO</b>",
+    "numero": "23 mil ha",
+    "legenda": "D. João transforma o antigo convento de Santa Cruz em palácio de veraneio",
+    "detalhe": "A fazenda tinha 23 mil hectares. D. João ficava meses ali, despachando e dando audiências. Em 1812, chineses vieram plantar chá no Morro do Chá.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.68333,
+     -22.91667
+    ]
+   },
+   "pulo": 1.0,
+   "destaca": [
+    "forte:palacio"
+   ],
+   "imagem": {
+    "src": "assets/epoca/e03.jpg",
+    "legenda": "Projeto do Palácio de Santa Cruz, 1817",
+    "credito": "John Johnson, arquiteto · 1817 · domínio público (Wikimedia Commons)"
+   },
+   "rotulos": [
+    {
+     "lon": -43.6846,
+     "lat": -22.9068,
+     "texto": "PALÁCIO DE SANTA CRUZ",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "vila-1818",
+   "anos": [
+    1809,
+    1818.5,
+    1819
+   ],
+   "cam": [
+    {
+     "lon": -43.688,
+     "lat": -22.915,
+     "zoom": 13.5,
+     "pitch": 57,
+     "bearing": -30
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "NASCE A VILA DE <b>ITAGUAÍ</b>",
+    "numero": "05/07/1818",
+    "legenda": "A aldeia vira Vila de São Francisco Xavier de Itaguaí, separada do Rio e de Angra",
+    "detalhe": "Abrangia as freguesias de Itaguaí, Marapicu e Mangaratiba e o Ribeirão das Lajes. Foi extinta meses depois e refeita em 1819; instalada de vez em 1820.",
+    "fonte": "IBGE; Wikipédia",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 1.0,
+   "imagem": {
+    "src": "assets/epoca/e04.jpg",
+    "legenda": "A vila de Itaguaí por Maria Graham, 1823",
+    "credito": "Maria Graham · 1823 · domínio público (Wikimedia Commons)"
+   }
+  },
+  {
+   "id": "dom-pedro-1822",
+   "anos": [
+    1819,
+    1822.62,
+    1822.8
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.862,
+     "zoom": 13.2,
+     "pitch": 56,
+     "bearing": -15
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "D. PEDRO PASSA POR <b>AQUI</b>",
+    "numero": "15/08/1822",
+    "legenda": "A caminho de São Paulo, onde proclamaria a Independência, D. Pedro pernoita em Itaguaí",
+    "detalhe": "Antes, reuniu-se com José Bonifácio em Santa Cruz (15/08/1822). Na vila, parou para descansar e dar água aos cavalos, perto da Igreja Matriz.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 0.8,
+   "imagem": {
+    "src": "assets/epoca/e05.jpg",
+    "legenda": "O Palácio de Santa Cruz, 1823",
+    "credito": "Maria Graham · 1823 · domínio público (Wikimedia Commons)"
+   }
+  },
+  {
+   "id": "mangaratiba-1831",
+   "anos": [
+    1822.8,
+    1831.8,
+    1832
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.862,
+     "zoom": 13.2,
+     "pitch": 56,
+     "bearing": -15
+    },
+    {
+     "lon": -44.02,
+     "lat": -22.96,
+     "zoom": 12.4,
+     "pitch": 55,
+     "bearing": 15
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "MANGARATIBA SE <b>SEPARA</b>",
+    "numero": "1831",
+    "legenda": "A freguesia de Mangaratiba vira vila e leva parte do território de Itaguaí",
+    "detalhe": "Mangaratiba foi formada com terras de São João Marcos, Angra dos Reis e Itaguaí. Na República foi extinta e recriada (1892), de novo com terras de Itaguaí.",
+    "fonte": "IBGE; Wikipédia",
+    "local": [
+     -44.040556,
+     -22.959722
+    ]
+   },
+   "pulo": 0.8,
+   "imagem": {
+    "src": "assets/epoca/e06.jpg",
+    "legenda": "Mata perto de Mangaratiba (Rugendas)",
+    "credito": "Johann Moritz Rugendas · 1827–1835 · domínio público (Wikimedia Commons)"
+   },
+   "rotulos": [
+    {
+     "lon": -44.0406,
+     "lat": -22.9597,
+     "texto": "MANGARATIBA",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "fim-aldeia-1834",
+   "anos": [
+    1832,
+    1834,
+    1835
+   ],
+   "cam": [
+    {
+     "lon": -44.02,
+     "lat": -22.96,
+     "zoom": 12.4,
+     "pitch": 55,
+     "bearing": 15
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.862,
+     "zoom": 13.2,
+     "pitch": 56,
+     "bearing": -15
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "O FIM DA ALDEIA DE <b>ITINGA</b>",
+    "numero": "1834",
+    "legenda": "Depois de anos de conflito por terra, a aldeia indígena é declarada extinta",
+    "detalhe": "Fazendeiros disputavam as terras da aldeia. Pesquisas recentes mostram que os indígenas continuaram na região mesmo depois do fim oficial da aldeia.",
+    "fonte": "anpuh.org.br",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 0.5
+  },
+  {
+   "id": "quintino-1836",
+   "anos": [
+    1835,
+    1836.9,
+    1837
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.862,
+     "zoom": 13.2,
+     "pitch": 56,
+     "bearing": -15
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    }
+   ],
+   "dur": 8.0,
+   "cartao": {
+    "titulo": "NASCE QUINTINO <b>BOCAIÚVA</b>",
+    "numero": "04/12/1836",
+    "legenda": "Na vila nasce o jornalista que seria um dos líderes da Proclamação da República",
+    "detalhe": "Quintino Bocaiúva foi o primeiro ministro das Relações Exteriores da República e depois senador. A casa onde nasceu aparece na monografia do IBGE.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 0.5
+  },
+  {
+   "id": "cafe-1850",
+   "anos": [
+    1837,
+    1850,
+    1851
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    },
+    {
+     "lon": -43.75,
+     "lat": -22.83,
+     "zoom": 12.3,
+     "pitch": 52,
+     "bearing": -15
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "CAFÉ, AÇÚCAR E <b>FARINHA</b>",
+    "numero": "até 1880",
+    "legenda": "Com mão de obra escravizada, Itaguaí exporta cereais, café, farinha, açúcar e aguardente",
+    "detalhe": "Ponto de passagem para Minas e São Paulo, a vila viveu de agricultura e comércio até 1880. Em 1851 nasce a freguesia do Bananal, hoje Seropédica.",
+    "fonte": "IBGE",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 1.0,
+   "imagem": {
+    "src": "assets/epoca/e07.jpg",
+    "legenda": "Sede da Fazenda de Santa Cruz, 1848",
+    "credito": "Conrado Jacó de Niemeyer · 1848 · domínio público (Wikimedia Commons)"
+   }
+  },
+  {
+   "id": "abolicao-1888",
+   "anos": [
+    1851,
+    1888.37,
+    1889
+   ],
+   "cam": [
+    {
+     "lon": -43.75,
+     "lat": -22.83,
+     "zoom": 12.3,
+     "pitch": 52,
+     "bearing": -15
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.862,
+     "zoom": 13.2,
+     "pitch": 56,
+     "bearing": -15
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "ABOLIÇÃO E <b>DECADÊNCIA</b>",
+    "numero": "13/05/1888",
+    "legenda": "Com o fim da escravidão, os libertos deixam as fazendas e as grandes lavouras somem",
+    "detalhe": "Sem transporte e com a baixada insalubre (malária), a economia desabou. Itaguaí ganharia o apelido de 'Município Abandonado' até os anos 1950.",
+    "fonte": "IBGE; Wikipédia",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 1.5,
+   "tom": {
+    "cor": "#7a6a5a",
+    "forca": 0.2
+   },
+   "imagem": {
+    "src": "assets/epoca/e11.jpg",
+    "legenda": "A província do Rio de Janeiro, 1887",
+    "credito": "Província do Rio de Janeiro / Arquivo Nacional · 1887 · domínio público (Wikimedia Commons)"
+   }
+  },
+  {
+   "id": "cidade-1892",
+   "anos": [
+    1889,
+    1892.42,
+    1893
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.862,
+     "zoom": 13.2,
+     "pitch": 56,
+     "bearing": -15
+    },
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    }
+   ],
+   "dur": 8.0,
+   "cartao": {
+    "titulo": "A VILA VIRA <b>CIDADE</b>",
+    "numero": "03/06/1892",
+    "legenda": "Já na República, São Francisco Xavier de Itaguaí vira a cidade de Itaguaí",
+    "detalhe": "O mesmo decreto encurta o nome para só Itaguaí e cria o distrito de Ribeirão das Lajes (depois Macacos e, em 1901, Paracambi).",
+    "fonte": "IBGE",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 0.6,
+   "imagem": {
+    "src": "assets/epoca/e09.jpg",
+    "legenda": "Carta náutica da Baía de Sepetiba, 1870",
+    "credito": "United Kingdom Hydrographic Office · 1870 · domínio público (Wikimedia Commons)"
+   }
+  },
+  {
+   "id": "trem-1910",
+   "anos": [
+    1893,
+    1910.87,
+    1911
+   ],
+   "cam": [
+    {
+     "lon": -43.776,
+     "lat": -22.858,
+     "zoom": 14.3,
+     "pitch": 58,
+     "bearing": -25
+    },
+    {
+     "lon": -43.75,
+     "lat": -22.83,
+     "zoom": 12.3,
+     "pitch": 52,
+     "bearing": -15
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "CHEGA O <b>TREM</b>",
+    "numero": "14/11/1910",
+    "legenda": "O Ramal de Mangaratiba da Central do Brasil chega a Itaguaí; Coroa Grande ganha estação em 1911",
+    "detalhe": "A estação de Itaguaí, no km 65,7, abriu em 14/11/1910; a de Coroa Grande em 17/11/1911. Hoje o ramal leva minério ao porto e a Mangaratiba.",
+    "fonte": "estacoesferroviarias.com.br; Wikipédia",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 1.2,
+   "destaca": [
+    "linha:trem_a",
+    "linha:trem_b",
+    "linha:trem_c"
+   ],
+   "imagem": {
+    "src": "assets/epoca/e12.jpg",
+    "legenda": "Planta da Estrada de Ferro Central, 1890",
+    "credito": "Governo do Estado do Rio de Janeiro / Arquivo Nacional · 1890 · domínio público (Wikimedia Commons)"
+   }
+  },
+  {
+   "id": "rio-sp-1928",
+   "anos": [
+    1911,
+    1928.34,
+    1929
+   ],
+   "cam": [
+    {
+     "lon": -43.75,
+     "lat": -22.83,
+     "zoom": 12.3,
+     "pitch": 52,
+     "bearing": -15
+    },
+    {
+     "lon": -43.73,
+     "lat": -22.79,
+     "zoom": 12.2,
+     "pitch": 52,
+     "bearing": -10
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "A ESTRADA <b>RIO–SÃO PAULO</b>",
+    "numero": "05/05/1928",
+    "legenda": "A rodovia Rio–São Paulo corta o município e traz indústria e loteamentos",
+    "detalhe": "Passava pelo distrito de Seropédica, então parte de Itaguaí. Junto com o saneamento da baixada, ajudou o município a sair da decadência.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -43.6886139,
+     -22.7635417
+    ]
+   },
+   "pulo": 1.2,
+   "destaca": [
+    "linha:riosp"
+   ],
+   "rotulos": [
+    {
+     "lon": -43.7,
+     "lat": -22.765,
+     "texto": "RIO–SÃO PAULO",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "japoneses-1938",
+   "anos": [
+    1929,
+    1938,
+    1939
+   ],
+   "cam": [
+    {
+     "lon": -43.73,
+     "lat": -22.79,
+     "zoom": 12.2,
+     "pitch": 52,
+     "bearing": -10
+    },
+    {
+     "lon": -43.75,
+     "lat": -22.83,
+     "zoom": 12.3,
+     "pitch": 52,
+     "bearing": -15
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "CHEGAM OS <b>JAPONESES</b>",
+    "numero": "1938",
+    "legenda": "Colonos japoneses começam a plantar na baixada; no mesmo ano nasce a obra da Rural",
+    "detalhe": "Vieram por acordo do governo Vargas com a Cooperativa de Cotia. Itaguaí ainda tem uma das maiores colônias japonesas do estado. A UFRRJ começou a ser erguida em 1938.",
+    "fonte": "Wikipédia; diariodorio.com",
+    "local": [
+     -43.68333,
+     -22.91667
+    ]
+   },
+   "pulo": 0.8
+  },
+  {
+   "id": "paracambi-1960",
+   "anos": [
+    1939,
+    1960.6,
+    1961
+   ],
+   "cam": [
+    {
+     "lon": -43.75,
+     "lat": -22.83,
+     "zoom": 12.3,
+     "pitch": 52,
+     "bearing": -15
+    },
+    {
+     "lon": -43.73,
+     "lat": -22.79,
+     "zoom": 12.2,
+     "pitch": 52,
+     "bearing": -10
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "PARACAMBI <b>SE EMANCIPA</b>",
+    "numero": "+29,6% (1960–70)",
+    "legenda": "O distrito de Paracambi deixa Itaguaí e vira município com terras de Vassouras",
+    "detalhe": "Era o antigo Ribeirão das Lajes, no norte. Mesmo assim, entre 1960 e 1970 a população de Itaguaí cresceu 29,6%.",
+    "fonte": "IBGE",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 1.2,
+   "rotulos": [
+    {
+     "lon": -43.72,
+     "lat": -22.64,
+     "texto": "PARACAMBI ↑",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "inga-1962",
+   "anos": [
+    1961,
+    1962,
+    1963
+   ],
+   "cam": [
+    {
+     "lon": -43.73,
+     "lat": -22.79,
+     "zoom": 12.2,
+     "pitch": 52,
+     "bearing": -10
+    },
+    {
+     "lon": -43.845,
+     "lat": -22.935,
+     "zoom": 14.4,
+     "pitch": 60,
+     "bearing": -10
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "A FÁBRICA DE ZINCO <b>DA INGÁ</b>",
+    "numero": "~30% do zinco",
+    "legenda": "Na Ilha da Madeira, a Ingá vira a primeira usina do Brasil de zinco eletrolítico",
+    "detalhe": "Empregava a maioria dos trabalhadores locais. Em 1996 chegou a ter cerca de 30% do mercado brasileiro de zinco — e deixou montanhas de resíduos com cádmio.",
+    "fonte": "maxwell.vrac.puc-rio.br; IBGE",
+    "local": [
+     -43.846863,
+     -22.929454
+    ]
+   },
+   "pulo": 0.5,
+   "destaca": [
+    "forte:inga"
+   ],
+   "rotulos": [
+    {
+     "lon": -43.8469,
+     "lat": -22.9295,
+     "texto": "INGÁ",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "rio-santos-1974",
+   "anos": [
+    1963,
+    1974,
+    1975
+   ],
+   "cam": [
+    {
+     "lon": -43.845,
+     "lat": -22.935,
+     "zoom": 14.4,
+     "pitch": 60,
+     "bearing": -10
+    },
+    {
+     "lon": -43.9,
+     "lat": -22.935,
+     "zoom": 12.9,
+     "pitch": 55,
+     "bearing": -10
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "ABRE A <b>RIO–SANTOS</b>",
+    "numero": "BR-101",
+    "legenda": "A BR-101 liga Itaguaí ao litoral sul e vira o acesso principal do futuro porto",
+    "detalhe": "A estrada facilitou a ligação com Mangaratiba, Angra e Paraty e, depois, com o porto de Sepetiba, que tem na BR-101 seu acesso principal.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 1.0,
+   "destaca": [
+    "linha:riosantos"
+   ],
+   "rotulos": [
+    {
+     "lon": -43.86,
+     "lat": -22.89,
+     "texto": "RIO–SANTOS",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "nuclep-1975",
+   "anos": [
+    1975,
+    1975.5,
+    1976
+   ],
+   "cam": [
+    {
+     "lon": -43.9,
+     "lat": -22.935,
+     "zoom": 12.9,
+     "pitch": 55,
+     "bearing": -10
+    },
+    {
+     "lon": -43.828,
+     "lat": -22.893,
+     "zoom": 14.4,
+     "pitch": 58,
+     "bearing": -35
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "NASCE A <b>NUCLEP</b>",
+    "numero": "1975",
+    "legenda": "A estatal de caldeiraria pesada se instala para o programa nuclear brasileiro",
+    "detalhe": "A Nuclebrás Equipamentos Pesados faz peças gigantes de aço. Hoje forja as seções do casco dos submarinos montados ao lado, no Complexo Naval.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.829028,
+     -22.8879333
+    ]
+   },
+   "pulo": 0.4,
+   "destaca": [
+    "forte:nuclep"
+   ],
+   "rotulos": [
+    {
+     "lon": -43.8282,
+     "lat": -22.8832,
+     "texto": "NUCLEP",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "porto-1982",
+   "anos": [
+    1976,
+    1982,
+    1983
+   ],
+   "cam": [
+    {
+     "lon": -43.828,
+     "lat": -22.893,
+     "zoom": 14.4,
+     "pitch": 58,
+     "bearing": -35
+    },
+    {
+     "lon": -43.835,
+     "lat": -22.935,
+     "zoom": 13.7,
+     "pitch": 60,
+     "bearing": -25
+    }
+   ],
+   "dur": 10.0,
+   "cartao": {
+    "titulo": "O PORTO DE <b>SEPETIBA</b>",
+    "numero": "51,7 mi t (2021)",
+    "legenda": "Inaugurado o porto, para descarregar carvão da CSN e alumina da Valesul",
+    "detalhe": "Dragagem e aterro desde 1977 (área aproximada no mapa). Em 2021, 51,7 milhões de toneladas e 8 berços.",
+    "fonte": "Wikipédia; portosrio.gov.br",
+    "local": [
+     -43.83556,
+     -22.93111
+    ]
+   },
+   "pulo": 1.0,
+   "destaca": [
+    "area:porto"
+   ],
+   "rotulos": [
+    {
+     "lon": -43.835,
+     "lat": -22.925,
+     "texto": "PORTO DE ITAGUAÍ",
+     "z": 300,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "seropedica-1995",
+   "anos": [
+    1983,
+    1995.78,
+    1996
+   ],
+   "cam": [
+    {
+     "lon": -43.835,
+     "lat": -22.935,
+     "zoom": 13.7,
+     "pitch": 60,
+     "bearing": -25
+    },
+    {
+     "lon": -43.71,
+     "lat": -22.765,
+     "zoom": 12.5,
+     "pitch": 55,
+     "bearing": -20
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "SEROPÉDICA <b>SE EMANCIPA</b>",
+    "numero": "28.175 (1970)",
+    "legenda": "O distrito de Seropédica, onde fica a Rural, deixa Itaguaí e vira município",
+    "detalhe": "Em 1970 Seropédica já tinha 28.175 moradores, mais que a sede de Itaguaí (23.527). O nome vem da seda: o antigo distrito Patioba virou Seropédica em 1926.",
+    "fonte": "IBGE",
+    "local": [
+     -43.70778,
+     -22.74389
+    ]
+   },
+   "pulo": 1.2,
+   "rotulos": [
+    {
+     "lon": -43.7078,
+     "lat": -22.7439,
+     "texto": "SEROPÉDICA",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "dique-inga-1996",
+   "anos": [
+    1996,
+    1996.1,
+    1997
+   ],
+   "cam": [
+    {
+     "lon": -43.71,
+     "lat": -22.765,
+     "zoom": 12.5,
+     "pitch": 55,
+     "bearing": -20
+    },
+    {
+     "lon": -43.845,
+     "lat": -22.935,
+     "zoom": 14.4,
+     "pitch": 60,
+     "bearing": -10
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "Veneno na <b>baía</b>",
+    "numero": "60× o limite",
+    "legenda": "Chuvas rompem o dique da Ingá e metais pesados vazam na Baía de Sepetiba",
+    "detalhe": "Mariscos tinham zinco e cádmio até 60 vezes acima do limite. A Ingá faliu em 1998 e deixou um passivo ambiental de R$ 20 milhões na Ilha da Madeira.",
+    "fonte": "maxwell.vrac.puc-rio.br; Wikipédia",
+    "local": [
+     -43.846863,
+     -22.929454
+    ]
+   },
+   "pulo": 0.3,
+   "destaca": [
+    "forte:inga"
+   ],
+   "tom": {
+    "cor": "#6a4a4a",
+    "forca": 0.3
+   }
+  },
+  {
+   "id": "prosub-2008",
+   "anos": [
+    1997,
+    2008,
+    2009
+   ],
+   "cam": [
+    {
+     "lon": -43.845,
+     "lat": -22.935,
+     "zoom": 14.4,
+     "pitch": 60,
+     "bearing": -10
+    },
+    {
+     "lon": -43.845,
+     "lat": -22.935,
+     "zoom": 14.4,
+     "pitch": 60,
+     "bearing": -10
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "ESTALEIRO <b>DE SUBMARINOS</b>",
+    "numero": "4 + 1 submarinos",
+    "legenda": "Brasil e França fecham o ProSub: 4 submarinos convencionais e 1 nuclear feitos em Itaguaí",
+    "detalhe": "O complexo naval ocupa 750 mil m² junto à Nuclep, com estaleiro e base para até 10 submarinos. A fábrica de estruturas (UFEM) foi inaugurada em 1º/03/2013.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.846863,
+     -22.929454
+    ]
+   },
+   "pulo": 1.0,
+   "rotulos": [
+    {
+     "lon": -43.8469,
+     "lat": -22.9295,
+     "texto": "BASE DE SUBMARINOS",
+     "z": 200,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "arco-2014",
+   "anos": [
+    2009,
+    2014,
+    2015
+   ],
+   "cam": [
+    {
+     "lon": -43.845,
+     "lat": -22.935,
+     "zoom": 14.4,
+     "pitch": 60,
+     "bearing": -10
+    },
+    {
+     "lon": -43.73,
+     "lat": -22.79,
+     "zoom": 12.2,
+     "pitch": 52,
+     "bearing": -10
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "O ARCO <b>METROPOLITANO</b>",
+    "numero": "145 km",
+    "legenda": "Abre o anel rodoviário de 145 km que liga o porto de Itaguaí ao resto do país",
+    "detalhe": "O 1º trecho, de cerca de 71 km, vai da Rio-Santos, em Itaguaí, à Washington Luís, sem passar pela cidade do Rio. Projeto dos anos 1970, com obras desde 2008.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 0.6,
+   "destaca": [
+    "linha:arco"
+   ],
+   "rotulos": [
+    {
+     "lon": -43.74,
+     "lat": -22.78,
+     "texto": "ARCO METROPOLITANO",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "riachuelo-2018",
+   "anos": [
+    2015,
+    2018.95,
+    2019
+   ],
+   "cam": [
+    {
+     "lon": -43.73,
+     "lat": -22.79,
+     "zoom": 12.2,
+     "pitch": 52,
+     "bearing": -10
+    },
+    {
+     "lon": -43.845,
+     "lat": -22.935,
+     "zoom": 14.4,
+     "pitch": 60,
+     "bearing": -10
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "O SUBMARINO <b>RIACHUELO</b>",
+    "numero": "1.740 t",
+    "legenda": "Sai do estaleiro de Itaguaí o primeiro submarino do ProSub, com 70 m e 1.740 t",
+    "detalhe": "Foi incorporado em 2022. Seguiram Humaitá (2020), Tonelero (2024) e Almirante Karam. A base de submarinos da Ilha da Madeira abriu em 17/07/2020.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.846863,
+     -22.929454
+    ]
+   },
+   "pulo": 0.6,
+   "frota": {
+    "de": [
+     -43.845,
+     -22.935
+    ],
+    "para": [
+     -43.86,
+     -22.99
+    ],
+    "n": 1,
+    "r": 60,
+    "cor": [
+     40,
+     40,
+     40
+    ],
+    "dura": 6,
+    "rotulo": "Submarino Riachuelo",
+    "sub": "S40 · 2018"
+   }
+  },
+  {
+   "id": "censo-2022",
+   "anos": [
+    2019,
+    2022,
+    2024
+   ],
+   "cam": [
+    {
+     "lon": -43.845,
+     "lat": -22.935,
+     "zoom": 14.4,
+     "pitch": 60,
+     "bearing": -10
+    },
+    {
+     "lon": -43.84,
+     "lat": -22.93,
+     "zoom": 11.3,
+     "pitch": 50,
+     "bearing": -8
+    }
+   ],
+   "dur": 10.0,
+   "cartao": {
+    "titulo": "<b>116 mil</b> itaguaienses",
+    "numero": "116.841",
+    "legenda": "O censo conta 116.841 moradores na 'Cidade do Porto'",
+    "detalhe": "O município perdeu Paracambi (1960) e Seropédica (1995) e hoje tem 282,6 km², 2 distritos (Itaguaí e Ibituporanga) e cerca de 41 bairros.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -43.775,
+     -22.85194
+    ]
+   },
+   "pulo": 1.5
+  },
+  {
+   "id": "fecho",
+   "anos": [
+    2024,
+    2024
+   ],
+   "cam": [
+    {
+     "lon": -43.84,
+     "lat": -22.93,
+     "zoom": 11.3,
+     "pitch": 50,
+     "bearing": -8
+    },
+    {
+     "lon": -43.82,
+     "lat": -22.9,
+     "zoom": 11.6,
+     "pitch": 45,
+     "bearing": -8
+    }
+   ],
+   "dur": 14.0,
+   "galeria": {
+    "fica": true,
+    "titulo": "Imagens <b>da época</b>",
+    "itens": [
+     "assets/epoca/e00.jpg",
+     "assets/epoca/e03.jpg",
+     "assets/epoca/e04.jpg",
+     "assets/epoca/e05.jpg",
+     "assets/epoca/e06.jpg",
+     "assets/epoca/e07.jpg",
+     "assets/epoca/e09.jpg",
+     "assets/epoca/e12.jpg"
+    ],
+    "creditos": "M. Leveux, John Johnson, Maria Graham, Rugendas, C. J. de Niemeyer, Almirantado britânico, Arquivo Nacional · domínio público, via Wikimedia Commons"
+   }
+  }
+ ]
+}

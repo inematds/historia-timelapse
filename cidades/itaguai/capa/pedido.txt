@@ -1,0 +1,11 @@
+Gere 1 imagem com a ferramenta de geração de imagem (image_gen) e salve nesta pasta como capa.png, formato PAISAGEM 16:9 (o maior tamanho horizontal disponível).
+
+Cena: vista aérea cinematográfica e realista da Baía de Sepetiba em Itaguaí (Rio de Janeiro, Brasil) ao entardecer: à direita, o Porto de Itaguaí com guindastes de contêineres e um grande navio atracado no píer; ilhas verdes e montanhas da Serra do Mar ao fundo; o mar calmo refletindo o céu dourado; à esquerda, ao longe, a pequena cidade com casas baixas e a torre de uma igreja antiga. Luz quente de fim de tarde, mas cores naturais (sem amarelado exagerado), alto contraste, aspecto de fotografia aérea premium.
+
+Texto DESENHADO dentro da arte, em português, à esquerda, em duas linhas grandes, letra sans-serif geométrica extra-bold (estilo Sora/Montserrat ExtraBold), com sombra para legibilidade:
+Linha 1 (branca, enorme): DA ALDEIA
+Linha 2 (amarela #FACC15, enorme): AO PORTO
+Abaixo, menor, branco: A HISTÓRIA DE ITAGUAÍ EM 3D
+Grafia exata, com acento em ITAGUAÍ e HISTÓRIA. Nenhum outro texto, logotipo ou marca d'água.
+
+Não mexa em nenhum outro arquivo da pasta. Ao final, liste os arquivos salvos.
