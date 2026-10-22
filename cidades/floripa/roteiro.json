@@ -1,0 +1,1890 @@
+{
+ "titulo": "Florianópolis — de Desterro à capital, em 3D",
+ "hud_de_bloco": "caboto-1526",
+ "linha": {
+  "de": 1500,
+  "ate": 2024
+ },
+ "fim": {
+  "titulo": "Florianópolis",
+  "sub": "1673 – 2024"
+ },
+ "longe": {
+  "oeste": -48.66,
+  "terra": [
+   104,
+   140,
+   80
+  ],
+  "mar": [
+   72,
+   112,
+   142
+  ]
+ },
+ "regimes": [
+  {
+   "ano": 1500,
+   "nome": "Terra dos carijós",
+   "bandeira": "portugal"
+  },
+  {
+   "ano": 1500.01,
+   "nome": "Brasil Colônia",
+   "bandeira": "portugal"
+  },
+  {
+   "ano": 1777.15,
+   "nome": "Ocupação espanhola",
+   "bandeira": "espanha"
+  },
+  {
+   "ano": 1778.55,
+   "nome": "Brasil Colônia",
+   "bandeira": "portugal"
+  },
+  {
+   "ano": 1815.95,
+   "nome": "Reino Unido de Portugal e Brasil",
+   "bandeira": "reino"
+  },
+  {
+   "ano": 1822.7,
+   "nome": "Império do Brasil",
+   "bandeira": "imperio"
+  },
+  {
+   "ano": 1870,
+   "nome": "Império do Brasil",
+   "bandeira": "imperio2"
+  },
+  {
+   "ano": 1889.87,
+   "nome": "República",
+   "bandeira": "republica"
+  },
+  {
+   "ano": 1893.78,
+   "nome": "Governo rebelde (1893–94)",
+   "bandeira": "republica"
+  },
+  {
+   "ano": 1894.3,
+   "nome": "República",
+   "bandeira": "republica"
+  },
+  {
+   "ano": 1960,
+   "nome": "República",
+   "bandeira": "brasil"
+  }
+ ],
+ "fortes": [
+  {
+   "id": "anhatomirim",
+   "ano": 1739.5,
+   "alt": 34
+  },
+  {
+   "id": "ponta_grossa",
+   "ano": 1740.3,
+   "alt": 34
+  },
+  {
+   "id": "ratones",
+   "ano": 1740.6,
+   "alt": 34
+  },
+  {
+   "id": "aracatuba",
+   "ano": 1742
+  },
+  {
+   "id": "santana",
+   "ano": 1763
+  }
+ ],
+ "linhas": [
+  {
+   "id": "hercilio",
+   "ano": 1926.36,
+   "desenha": 1.2,
+   "sobe": 30
+  },
+  {
+   "id": "colombo",
+   "ano": 1975.18,
+   "desenha": 0.6,
+   "sobe": 18
+  },
+  {
+   "id": "pedroivo",
+   "ano": 1991.18,
+   "desenha": 0.6,
+   "sobe": 18
+  }
+ ],
+ "areas": [
+  {
+   "id": "beira_mar",
+   "ano0": 1963,
+   "ano1": 1968,
+   "sai": 8
+  },
+  {
+   "id": "baia_sul",
+   "ano0": 1972,
+   "ano1": 1974.5,
+   "sai": 8
+  }
+ ],
+ "blocos": [
+  {
+   "id": "capa",
+   "anos": [
+    1500,
+    1500
+   ],
+   "cam": [
+    {
+     "lon": -48.5,
+     "lat": -27.62,
+     "zoom": 10.3,
+     "pitch": 0,
+     "bearing": 0
+    },
+    {
+     "lon": -48.5,
+     "lat": -27.62,
+     "zoom": 10.3,
+     "pitch": 0,
+     "bearing": 0
+    }
+   ],
+   "dur": 5.5,
+   "capa": {
+    "imagem": "assets/capa_full.jpg",
+    "segura": 5.5,
+    "some": 0.8
+   }
+  },
+  {
+   "id": "globo",
+   "anos": [
+    1500,
+    1500
+   ],
+   "cam": [
+    {
+     "lon": -48.5,
+     "lat": -27.62,
+     "zoom": 10.3,
+     "pitch": 0,
+     "bearing": 0
+    },
+    {
+     "lon": -48.5,
+     "lat": -27.62,
+     "zoom": 10.4,
+     "pitch": 0,
+     "bearing": 0
+    }
+   ],
+   "dur": 8.5,
+   "corte": true,
+   "globo": {
+    "uf": "SC",
+    "uf_de": 1800,
+    "uf_ate": 60000,
+    "some": 1.4,
+    "chaves": [
+     [
+      0,
+      {
+       "lon": -25,
+       "lat": -8,
+       "ls": 5.85
+      }
+     ],
+     [
+      0.35,
+      {
+       "lon": -45,
+       "lat": -20,
+       "ls": 6.5
+      }
+     ],
+     [
+      1,
+      {
+       "lon": -48.5,
+       "lat": -27.62,
+       "ls": 11.2
+      }
+     ]
+    ],
+    "rotulos": [
+     {
+      "lon": -51,
+      "lat": -11,
+      "texto": "BRASIL",
+      "de": 380,
+      "ate": 3500,
+      "tam": 84
+     },
+     {
+      "lon": -50.6,
+      "lat": -27.1,
+      "texto": "SANTA CATARINA",
+      "de": 2600,
+      "ate": 40000,
+      "tam": 64
+     },
+     {
+      "lon": -48.5,
+      "lat": -27.55,
+      "texto": "FLORIANÓPOLIS",
+      "de": 30000,
+      "ate": 2000000.0,
+      "tam": 72,
+      "ponto": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "sambaqui",
+   "anos": [
+    1500,
+    1500
+   ],
+   "cam": [
+    {
+     "lon": -48.5,
+     "lat": -27.62,
+     "zoom": 10.4,
+     "pitch": 0,
+     "bearing": 0
+    },
+    {
+     "lon": -48.505,
+     "lat": -27.64,
+     "zoom": 10.6,
+     "pitch": 50,
+     "bearing": -12
+    }
+   ],
+   "dur": 9.5,
+   "cartao": {
+    "titulo": "OS POVOS DO <b>SAMBAQUI</b>",
+    "numero": "~4800 a.C.",
+    "legenda": "Há quase 7 mil anos, pescadores e coletores já viviam na ilha",
+    "detalhe": "Eles empilhavam conchas em morros chamados sambaquis, alguns gigantes. Viveram aqui por milênios, muito antes de qualquer europeu.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.478889,
+     -27.551667
+    ]
+   },
+   "pulso_r": 1800
+  },
+  {
+   "id": "carijos",
+   "anos": [
+    1500,
+    1500
+   ],
+   "cam": [
+    {
+     "lon": -48.505,
+     "lat": -27.64,
+     "zoom": 10.6,
+     "pitch": 50,
+     "bearing": -12
+    },
+    {
+     "lon": -48.5,
+     "lat": -27.63,
+     "zoom": 10.4,
+     "pitch": 50,
+     "bearing": -8
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "A terra dos <b>carijós</b>",
+    "numero": "MEIEMBIPE",
+    "legenda": "Povos tupi-guarani chegam; os carijós chamam a ilha de Meiembipe",
+    "detalhe": "Plantavam, pescavam e coletavam moluscos. Nomes como Itaguaçu, Pirajubaé e Anhatomirim vêm deles. Depois foram escravizados pelos colonos de São Vicente.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -48.478889,
+     -27.551667
+    ]
+   },
+   "pulso_r": 1800
+  },
+  {
+   "id": "caboto-1526",
+   "anos": [
+    1500,
+    1526,
+    1527
+   ],
+   "cam": [
+    {
+     "lon": -48.505,
+     "lat": -27.64,
+     "zoom": 10.6,
+     "pitch": 50,
+     "bearing": -12
+    },
+    {
+     "lon": -48.505,
+     "lat": -27.64,
+     "zoom": 10.6,
+     "pitch": 50,
+     "bearing": -12
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "ILHA DE SANTA <b>CATARINA</b>",
+    "numero": "1526",
+    "legenda": "1526: o navegador Sebastião Caboto batiza a ilha com o nome de Santa Catarina",
+    "detalhe": "Antes chamada de Jurerê-Mirim e Ilha dos Patos pelos navegantes, ela vira parada de navios a caminho do Rio da Prata para pegar água e comida.",
+    "fonte": "IBGE",
+    "local": [
+     -48.478889,
+     -27.551667
+    ]
+   },
+   "pulo": 1.2,
+   "frota": {
+    "de": [
+     -48.3,
+     -27.45
+    ],
+    "para": [
+     -48.4,
+     -27.62
+    ],
+    "n": 1,
+    "r": 120,
+    "dura": 6
+   }
+  },
+  {
+   "id": "cabeza-de-vaca-1541",
+   "anos": [
+    1527,
+    1541,
+    1542
+   ],
+   "cam": [
+    {
+     "lon": -48.505,
+     "lat": -27.64,
+     "zoom": 10.6,
+     "pitch": 50,
+     "bearing": -12
+    },
+    {
+     "lon": -48.5,
+     "lat": -27.62,
+     "zoom": 10.5,
+     "pitch": 50,
+     "bearing": -12
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "ESPANHÓIS NA <b>ILHA</b>",
+    "numero": "1541",
+    "legenda": "Cabeza de Vaca para na ilha e parte a pé, pelo sertão, rumo a Assunção",
+    "detalhe": "A expedição espanhola desembarcou com centenas de homens e dezenas de cavalos e seguiu trilhas indígenas até o Paraguai. A ilha era rota de todos.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.478889,
+     -27.551667
+    ]
+   },
+   "pulo": 1.2,
+   "frota": {
+    "de": [
+     -48.32,
+     -27.7
+    ],
+    "para": [
+     -48.45,
+     -27.55
+    ],
+    "n": 3,
+    "r": 110,
+    "cor": [
+     220,
+     40,
+     40
+    ],
+    "dura": 6
+   }
+  },
+  {
+   "id": "fundacao-1673",
+   "anos": [
+    1542,
+    1673,
+    1675
+   ],
+   "cam": [
+    {
+     "lon": -48.5,
+     "lat": -27.62,
+     "zoom": 10.5,
+     "pitch": 50,
+     "bearing": -12
+    },
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    }
+   ],
+   "dur": 9.5,
+   "cartao": {
+    "titulo": "NASCE N. SRA. <b>DO DESTERRO</b>",
+    "numero": "1673",
+    "legenda": "O bandeirante Francisco Dias Velho funda o povoado que virou Florianópolis",
+    "detalhe": "Vindo de São Vicente, mandou à frente cerca de cem homens e chegou depois com a família, dois jesuítas e centenas de indígenas escravizados.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -48.549281,
+     -27.596358
+    ]
+   },
+   "pulo": 2.2,
+   "frota": {
+    "de": [
+     -48.56,
+     -27.52
+    ],
+    "para": [
+     -48.552,
+     -27.594
+    ],
+    "n": 4,
+    "r": 40,
+    "dura": 5
+   },
+   "rotulos": [
+    {
+     "lon": -48.549,
+     "lat": -27.596,
+     "texto": "DESTERRO",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "capela-1678",
+   "anos": [
+    1675,
+    1678,
+    1680
+   ],
+   "cam": [
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    },
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    }
+   ],
+   "dur": 8.0,
+   "cartao": {
+    "titulo": "A PRIMEIRA <b>CAPELA</b>",
+    "numero": "1 CAPELA",
+    "legenda": "Dias Velho ergue a capela de N. Sra. do Desterro, onde hoje fica a Catedral",
+    "detalhe": "Em volta dela nasceram as casas e roças da vila. Em 1679 ele pediu à Coroa a posse das terras da ilha, da lagoa e da terra firme em frente.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -48.549281,
+     -27.596358
+    ]
+   },
+   "pulo": 0.8,
+   "rotulos": [
+    {
+     "lon": -48.549,
+     "lat": -27.596,
+     "texto": "CAPELA DO DESTERRO",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "corsarios-1687",
+   "anos": [
+    1680,
+    1687,
+    1689
+   ],
+   "cam": [
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    },
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "CORSÁRIOS MATAM O <b>FUNDADOR</b>",
+    "numero": "VILA ABANDONADA",
+    "legenda": "Corsários ingleses voltam por vingança e matam Dias Velho dentro da capela",
+    "detalhe": "Ele havia prendido um navio inglês carregado de prata. Os homens soltos voltaram, renderam a vila de madrugada e o mataram. Quase todos foram embora.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -48.549281,
+     -27.596358
+    ]
+   },
+   "pulo": 0.8,
+   "frota": {
+    "de": [
+     -48.52,
+     -27.47
+    ],
+    "para": [
+     -48.553,
+     -27.588
+    ],
+    "n": 1,
+    "r": 70,
+    "cor": [
+     40,
+     40,
+     40
+    ],
+    "dura": 5
+   },
+   "tom": {
+    "cor": "#a15050",
+    "forca": 0.35
+   }
+  },
+  {
+   "id": "frezier-1712",
+   "anos": [
+    1689,
+    1712,
+    1714
+   ],
+   "cam": [
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    },
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    }
+   ],
+   "dur": 8.0,
+   "cartao": {
+    "titulo": "Só <b>147 moradores</b>",
+    "numero": "147",
+    "legenda": "Um viajante francês encontra só 147 brancos, em 15 sítios, em toda a vila",
+    "detalhe": "Amédée Frézier passou pela ilha a caminho do Pacífico e descreveu um povoado quase vazio. Havia ainda alguns índios e negros libertos.",
+    "fonte": "Brasiliana Iconográfica; Wikipédia",
+    "local": [
+     -48.549281,
+     -27.596358
+    ]
+   },
+   "pulo": 1.0
+  },
+  {
+   "id": "vila-1726",
+   "anos": [
+    1714,
+    1726,
+    1728
+   ],
+   "cam": [
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    },
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    }
+   ],
+   "dur": 8.0,
+   "cartao": {
+    "titulo": "DESTERRO VIRA <b>VILA</b>",
+    "numero": "23/03/1726",
+    "legenda": "23 de março de 1726: Desterro se separa de Laguna e ganha Câmara própria",
+    "detalhe": "É a data que a cidade comemora até hoje como aniversário. A vila só foi instalada de fato em 10 de abril de 1728.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -48.549281,
+     -27.596358
+    ]
+   },
+   "pulo": 1.0
+  },
+  {
+   "id": "capitania-1739",
+   "anos": [
+    1728,
+    1739,
+    1739.4
+   ],
+   "cam": [
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    },
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    }
+   ],
+   "dur": 8.0,
+   "cartao": {
+    "titulo": "CHEGA <b>SILVA PAES</b>",
+    "numero": "1º GOVERNO DO SUL",
+    "legenda": "1739: o brigadeiro Silva Paes chega como 1º governador da nova Capitania",
+    "detalhe": "Portugal disputava o Sul com a Espanha. A ilha vira base militar e sede de governo, com a missão de fortificar a barra e trazer colonos.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.548611,
+     -27.595561
+    ]
+   },
+   "pulo": 1.0,
+   "frota": {
+    "de": [
+     -48.5,
+     -27.42
+    ],
+    "para": [
+     -48.553,
+     -27.59
+    ],
+    "n": 2,
+    "r": 60,
+    "dura": 5
+   }
+  },
+  {
+   "id": "anhatomirim-1739",
+   "anos": [
+    1739.4,
+    1739.6,
+    1740
+   ],
+   "cam": [
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    },
+    {
+     "lon": -48.565,
+     "lat": -27.433,
+     "zoom": 14.7,
+     "pitch": 55,
+     "bearing": -15
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "A FORTALEZA DE <b>ANHATOMIRIM</b>",
+    "numero": "36 CANHÕES",
+    "legenda": "Silva Paes começa a fortaleza de Santa Cruz, na ilhota que guarda a Baía Norte",
+    "detalhe": "Foi o primeiro vértice do 'triângulo' de fogo da barra norte. Em 1750 já tinha 36 canhões.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.564439,
+     -27.427219
+    ]
+   },
+   "pulo": 0.4,
+   "destaca": [
+    "forte:anhatomirim"
+   ],
+   "rotulos": [
+    {
+     "lon": -48.5656,
+     "lat": -27.427,
+     "texto": "ANHATOMIRIM",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "triangulo-1740",
+   "anos": [
+    1740,
+    1740.5,
+    1743
+   ],
+   "cam": [
+    {
+     "lon": -48.565,
+     "lat": -27.433,
+     "zoom": 14.7,
+     "pitch": 55,
+     "bearing": -15
+    },
+    {
+     "lon": -48.548,
+     "lat": -27.462,
+     "zoom": 12.7,
+     "pitch": 57,
+     "bearing": -15
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "O triângulo de <b>fortes</b>",
+    "numero": "4 FORTALEZAS",
+    "legenda": "Ponta Grossa e Ratones fecham a Baía Norte; Araçatuba (1742) guarda a Baía Sul",
+    "detalhe": "Quatro fortalezas cruzavam fogo sobre as duas entradas da ilha. Era o maior sistema de defesa do Sul do Brasil na época.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.51833,
+     -27.43167
+    ]
+   },
+   "pulo": 0.4,
+   "destaca": [
+    "forte:anhatomirim",
+    "forte:ponta_grossa",
+    "forte:ratones"
+   ],
+   "rotulos": [
+    {
+     "lon": -48.5656,
+     "lat": -27.427,
+     "texto": "ANHATOMIRIM",
+     "z": 70,
+     "tam": 28
+    },
+    {
+     "lon": -48.518,
+     "lat": -27.432,
+     "texto": "PONTA GROSSA",
+     "z": 70,
+     "tam": 28
+    },
+    {
+     "lon": -48.5604,
+     "lat": -27.4746,
+     "texto": "RATONES",
+     "z": 70,
+     "tam": 28
+    }
+   ]
+  },
+  {
+   "id": "acorianos-1748",
+   "anos": [
+    1743,
+    1748,
+    1749
+   ],
+   "cam": [
+    {
+     "lon": -48.548,
+     "lat": -27.462,
+     "zoom": 12.7,
+     "pitch": 57,
+     "bearing": -15
+    },
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    }
+   ],
+   "dur": 9.5,
+   "cartao": {
+    "titulo": "CHEGAM OS <b>AÇORIANOS</b>",
+    "numero": "~6 MIL AÇORIANOS",
+    "legenda": "Janeiro de 1748: desembarca a 1ª leva de casais vindos dos Açores",
+    "detalhe": "Até 1756 chegaram cerca de 6 mil ilhéus dos Açores e da Madeira. Fundaram freguesias pela ilha e pelo continente e mudaram a cara de Desterro.",
+    "fonte": "Governo dos Açores; Wikipédia; REBEP",
+    "local": [
+     -48.549281,
+     -27.596358
+    ]
+   },
+   "pulo": 1.0,
+   "frota": {
+    "de": [
+     -48.42,
+     -27.45
+    ],
+    "para": [
+     -48.553,
+     -27.592
+    ],
+    "n": 26,
+    "r": 130,
+    "espalha_km": 4,
+    "dura": 7
+   }
+  },
+  {
+   "id": "lagoa-1750",
+   "anos": [
+    1749,
+    1750,
+    1751
+   ],
+   "cam": [
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    },
+    {
+     "lon": -48.47,
+     "lat": -27.61,
+     "zoom": 12.8,
+     "pitch": 56,
+     "bearing": 10
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "NASCE A LAGOA <b>DA CONCEIÇÃO</b>",
+    "numero": "1750",
+    "legenda": "Os açorianos fundam a freguesia de N. Sra. da Conceição da Lagoa",
+    "detalhe": "Foi a primeira freguesia criada no interior da ilha. A igreja da Lagoa ainda está lá, no alto do morro.",
+    "fonte": "IBGE; Wikipédia",
+    "local": [
+     -48.462778,
+     -27.601667
+    ]
+   },
+   "pulo": 0.6,
+   "rotulos": [
+    {
+     "lon": -48.463,
+     "lat": -27.602,
+     "texto": "LAGOA DA CONCEIÇÃO",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "santo-antonio-1751",
+   "anos": [
+    1751,
+    1751.5,
+    1753
+   ],
+   "cam": [
+    {
+     "lon": -48.47,
+     "lat": -27.61,
+     "zoom": 12.8,
+     "pitch": 56,
+     "bearing": 10
+    },
+    {
+     "lon": -48.528,
+     "lat": -27.515,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "SANTO <b>ANTÔNIO DE LISBOA</b>",
+    "numero": "2.447 EM 1796",
+    "legenda": "Açorianos formam a freguesia de N. Sra. das Necessidades, no norte da ilha",
+    "detalhe": "O casario colonial à beira da Baía Norte é um dos mais preservados da cidade. Em 1796 já tinha quase 2.500 moradores.",
+    "fonte": "Wikipédia; Teses USP; IBGE",
+    "local": [
+     -48.5196,
+     -27.507
+    ]
+   },
+   "pulo": 0.4,
+   "rotulos": [
+    {
+     "lon": -48.5196,
+     "lat": -27.507,
+     "texto": "SANTO ANTÔNIO DE LISBOA",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "censo-1753",
+   "anos": [
+    1753,
+    1753.5,
+    1754
+   ],
+   "cam": [
+    {
+     "lon": -48.528,
+     "lat": -27.515,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    },
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    }
+   ],
+   "dur": 8.0,
+   "cartao": {
+    "titulo": "A ilha tem <b>4.820 almas</b>",
+    "numero": "4.820",
+    "legenda": "Cinco anos após a chegada dos açorianos, a ilha já soma 4.820 moradores",
+    "detalhe": "O mapa do governador José de Melo Manoel separava 'casais das ilhas' e 'naturais da terra'. Desterro sozinha tinha 4.317 pessoas.",
+    "fonte": "Teses USP",
+    "local": [
+     -48.549281,
+     -27.596358
+    ]
+   },
+   "pulo": 0.4
+  },
+  {
+   "id": "armacao-1772",
+   "anos": [
+    1754,
+    1772,
+    1773
+   ],
+   "cam": [
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    },
+    {
+     "lon": -48.512,
+     "lat": -27.755,
+     "zoom": 12.6,
+     "pitch": 55,
+     "bearing": 0
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "A caça às <b>baleias</b>",
+    "numero": "1772",
+    "legenda": "No sul da ilha, a Armação ergue a igreja de Sant'Anna: era a era das baleeiras",
+    "detalhe": "As 'armações' caçavam baleias para tirar óleo de iluminação. Quase tudo ia para Portugal. A atividade decaiu quando as baleias sumiram.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.50767,
+     -27.73679
+    ]
+   },
+   "pulo": 1.5,
+   "rotulos": [
+    {
+     "lon": -48.5077,
+     "lat": -27.7368,
+     "texto": "ARMAÇÃO",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "invasao-1777",
+   "anos": [
+    1773,
+    1777.15,
+    1777.6
+   ],
+   "cam": [
+    {
+     "lon": -48.512,
+     "lat": -27.755,
+     "zoom": 12.6,
+     "pitch": 55,
+     "bearing": 0
+    },
+    {
+     "lon": -48.468,
+     "lat": -27.455,
+     "zoom": 12.4,
+     "pitch": 55,
+     "bearing": -10
+    }
+   ],
+   "dur": 10.0,
+   "cartao": {
+    "titulo": "A ESPANHA TOMA <b>A ILHA</b>",
+    "numero": "~10 MIL HOMENS",
+    "legenda": "Uma frota espanhola de mais de 100 navios desembarca em Canasvieiras",
+    "detalhe": "Ceballos trazia uns 10 mil homens. Os fortes foram abandonados quase sem disparar, a tropa fugiu para o continente e a ilha caiu sem combate.",
+    "fonte": "Wikipédia; ND Mais",
+    "local": [
+     -48.465,
+     -27.44
+    ]
+   },
+   "pulo": 1.2,
+   "frota": {
+    "de": [
+     -48.36,
+     -27.33
+    ],
+    "para": [
+     -48.465,
+     -27.44
+    ],
+    "n": 60,
+    "r": 150,
+    "espalha_km": 6,
+    "cor": [
+     220,
+     40,
+     40
+    ],
+    "dura": 7
+   },
+   "tom": {
+    "cor": "#c46a5a",
+    "forca": 0.25
+   },
+   "rotulos": [
+    {
+     "lon": -48.465,
+     "lat": -27.44,
+     "texto": "CANASVIEIRAS",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "devolucao-1778",
+   "anos": [
+    1777.6,
+    1778.6,
+    1779
+   ],
+   "cam": [
+    {
+     "lon": -48.468,
+     "lat": -27.455,
+     "zoom": 12.4,
+     "pitch": 55,
+     "bearing": -10
+    },
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "A ilha volta a <b>Portugal</b>",
+    "numero": "~1 ANO ESPANHOLA",
+    "legenda": "Pelo Tratado de Santo Ildefonso, a Espanha devolve a ilha em 1778",
+    "detalhe": "Em troca, Portugal entregou a Colônia do Sacramento e as Missões. A ocupação espanhola durou mais de um ano.",
+    "fonte": "Wikipédia; ND Mais",
+    "local": [
+     -48.548611,
+     -27.595561
+    ]
+   },
+   "pulo": 0.8
+  },
+  {
+   "id": "ribeirao-1809",
+   "anos": [
+    1779,
+    1809,
+    1810
+   ],
+   "cam": [
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    },
+    {
+     "lon": -48.54,
+     "lat": -27.712,
+     "zoom": 12.8,
+     "pitch": 55,
+     "bearing": -20
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "RIBEIRÃO <b>DA ILHA</b>",
+    "numero": "1806",
+    "legenda": "O Ribeirão vira freguesia; sua igreja da Lapa, de 1806, ainda está de pé",
+    "detalhe": "Erguida em pedra por moradores e escravizados, a igreja da Lapa do Ribeirão é das mais antigas da ilha. O sotaque açoriano ainda se ouve ali.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -48.53219,
+     -27.69934
+    ]
+   },
+   "pulo": 1.5,
+   "rotulos": [
+    {
+     "lon": -48.5322,
+     "lat": -27.6993,
+     "texto": "RIBEIRÃO DA ILHA",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "cidade-1823",
+   "anos": [
+    1810,
+    1823.2,
+    1824
+   ],
+   "cam": [
+    {
+     "lon": -48.54,
+     "lat": -27.712,
+     "zoom": 12.8,
+     "pitch": 55,
+     "bearing": -20
+    },
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "DESTERRO <b>VIRA CIDADE</b>",
+    "numero": "20/03/1823",
+    "legenda": "20 de março de 1823: já sede do governo, Desterro vira cidade e capital da província",
+    "detalhe": "Com o Império começam obras no porto e prédios públicos. A ilha passa de 12 mil moradores (1810) para quase 20 mil em 1840.",
+    "fonte": "Wikipédia; IBGE; Teses USP",
+    "local": [
+     -48.548611,
+     -27.595561
+    ]
+   },
+   "pulo": 1.2
+  },
+  {
+   "id": "pedro2-1845",
+   "anos": [
+    1824,
+    1845.8,
+    1846
+   ],
+   "cam": [
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    },
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    }
+   ],
+   "dur": 8.0,
+   "cartao": {
+    "titulo": "O IMPERADOR <b>DESEMBARCA</b>",
+    "numero": "1845",
+    "legenda": "D. Pedro II e a imperatriz Teresa Cristina visitam Desterro em outubro de 1845",
+    "detalhe": "A cidade se preparou por meses para receber o imperador de 19 anos. A cena do desembarque virou pintura.",
+    "fonte": "Wikipédia; Wikimedia Commons",
+    "local": [
+     -48.548611,
+     -27.595561
+    ]
+   },
+   "pulo": 1.2,
+   "frota": {
+    "de": [
+     -48.52,
+     -27.66
+    ],
+    "para": [
+     -48.553,
+     -27.6
+    ],
+    "n": 1,
+    "r": 70,
+    "cor": [
+     30,
+     120,
+     60
+    ],
+    "dura": 5
+   }
+  },
+  {
+   "id": "censo-1872",
+   "anos": [
+    1846,
+    1872,
+    1873
+   ],
+   "cam": [
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    },
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    }
+   ],
+   "dur": 8.0,
+   "cartao": {
+    "titulo": "1º censo: <b>25.709</b>",
+    "numero": "25.709",
+    "legenda": "O primeiro censo do Brasil conta 25.709 pessoas — 2.940 delas escravizadas",
+    "detalhe": "Toda a população do município morava na ilha. Em 1810 os escravizados eram 27% dos moradores; em 1872, cerca de 11%.",
+    "fonte": "Wikipédia; Teses USP",
+    "local": [
+     -48.549281,
+     -27.596358
+    ]
+   },
+   "pulo": 1.5
+  },
+  {
+   "id": "governo-provisorio-1893",
+   "anos": [
+    1873,
+    1893.8,
+    1894.0
+   ],
+   "cam": [
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    },
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "CAPITAL <b>DOS REBELDES</b>",
+    "numero": "14/10/1893",
+    "legenda": "1893: revoltosos da Armada e federalistas fazem de Desterro a sede de um governo rival",
+    "detalhe": "Contra o presidente Floriano Peixoto, instalaram ali o 'Governo Provisório da República', chefiado por Frederico Guilherme de Lorena.",
+    "fonte": "US Office of the Historian; Wikipédia",
+    "local": [
+     -48.548611,
+     -27.595561
+    ]
+   },
+   "pulo": 1.5,
+   "frota": {
+    "de": [
+     -48.5,
+     -27.45
+    ],
+    "para": [
+     -48.555,
+     -27.585
+    ],
+    "n": 5,
+    "r": 60,
+    "cor": [
+     60,
+     60,
+     60
+    ],
+    "dura": 6
+   },
+   "tom": {
+    "cor": "#8a6a6a",
+    "forca": 0.25
+   }
+  },
+  {
+   "id": "anhatomirim-1894",
+   "anos": [
+    1894.0,
+    1894.3,
+    1894.5
+   ],
+   "cam": [
+    {
+     "lon": -48.548,
+     "lat": -27.605,
+     "zoom": 13.0,
+     "pitch": 56,
+     "bearing": -30
+    },
+    {
+     "lon": -48.565,
+     "lat": -27.433,
+     "zoom": 14.7,
+     "pitch": 55,
+     "bearing": -15
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "FUZILADOS EM <b>ANHATOMIRIM</b>",
+    "numero": "DEZENAS DE FUZILADOS",
+    "legenda": "Floriano manda o coronel Moreira César; presos são fuzilados na fortaleza de Anhatomirim",
+    "detalhe": "Chegou com 500 soldados e fez o 'ajuste de contas'. Militares, deputados e civis foram executados sem julgamento. O total exato nunca foi apurado.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.564439,
+     -27.427219
+    ]
+   },
+   "pulo": 0.5,
+   "destaca": [
+    "forte:anhatomirim"
+   ],
+   "tom": {
+    "cor": "#6a2a2a",
+    "forca": 0.35
+   },
+   "rotulos": [
+    {
+     "lon": -48.5656,
+     "lat": -27.427,
+     "texto": "ANHATOMIRIM",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "florianopolis-1894",
+   "anos": [
+    1894.5,
+    1894.75,
+    1895
+   ],
+   "cam": [
+    {
+     "lon": -48.565,
+     "lat": -27.433,
+     "zoom": 14.7,
+     "pitch": 55,
+     "bearing": -15
+    },
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "DESTERRO VIRA <b>FLORIANÓPOLIS</b>",
+    "numero": "1º/10/1894",
+    "legenda": "1º de outubro de 1894: a cidade ganha o nome do presidente que a reprimiu",
+    "detalhe": "O governador Hercílio Luz trocou Desterro por Florianópolis, 'cidade de Floriano'. Até hoje há quem peça a volta do nome antigo.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -48.548611,
+     -27.595561
+    ]
+   },
+   "pulo": 0.4
+  },
+  {
+   "id": "ponte-hl-1926",
+   "anos": [
+    1895,
+    1926.36,
+    1927
+   ],
+   "cam": [
+    {
+     "lon": -48.552,
+     "lat": -27.6,
+     "zoom": 14.0,
+     "pitch": 58,
+     "bearing": -40
+    },
+    {
+     "lon": -48.57,
+     "lat": -27.602,
+     "zoom": 13.7,
+     "pitch": 60,
+     "bearing": -70
+    }
+   ],
+   "dur": 9.5,
+   "cartao": {
+    "titulo": "A PONTE <b>HERCÍLIO LUZ</b>",
+    "numero": "821 METROS",
+    "legenda": "13 de maio de 1926: a primeira ligação seca entre a ilha e o continente",
+    "detalhe": "Ponte pênsil de 821 metros, com vão central de 339 m. Acabou com as balsas e segurou a capital na ilha. É a maior ponte suspensa do Brasil.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.5649,
+     -27.5935
+    ]
+   },
+   "pulo": 2.0,
+   "destaca": [
+    "linha:hercilio"
+   ],
+   "rotulos": [
+    {
+     "lon": -48.564,
+     "lat": -27.5925,
+     "texto": "PONTE HERCÍLIO LUZ",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "estreito-1944",
+   "anos": [
+    1927,
+    1944,
+    1945
+   ],
+   "cam": [
+    {
+     "lon": -48.57,
+     "lat": -27.602,
+     "zoom": 13.7,
+     "pitch": 60,
+     "bearing": -70
+    },
+    {
+     "lon": -48.58,
+     "lat": -27.598,
+     "zoom": 13.3,
+     "pitch": 57,
+     "bearing": -80
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "O ESTREITO ENTRA <b>NA CIDADE</b>",
+    "numero": "1944",
+    "legenda": "1944: o lado do continente, que era de São José, passa a ser Florianópolis",
+    "detalhe": "O interventor Nereu Ramos tirou o distrito de João Pessoa (Estreito) de São José. A capital deixa de ser só ilha.",
+    "fonte": "Wikipédia; IBGE",
+    "local": [
+     -48.57528,
+     -27.5944
+    ]
+   },
+   "pulo": 1.5,
+   "rotulos": [
+    {
+     "lon": -48.583,
+     "lat": -27.592,
+     "texto": "ESTREITO",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "ufsc-1960",
+   "anos": [
+    1945,
+    1960.96,
+    1962
+   ],
+   "cam": [
+    {
+     "lon": -48.58,
+     "lat": -27.598,
+     "zoom": 13.3,
+     "pitch": 57,
+     "bearing": -80
+    },
+    {
+     "lon": -48.528,
+     "lat": -27.603,
+     "zoom": 13.3,
+     "pitch": 57,
+     "bearing": -25
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "NASCE A <b>UFSC</b>",
+    "numero": "1960",
+    "legenda": "18 de dezembro de 1960: surge a universidade federal, que vai crescer na Trindade",
+    "detalhe": "Reuniu as faculdades que já existiam no centro e criou a Engenharia. O campus da Trindade puxou a ocupação dos bairros atrás do Morro da Cruz.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.52,
+     -27.60111
+    ]
+   },
+   "pulo": 1.5,
+   "rotulos": [
+    {
+     "lon": -48.52,
+     "lat": -27.601,
+     "texto": "UFSC",
+     "z": 70,
+     "tam": 32
+    }
+   ]
+  },
+  {
+   "id": "beira-mar-1963",
+   "anos": [
+    1962,
+    1963,
+    1968.5
+   ],
+   "cam": [
+    {
+     "lon": -48.528,
+     "lat": -27.603,
+     "zoom": 13.3,
+     "pitch": 57,
+     "bearing": -25
+    },
+    {
+     "lon": -48.54,
+     "lat": -27.592,
+     "zoom": 13.6,
+     "pitch": 60,
+     "bearing": -25
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "A <b>BEIRA-MAR NORTE</b>",
+    "numero": "1963–1968",
+    "legenda": "A partir de 1963 o mar é aterrado e a Praia de Fora some sob a avenida",
+    "detalhe": "Cerca de 70 hectares de mar viram avenida e bairro na Baía Norte (área aproximada no mapa).",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.553575,
+     -27.586707
+    ]
+   },
+   "pulo": 0.6,
+   "destaca": [
+    "area:beira_mar"
+   ]
+  },
+  {
+   "id": "aterro-baia-sul-1972",
+   "anos": [
+    1968.5,
+    1972,
+    1975
+   ],
+   "cam": [
+    {
+     "lon": -48.54,
+     "lat": -27.592,
+     "zoom": 13.6,
+     "pitch": 60,
+     "bearing": -25
+    },
+    {
+     "lon": -48.556,
+     "lat": -27.606,
+     "zoom": 13.8,
+     "pitch": 60,
+     "bearing": -60
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "O ATERRO DA <b>BAÍA SUL</b>",
+    "numero": "~60 HECTARES",
+    "legenda": "1972–74: cerca de 60 hectares de mar viram chão ao lado do centro",
+    "detalhe": "O centro avança sobre a Baía Sul em camadas (área aproximada no mapa).",
+    "fonte": "Revista ArqUrb; UFSC; Wikipédia",
+    "local": [
+     -48.552643,
+     -27.597386
+    ]
+   },
+   "pulo": 0.6,
+   "destaca": [
+    "area:baia_sul"
+   ]
+  },
+  {
+   "id": "colombo-salles-1975",
+   "anos": [
+    1975,
+    1975.2,
+    1976
+   ],
+   "cam": [
+    {
+     "lon": -48.556,
+     "lat": -27.606,
+     "zoom": 13.8,
+     "pitch": 60,
+     "bearing": -60
+    },
+    {
+     "lon": -48.57,
+     "lat": -27.602,
+     "zoom": 13.7,
+     "pitch": 60,
+     "bearing": -70
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "PONTE <b>COLOMBO SALLES</b>",
+    "numero": "1.227 METROS",
+    "legenda": "8 de março de 1975: a segunda ponte, de concreto, com 1.227 metros",
+    "detalhe": "Nasceu sobre o novo aterro da Baía Sul. Tem quatro pistas no sentido continente.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.57,
+     -27.6
+    ]
+   },
+   "pulo": 0.3,
+   "destaca": [
+    "linha:colombo"
+   ]
+  },
+  {
+   "id": "turismo-norte-1970s",
+   "anos": [
+    1976,
+    1980,
+    1990
+   ],
+   "cam": [
+    {
+     "lon": -48.57,
+     "lat": -27.602,
+     "zoom": 13.7,
+     "pitch": 60,
+     "bearing": -70
+    },
+    {
+     "lon": -48.468,
+     "lat": -27.455,
+     "zoom": 12.4,
+     "pitch": 55,
+     "bearing": -10
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "O norte vira <b>praia</b>",
+    "numero": "ANOS 1970",
+    "legenda": "Anos 1970: argentinos descobrem Canasvieiras e o norte da ilha explode no verão",
+    "detalhe": "Vilas de pescadores viram balneários. Loteamentos como Daniela (1972) e Jurerê Internacional (fim dos anos 1970) espalham casas pelo norte.",
+    "fonte": "NSC Total; UFSC; Wikipédia",
+    "local": [
+     -48.465,
+     -27.44
+    ]
+   },
+   "pulo": 1.0
+  },
+  {
+   "id": "pedro-ivo-1991",
+   "anos": [
+    1990,
+    1991.2,
+    1992
+   ],
+   "cam": [
+    {
+     "lon": -48.468,
+     "lat": -27.455,
+     "zoom": 12.4,
+     "pitch": 55,
+     "bearing": -10
+    },
+    {
+     "lon": -48.57,
+     "lat": -27.602,
+     "zoom": 13.7,
+     "pitch": 60,
+     "bearing": -70
+    }
+   ],
+   "dur": 8.5,
+   "cartao": {
+    "titulo": "PONTE <b>PEDRO IVO CAMPOS</b>",
+    "numero": "1.252 METROS",
+    "legenda": "8 de março de 1991: a terceira ponte, 1.252 metros, no sentido ilha",
+    "detalhe": "Levou nove anos para ficar pronta e ganhou prioridade quando a Hercílio Luz foi interditada, em 1982.",
+    "fonte": "Wikipédia",
+    "local": [
+     -48.57,
+     -27.6
+    ]
+   },
+   "pulo": 0.6,
+   "destaca": [
+    "linha:pedroivo"
+   ]
+  },
+  {
+   "id": "censo-2022",
+   "anos": [
+    1992,
+    2022,
+    2024
+   ],
+   "cam": [
+    {
+     "lon": -48.57,
+     "lat": -27.602,
+     "zoom": 13.7,
+     "pitch": 60,
+     "bearing": -70
+    },
+    {
+     "lon": -48.505,
+     "lat": -27.64,
+     "zoom": 10.6,
+     "pitch": 50,
+     "bearing": -12
+    }
+   ],
+   "dur": 10.0,
+   "cartao": {
+    "titulo": "<b>537 mil</b> moradores",
+    "numero": "537.211",
+    "legenda": "Censo 2022: 537.211 pessoas — 27,5% a mais que em 2010",
+    "detalhe": "De 147 moradores em 1712 a mais de meio milhão. É a cidade de SC que mais ganhou gente entre 2010 e 2022.",
+    "fonte": "IBGE; Wikipédia",
+    "local": [
+     -48.549281,
+     -27.596358
+    ]
+   },
+   "pulo": 5.0
+  },
+  {
+   "id": "fecho",
+   "anos": [
+    2024,
+    2024
+   ],
+   "cam": [
+    {
+     "lon": -48.505,
+     "lat": -27.64,
+     "zoom": 10.6,
+     "pitch": 50,
+     "bearing": -12
+    },
+    {
+     "lon": -48.5,
+     "lat": -27.63,
+     "zoom": 10.0,
+     "pitch": 45,
+     "bearing": -5
+    }
+   ],
+   "dur": 6.0
+  }
+ ]
+}

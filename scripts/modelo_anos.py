@@ -25,7 +25,7 @@ def norm(s):
 def curva_pop():
     f = f"{PESQ}/populacao.json"
     if os.path.exists(f):
-        pts = sorted((int(p["ano"]), float(p["pop"])) for p in json.load(open(f))["serie"])
+        pts = sorted([(int(p["ano"]), float(p["pop"])) for p in json.load(open(f))["serie"]] + [tuple(x) for x in CFG.get("pop_modelo_extra", [])])
     else:
         pts = [(1772, 1500), (1803, 3900), (1858, 20000), (1872, 43998), (1900, 73674), (1920, 179263),
                (1940, 272232), (1950, 394151), (1960, 641173), (1970, 885545), (1980, 1125477),

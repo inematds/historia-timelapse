@@ -32,7 +32,7 @@ def main():
          "anos": [], "cam": [], "pop": pop, "cartoes": [], "cheias": [], "rotulos": [], "tropas": [], "tons": [],
          "muroDestaque": [], "falas": [], "frotas": [], "pulsos": [],
          "regimes": rot.get("regimes", REGIMES_BR)}
-    for k in ("aterro", "globo", "linha", "fim", "hud_de", "ultimoCenso", "corLonge", "teto"):
+    for k in ("aterro", "globo", "linha", "fim", "hud_de", "ultimoCenso", "corLonge", "longe", "teto"):
         if k in rot:
             C[k] = rot[k]
     C.setdefault("aterro", {"ano0": 1960, "ano1": 1978}) if CFG.get("feicoes", {}).get("aterro") else None
@@ -58,10 +58,22 @@ def main():
             C["anos"] += [[round(t0, 3), an[0]], [round(t0 + pre, 3), an[1]], [round(t1 - 0.001, 3), an[2]]]
         else:
             C["anos"] += [[round(t0, 3), an[0]], [round(t1 - 0.001, 3), an[1]]]
-        C["cam"] += [[round(t0, 3), b["cam"][0]], [round(t1 - 0.001, 3), b["cam"][1]]]
+        if "dur" in b and b["cam"][0] != b["cam"][1]:
+            # sem narração: chega ao alvo cedo e segura com leve avanço enquanto o cartão é lido
+            ch_ = t0 + pre + (dur - pre) * b.get("chega", 0.45)
+            fim_ = dict(b["cam"][1]); fim_["zoom"] = fim_["zoom"] + 0.12
+            C["cam"] += [[round(t0, 3), b["cam"][0]], [round(ch_, 3), b["cam"][1]], [round(t1 - 0.001, 3), fim_]]
+            b["cam"][1] = fim_
+        else:
+            C["cam"] += [[round(t0, 3), b["cam"][0]], [round(t1 - 0.001, 3), b["cam"][1]]]
         te = t0 + pre                         # início do evento (depois do pulo)
         if tts:
             C["falas"].append({"id": b["id"], "t0": round(te, 3), "dur": round(fala, 3)})
+        if "globo" in b:
+            g = dict(b["globo"]); g["chaves"] = [[round(t0 + k * dur, 3), v] for k, v in g["chaves"]]; g["t1"] = round(t1, 3)
+            C["globo"] = g
+        if rot.get("hud_de_bloco") == b["id"]:
+            C["hud_de"] = round(t0, 3)
         if "capa" in b:
             C["capa"] = {**b["capa"], "t1": b["capa"]["segura"]}
         if "cartao" in b:

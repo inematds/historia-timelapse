@@ -1,10 +1,10 @@
 {
  "nome": "Florianópolis",
  "bbox": [
-  -48.66,
-  -27.86,
+  -48.8,
+  -27.92,
   -48.33,
-  -27.36
+  -27.33
  ],
  "pbf": "dl/sul.osm.pbf",
  "municipio_osm": "Florianópolis",
@@ -31,14 +31,14 @@
      -48.5656,
      -27.427
     ],
-    "lado_m": 120
+    "lado_m": 260
    },
    "ratones": {
     "ponto": [
      -48.5604,
      -27.4746
     ],
-    "lado_m": 90
+    "lado_m": 200
    },
    "ponta_grossa": {
     "nome_osm": "Fortaleza de São José da Ponta Grossa"
@@ -78,5 +78,12 @@
     "faixas": 6
    }
   }
- }
+ },
+ "pop_modelo_extra": [
+  [
+   1675,
+   40
+  ]
+ ],
+ "tex": 2
 }

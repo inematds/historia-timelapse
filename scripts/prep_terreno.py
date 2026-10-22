@@ -15,9 +15,9 @@ from scipy import ndimage
 from shapely.geometry import shape
 
 PX = 1 / 3600  # 1 segundo de arco
-TEX = 3  # textura 3x a grade do relevo
 import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
 from cidade import *  # noqa
+TEX = CFG.get("tex", 3)  # textura N× a grade do relevo
 
 
 def bloco(lat_ll, lon_ll):

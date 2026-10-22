@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-21",
+    "arquivos_bandeira": "Nomes conferidos no Wikimedia Commons em 21/10/2026 (página https://commons.wikimedia.org/wiki/File:<arquivo> respondeu). SVG direto: https://commons.wikimedia.org/wiki/Special:FilePath/<arquivo>. Atenção ao travessão (–) em 'Flag_of_Spain_(1760–1785).svg' e 'Flag_of_Brazil_(1889–1960).svg' — com hífen comum o primeiro dá 404.",
+    "ocupacao_espanhola": "SIM. De 23–25/02/1777 até a evacuação no 1º semestre de 1778 (novo governador português em 12/08/1778) a ilha ficou sob a Espanha de Carlos III. A bandeira espanhola da época era a branca dos Bourbon com o brasão real (o vermelho-amarelo só foi criado em 1785). Fontes: https://en.wikipedia.org/wiki/Spanish%E2%80%93Portuguese_War_(1776%E2%80%931777) ; https://pt.wikipedia.org/wiki/Capitania_de_Santa_Catarina ; https://ndmais.com.br/historia/a-ilha-de-santa-catarina-sob-dominio-da-espanha-ha-240-anos/",
+    "federalista": "SIM. Desterro foi sede do 'Governo Provisório da República dos Estados Unidos do Brasil', instalado em 14/10/1893 pelos revoltosos da Armada (Custódio de Melo) aliados aos federalistas, chefiado pelo capitão de mar e guerra Frederico Guilherme de Lorena. Terminou com a retomada federal em abril de 1894 (Moreira César desembarca em 19/04/1894). Não há bandeira própria conferida — usar badge sobre a bandeira republicana. Fontes: https://history.state.gov/historicaldocuments/frus1893/d68 ; https://en.wikipedia.org/wiki/Florian%C3%B3polis ; https://pt.wikipedia.org/wiki/Ant%C3%B4nio_Moreira_C%C3%A9sar",
+    "capital": "Sede do governo da Capitania desde 07/03/1739; capital da Província (1821/1823) e do Estado. Em 1777–78 a capital provisória foi São Miguel da Terra Firme (Biguaçu)."
+  },
+  "regimes": [
+    {
+      "inicio": 1673, "fim": 1815,
+      "data_inicio": "1673 (início da parte colonial do vídeo)", "data_fim": "16/12/1815",
+      "nome_tela": "BRASIL COLÔNIA",
+      "nome_longo": "Brasil Colônia — Reino de Portugal (Capitania de São Vicente/São Paulo até 1738; Capitania de Santa Catarina a partir de 1738)",
+      "bandeira_arquivo": "Flag_of_Portugal_(1707).svg",
+      "bandeira_arquivo_alternativa": "Flag_of_Portugal_(1667).svg (para 1673–1707) e Flag_of_Portugal_(1750).svg (a usada no piloto POA para 1752–1815)",
+      "bandeira_descricao": "branca com o brasão real português coroado ao centro",
+      "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "confianca": "alta",
+      "obs": "Para simplificar e manter o padrão do POA, pode-se usar Flag_of_Portugal_(1750).svg em toda a faixa; a diferença entre as versões é só o desenho do brasão/coroa."
+    },
+    {
+      "inicio": 1777, "fim": 1778,
+      "data_inicio": "23/02/1777", "data_fim": "1778 (evacuação até o 1º semestre; governador português em 12/08/1778)",
+      "nome_tela": "OCUPAÇÃO ESPANHOLA",
+      "nome_longo": "Ilha ocupada pela Espanha (Carlos III) — expedição de Pedro de Ceballos",
+      "tipo": "badge_opcional_sobreposto",
+      "bandeira_arquivo": "Flag_of_Spain_(1760–1785).svg",
+      "bandeira_arquivo_alternativa": "Flag_of_Cross_of_Burgundy.svg (Cruz de Borgonha, bandeira militar das tropas) — também conferida; Bandera_de_España_1760-1785.svg também existe",
+      "bandeira_descricao": "branca com o brasão real espanhol dos Bourbon",
+      "fonte": "https://en.wikipedia.org/wiki/Spanish%E2%80%93Portuguese_War_(1776%E2%80%931777)",
+      "confianca": "alta",
+      "obs": "Escolhida a bandeira de Estado de Carlos III. Se o cartão mostrar 'tropas espanholas', a Cruz de Borgonha é mais reconhecível."
+    },
+    {
+      "inicio": 1815, "fim": 1822,
+      "data_inicio": "16/12/1815", "data_fim": "07/09/1822",
+      "nome_tela": "REINO UNIDO",
+      "nome_longo": "Reino Unido de Portugal, Brasil e Algarves",
+      "bandeira_arquivo": "Flag_of_the_United_Kingdom_of_Portugal,_Brazil,_and_the_Algarves_(1815-1825).svg",
+      "bandeira_descricao": "branca com o brasão real sobre a esfera armilar dourada em fundo azul",
+      "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "confianca": "alta"
+    },
+    {
+      "inicio": 1822, "fim": 1889,
+      "data_inicio": "07/09/1822", "data_fim": "15/11/1889",
+      "nome_tela": "IMPÉRIO DO BRASIL",
+      "nome_longo": "Império do Brasil",
+      "bandeira_arquivo": "Flag_of_Empire_of_Brazil_(1822-1870).svg",
+      "bandeira_arquivo_apos_1870": "Flag_of_Empire_of_Brazil_(1870-1889).svg",
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta",
+      "obs": "Desterro vira cidade em 20/03/1823, já no Império."
+    },
+    {
+      "inicio": 1889, "fim": null,
+      "data_inicio": "15/11/1889", "data_fim": "—",
+      "nome_tela": "REPÚBLICA",
+      "nome_longo": "República dos Estados Unidos do Brasil (1889–1967) / República Federativa do Brasil",
+      "bandeira_arquivo": "Flag_of_Brazil_(1889–1960).svg",
+      "bandeiras_seguintes": [
+        {"de": 1960, "ate": 1968, "arquivo": "Flag_of_Brazil_(1960–1968).svg"},
+        {"de": 1968, "ate": 1992, "arquivo": "Flag_of_Brazil_(1968–1992).svg"},
+        {"de": 1992, "ate": null, "arquivo": "Flag_of_Brazil.svg"}
+      ],
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta"
+    },
+    {
+      "inicio": 1893, "fim": 1894,
+      "data_inicio": "14/10/1893", "data_fim": "abril de 1894 (retomada federal; Moreira César em 19/04/1894)",
+      "nome_tela": "SEDE DO GOVERNO PROVISÓRIO",
+      "nome_longo": "Governo Provisório da República (revoltosos da Armada + federalistas), chefiado por Frederico Guilherme de Lorena",
+      "tipo": "badge_opcional_sobreposto",
+      "bandeira_arquivo": null,
+      "bandeira_descricao": "sem bandeira própria conferida — mostrar selo de texto sobre a bandeira republicana",
+      "fonte": "https://history.state.gov/historicaldocuments/frus1893/d68",
+      "confianca": "alta"
+    }
+  ],
+  "extras_hud": {
+    "bandeira_municipal": {"arquivo": "Bandeira_de_Florianópolis.svg", "conferido": true},
+    "bandeira_estadual": {"arquivo": "Flag_of_Santa_Catarina.svg", "conferido": true, "alternativa": "Bandeira_de_Santa_Catarina.svg (também existe)"},
+    "nome_da_cidade_no_hud": [
+      {"de": 1673, "ate": 1894, "nome": "NOSSA SENHORA DO DESTERRO", "curto": "DESTERRO", "obs": "vila desde 1726, cidade desde 1823 (a Carta de 1823 a chama de 'Desterro')"},
+      {"de": 1894, "ate": null, "nome": "FLORIANÓPOLIS", "obs": "Lei Estadual nº 111, de 01/10/1894"}
+    ]
+  }
+}
