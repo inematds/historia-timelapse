@@ -1,8 +1,6 @@
-# História em timelapse 3D: como o vídeo de Viena é feito e o plano INEMA
+# História em timelapse 3D: como o formato funciona e o plano INEMA
 
-Fonte: post do  (), que só aponta para o YouTube **de timelapse 3D**
-(canal **referência**, 9 min 08 s, 99 mil views em 8 dias). Material local nesta pasta:
-`video.mp4`, `frames/` (1 quadro a cada 10 s), `sheet1.jpg` e `sheet2.jpg` (folhas de contato) e `meta.json`.
+Análise de um timelapse 3D de cidade usado como referência de forma (ritmo, câmera, cartões, contador).
 
 ## 1. Não é um vídeo isolado: é uma fórmula
 
@@ -92,7 +90,7 @@ Peças: terreno, mancha urbana por época extrudada em blocos, caminho de câmer
 |---|---|---|---|
 | **A. deck.gl** (TerrainLayer + extrusões) | Motor do Alerta Sul (`tempo-sul-2026-10-09/motor`, Vulkan, ~0,1 s por quadro) | Rápido, geo-referenciado de verdade, OSM direto | Visual mais "mapa" que "maquete" |
 | B. three.js | reel3d (Remotion + three) | Visual de maquete e luz bonita | Montar o terreno e a geo à mão; o path tracing levou horas |
-| C. Blender | reel3d-blender (pendente) | O visual mais próximo do referência | Render longo e pipeline novo |
+| C. Blender | reel3d-blender (pendente) | O visual mais próximo da referência | Render longo e pipeline novo |
 
 **Recomendação:** **A (deck.gl)** no piloto. Ele cobre ~80% do visual em minutos de render, e o HUD e os cartões vão em camada HTML por cima (HyperFrames ou o próprio `render.mjs`). Se o visual não convencer, passamos a B ou C usando os mesmos dados.
 

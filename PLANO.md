@@ -1,7 +1,7 @@
 # PLANO — historia-timelapse
 
 ## Origem (21/10/2026)
-O Nei pediu para aprender a fazer histórias no formato do vídeo de timelapse 3D (referência, link no  ). Análise da forma: `docs/ANALISE-FORMATO.md`. Piloto: Porto Alegre, para o canal Aventuras INEMA (lives26).
+O Nei pediu para aprender a fazer histórias de cidades em timelapse 3D. Análise da forma: `docs/ANALISE-FORMATO.md`. Piloto: Porto Alegre, para o canal Aventuras INEMA (lives26).
 
 ## O que já existe
 - Motor completo e dados de Porto Alegre (ver README).
@@ -9,7 +9,7 @@ O Nei pediu para aprender a fazer histórias no formato do vídeo de timelapse 3
 - 4 revisões independentes (notas 6, 6, 7,5 e 8); a v4 foi aprovada pelo revisor e **reprovada pelo Nei** → `CORRECOES-NEI.md`.
 
 ## Decisões da conversa de 21/10 (ainda não executadas)
-1. **Narração fica para depois.** Foco: **um vídeo completo sem narração, ~10 min**, só música + cartões (como o referência).
+1. **Narração fica para depois.** Foco: **um vídeo completo sem narração, ~10 min**, só música + cartões.
 2. **História completa, em detalhe**, com os pontos principais. O **início em muito detalhe** (o público não sabe nada disso): açorianos, Porto de Viamão/dos Casais, fundação, capital…
 3. **Duas versões: com e sem imagens antigas** (gravuras e fotos históricas, domínio público, com fonte).
 4. **Linha do tempo correndo no topo** da tela, com a data.
