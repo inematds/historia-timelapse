@@ -11,12 +11,13 @@
   #tom { position:absolute; inset:0; pointer-events:none; mix-blend-mode:multiply; opacity:0; }
   .sombra { text-shadow:0 2px 8px rgba(0,0,0,.75), 0 0 3px rgba(0,0,0,.9); }
   /* HUD: números grandes e cor forte */
-  #reg { position:absolute; left:56px; top:78px; display:flex; align-items:center; gap:18px; color:#fff; font:800 36px Sora; }
+  #reg { position:absolute; left:56px; top:74px; display:flex; flex-direction:column; align-items:flex-start; gap:8px; color:#fff; font:800 30px Sora; }
   #reg img { width:96px; height:64px; object-fit:cover; box-shadow:0 2px 10px rgba(0,0,0,.45); border-radius:4px; }
   #tempo { position:absolute; right:60px; top:62px; text-align:right; color:#fff; }
   #ano { font:800 118px/0.95 Sora; letter-spacing:-.02em; color:var(--amb); }
   #ano small { font:700 34px Sora; color:#fff; margin-right:12px; letter-spacing:0; }
-  #pop { font:800 56px Sora; margin-top:6px; font-variant-numeric:tabular-nums; color:#fff; }
+  #pop { font:800 56px Sora; margin-top:6px; font-variant-numeric:tabular-nums; color:#fff; -webkit-text-stroke:5px #0c0c10; paint-order:stroke fill; }
+  #reg, #tempo, #linha { z-index:2; }
   #pop span { font:700 26px Inter; opacity:.9; margin-left:10px; }
   #popf { font:600 22px Inter; opacity:.92; margin-top:6px; }
   /* linha do tempo no topo */
