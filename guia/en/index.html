@@ -198,7 +198,8 @@
   <h2>What you need</h2>
   <p class="sub">Linux with a graphics card, Python 3, Node 20+ and ffmpeg. The data are public files downloaded by a script; there is no API and no cost.</p>
   <div class="grid g3">
-    <div class="card"><h3>Software</h3><p>Python, Node, ffmpeg and git.</p><pre><span class="k">sudo apt install</span> python3-venv nodejs npm ffmpeg git</pre></div>
+    <div class="card"><h3>Software</h3><p>Python, Node, ffmpeg and git.</p><pre><span class="k">sudo apt install</span> python3-venv ffmpeg git
+<span class="c"># Node 20+: via nvm (nvm install 20) or NodeSource — apt's nodejs is too old</span></pre></div>
     <div class="card"><h3>Graphics card</h3><p>The render uses Chrome with the GPU (Vulkan). Without Vulkan, run with <code>GL="--use-angle=gl"</code> before the command (slower).</p><pre><span class="c"># ~0.1 s per frame at 1080p on an NVIDIA GPU</span></pre></div>
     <div class="card"><h3>Disk space</h3><p>The regional OSM extract is hundreds of MB (southern Brazil, ~430 MB). Each terrain tile is 20–50 MB.</p><pre><span class="c"># everything stays in the dl/ folder (outside git)</span></pre></div>
   </div>
@@ -207,7 +208,7 @@
 <section id="guia"><div class="wrap">
   <span class="chip">User guide · step by step</span>
   <h2>Make the video of your city</h2>
-  <p class="sub">Each city lives in <code>cidades/&lt;id&gt;/</code>. The scripts read the city from the <code>CIDADE</code> variable. The examples use Florianópolis (<code>floripa</code>).</p>
+  <p class="sub">Each city lives in <code>cidades/&lt;id&gt;/</code>. The scripts read the city from the <code>CIDADE</code> variable. The examples use Florianópolis (<code>floripa</code>): replace it with your city id in every command and keep <code>export CIDADE=&lt;id&gt;</code> in the terminal (without it the scripts use <code>poa</code>).</p>
 
   <div class="step"><div class="b">0</div><div>
     <h3>Download the project and install</h3>
@@ -216,7 +217,7 @@
 <span class="k">python3 -m venv .venv</span>
 <span class="k">.venv/bin/pip install</span> osmium tifffile imagecodecs \
     shapely numpy pyproj scipy pillow
-<span class="k">cd motor && npm i && npx playwright install chromium && cd ..</span></pre>
+<span class="k">cd motor && npm i && npx playwright install --with-deps chromium && cd ..</span></pre>
   </div></div>
 
   <div class="step"><div class="b">1</div><div>
@@ -227,7 +228,7 @@
   "pbf": "dl/sul.osm.pbf",
   "pbf_url": "https://download.geofabrik.de/south-america/brazil/sul-latest.osm.pbf",
   "municipio_osm": "Florianópolis", "centro_antigo": [-48.5490, -27.5965],
-  "musicas": ["cidades/floripa/musica/faixa-1.mp3"] }
+  "pais_microsoft": "Brazil" }
 <span class="c"># optional: "efeitos" (bridges, forts, landfills), "tex" (texture size),</span>
 <span class="c"># "agua_baixa_m", "pop_modelo_extra" — see cidades/floripa/config.json</span></pre>
   </div></div>
@@ -266,7 +267,7 @@
 
   <div class="step"><div class="b">5</div><div>
     <h3>Write the script and generate the scene</h3>
-    <p><code>roteiro.json</code> is a list of blocks. Each block has the years (start, event year, end), the starting and arriving camera, the duration and the card. In Florianópolis it is assembled by <code>roteiro_floripa.py</code> from the research; use it as a template.</p>
+    <p><code>roteiro.json</code> is an object with a <code>"blocos"</code> list (plus <code>"linhas"</code>, <code>"fortes"</code>, <code>"areas"</code> and <code>"regimes"</code> if you use them). For a new city you write this file by hand, or copy and adapt <code>cidades/floripa/roteiro_floripa.py</code>, which builds it from <code>eventos.json</code>. Each block has the years (start, event year, end), the starting and arriving camera, the duration and the card. In Florianópolis it is assembled by <code>roteiro_floripa.py</code> from the research; use it as a template.</p>
 <pre><span class="c"># one block of roteiro.json</span>
 { "id": "ponte-hercilio", "anos": [1895, 1926, 1927], "pulo": 2.0, "dur": 9.5,
   "cam": [ {"lon": -48.552, "lat": -27.600, "zoom": 14, "pitch": 58, "bearing": -40},
@@ -287,7 +288,7 @@
 
   <div class="step"><div class="b">7</div><div>
     <h3>Render, add the music and join</h3>
-    <p>The render is done in 60 s chunks (the browser restarts between them, to avoid running out of memory). Put your own instrumental tracks in <code>cidades/floripa/musica/</code> or list them in <code>"musicas"</code> in the config.</p>
+    <p>The render is done in 60 s chunks (the browser restarts between them, to avoid running out of memory). Put your own instrumental tracks (.mp3) in <code>cidades/floripa/musica/</code>; they play in alphabetical order, looping.</p>
 <pre><span class="k">bash motor/render_trechos.sh</span> cidades/floripa/cena cidades/floripa/final/video.mp4
 <span class="k">.venv/bin/python -I scripts/montar_musica.py</span>   <span class="c"># cidades/floripa/final/audio.wav</span>
 <span class="k">ffmpeg</span> -i cidades/floripa/final/video.mp4 -i cidades/floripa/final/audio.wav \

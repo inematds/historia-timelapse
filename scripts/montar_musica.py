@@ -4,10 +4,12 @@ import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__
 from cidade import *  # noqa
 C = json.loads(re.sub(r"^window.CENA = |;\s*$", "", open(f"{DIR}/cena/cena.js").read()))
 import glob
-# faixas: config "musicas" (caminhos) ou os .mp3/.wav de cidades/<id>/musica/ em ordem alfabética
-FAIXAS = [os.path.join(RAIZ, os.path.expanduser(f)) for f in CFG.get("musicas", [])] or sorted(glob.glob(f"{DIR}/musica/*.mp3") + glob.glob(f"{DIR}/musica/*.wav"))
+# faixas: os .mp3/.wav de cidades/<id>/musica/ (ordem alfabética); se a pasta não existir, a lista "musicas" do config
+FAIXAS = sorted(glob.glob(f"{DIR}/musica/*.mp3") + glob.glob(f"{DIR}/musica/*.wav"))
 if not FAIXAS:
-    raise SystemExit(f"sem música: ponha .mp3 instrumentais em {DIR}/musica/ (ou liste em config 'musicas')")
+    FAIXAS = [f for f in (os.path.join(RAIZ, os.path.expanduser(x)) for x in CFG.get("musicas", [])) if os.path.exists(f)]
+if not FAIXAS:
+    raise SystemExit(f"sem música: ponha .mp3 instrumentais em {DIR}/musica/")
 dur, XF = C["duracao"], 4
 seq, tot, i = [], 0.0, 0
 while tot < dur + 5:
