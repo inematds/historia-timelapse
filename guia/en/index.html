@@ -303,7 +303,8 @@
     <h3>Narrated version (optional)</h3>
     <p>The narration is an audio layer over the same video: one text per block in <code>cidades/&lt;id&gt;/narracao.json</code>, fitted to the start of each event. The recording uses the author's local voice engine (<code>cardshorts</code>, outside this repository); with another voice, record one file per block and fill in <code>narracao/tempos.json</code>.</p>
 <pre><span class="c"># narracao/tempos.json, if you record with another voice: {"&lt;block&gt;": {"dur": 6.2, "wav": "path.wav", "texto": "...", "ouvido": "..."}}</span>
-<span class="k">python3 scripts/narrar.py</span> && <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span>
+<span class="k">python3 scripts/narrar.py</span>          <span class="c"># only with cardshorts; with another voice, skip it and fill tempos.json</span>
+<span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span>
 <span class="k">ffmpeg</span> -i cidades/floripa/final/video.mp4 -i cidades/floripa/final/audio-narrado.wav -map 0:v -map 1:a -c:v copy -c:a aac -shortest cidades/floripa/final/floripa-narrado.mp4</pre>
   </div></div>
 </div></section>

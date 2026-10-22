@@ -303,7 +303,8 @@
     <h3>Versión narrada (opcional)</h3>
     <p>La narración es una capa de audio sobre el mismo video: un texto por bloque en <code>cidades/&lt;id&gt;/narracao.json</code>, encajado al inicio de cada evento. La grabación usa un motor de voz local del autor (<code>cardshorts</code>, fuera de este repositorio); con otra voz, graba un archivo por bloque y completa <code>narracao/tempos.json</code>.</p>
 <pre><span class="c"># narracao/tempos.json, si grabas con otra voz: {"&lt;bloque&gt;": {"dur": 6.2, "wav": "ruta.wav", "texto": "...", "ouvido": "..."}}</span>
-<span class="k">python3 scripts/narrar.py</span> && <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span>
+<span class="k">python3 scripts/narrar.py</span>          <span class="c"># solo con cardshorts; con otra voz, sáltalo y llena tempos.json</span>
+<span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span>
 <span class="k">ffmpeg</span> -i cidades/floripa/final/video.mp4 -i cidades/floripa/final/audio-narrado.wav -map 0:v -map 1:a -c:v copy -c:a aac -shortest cidades/floripa/final/floripa-narrado.mp4</pre>
   </div></div>
 </div></section>
