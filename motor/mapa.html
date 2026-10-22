@@ -46,6 +46,22 @@
   #capa .t b { color:var(--amb); }
   #capa .s { font:600 36px Inter; margin-top:26px; max-width:980px; }
   #globo { position:absolute; inset:0; opacity:0; }
+  #topo { position:absolute; left:0; right:0; top:0; height:260px; pointer-events:none;
+    background:linear-gradient(rgba(12,12,16,.78), rgba(12,12,16,.45) 55%, rgba(12,12,16,0)); }
+  #chamadas { position:absolute; inset:0; pointer-events:none; }
+  #chamadas .et { position:absolute; background:rgba(12,12,16,.82); border:2px solid var(--amb); border-radius:10px; padding:8px 14px;
+    color:#fff; font:700 24px Inter; white-space:nowrap; box-shadow:0 4px 16px rgba(0,0,0,.5); }
+  #chamadas .et small { display:block; font:600 18px Inter; color:var(--amb); }
+  #epoca { position:absolute; left:56px; top:190px; width:540px; opacity:0; }
+  #epoca .q { border:3px solid #e9dcc0; border-radius:6px; box-shadow:0 12px 40px rgba(0,0,0,.6); background:#111; overflow:hidden; }
+  #epoca img { display:block; width:100%; max-height:380px; object-fit:cover; }
+  #epoca .c { margin-top:10px; color:#fff; font:700 22px Inter; }
+  #epoca .c small { display:block; font:500 17px Inter; opacity:.85; margin-top:3px; }
+  #galeria { position:absolute; inset:0; background:#0c0c10; opacity:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  #galeria .gt { color:#fff; font:800 56px Sora; margin-bottom:26px; } #galeria .gt b { color:var(--amb); }
+  #galeria .gg { display:grid; grid-template-columns:repeat(4, 380px); gap:16px; }
+  #galeria .gg div { height:200px; background-size:cover; background-position:center; border-radius:6px; border:2px solid #e9dcc0; }
+  #galeria .gc { color:#cfcfd6; font:500 17px Inter; margin-top:22px; max-width:1600px; text-align:center; }
   #marca { position:absolute; right:60px; bottom:30px; color:#fff; font:700 22px Sora; opacity:.85; }
   #marca i { color:var(--amb); font-style:normal; }
 </style>
@@ -55,7 +71,7 @@
 <script src="assets/topojson-client.min.js"></script>
 <script src="cena.js"></script>
 </head><body>
-<div id="ceu"></div><div id="mapa"></div><div id="nevoa"></div><div id="tom"></div>
+<div id="ceu"></div><div id="mapa"></div><div id="nevoa"></div><div id="tom"></div><div id="topo"></div><svg id="linhas" width="1920" height="1080" style="position:absolute;inset:0;pointer-events:none"></svg><div id="chamadas"></div><div id="epoca"><div class="q"><img></div><div class="c sombra"></div></div>
 <div id="linha"><div class="trilho"></div><div class="feito"></div></div>
 <div id="reg" class="sombra"><span id="bandeira"></span><span id="regnome"></span></div>
 <div id="tempo" class="sombra"><div id="ano"></div><div id="pop"></div><div id="popf"></div></div>
@@ -63,6 +79,7 @@
 <div id="cartao" class="sombra"><div class="n"></div><div class="t"></div><div class="l"></div><div class="d"></div><div class="f"></div></div>
 <canvas id="globo" width="1920" height="1080"></canvas>
 <div id="capa"><div class="k"></div><div class="t"></div><div class="s"></div></div>
+<div id="galeria"><div class="gt"></div><div class="gg"></div><div class="gc"></div></div>
 <div id="fim" style="position:absolute;inset:0;background:#0c0c10;opacity:0"></div>
 <div id="fimt"><div class="t"></div><div class="s"></div></div>
 <div id="marca" class="sombra">INEMA<i>.</i>CLUB</div>
@@ -126,6 +143,13 @@ async function carrega() {
       const g = f.geometry; const inv = pol => pol.map(r => r.slice().reverse());
       g.coordinates = g.type === 'Polygon' ? inv(g.coordinates) : g.coordinates.map(inv); }
   }
+  if (C.globo && C.globo.raster) {
+    const dados = async src => { const im = new Image(); im.src = src; await im.decode(); const c = document.createElement('canvas');
+      c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); return { w: im.width, h: im.height, d: x.getImageData(0, 0, im.width, im.height).data }; };
+    D.bm = await dados('assets/terra/blue_marble.jpg'); D.sul = await dados('assets/terra/sul_br.jpg'); D.tx = await dados('assets/textura.jpg');
+  }
+  if (C.satLonge) { D.sat = new Image(); D.sat.src = C.satLonge.img; await D.sat.decode(); }
+  for (const im of (C.imagens || [])) await new Promise(r => { const i = new Image(); i.onload = i.onerror = r; i.src = im.src; });
   if (C.capa && C.capa.imagem) await new Promise(r => { const i = new Image(); i.onload = i.onerror = r; i.src = C.capa.imagem; });
 }
 
@@ -138,6 +162,12 @@ const EXT_TERRA = [new deck._TerrainExtension()], EXT_FILTRO = [new deck.DataFil
 const MAT_TERRA = { ambient: .5, diffuse: .55, shininess: 4 }, MAT_PRED = { ambient: .72, diffuse: .5, shininess: 12, specularColor: [40, 40, 40] };
 const DEC_TERRA = { rScaler: 256 * EXZ, gScaler: EXZ, bScaler: EXZ / 256, offset: -32768 * EXZ };
 let LOAD_TERRA = null;
+const svgIcone = (d, w = 64, h = 64) => ({ url: 'data:image/svg+xml;base64,' + btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 64 64">${d}</svg>`), width: w, height: h, mask: true, anchorY: 56 });
+const ICONE = {
+  nau: svgIcone('<path fill="#fff" d="M30 6v40h3V6z"/><path fill="#fff" d="M33 8c10 4 16 14 16 24H33zM30 12c-8 4-13 12-13 20h13z"/><path fill="#fff" d="M6 46h52l-8 12H14z"/>'),
+  canoa: svgIcone('<path fill="#fff" d="M4 44c8 6 48 6 56 0l-4 8c-12 4-36 4-48 0z"/><path fill="#fff" d="M30 20h4v24h-4z"/>'),
+  cavalo: svgIcone('<path fill="#fff" d="M14 30c4-8 14-12 24-10l6-8 4 2-3 8c4 2 7 6 7 10l-5 2-3-5v20h-5V39H25v10h-5V38c-4-1-6-4-6-8z"/>'),
+};
 const dentro = (t, j) => j && j.some(([a, b]) => t >= a && t <= b);
 const AMB = [250, 204, 21];
 
@@ -149,7 +179,9 @@ function camadas(t) {
   const longe = lg ? [{ p: [[w0 - 1, s0 - 1, -3], [lg.oeste, s0 - 1, -3], [lg.oeste, n0 + 1, -3], [w0 - 1, n0 + 1, -3]], c: lg.terra },
                       { p: [[lg.oeste, s0 - 1, -3], [e0 + 1, s0 - 1, -3], [e0 + 1, n0 + 1, -3], [lg.oeste, n0 + 1, -3]], c: lg.mar }]
                    : [{ p: [[w0 - 1, s0 - 1, -3], [e0 + 1, s0 - 1, -3], [e0 + 1, n0 + 1, -3], [w0 - 1, n0 + 1, -3]], c: C.corLonge || [150, 172, 168] }];
-  L.push(new deck.SolidPolygonLayer({ id: 'chao-longe', data: longe, getPolygon: d => d.p, getFillColor: d => d.c, material: false }));
+  if (C.satLonge) L.push(new deck.BitmapLayer({ id: 'sat-longe', image: D.sat, bounds: C.satLonge.bounds,
+    _imageCoordinateSystem: deck.COORDINATE_SYSTEM.LNGLAT }));
+  else L.push(new deck.SolidPolygonLayer({ id: 'chao-longe', data: longe, getPolygon: d => d.p, getFillColor: d => d.c, material: false }));
   L.push(new deck.TerrainLayer({ id: 'terreno', elevationData: 'assets/elev.png', texture: 'assets/textura.jpg',
     bounds: D.T.bbox, meshMaxError: 1.2,
     elevationDecoder: DEC_TERRA, operation: 'terrain+draw',
@@ -222,9 +254,12 @@ function camadas(t) {
     const o = Math.min(1, (t - fr.t0) / .6, (fr.t1 + 1 - t) / 1);
     const pts = fr._d.map(([dx, dy, atraso]) => { const k = ease(clamp01((t - fr.t0) / (fr.t1 - fr.t0) * 1.35 - atraso));
       return [lerp(fr.de[0], fr.para[0], k) + dx / 96.3 * (1 - k * .7), lerp(fr.de[1], fr.para[1], k) + dy / 111 * (1 - k * .7), 4]; });
-    L.push(new deck.ScatterplotLayer({ id: 'frota-' + fr.t0, data: pts, getPosition: d => d, getRadius: fr.r || 140,
-      getFillColor: [...(fr.cor || [255, 255, 255]), Math.round(255 * o)], getLineColor: [12, 12, 16, Math.round(220 * o)], stroked: true,
-      lineWidthMinPixels: 2, radiusMinPixels: 7, updateTriggers: { getFillColor: o, getLineColor: o } }));
+    fr._cent = [pts.reduce((a, p) => a + p[0], 0) / pts.length, pts.reduce((a, p) => a + p[1], 0) / pts.length]; fr._o = o;
+    const tam = fr.px || (fr.n > 20 ? 40 : 60);
+    L.push(new deck.IconLayer({ id: 'frota-s-' + fr.t0, data: pts, getPosition: d => d, getIcon: () => ICONE[fr.icone || 'nau'],
+      getSize: tam * 1.18, sizeUnits: 'pixels', getColor: [12, 12, 16, Math.round(200 * o)], updateTriggers: { getColor: o } }));
+    L.push(new deck.IconLayer({ id: 'frota-' + fr.t0, data: pts, getPosition: d => d, getIcon: () => ICONE[fr.icone || 'nau'],
+      getSize: tam, sizeUnits: 'pixels', getColor: [...(fr.cor || [255, 255, 255]), Math.round(255 * o)], updateTriggers: { getColor: o } }));
   }
   // PULSOS: anel no local do evento
   const pul = (C.pulsos || []).filter(p => t >= p.t0 && t <= p.t1);
@@ -249,6 +284,64 @@ function camadas(t) {
 
 // GLOBO (abertura): d3 ortográfico, zoom exponencial do planeta até a cidade
 function globo(t) {
+  const G = C.globo, cv = $('globo');
+  if (!G || t > G.t1 + 0.05) { cv.style.opacity = 0; return; }
+  if (!G.raster) return globoVetor(t);
+  cv.style.opacity = Math.min(1, (G.t1 - t) / (G.some || 1.2));
+  const v = chave(G.chaves, t), R = Math.exp(v.ls), ctx = cv.getContext('2d');
+  const g = ctx.createRadialGradient(960, 540, 100, 960, 540, 1300); g.addColorStop(0, '#08121f'); g.addColorStop(1, '#010205');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, 1920, 1080);
+  if (!D._estrelas) { D._estrelas = []; let sd = 3; const r = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
+    for (let i = 0; i < 320; i++) D._estrelas.push([r() * 1920, r() * 1080, r() * 1.5 + .3]); }
+  ctx.fillStyle = 'rgba(255,255,255,.75)'; for (const [x, y, r] of D._estrelas) { ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill(); }
+  // atmosfera
+  if (R < 3000) { const a = ctx.createRadialGradient(960, 540, R * 0.98, 960, 540, R * 1.12);
+    a.addColorStop(0, 'rgba(110,180,255,.55)'); a.addColorStop(1, 'rgba(110,180,255,0)'); ctx.fillStyle = a; ctx.beginPath(); ctx.arc(960, 540, R * 1.12, 0, 7); ctx.fill(); }
+  // Terra pixel a pixel (ortográfica inversa): textura da cidade > satélite do Sul em alta > Blue Marble
+  if (!D._img) D._img = ctx.createImageData(1920, 1080);
+  const img = D._img, o = img.data; o.fill(0);
+  const rad = Math.PI / 180, l0 = v.lon * rad, p0 = v.lat * rad, sp = Math.sin(p0), cp = Math.cos(p0);
+  const [TW, TS, TE, TN] = D.T.bbox, y0 = Math.max(0, Math.floor(540 - R)), y1 = Math.min(1080, Math.ceil(540 + R));
+  const amostra = (f, u, w) => { // bilinear
+    const x = Math.min(f.w - 1.001, Math.max(0, u)), y = Math.min(f.h - 1.001, Math.max(0, w)), xi = x | 0, yi = y | 0, fx = x - xi, fy = y - yi;
+    const i00 = (yi * f.w + xi) * 4, i10 = i00 + 4, i01 = i00 + f.w * 4, i11 = i01 + 4, d = f.d;
+    return [0, 1, 2].map(c => d[i00 + c] * (1 - fx) * (1 - fy) + d[i10 + c] * fx * (1 - fy) + d[i01 + c] * (1 - fx) * fy + d[i11 + c] * fx * fy); };
+  for (let y = y0; y < y1; y++) {
+    const yp = (540 - y) / R, half = Math.sqrt(Math.max(0, 1 - yp * yp)) * R;
+    const xa = Math.max(0, Math.floor(960 - half)), xb = Math.min(1920, Math.ceil(960 + half));
+    for (let x = xa; x < xb; x++) {
+      const xp = (x - 960) / R, r2 = xp * xp + yp * yp; if (r2 > 1) continue;
+      const rho = Math.sqrt(r2), c = Math.asin(rho), sc = Math.sin(c), cc = Math.cos(c);
+      const lat = Math.asin(cc * sp + (rho ? yp * sc * cp / rho : 0)) / rad;
+      let lon = (l0 + Math.atan2(xp * sc, rho * cp * cc - yp * sp * sc)) / rad; lon = ((lon + 540) % 360) - 180;
+      let px;
+      if (lon >= TW && lon <= TE && lat >= TS && lat <= TN) px = amostra(D.tx, (lon - TW) / (TE - TW) * D.tx.w, (TN - lat) / (TN - TS) * D.tx.h);
+      else if (lon >= -60 && lon <= -40 && lat >= -35 && lat <= -15) px = amostra(D.sul, (lon + 60) / 20 * D.sul.w, (-15 - lat) / 20 * D.sul.h);
+      else { const u = (lon + 180) / 360 * D.bm.w, w = (90 - lat) / 180 * D.bm.h, i = ((w | 0) * D.bm.w + (u | 0)) * 4; px = [D.bm.d[i], D.bm.d[i + 1], D.bm.d[i + 2]]; }
+      const k = R < 3000 ? 0.45 + 0.55 * Math.pow(cc, 0.6) : 1, j = (y * 1920 + x) * 4;
+      o[j] = px[0] * k; o[j + 1] = px[1] * k; o[j + 2] = px[2] * k; o[j + 3] = 255;
+    }
+  }
+  if (!D._off) { D._off = document.createElement('canvas'); D._off.width = 1920; D._off.height = 1080; }
+  D._off.getContext('2d').putImageData(img, 0, 0); ctx.drawImage(D._off, 0, 0);
+  // contornos e rótulos
+  const pr = d3.geoOrthographic().rotate([-v.lon, -v.lat]).scale(R).translate([960, 540]);
+  const path0 = d3.geoPath(pr, ctx), path = f => { try { path0(f); } catch (e) {} };
+  const br = D.paises.find(f => f.properties.name === 'Brazil');
+  ctx.beginPath(); path(br); ctx.strokeStyle = `rgba(250,204,21,${0.95 * clamp01((v.ls - Math.log(300)) / 0.5) * clamp01((Math.log(G.br_ate || 9000) - v.ls) / 0.6)})`; ctx.lineWidth = 3; ctx.stroke();
+  const uf = D.ufs.find(f => f.properties.uf === G.uf);
+  if (uf) { ctx.beginPath(); path(uf); ctx.strokeStyle = `rgba(250,204,21,${clamp01((v.ls - Math.log(G.uf_de || 1800)) / 0.6) * clamp01((Math.log(G.uf_ate || 60000) - v.ls) / 0.7)})`; ctx.lineWidth = 3.5; ctx.stroke(); }
+  ctx.textAlign = 'center'; ctx.shadowColor = 'rgba(0,0,0,.9)'; ctx.shadowBlur = 10;
+  for (const r of (G.rotulos || [])) {
+    const a = clamp01((v.ls - Math.log(r.de)) / 0.4) * clamp01((Math.log(r.ate) - v.ls) / 0.4); if (a <= 0) continue;
+    const p = pr([r.lon, r.lat]); if (!p) continue;
+    ctx.globalAlpha = a; ctx.font = `800 ${r.tam || 64}px Sora`; ctx.fillStyle = r.cor || '#fff'; ctx.fillText(r.texto, p[0], p[1]);
+    if (r.ponto) { ctx.beginPath(); ctx.arc(p[0], p[1] + 30, 12, 0, 7); ctx.fillStyle = '#FACC15'; ctx.fill(); }
+  }
+  ctx.globalAlpha = 1; ctx.shadowBlur = 0;
+}
+
+function globoVetor(t) {
   const G = C.globo, cv = $('globo');
   if (!G || t > G.t1 + 0.05) { cv.style.opacity = 0; return; }
   cv.style.opacity = Math.min(1, (G.t1 - t) / (G.some || 1.2));
@@ -318,6 +411,33 @@ function html(t) {
   }
   cap.style.opacity = kc;
   for (const id of ['reg', 'tempo', 'linha']) $(id).style.opacity = Math.min(kh, 1 - kc);
+  // CHAMADAS: linha + etiqueta presas a frotas, fortes em destaque e pontos do roteiro
+  const vp = mapa.getViewports()[0], lin = $('linhas'), ch = $('chamadas'); let svg = '', htm = '';
+  const alvo = [];
+  for (const fr of (C.frotas || [])) if (fr.rotulo && fr._cent && t >= fr.t0 && t <= fr.t1 + 1) alvo.push({ p: [fr._cent[0], fr._cent[1], 0], txt: fr.rotulo, sub: fr.sub, o: fr._o ?? 1 });
+  for (const f of (C.fortes || [])) if (f.rotulo && dentro(t, f.destaque)) { const g = (D.F.fortes || {})[f.id]; if (g && g[0]) {
+    const a = g[0]; alvo.push({ p: [a.reduce((s, q) => s + q[0], 0) / a.length, a.reduce((s, q) => s + q[1], 0) / a.length, (a[0][2] + (f.alt || 18)) * EXZ], txt: f.rotulo, sub: f.sub, o: 1 }); } }
+  for (const c of (C.chamadas || [])) if (t >= c.t0 && t <= c.t1) alvo.push({ p: [c.lon, c.lat, (c.z || 10) * EXZ], txt: c.texto, sub: c.sub, o: Math.min(1, (t - c.t0) / .5, (c.t1 - t) / .5) });
+  if (vp) for (const a of alvo) {
+    const [x, y] = vp.project(a.p); if (!(x > -50 && x < 1970 && y > 0 && y < 1080)) continue;
+    const esq = x > 1050, ex = esq ? Math.max(60, x - 420) : x + 150;   // perto do painel da direita: etiqueta vai para a esquerda
+    const ey = Math.max(esq ? 360 : 280, y - 150);
+    svg += `<line x1="${x}" y1="${y}" x2="${ex}" y2="${ey + 24}" stroke="#FACC15" stroke-width="3" opacity="${a.o}"/><circle cx="${x}" cy="${y}" r="7" fill="#FACC15" opacity="${a.o}"/>`;
+    htm += `<div class="et" style="left:${ex}px;top:${ey}px;opacity:${a.o}">${a.txt}${a.sub ? `<small>${a.sub}</small>` : ''}</div>`;
+  }
+  lin.innerHTML = svg; ch.innerHTML = htm;
+  // IMAGEM DA ÉPOCA (esquerda)
+  const ep = $('epoca'), im = (C.imagens || []).find(x => t >= x.t0 && t <= x.t1);
+  if (im) { if (ep.dataset.src !== im.src) { ep.querySelector('img').src = im.src; ep.dataset.src = im.src;
+      ep.querySelector('.c').innerHTML = `${im.legenda}<small>${im.credito}</small>`; }
+    ep.style.opacity = Math.min(1, (t - im.t0) / .6, (im.t1 - t) / .6); } else ep.style.opacity = 0;
+  // GALERIA final
+  const ga = $('galeria'), GL = C.galeria;
+  if (GL && t >= GL.t0 - 1 && t <= GL.t1 + 1) {
+    if (!ga.dataset.ok) { ga.dataset.ok = 1; ga.querySelector('.gt').innerHTML = GL.titulo; ga.querySelector('.gc').textContent = GL.creditos;
+      ga.querySelector('.gg').innerHTML = GL.itens.map(i => `<div style="background-image:url(${i})"></div>`).join(''); }
+    ga.style.opacity = Math.max(0, Math.min(1, (t - GL.t0) / .8, (GL.t1 - t) / .8));
+  } else ga.style.opacity = 0;
   globo(t);
   const kf = Math.max(0, Math.min(1, (t - (C.duracao - 3.2)) / 1.0));
   $('fim').style.opacity = kf;

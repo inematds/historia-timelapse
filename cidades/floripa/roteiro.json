@@ -12,14 +12,14 @@
  "longe": {
   "oeste": -48.66,
   "terra": [
-   104,
-   140,
-   80
+   112,
+   120,
+   72
   ],
   "mar": [
-   72,
-   112,
-   142
+   62,
+   99,
+   143
   ]
  },
  "regimes": [
@@ -83,17 +83,23 @@
   {
    "id": "anhatomirim",
    "ano": 1739.5,
-   "alt": 34
+   "alt": 34,
+   "rotulo": "Fortaleza de Anhatomirim",
+   "sub": "1739 · 36 canhões"
   },
   {
    "id": "ponta_grossa",
    "ano": 1740.3,
-   "alt": 34
+   "alt": 34,
+   "rotulo": "Fortaleza de Ponta Grossa",
+   "sub": "1740"
   },
   {
    "id": "ratones",
    "ano": 1740.6,
-   "alt": 34
+   "alt": 34,
+   "rotulo": "Fortaleza de Ratones",
+   "sub": "1740"
   },
   {
    "id": "aracatuba",
@@ -149,14 +155,14 @@
     {
      "lon": -48.5,
      "lat": -27.62,
-     "zoom": 10.3,
+     "zoom": 11.21,
      "pitch": 0,
      "bearing": 0
     },
     {
      "lon": -48.5,
      "lat": -27.62,
-     "zoom": 10.3,
+     "zoom": 11.21,
      "pitch": 0,
      "bearing": 0
     }
@@ -178,40 +184,50 @@
     {
      "lon": -48.5,
      "lat": -27.62,
-     "zoom": 10.3,
+     "zoom": 11.21,
      "pitch": 0,
      "bearing": 0
     },
     {
      "lon": -48.5,
      "lat": -27.62,
-     "zoom": 10.4,
+     "zoom": 11.21,
      "pitch": 0,
      "bearing": 0
     }
    ],
-   "dur": 8.5,
+   "dur": 9.0,
    "corte": true,
    "globo": {
+    "raster": true,
     "uf": "SC",
-    "uf_de": 1800,
+    "uf_de": 1500,
     "uf_ate": 60000,
-    "some": 1.4,
+    "br_ate": 9000,
+    "some": 1.2,
     "chaves": [
      [
       0,
       {
-       "lon": -25,
-       "lat": -8,
-       "ls": 5.85
+       "lon": -28,
+       "lat": -6,
+       "ls": 5.95
       }
      ],
      [
-      0.35,
+      0.3,
       {
-       "lon": -45,
-       "lat": -20,
-       "ls": 6.5
+       "lon": -44,
+       "lat": -18,
+       "ls": 6.6
+      }
+     ],
+     [
+      0.65,
+      {
+       "lon": -48.3,
+       "lat": -26.8,
+       "ls": 8.6
       }
      ],
      [
@@ -219,7 +235,7 @@
       {
        "lon": -48.5,
        "lat": -27.62,
-       "ls": 11.2
+       "ls": 11.6
       }
      ]
     ],
@@ -262,7 +278,7 @@
     {
      "lon": -48.5,
      "lat": -27.62,
-     "zoom": 10.4,
+     "zoom": 11.21,
      "pitch": 0,
      "bearing": 0
     },
@@ -371,7 +387,9 @@
     ],
     "n": 1,
     "r": 120,
-    "dura": 6
+    "dura": 6,
+    "rotulo": "Navio de Sebastião Caboto",
+    "sub": "1526"
    }
   },
   {
@@ -426,7 +444,9 @@
      40,
      40
     ],
-    "dura": 6
+    "dura": 6,
+    "rotulo": "Expedição de Cabeza de Vaca",
+    "sub": "1541 · rumo a Assunção"
    }
   },
   {
@@ -476,7 +496,10 @@
     ],
     "n": 4,
     "r": 40,
-    "dura": 5
+    "dura": 5,
+    "icone": "canoa",
+    "rotulo": "Chegada de Dias Velho",
+    "sub": "1673"
    },
    "rotulos": [
     {
@@ -586,7 +609,9 @@
      40,
      40
     ],
-    "dura": 5
+    "dura": 5,
+    "rotulo": "Corsários ingleses",
+    "sub": "1687"
    },
    "tom": {
     "cor": "#a15050",
@@ -714,7 +739,14 @@
     ],
     "n": 2,
     "r": 60,
-    "dura": 5
+    "dura": 5,
+    "rotulo": "Silva Paes chega",
+    "sub": "1739 · 1º governador"
+   },
+   "imagem": {
+    "src": "assets/epoca/e01.jpg",
+    "legenda": "Plano da ilha e do porto de Santa Catarina",
+    "credito": "não informado · séc. XVIII · domínio público (Wikimedia Commons)"
    }
   },
   {
@@ -755,15 +787,6 @@
    "pulo": 0.4,
    "destaca": [
     "forte:anhatomirim"
-   ],
-   "rotulos": [
-    {
-     "lon": -48.5656,
-     "lat": -27.427,
-     "texto": "ANHATOMIRIM",
-     "z": 70,
-     "tam": 32
-    }
    ]
   },
   {
@@ -806,29 +829,6 @@
     "forte:anhatomirim",
     "forte:ponta_grossa",
     "forte:ratones"
-   ],
-   "rotulos": [
-    {
-     "lon": -48.5656,
-     "lat": -27.427,
-     "texto": "ANHATOMIRIM",
-     "z": 70,
-     "tam": 28
-    },
-    {
-     "lon": -48.518,
-     "lat": -27.432,
-     "texto": "PONTA GROSSA",
-     "z": 70,
-     "tam": 28
-    },
-    {
-     "lon": -48.5604,
-     "lat": -27.4746,
-     "texto": "RATONES",
-     "z": 70,
-     "tam": 28
-    }
    ]
   },
   {
@@ -879,7 +879,14 @@
     "n": 26,
     "r": 130,
     "espalha_km": 4,
-    "dura": 7
+    "dura": 7,
+    "rotulo": "Casais açorianos",
+    "sub": "1ª leva · 1748"
+   },
+   "imagem": {
+    "src": "assets/epoca/e02.jpg",
+    "legenda": "Duas vistas de Santa Catarina, com navios",
+    "credito": "S. W. Schley · séc. XVIII · domínio público (Wikimedia Commons)"
    }
   },
   {
@@ -1110,11 +1117,18 @@
      40,
      40
     ],
-    "dura": 7
+    "dura": 7,
+    "rotulo": "Frota espanhola",
+    "sub": "+100 navios · ~10 mil homens"
    },
    "tom": {
     "cor": "#c46a5a",
     "forca": 0.25
+   },
+   "imagem": {
+    "src": "assets/epoca/e00.jpg",
+    "legenda": "Mapa espanhol da ilha, 1776",
+    "credito": "Manuel Cristóbal del Canto · 1776 · domínio público (Wikimedia Commons)"
    },
    "rotulos": [
     {
@@ -1244,7 +1258,12 @@
      -27.595561
     ]
    },
-   "pulo": 1.2
+   "pulo": 1.2,
+   "imagem": {
+    "src": "assets/epoca/e03.jpg",
+    "legenda": "Carta da ilha e do canal, 1830",
+    "credito": "H. L. de Niemeyer Bellegarde · 1830 · domínio público (Wikimedia Commons)"
+   }
   },
   {
    "id": "pedro2-1845",
@@ -1298,7 +1317,14 @@
      120,
      60
     ],
-    "dura": 5
+    "dura": 5,
+    "rotulo": "Navio imperial",
+    "sub": "D. Pedro II · 1845"
+   },
+   "imagem": {
+    "src": "assets/epoca/e05.jpg",
+    "legenda": "Desembarque de D. Pedro II na ilha",
+    "credito": "Vicente Pietro · 1845 · domínio público (Wikimedia Commons)"
    }
   },
   {
@@ -1336,7 +1362,12 @@
      -27.596358
     ]
    },
-   "pulo": 1.5
+   "pulo": 1.5,
+   "imagem": {
+    "src": "assets/epoca/e11.jpg",
+    "legenda": "Vista de Desterro",
+    "credito": "Joseph Brüggemann · 1867 · domínio público (Wikimedia Commons)"
+   }
   },
   {
    "id": "governo-provisorio-1893",
@@ -1390,11 +1421,18 @@
      60,
      60
     ],
-    "dura": 6
+    "dura": 6,
+    "rotulo": "Navios rebeldes",
+    "sub": "1893"
    },
    "tom": {
     "cor": "#8a6a6a",
     "forca": 0.25
+   },
+   "imagem": {
+    "src": "assets/epoca/e09.jpg",
+    "legenda": "Uma rua de Desterro",
+    "credito": "Victor Meirelles · 1851 · domínio público (Wikimedia Commons)"
    }
   },
   {
@@ -1439,16 +1477,7 @@
    "tom": {
     "cor": "#6a2a2a",
     "forca": 0.35
-   },
-   "rotulos": [
-    {
-     "lon": -48.5656,
-     "lat": -27.427,
-     "texto": "ANHATOMIRIM",
-     "z": 70,
-     "tam": 32
-    }
-   ]
+   }
   },
   {
    "id": "florianopolis-1894",
@@ -1485,7 +1514,12 @@
      -27.595561
     ]
    },
-   "pulo": 0.4
+   "pulo": 0.4,
+   "imagem": {
+    "src": "assets/epoca/e14.jpg",
+    "legenda": "Florianópolis por volta de 1903",
+    "credito": "Virgílio Cardoso de Oliveira · c. 1903 · domínio público (Wikimedia Commons)"
+   }
   },
   {
    "id": "ponte-hl-1926",
@@ -1526,6 +1560,11 @@
    "destaca": [
     "linha:hercilio"
    ],
+   "imagem": {
+    "src": "assets/epoca/e15.jpg",
+    "legenda": "Ponte Hercílio Luz em 1958",
+    "credito": "Correio da Manhã · 1958 · domínio público (Wikimedia Commons)"
+   },
    "rotulos": [
     {
      "lon": -48.564,
@@ -1884,7 +1923,21 @@
      "bearing": -5
     }
    ],
-   "dur": 6.0
+   "dur": 14.0,
+   "galeria": {
+    "titulo": "Imagens <b>da época</b>",
+    "itens": [
+     "assets/epoca/e00.jpg",
+     "assets/epoca/e02.jpg",
+     "assets/epoca/e05.jpg",
+     "assets/epoca/e06.jpg",
+     "assets/epoca/e08.jpg",
+     "assets/epoca/e09.jpg",
+     "assets/epoca/e11.jpg",
+     "assets/epoca/e15.jpg"
+    ],
+    "creditos": "Victor Meirelles, Joseph Brüggemann, Vicente Pietro, Manuel Cristóbal del Canto, S. W. Schley, Correio da Manhã (Arquivo Nacional) · domínio público, via Wikimedia Commons"
+   }
   }
  ]
 }

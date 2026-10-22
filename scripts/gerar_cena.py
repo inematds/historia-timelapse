@@ -30,9 +30,9 @@ def main():
 
     C = {"exz": rot.get("exz", 1.6), "exb": rot.get("exb", 1.5), "nascer": 2.5, "ajusteAgua": 0.5, "muroAlt": 22,
          "anos": [], "cam": [], "pop": pop, "cartoes": [], "cheias": [], "rotulos": [], "tropas": [], "tons": [],
-         "muroDestaque": [], "falas": [], "frotas": [], "pulsos": [],
+         "muroDestaque": [], "falas": [], "frotas": [], "pulsos": [], "imagens": [], "chamadas": [],
          "regimes": rot.get("regimes", REGIMES_BR)}
-    for k in ("aterro", "globo", "linha", "fim", "hud_de", "ultimoCenso", "corLonge", "longe", "teto"):
+    for k in ("aterro", "globo", "linha", "fim", "hud_de", "ultimoCenso", "corLonge", "longe", "teto", "satLonge"):
         if k in rot:
             C[k] = rot[k]
     C.setdefault("aterro", {"ano0": 1960, "ano1": 1978}) if CFG.get("feicoes", {}).get("aterro") else None
@@ -96,6 +96,12 @@ def main():
         if "frota" in b:
             fr = b["frota"]
             C["frotas"].append({**fr, "t0": round(te, 3), "t1": round(te + fr.get("dura", corpo * 0.7), 3)})
+        if "imagem" in b:
+            C["imagens"].append({**b["imagem"], "t0": round(te + 0.6, 3), "t1": round(t1 - 0.3, 3)})
+        for c in b.get("chamadas", []):
+            C["chamadas"].append({**c, "t0": round(te + 0.5, 3), "t1": round(t1 - 0.3, 3)})
+        if "galeria" in b:
+            C["galeria"] = {**b["galeria"], "t0": round(te + 0.3, 3), "t1": round(t1 - 3.4, 3)}
         if "tom" in b:
             C["tons"].append({**b["tom"], "t0": round(te, 3), "t1": round(t1, 3)})
         if b.get("muro_destaque"):

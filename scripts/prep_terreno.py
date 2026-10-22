@@ -114,6 +114,16 @@ def main():
     m = np.clip(dist / (12 * TEX), 0, 1)[..., None]
     cor_agua = np.array([86, 140, 168]) * (1 - m) + np.array([38, 82, 118]) * m
     img = np.where(aguaT[..., None], cor_agua, terra)
+    if CFG.get("cor_satelite"):   # iguala a cor média da textura à do satélite (sem trazer a cidade moderna da foto)
+        from PIL import Image as _I
+        _I.MAX_IMAGE_PIXELS = None
+        sat = np.asarray(_I.open(f"{RAIZ}/motor/assets/terra/sul_br.jpg").convert("RGB")).astype(np.float32)
+        sx0, sx1 = int((W + 60) / 20 * sat.shape[1]), int((E + 60) / 20 * sat.shape[1])
+        sy0, sy1 = int((-15 - N) / 20 * sat.shape[0]), int((-15 - S) / 20 * sat.shape[0])
+        rec = np.asarray(_I.fromarray(sat[sy0:sy1, sx0:sx1].astype(np.uint8)).resize((img.shape[1], img.shape[0]))).astype(np.float32)
+        for msk in (aguaT, ~aguaT):
+            alvo = rec[msk].mean(0); atual = img[msk].mean(0)
+            img = np.where(msk[..., None], img * (alvo / np.maximum(atual, 1)), img)
     img = np.clip(img, 0, 255).astype(np.uint8)
     Image.fromarray(img).filter(ImageFilter.SMOOTH).save(f"{ASSETS}/textura.jpg", quality=90)
     json.dump({"bbox": [W, S, E, N], "w": w, "h": h, "tex": [w * TEX, h * TEX],
