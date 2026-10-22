@@ -1,0 +1,188 @@
+{
+ "globo": {
+  "dur": 5.154,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/globo.wav",
+  "texto": "Na Baixada de Sepetiba, um morro pequeno guarda o coração de uma cidade inteira.",
+  "ouvido": "Na Baixada de Sepetiba, um morro pequeno guarda o coração de uma cidade inteira."
+ },
+ "capela-1688": {
+  "dur": 5.235,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/capela-1688.wav",
+  "texto": "Tudo começa com padres jesuítas e uma aldeia indígena, ainda longe daqui.",
+  "ouvido": "Tudo começa com padres jesuítas e uma aldeia indígena. Ainda longe daqui..."
+ },
+ "obra-1718": {
+  "dur": 5.861,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/obra-1718.wav",
+  "texto": "Os jesuítas escolhem o alto do morro: dali se via o rio, a baía e a estrada.",
+  "ouvido": "os jesuítas escolhem o alto do morro. Dali se via o rio, a baía e a estrada."
+ },
+ "matriz-1729": {
+  "dur": 5.486,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/matriz-1729.wav",
+  "texto": "Pedra e cal, uma torre só. Quase trezentos anos depois, a igreja continua de pé.",
+  "ouvido": "Pedra e cal, uma torre só. Quase 300 anos depois, a igreja continua de pé."
+ },
+ "expulsao-1759": {
+  "dur": 5.748,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/expulsao-1759.wav",
+  "texto": "Portugal expulsa os jesuítas. A escola fecha, mas o povo fica em volta da igreja.",
+  "ouvido": "Portugal expulsa os jesuítas. A escola fecha, mas o povo fica em volta da igreja."
+ },
+ "freguesia-1795": {
+  "dur": 6.513,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/freguesia-1795.wav",
+  "texto": "Virar paróquia era ganhar padre fixo, batismo e registro: o povoado passa a existir no papel.",
+  "ouvido": "Virar paróquia era ganhar padre fixo, batismo e registro. O povoado passa a existir no papel."
+ },
+ "vila-1818": {
+  "dur": 5.492,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/vila-1818.wav",
+  "texto": "Em mil oitocentos e dezoito, a aldeia vira vila, desenhada em volta da Matriz.",
+  "ouvido": "Em 1818, a aldeia vira vila, desenhada em volta da matriz."
+ },
+ "aclamacao-1822": {
+  "dur": 4.747,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/aclamacao-1822.wav",
+  "texto": "A caminho de São Paulo, dom Pedro para bem aqui, no largo da igreja.",
+  "ouvido": "A caminho de São Paulo, Dom Pedro para bem aqui, no Largo da Igreja."
+ },
+ "graham-1823": {
+  "dur": 5.628,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/graham-1823.wav",
+  "texto": "Uma viajante inglesa desenha o que viu: a igreja no alto e as casas descendo o morro.",
+  "ouvido": "Uma viajante inglesa desenha o que viu. A igreja no alto e as casas descendo o morro."
+ },
+ "porto-1841": {
+  "dur": 4.245,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/porto-1841.wav",
+  "texto": "Com o café descendo para o porto, a vila quase quadruplica de tamanho.",
+  "ouvido": "Com o café descendo para o porto, a vila quase quadrúplica de tamanho."
+ },
+ "chafariz-1847": {
+  "dur": 5.304,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/chafariz-1847.wav",
+  "texto": "Água era o problema. O chafariz servia a vila e os tropeiros da Estrada Real.",
+  "ouvido": "Água era o problema. O chafariz servia a vila e os tropeiros da estrada real."
+ },
+ "caridade-1858": {
+  "dur": 3.807,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/caridade-1858.wav",
+  "texto": "A Casa de Caridade cuidava dos pobres e virou o hospital da cidade.",
+  "ouvido": "A Casa de Caridade cuidava dos pobres e virou o hospital da cidade."
+ },
+ "quintino-casa-1873": {
+  "dur": 4.294,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/quintino-casa-1873.wav",
+  "texto": "Um sobrado de onze janelas que a tradição liga a Quintino Bocaiúva.",
+  "ouvido": "Um sobrado de 11 janelas que a tradição liga a Quintino Bocaiuva."
+ },
+ "biblioteca-1880": {
+  "dur": 5.246,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/biblioteca-1880.wav",
+  "texto": "Em mil oitocentos e oitenta, a vila ganha uma sala de leitura no prédio da Câmara.",
+  "ouvido": "Em 1880, a vila ganha uma sala de leitura no prédio da Câmara."
+ },
+ "cidade-1892": {
+  "dur": 4.719,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/cidade-1892.wav",
+  "texto": "Já na República, Itaguaí deixa de ser vila e passa a ser cidade.",
+  "ouvido": "Já na República, Itaguaí deixa de ser vila e passa a ser cidade."
+ },
+ "estacao-1910": {
+  "dur": 5.319,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/estacao-1910.wav",
+  "texto": "O trem chega em mil novecentos e dez, numa estação que parece um castelo.",
+  "ouvido": "O trem chega em 1910, numa estação que parece um castelo."
+ },
+ "coreto-1943": {
+  "dur": 4.924,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/coreto-1943.wav",
+  "texto": "No adro da igreja, o coreto vira palco de banda, festa e namoro.",
+  "ouvido": "No adro da igreja, o coreto vira palco de banda, festa e namoro."
+ },
+ "patronato-1953": {
+  "dur": 4.824,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/patronato-1953.wav",
+  "texto": "Padres guanellianos abrem o Patronato dentro do velho convento dos jesuítas.",
+  "ouvido": "Padres guanelianos abrem o patronato dentro do velho convento dos jesuítas."
+ },
+ "pracas-anos50": {
+  "dur": 4.748,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/pracas-anos50.wav",
+  "texto": "Nos anos cinquenta, o centro desce o morro e ganha praças novas.",
+  "ouvido": "Nos anos 50, o centro desce o morro e ganha praças novas."
+ },
+ "colegio-demolido-1961": {
+  "dur": 5.282,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/colegio-demolido-1961.wav",
+  "texto": "O colégio jesuíta de duzentos anos é derrubado para dar lugar a um prédio moderno.",
+  "ouvido": "O colégio jesuíta de 200 anos é derrubado para dar lugar a um prédio moderno."
+ },
+ "relogio-1967": {
+  "dur": 5.052,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/relogio-1967.wav",
+  "texto": "Um andarilho paraguaio deixa de presente um relógio de sol diante do cemitério.",
+  "ouvido": "Um andarino paraguaio deixa de presente um relógio de sol diante do cemitério."
+ },
+ "se-1980": {
+  "dur": 3.595,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/se-1980.wav",
+  "texto": "A diocese nasce, e a velha Matriz vira catedral.",
+  "ouvido": "A diócese nasce e a velha matriz vira catedral."
+ },
+ "trem-fim-1980": {
+  "dur": 5.185,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/trem-fim-1980.wav",
+  "texto": "No mesmo ano, o último trem de passageiros passa. A estação fica vazia.",
+  "ouvido": "No mesmo ano, o último trem de passageiros passa. A estação fica vazia."
+ },
+ "casa-cultura-2006": {
+  "dur": 4.858,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/casa-cultura-2006.wav",
+  "texto": "Reformado, o castelo reabre como Casa de Cultura, com a biblioteca dentro.",
+  "ouvido": "Reformado. O castelo reabre como casa de cultura, com a biblioteca dentro."
+ },
+ "tombamento-2006": {
+  "dur": 3.964,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/tombamento-2006.wav",
+  "texto": "O estado tomba a Matriz: agora ela não pode mais ser derrubada.",
+  "ouvido": "O estado tomba a matriz. Agora ela não pode mais ser derrubada."
+ },
+ "casa-do-pai-2007": {
+  "dur": 5.251,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/casa-do-pai-2007.wav",
+  "texto": "No Monte Serrat nasce o Instituto Casa do Pai, uma obra social do bairro.",
+  "ouvido": "No Monte Serrat, nasce o Instituto Casa do Pai, uma obra social do bairro."
+ },
+ "fachadas-2019": {
+  "dur": 5.426,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/fachadas-2019.wav",
+  "texto": "Moradores pintam sete fachadas antigas da General Bocaiúva por conta própria.",
+  "ouvido": "Moradores pintam sete fachadas antigas da general Bocaiuva por conta própria."
+ },
+ "quintino-interdita-2023": {
+  "dur": 4.29,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/quintino-interdita-2023.wav",
+  "texto": "Sem cuidado, o sobrado de Quintino perde o teto e o segundo andar.",
+  "ouvido": "Sem cuidado, o sobrado de Quintino perde o teto e o segundo andar."
+ },
+ "hoje": {
+  "dur": 5.463,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/hoje.wav",
+  "texto": "Hoje o centro inteiro cabe num raio de setecentos metros em volta da Matriz.",
+  "ouvido": "Hoje, o centro inteiro cabe num raio de 700 metros em volta da matriz."
+ },
+ "futuro": {
+  "dur": 6.008,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/futuro.wav",
+  "texto": "E se o centro voltasse a ser lugar de ficar? Sombra nas ruas, trem de volta e casarões vivos.",
+  "ouvido": "E se o centro voltasse a ser lugar de ficar? Sombra nas ruas, trem de volta e casarões vivos."
+ },
+ "fecho": {
+  "dur": 4.744,
+  "wav": "/home/nmaldaner/projetos/historia-timelapse/cidades/itaguai-centro/narracao/build/fecho.wav",
+  "texto": "O passado está de pé no alto do morro. O futuro, quem desenha é a cidade.",
+  "ouvido": "O passado está de pé no alto do morro. O futuro, quem desenha, é a cidade."
+ }
+}

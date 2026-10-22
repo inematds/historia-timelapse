@@ -1,0 +1,518 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "metodo": "Páginas HTML/PDF lidas sem API: INEPAC via iPatrimônio, Prefeitura (itaguai.rj.gov.br/historia: linha do tempo, imagens históricas, livro 'Coletânea de Nossas Memórias – Itaguaí, Cidade do Porto', SMEC 2010, PDF escaneado lido página a página como imagem), Monografia IBGE nº 509 (c. 1971, PDF), Jornal Atual, estacoesferroviarias.com.br, GCatholic, Commons. Coordenadas do OSM local (dl/sudeste.osm.pbf, lido com pyosmium) ou da página do Commons; 'coord_qualidade' diz o grau.",
+    "ALERTA_CENTRO": "O centro_antigo do config municipal (-43.7753, -22.8522 = coordenada da ptwiki para o município) fica ~1,7 km ao NORTE do núcleo histórico real. Pelo OSM, o núcleo está entre a Praça Dom Luiz Guanella (-43.7790, -22.8676, Igreja Matriz no alto) e a antiga estação (-43.7775, -22.8743); a Prefeitura (-43.7773, -22.8641) e o nó 'Centro' (-43.7775, -22.8666) ficam no meio. Sugestão de centro para a câmera: (-43.7782, -22.8685).",
+    "coord_qualidade": {
+      "boa": "objeto do OSM com nome/data ou coordenada publicada da página (erro < 30 m)",
+      "aproximada": "inferida por logradouro/vizinho no OSM + descrição textual (erro 30–150 m)",
+      "fraca": "só a rua/bairro, posição dentro dela desconhecida",
+      "sem": "não localizado"
+    },
+    "duas_igrejas": "Há DOIS templos de São Francisco Xavier: (1) a Igreja Matriz jesuítica 1718–1729, 'Antiga Sé', na Praça D. Luís Guanella 136, tombada pelo INEPAC; (2) a Catedral nova, prédio moderno na Rua Coronel Freitas 45 (endereço da diocese). A foto do Commons 'St. Francis Xavier Cathedral' é do prédio NOVO. GCatholic mistura os dois (dá 'built 1718–1729' para o endereço da Coronel Freitas).",
+    "casa_do_pai": "NÃO existe prédio histórico chamado 'Casa do Pai' nas fontes. O que existe com esse nome é o Instituto Casa do Pai / Associação Casa do Pai – P.A.I., ONG social fundada em 11/06/2007 (CNPJ 08.913.297/0001-98), na Rua Prefeito José Maria de Brito 201 (site) ou 251 (cadastro), bairro Monte Serrat — prédio de 2007, ~600 m a sudeste da Matriz. Ver entrada 'instituto-casa-do-pai'. Candidatos se o Nei quis dizer outra coisa: 'antiga casa paroquial' (casa-paroquial), Casa de Quintino Bocaiúva, casa natal do Barão de Teffé, Casa Candeeiro.",
+    "limites": "Os 4 prédios mais importantes (Matriz, Estação, Casa de Quintino, Chafariz) têm descrição arquitetônica de fonte escrita e foto. Medidas (largura/comprimento) NÃO foram achadas em nenhuma fonte: os valores 'estimativa_modelador' foram deduzidos das fotos e da área do polígono do OSM e estão marcados assim."
+  },
+  "predios": [
+    {
+      "id": "matriz-sfx",
+      "nome": "Igreja Matriz de São Francisco Xavier ('Antiga Sé de Itaguaí')",
+      "ano": 1729,
+      "ano_detalhe": "obras iniciadas em 1718, concluídas em 3/12/1729 (Coletânea p.117; Prefeitura). Monografia IBGE 509 (parte turística) diz 'fundada a 3 de dezembro de 1759' — mesmo dia/mês, 1759 tratado como erro. Antes dela: 1ª igreja/capela do aldeamento, 1688, em outro lugar.",
+      "fontes_ano": [
+        "https://www.ipatrimonio.org/itaguai-conjunto-da-igreja-matriz-de-sao-francisco-xavier/",
+        "https://itaguai.rj.gov.br/historia/index.html",
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "endereco": "Praça D. Luís Guanella, 136 — no alto de uma colina, centro",
+      "coord": [-43.7792, -22.8676],
+      "coord_qualidade": "aproximada",
+      "coord_fonte": "OSM local: logradouro 'Praça Dom Luiz Guanella' (centro -43.77903, -22.86762) + cemitério sem nome colado a ela (way 152857786, -43.77978, -22.86780). O templo não está mapeado no OSM. A foto dos anos 50 (Prefeitura) mostra coreto, igreja, Patronato e pórtico do cemitério no mesmo quadro, e a Coletânea diz que coreto, Patronato, cemitério e cruzeiro ficam no entorno — a igreja fica entre a praça e o cemitério. NÃO usar a coordenada do Commons/GCatholic (-43.77856, -22.86919): é da catedral nova.",
+      "estado": "existe; TOMBADA pelo INEPAC (estadual), tombamento provisório 25/05/2006, processo E-18/001.478/2005, junto com imagens de S. Francisco Xavier e N. Sra. do Pilar e os pórticos 1 e 2 do cemitério. Em 2019 tinha projeto de restauro (arq. Luciano Cavalcanti; Mitra Diocesana, 'Antiga Sé'). Catedral de 1980 até a construção da catedral nova (data não achada).",
+      "arquitetura": {
+        "estilo": "colonial jesuítico (séc. XVIII), simples; 'linhas e características coloniais' (Coletânea)",
+        "material": "pedra e cal, paredes grossas",
+        "porte": "pequeno",
+        "pavimentos": "nave de pé-direito simples com coro; torre ~2 vezes a altura da cimalha da nave",
+        "fachada": "frontão triangular com óculo circular central, encimado por cruz (de madeira); portada única em arco pleno com moldura, porta original de 2 folhas de madeira almofadada; na altura do coro, 2 janelas (fotos dos anos 40/70 mostram 3 janelas em arco no nível do coro, com grades/venezianas — divergência entre texto e foto); cunhais/pilastras marcando os cantos e a divisa com a torre; soco (barrado) mais escuro na base",
+        "torre": "UMA torre sineira, na lateral ESQUERDA (texto da Coletânea; nas fotos fica à direita de quem olha a fachada — o texto descreve do ponto de vista de quem está dentro/olhando do altar), planta quadrada, 1 vão em arco por face no nível dos sinos, 2 sinos; remate em cúpula 'meia-laranja' prateada, com 4 pináculos (coruchéus) nos cantos e cruz no topo",
+        "telhado": "nave com telhado de duas águas em telha cerâmica, cumeeira perpendicular à fachada (atrás do frontão)",
+        "lateral": "nave comprida com fileira de janelas altas; muro baixo branco junto à lateral",
+        "interior": "nave única; arco-cruzeiro em pedra; 2 altares laterais diagonais em madeira pintada; altar-mor de madeira pintada com 4 colunas e sacrário dourado; púlpito à esquerda; pia batismal em pedra 'feita pelos escravos'; coro retirado por mau estado; sacristia à direita do altar-mor",
+        "cores": "fachada branca/caiada; cunhais, frisos e molduras em tom mais escuro (cinza/ocre nas fotos P&B; na foto colorida da Coletânea, molduras amarelo-ocre sobre branco); base cinza",
+        "estimativa_modelador": "fachada ~10–12 m de largura (sem a torre), nave ~25–30 m; torre ~4 m de lado, ~15–18 m até a cruz — deduzido das fotos, SEM fonte",
+        "fotos_descritas": [
+          "Prefeitura, 'Década de 70 – Igreja Matriz': fachada branca, frontão com óculo e cruz; 3 janelas em arco no nível do coro; porta em arco com escudo na chave; torre à direita com sino visível no vão, cúpula prateada e 4 pináculos; lateral comprida à direita",
+          "Prefeitura, 'Década de 50 – Coreto, Patronato, Igreja matriz e o Cemitério': no alto do morro, rua de terra; obelisco à esquerda; coreto octogonal com telhado em pirâmide; igreja com a torre-cúpula; à esquerda dela prédio térreo comprido com placa 'PATRONATO'; à direita, casas e o pórtico barroco do cemitério com cruz",
+          "Coletânea p.117: foto colorida — branco com molduras ocre, porta em arco, 2 janelas, torre com pequena cúpula",
+          "Maria Graham 1823 (Commons, DP): igreja no topo do morro, torre com cúpula à direita, colégio de 2 pisos à esquerda, cruzeiro"
+        ]
+      },
+      "fontes": [
+        "https://www.ipatrimonio.org/itaguai-conjunto-da-igreja-matriz-de-sao-francisco-xavier/",
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf",
+        "https://itaguai.rj.gov.br/historia/imagens.html",
+        "https://mapaosc.ipea.gov.br/detalhar/559288",
+        "https://jornalatual.com.br/casaroes-de-itaguai-tem-fachadas-revitalizadas/"
+      ]
+    },
+    {
+      "id": "colegio-jesuita",
+      "nome": "Antigo colégio/convento jesuítico (quadra com claustro)",
+      "ano": 1729,
+      "ano_detalhe": "parte do conjunto edificado 1718–1729 (INEPAC); Patronato São José instalado 'no antigo convento' em 5/7/1953; DEMOLIDO em 1961 (INEPAC), mesmo ano em que começou o novo Patronato (Coletânea p.108)",
+      "endereco": "colado à Matriz, no alto do morro",
+      "coord": [-43.7794, -22.8674],
+      "coord_qualidade": "aproximada",
+      "coord_fonte": "junto da Matriz (ver matriz-sfx); posição exata do claustro desconhecida",
+      "estado": "demolido (1961)",
+      "arquitetura": {
+        "estilo": "colonial jesuítico",
+        "partido": "'partido tradicional da quadra': colégio e igreja em volta de um claustro central (INEPAC)",
+        "pavimentos": "2 (Maria Graham 1823 mostra prédio comprido de 2 pisos à esquerda da igreja, com janelas regulares)",
+        "telhado": "telha cerâmica, 4 águas/duas águas (desenho)",
+        "cores": "caiado de branco (presumido; desenho é P&B)",
+        "estimativa_modelador": "quadra ~30 × 30 m com pátio — SEM fonte métrica"
+      },
+      "fontes": [
+        "https://www.ipatrimonio.org/itaguai-conjunto-da-igreja-matriz-de-sao-francisco-xavier/",
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf",
+        "https://commons.wikimedia.org/wiki/File:Maria_graham_itaguai.jpg"
+      ]
+    },
+    {
+      "id": "cemiterio-sfx",
+      "nome": "Cemitério São Francisco Xavier (secular) e pórticos 1 e 2",
+      "ano": null,
+      "ano_detalhe": "'cemitério secular' (Coletânea); foto dos anos 40 na Prefeitura; data de fundação não achada",
+      "endereco": "ao lado da Matriz, no alto do morro",
+      "coord": [-43.77978, -22.8678],
+      "coord_qualidade": "aproximada",
+      "coord_fonte": "OSM local, way 152857786 (landuse=cemetery, sem nome), vizinho da Praça Dom Luiz Guanella. ATENÇÃO: o 'Cemitério Publico Municipal' do OSM (-43.7743, -22.8599) é OUTRO, 900 m ao norte.",
+      "estado": "existe; os pórticos 1 e 2 estão no tombamento do INEPAC (2006)",
+      "arquitetura": {
+        "muro": "muro branco baixo com pilaretes regulares e gradil de ferro entre eles",
+        "portico_principal": "portal barroco/neoclássico: arco pleno com portão de ferro, pilastras, cornija e frontão curvo (volutas) com cruz de ferro no topo",
+        "portico_2": "portal menor semelhante, com frontão recortado e cruz",
+        "outros": "nichos/capelinhas com estátuas sobre o muro; mausoléus antigos de mármore, um do Conde de Itaguaí",
+        "cores": "branco"
+      },
+      "fontes": [
+        "https://www.ipatrimonio.org/itaguai-conjunto-da-igreja-matriz-de-sao-francisco-xavier/",
+        "https://itaguai.rj.gov.br/historia/imagens.html",
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf"
+      ]
+    },
+    {
+      "id": "praca-dom-luis-guanella",
+      "nome": "Praça Dom Luís Guanella (antiga Praça da Aclamação), adro da Matriz",
+      "ano": 1822,
+      "ano_detalhe": "Prefeitura: D. Pedro foi 'novamente proclamado Imperador' na Praça da Aclamação, em frente à igreja; Câmara: D. Pedro parou para pernoitar 'onde hoje chama-se Praça Dom Luís Guanela'. O nome atual homenageia o fundador da obra guanelliana (Patronato, 1953). Data do nome não achada.",
+      "endereco": "Praça D. Luís Guanella",
+      "coord": [-43.77903, -22.86762],
+      "coord_qualidade": "boa",
+      "coord_fonte": "OSM local (highway com name='Praça Dom Luiz Guanella', média dos nós)",
+      "estado": "existe",
+      "arquitetura": {
+        "elementos": "rua/adro de terra até os anos 50, depois calçamento; coreto (1943), obelisco (homenagem ao 1º itaguaiense na 2ª Guerra), cruzeiro, relógio solar (1967) em frente ao cemitério"
+      },
+      "fontes": [
+        "https://itaguai.rj.gov.br/historia/index.html",
+        "https://www.itaguai.rj.leg.br/institucional/historia",
+        "https://jornalatual.com.br/casaroes-de-itaguai-tem-fachadas-revitalizadas/"
+      ]
+    },
+    {
+      "id": "coreto",
+      "nome": "Coreto Municipal",
+      "ano": 1943,
+      "endereco": "Praça Dom Luís Guanella, em frente à Matriz",
+      "coord": [-43.7789, -22.8677],
+      "coord_qualidade": "aproximada",
+      "coord_fonte": "na praça (OSM) — posição dentro dela pela foto dos anos 50",
+      "estado": "existe (pintura prevista por particulares em 2019)",
+      "arquitetura": {
+        "forma": "octogonal, elevado sobre base de alvenaria com escada",
+        "cobertura": "telhado em pirâmide octogonal de telha cerâmica, com pequeno remate",
+        "estrutura": "8 colunas finas; guarda-corpo de balaústres brancos",
+        "cores": "branco com telhado vermelho-telha (foto colorida da Coletânea)",
+        "estimativa_modelador": "~5–6 m de diâmetro, ~5 m de altura — sem fonte"
+      },
+      "fontes": [
+        "https://itaguai.rj.gov.br/historia/index.html",
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf"
+      ]
+    },
+    {
+      "id": "obelisco-ffeb",
+      "nome": "Obelisco/pilar ao 1º itaguaiense na 2ª Guerra Mundial",
+      "ano": null,
+      "ano_detalhe": "aparece em foto dos anos 50; depois de 1945 (presumido); data não achada",
+      "endereco": "adro da Matriz",
+      "coord": [-43.7787, -22.8678],
+      "coord_qualidade": "aproximada",
+      "coord_fonte": "pela foto dos anos 50 (à esquerda do coreto e da igreja)",
+      "estado": "desconhecido",
+      "arquitetura": {"forma": "obelisco de base quadrada, ~4 m, sobre degrau, com placas metálicas", "cores": "cinza-claro (cimento)"},
+      "fontes": ["https://itaguai.rj.gov.br/historia/imagens.html"]
+    },
+    {
+      "id": "relogio-solar",
+      "nome": "Relógio Solar",
+      "ano": 1967,
+      "ano_detalhe": "construído por um andarilho paraguaio chamado Gutierrez",
+      "endereco": "em frente ao Cemitério São Francisco Xavier",
+      "coord": [-43.7796, -22.8676],
+      "coord_qualidade": "aproximada",
+      "coord_fonte": "em frente ao cemitério (OSM way 152857786)",
+      "estado": "existia em 2010 (Coletânea)",
+      "arquitetura": {"forma": "mostrador circular no chão, em canteiro de flores redondo, com espátula/gnômon triangular no centro", "estimativa_modelador": "~4 m de diâmetro"},
+      "fontes": [
+        "https://itaguai.rj.gov.br/historia/index.html",
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf"
+      ]
+    },
+    {
+      "id": "patronato-sao-jose",
+      "nome": "Patronato São José (obra guanelliana)",
+      "ano": 1953,
+      "ano_detalhe": "inaugurado em 5/7/1953 no antigo convento jesuíta; novo prédio iniciado em 1961 e inaugurado em 5/7/1968 (Coletânea p.108). Escolinha do Pe. Cezar na antiga casa paroquial em 1979. Alunos transferidos para a ETERJ a partir de 2016.",
+      "endereco": "ao lado da Matriz",
+      "coord": [-43.7795, -22.8672],
+      "coord_qualidade": "aproximada",
+      "coord_fonte": "vizinho da Matriz (fotos 'Vista panorâmica com a Igreja Matriz e Patronato São José ao fundo')",
+      "estado": "prédio de 1968 existe (uso atual não confirmado)",
+      "arquitetura": {
+        "1953": "prédio térreo comprido, caiado, com placa 'PATRONATO' (foto anos 50) — era o antigo convento reformado",
+        "1968": "modernista, 3 pavimentos + volume no terraço com estátua de santo no topo; faixas horizontais de janelas basculantes, cobogós no 1º andar, pilares aparentes na lateral; construído sobre muro de pedra (foto anos 70)",
+        "cores": "claro (P&B)"
+      },
+      "fontes": [
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf",
+        "https://itaguai.rj.gov.br/historia/index.html",
+        "https://itaguai.rj.gov.br/historia/imagens.html"
+      ]
+    },
+    {
+      "id": "casa-paroquial",
+      "nome": "Antiga casa paroquial",
+      "ano": null,
+      "ano_detalhe": "citada só como local da 'Escolhinha do Pe. Cezar', inaugurada em 1979 (Coletânea p.109); idade do prédio desconhecida",
+      "endereco": "junto à Matriz (presumido)",
+      "coord": null,
+      "coord_qualidade": "sem",
+      "estado": "desconhecido",
+      "arquitetura": {"descricao": "não achada"},
+      "obs": "É o mais próximo de 'casa do padre' que achei. Sem foto nem endereço.",
+      "fontes": ["https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf"]
+    },
+    {
+      "id": "catedral-nova",
+      "nome": "Catedral de São Francisco Xavier (nova)",
+      "ano": null,
+      "ano_detalhe": "data de construção NÃO achada. Diocese criada 14/03/1980, instalada 22/06/1980 (ptwiki). A página da diocese citada na busca diria '1975' como criação da paróquia — não conferido (página carrega por JavaScript).",
+      "endereco": "Rua Coronel Freitas, 45",
+      "coord": [-43.778562, -22.869189],
+      "coord_qualidade": "boa",
+      "coord_fonte": "Category:St._Francis_Xavier_Cathedral,_Itaguaí no Commons (22°52′09.08″S 43°46′42.82″O) = Plus Code 589R46JC+8H do GCatholic decodificado localmente",
+      "estado": "existe, em uso como catedral",
+      "arquitetura": {
+        "estilo": "moderno (pós-1970, presumido)",
+        "planta": "fachada em dois volumes curvos (quartos de cilindro) que abraçam um corpo central",
+        "torre": "sem torre: campanário em arco aberto alto no eixo, com 1 sino e cruz branca grande no topo",
+        "fachada": "corpo central amarelo com óculo/rosácea grande com vitral (mar e montanhas); porta em arco com grades de ferro; escada de ~5 degraus; janelas estreitas verticais (2 por lado, em 2 alturas) com moldura amarela",
+        "cores": "branco + amarelo-ocre",
+        "outros": "2 anjos de arame iluminados sobre a cobertura; adro de pedra intertravada"
+      },
+      "fontes": [
+        "https://commons.wikimedia.org/wiki/File:St._Francis_Xavier_Cathedral,_Itagua%C3%AD_(Brazil).jpg",
+        "https://gcatholic.org/churches/brazil/2806.htm",
+        "https://pt.wikipedia.org/wiki/Diocese_de_Itagua%C3%AD"
+      ]
+    },
+    {
+      "id": "estacao-casa-de-cultura",
+      "nome": "Antiga Estação Ferroviária de Itaguaí → Casa de Cultura de Itaguaí (com a Biblioteca Municipal) — o 'castelo'",
+      "ano": 1910,
+      "ano_detalhe": "inaugurada 14/11/1910 (Prefeitura; OSM start_date; estacoesferroviarias), prédio de 1910; trens de passageiros suspensos em 1980 (Prefeitura/Coletânea) ou 'por volta de 1982'/'meados dos anos 1980' (estacoesferroviarias); reformada em 2005; Casa de Cultura inaugurada 13/02/2006, abriga a Biblioteca Municipal",
+      "endereco": "Rua (Prefeito) Ismael Cavalcanti, centro, junto à linha do Ramal de Mangaratiba (km 65,696)",
+      "coord": [-43.777518, -22.874347],
+      "coord_qualidade": "boa",
+      "coord_fonte": "OSM local, way 116412066 (name=Itaguaí, disused:railway=station, start_date=1910-11-14), área do contorno ≈ 92 m² (só a torre/corpo principal?)",
+      "estado": "existe; não achei tombamento",
+      "arquitetura": {
+        "estilo": "eclético com feição de castelo medieval (neogótico/'acastelado')",
+        "volumes": "torre quadrada de 2 pavimentos + alas de 1 pavimento",
+        "telhado": "escondido por platibanda com AMEIAS (merlões) em toda a volta, na torre e nas alas",
+        "torre": "topo com ameias e cornija com fileira de pequenos furos redondos; inscrição com o nome sob a cornija ('… DE ITAGUAÍ'); no 2º pavimento, janelas em arco ogival (3 juntas numa face, 1 em outra); óculos redondos no 1º pavimento",
+        "alas": "1 pavimento, ameias, janelinhas em fita e óculos",
+        "cores": "amarelo-ocre com cunhais, frisos e molduras em tom mais claro/branco (foto Commons 2021; foto colorida da Coletânea)",
+        "estimativa_modelador": "torre ~6 × 6 m, ~11–12 m até as ameias; alas ~4–5 m de altura — deduzido das fotos, sem fonte"
+      },
+      "fontes": [
+        "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/itaguai.htm",
+        "https://itaguai.rj.gov.br/historia/index.html",
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf",
+        "https://commons.wikimedia.org/wiki/File:Biblioteca_Municipal_Machado_de_Assis_(Itagua%C3%AD).jpg"
+      ]
+    },
+    {
+      "id": "chafariz",
+      "nome": "Chafariz da Câmara (antiga Estrada Real)",
+      "ano": 1847,
+      "ano_detalhe": "inaugurado pela Câmara Municipal em 1847 para abastecer a população; parada de viajantes para Minas e São Paulo",
+      "endereco": "na antiga 'Estrada Real' (caminho para São Paulo); o Jornal Atual o cita entre as fachadas pintadas na campanha da Rua General Bocaiúva (2019) — rua exata não confirmada",
+      "coord": [-43.7778, -22.8640],
+      "coord_qualidade": "fraca",
+      "coord_fonte": "centro do trecho da Rua General Bocaiuva no OSM; posição real desconhecida",
+      "estado": "existe (fachada pintada em 2019); tombamento não achado",
+      "arquitetura": {
+        "forma": "'semelhante a uma pequena casa': corpo retangular",
+        "cobertura": "elemento piramidal (na foto lê-se como frontão triangular com cornija na fachada)",
+        "fachada_principal": "vão em ARCO PLENO grande fechado em pedra, com as saídas de água e bandeira fixa de ferro; tanque retangular de pedra acoplado embaixo",
+        "laterais": "vãos abertos; na lateral direita, porta de folha de ferro trabalhado",
+        "interior": "poço artesiano desativado",
+        "cores": "foto da Coletânea: corpo branco com pilastras, frontão e moldura do arco em cinza/verde-escuro",
+        "estimativa_modelador": "~3 × 3 m de planta, ~4 m de altura — sem fonte"
+      },
+      "fontes": [
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf",
+        "https://itaguai.rj.gov.br/historia/index.html",
+        "https://jornalatual.com.br/casaroes-de-itaguai-tem-fachadas-revitalizadas/"
+      ]
+    },
+    {
+      "id": "casa-quintino",
+      "nome": "Casa de Quintino Bocaiúva (dita 'Câmara da Guarda do Imperador')",
+      "ano": 1873,
+      "ano_detalhe": "Jornal Atual (2023): 'construída em 1873'. CONFLITO: Quintino nasceu em 4/12/1836 — a Prefeitura chama de 'Casa onde nasceu Quintino Bocaiuva' (legenda de foto dos anos 40), a Coletânea diz 'onde residiu… supostamente' e que 'estudos levam a crer' que foi a Câmara da Guarda do Imperador. Se nasceu ali, a casa é anterior a 1873.",
+      "endereco": "Rua Quintino Bocaiúva, 'no final da rua que leva seu nome' (Prefeitura); o Jornal Atual de 2019 fala também de um casarão 'no final da Rua General (Quintino) Bocaiúva'",
+      "coord": null,
+      "coord_qualidade": "sem",
+      "coord_fonte": "Rua Quintino Bocaiúva não aparece no OSM local; não localizada",
+      "estado": "existe, em ruína: interditada pela Defesa Civil em 31/05/2023 (colapso parcial do teto e do 2º pavimento); 'tombada pela Câmara dos Vereadores' (municipal), com placa da Prefeitura",
+      "arquitetura": {
+        "estilo": "sobrado colonial/imperial (séc. XIX)",
+        "pavimentos": 2,
+        "telhado": "4 águas em telha cerâmica, beiral com cimalha",
+        "fachada": "longa, ~11 vãos: no 2º pavimento 11 janelas de verga reta, as 3 centrais (portas-janela com bandeira em arco ogival/gótico) abrem para um balcão corrido de ferro; no térreo, portas e janelas em arco abatido, irregulares; à esquerda um anexo térreo",
+        "cores": "foto anos 40 (sépia): claro; foto da Coletânea (cor): branco com janelas escuras",
+        "estimativa_modelador": "~25 m de frente, ~9 m até o beiral — sem fonte"
+      },
+      "fontes": [
+        "https://jornalatual.com.br/defesa-civil-de-itaguai-interdita-patrimonio-historico/",
+        "https://itaguai.rj.gov.br/historia/imagens.html",
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf"
+      ]
+    },
+    {
+      "id": "candeeiro",
+      "nome": "Casa do Candeeiro (antigo Restaurante Candieiro)",
+      "ano": null,
+      "ano_detalhe": "'considerada uma das mais antigas da cidade' (Coletânea); data não achada",
+      "endereco": "Rua General Bocaiúva, 'próximo à Prefeitura de Itaguaí' (Jornal Atual 2019)",
+      "coord": [-43.7774, -22.8643],
+      "coord_qualidade": "fraca",
+      "coord_fonte": "perto do nó da Prefeitura no OSM (-43.77734, -22.864106)",
+      "estado": "existe; fachada pintada em 2019",
+      "arquitetura": {
+        "estilo": "casa térrea colonial",
+        "pavimentos": 1,
+        "telhado": "duas águas/4 águas em telha, beiral",
+        "fachada": "5–6 vãos em arco pleno (portas e janelas) com moldura; janela com bandeira em leque; gradil de ferro baixo na frente sobre mureta; lampiões de parede",
+        "cores": "branco com molduras e esquadrias ocre/marrom (foto da Coletânea)"
+      },
+      "fontes": [
+        "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf",
+        "https://jornalatual.com.br/casaroes-de-itaguai-tem-fachadas-revitalizadas/"
+      ]
+    },
+    {
+      "id": "antiga-prefeitura",
+      "nome": "Antigo prédio da Prefeitura (sobrado da Rua General Bocaiúva)",
+      "ano": null,
+      "ano_detalhe": "foto 'Década de 50'; data de construção não achada. Possivelmente o mesmo 'Paço da Câmara Municipal, em frente ao Rocio' onde a Biblioteca foi inaugurada em 1880 — NÃO confirmado",
+      "endereco": "Rua General Bocaiúva",
+      "coord": [-43.7774, -22.8642],
+      "coord_qualidade": "fraca",
+      "coord_fonte": "nó da Prefeitura atual no OSM; supõe que a sede ficou no mesmo trecho da rua (fotos de anos 50 e 60 dizem 'na rua General Bocaiúva')",
+      "estado": "provavelmente demolido/substituído pelo prédio dos anos 60 (inferência)",
+      "arquitetura": {
+        "estilo": "sobrado eclético do séc. XIX",
+        "pavimentos": 2,
+        "telhado": "telha cerâmica com cornija e frontão/platibanda central com a inscrição 'PREFEITURA'",
+        "fachada": "2º pav.: 5 portas-janela com bandeira ogival (gótica) e balcão corrido de ferro; térreo: 6 portas altas de verga reta; cunhais com ornatos; colado a casas térreas de beiral",
+        "cores": "claro (P&B)"
+      },
+      "fontes": ["https://itaguai.rj.gov.br/historia/imagens.html"]
+    },
+    {
+      "id": "camara-prefeitura-1960",
+      "nome": "Prédio da Câmara Municipal e Prefeitura (modernista)",
+      "ano": null,
+      "ano_detalhe": "foto 'Década de 60' com placa de obra; ano exato não lido",
+      "endereco": "Rua General Bocaiúva",
+      "coord": [-43.77734, -22.864106],
+      "coord_qualidade": "aproximada",
+      "coord_fonte": "OSM nó 9616206113 'Prefeitura Municipal de Itaguaí' (atual); que seja o mesmo prédio dos anos 60 é inferência",
+      "estado": "a Prefeitura atual fica nesse ponto; se é o mesmo prédio, não confirmado",
+      "arquitetura": {
+        "estilo": "modernista",
+        "pavimentos": 2,
+        "fachada": "galeria de pilotis/colunas cilíndricas no térreo e varanda corrida no 2º pav.; letreiro 'CÂMARA MUNICIPAL' à esquerda e 'PREFEITURA MUNICIPAL' à direita, com o brasão oval no meio sobre a platibanda",
+        "telhado": "cobertura em 'asa de borboleta'/duas águas invertidas atrás da platibanda (pela silhueta)",
+        "cores": "branco"
+      },
+      "fontes": ["https://itaguai.rj.gov.br/historia/imagens.html"]
+    },
+    {
+      "id": "paco-camara-rocio",
+      "nome": "Paço da Câmara Municipal 'em frente ao Rocio' (séc. XIX)",
+      "ano": 1880,
+      "ano_detalhe": "existia em 02/12/1880 (inauguração da 'Casa de Leitura'/Biblioteca no Paço); relatório da Câmara assinado no 'Paço da Câmara Municipal de Itaguahy' em 15/02/1898",
+      "endereco": "em frente ao Rocio — o Rocio virou Rua Amélia Louzada em 20/12/1949",
+      "coord": [-43.77815, -22.8663],
+      "coord_qualidade": "fraca",
+      "coord_fonte": "OSM: Rua Amelia Louzado (média). A bifurcação Coronel Freitas / Amélia Louzada fica no mesmo trecho.",
+      "estado": "desconhecido",
+      "arquitetura": {"descricao": "não achada"},
+      "fontes": ["https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf"]
+    },
+    {
+      "id": "casa-de-caridade",
+      "nome": "Casa de Caridade → Hospital Municipal São Francisco Xavier",
+      "ano": 1858,
+      "ano_detalhe": "fundada em 31/10/1858 pela Associação de Caridade de São Francisco Xavier; em 1968 fez o 1º reimplante de mão do Brasil (Dr. Gílson Braga) e ganhou sala de cirurgia doada pela Rainha Elizabeth II",
+      "endereco": "Rua General Bocaiúva (foto 'Rua General Bocaiúva próximo ao hospital', anos 60)",
+      "coord": null,
+      "coord_qualidade": "sem",
+      "coord_fonte": "o hospital não está no OSM local (só a 'Policlínica do SASE' em -43.7777, -22.8636)",
+      "estado": "o hospital existe no mesmo local (Prefeitura); prédio de 1858 provavelmente não",
+      "arquitetura": {"descricao": "não achada"},
+      "fontes": ["https://itaguai.rj.gov.br/historia/index.html"]
+    },
+    {
+      "id": "forum",
+      "nome": "Fórum de Itaguaí (anos 40)",
+      "ano": null,
+      "ano_detalhe": "foto 'Década de 40 – Inauguração do Fórum'",
+      "endereco": "não achado",
+      "coord": null,
+      "coord_qualidade": "sem",
+      "estado": "desconhecido",
+      "arquitetura": {
+        "estilo": "neoclássico simplificado/eclético",
+        "pavimentos": 1,
+        "telhado": "4 águas em telha, atrás de platibanda",
+        "fachada": "5 vãos (porta à esquerda + 4 janelas de verga reta), pilastras e almofadas retangulares acima das janelas; portão com pilar ornamentado à esquerda",
+        "cores": "claro"
+      },
+      "fontes": ["https://itaguai.rj.gov.br/historia/imagens.html"]
+    },
+    {
+      "id": "liceu-sao-luiz",
+      "nome": "Antiga Escola Liceu São Luiz (hoje escola '5 de Julho')",
+      "ano": null,
+      "ano_detalhe": "foto 'Década de 50'",
+      "endereco": "Rua General Bocaiúva",
+      "coord": null,
+      "coord_qualidade": "sem",
+      "estado": "desconhecido",
+      "arquitetura": {
+        "estilo": "sobrado colonial/imperial",
+        "pavimentos": 2,
+        "telhado": "4 águas em telha com beiral",
+        "fachada": "2º pav.: 3 portas-janela com bandeira em leque e balcão corrido de ferro com a placa 'LICEU SÃO LUIZ'; térreo: porta central, janelas com grade; anexo térreo à esquerda com beiral",
+        "cores": "claro (sépia)"
+      },
+      "fontes": ["https://itaguai.rj.gov.br/historia/imagens.html"]
+    },
+    {
+      "id": "casa-natal-teffe",
+      "nome": "Local de nascimento do Barão de Teffé",
+      "ano": 1837,
+      "ano_detalhe": "Antônio Luiz von Hoonholtz, Barão de Teffé, nasceu em 9/5/1837 em Itaguaí; o pai projetou o Porto Real de Itaguaí (1841). Data da casa não achada.",
+      "endereco": "não achado",
+      "coord": null,
+      "coord_qualidade": "sem",
+      "estado": "desconhecido",
+      "arquitetura": {
+        "estilo": "casa térrea colonial",
+        "pavimentos": 1,
+        "telhado": "duas águas em telha capa-canal, beiral largo",
+        "fachada": "portas e janelas de verga reta alternadas, com moldura; reboco descascando (foto antiga)",
+        "cores": "claro/caiado"
+      },
+      "fontes": ["https://itaguai.rj.gov.br/historia/imagens.html", "https://itaguai.rj.gov.br/200anos/"]
+    },
+    {
+      "id": "praca-vicente-cicarino",
+      "nome": "Praça Vicente Cicarino (antiga Praça 5 de Julho)",
+      "ano": null,
+      "ano_detalhe": "Prefeitura: foto 'Década de 50 – Local onde mais tarde seria construída a Praça 5 de Julho' e 'Início das construções das praças Barão de Teffé e 5 de Julho'; já pronta em foto 'Década de 50 – Praça 5 de Julho, varanda do Bar Lido'. Logo: anos 1950. Ano exato não achado.",
+      "endereco": "Praça Prefeito Vicente Cicarino (n.º 216: Centro de Informação ao Turista)",
+      "coord": [-43.77868, -22.86989],
+      "coord_qualidade": "boa",
+      "coord_fonte": "OSM local (highway 'Praça Prefeito Vicente Cicarino')",
+      "estado": "existe",
+      "arquitetura": {"elementos": "anos 60: espelho d'água/lago com pontinha em arco, bancos de madeira, postes, árvores grandes; ao redor Bar Lido, Itaguaí Atlético Clube, prédio de 3–4 andares de esquina curva"},
+      "fontes": ["https://itaguai.rj.gov.br/historia/imagens.html", "https://www.benditoguia.com.br/empresa/visite-itaguai-centro-rj"]
+    },
+    {
+      "id": "praca-barao-tefe",
+      "nome": "Praça Barão de Tefé",
+      "ano": null,
+      "ano_detalhe": "construída junto com a Praça 5 de Julho (anos 1950)",
+      "endereco": "Centro",
+      "coord": [-43.777913, -22.870063],
+      "coord_qualidade": "boa",
+      "coord_fonte": "OSM local, way 583761092 (leisure=park)",
+      "estado": "existe",
+      "arquitetura": {"elementos": "não descrito"},
+      "fontes": ["https://itaguai.rj.gov.br/historia/imagens.html"]
+    },
+    {
+      "id": "engenho-facao",
+      "nome": "Engenho do Facão (Engenho de N. Sra. da Conceição de Taguahy)",
+      "ano": 1794,
+      "ano_detalhe": "obra iniciada em 1790; moeu pela 1ª vez em set/1794; vendido em 1804/1806. Foto dos anos 40: competição da colônia japonesa na Rua Curvelo Cavalcanti 'com o Engenho do Facão ao fundo'",
+      "endereco": "Sítio do Facão; nos anos 40 visível da Rua Curvelo Cavalcanti (atrás do atual Itaú)",
+      "coord": null,
+      "coord_qualidade": "sem",
+      "estado": "desconhecido (ruína nos anos 40?)",
+      "arquitetura": {"descricao": "'feito com madeira, pedra e cal', 2 ternos de moendas movidas a água, 'a mais bela e rica peça do Brasil no gênero'; o desenho alemão 'Das Dorf Tagoahy mit der grossen Zuckerfabrik' mostra, à esquerda do morro da igreja, um galpão térreo muito comprido de telhado baixo"},
+      "fontes": ["https://itaguai.rj.gov.br/historia/index.html", "https://itaguai.rj.gov.br/historia/imagens.html"]
+    },
+    {
+      "id": "teatro-municipal",
+      "nome": "Teatro Municipal (antigo Departamento de Cultura)",
+      "ano": 1998,
+      "ano_detalhe": "inaugurado 19/09/1998",
+      "endereco": "não achado",
+      "coord": null,
+      "coord_qualidade": "sem",
+      "estado": "existe (presumido)",
+      "arquitetura": {"descricao": "não achada"},
+      "fontes": ["https://itaguai.rj.gov.br/200anos/"]
+    },
+    {
+      "id": "instituto-casa-do-pai",
+      "nome": "Instituto Casa do Pai (Associação Casa do Pai – P.A.I.)",
+      "ano": 2007,
+      "ano_detalhe": "fundada em 11/06/2007 (cadastro CNPJ 08.913.297/0001-98); ONG de assistência social (educação, arte, esporte, tecnologia, geração de renda), certificação CEBAS",
+      "endereco": "Rua Prefeito José Maria de Brito, 201 (site) ou 251 (cadastro) — Monte Serrat, CEP 23810-720",
+      "coord": [-43.77224, -22.87337],
+      "coord_qualidade": "fraca",
+      "coord_fonte": "OSM local: média da Rua Prefeito José Maria de Brito; número não localizado",
+      "estado": "existe; NÃO é prédio histórico",
+      "arquitetura": {"descricao": "não achada"},
+      "fontes": ["https://www.solutudo.com.br/empresas/rj/itaguai/ongs-e-entidades-sociais/instituto-casa-do-pai-17296560", "https://institutocasadopai.org.br/"]
+    }
+  ],
+  "referencia_1971": {
+    "o_que": "Planta da cidade na Monografia IBGE nº 509 (2ª ed., dados de 1969–71) lista 30 pontos: 1 Prefeitura, 2 Câmara, 3 Grupo Escolar José Maria de Brito, 4 Ginásio Luiz Murat, 5 Instituto Cruz e Souza, 6 Coletoria Estadual, 7 Tabelionato, 8 Fórum, 9 Delegacia, 10 Grupo Escolar Clodomiro Vasconcelos, 11 Tabelionato, 12 Correios e Telégrafos, 13 Posto Médico, 14 Min. do Trabalho, 15 ABCAR, 16 Registro Civil, 17 Banco do Comércio e Indústria de MG, 18 Hospital São Francisco Xavier, 19 Igreja Matriz São Francisco Xavier, 20 Cemitério Municipal, 21 Patronato São José, 22 Tabelionato, 23 Banco do Brasil, 24 Banco Mercantil e Industrial do RJ, 25 Bar Lido, 26 Cine-Teatro Inoue, 27 União de Bancos Brasileiros, 28 Viação Guarani, 29 Agência Municipal de Estatística, 30 Estação da EFCB (RFFSA).",
+    "uso": "lista de prédios cívicos do centro por volta de 1970; a imagem da planta não tem coordenadas e não foi georreferenciada",
+    "fonte": "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+  }
+}

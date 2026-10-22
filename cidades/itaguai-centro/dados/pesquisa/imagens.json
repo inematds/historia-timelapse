@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "metodo": "Página de categoria do Commons (Category:Itaguaí, Category:St._Francis_Xavier_Cathedral,_Itaguaí) e busca do Commons, lidas como HTML. Cada arquivo teve a página File: aberta; autor, data e licença tirados dela. Download por https://commons.wikimedia.org/wiki/Special:FilePath/<arquivo>?width=1600 (curl).",
+    "resultado": "Só 4 imagens livres úteis para o CENTRO. Não existe no Commons foto livre da Igreja Matriz COLONIAL (1729), do chafariz, da antiga Prefeitura, do coreto, da Casa de Quintino nem do cemitério. Também não achei no Commons o desenho alemão 'Das Dorf Tagoahy mit der grossen Zuckerfabrik' (séc. XIX, provável Thomas Ender, 1817–18) que a Prefeitura publica.",
+    "reaproveitar_do_municipio": "Do ../../itaguai/dados/pesquisa/imagens.json servem para o centro: Cartas_topographicas_da_capitania_do_Rio_de_Janeiro_(p._13).png (1767), Admiralty_Chart_No_2044 (1870), Planta_geral_da_Estrada_de_Ferro_Central (1890), Conde_de_Itaguahy.jpg (1872). Não baixados de novo.",
+    "so_referencia_sem_licenca": [
+      {
+        "o_que": "≈70 fotos históricas do centro (décadas de 1930–1990): Igreja Matriz anos 40 e 70, coreto + Patronato + Matriz + cemitério + obelisco (anos 50), antiga Prefeitura (anos 50), Câmara/Prefeitura modernista (anos 60), Casa de Quintino (anos 40), Cemitério (anos 40), Fórum (anos 40), Liceu São Luiz (anos 50), Praça 5 de Julho (anos 50–70), Bar Lido, Cine Inoue, Patronato (anos 70), desenho 'Das Dorf Tagoahy'.",
+        "url": "https://itaguai.rj.gov.br/historia/imagens.html",
+        "licenca": "não declarada (acervo da Prefeitura, com marca d'água) — NÃO usar no vídeo sem autorização; servem para o modelador 3D e para conferir datas"
+      },
+      {
+        "o_que": "Livro 'Coletânea de Nossas Memórias – Itaguaí, Cidade do Porto' (SMEC, 2010, 149 p., PDF escaneado): fotos e descrição da Matriz, coreto, relógio solar, Candeeiro, Casa de Quintino, chafariz, estação.",
+        "url": "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf",
+        "licenca": "não declarada"
+      },
+      {
+        "o_que": "Fotos da estação de Itaguaí em 1955, fim dos anos 50, anos 70 (IBGE), 2004, 2007, 2009, 2021",
+        "url": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/itaguai.htm",
+        "licenca": "não declarada (acervos particulares)"
+      }
+    ]
+  },
+  "imagens": [
+    {
+      "id": "graham-1823",
+      "arquivo_local": "img/maria_graham_itaguai_1823.jpg",
+      "arquivo_commons": "Maria_graham_itaguai.jpg",
+      "url_pagina": "https://commons.wikimedia.org/wiki/File:Maria_graham_itaguai.jpg",
+      "url_original": "https://upload.wikimedia.org/wikipedia/commons/2/22/Maria_graham_itaguai.jpg",
+      "descricao": "'Vila de S. Francisco Xavier de Itaguaí' — desenho de Maria Graham (reprodução impressa, 'Coleção do Museu Britânico').",
+      "o_que_mostra": "Morro com a igreja jesuítica no topo: nave com frontão e UMA torre sineira com remate em cúpula, à direita da fachada; à esquerda, prédio comprido de 2 pisos (o colégio/convento); cruzeiro alto ao lado; mais à direita, outra edificação com agulha/pináculo e casas térreas de telhado de duas/quatro águas descendo a encosta; mata no meio; no 1º plano, rio/caminho com uma ponte ou trapiche de madeira.",
+      "ano": 1823,
+      "autor": "Maria Graham (1785–1842)",
+      "licenca": "Domínio público (PD-old-100), segundo a página do Commons (conferido na pesquisa municipal de 22/10/2026)",
+      "predios": ["matriz-sfx", "colegio-jesuita", "cruzeiro"],
+      "uso_sugerido": "referência principal para a vila de 1818–1830; o único registro livre da Matriz com o colégio jesuíta ainda de pé",
+      "obs": "Já listada na pesquisa municipal; baixada de novo aqui só por conveniência. url_original conferida (HTTP 200)."
+    },
+    {
+      "id": "praca-anos70",
+      "arquivo_local": "img/praca_central_anos70.jpg",
+      "arquivo_commons": "Itaguai_anos_50.jpg",
+      "url_pagina": "https://commons.wikimedia.org/wiki/File:Itaguai_anos_50.jpg",
+      "url_original": "https://upload.wikimedia.org/wikipedia/commons/6/64/Itaguai_anos_50.jpg",
+      "descricao": "'Praça central de Itaguaí, década de 70' (descrição do arquivo; o nome diz 'anos 50').",
+      "o_que_mostra": "Cruzamento calçado com Fuscas, Kombis, picape Ford e um Opala/Galaxie (carros dos anos 60–70); praça arborizada à esquerda com pontos de ônibus; à direita prédio moderno de 3–4 pavimentos com esquina arredondada, faixas horizontais e janelas basculantes, lojas no térreo com marquise; ao fundo, morro com casas de telhado cerâmico e, no alto à esquerda do centro, um volume branco com pequena cúpula (provavelmente a torre da Matriz) e um prédio de 2 pisos mais claro à frente do morro.",
+      "ano": "década de 1970 (incerto)",
+      "autor": "Silvestre Cirilo dos Santos Neto (citado na descrição); enviado por 'Sidis' em 2006",
+      "licenca": "Domínio público declarado pelo enviador (PD-self) — confiança baixa: o enviador parece não ser o fotógrafo",
+      "predios": ["praca-vicente-cicarino", "matriz-sfx"],
+      "uso_sugerido": "Praça 5 de Julho (hoje Vicente Cicarino) nos anos 70; usar com crédito e, se possível, confirmar com o Nei",
+      "obs": "Mesmo arquivo da pesquisa municipal (e13). url_original conferida (HTTP 200)."
+    },
+    {
+      "id": "estacao-castelo-2021",
+      "arquivo_local": "img/biblioteca_castelo_2021.jpg",
+      "arquivo_commons": "Biblioteca_Municipal_Machado_de_Assis_(Itaguaí).jpg",
+      "url_pagina": "https://commons.wikimedia.org/wiki/File:Biblioteca_Municipal_Machado_de_Assis_(Itagua%C3%AD).jpg",
+      "url_original": "https://upload.wikimedia.org/wikipedia/commons/2/22/Biblioteca_Municipal_Machado_de_Assis_%28Itagua%C3%AD%29.jpg",
+      "descricao": "'Castelo da Biblioteca Municipal Machado de Assis' — é o prédio da antiga ESTAÇÃO ferroviária (1910), hoje Casa de Cultura, onde funciona a Biblioteca.",
+      "o_que_mostra": "Torre de 2 pavimentos em estilo castelo (neogótico/eclético), cor ocre-amarela com frisos e cunhais em tom mais claro; topo com ameias (merlões) e cornija com fileira de pequenos furos redondos; no andar de cima, 3 janelas em arco ogival na face lateral e 1 na face frontal; inscrição sob a cornija '...DE ITAGUAÍ'; óculo redondo no térreo; à direita, ala de 1 pavimento também com ameias. Em frente, palmeiras e avenida.",
+      "ano": 2021,
+      "autor": "Almanaque Lusofonista (usuário do Commons)",
+      "licenca": "Domínio público (PD-self)",
+      "dimensoes": "780 × 1040 px (pequena)",
+      "predios": ["estacao-casa-de-cultura"],
+      "uso_sugerido": "modelagem da estação-castelo; cartão 1910 / 2006"
+    },
+    {
+      "id": "catedral-nova-2017",
+      "arquivo_local": "img/catedral_sfx_2017.jpg",
+      "arquivo_commons": "St._Francis_Xavier_Cathedral,_Itaguaí_(Brazil).jpg",
+      "url_pagina": "https://commons.wikimedia.org/wiki/File:St._Francis_Xavier_Cathedral,_Itagua%C3%AD_(Brazil).jpg",
+      "url_original": "https://upload.wikimedia.org/wikipedia/commons/f/fe/St._Francis_Xavier_Cathedral%2C_Itagua%C3%AD_%28Brazil%29.jpg",
+      "descricao": "Catedral de São Francisco Xavier (a NOVA, na Rua Coronel Freitas, 45) — prédio moderno. NÃO é a igreja jesuítica de 1729.",
+      "o_que_mostra": "Volume de planta curva (fachada em dois quartos de cilindro brancos) com faixa central amarela; no eixo, arco alto aberto (campanário-arco) com um sino e cruz branca no topo; óculo redondo grande com vitral (mar azul e montanhas); porta em arco com grade de ferro, escada de 5 degraus; janelas estreitas verticais com moldura amarela (2 por lado em cada nível); duas figuras de anjo em arame sobre a cobertura; piso de praça em pedra intertravada.",
+      "ano": 2017,
+      "autor": "Hierarchicus",
+      "licenca": "CC BY-SA 4.0 (exige crédito e compartilhamento igual)",
+      "dimensoes": "original 4896 × 3672 px; baixada com 1920 px",
+      "coordenada_categoria_commons": [-43.778561, -22.869189],
+      "predios": ["catedral-nova"],
+      "uso_sugerido": "final/presente; NÃO usar para a igreja colonial"
+    }
+  ]
+}

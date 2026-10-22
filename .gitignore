@@ -31,3 +31,6 @@ cidades/*/*/q_*.jpg
 cidades/*/capa/codex.log
 motor/assets/terra/bm_*.jpg
 cidades/*/assets/regiao.jpg
+centro/motor/node_modules
+cidades/*/assets/textura_lisa.jpg
+cidades/*/final/rev/

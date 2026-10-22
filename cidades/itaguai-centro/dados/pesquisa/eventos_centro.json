@@ -1,0 +1,264 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "nota": "Marcos do CENTRO de Itaguaí. Limites: titulo ≤ 30, legenda ≤ 95, detalhe ≤ 220 (validados por script). 'predio' = id em predios_historicos.json. Coordenadas: as do prédio; null quando não localizado. Eventos municipais gerais já estão em ../../itaguai/dados/pesquisa/eventos.json — aqui só o que acontece no núcleo urbano.",
+    "abrev_fontes": {
+      "PM": "https://itaguai.rj.gov.br/historia/index.html",
+      "PMimg": "https://itaguai.rj.gov.br/historia/imagens.html",
+      "PM200": "https://itaguai.rj.gov.br/200anos/",
+      "COL": "https://itaguai.rj.gov.br/historia/livro/coletaneadenossasmemorias-itaguaiacidadedoporto-smec2010-1-edicao.pdf",
+      "INEPAC": "https://www.ipatrimonio.org/itaguai-conjunto-da-igreja-matriz-de-sao-francisco-xavier/",
+      "IBGE509": "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf",
+      "DTB": "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf",
+      "EFB": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/itaguai.htm",
+      "CAM": "https://www.itaguai.rj.leg.br/institucional/historia",
+      "JA2019": "https://jornalatual.com.br/casaroes-de-itaguai-tem-fachadas-revitalizadas/",
+      "JA2023": "https://jornalatual.com.br/defesa-civil-de-itaguai-interdita-patrimonio-historico/",
+      "GRAHAM": "https://commons.wikimedia.org/wiki/File:Maria_graham_itaguai.jpg",
+      "PTDIO": "https://pt.wikipedia.org/wiki/Diocese_de_Itagua%C3%AD",
+      "IPEA": "https://mapaosc.ipea.gov.br/detalhar/559288"
+    }
+  },
+  "eventos": [
+    {
+      "id": "capela-1688", "ano": 1688,
+      "titulo": "A PRIMEIRA CAPELA",
+      "legenda": "Jesuítas erguem a primeira igreja do aldeamento de Itaguaí, ainda longe do centro atual",
+      "detalhe": "O lugar diverge: a Prefeitura diz região de Coroa Grande; outro texto, ao norte do rio Itaguaí. A pesquisa municipal tem ainda a aldeia de Itinga (1627). O centro atual só nasce em 1718.",
+      "fontes": ["PM", "https://redescobrindoosvales.tur.br/rj/microrregiao-itaguai/itaguai/historia.php"],
+      "coord": null, "predio": null, "confianca": "baixa"
+    },
+    {
+      "id": "obra-1718", "ano": 1718,
+      "titulo": "OBRA NO ALTO DO MORRO",
+      "legenda": "Os jesuítas trazem a aldeia para terras da Fazenda de Santa Cruz e começam igreja e colégio",
+      "detalhe": "Escolhem um morro, como era costume da Ordem, para ver o território. Igreja e colégio formam uma quadra em volta de um claustro (INEPAC). É o começo do centro de Itaguaí.",
+      "fontes": ["PM", "INEPAC"],
+      "coord": [-43.7792, -22.8676], "predio": "matriz-sfx", "confianca": "alta"
+    },
+    {
+      "id": "matriz-1729", "ano": 1729,
+      "titulo": "MATRIZ PRONTA",
+      "legenda": "Concluída em 3 de dezembro a igreja de São Francisco Xavier, de pedra e cal, com uma torre",
+      "detalhe": "Frontão triangular com óculo, porta de madeira almofadada e torre sineira com cúpula. É o 1º prédio da futura vila e ainda existe. Uma monografia do IBGE diz 1759, provável erro de 1729.",
+      "fontes": ["COL", "PM", "INEPAC", "IBGE509"],
+      "coord": [-43.7792, -22.8676], "predio": "matriz-sfx", "confianca": "alta"
+    },
+    {
+      "id": "expulsao-1759", "ano": 1759,
+      "titulo": "JESUÍTAS EXPULSOS",
+      "legenda": "Pombal expulsa a Companhia de Jesus; a aldeia perde a escola, mas o povoado continua",
+      "detalhe": "O colégio do morro fica sem os padres. A Prefeitura escreve 1759 na linha do tempo e um guia regional escreve 1755; a data nacional da expulsão é 1759.",
+      "fontes": ["PM", "https://redescobrindoosvales.tur.br/rj/microrregiao-itaguai/itaguai/historia.php"],
+      "coord": [-43.7794, -22.8674], "predio": "colegio-jesuita", "confianca": "alta"
+    },
+    {
+      "id": "freguesia-1795", "ano": 1795,
+      "titulo": "VIRA FREGUESIA",
+      "legenda": "Em 22 de dezembro, a aldeia passa a paróquia de São Francisco Xavier de Itaguaí",
+      "detalhe": "A antiga igreja jesuítica vira matriz da freguesia, por alvará que valia para todas as aldeias do Brasil.",
+      "fontes": ["PM", "DTB"],
+      "coord": [-43.7792, -22.8676], "predio": "matriz-sfx", "confianca": "alta"
+    },
+    {
+      "id": "vila-1818", "ano": 1818,
+      "titulo": "VILA DE ITAGUAÍ",
+      "legenda": "Alvará de 5 de julho cria a Vila de São Francisco Xavier de Itaguaí em volta da Matriz",
+      "detalhe": "Suprimida em novembro de 1818, restaurada em 1819 e instalada em 11/02/1820. A data de 5 de julho deu nome à Praça 5 de Julho, hoje Vicente Cicarino.",
+      "fontes": ["PM", "DTB"],
+      "coord": [-43.7792, -22.8676], "predio": "matriz-sfx", "confianca": "alta"
+    },
+    {
+      "id": "aclamacao-1822", "ano": 1822,
+      "titulo": "D. PEDRO NO ADRO",
+      "legenda": "D. Pedro para em Itaguaí na viagem a São Paulo, no largo em frente à Matriz",
+      "detalhe": "O largo era chamado Praça da Aclamação; hoje é a Praça Dom Luís Guanella. A Prefeitura diz que ele foi aclamado ali na volta; a Câmara fala só do pernoite. Fato contado sem documento primário.",
+      "fontes": ["PM", "CAM"],
+      "coord": [-43.77903, -22.86762], "predio": "praca-dom-luis-guanella", "confianca": "media"
+    },
+    {
+      "id": "graham-1823", "ano": 1823,
+      "titulo": "O DESENHO DE MARIA GRAHAM",
+      "legenda": "A viajante inglesa desenha a vila: igreja e colégio no alto, casas descendo o morro",
+      "detalhe": "É a vista mais antiga e livre do centro: igreja com torre e cúpula, colégio de 2 pisos ao lado, cruzeiro alto e casas térreas na encosta (Commons, domínio público).",
+      "fontes": ["GRAHAM"],
+      "coord": [-43.7792, -22.8676], "predio": "colegio-jesuita", "confianca": "alta"
+    },
+    {
+      "id": "escola-1830", "ano": 1830,
+      "titulo": "PRIMEIRA ESCOLA PÚBLICA",
+      "legenda": "Em 14 de junho, a vila ganha sua primeira escola pública",
+      "detalhe": "O inspetor de ensino era o próprio vigário, Pe. Antônio Dias Rello. Sem prédio próprio, as aulas eram nas casas dos professores. Em 1888 havia 243 alunos.",
+      "fontes": ["COL", "PM"],
+      "coord": null, "predio": null, "confianca": "alta"
+    },
+    {
+      "id": "porto-1841", "ano": 1841,
+      "titulo": "PORTO REAL E 132 CASAS",
+      "legenda": "Em 22 de março abre o Porto Real; com o café, a vila salta de 36 para 132 casas",
+      "detalhe": "Projeto de Frederico von Hoonholtz, pai do Barão de Teffé, e Antônio Danemberg. O café descia em lombo de burro até o Trapiche do Barroso, no rio Itaguaí. Em 1840 o município tinha mais de 17 mil pessoas.",
+      "fontes": ["PM"],
+      "coord": null, "predio": null, "confianca": "media"
+    },
+    {
+      "id": "chafariz-1847", "ano": 1847,
+      "titulo": "O CHAFARIZ",
+      "legenda": "A Câmara inaugura o chafariz da Estrada Real, que dá água à vila e aos tropeiros",
+      "detalhe": "Parece uma casinha: corpo retangular, arco pleno fechado em pedra com as bicas, tanque de pedra embaixo e porta de ferro do lado. Dentro, um poço hoje desativado.",
+      "fontes": ["COL", "PM"],
+      "coord": [-43.7778, -22.8640], "predio": "chafariz", "confianca": "alta"
+    },
+    {
+      "id": "caridade-1858", "ano": 1858,
+      "titulo": "CASA DE CARIDADE",
+      "legenda": "Em 31 de outubro nasce a Casa de Caridade, hoje Hospital Municipal São Francisco Xavier",
+      "detalhe": "Mantida por uma associação do Império, funcionou o século XX inteiro. Em 1968 fez o 1º reimplante de mão do Brasil, e a Rainha Elizabeth II doou uma sala de cirurgia.",
+      "fontes": ["PM"],
+      "coord": null, "predio": "casa-de-caridade", "confianca": "alta"
+    },
+    {
+      "id": "quintino-casa-1873", "ano": 1873,
+      "titulo": "O SOBRADO DE QUINTINO",
+      "legenda": "Sobrado de 2 andares que a tradição liga a Quintino Bocaiúva e à Guarda do Imperador",
+      "detalhe": "O jornal diz 'construída em 1873', mas a Prefeitura chama de casa onde ele nasceu (1836) e o livro municipal, de casa onde 'supostamente' morou. Tombada pela Câmara; interditada em 2023.",
+      "fontes": ["JA2023", "PMimg", "COL"],
+      "coord": null, "predio": "casa-quintino", "confianca": "baixa"
+    },
+    {
+      "id": "biblioteca-1880", "ano": 1880,
+      "titulo": "A CASA DE LEITURA",
+      "legenda": "Em 2 de dezembro abre a Biblioteca Municipal no Paço da Câmara, em frente ao Rocio",
+      "detalhe": "Dia dos 50 anos de D. Pedro II, que doou livros. Começou com cerca de 2 mil títulos, mapas e um grande globo. O Rocio é a atual Rua Amélia Louzada; hoje a biblioteca está na Casa de Cultura.",
+      "fontes": ["COL", "PM"],
+      "coord": [-43.77815, -22.8663], "predio": "paco-camara-rocio", "confianca": "alta"
+    },
+    {
+      "id": "cidade-1892", "ano": 1892,
+      "titulo": "VIRA CIDADE",
+      "legenda": "Já na República, a vila passa à categoria de cidade, com o nome de Itaguaí",
+      "detalhe": "Decreto estadual 1-A, de 3 de junho de 1892. Em 1898 a Câmara relatava 8.800 moradores nos dois primeiros distritos, febres e estradas ruins até Santa Cruz.",
+      "fontes": ["DTB", "COL"],
+      "coord": [-43.77815, -22.8663], "predio": "paco-camara-rocio", "confianca": "alta"
+    },
+    {
+      "id": "estacao-1910", "ano": 1910,
+      "titulo": "A ESTAÇÃO-CASTELO",
+      "legenda": "Em 14 de novembro abre a estação do Ramal de Mangaratiba, um prédio com ameias de castelo",
+      "detalhe": "Torre de 2 andares com janelas góticas e alas térreas, tudo coroado de ameias. Ligava Itaguaí ao Rio pelo trem 'Macaquinho'. O ramal chegou a Mangaratiba em 1914.",
+      "fontes": ["EFB", "PM", "COL"],
+      "coord": [-43.777518, -22.874347], "predio": "estacao-casa-de-cultura", "confianca": "alta"
+    },
+    {
+      "id": "coreto-1943", "ano": 1943,
+      "titulo": "O CORETO",
+      "legenda": "Inaugurado o coreto octogonal no adro da Igreja Matriz",
+      "detalhe": "Palco de discursos políticos, de padres e das bandinhas de carnaval. Ao lado, mais tarde, um obelisco ao 1º itaguaiense que foi à 2ª Guerra.",
+      "fontes": ["PM", "COL", "PMimg"],
+      "coord": [-43.7789, -22.8677], "predio": "coreto", "confianca": "alta"
+    },
+    {
+      "id": "forum-anos40", "ano": 1945,
+      "titulo": "O FÓRUM",
+      "legenda": "Anos 1940: inaugurado o Fórum, prédio térreo de platibanda e cinco vãos",
+      "detalhe": "A data exata não aparece: a Prefeitura só diz 'década de 40'. O ano 1945 aqui é marcador do meio da década, não data real.",
+      "fontes": ["PMimg"],
+      "coord": null, "predio": "forum", "confianca": "baixa"
+    },
+    {
+      "id": "rocio-1949", "ano": 1949,
+      "titulo": "O ROCIO MUDA DE NOME",
+      "legenda": "Em 20 de dezembro, a velha Rua do Rocio passa a se chamar Rua Amélia Louzada",
+      "detalhe": "Rocio era o campo público da vila para carroças, feiras e leilões. Fica na bifurcação com a Rua Coronel Freitas, perto da Matriz.",
+      "fontes": ["COL"],
+      "coord": [-43.77815, -22.8663], "predio": "paco-camara-rocio", "confianca": "alta"
+    },
+    {
+      "id": "patronato-1953", "ano": 1953,
+      "titulo": "PATRONATO SÃO JOSÉ",
+      "legenda": "Em 5 de julho, padres guanellianos abrem o Patronato dentro do velho convento jesuíta",
+      "detalhe": "Primeira obra guanelliana fora do Rio Grande do Sul. O povo ajudou a reformar o convento, que ganhou salas, quartos, cozinha e pátio. A praça da Matriz leva o nome de Dom Luís Guanella.",
+      "fontes": ["COL", "PM"],
+      "coord": [-43.7795, -22.8672], "predio": "patronato-sao-jose", "confianca": "alta"
+    },
+    {
+      "id": "pracas-anos50", "ano": 1955,
+      "titulo": "AS PRAÇAS NOVAS",
+      "legenda": "Anos 1950: o centro ganha as praças Barão de Teffé e 5 de Julho (hoje Vicente Cicarino)",
+      "detalhe": "Fotos da Prefeitura mostram o terreno vazio e depois a praça pronta, com o Bar Lido. Ano exato não achado: 1955 é marcador da década.",
+      "fontes": ["PMimg"],
+      "coord": [-43.77868, -22.86989], "predio": "praca-vicente-cicarino", "confianca": "baixa"
+    },
+    {
+      "id": "colegio-demolido-1961", "ano": 1961,
+      "titulo": "O COLÉGIO VEM ABAIXO",
+      "legenda": "O colégio jesuíta de 1729, ao lado da Matriz, é demolido; começa o novo Patronato",
+      "detalhe": "Fim da quadra jesuítica com claustro. Sobra só a igreja. O novo Patronato, modernista, de 3 andares, fica pronto em 5 de julho de 1968.",
+      "fontes": ["INEPAC", "COL"],
+      "coord": [-43.7794, -22.8674], "predio": "colegio-jesuita", "confianca": "alta"
+    },
+    {
+      "id": "relogio-1967", "ano": 1967,
+      "titulo": "O RELÓGIO DE SOL",
+      "legenda": "Um andarilho paraguaio, Gutierrez, faz o relógio de sol em frente ao cemitério",
+      "detalhe": "Mostrador redondo num canteiro de flores, com uma espátula no meio: a hora é lida pela sombra. Fica ao lado da Matriz, em frente ao Cemitério São Francisco Xavier.",
+      "fontes": ["PM", "COL"],
+      "coord": [-43.7796, -22.8676], "predio": "relogio-solar", "confianca": "alta"
+    },
+    {
+      "id": "se-1980", "ano": 1980,
+      "titulo": "A MATRIZ VIRA SÉ",
+      "legenda": "Criada a Diocese de Itaguaí; o 1º bispo toma posse na catedral de São Francisco Xavier",
+      "detalhe": "Diocese criada em 14/03/1980 e instalada em 22/06/1980. Por isso a igreja de 1729 é chamada 'Antiga Sé': depois a catedral passou a um prédio moderno na Rua Coronel Freitas (data não achada).",
+      "fontes": ["PTDIO", "IPEA", "https://gcatholic.org/churches/brazil/2806.htm"],
+      "coord": [-43.7792, -22.8676], "predio": "matriz-sfx", "confianca": "media"
+    },
+    {
+      "id": "trem-fim-1980", "ano": 1980,
+      "titulo": "O ÚLTIMO TREM",
+      "legenda": "Param os trens de passageiros além de Santa Cruz; a estação de Itaguaí fica abandonada",
+      "detalhe": "A Prefeitura e o livro municipal dizem 1980; o site Estações Ferroviárias diz 'por volta de 1982' e 'meados dos anos 80'. Fotos de 2004 mostram a estação abandonada.",
+      "fontes": ["PM", "COL", "EFB"],
+      "coord": [-43.777518, -22.874347], "predio": "estacao-casa-de-cultura", "confianca": "media"
+    },
+    {
+      "id": "teatro-1998", "ano": 1998,
+      "titulo": "TEATRO MUNICIPAL",
+      "legenda": "Em 19 de setembro, o velho Departamento de Cultura vira Teatro Municipal",
+      "detalhe": "Recebeu artistas como Fabiana Karla, Flávio Migliaccio e Rogéria. O endereço do prédio não foi achado nas fontes.",
+      "fontes": ["PM200"],
+      "coord": null, "predio": "teatro-municipal", "confianca": "alta"
+    },
+    {
+      "id": "casa-cultura-2006", "ano": 2006,
+      "titulo": "CASA DE CULTURA",
+      "legenda": "Em 13 de fevereiro, a estação-castelo reformada reabre como Casa de Cultura",
+      "detalhe": "Reformada em 2005, ganha salas de curso, exposições e a Biblioteca Municipal, nascida em 1880. A foto livre do Commons chama o prédio de 'Castelo da Biblioteca'.",
+      "fontes": ["PM", "COL"],
+      "coord": [-43.777518, -22.874347], "predio": "estacao-casa-de-cultura", "confianca": "alta"
+    },
+    {
+      "id": "tombamento-2006", "ano": 2006,
+      "titulo": "MATRIZ TOMBADA",
+      "legenda": "Em 25 de maio, o INEPAC tomba a Matriz, as imagens antigas e os pórticos do cemitério",
+      "detalhe": "Tombamento provisório estadual (processo E-18/001.478/2005): igreja, imagens de madeira de São Francisco Xavier e N. Sra. do Pilar e os pórticos 1 e 2 do cemitério.",
+      "fontes": ["INEPAC"],
+      "coord": [-43.7792, -22.8676], "predio": "matriz-sfx", "confianca": "alta"
+    },
+    {
+      "id": "fachadas-2019", "ano": 2019,
+      "titulo": "FACHADAS PINTADAS",
+      "legenda": "Iniciativa particular pinta 7 fachadas antigas da Rua General Bocaiúva, com o chafariz",
+      "detalhe": "Do vereador Nisan César com empresários, não da Prefeitura. Pintaram o Chafariz, o Candeeiro e a Padaria Panaro. Na época, a Matriz tinha arquiteto de restauro, Luciano Cavalcanti.",
+      "fontes": ["JA2019"],
+      "coord": [-43.7778, -22.8640], "predio": "chafariz", "confianca": "alta"
+    },
+    {
+      "id": "quintino-interdita-2023", "ano": 2023,
+      "titulo": "CASA DE QUINTINO CAI",
+      "legenda": "Defesa Civil interdita a Casa de Quintino Bocaiúva: teto e 2º andar desabaram em parte",
+      "detalhe": "O dono disse não poder pagar a obra. A Prefeitura abriu processo e estudo técnico para salvar a fachada. Não achei notícia de obra feita depois.",
+      "fontes": ["JA2023"],
+      "coord": null, "predio": "casa-quintino", "confianca": "alta"
+    }
+  ]
+}

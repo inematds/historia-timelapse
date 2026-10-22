@@ -1,0 +1,116 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "metodo": "Busca na web + leitura das páginas HTML citadas. Nenhuma API. 'oficial' = anunciado por órgão público, autoridade portuária ou empresa responsável, com valor/prazo publicado. 'imaginacao' = sugestão para o final 'como poderia ser', SEM plano oficial por trás.",
+    "aviso_principal": "NÃO achei plano oficial para o CENTRO de Itaguaí: nem o texto do Plano Diretor vigente, nem projeto de revitalização do centro histórico, nem obra prevista na Praça Vicente Cicarino / Rua General Bocaiúva. O que há de oficial é quase todo PORTO e LOGÍSTICA (fora do centro, na Ilha da Madeira / Baía de Sepetiba) e o restauro da Igreja Matriz. A parte 'centro do futuro' do vídeo tem de ser apresentada como imaginação.",
+    "nao_achado": [
+      "Plano Diretor de Itaguaí (lei, mapa de zoneamento ou revisão em curso) — buscas não retornaram página do município ou da Câmara com o texto",
+      "Projeto oficial de revitalização do centro histórico",
+      "Reativação do trem de passageiros até Itaguaí (a linha Santa Cruz–Brisamar está abandonada desde os anos 1980, segundo estacoesferroviarias.com.br)",
+      "Data de conclusão do restauro da Igreja Matriz"
+    ]
+  },
+  "oficial": [
+    {
+      "id": "itg02",
+      "tema": "porto",
+      "titulo": "Terminal ITG02 (minério) no Porto de Itaguaí",
+      "o_que": "Primeiro 'megaleilão' portuário do ciclo recente: terminal de 348,9 mil m², arrendado pela Cedro Participações, capacidade de 20 milhões de t/ano de minério de ferro.",
+      "numeros": "R$ 3,5 bilhões em 35 anos; 2.800 empregos indiretos na implantação + 2.000 diretos e indiretos na operação",
+      "quando": "contrato de 35 anos; matéria de 02/03/2026",
+      "onde": "Porto de Itaguaí (Ilha da Madeira / Baía de Sepetiba) — fora do centro histórico",
+      "status": "leiloado/arrendado (segundo a matéria)",
+      "fonte": "https://jornaldebrasilia.com.br/noticias/economia/megaleiloes-impulsionam-expansao-de-portos-brasileiros-com-r-12-bi-em-investimentos/"
+    },
+    {
+      "id": "tecar-csn",
+      "tema": "porto",
+      "titulo": "Expansão e modernização do píer do Tecar (CSN Mineração)",
+      "o_que": "Ampliação do terminal de granéis Tecar, ligado à ferrovia MRS, para exportar mais minério.",
+      "numeros": "≈ R$ 400 milhões; ~600 empregos na obra; obra de ~8 anos (Andrade Gutierrez)",
+      "quando": "início previsto para agosto de 2026 (matéria de 25/02/2026); não confirmei se começou",
+      "onde": "Porto de Itaguaí",
+      "status": "anunciado em reunião com o prefeito em exercício Haroldo Jesus",
+      "fonte": "https://datamarnews.com/noticias/csn-mineracao-to-invest-r400-million-in-port-of-itaguai-terminal-construction-to-begin-in-august/"
+    },
+    {
+      "id": "hub-gas-2021",
+      "tema": "porto",
+      "titulo": "Porto de Itaguaí como hub de gás do pré-sal (Plano de Negócios CDRJ 2021)",
+      "o_que": "Terminal de Granéis Líquidos (TGL, 1,1 milhão de m²) com regaseificação de GNL ligado à Rota 4 do pré-sal; TGS II (224 mil m²) para granéis agrícolas; área de expansão de mais de 7 milhões de m² para indústrias ('porto-indústria').",
+      "numeros": "TGL previsto para operar em 2024; >70% da área operacional de Itaguaí ociosa em 2021",
+      "quando": "plano de 2021 — DESATUALIZADO, não achei confirmação de que avançou",
+      "onde": "Porto de Itaguaí",
+      "status": "intenção antiga; usar só com a ressalva",
+      "fonte": "https://www.agenciainfra.com/blog/porto-de-itaguai-prepara-plano-para-ser-base-para-gas-do-pre-sal/"
+    },
+    {
+      "id": "mobilidade-santa-cruz-2026",
+      "tema": "mobilidade",
+      "titulo": "Plano de mobilidade de Santa Cruz (Prefeitura do Rio) com ligação para Itaguaí/Costa Verde",
+      "o_que": "Mais de 70 km de intervenções viárias, 115 ônibus novos, novo terminal BRT (~R$ 73,7 mi) e nova rota em direção a Itaguaí e à Costa Verde.",
+      "numeros": "R$ 443 milhões (estimativa inicial)",
+      "quando": "anunciado em 23/08/2026",
+      "onde": "Santa Cruz (município do Rio), vizinho de Itaguaí — não é obra dentro de Itaguaí",
+      "status": "anunciado. ATENÇÃO: a página não abriu no meu fetch (só 220 bytes); dados lidos SÓ no resultado de busca",
+      "fonte": "https://diariodotransporte.com.br/2026/08/23/rio-anuncia-plano-de-mobilidade-para-santa-cruz-com-70-km-de-intervencoes-115-novos-onibus-e-r-443-milhoes-em-investimentos/"
+    },
+    {
+      "id": "restauro-matriz",
+      "tema": "patrimonio_centro",
+      "titulo": "Restauração da Igreja de São Francisco Xavier — 'Antiga Sé de Itaguaí'",
+      "o_que": "Projeto da Mitra Diocesana de Itaguaí para restaurar a igreja jesuítica do séc. XVIII (tombada provisoriamente pelo INEPAC em 2006). Em 2019 o arquiteto responsável pelo restauro era Luciano Cavalcanti.",
+      "numeros": "não publicados",
+      "quando": "projeto cadastrado no Mapa das OSC (IPEA), sem data; arquiteto citado em 10/12/2019",
+      "onde": "Praça D. Luís Guanella, 136 — centro histórico",
+      "status": "em andamento/sem data de conclusão achada",
+      "fonte": [
+        "https://mapaosc.ipea.gov.br/detalhar/559288",
+        "https://jornalatual.com.br/casaroes-de-itaguai-tem-fachadas-revitalizadas/",
+        "https://www.ipatrimonio.org/itaguai-conjunto-da-igreja-matriz-de-sao-francisco-xavier/"
+      ]
+    },
+    {
+      "id": "casa-quintino-intervencao",
+      "tema": "patrimonio_centro",
+      "titulo": "Estudo da Prefeitura para conservar a fachada da Casa de Quintino Bocaiúva",
+      "o_que": "Após interdição pela Defesa Civil (colapso parcial do teto e do 2º pavimento), a Prefeitura abriu processo, notificou o dono e a Secretaria de Obras fez estudo técnico para conservar a fachada.",
+      "numeros": "—",
+      "quando": "31/05/2023",
+      "onde": "Rua Quintino Bocaiúva (centro)",
+      "status": "estudo; não achei notícia de obra feita",
+      "fonte": "https://jornalatual.com.br/defesa-civil-de-itaguai-interdita-patrimonio-historico/"
+    }
+  ],
+  "iniciativa_privada_ja_feita": [
+    {
+      "id": "fachadas-2019",
+      "titulo": "Pintura das fachadas dos casarões da Rua General Bocaiúva",
+      "o_que": "Iniciativa particular do vereador Nisan César com empresários (não é da Prefeitura): 7 fachadas pintadas, entre elas o Chafariz Municipal, o Restaurante Candieiro e a Padaria Panaro; ideia declarada: 'corredor cultural'. Próximo passo anunciado: pintar o coreto da Praça Dom Luiz Guanella.",
+      "quando": "nov–dez/2019",
+      "fonte": "https://jornalatual.com.br/casaroes-de-itaguai-tem-fachadas-revitalizadas/"
+    }
+  ],
+  "imaginacao": [
+    {
+      "id": "img-corredor-cultural",
+      "ideia": "Rua General Bocaiúva como 'corredor cultural' de casarões restaurados, do Chafariz (1847) à Casa de Quintino",
+      "base": "A palavra 'corredor cultural' é do vereador (2019), mas NÃO é plano oficial."
+    },
+    {
+      "id": "img-matriz-restaurada",
+      "ideia": "Morro da Matriz com a igreja restaurada, coreto, cruzeiro, pórticos do cemitério iluminados — um mirante sobre a baixada",
+      "base": "Restauro existe como projeto (oficial acima); o 'mirante iluminado' é imaginação."
+    },
+    {
+      "id": "img-trem-volta",
+      "ideia": "A estação-castelo (Casa de Cultura) recebendo de novo trem de passageiros",
+      "base": "Nenhum plano encontrado — pura imaginação."
+    },
+    {
+      "id": "img-porto-industria",
+      "ideia": "No horizonte, guindastes e navios do porto ampliado (ITG02, Tecar) vistos do alto do morro da Matriz",
+      "base": "As obras do porto são oficiais; a vista combinando centro e porto é composição."
+    }
+  ]
+}

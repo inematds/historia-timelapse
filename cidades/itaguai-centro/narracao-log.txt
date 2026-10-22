@@ -1,0 +1,93 @@
+voz 1/31 (tentativa 1): Na Baixada de Sepetiba, um morro pequeno guarda o coração de
+  ouvido (100%): Na Baixada de Sepetiba, um morro pequeno guarda o coração de uma cidade inteira.
+voz 2/31 (tentativa 1): Tudo começa com padres jesuítas e uma aldeia indígena, ainda
+  ouvido (100%): Tudo começa com padres jesuítas e uma aldeia indígena. Ainda longe daqui...
+voz 3/31 (tentativa 1): Os jesuítas escolhem o alto do morro: dali se via o rio, a b
+  ouvido (100%): Os jesuítas escolhem o alto do morro. Dali se via o rio, a baía e a estrada.
+voz 4/31 (tentativa 1): Pedra e cal, uma torre só. Quase trezentos anos depois, a ig
+  ouvido (100%): Pedra e cal, uma torre só. Quase 300 anos depois, a igreja continua de pé.
+voz 5/31 (tentativa 1): Portugal expulsa os jesuítas. A escola fecha, mas o povo fic
+  ouvido (100%): Portugal expulsa os jesuítas. A escola fecha, mas o povo fica em volta da igreja.
+voz 6/31 (tentativa 1): Virar paróquia era ganhar padre fixo, batismo e registro: o 
+  ouvido (100%): Virar paróquia era ganhar padre fixo, batismo e registro. O povoado passa a existir no papel.
+voz 7/31 (tentativa 1): Em mil oitocentos e dezoito, a aldeia vira vila, desenhada e
+  ouvido (100%): Em 1818, a aldeia vira vila, desenhada em volta da matriz.
+voz 8/31 (tentativa 1): A caminho de São Paulo, dom Pedro para bem aqui, no largo da
+  ouvido (100%): A caminho de São Paulo, Dom Pedro para bem aqui, no Largo da Igreja.
+voz 9/31 (tentativa 1): Uma viajante inglesa desenha o que viu: a igreja no alto e a
+  ouvido (100%): Uma viajante inglesa desenha o que viu, a igreja no alto e as casas descendo o morro.
+voz 10/31 (tentativa 1): Com o café descendo para o porto, a vila quase quadruplica d
+  ouvido (100%): Com o café descendo para o porto, a vila quase quadrúplica de tamanho.
+voz 11/31 (tentativa 1): Água era o problema. O chafariz servia a vila e os tropeiros
+  ouvido (100%): Água era o problema. O chafariz servia a vila e os tropeiros da estrada real.
+voz 12/31 (tentativa 1): A Casa de Caridade cuidava dos pobres e virou o hospital da 
+  ouvido (100%): A Casa de Caridade cuidava dos pobres e virou o hospital da cidade.
+voz 13/31 (tentativa 1): Um sobrado de onze janelas que a tradição liga a Quintino Bo
+  ouvido (100%): Um sobrado de 11 janelas que a tradição liga a Quintino Bocaiuva.
+voz 14/31 (tentativa 1): Em mil oitocentos e oitenta, a vila ganha uma sala de leitur
+  ouvido (100%): Em 1880, a vila ganha uma sala de leitura no prédio da Câmara.
+voz 15/31 (tentativa 1): Já na República, Itaguaí deixa de ser vila e passa a ser cid
+  ouvido (100%): Já na República, Itaguaí deixa de ser vila e passa a ser cidade.
+voz 16/31 (tentativa 1): O trem chega em mil novecentos e dez, numa estação que parec
+  ouvido (100%): O trem chega em 1910, numa estação que parece um castelo.
+voz 17/31 (tentativa 1): No adro da igreja, o coreto vira palco de banda, festa e nam
+  ouvido (100%): No adro da igreja, o coreto vira palco de banda, festa e namoro.
+voz 18/31 (tentativa 1): Padres guanellianos abrem o Patronato dentro do velho conven
+  ouvido (91%): Padres guanelianos abrem o patronato dentro do velho convento dos jesuítas.
+voz 19/31 (tentativa 1): Nos anos cinquenta, o centro desce o morro e ganha praças no
+  ouvido (100%): Nos anos 50, o centro desce o morro e ganha praças novas.
+voz 20/31 (tentativa 1): O colégio jesuíta de duzentos anos é derrubado para dar luga
+  ouvido (100%): O colégio jesuíta de 200 anos é derrubado para dar lugar a um prédio moderno.
+voz 21/31 (tentativa 1): Um andarilho paraguaio deixa de presente um relógio de sol d
+  ouvido (92%): Um andarino paraguaio deixa de presente um relógio de sol diante do cemitério.
+voz 22/31 (tentativa 1): A diocese nasce, e a velha Matriz vira catedral.
+  ouvido (100%): A diócese nasce e a velha matriz vira catedral.
+voz 23/31 (tentativa 1): No mesmo ano, o último trem de passageiros passa. A estação 
+  ouvido (100%): No mesmo ano, o último trem de passageiros passa. A estação fica vazia.
+voz 24/31 (tentativa 1): Reformado, o castelo reabre como Casa de Cultura, com a bibl
+  ouvido (100%): Reformado. O castelo reabre como casa de cultura, com a biblioteca dentro.
+voz 25/31 (tentativa 1): O estado tomba a Matriz: agora ela não pode mais ser derruba
+  ouvido (100%): O estado tomba a matriz. Agora ela não pode mais ser derrubada.
+voz 26/31 (tentativa 1): No Monte Serrat nasce o Instituto Casa do Pai, uma obra soci
+  ouvido (93%): No Monte Serrate nasce o Instituto Casa do Pai, uma obra social do bairro.
+voz 27/31 (tentativa 1): Moradores pintam sete fachadas antigas da General Bocaiúva p
+  ouvido (100%): Moradores pintam sete fachadas antigas da general Bocaiuva por conta própria.
+voz 28/31 (tentativa 1): Sem cuidado, o sobrado de Quintino perde o teto e o segundo 
+  ouvido (100%): Sem cuidado, o sobrado de Quintino perde o teto e o segundo andar.
+voz 29/31 (tentativa 1): Hoje o centro inteiro cabe num raio de setecentos metros em 
+  ouvido (100%): Hoje, o centro inteiro cabe num raio de 700 metros em volta da matriz.
+voz 30/31 (tentativa 1): E se o centro voltasse a ser lugar de ficar? Sombra nas ruas
+  ouvido (100%): E se o centro voltasse a ser lugar de ficar? Sombra nas ruas, trem de volta e casarões vivos.
+voz 31/31 (tentativa 1): O passado está de pé no alto do morro. O futuro, quem desenh
+  ouvido (100%): O passado está de pé no alto do morro. O futuro, quem desenha, é a cidade.
+globo                          5.2 s | Na Baixada de Sepetiba, um morro pequeno guarda o coração de uma cidade inteira.
+capela-1688                    5.2 s | Tudo começa com padres jesuítas e uma aldeia indígena. Ainda longe daqui...
+obra-1718                      5.9 s | os jesuítas escolhem o alto do morro. Dali se via o rio, a baía e a estrada.
+matriz-1729                    5.5 s | Pedra e cal, uma torre só. Quase 300 anos depois, a igreja continua de pé.
+expulsao-1759                  5.7 s | Portugal expulsa os jesuítas. A escola fecha, mas o povo fica em volta da igreja.
+freguesia-1795                 6.5 s | Virar paróquia era ganhar padre fixo, batismo e registro. O povoado passa a existir no papel.
+vila-1818                      5.5 s | Em 1818, a aldeia vira vila, desenhada em volta da matriz.
+aclamacao-1822                 4.7 s | A caminho de São Paulo, Dom Pedro para bem aqui, no Largo da Igreja.
+graham-1823                    5.6 s | Uma viajante inglesa desenha o que viu. A igreja no alto e as casas descendo o morro.
+porto-1841                     4.2 s | Com o café descendo para o porto, a vila quase quadrúplica de tamanho.
+chafariz-1847                  5.3 s | Água era o problema. O chafariz servia a vila e os tropeiros da estrada real.
+caridade-1858                  3.8 s | A Casa de Caridade cuidava dos pobres e virou o hospital da cidade.
+quintino-casa-1873             4.3 s | Um sobrado de 11 janelas que a tradição liga a Quintino Bocaiuva.
+biblioteca-1880                5.2 s | Em 1880, a vila ganha uma sala de leitura no prédio da Câmara.
+cidade-1892                    4.7 s | Já na República, Itaguaí deixa de ser vila e passa a ser cidade.
+estacao-1910                   5.3 s | O trem chega em 1910, numa estação que parece um castelo.
+coreto-1943                    4.9 s | No adro da igreja, o coreto vira palco de banda, festa e namoro.
+patronato-1953                 4.8 s | Padres guanelianos abrem o patronato dentro do velho convento dos jesuítas.
+pracas-anos50                  4.7 s | Nos anos 50, o centro desce o morro e ganha praças novas.
+colegio-demolido-1961          5.3 s | O colégio jesuíta de 200 anos é derrubado para dar lugar a um prédio moderno.
+relogio-1967                   5.1 s | Um andarino paraguaio deixa de presente um relógio de sol diante do cemitério.
+se-1980                        3.6 s | A diócese nasce e a velha matriz vira catedral.
+trem-fim-1980                  5.2 s | No mesmo ano, o último trem de passageiros passa. A estação fica vazia.
+casa-cultura-2006              4.9 s | Reformado. O castelo reabre como casa de cultura, com a biblioteca dentro.
+tombamento-2006                4.0 s | O estado tomba a matriz. Agora ela não pode mais ser derrubada.
+casa-do-pai-2007               5.3 s | No Monte Serrat, nasce o Instituto Casa do Pai, uma obra social do bairro.
+fachadas-2019                  5.4 s | Moradores pintam sete fachadas antigas da general Bocaiuva por conta própria.
+quintino-interdita-2023        4.3 s | Sem cuidado, o sobrado de Quintino perde o teto e o segundo andar.
+hoje                           5.5 s | Hoje, o centro inteiro cabe num raio de 700 metros em volta da matriz.
+futuro                         6.0 s | E se o centro voltasse a ser lugar de ficar? Sombra nas ruas, trem de volta e casarões vivos.
+fecho                          4.7 s | O passado está de pé no alto do morro. O futuro, quem desenha, é a cidade.

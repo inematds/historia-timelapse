@@ -25,6 +25,8 @@ Timelapse 3D da história de cidades (mapa real + prédios do OSM + cartões com
 Quando o Nei corrigir algo ou eu pegar um erro meu: antes de continuar, acrescentar a lição como uma linha no TOPO da seção Lessons abaixo.
 
 ## Lessons
+- Câmera de perto (zoom ≥ 18) sobre morro: o alvo do viewState fica no nível do mar e o prédio sai do quadro — passar `position: [0, 0, z_chão × exz]` (versão centro). De perto a textura do chão borra: ruas como vetor (PathLayer em metros, uma camada só, cada rua nasce com as casas dela). (22/10/2026)
+- Marco 3D sobre prédio do OSM/Microsoft: esconder os comuns no lote do marco e dentro das praças (`centro/scripts/limpa_marcos.py`), senão a caixa atravessa a igreja ou tapa o coreto. (22/10/2026)
 - Mostrar quadros-chave ao Nei é aviso, não trava: mostrar e seguir com render/música/montagem no mesmo turno; só parar para publicar (Nei: "pq tem te dizer para continuar"). (22/10/2026)
 - Motor é único para qualquer lugar, inclusive outros países: nada preso a Brasil/hemisfério/cidade no código; o que muda vai no config da cidade, com padrão igual ao de Floripa. Nunca remendar caso a caso (ex.: `longe.sul` só para Itaguaí). (22/10/2026)
 - Ponte/linha que "nasce" num bloco: `desenha` (em anos) tem que caber no avanço do ano dentro do bloco, senão ela fica pela metade e as torres não aparecem; câmera lateral = bearing perpendicular à ponte (Hercílio do norte, bearing −180, alvo ~200 m ao sul dela). Conferir o quadro depois da chegada da câmera (45% do bloco). (22/10/2026)

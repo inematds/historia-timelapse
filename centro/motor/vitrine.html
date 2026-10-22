@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Vitrine — marcos do centro histórico (maquete)</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --amb:#FACC15; --ink:#0c0c10; }
+  html,body { margin:0; width:1920px; height:1080px; overflow:hidden; background:#9fc3dc; }
+  #ceu { position:absolute; inset:0; background:linear-gradient(#7fb0d6 0%, #b9d4e6 38%, #dfe8e2 60%, #dfe8e2 100%); }
+  #mapa { position:absolute; inset:0; }
+  .sombra { text-shadow:0 2px 8px rgba(0,0,0,.75), 0 0 3px rgba(0,0,0,.9); }
+  #hud { position:absolute; left:48px; top:36px; color:#fff; font:800 34px Sora; }
+  #hud small { display:block; font:600 20px Inter; opacity:.9; margin-top:6px; }
+  #hud b { color:var(--amb); }
+  #tag { position:absolute; right:56px; top:40px; background:rgba(12,12,16,.82); border:2px solid var(--amb); border-radius:10px; padding:10px 18px; color:#fff; font:700 26px Inter; opacity:0; }
+  #tag small { display:block; font:600 17px Inter; color:var(--amb); }
+  #marca { position:absolute; right:60px; bottom:30px; color:#fff; font:700 22px Sora; opacity:.85; }
+  #marca i { color:var(--amb); font-style:normal; }
+  #legenda { position:absolute; left:48px; bottom:34px; color:#fff; font:600 18px Inter; opacity:.9; line-height:1.5; }
+</style>
+<script src="assets/deck.min.js"></script>
+<script src="marcos.js"></script>
+</head><body>
+<div id="ceu"></div><div id="mapa"></div>
+<div id="hud" class="sombra">VITRINE · <b>marcos</b> do centro histórico<small id="sub">maquete paramétrica · SimpleMeshLayer · tudo local</small></div>
+<div id="tag"><span id="tagt">VISÃO DE FUTURO</span><small>imaginação, não é projeto aprovado</small></div>
+<div id="legenda" class="sombra"></div>
+<div id="marca" class="sombra">INEMA<i>.</i>CLUB</div>
+<script>
+const Q = Object.fromEntries(new URLSearchParams(location.search));
+const LON0 = -43.7753, LAT0 = -22.8522, M_LAT = 111320, M_LON = M_LAT * Math.cos(LAT0 * Math.PI / 180);
+const ll = (x, y) => [LON0 + x / M_LON, LAT0 + y / M_LAT];
+const EZ = Number(Q.ez || 1);
+const LUZ = Q.luz === 'ne' ? [-2, -3, -4] : MARCOS.LUZ_PADRAO;
+const { PALETA: P, c255 } = MARCOS;
+
+// ---- cena da vitrine (metros a partir da origem; rumo 180 = frente para o sul, rumo 0 = frente para o norte)
+const marcos = [
+  { id: 'igreja', tipo: 'igreja', ...xy(-70, 32), rumo: 180, larg: 14, comp: 32, pe: 10, torres: 1, cor: 'azul', rot: 'IGREJA MATRIZ (1729)\ncolonial · 1 torre · frontão' },
+  { id: 'sobrado', tipo: 'sobrado', ...xy(-38, 13), rumo: 180, larg: 12, comp: 13, cor: 'azul', rot: 'SOBRADO\n2 pavimentos · 4 águas · sacadas' },
+  { id: 'casa1', tipo: 'casa', ...xy(-24, 11.5), rumo: 180, larg: 8, comp: 10, cor: 'verde', rot: 'CASA TÉRREA\nporta-e-janela' },
+  { id: 'casa2', tipo: 'casa', ...xy(-14, 11), rumo: 180, larg: 7, comp: 9, cor: 'vinho', rot: '' },
+  { id: 'prefeitura', tipo: 'prefeitura', ...xy(45, 15.7), rumo: 180, larg: 18, comp: 14, rot: 'CÂMARA / PREFEITURA\neclética · platibanda' },
+  { id: 'estacao', tipo: 'estacao', ...xy(92, 11), rumo: 180, larg: 24, comp: 9, rot: 'ESTAÇÃO (1910)\nplataforma · cobertura · linha' },
+  // fileira B: construção em etapas e destaque
+  { id: 'obra25', tipo: 'sobrado', ...xy(-95, -13), rumo: 0, larg: 12, comp: 13, cor: 'azul', k: .25, rot: 'nasce · 25%' },
+  { id: 'obra50', tipo: 'sobrado', ...xy(-78, -13), rumo: 0, larg: 12, comp: 13, cor: 'azul', k: .5, rot: 'nasce · 50%' },
+  { id: 'obra75', tipo: 'sobrado', ...xy(-61, -13), rumo: 0, larg: 12, comp: 13, cor: 'azul', k: .75, rot: 'nasce · 75%' },
+  { id: 'dest', tipo: 'sobrado', ...xy(-40, -13), rumo: 0, larg: 12, comp: 13, cor: 'verde', destaque: [[0, 9e9]], rot: 'EM DESTAQUE\nmolduras amarelas + halo' },
+  { id: 'casarao', tipo: 'casarao', ...xy(-20, -12.5), rumo: 0, larg: 14, comp: 12, cor: 'vinho', rot: 'CASARÃO\n1 pavimento · 4 águas' },
+  { id: 'coreto', tipo: 'coreto', ...xy(28, -30), rumo: 0, raio: 3.6, rot: 'CORETO' },
+  { id: 'casa3', tipo: 'casa', ...xy(75, -11.5), rumo: 0, larg: 9, comp: 10, cor: 'azul', rot: '' },
+  { id: 'casa4', tipo: 'casa', ...xy(104, -32), rumo: 45, larg: 8, comp: 10, cor: 'verde', rot: 'rumo 45°' },
+  // fileira C (pesquisa de 22/10): Matriz com torre à direita e cúpula, claustro colado, estação-castelo, chafariz, Patronato 1968, catedral nova
+  { id: 'matriz', tipo: 'igreja', ...xy(-80, 129.5), rumo: 180, larg: 12, comp: 28, pe: 10, torres: 1, torre_lado: 'direita', coroa: 'cupula', cor: 'ocre', rot: 'MATRIZ (1718–1729)\ntorre à direita · cúpula prateada' },
+  { id: 'claustro', tipo: 'claustro', ...xy(-101.5, 130.5), rumo: 180, lado: 30, ala_larg: 8, cor: 'ocre', rot: 'COLÉGIO JESUÍTA (claustro)\ndemolido em 1961' },
+  { id: 'castelo', tipo: 'estacao_castelo', ...xy(-30, 110), rumo: 180, plataforma: true, rot: 'ESTAÇÃO-CASTELO (1910)\nameias · ogivas · óculos' },
+  { id: 'chafariz', tipo: 'chafariz', ...xy(5, 108), rumo: 180, rot: 'CHAFARIZ (1847)' },
+  { id: 'moderno', tipo: 'moderno', ...xy(35, 112.5), rumo: 180, larg: 22, comp: 12, andares: 3, estatua: true, rot: 'PATRONATO (1968)\nmodernista · estátua' },
+  { id: 'catedral', tipo: 'catedral_moderna', ...xy(85, 126.5), rumo: 180, rot: 'CATEDRAL NOVA\nvolumes curvos · campanário' },
+];
+function xy(x, y) { const [lon, lat] = ll(x, y); return { lon, lat, z: 0 }; }
+const praca = [ll(-5, -6.5), ll(62, -6.5), ll(62, -52), ll(-5, -52)];
+const C = {
+  exz: 1, exb: EZ, anos: [[0, 1700], [100, 2100]], luz: LUZ,
+  marcos: marcos.map(m => ({ ...m, k: m.k ?? (Q.k !== undefined ? Number(Q.k) : undefined), sempre: m.k === undefined, t0: -100, dura: 1 })),
+  pisos: [{ id: 'praca', poligono: praca, cor: [168, 160, 142] }, { id: 'calcada', poligono: [ll(-130, -6.5), ll(300, -6.5), ll(300, 6.5), ll(-130, 6.5)], cor: [176, 170, 158] }],
+  ruas: [
+    { id: 'principal', caminho: [ll(-130, 0), ll(300, 0)], larg: 9, cor: [118, 114, 106] },
+    { id: 'tr1', caminho: [ll(-105, -70), ll(-105, 70)], larg: 7, cor: [118, 114, 106] },
+    { id: 'tr2', caminho: [ll(25, -70), ll(25, 70)], larg: 7, cor: [118, 114, 106] },
+    { id: 'tr3', caminho: [ll(135, -70), ll(135, 70)], larg: 8, cor: [100, 100, 102] },
+    { id: 'ruaC', caminho: [ll(-140, 100), ll(130, 100)], larg: 9, cor: [118, 114, 106] },
+  ],
+  arvores_auto: [
+    { poligono: [ll(-2, -9), ll(60, -9), ll(60, -50), ll(-2, -50)], n: 16, semente: 5, dmin: 7, t0: -100 },
+    { poligono: [ll(-128, 7.5), ll(-110, 7.5), ll(-110, 12), ll(-128, 12)], n: 3, semente: 9, dmin: 6, t0: -100, tipo: 'palmeira' },
+  ],
+  arvores: [-100, -84, -68, -52].map((x, i) => ({ ...xy(x, -8.2), esc: 1, giro: i * 70, tipo: 'palmeira', t0: -100 })),
+  futuro: { t0: -100, nasce: 1, atraso: 0, elementos: [
+    { id: 't1', tipo: 'torre_vidro', ...xy(172, 30), rumo: 180, larg: 18, comp: 18, andares: 10 },
+    { id: 't2', tipo: 'torre_vidro', ...xy(206, 36), rumo: 200, larg: 16, comp: 22, andares: 8 },
+    { id: 'v1', tipo: 'telhado_verde', ...xy(246, 20), rumo: 180, larg: 22, comp: 14, andares: 5 },
+    { id: 'v2', tipo: 'telhado_verde', ...xy(282, 22), rumo: 180, larg: 20, comp: 14, andares: 4 },
+    { id: 'vlt', tipo: 'vlt', caminho: [ll(138, 1.8), ll(300, 1.8)], vel: 7, comp: 24, z: 0 },
+    { id: 'ciclo', tipo: 'ciclovia', caminho: [ll(140, -8), ll(300, -8)], z: 0 },
+    { id: 'parque', tipo: 'parque', poligono: [ll(142, -11), ll(300, -11), ll(300, -60), ll(142, -60)], agua: [ll(142, -40), ll(180, -34), ll(220, -44), ll(262, -36), ll(300, -42)], agua_larg: 7,
+      caminho: [ll(144, -16), ll(190, -22), ll(230, -18), ll(270, -26), ll(298, -20)], arvores: 26, semente: 4, z: 0 },
+  ] },
+};
+// rótulos
+const ALT = { igreja: 31, sobrado: 15, casa: 9, casarao: 11, prefeitura: 17, estacao: 11, coreto: 9, estacao_castelo: 14, chafariz: 6, claustro: 14, moderno: 18, catedral_moderna: 26 };
+const rotulos = marcos.filter(m => m.rot).map(m => ({ p: [m.lon, m.lat, (ALT[m.tipo] || 10) * EZ + 2], texto: m.rot })).concat([
+  { p: [...ll(190, 33), 44 * EZ], texto: 'TORRES DE VIDRO\nmoderadas · pódio verde · solar' }, { p: [...ll(264, 21), 20 * EZ], texto: 'TELHADO VERDE\nvarandas · painéis solares' },
+  { p: [...ll(220, -35), 12], texto: 'PARQUE LINEAR\nrio · caminho · árvores' }, { p: [...ll(220, 1.8), 6], texto: 'VLT' }]);
+
+const luz = new deck.LightingEffect({
+  amb: new deck.AmbientLight({ color: [255, 255, 255], intensity: 1.0 }),
+  sol: new deck.DirectionalLight({ color: [255, 244, 228], intensity: 1.6, direction: LUZ }),
+});
+const VISTAS = {   // [x, y] do alvo em metros, zoom, pitch, bearing
+  lateral: { xy: [-30, 6], zoom: 19.55, pitch: 60, bearing: -28 },
+  drone:   { xy: [30, 0], zoom: 18.3, pitch: 64, bearing: 18 },
+  igreja:  { xy: [-66, 16], zoom: 19.9, pitch: 56, bearing: -35 },
+  nasce:   { xy: [-74, -12], zoom: 19.9, pitch: 56, bearing: 150 },
+  praca:   { xy: [30, -26], zoom: 19.4, pitch: 58, bearing: 160 },
+  estacao: { xy: [92, 14], zoom: 19.9, pitch: 55, bearing: -150 },
+  futuro:  { xy: [225, 0], zoom: 18.7, pitch: 60, bearing: -22 },
+  longe:   { xy: [-20, 10], zoom: 18.0, pitch: 58, bearing: -28 },   // distância típica do vídeo
+  // fileira C (novos)
+  matriz:   { xy: [-90, 121], zoom: 20.05, pitch: 56, bearing: -30 },
+  castelo:  { xy: [-28, 110], zoom: 19.9, pitch: 55, bearing: -25 },
+  chafariz: { xy: [5, 107], zoom: 21.2, pitch: 55, bearing: -20 },
+  moderno:  { xy: [35, 111], zoom: 19.9, pitch: 56, bearing: -30 },
+  catedral: { xy: [85, 118], zoom: 19.6, pitch: 55, bearing: -30 },
+  fila:     { xy: [-10, 112], zoom: 18.5, pitch: 60, bearing: -25 },
+};
+let mapa, aguardando = null;
+function camadas(t) {
+  const L = [];
+  L.push(new deck.SolidPolygonLayer({ id: 'chao', data: [[ll(-3000, -3000), ll(3000, -3000), ll(3000, 3000), ll(-3000, 3000)]], getPolygon: d => d, getFillColor: [142, 154, 134], material: false }));
+  L.push(...MARCOS.camadas(t, 2000, C, D, { luz: LUZ }));
+  if (Q.rotulos !== '0') L.push(new deck.TextLayer({ id: 'rotulos', data: rotulos, getPosition: r => r.p, getText: r => r.texto, getSize: 17, getColor: [255, 255, 255],
+    fontFamily: 'Inter', fontWeight: 700, characterSet: 'auto', fontSettings: { sdf: true, fontSize: 48, buffer: 6 }, outlineWidth: 4, outlineColor: [0, 0, 0, 220],
+    billboard: true, getTextAnchor: 'middle', getAlignmentBaseline: 'bottom', getPixelOffset: [0, -16], lineHeight: 1.15 }));
+  return L;
+}
+const D = {};
+window.render = (vista, t = 0) => new Promise(res => {
+  const v = typeof vista === 'string' ? VISTAS[vista] : vista, [lon, lat] = ll(v.xy[0], v.xy[1]);
+  document.getElementById('tag').style.opacity = (v === VISTAS.futuro) ? 1 : 0;
+  document.getElementById('legenda').innerHTML = `vista <b>${typeof vista === 'string' ? vista : 'custom'}</b> · zoom ${v.zoom} · pitch ${v.pitch}° · bearing ${v.bearing}° · luz [${LUZ}] · ez ${EZ}`;
+  aguardando = res;
+  mapa.setProps({ viewState: { longitude: lon, latitude: lat, zoom: v.zoom, pitch: v.pitch, bearing: v.bearing, maxZoom: 24, maxPitch: 85 }, layers: camadas(t) });
+  mapa.redraw(true);
+});
+window.pronto = (async () => {
+  try { await Promise.race([Promise.all([document.fonts.load('700 40px Inter'), document.fonts.load('800 40px Sora')]), new Promise(r => setTimeout(r, 4000))]); } catch (e) {}
+  const [lon, lat] = ll(-30, 8);
+  mapa = new deck.Deck({ parent: document.getElementById('mapa'), width: 1920, height: 1080, controller: false, useDevicePixels: 1, effects: [luz],
+    initialViewState: { longitude: lon, latitude: lat, zoom: 19, pitch: 60, bearing: -28, maxZoom: 24, maxPitch: 85 }, parameters: { clearColor: [0, 0, 0, 0] }, layers: camadas(0),
+    onAfterRender: () => { if (!aguardando) return; const r = aguardando; aguardando = null; requestAnimationFrame(() => r(true)); } });
+  await new Promise(r => setTimeout(r, 300));
+  return true;
+})();
+</script></body></html>

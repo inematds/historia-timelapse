@@ -1,0 +1,128 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "o_que_e": "Ano aproximado em que cada bairro/localidade passa a ter ocupação (para acender a mancha no timelapse). Itaguaí tem POUCA fonte por bairro: só 8 localidades têm alguma data documentada. Os outros bairros do OSM estão em 'bairros_sem_dado' e o motor (scripts/modelo_anos.py) preenche pela distância ao centro antigo — não inventar datas.",
+    "nomes_osm": "O campo 'bairro' usa exatamente o nome dos polígonos admin_level=10 extraídos do OSM em cidades/itaguai/dados/brutos/bairros.geojson (conferido em 22/10/2026). Os 24 polígonos de Itaguaí são: Centro, São Francisco Xavier, Vila Salvador, Laiá, Estrela do Céu, Vista Alegre, Engenho, Amendoeira, Jardim Itaguaí Mar, Vila Margarida, Ueda, Leandro, Santa Cândida, Brisa Mar, Chácaras Brisa Mar, Mazomba, Nuclep, Somel, Vila Geny, Coroa Grande, Itimirim, Itingussu, Piranema, Chaperó. 'Ilha da Madeira' NÃO é polígono no OSM (só nó place=suburb) e Ibituporanga é distrito (admin_level 9), não bairro.",
+    "coordenadas": "Nenhum bairro de Itaguaí tem página própria com coordenadas na Wikipédia. lat/lon abaixo = centroide (média dos vértices) do polígono OSM local (bairros.geojson) ou do nó place=suburb do sudeste.osm.pbf — marcado em coord_fonte. O motor não usa lat/lon deste arquivo (casa só pelo nome).",
+    "criterios": {
+      "assentamento": "núcleo de povoamento documentado",
+      "equipamento": "estação, fábrica ou núcleo colonial que ancorou a ocupação",
+      "limite_superior": "a fonte só prova que o lugar já existia naquele ano (ocupação começou antes)",
+      "lei": "SEM dado de ocupação: só a lei de criação do distrito (marcar baixa)"
+    },
+    "fonte_padrao": "IBGE, Documentação Territorial do Brasil — Itaguaí: https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf ; Monografia IBGE nº 509 (Itaguaí, 2ª ed., c. 1971): https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf ; Estações Ferroviárias do Brasil (Ramal de Mangaratiba)."
+  },
+  "bairros": [
+    {
+      "bairro": "Centro",
+      "ano_aprox_ocupacao": 1718,
+      "criterio": "assentamento",
+      "lei_criacao": "freguesia 22/12/1795; vila 05/07/1818; cidade 03/06/1892",
+      "evidencia": "aldeia jesuítica transferida para as terras da fazenda junto ao mar 'em época anterior a 1718'; igreja de São Francisco Xavier concluída em 1729 no alto da colina do centro",
+      "fonte": "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf",
+      "lat": -22.8668, "lon": -43.778, "coord_fonte": "centroide do polígono OSM 'Centro' (bairros.geojson)",
+      "confianca": "media"
+    },
+    {
+      "bairro": "Coroa Grande",
+      "ano_aprox_ocupacao": 1911,
+      "criterio": "equipamento",
+      "lei_criacao": "distrito pela lei estadual nº 2.069, de 29/11/1926; extinto pela lei nº 1.586 de 18/11/1993 (volta ao distrito-sede)",
+      "evidencia": "estação Coroa Grande do Ramal de Mangaratiba inaugurada em 17/11/1911; distrito em 1926; 4.559 habitantes em 1970",
+      "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/coroa.htm",
+      "fontes_extra": [
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/riodejaneiro/itaguai.pdf",
+        "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"
+      ],
+      "lat": -22.9019, "lon": -43.8673, "coord_fonte": "centroide do polígono OSM 'Coroa Grande' (bairros.geojson)",
+      "confianca": "media"
+    },
+    {
+      "bairro": "Piranema",
+      "ano_aprox_ocupacao": 1938,
+      "criterio": "equipamento",
+      "lei_criacao": null,
+      "evidencia": "a monografia IBGE (c. 1971) localiza em Piranema o Núcleo Colonial de Santa Cruz (INCRA); a colonização agrícola desse núcleo começou em 1938 com os colonos japoneses",
+      "fonte": "https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf",
+      "fontes_extra": ["https://pt.wikipedia.org/wiki/Itagua%C3%AD"],
+      "lat": -22.8219, "lon": -43.7057, "coord_fonte": "centroide do polígono OSM 'Piranema' (bairros.geojson)",
+      "confianca": "baixa",
+      "obs": "A ligação 1938 ↔ Piranema é inferência: a fonte de 1938 fala do Núcleo Colonial de Santa Cruz em geral, não de Piranema."
+    },
+    {
+      "bairro": "Brisa Mar",
+      "ano_aprox_ocupacao": 1960,
+      "criterio": "limite_superior",
+      "lei_criacao": null,
+      "evidencia": "estação Brisamar já aparece no km 68,000 do Ramal de Mangaratiba na quilometragem de 1960 (data de inauguração desconhecida; prédio atual c. 1974)",
+      "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/brisamar.htm",
+      "lat": -22.881, "lon": -43.8077, "coord_fonte": "centroide do polígono OSM 'Brisa Mar' (bairros.geojson)",
+      "confianca": "baixa",
+      "obs": "Nome no OSM: 'Brisa Mar' (a estação escreve 'Brisamar')."
+    },
+    {
+      "bairro": "Vila Geny",
+      "ano_aprox_ocupacao": 1960,
+      "criterio": "limite_superior",
+      "lei_criacao": null,
+      "evidencia": "estação Vila Geni no km 74,192 do Ramal de Mangaratiba na quilometragem de 1960; 'Hotel Vila Geni' listado em 1969",
+      "fonte": "https://www.estacoesferroviarias.com.br/efcb_rj_mangaratiba/vlgeni.htm",
+      "fontes_extra": ["https://biblioteca.ibge.gov.br/visualizacao/periodicos/113/col_mono_n509_itaguai_2ed.pdf"],
+      "lat": -22.9004, "lon": -43.8548, "coord_fonte": "centroide do polígono OSM 'Vila Geny' (bairros.geojson)",
+      "confianca": "baixa",
+      "obs": "Grafia: OSM 'Vila Geny'; estação e monografia 'Vila Geni'."
+    },
+    {
+      "bairro": "Ilha da Madeira",
+      "ano_aprox_ocupacao": 1962,
+      "criterio": "equipamento",
+      "lei_criacao": null,
+      "evidencia": "Cia. Mercantil e Industrial Ingá começa a operar em 1962 na ilha (hoje ligada ao continente); depois Porto (1982), Porto Sudeste (2014) e Complexo Naval (2010–)",
+      "fonte": "https://www.maxwell.vrac.puc-rio.br/60868/60868_4.PDF",
+      "fontes_extra": ["https://pt.wikipedia.org/wiki/Itagua%C3%AD", "https://pt.wikipedia.org/wiki/Complexo_Naval_de_Itagua%C3%AD"],
+      "lat": -22.91824, "lon": -43.8507, "coord_fonte": "nó OSM place=suburb 'Ilha da Madeira' (sudeste.osm.pbf)",
+      "confianca": "baixa",
+      "obs": "NÃO é polígono admin_level=10 no OSM — o motor não vai casar este nome; acender a ilha via efeito/feição, não via bairro. Havia ocupação de pescadores antes, sem data na fonte."
+    },
+    {
+      "bairro": "Nuclep",
+      "ano_aprox_ocupacao": 1975,
+      "criterio": "equipamento",
+      "lei_criacao": null,
+      "evidencia": "Nuclebrás Equipamentos Pesados criada em 1975 (Decreto 76.805, de 16/12/1975) com sede em Itaguaí",
+      "fonte": "https://pt.wikipedia.org/wiki/Nuclebr%C3%A1s_Equipamentos_Pesados",
+      "lat": -22.9021, "lon": -43.836, "coord_fonte": "centroide do polígono OSM 'Nuclep' (bairros.geojson)",
+      "confianca": "media"
+    }
+  ],
+  "bairros_so_com_lei": {
+    "_obs": "chave = lei (ano); o motor usa ano − 15 como ocupação. Só nomes sem outra data.",
+    "1926": ["Ibituporanga"]
+  },
+  "bairros_sem_dado": [
+    {"bairro": "São Francisco Xavier", "nota": "colado ao Centro; leva o nome do padroeiro — provavelmente parte do núcleo antigo, mas sem data", "lat": -22.8716, "lon": -43.7841, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Vila Salvador", "nota": "colado ao Centro; sem data", "lat": -22.859, "lon": -43.7753, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Laiá", "nota": "nome da heroína da lenda de Quiva e Laiá; sem data", "lat": -22.8588, "lon": -43.7777, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Estrela do Céu", "nota": "sem data", "lat": -22.851, "lon": -43.7743, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Vista Alegre", "nota": "sem data", "lat": -22.8572, "lon": -43.7819, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Engenho", "nota": "a monografia IBGE cita o 'Engenho dos Jesuítas' como monumento da cidade e a ptwiki o 'Engenho de Taguay' arrematado c. 1804–05 — sem data de ocupação do bairro", "lat": -22.8622, "lon": -43.7833, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Amendoeira", "nota": "sem data", "lat": -22.8495, "lon": -43.7867, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Jardim Itaguaí Mar", "nota": "nome de loteamento; sem data", "lat": -22.8757, "lon": -43.7858, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Vila Margarida", "nota": "sem data; tem o conjunto Village Brisamar (480 apartamentos)", "lat": -22.8705, "lon": -43.7935, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Ueda", "nota": "sem data", "lat": -22.8592, "lon": -43.8029, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Leandro", "nota": "sem data", "lat": -22.8574, "lon": -43.8135, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Santa Cândida", "nota": "sem data", "lat": -22.8471, "lon": -43.8111, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Chácaras Brisa Mar", "nota": "nome de loteamento de chácaras; sem data", "lat": -22.8786, "lon": -43.8251, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Mazomba", "nota": "topônimo tupi (rio e serra da Mazomba); área rural; sem data", "lat": -22.8514, "lon": -43.8618, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Somel", "nota": "sem data; vizinho da Ilha da Madeira", "lat": -22.9, "lon": -43.8455, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Itimirim", "nota": "topônimo tupi (rio Itimirim, cachoeira); sem data", "lat": -22.903, "lon": -43.877, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Itingussu", "nota": "topônimo tupi (rio Itinguçu, cachoeira); sem data", "lat": -22.9076, "lon": -43.8789, "coord_fonte": "centroide OSM", "confianca": "baixa"},
+    {"bairro": "Chaperó", "nota": "topônimo tupi; ao norte, junto ao Arco Metropolitano; sem data", "lat": -22.7877, "lon": -43.7757, "coord_fonte": "centroide OSM", "confianca": "baixa"}
+  ],
+  "aterros": [
+    {"periodo": "1977–1982", "ano_inicio": 1977, "ano_fim": 1982, "o_que": "dragagem do canal, enrocamento e aterro hidráulico do Porto de Sepetiba (hoje Porto de Itaguaí)", "area_ha": 720, "area_obs": "7,2 milhões de m² é a área atual do porto (infobox ptwiki), não só o aterro", "fonte": "https://pt.wikipedia.org/wiki/Porto_de_Itagua%C3%AD", "confianca": "media"},
+    {"periodo": "2010–2024", "ano_inicio": 2010, "ano_fim": 2024, "o_que": "área sul do Complexo Naval (cais 13 em diante) inteira sobre aterro de areia oceânica e rocha; 300 mil m³ movimentados", "area_ha": 75, "area_obs": "750 mil m² é a área total do complexo", "fonte": "https://pt.wikipedia.org/wiki/Complexo_Naval_de_Itagua%C3%AD", "confianca": "media"},
+    {"periodo": "sem data", "ano_inicio": null, "ano_fim": null, "o_que": "Ilha da Madeira 'hoje ligada à porção continental do município' — data da ligação não encontrada", "area_ha": null, "fonte": "https://pt.wikipedia.org/wiki/Itagua%C3%AD", "confianca": "baixa"}
+  ],
+  "pontes": []
+}

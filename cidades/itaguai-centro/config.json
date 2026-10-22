@@ -1,0 +1,84 @@
+{
+ "nome": "Itaguaí — Centro",
+ "bbox": [
+  -43.8,
+  -22.885,
+  -43.75,
+  -22.84
+ ],
+ "pbf": "dl/sudeste.osm.pbf",
+ "pbf_url": "https://download.geofabrik.de/south-america/brazil/sudeste-latest.osm.pbf",
+ "municipio_osm": "Itaguaí",
+ "centro_antigo": [
+  -43.7792,
+  -22.8676
+ ],
+ "agua_baixa_m": 6.0,
+ "efeitos": {
+  "linhas": {
+   "trem": {
+    "nome_osm": "",
+    "tipos": [
+     "ferrovia"
+    ]
+   }
+  }
+ },
+ "tex": 20,
+ "musicas": [
+  "~/projetos/output/musicas/balao-cinema-20260818/faixa-1.mp3",
+  "~/projetos/output/musicas/balao-cinema-20260818/faixa-2.mp3"
+ ],
+ "cor_satelite": true,
+ "pop_modelo": [
+  [
+   1700,
+   2
+  ],
+  [
+   1729,
+   8
+  ],
+  [
+   1818,
+   36
+  ],
+  [
+   1841,
+   132
+  ],
+  [
+   1900,
+   350
+  ],
+  [
+   1940,
+   1200
+  ],
+  [
+   1960,
+   4000
+  ],
+  [
+   1980,
+   10000
+  ],
+  [
+   2000,
+   16000
+  ],
+  [
+   2024,
+   21781
+  ]
+ ],
+ "_pop_modelo": "Versão centro: nº de PRÉDIOS do recorte por ano (não é população, não aparece na tela). 1818: 36 casas e 1841: 132 casas (eventos_centro.json, porto-1841, fonte PM/COL); 2024 = total de prédios do recorte (OSM+Microsoft); anos intermediários estimados.",
+ "vizinhos_anos": [
+  1900,
+  2020
+ ],
+ "feicoes_nomes": [],
+ "feicoes_refs": [],
+ "feicoes_ferrovias": true,
+ "_nota": "Versão CENTRO de Itaguaí (centro histórico + prédios históricos + cidade futura). Motor copiado em centro/motor/. Não confundir com cidades/itaguai (história do município)."
+}
