@@ -51,7 +51,7 @@ window.CENA = {
   ],
   [
    43.099,
-   1505
+   1504.95
   ],
   [
    43.1,
@@ -63,7 +63,7 @@ window.CENA = {
   ],
   [
    54.199,
-   1556.2
+   1555.95
   ],
   [
    54.2,
@@ -111,7 +111,7 @@ window.CENA = {
   ],
   [
    93.299,
-   1568
+   1567.95
   ],
   [
    93.3,
@@ -123,7 +123,7 @@ window.CENA = {
   ],
   [
    102.599,
-   1574.5
+   1573.95
   ],
   [
    102.6,
@@ -135,7 +135,7 @@ window.CENA = {
   ],
   [
    111.599,
-   1580
+   1575.95
   ],
   [
    111.6,
@@ -147,7 +147,7 @@ window.CENA = {
   ],
   [
    121.299,
-   1609
+   1608.95
   ],
   [
    121.3,
@@ -183,7 +183,7 @@ window.CENA = {
   ],
   [
    152.599,
-   1751
+   1750.95
   ],
   [
    152.6,
@@ -195,7 +195,7 @@ window.CENA = {
   ],
   [
    161.899,
-   1764
+   1763.95
   ],
   [
    161.9,
@@ -231,7 +231,7 @@ window.CENA = {
   ],
   [
    192.199,
-   1812
+   1811.95
   ],
   [
    192.2,
@@ -243,7 +243,7 @@ window.CENA = {
   ],
   [
    201.299,
-   1816.1
+   1815.9650000000001
   ],
   [
    201.3,
@@ -279,7 +279,7 @@ window.CENA = {
   ],
   [
    228.599,
-   1835
+   1834.95
   ],
   [
    228.6,
@@ -291,7 +291,7 @@ window.CENA = {
   ],
   [
    239.299,
-   1859
+   1858.95
   ],
   [
    239.3,
@@ -315,7 +315,7 @@ window.CENA = {
   ],
   [
    258.099,
-   1890
+   1889.95
   ],
   [
    258.1,
@@ -327,7 +327,7 @@ window.CENA = {
   ],
   [
    267.699,
-   1894.2
+   1893.95
   ],
   [
    267.7,
@@ -351,7 +351,7 @@ window.CENA = {
   ],
   [
    285.799,
-   1905
+   1904.95
   ],
   [
    285.8,
@@ -363,7 +363,7 @@ window.CENA = {
   ],
   [
    294.899,
-   1911
+   1910.95
   ],
   [
    294.9,
@@ -387,7 +387,7 @@ window.CENA = {
   ],
   [
    313.999,
-   1923
+   1922.95
   ],
   [
    314.0,
@@ -399,7 +399,7 @@ window.CENA = {
   ],
   [
    323.799,
-   1932
+   1931.95
   ],
   [
    323.8,
@@ -411,7 +411,7 @@ window.CENA = {
   ],
   [
    333.799,
-   1951
+   1950.95
   ],
   [
    333.8,
@@ -423,7 +423,7 @@ window.CENA = {
   ],
   [
    343.099,
-   1961
+   1960.95
   ],
   [
    343.1,
@@ -435,7 +435,7 @@ window.CENA = {
   ],
   [
    353.399,
-   1966
+   1965.95
   ],
   [
    353.4,
@@ -459,7 +459,7 @@ window.CENA = {
   ],
   [
    373.599,
-   1976
+   1975.9
   ],
   [
    373.6,
@@ -471,7 +471,7 @@ window.CENA = {
   ],
   [
    383.099,
-   1993
+   1992.9
   ],
   [
    383.1,
@@ -483,7 +483,7 @@ window.CENA = {
   ],
   [
    392.799,
-   2017
+   2016.95
   ],
   [
    392.8,
@@ -495,7 +495,7 @@ window.CENA = {
   ],
   [
    404.299,
-   2024
+   2022.95
   ],
   [
    404.3,
@@ -560,31 +560,31 @@ window.CENA = {
   [
    18.775,
    {
-    "lon": -43.17,
-    "lat": -22.9,
-    "zoom": 11.7,
-    "pitch": 50,
-    "bearing": -8
+    "lon": -43.19,
+    "lat": -22.89,
+    "zoom": 12.0,
+    "pitch": 44,
+    "bearing": -20
    }
   ],
   [
    23.999,
    {
-    "lon": -43.17,
-    "lat": -22.9,
-    "zoom": 11.819999999999999,
-    "pitch": 50,
-    "bearing": -8
+    "lon": -43.19,
+    "lat": -22.89,
+    "zoom": 12.12,
+    "pitch": 44,
+    "bearing": -20
    }
   ],
   [
    24.0,
    {
-    "lon": -43.17,
-    "lat": -22.9,
-    "zoom": 11.819999999999999,
-    "pitch": 50,
-    "bearing": -8
+    "lon": -43.19,
+    "lat": -22.89,
+    "zoom": 12.12,
+    "pitch": 44,
+    "bearing": -20
    }
   ],
   [
@@ -830,30 +830,30 @@ window.CENA = {
   [
    106.925,
    {
-    "lon": -43.212,
-    "lat": -22.99,
-    "zoom": 13.6,
-    "pitch": 58,
+    "lon": -43.2117,
+    "lat": -22.986,
+    "zoom": 13.5,
+    "pitch": 55,
     "bearing": -15
    }
   ],
   [
    111.599,
    {
-    "lon": -43.212,
-    "lat": -22.99,
-    "zoom": 13.719999999999999,
-    "pitch": 58,
+    "lon": -43.2117,
+    "lat": -22.986,
+    "zoom": 13.62,
+    "pitch": 55,
     "bearing": -15
    }
   ],
   [
    111.6,
    {
-    "lon": -43.212,
-    "lat": -22.99,
-    "zoom": 13.719999999999999,
-    "pitch": 58,
+    "lon": -43.2117,
+    "lat": -22.986,
+    "zoom": 13.62,
+    "pitch": 55,
     "bearing": -15
    }
   ],
@@ -1040,31 +1040,31 @@ window.CENA = {
   [
    177.425,
    {
-    "lon": -43.222,
-    "lat": -22.978,
-    "zoom": 14.4,
-    "pitch": 58,
-    "bearing": -30
+    "lon": -43.2225,
+    "lat": -22.983,
+    "zoom": 13.9,
+    "pitch": 52,
+    "bearing": -25
    }
   ],
   [
    182.099,
    {
-    "lon": -43.222,
-    "lat": -22.978,
-    "zoom": 14.52,
-    "pitch": 58,
-    "bearing": -30
+    "lon": -43.2225,
+    "lat": -22.983,
+    "zoom": 14.02,
+    "pitch": 52,
+    "bearing": -25
    }
   ],
   [
    182.1,
    {
-    "lon": -43.222,
-    "lat": -22.978,
-    "zoom": 14.52,
-    "pitch": 58,
-    "bearing": -30
+    "lon": -43.2225,
+    "lat": -22.983,
+    "zoom": 14.02,
+    "pitch": 52,
+    "bearing": -25
    }
   ],
   [
@@ -1100,61 +1100,61 @@ window.CENA = {
   [
    196.625,
    {
-    "lon": -43.1735,
-    "lat": -22.9075,
-    "zoom": 15.2,
-    "pitch": 60,
-    "bearing": -35
+    "lon": -43.17,
+    "lat": -22.904,
+    "zoom": 15.0,
+    "pitch": 58,
+    "bearing": -110
    }
   ],
   [
    201.299,
    {
-    "lon": -43.1735,
-    "lat": -22.9075,
-    "zoom": 15.319999999999999,
-    "pitch": 60,
-    "bearing": -35
+    "lon": -43.17,
+    "lat": -22.904,
+    "zoom": 15.12,
+    "pitch": 58,
+    "bearing": -110
    }
   ],
   [
    201.3,
    {
-    "lon": -43.1735,
-    "lat": -22.9075,
-    "zoom": 15.319999999999999,
-    "pitch": 60,
-    "bearing": -35
+    "lon": -43.17,
+    "lat": -22.904,
+    "zoom": 15.12,
+    "pitch": 58,
+    "bearing": -110
    }
   ],
   [
    205.5,
    {
-    "lon": -43.1735,
-    "lat": -22.9075,
-    "zoom": 15.2,
+    "lon": -43.176,
+    "lat": -22.903,
+    "zoom": 15.6,
     "pitch": 60,
-    "bearing": -35
+    "bearing": 20
    }
   ],
   [
    209.899,
    {
-    "lon": -43.1735,
-    "lat": -22.9075,
-    "zoom": 15.319999999999999,
+    "lon": -43.176,
+    "lat": -22.903,
+    "zoom": 15.719999999999999,
     "pitch": 60,
-    "bearing": -35
+    "bearing": 20
    }
   ],
   [
    209.9,
    {
-    "lon": -43.1735,
-    "lat": -22.9075,
-    "zoom": 15.319999999999999,
+    "lon": -43.176,
+    "lat": -22.903,
+    "zoom": 15.719999999999999,
     "pitch": 60,
-    "bearing": -35
+    "bearing": 20
    }
   ],
   [
@@ -1250,31 +1250,31 @@ window.CENA = {
   [
    244.525,
    {
-    "lon": -43.1735,
-    "lat": -22.9075,
-    "zoom": 15.2,
-    "pitch": 60,
-    "bearing": -35
+    "lon": -43.178,
+    "lat": -22.906,
+    "zoom": 14.2,
+    "pitch": 55,
+    "bearing": -65
    }
   ],
   [
    249.199,
    {
-    "lon": -43.1735,
-    "lat": -22.9075,
-    "zoom": 15.319999999999999,
-    "pitch": 60,
-    "bearing": -35
+    "lon": -43.178,
+    "lat": -22.906,
+    "zoom": 14.319999999999999,
+    "pitch": 55,
+    "bearing": -65
    }
   ],
   [
    249.2,
    {
-    "lon": -43.1735,
-    "lat": -22.9075,
-    "zoom": 15.319999999999999,
-    "pitch": 60,
-    "bearing": -35
+    "lon": -43.178,
+    "lat": -22.906,
+    "zoom": 14.319999999999999,
+    "pitch": 55,
+    "bearing": -65
    }
   ],
   [
@@ -1490,30 +1490,30 @@ window.CENA = {
   [
    318.85,
    {
-    "lon": -43.208,
-    "lat": -22.98,
-    "zoom": 13.4,
-    "pitch": 52,
+    "lon": -43.2105,
+    "lat": -22.956,
+    "zoom": 13.7,
+    "pitch": 48,
     "bearing": -10
    }
   ],
   [
    323.799,
    {
-    "lon": -43.208,
-    "lat": -22.98,
-    "zoom": 13.52,
-    "pitch": 52,
+    "lon": -43.2105,
+    "lat": -22.956,
+    "zoom": 13.819999999999999,
+    "pitch": 48,
     "bearing": -10
    }
   ],
   [
    323.8,
    {
-    "lon": -43.208,
-    "lat": -22.98,
-    "zoom": 13.52,
-    "pitch": 52,
+    "lon": -43.2105,
+    "lat": -22.956,
+    "zoom": 13.819999999999999,
+    "pitch": 48,
     "bearing": -10
    }
   ],
@@ -1762,7 +1762,7 @@ window.CENA = {
    {
     "lon": -43.42,
     "lat": -22.94,
-    "zoom": 10.8,
+    "zoom": 11.0,
     "pitch": 40,
     "bearing": -5
    }
@@ -1772,7 +1772,7 @@ window.CENA = {
    {
     "lon": -43.42,
     "lat": -22.94,
-    "zoom": 10.92,
+    "zoom": 11.12,
     "pitch": 40,
     "bearing": -5
    }
@@ -2239,7 +2239,7 @@ window.CENA = {
   },
   {
    "titulo": "A REVOLTA DA <b>CHIBATA</b>",
-   "numero": "1.500 A 2.000",
+   "numero": "1.500 A 2.000 MARUJOS",
    "legenda": "Marinheiros tomam os navios de guerra na baía contra os castigos com chicote",
    "detalhe": "Começou depois de 250 chibatadas dadas a um marinheiro. Liderados por João Cândido, os rebeldes apontaram os canhões para a capital e conseguiram a anistia — depois traída.",
    "fonte": "Wikipédia",
@@ -2292,8 +2292,8 @@ window.CENA = {
   {
    "titulo": "O <b>MARACANAÇO</b>",
    "numero": "199.854 PESSOAS",
-   "legenda": "Na final da Copa, um público recorde até hoje vê o Uruguai vencer o Brasil por 2 a 1",
-   "detalhe": "O estádio foi erguido para a Copa de 1950. Na final, foram 199.854 presentes, dos quais 173.850 pagantes. O Rio continuava a maior cidade do país, até ser passado por São Paulo nos anos 1950.",
+   "legenda": "No jogo decisivo da Copa, um público recorde até hoje vê o Uruguai vencer o Brasil por 2 a 1",
+   "detalhe": "O estádio foi erguido para a Copa de 1950. No jogo decisivo, foram 199.854 presentes, dos quais 173.850 pagantes.",
    "fonte": "Wikipédia",
    "local": [
     -43.2303,
@@ -2332,7 +2332,7 @@ window.CENA = {
    "titulo": "A <b>PONTE RIO–NITERÓI</b>",
    "numero": "13,29 KM",
    "legenda": "Uma ponte atravessa a Baía de Guanabara e liga as duas cidades por terra",
-   "detalhe": "A ponte tem 26,6 m de largura e 75 m de altura máxima, com um vão livre de 300 m para os navios passarem. As obras começaram em 1969.",
+   "detalhe": "A ponte tem 26,6 m de largura e um vão central de 300 m para os navios passarem. As obras começaram em 1969.",
    "fonte": "Wikipédia",
    "local": [
     -43.153406,
@@ -2345,7 +2345,7 @@ window.CENA = {
    "titulo": "A <b>fusão</b>",
    "numero": "15/3/1975",
    "legenda": "A Guanabara se funde com o antigo estado do Rio; a cidade vira a capital do novo estado",
-   "detalhe": "Niterói deixou de ser a capital fluminense. Na fusão, a Guanabara tinha cerca de 4,86 milhões de habitantes (estimativa de 1975).",
+   "detalhe": "Niterói deixou de ser a capital fluminense, e o Rio passou a ser um município do novo estado.",
    "fonte": "Wikipédia",
    "local": [
     -43.1747,
@@ -2358,7 +2358,7 @@ window.CENA = {
    "titulo": "A <b>Eco-92</b>",
    "numero": "108 CHEFES DE ESTADO",
    "legenda": "O Rio recebe a conferência da ONU sobre meio ambiente, com líderes do mundo todo",
-   "detalhe": "A Rio-92 ajudou a espalhar a ideia de desenvolvimento sustentável e gerou as convenções do clima e da biodiversidade. A ptwiki fala em delegações de 175 países.",
+   "detalhe": "A Rio-92 ajudou a espalhar a ideia de desenvolvimento sustentável e gerou as convenções do clima e da biodiversidade.",
    "fonte": "Wikipédia",
    "local": [
     -43.411325,
@@ -2397,15 +2397,6 @@ window.CENA = {
  "cheias": [],
  "rotulos": [
   {
-   "lon": -43.1567,
-   "lat": -22.9494,
-   "texto": "PÃO DE AÇÚCAR",
-   "z": 420,
-   "tam": 32,
-   "t0": 25.0,
-   "t1": 34.0
-  },
-  {
    "lon": -43.1694,
    "lat": -22.9356,
    "texto": "FOZ DO CARIOCA",
@@ -2413,15 +2404,6 @@ window.CENA = {
    "tam": 32,
    "t0": 34.6,
    "t1": 43.1
-  },
-  {
-   "lon": -43.1537,
-   "lat": -22.9403,
-   "texto": "CARA DE CÃO",
-   "z": 200,
-   "tam": 32,
-   "t0": 65.3,
-   "t1": 74.8
   },
   {
    "lon": -43.1756,
@@ -2435,15 +2417,15 @@ window.CENA = {
   {
    "lon": -43.1745,
    "lat": -22.9069,
-   "texto": "MORRO DO CASTELO",
+   "texto": "MORRO DO CASTELO (ARRASADO EM 1922)",
    "z": 90,
    "tam": 32,
    "t0": 84.8,
    "t1": 93.3
   },
   {
-   "lon": -43.1101,
-   "lat": -22.8873,
+   "lon": -43.125,
+   "lat": -22.895,
    "texto": "NITERÓI",
    "z": 70,
    "tam": 32,
@@ -2453,8 +2435,8 @@ window.CENA = {
   {
    "lon": -43.2117,
    "lat": -22.9711,
-   "texto": "LAGOA RODRIGO DE FREITAS",
-   "z": 70,
+   "texto": "LAGOA",
+   "z": 250,
    "tam": 32,
    "t0": 103.1,
    "t1": 111.6
@@ -2469,15 +2451,6 @@ window.CENA = {
    "t1": 121.3
   },
   {
-   "lon": -43.1799,
-   "lat": -22.9126,
-   "texto": "ARCOS DA LAPA",
-   "z": 70,
-   "tam": 32,
-   "t0": 143.6,
-   "t1": 152.6
-  },
-  {
    "lon": -43.1742,
    "lat": -22.9035,
    "texto": "PAÇO DOS VICE-REIS",
@@ -2490,19 +2463,10 @@ window.CENA = {
    "lon": -43.2239,
    "lat": -22.9675,
    "texto": "JARDIM BOTÂNICO",
-   "z": 70,
+   "z": 250,
    "tam": 32,
    "t0": 173.6,
    "t1": 182.1
-  },
-  {
-   "lon": -43.1874,
-   "lat": -22.8971,
-   "texto": "CAIS DO VALONGO",
-   "z": 70,
-   "tam": 32,
-   "t0": 182.7,
-   "t1": 192.2
   },
   {
    "lon": -43.1886,
@@ -2532,24 +2496,6 @@ window.CENA = {
    "t1": 258.1
   },
   {
-   "lon": -43.1722,
-   "lat": -22.895,
-   "texto": "ILHA DAS COBRAS",
-   "z": 70,
-   "tam": 32,
-   "t0": 286.4,
-   "t1": 294.9
-  },
-  {
-   "lon": -43.1877,
-   "lat": -22.9868,
-   "texto": "FORTE DE COPACABANA",
-   "z": 70,
-   "tam": 32,
-   "t0": 295.7,
-   "t1": 304.7
-  },
-  {
    "lon": -43.1745,
    "lat": -22.9069,
    "texto": "ONDE ERA O CASTELO",
@@ -2566,15 +2512,6 @@ window.CENA = {
    "tam": 32,
    "t0": 314.8,
    "t1": 323.8
-  },
-  {
-   "lon": -43.2303,
-   "lat": -22.9122,
-   "texto": "MARACANÃ",
-   "z": 70,
-   "tam": 32,
-   "t0": 324.8,
-   "t1": 333.8
   },
   {
    "lon": -43.17,
@@ -2675,25 +2612,6 @@ window.CENA = {
  "frotas": [
   {
    "de": [
-    -43.1,
-    -22.8
-   ],
-   "para": [
-    -43.17,
-    -22.86
-   ],
-   "n": 6,
-   "r": 40,
-   "espalha_km": 5,
-   "dura": 6,
-   "icone": "canoa",
-   "rotulo": "Canoas tupinambás",
-   "sub": "Guanabara",
-   "t0": 14.5,
-   "t1": 20.5
-  },
-  {
-   "de": [
     -43.14,
     -23.06
    ],
@@ -2768,24 +2686,6 @@ window.CENA = {
   },
   {
    "de": [
-    -43.165,
-    -22.905
-   ],
-   "para": [
-    -43.115,
-    -22.89
-   ],
-   "n": 5,
-   "r": 40,
-   "dura": 5,
-   "icone": "canoa",
-   "rotulo": "Arariboia e os temiminós",
-   "sub": "1573",
-   "t0": 94.1,
-   "t1": 99.1
-  },
-  {
-   "de": [
     -43.13,
     -23.05
    ],
@@ -2851,6 +2751,28 @@ window.CENA = {
    "sub": "1893",
    "t0": 258.7,
    "t1": 264.7
+  },
+  {
+   "de": [
+    -43.16,
+    -22.9
+   ],
+   "para": [
+    -43.165,
+    -22.91
+   ],
+   "n": 4,
+   "r": 80,
+   "cor": [
+    60,
+    60,
+    60
+   ],
+   "dura": 6,
+   "rotulo": "Navios rebelados",
+   "sub": "1910 · Minas Geraes e São Paulo",
+   "t0": 286.4,
+   "t1": 292.4
   }
  ],
  "pulsos": [
@@ -3380,10 +3302,6 @@ window.CENA = {
    "sub": "1555 · franceses",
    "destaque": [
     [
-     44.7,
-     54.2
-    ],
-    [
      55.0,
      64.5
     ]
@@ -3454,7 +3372,7 @@ window.CENA = {
   {
    "id": "cristo",
    "ano": 1931.78,
-   "alt": 38,
+   "alt": 70,
    "rotulo": "Cristo Redentor",
    "sub": "1931 · 38 m",
    "destaque": [

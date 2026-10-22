@@ -38,7 +38,7 @@
      -43.1675,
      -22.9115
     ],
-    "lado_m": 150
+    "lado_m": 90
    },
    "santacruz": {
     "nome_osm": "Fortaleza de Santa Cruz da Barra"
@@ -51,7 +51,7 @@
      -43.2105,
      -22.9519
     ],
-    "lado_m": 70
+    "lado_m": 150
    },
    "maracana": {
     "nome_osm": "Estádio Jornalista Mário Filho"

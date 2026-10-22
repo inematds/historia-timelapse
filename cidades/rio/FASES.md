@@ -4,7 +4,7 @@ O vídeo-base (fase 1) não muda. As fases 2 e 3 são camadas por cima de `final
 
 | Fase | O que é | Estado |
 |---|---|---|
-| 1 | Sem narração, só música (`final/rio-v1.mp4`, 418,3 s, 40 cartões) | 540p enviado ao bot v3 em 22/10/2026; publicar no YouTube só com OK do Nei |
+| 1 | Sem narração, só música (`final/rio-v2.mp4`, 418,3 s, 40 cartões; v2 = correções do revisor independente sobre a v1) | 540p enviado ao bot v3 em 22/10/2026 (v1 msg 2289, v2 msg seguinte); publicar no YouTube só com OK do Nei |
 | 2 | Fase 1 + narração na voz do Nei (`narracao.json` por bloco) | a fazer |
 | 3 | Fase 2 + avatar do Nei embaixo da bandeira | a fazer |
 

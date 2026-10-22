@@ -127,7 +127,7 @@
   {
    "id": "cristo",
    "ano": 1931.78,
-   "alt": 38,
+   "alt": 70,
    "rotulo": "Cristo Redentor",
    "sub": "1931 · 38 m"
   },
@@ -312,11 +312,11 @@
      "bearing": 0
     },
     {
-     "lon": -43.17,
-     "lat": -22.9,
-     "zoom": 11.7,
-     "pitch": 50,
-     "bearing": -8
+     "lon": -43.19,
+     "lat": -22.89,
+     "zoom": 12.0,
+     "pitch": 44,
+     "bearing": -20
     }
    ],
    "dur": 9.5,
@@ -331,24 +331,7 @@
      -22.790278
     ]
    },
-   "pulso_r": 3000,
-   "frota": {
-    "de": [
-     -43.1,
-     -22.8
-    ],
-    "para": [
-     -43.17,
-     -22.86
-    ],
-    "n": 6,
-    "r": 40,
-    "espalha_km": 5,
-    "dura": 6,
-    "icone": "canoa",
-    "rotulo": "Canoas tupinambás",
-    "sub": "Guanabara"
-   }
+   "pulso_r": 3000
   },
   {
    "id": "rio-de-janeiro-1502",
@@ -359,11 +342,11 @@
    ],
    "cam": [
     {
-     "lon": -43.17,
-     "lat": -22.9,
-     "zoom": 11.7,
-     "pitch": 50,
-     "bearing": -8
+     "lon": -43.19,
+     "lat": -22.89,
+     "zoom": 12.0,
+     "pitch": 44,
+     "bearing": -20
     },
     {
      "lon": -43.158,
@@ -400,23 +383,14 @@
     "dura": 6,
     "rotulo": "Expedição portuguesa",
     "sub": "1º/1/1502"
-   },
-   "rotulos": [
-    {
-     "lon": -43.1567,
-     "lat": -22.9494,
-     "texto": "PÃO DE AÇÚCAR",
-     "z": 420,
-     "tam": 32
-    }
-   ]
+   }
   },
   {
    "id": "feitoria-1504",
    "anos": [
     1502.1,
     1504,
-    1505
+    1504.95
    ],
    "cam": [
     {
@@ -462,7 +436,7 @@
    "anos": [
     1505,
     1555.86,
-    1556.2
+    1555.95
    ],
    "cam": [
     {
@@ -493,9 +467,6 @@
     ]
    },
    "pulo": 1.6,
-   "destaca": [
-    "forte:coligny"
-   ],
    "frota": {
     "de": [
      -43.14,
@@ -632,16 +603,7 @@
     "dura": 5.5,
     "rotulo": "Estácio de Sá",
     "sub": "1565"
-   },
-   "rotulos": [
-    {
-     "lon": -43.1537,
-     "lat": -22.9403,
-     "texto": "CARA DE CÃO",
-     "z": 200,
-     "tam": 32
-    }
-   ]
+   }
   },
   {
    "id": "urucumirim-1567",
@@ -698,7 +660,7 @@
    "anos": [
     1567.15,
     1567.3,
-    1568
+    1567.95
    ],
    "cam": [
     {
@@ -733,7 +695,7 @@
     {
      "lon": -43.1745,
      "lat": -22.9069,
-     "texto": "MORRO DO CASTELO",
+     "texto": "MORRO DO CASTELO (ARRASADO EM 1922)",
      "z": 90,
      "tam": 32
     }
@@ -744,7 +706,7 @@
    "anos": [
     1568,
     1573.89,
-    1574.5
+    1573.95
    ],
    "cam": [
     {
@@ -775,26 +737,10 @@
     ]
    },
    "pulo": 0.8,
-   "frota": {
-    "de": [
-     -43.165,
-     -22.905
-    ],
-    "para": [
-     -43.115,
-     -22.89
-    ],
-    "n": 5,
-    "r": 40,
-    "dura": 5,
-    "icone": "canoa",
-    "rotulo": "Arariboia e os temiminós",
-    "sub": "1573"
-   },
    "rotulos": [
     {
-     "lon": -43.1101,
-     "lat": -22.8873,
+     "lon": -43.125,
+     "lat": -22.895,
      "texto": "NITERÓI",
      "z": 70,
      "tam": 32
@@ -806,7 +752,7 @@
    "anos": [
     1574.5,
     1575,
-    1580
+    1575.95
    ],
    "cam": [
     {
@@ -817,10 +763,10 @@
      "bearing": 40
     },
     {
-     "lon": -43.212,
-     "lat": -22.99,
-     "zoom": 13.6,
-     "pitch": 58,
+     "lon": -43.2117,
+     "lat": -22.986,
+     "zoom": 13.5,
+     "pitch": 55,
      "bearing": -15
     }
    ],
@@ -841,8 +787,8 @@
     {
      "lon": -43.2117,
      "lat": -22.9711,
-     "texto": "LAGOA RODRIGO DE FREITAS",
-     "z": 70,
+     "texto": "LAGOA",
+     "z": 250,
      "tam": 32
     }
    ]
@@ -852,14 +798,14 @@
    "anos": [
     1580,
     1608.42,
-    1609
+    1608.95
    ],
    "cam": [
     {
-     "lon": -43.212,
-     "lat": -22.99,
-     "zoom": 13.6,
-     "pitch": 58,
+     "lon": -43.2117,
+     "lat": -22.986,
+     "zoom": 13.5,
+     "pitch": 55,
      "bearing": -15
     },
     {
@@ -1006,7 +952,7 @@
    "anos": [
     1711.9,
     1750,
-    1751
+    1750.95
    ],
    "cam": [
     {
@@ -1039,15 +985,6 @@
    "pulo": 1.2,
    "destaca": [
     "forte:arcos"
-   ],
-   "rotulos": [
-    {
-     "lon": -43.1799,
-     "lat": -22.9126,
-     "texto": "ARCOS DA LAPA",
-     "z": 70,
-     "tam": 32
-    }
    ]
   },
   {
@@ -1055,7 +992,7 @@
    "anos": [
     1751,
     1763,
-    1764
+    1763.95
    ],
    "cam": [
     {
@@ -1183,11 +1120,11 @@
      "bearing": -10
     },
     {
-     "lon": -43.222,
-     "lat": -22.978,
-     "zoom": 14.4,
-     "pitch": 58,
-     "bearing": -30
+     "lon": -43.2225,
+     "lat": -22.983,
+     "zoom": 13.9,
+     "pitch": 52,
+     "bearing": -25
     }
    ],
    "dur": 8.5,
@@ -1208,7 +1145,7 @@
      "lon": -43.2239,
      "lat": -22.9675,
      "texto": "JARDIM BOTÂNICO",
-     "z": 70,
+     "z": 250,
      "tam": 32
     }
    ]
@@ -1218,15 +1155,15 @@
    "anos": [
     1808.6,
     1811,
-    1812
+    1811.95
    ],
    "cam": [
     {
-     "lon": -43.222,
-     "lat": -22.978,
-     "zoom": 14.4,
-     "pitch": 58,
-     "bearing": -30
+     "lon": -43.2225,
+     "lat": -22.983,
+     "zoom": 13.9,
+     "pitch": 52,
+     "bearing": -25
     },
     {
      "lon": -43.186,
@@ -1260,23 +1197,14 @@
     "src": "assets/epoca/e05.jpg",
     "legenda": "Mercado do Valongo (Debret)",
     "credito": "Jean-Baptiste Debret · 1825 · domínio público (Wikimedia Commons)"
-   },
-   "rotulos": [
-    {
-     "lon": -43.1874,
-     "lat": -22.8971,
-     "texto": "CAIS DO VALONGO",
-     "z": 70,
-     "tam": 32
-    }
-   ]
+   }
   },
   {
    "id": "reino-unido-1815",
    "anos": [
     1812,
     1815.96,
-    1816.1
+    1815.9650000000001
    ],
    "cam": [
     {
@@ -1287,11 +1215,11 @@
      "bearing": -40
     },
     {
-     "lon": -43.1735,
-     "lat": -22.9075,
-     "zoom": 15.2,
-     "pitch": 60,
-     "bearing": -35
+     "lon": -43.17,
+     "lat": -22.904,
+     "zoom": 15.0,
+     "pitch": 58,
+     "bearing": -110
     }
    ],
    "dur": 8.5,
@@ -1325,18 +1253,18 @@
    ],
    "cam": [
     {
-     "lon": -43.1735,
-     "lat": -22.9075,
-     "zoom": 15.2,
-     "pitch": 60,
-     "bearing": -35
+     "lon": -43.17,
+     "lat": -22.904,
+     "zoom": 15.0,
+     "pitch": 58,
+     "bearing": -110
     },
     {
-     "lon": -43.1735,
-     "lat": -22.9075,
-     "zoom": 15.2,
+     "lon": -43.176,
+     "lat": -22.903,
+     "zoom": 15.6,
      "pitch": 60,
-     "bearing": -35
+     "bearing": 20
     }
    ],
    "dur": 8.0,
@@ -1367,11 +1295,11 @@
    ],
    "cam": [
     {
-     "lon": -43.1735,
-     "lat": -22.9075,
-     "zoom": 15.2,
+     "lon": -43.176,
+     "lat": -22.903,
+     "zoom": 15.6,
      "pitch": 60,
-     "bearing": -35
+     "bearing": 20
     },
     {
      "lon": -43.188,
@@ -1409,7 +1337,7 @@
    "anos": [
     1822.9,
     1834.61,
-    1835
+    1834.95
    ],
    "cam": [
     {
@@ -1451,7 +1379,7 @@
    "anos": [
     1835,
     1858.24,
-    1859
+    1858.95
    ],
    "cam": [
     {
@@ -1511,11 +1439,11 @@
      "bearing": -75
     },
     {
-     "lon": -43.1735,
-     "lat": -22.9075,
-     "zoom": 15.2,
-     "pitch": 60,
-     "bearing": -35
+     "lon": -43.178,
+     "lat": -22.906,
+     "zoom": 14.2,
+     "pitch": 55,
+     "bearing": -65
     }
    ],
    "dur": 8.5,
@@ -1542,15 +1470,15 @@
    "anos": [
     1888.5,
     1889.87,
-    1890
+    1889.95
    ],
    "cam": [
     {
-     "lon": -43.1735,
-     "lat": -22.9075,
-     "zoom": 15.2,
-     "pitch": 60,
-     "bearing": -35
+     "lon": -43.178,
+     "lat": -22.906,
+     "zoom": 14.2,
+     "pitch": 55,
+     "bearing": -65
     },
     {
      "lon": -43.188,
@@ -1593,7 +1521,7 @@
    "anos": [
     1890,
     1893.68,
-    1894.2
+    1893.95
    ],
    "cam": [
     {
@@ -1696,7 +1624,7 @@
    "anos": [
     1904.5,
     1904.86,
-    1905
+    1904.95
    ],
    "cam": [
     {
@@ -1737,7 +1665,7 @@
    "anos": [
     1905,
     1910.89,
-    1911
+    1910.95
    ],
    "cam": [
     {
@@ -1758,7 +1686,7 @@
    "dur": 8.5,
    "cartao": {
     "titulo": "A REVOLTA DA <b>CHIBATA</b>",
-    "numero": "1.500 A 2.000",
+    "numero": "1.500 A 2.000 MARUJOS",
     "legenda": "Marinheiros tomam os navios de guerra na baía contra os castigos com chicote",
     "detalhe": "Começou depois de 250 chibatadas dadas a um marinheiro. Liderados por João Cândido, os rebeldes apontaram os canhões para a capital e conseguiram a anistia — depois traída.",
     "fonte": "Wikipédia",
@@ -1768,19 +1696,30 @@
     ]
    },
    "pulo": 0.6,
+   "frota": {
+    "de": [
+     -43.16,
+     -22.9
+    ],
+    "para": [
+     -43.165,
+     -22.91
+    ],
+    "n": 4,
+    "r": 80,
+    "cor": [
+     60,
+     60,
+     60
+    ],
+    "dura": 6,
+    "rotulo": "Navios rebelados",
+    "sub": "1910 · Minas Geraes e São Paulo"
+   },
    "tom": {
     "cor": "#8a6a6a",
     "forca": 0.2
-   },
-   "rotulos": [
-    {
-     "lon": -43.1722,
-     "lat": -22.895,
-     "texto": "ILHA DAS COBRAS",
-     "z": 70,
-     "tam": 32
-    }
-   ]
+   }
   },
   {
    "id": "forte-copacabana-1922",
@@ -1829,23 +1768,14 @@
     "src": "assets/epoca/e11.jpg",
     "legenda": "Copacabana em obras, 1918 (Augusto Malta)",
     "credito": "Augusto Malta · 1918 · domínio público (Wikimedia Commons)"
-   },
-   "rotulos": [
-    {
-     "lon": -43.1877,
-     "lat": -22.9868,
-     "texto": "FORTE DE COPACABANA",
-     "z": 70,
-     "tam": 32
-    }
-   ]
+   }
   },
   {
    "id": "castelo-1922",
    "anos": [
     1922.6,
     1922.68,
-    1923
+    1922.95
    ],
    "cam": [
     {
@@ -1896,7 +1826,7 @@
    "anos": [
     1923,
     1931.78,
-    1932
+    1931.95
    ],
    "cam": [
     {
@@ -1907,10 +1837,10 @@
      "bearing": -30
     },
     {
-     "lon": -43.208,
-     "lat": -22.98,
-     "zoom": 13.4,
-     "pitch": 52,
+     "lon": -43.2105,
+     "lat": -22.956,
+     "zoom": 13.7,
+     "pitch": 48,
      "bearing": -10
     }
    ],
@@ -1950,14 +1880,14 @@
    "anos": [
     1932,
     1950.54,
-    1951
+    1950.95
    ],
    "cam": [
     {
-     "lon": -43.208,
-     "lat": -22.98,
-     "zoom": 13.4,
-     "pitch": 52,
+     "lon": -43.2105,
+     "lat": -22.956,
+     "zoom": 13.7,
+     "pitch": 48,
      "bearing": -10
     },
     {
@@ -1972,8 +1902,8 @@
    "cartao": {
     "titulo": "O <b>MARACANAÇO</b>",
     "numero": "199.854 PESSOAS",
-    "legenda": "Na final da Copa, um público recorde até hoje vê o Uruguai vencer o Brasil por 2 a 1",
-    "detalhe": "O estádio foi erguido para a Copa de 1950. Na final, foram 199.854 presentes, dos quais 173.850 pagantes. O Rio continuava a maior cidade do país, até ser passado por São Paulo nos anos 1950.",
+    "legenda": "No jogo decisivo da Copa, um público recorde até hoje vê o Uruguai vencer o Brasil por 2 a 1",
+    "detalhe": "O estádio foi erguido para a Copa de 1950. No jogo decisivo, foram 199.854 presentes, dos quais 173.850 pagantes.",
     "fonte": "Wikipédia",
     "local": [
      -43.2303,
@@ -1988,23 +1918,14 @@
     "src": "assets/epoca/e14.jpg",
     "legenda": "O Maracanã lotado, junho de 1950",
     "credito": "Autor desconhecido · 1950 · domínio público (Wikimedia Commons)"
-   },
-   "rotulos": [
-    {
-     "lon": -43.2303,
-     "lat": -22.9122,
-     "texto": "MARACANÃ",
-     "z": 70,
-     "tam": 32
-    }
-   ]
+   }
   },
   {
    "id": "guanabara-1960",
    "anos": [
     1951,
     1960.3,
-    1961
+    1960.95
    ],
    "cam": [
     {
@@ -2041,7 +1962,7 @@
    "anos": [
     1961,
     1965.79,
-    1966
+    1965.95
    ],
    "cam": [
     {
@@ -2113,7 +2034,7 @@
     "titulo": "A <b>PONTE RIO–NITERÓI</b>",
     "numero": "13,29 KM",
     "legenda": "Uma ponte atravessa a Baía de Guanabara e liga as duas cidades por terra",
-    "detalhe": "A ponte tem 26,6 m de largura e 75 m de altura máxima, com um vão livre de 300 m para os navios passarem. As obras começaram em 1969.",
+    "detalhe": "A ponte tem 26,6 m de largura e um vão central de 300 m para os navios passarem. As obras começaram em 1969.",
     "fonte": "Wikipédia",
     "local": [
      -43.153406,
@@ -2144,7 +2065,7 @@
    "anos": [
     1974.6,
     1975.2,
-    1976
+    1975.9
    ],
    "cam": [
     {
@@ -2167,7 +2088,7 @@
     "titulo": "A <b>fusão</b>",
     "numero": "15/3/1975",
     "legenda": "A Guanabara se funde com o antigo estado do Rio; a cidade vira a capital do novo estado",
-    "detalhe": "Niterói deixou de ser a capital fluminense. Na fusão, a Guanabara tinha cerca de 4,86 milhões de habitantes (estimativa de 1975).",
+    "detalhe": "Niterói deixou de ser a capital fluminense, e o Rio passou a ser um município do novo estado.",
     "fonte": "Wikipédia",
     "local": [
      -43.1747,
@@ -2181,7 +2102,7 @@
    "anos": [
     1976,
     1992.43,
-    1993
+    1992.9
    ],
    "cam": [
     {
@@ -2204,7 +2125,7 @@
     "titulo": "A <b>Eco-92</b>",
     "numero": "108 CHEFES DE ESTADO",
     "legenda": "O Rio recebe a conferência da ONU sobre meio ambiente, com líderes do mundo todo",
-    "detalhe": "A Rio-92 ajudou a espalhar a ideia de desenvolvimento sustentável e gerou as convenções do clima e da biodiversidade. A ptwiki fala em delegações de 175 países.",
+    "detalhe": "A Rio-92 ajudou a espalhar a ideia de desenvolvimento sustentável e gerou as convenções do clima e da biodiversidade.",
     "fonte": "Wikipédia",
     "local": [
      -43.411325,
@@ -2227,7 +2148,7 @@
    "anos": [
     1993,
     2016.6,
-    2017
+    2016.95
    ],
    "cam": [
     {
@@ -2273,7 +2194,7 @@
    "anos": [
     2017,
     2022,
-    2024
+    2022.95
    ],
    "cam": [
     {
@@ -2322,7 +2243,7 @@
     {
      "lon": -43.42,
      "lat": -22.94,
-     "zoom": 10.8,
+     "zoom": 11.0,
      "pitch": 40,
      "bearing": -5
     }
