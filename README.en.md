@@ -14,7 +14,7 @@ Full guide (landing + step by step): **https://inematds.github.io/historia-timel
 
 ## 🎬 Videos
 
-- Florianópolis — from Desterro to capital (6 min, no narration): https://www.youtube.com/watch?v=CZPBmHNFJB0
+- Florianópolis — from Desterro to capital (6 min, no narration): https://www.youtube.com/watch?v=wg8jaN-sSXw
 - Porto Alegre — 1772 to 2024 (narrated): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
 ## Layout
