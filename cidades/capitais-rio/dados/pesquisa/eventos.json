@@ -1,0 +1,560 @@
+{
+ "_meta": {
+  "gerado_em": "2026-10-22",
+  "projeto": "As capitais do Brasil — ato 2: Rio de Janeiro capital (1763–1960). Base: cidades/rio/dados/pesquisa (ids repetidos = eventos copiados de lá, alguns com legenda/detalhe ajustados ao foco 'capital').",
+  "coordenadas": "lat/lon de páginas HTML da Wikipédia (wgCoordinates ou link Especial:Map/geohack) — local.coord_fonte diz qual. Nenhuma coordenada inventada. Eventos da IDEIA de Brasília usam como local o PRÉDIO DO RIO onde a decisão aconteceu (Cadeia Velha, São Cristóvão, Catete, Tiradentes, Monroe); quando o documento só diz 'Rio de Janeiro', o prédio é a sede do poder que assinou/votou naquele ano, marcado 'local inferido'. Todos os pontos dentro do bbox (lon -43.82 a -43.04, lat -23.10 a -22.72).",
+  "nota": "26 eventos + 4 de reserva. Títulos ≤ 30 caracteres (MAIÚSCULAS), legenda ≤ 95, detalhe ≤ 220 — validados por script local. Fontes lidas como página HTML (pt/en.wikipedia.org/wiki/..., planalto.gov.br/ccivil_03, camara.leg.br/legin, biblioteca.ibge.gov.br, PDFs acadêmicos); nenhuma API usada.",
+  "anos_fracionados": "ano com fração = mês (ex.: 1823.43 = 7 de junho), só para ordenar. Na tela mostrar só o ano inteiro.",
+  "fora_do_bbox": "Jataí (comício de JK, 1955), Planaltina (pedra fundamental, 1922), Formosa (Varnhagen, 1877) e o Retângulo Cruls ficam em Goiás — fora do mapa. Entram só no detalhe do evento ancorado no prédio do Rio; o motor pode desenhar uma seta que sai do quadro a noroeste."
+ },
+ "eventos": [
+  {
+   "id": "capital-1763",
+   "ano": 1763,
+   "data_exata": "1763 (posse do Conde da Cunha como 1º vice-rei com sede no Rio; dia diverge — ver RESUMO)",
+   "titulo_curto_PT": "O RIO VIRA CAPITAL",
+   "legenda": "Pombal tira a sede do Brasil de Salvador e a passa para o Rio, porto do ouro de Minas",
+   "detalhe": "O Rio ficava perto das minas (o ouro descia pelo Caminho Novo) e da fronteira sul, onde a Espanha tomara a Colônia do Sacramento em 1762. A Casa dos Governadores virou o Paço dos Vice-Reis.",
+   "local": {"nome": "Paço Imperial (Paço dos Vice-Reis)", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "recurso_visual": "estrela de capital acende sobre o Paço na Praça XV; seta do ouro descendo de Minas pelo norte; seta para o sul (fronteira)",
+   "numero_impacto": "1763",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Paço_Imperial",
+    "https://en.wikipedia.org/wiki/History_of_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Caminho_Novo",
+    "https://www.historia.uff.br/stricto/td/1375.pdf"
+   ],
+   "confianca": "alta",
+   "obs": "Copiado do Rio (mesmo id) com detalhe novo. Motivos: ouro (enwiki History of Rio: 'more useful port for exporting wealth than Salvador'); fronteira sul (tese UFF de I. G. Gonçalves, 2010: o Rio 'representava um melhor centro caso a fronteira Sul precisasse de proteção'; Sacramento tomada em 31/10/1762). Caminho Novo concluído em 1707 (ptwiki). HUD: 'CAPITAL DO BRASIL COLÔNIA'."
+  },
+  {
+   "id": "corte-1808",
+   "ano": 1808.18,
+   "data_exata": "chegada em 07–08/03/1808 (ptwiki: chegou e desembarcou no cais do Largo do Paço em 8/3)",
+   "titulo_curto_PT": "A CORTE CHEGA AO RIO",
+   "legenda": "Fugindo de Napoleão, a família real portuguesa desembarca no cais do Largo do Paço",
+   "detalhe": "O Paço dos Vice-Reis vira Paço Real: o Rio é a única capital europeia fora da Europa. Logo surge uma das primeiras ideias de levar a capital para o interior, longe do mar.",
+   "local": {"nome": "Paço Imperial / cais do Largo do Paço", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "recurso_visual": "frota entra na baía; desembarque no cais; o Paço ganha a coroa",
+   "numero_impacto": "17 NAVIOS DE GUERRA",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Transferência_da_corte_portuguesa_para_o_Brasil",
+    "https://en.wikipedia.org/wiki/Transfer_of_the_Portuguese_court_to_Brazil",
+    "https://en.wikipedia.org/wiki/History_of_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/História_de_Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "Copiado do Rio (mesmo id), detalhe novo. 'Única capital europeia fora da Europa' = enwiki History of Rio ('the only European capital outside of Europe'). 'Primeira ideia': ptwiki História de Brasília — em 1808 o almirante Sidney Smith recomendou a D. João levar a sede para o interior 'alegando motivos estratégicos'. 17 = 8 naus + 5 fragatas + 4 menores (enwiki)."
+  },
+  {
+   "id": "reino-unido-1815",
+   "ano": 1815.96,
+   "data_exata": "16/12/1815",
+   "titulo_curto_PT": "CAPITAL DE UM REINO",
+   "legenda": "O Brasil é elevado a Reino Unido com Portugal e Algarves; o Rio vira a sede da monarquia",
+   "detalhe": "Com a corte instalada desde 1808, o Rio vira a sede do Reino Unido. A bandeira muda: o brasão real passa a ficar sobre a esfera armilar dourada em fundo azul.",
+   "local": {"nome": "Paço Imperial (Paço Real)", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "recurso_visual": "bandeira do HUD troca para a do Reino Unido; coroa sobre o Paço",
+   "numero_impacto": "16/12/1815",
+   "fontes": [
+    "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "Copiado do Rio sem mudança. ptwiki História da cidade: entre 1815 e abril de 1821 sediou o Reino Unido."
+  },
+  {
+   "id": "fico-1822",
+   "ano": 1822.02,
+   "data_exata": "09/01/1822",
+   "titulo_curto_PT": "O DIA DO FICO",
+   "legenda": "No Paço, o príncipe Pedro desobedece Lisboa e anuncia que fica no Brasil",
+   "detalhe": "As Cortes portuguesas exigiam a volta dele. Um abaixo-assinado reuniu cerca de oito mil assinaturas pedindo que ficasse. Foi o primeiro passo da Independência.",
+   "local": {"nome": "Paço Imperial", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "recurso_visual": "multidão na Praça XV; papel de abaixo-assinado; balão de fala FICO",
+   "numero_impacto": "~8 MIL ASSINATURAS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Dia_do_Fico",
+    "https://pt.wikipedia.org/wiki/Paço_Imperial"
+   ],
+   "confianca": "alta",
+   "obs": "Copiado do Rio sem mudança. ptwiki História de Brasília: no Manifesto do Fico 'parece implícito o compromisso da interiorização' (não vai para a tela)."
+  },
+  {
+   "id": "imperio-1822",
+   "ano": 1822.78,
+   "data_exata": "12/10/1822 (aclamação); coroação em 1º/12/1822",
+   "titulo_curto_PT": "CAPITAL DO IMPÉRIO",
+   "legenda": "Um mês após o grito do Ipiranga, Pedro I é aclamado imperador no Campo de Santana",
+   "detalhe": "A Independência foi proclamada em São Paulo em 7/9/1822, mas o Império nasceu no Rio: aclamação no Campo de Santana e coroação em 1º de dezembro. A cidade segue capital.",
+   "local": {"nome": "Campo de Santana (Campo da Aclamação)", "lat": -22.906701, "lon": -43.188563, "coord_fonte": "Wikidata Q10353440 (página HTML)"},
+   "recurso_visual": "bandeira do HUD troca para a do Império; multidão no campo; fogos",
+   "numero_impacto": "12/10/1822",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Pedro_I_do_Brasil",
+    "https://pt.wikipedia.org/wiki/Campo_de_Santana_(Rio_de_Janeiro)"
+   ],
+   "confianca": "media",
+   "obs": "Copiado do Rio sem mudança. Data da infobox ptwiki Pedro I; legenda de pintura na ptwiki Campo de Santana diz '12 de novembro de 1822' — ver RESUMO."
+  },
+  {
+   "id": "constituinte-1823",
+   "ano": 1823.34,
+   "data_exata": "instalada em 03/05/1823; dissolvida na madrugada de 12/11/1823",
+   "titulo_curto_PT": "A CONSTITUINTE NA CADEIA",
+   "legenda": "A primeira Assembleia Constituinte do Brasil se reúne na Cadeia Velha, ao lado do Paço",
+   "detalhe": "O velho prédio de câmara e cadeia virou o primeiro parlamento do país. Pedro I não gostou do rumo e mandou tropas dissolver a Assembleia em 12 de novembro: a 'noite da agonia'.",
+   "local": {"nome": "Cadeia Velha (hoje Palácio Tiradentes)", "lat": -22.90387, "lon": -43.173877, "coord_fonte": "ptwiki Palácio Tiradentes (Especial:Map) — mesmo lote da Cadeia Velha"},
+   "recurso_visual": "a Cadeia Velha (sobrado colonial) acende ao lado do Paço; deputados entram; depois soldados cercam o prédio",
+   "numero_impacto": "3/5/1823",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Assembleia_Constituinte_do_Brasil_de_1823",
+    "https://pt.wikipedia.org/wiki/Cadeia_Velha",
+    "https://pt.wikipedia.org/wiki/Palácio_Tiradentes"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Assembleia Constituinte de 1823: instalada em 3/5/1823 na antiga Casa de Câmara e Cadeia (Cadeia Velha), atual Palácio Tiradentes; dissolvida em 12/11/1823 ('noite da agonia'). A Cadeia Velha foi demolida para o Tiradentes (construção 1922–1926)."
+  },
+  {
+   "id": "brasilia-nome-1823",
+   "ano": 1823.43,
+   "data_exata": "sessão de 07/06/1823 (ptwiki) — 9/6/1823 em índice da Câmara citado em busca, não lido; ver RESUMO",
+   "titulo_curto_PT": "BONIFÁCIO PROPÕE BRASÍLIA",
+   "legenda": "Na Cadeia Velha, lê-se a memória de José Bonifácio: uma nova capital no interior",
+   "detalhe": "Ele propôs a capital na comarca de Paracatu, perto do paralelo 15, com o nome 'Brasília ou Petrópole'. Desde 1813 Hipólito da Costa, no Correio Braziliense (Londres), pedia a capital no interior.",
+   "local": {"nome": "Cadeia Velha (hoje Palácio Tiradentes)", "lat": -22.90387, "lon": -43.173877, "coord_fonte": "ptwiki Palácio Tiradentes (Especial:Map) — mesmo lote da Cadeia Velha"},
+   "recurso_visual": "papel antigo com a palavra BRASÍLIA se escreve sobre a Cadeia Velha; seta pontilhada sai do Rio para noroeste e some no quadro",
+   "numero_impacto": "BRASÍLIA OU PETRÓPOLE",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/História_de_Brasília",
+    "https://biblioteca.ibge.gov.br/visualizacao/dtb/brasilia/brasilia.pdf",
+    "https://vermelho.org.br/?p=197373"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki História de Brasília: 'na sessão de 7 de junho de 1823 da Assembleia Constituinte, foi lido um memorando de José Bonifácio propondo a instalação da capital na recém-criada comarca de Paracatu, com o nome de \"Brasília ou Petrópole\"'. IBGE (DTB Brasília): 'Memória sobre a necessidade de edificar no Brasil uma nova capital', 'Petrópole ou Brasília'. Paralelo 15 = vermelho.org.br (cita Silva, 1999). O nome 'Brasília' já aparecera em folheto anônimo de 1822 (ptwiki). Hipólito: 'a partir de 1813 ... reivindicou a interiorização' (ptwiki)."
+  },
+  {
+   "id": "parlamento-1826",
+   "ano": 1826.35,
+   "data_exata": "06/05/1826 (instalação do primeiro Congresso — Assembleia Geral)",
+   "titulo_curto_PT": "CÂMARA E SENADO NO RIO",
+   "legenda": "Abre o 1º parlamento do Império: Câmara na Cadeia Velha, Senado no Palácio Conde dos Arcos",
+   "detalhe": "O Senado ficou no Conde dos Arcos, no Campo de Santana, de 1826 a 1924. A Câmara ficou na Cadeia Velha até 1914. O Rio passava a ter os três poderes a poucas quadras uns dos outros.",
+   "local": {"nome": "Palácio Conde dos Arcos (Senado do Império; hoje Faculdade Nacional de Direito)", "lat": -22.90722, "lon": -43.19056, "coord_fonte": "ptwiki Faculdade Nacional de Direito (wgCoordinates) — o prédio é o Palácio Conde dos Arcos"},
+   "recurso_visual": "dois prédios acendem ao mesmo tempo (Cadeia Velha na Praça XV e Conde dos Arcos no Campo de Santana), ligados por uma linha",
+   "numero_impacto": "6/5/1826",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Cadeia_Velha",
+    "https://pt.wikipedia.org/wiki/Faculdade_Nacional_de_Direito",
+    "https://pt.wikipedia.org/wiki/Palácio_Tiradentes"
+   ],
+   "confianca": "alta",
+   "obs": "6/5/1826 = ptwiki Cadeia Velha ('em 6 de maio de 1826, instalou-se o primeiro Congresso Legislativo do Brasil'). Senado 1826–1924 no Conde dos Arcos = ptwiki Faculdade Nacional de Direito. Sedes da Câmara (navbox da ptwiki): Cadeia Velha 1826–1889, São Cristóvão 1891, Cadeia Velha 1891–1914, Monroe 1914–1922, Biblioteca Nacional 1922–1926, Tiradentes 1926–1960. 'Três poderes a poucas quadras' = leitura do mapa (Paço, Cadeia Velha, Conde dos Arcos)."
+  },
+  {
+   "id": "municipio-neutro-1834",
+   "ano": 1834.61,
+   "data_exata": "12/08/1834 (Ato Adicional à Constituição de 1824)",
+   "titulo_curto_PT": "O MUNICÍPIO NEUTRO",
+   "legenda": "A capital é separada da província do Rio, que ganha Niterói como capital",
+   "detalhe": "Para que o governo do Império não ficasse dentro de uma província, a cidade virou o Município Neutro (a 'Corte'). Os limites do atual município do Rio vêm daí.",
+   "local": {"nome": "Município Neutro (ponto da infobox)", "lat": -22.9, "lon": -43.183333, "coord_fonte": "enwiki Neutral Municipality (infobox)"},
+   "recurso_visual": "linha de limite se desenha em volta do município; Niterói ganha cor própria do outro lado da baía",
+   "numero_impacto": "12/8/1834",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Município_Neutro",
+    "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "Copiado do Rio sem mudança. HUD: 'MUNICÍPIO NEUTRO'."
+  },
+  {
+   "id": "republica-1889",
+   "ano": 1889.87,
+   "data_exata": "15/11/1889",
+   "titulo_curto_PT": "A REPÚBLICA NO CAMPO",
+   "legenda": "Tropas de Deodoro se reúnem no Campo de Santana e derrubam a monarquia",
+   "detalhe": "Foi um golpe militar com apoio de republicanos civis. A família imperial foi banida. A capital do Império virou capital da República.",
+   "local": {"nome": "Campo de Santana", "lat": -22.906701, "lon": -43.188563, "coord_fonte": "Wikidata Q10353440 (página HTML)"},
+   "recurso_visual": "tropas em formação no campo; bandeira do HUD troca para a republicana",
+   "numero_impacto": "15/11/1889",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Proclamação_da_República_do_Brasil",
+    "https://pt.wikipedia.org/wiki/Campo_de_Santana_(Rio_de_Janeiro)"
+   ],
+   "confianca": "alta",
+   "obs": "Copiado do Rio sem mudança. O nome 'Distrito Federal' só vem com a Constituição de 24/02/1891."
+  },
+  {
+   "id": "itamaraty-1889",
+   "ano": 1889.9,
+   "data_exata": "1889 (sede do governo provisório; Presidência até a mudança para o Catete em 24/02/1897)",
+   "titulo_curto_PT": "O GOVERNO NO ITAMARATY",
+   "legenda": "O governo provisório de Deodoro se instala no Palácio Itamaraty, na antiga Rua Larga",
+   "detalhe": "O palácio neoclássico, de 1851–1855, foi a sede da Presidência nos primeiros anos da República. Depois virou o Ministério das Relações Exteriores, que ganhou dele o apelido 'Itamaraty'.",
+   "local": {"nome": "Palácio Itamaraty (Av. Marechal Floriano)", "lat": -22.902925, "lon": -43.18795, "coord_fonte": "ptwiki Palácio do Itamaraty (Rio de Janeiro) (Especial:Map)"},
+   "recurso_visual": "palácio rosado com pátio acende a oeste do centro; bandeira republicana no mastro",
+   "numero_impacto": "1889",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Palácio_do_Itamaraty_(Rio_de_Janeiro)",
+    "https://pt.wikipedia.org/wiki/Palácio_do_Catete",
+    "https://pt.wikipedia.org/wiki/Proclamação_da_República_do_Brasil"
+   ],
+   "confianca": "media",
+   "obs": "ptwiki Itamaraty: 'sede do primeiro governo republicano (1889–1898)' e, adiante, 'sede do MRE (1897–1970)' / '(1899–1970)'. ptwiki Catete: a Presidência, 'que até então havia sido o Palácio do Itamaraty', passou ao Catete em 24/2/1897. Na tela só '1889' — ver RESUMO. Construção 1851–1855 (infobox ptwiki)."
+  },
+  {
+   "id": "constituicao-1891",
+   "ano": 1891.15,
+   "data_exata": "24/02/1891 (promulgação)",
+   "titulo_curto_PT": "A CONSTITUIÇÃO MANDA MUDAR",
+   "legenda": "A 1ª Constituição da República reserva 14.400 km² no Planalto Central para a futura capital",
+   "detalhe": "Art. 3º: a zona 'será oportunamente demarcada para nela estabelecer-se a futura Capital federal'. Até lá, o Rio vira Distrito Federal. A Constituinte se reuniu no Palácio de São Cristóvão.",
+   "local": {"nome": "Palácio de São Cristóvão (Quinta da Boa Vista)", "lat": -22.90583, "lon": -43.22611, "coord_fonte": "ptwiki Palácio de São Cristóvão (Especial:Map)"},
+   "recurso_visual": "o palácio da Quinta acende; texto do art. 3º se escreve; quadrado de 14.400 km² aparece num minimapa do Brasil",
+   "numero_impacto": "14.400 KM²",
+   "fontes": [
+    "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao91.htm",
+    "https://pt.wikipedia.org/wiki/Constituição_brasileira_de_1891",
+    "https://pt.wikipedia.org/wiki/Palácio_de_São_Cristóvão",
+    "https://pt.wikipedia.org/wiki/Museu_Nacional_(Brasil)",
+    "https://pt.wikipedia.org/wiki/História_de_Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "Texto literal do art. 3º lido no Planalto (constituicao91.htm); art. 2º: 'o antigo Município Neutro constituirá o Distrito Federal, continuando a ser a Capital da União'. Local: ptwiki Palácio de São Cristóvão ('serviu brevemente ... para a assembleia constituinte da primeira constituição republicana') e Museu Nacional ('sediou a primeira Assembleia Constituinte Republicana'). ptwiki Hist. Brasília: fixado 'de forma praticamente consensual'."
+  },
+  {
+   "id": "cruls-1892",
+   "ano": 1892.5,
+   "data_exata": "1892 (partida do Rio; dia não lido em página); relatório em 1894",
+   "titulo_curto_PT": "A MISSÃO CRULS",
+   "legenda": "Do Observatório no Morro do Castelo, o astrônomo Luís Cruls parte para demarcar a nova capital",
+   "detalhe": "A comissão de 22 pessoas percorreu mais de 4 mil km entre o Rio e Goiás e marcou um retângulo de 90 por 160 km, o Retângulo Cruls, que passou a constar em todos os mapas do país.",
+   "local": {"nome": "Morro do Castelo (Observatório Imperial/Nacional até 1920)", "lat": -22.906927, "lon": -43.174532, "coord_fonte": "ptwiki Morro do Castelo (geohack) = Wikidata Q10332478 — aproximação: ponto do morro, não do prédio"},
+   "recurso_visual": "luz no alto do Morro do Castelo; uma fila de cavaleiros/carroças sai rumo ao noroeste e deixa o quadro; retângulo 90×160 aparece no minimapa",
+   "numero_impacto": "90 × 160 KM",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Missão_Cruls",
+    "https://pt.wikipedia.org/wiki/Luís_Cruls",
+    "https://pt.wikipedia.org/wiki/História_de_Brasília",
+    "https://pt.wikipedia.org/wiki/Observatório_Nacional",
+    "https://agencia.fapesp.br/na-trilha-da-historia/918"
+   ],
+   "confianca": "media",
+   "obs": "22 = Cruls + 21 membros (ptwiki Missão Cruls). 4 mil km = FAPESP ('partiu do Rio de Janeiro em 1892'). 90×160 km e 'figurar em todos os mapas' = ptwiki Hist. Brasília. Cruls era diretor do Observatório (ptwiki Luís Cruls), que ficou no Morro do Castelo até 1920 (ptwiki Observatório Nacional). Local de partida exato (estação de trem?) não lido — ver RESUMO. O morro não existe no relevo atual (arrasado em 1922)."
+  },
+  {
+   "id": "catete-1897",
+   "ano": 1897.15,
+   "data_exata": "24/02/1897 (inauguração como sede da Presidência)",
+   "titulo_curto_PT": "O CATETE VIRA PALÁCIO",
+   "legenda": "O antigo Palácio Nova Friburgo, no Catete, passa a ser a sede da Presidência da República",
+   "detalhe": "Foi escolhido no 6º aniversário da Constituição. Até 1960, dezenove pessoas governaram o Brasil dali. As águias de ferro no alto da fachada deram ao prédio o apelido de Palácio das Águias.",
+   "local": {"nome": "Palácio do Catete (hoje Museu da República)", "lat": -22.9258639, "lon": -43.1762278, "coord_fonte": "ptwiki Palácio do Catete (Especial:Map)"},
+   "recurso_visual": "palácio de 3 andares com águias na platibanda acende na Rua do Catete; bandeira presidencial",
+   "numero_impacto": "19 PRESIDENTES",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Palácio_do_Catete"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Catete: 'inaugurado como sede da Presidência da República em 24 de fevereiro de 1897, no sexto aniversário da primeira Constituição republicana'; 'Da inauguração em 1897 até a mudança da capital federal em 1960, dezenove pessoas ocuparam o Palácio do Catete como Presidentes'. 'Palácio das Águias' = nome alternativo na infobox ptwiki; a mesma página: 'Por volta de 1900, no lugar das águias de ferro originalmente existentes no topo da fachada', foram postas 7 esculturas alegóricas de bronze — em 1897 o modelo leva águias; depois de ~1900, esculturas. Residência oficial de Vargas no Estado Novo foi o Palácio Guanabara; a Presidência voltou ao Catete em 1946 (ptwiki Palácio Guanabara)."
+  },
+  {
+   "id": "avenida-central-1904",
+   "ano": 1904.2,
+   "data_exata": "obras desde março de 1904; inaugurada em 07/09/1904; aberta ao tráfego em 15/11/1905",
+   "titulo_curto_PT": "A VITRINE DA CAPITAL",
+   "legenda": "Para abrir a Avenida Central, a reforma de Pereira Passos derruba casas e cortiços do centro",
+   "detalhe": "A avenida tinha 1.800 m por 33 m de largura, do porto ao mar. Quase 3.900 pessoas foram desalojadas. A reforma tirou força, por anos, da ideia de mudar a capital.",
+   "local": {"nome": "Avenida Rio Branco (antiga Avenida Central)", "lat": -22.904722, "lon": -43.1775, "coord_fonte": "Wikidata Q4828121 (página HTML)"},
+   "recurso_visual": "casinhas coloniais somem numa faixa reta; prédios ecléticos nascem dos dois lados; no fim da avenida, Theatro, Monroe e Biblioteca",
+   "numero_impacto": "641 CASAS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Avenida_Rio_Branco_(Rio_de_Janeiro)",
+    "https://pt.wikipedia.org/wiki/Pereira_Passos",
+    "https://pt.wikipedia.org/wiki/História_de_Brasília"
+   ],
+   "confianca": "media",
+   "obs": "Copiado do Rio (mesmo id) com título e fim do detalhe novos. 'Tirou força': ptwiki Hist. Brasília — 'Com o saneamento e reformas urbanas do Rio de Janeiro ... pareceram minimizados alguns dos motivos para a mudança, e o assunto perdeu vigor' (moções de 1903–1919 sem recepção). 641 casas × 300 casas: ver RESUMO do Rio."
+  },
+  {
+   "id": "municipal-1909",
+   "ano": 1909.53,
+   "data_exata": "14/07/1909 (inauguração; obra iniciada em 1905)",
+   "titulo_curto_PT": "O THEATRO MUNICIPAL",
+   "legenda": "No fim da Avenida Central abre o teatro inspirado na Ópera de Paris, de Charles Garnier",
+   "detalhe": "Erguido sobre 1.600 estacas de madeira, fecha a praça que seria a Cinelândia, ao lado da Biblioteca Nacional e do Palácio Monroe: a capital queria parecer Paris.",
+   "local": {"nome": "Theatro Municipal do Rio de Janeiro (Cinelândia)", "lat": -22.90889, "lon": -43.17667, "coord_fonte": "ptwiki Theatro Municipal do Rio de Janeiro (Especial:Map)"},
+   "recurso_visual": "o teatro nasce com as três cúpulas douradas e a águia de cobre no alto; luzes da praça acendem",
+   "numero_impacto": "14/7/1909",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Theatro_Municipal_do_Rio_de_Janeiro",
+    "https://en.wikipedia.org/wiki/Timeline_of_Rio_de_Janeiro",
+    "https://pt.wikipedia.org/wiki/Palácio_Monroe"
+   ],
+   "confianca": "alta",
+   "obs": "Data, Ópera de Paris/Garnier e 1.600 estacas = ptwiki Theatro Municipal. Conjunto com Biblioteca Nacional, Museu de Belas Artes e Monroe = ptwiki Palácio Monroe. 'Queria parecer Paris' é síntese editorial (o desenho foi inspirado na Ópera de Paris); se o revisor pedir, trocar por 'desenho inspirado na Ópera de Paris'."
+  },
+  {
+   "id": "pedra-fundamental-1922",
+   "ano": 1922.05,
+   "data_exata": "Decreto 4.494 de 18/01/1922; pedra lançada em 07/09/1922 (Planaltina, GO)",
+   "titulo_curto_PT": "A PEDRA FUNDAMENTAL",
+   "legenda": "O presidente Epitácio Pessoa sanciona o decreto que manda lançar a pedra da futura capital",
+   "detalhe": "No centenário da Independência, 7/9/1922, a pedra foi posta no planalto, perto de Planaltina (GO). O decreto pedia também estudos de uma ferrovia até os portos do Rio e de Santos.",
+   "local": {"nome": "Palácio do Catete (sede da Presidência) — local inferido", "lat": -22.9258639, "lon": -43.1762278, "coord_fonte": "ptwiki Palácio do Catete (Especial:Map)"},
+   "recurso_visual": "papel do decreto assinado no Catete; seta sai a noroeste; no minimapa, um obelisco aparece no retângulo",
+   "numero_impacto": "7/9/1922",
+   "fontes": [
+    "https://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-4494-18-janeiro-1922-545132-publicacaooriginal-57116-pl.html",
+    "https://biblioteca.ibge.gov.br/visualizacao/dtb/brasilia/brasilia.pdf",
+    "https://pt.wikipedia.org/wiki/História_de_Brasília",
+    "https://pt.wikipedia.org/wiki/Palácio_do_Catete"
+   ],
+   "confianca": "alta",
+   "obs": "Texto do decreto lido na Câmara (legin): 'no dia 7 de setembro de 1922, seja collocada no ponto mais apropriado da zona ... a pedra fundamental'; art. 3º: ferrovia 'para os portos do Rio de Janeiro e de Santos'; assinado 'Rio de Janeiro, 18 de janeiro de 1922 ... EPITACIO PESSÔA'. É resolução do Congresso sancionada pelo presidente. Local da assinatura não escrito no decreto: Catete = sede da Presidência 1897–1960 (inferido). Planaltina = IBGE DTB. IBGE diz 'Em 1920 ... assina decreto' — ver RESUMO."
+  },
+  {
+   "id": "monroe-1925",
+   "ano": 1925,
+   "data_exata": "1925 (Senado se muda para o Monroe; fica até 1960)",
+   "titulo_curto_PT": "O SENADO NO MONROE",
+   "legenda": "O Senado deixa o Conde dos Arcos e passa ao Palácio Monroe, na ponta da Avenida Central",
+   "detalhe": "O palácio fora o pavilhão do Brasil na Exposição de St. Louis (1904), remontado no Rio em 1906. Ficou com o Senado até 1960 e foi demolido em 1976.",
+   "local": {"nome": "Palácio Monroe (demolido em 1976; hoje praça na Cinelândia)", "lat": -22.91245, "lon": -43.17545, "coord_fonte": "ptwiki Palácio Monroe (Especial:Map / geohack 22°54'44.82\"S 43°10'31.62\"O)"},
+   "recurso_visual": "o Monroe, com a cúpula e os leões de mármore, acende no fim da avenida (ver predios.json)",
+   "numero_impacto": "1925–1960",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Palácio_Monroe",
+    "https://pt.wikipedia.org/wiki/Faculdade_Nacional_de_Direito"
+   ],
+   "confianca": "media",
+   "obs": "ptwiki Monroe: Senado 1925–1960; Câmara 1914–1922 (sede provisória); pavilhão de St. Louis 1904, reconstruído e reinaugurado em 1906 para a 3ª Conferência Pan-Americana; demolido em 1976 sob Geisel. ptwiki Faculdade Nacional de Direito diz Senado no Conde dos Arcos 'entre 1826 e 1924' (1924 × 1925 — ver RESUMO). Mês não lido."
+  },
+  {
+   "id": "tiradentes-1926",
+   "ano": 1926.34,
+   "data_exata": "06/05/1926 (inauguração; obra de 1922 a 1926)",
+   "titulo_curto_PT": "O PALÁCIO TIRADENTES",
+   "legenda": "No lugar da Cadeia Velha, demolida, abre a nova sede da Câmara dos Deputados",
+   "detalhe": "A Câmara ficou ali de 1926 a 1960 (no Estado Novo o prédio abrigou o DIP). Foi aqui que a Constituinte de 1946 mandou de novo levar a capital para o Planalto.",
+   "local": {"nome": "Palácio Tiradentes (Rua Primeiro de Março)", "lat": -22.90387, "lon": -43.173877, "coord_fonte": "ptwiki Palácio Tiradentes (Especial:Map)"},
+   "recurso_visual": "a Cadeia Velha some e o palácio eclético com cúpula e a estátua de Tiradentes nasce no mesmo lote",
+   "numero_impacto": "6/5/1926",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Palácio_Tiradentes",
+    "https://pt.wikipedia.org/wiki/Cadeia_Velha"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Palácio Tiradentes: inaugurado em 6/5/1926; Câmara 1926–1960; DIP a partir de 1937; construção 1922–1926 (infobox). Mesma data (6 de maio) da instalação do 1º Congresso em 1826 (coincidência, não citada pela página)."
+  },
+  {
+   "id": "constituicao-1946",
+   "ano": 1946.71,
+   "data_exata": "18/09/1946 (promulgação; Constituinte instalada em 01/02/1946)",
+   "titulo_curto_PT": "A CAPITAL SERÁ TRANSFERIDA",
+   "legenda": "No Palácio Tiradentes, a nova Constituição repete a ordem: a capital vai para o Planalto",
+   "detalhe": "Art. 4º das Disposições Transitórias: 'A Capital da União será transferida para o planalto central do País'. O presidente teria 60 dias para nomear técnicos que estudassem o lugar.",
+   "local": {"nome": "Palácio Tiradentes", "lat": -22.90387, "lon": -43.173877, "coord_fonte": "ptwiki Palácio Tiradentes (Especial:Map)"},
+   "recurso_visual": "o Tiradentes acende; a frase do art. 4º se escreve sobre o prédio; seta a noroeste",
+   "numero_impacto": "60 DIAS",
+   "fontes": [
+    "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao46.htm",
+    "https://pt.wikipedia.org/wiki/Assembleia_Nacional_Constituinte_de_1946",
+    "https://pt.wikipedia.org/wiki/História_de_Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "Texto literal do ADCT art. 4º e § 1º lido no Planalto (constituicao46.htm). Local de reunião = infobox ptwiki Assembleia Constituinte de 1946 ('Palácio Tiradentes'). A Constituição de 1934 também mandava mudar; a de 1937 silenciou (ptwiki Hist. Brasília) — fora da tela."
+  },
+  {
+   "id": "poli-coelho-1948",
+   "ano": 1948.5,
+   "data_exata": "relatório entregue em 1948; examinado pelo Congresso em 1949",
+   "titulo_curto_PT": "A COMISSÃO POLI COELHO",
+   "legenda": "A comissão do general Djalma Poli Coelho entrega o estudo do lugar da nova capital",
+   "detalhe": "Ela confirmou o planalto, mas no Congresso o relator, deputado Eunápio de Queirós, indicou um lugar fora do Planalto Central. O debate travou e a mudança ficou parada.",
+   "local": {"nome": "Palácio Tiradentes (Câmara, onde o relatório foi discutido) — local inferido", "lat": -22.90387, "lon": -43.173877, "coord_fonte": "ptwiki Palácio Tiradentes (Especial:Map)"},
+   "recurso_visual": "pilha de relatórios sobre o Tiradentes; um mapa com dois pontos que se disputam",
+   "numero_impacto": "1948",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/História_de_Brasília",
+    "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l2874.htm"
+   ],
+   "confianca": "media",
+   "obs": "ptwiki Hist. Brasília: comissão liderada por Poli Coelho 'entregou um relatório em 1948, examinado pelo Congresso no ano seguinte. Mas o parecer do relator, o deputado Eunápio de Queirós, indicou um local fora do Planalto Central'. 'Confirmou o planalto' é inferência (o ADCT mandava estudar no planalto; a Lei 2.874 cita a 'Comissão de Estudos para Localização da Nova Capital do Brasil, de 1946'); se o revisor pedir, tirar. 'Travou' = síntese."
+  },
+  {
+   "id": "vargas-1954",
+   "ano": 1954.65,
+   "data_exata": "24/08/1954, 8h30",
+   "titulo_curto_PT": "O TIRO NO CATETE",
+   "legenda": "Em crise, o presidente Getúlio Vargas se mata no quarto do Palácio do Catete",
+   "detalhe": "Vargas tinha mandado, em 1953, refazer o estudo do lugar da capital, com levantamento aéreo do Retângulo Cruls. O palácio da Presidência virou palco da maior crise política da década.",
+   "local": {"nome": "Palácio do Catete", "lat": -22.9258639, "lon": -43.1762278, "coord_fonte": "ptwiki Palácio do Catete (Especial:Map)"},
+   "recurso_visual": "noite; uma janela do Catete apaga; manchete de jornal; multidão na Rua do Catete",
+   "numero_impacto": "24/8/1954",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Suicídio_de_Getúlio_Vargas",
+    "https://pt.wikipedia.org/wiki/História_de_Brasília",
+    "https://biblioteca.ibge.gov.br/visualizacao/dtb/brasilia/brasilia.pdf"
+   ],
+   "confianca": "alta",
+   "obs": "Data, hora e local = infobox ptwiki Suicídio de Getúlio Vargas. 1953 = ptwiki Hist. Brasília ('Nova comissão foi formada em 1953 por ordem de Getúlio Vargas') e IBGE ('Em 1953, o Presidente Getúlio Vargas determinou o levantamento aéreo do Quadrilátero Cruls'). 'Maior crise da década' é síntese; pode sair."
+  },
+  {
+   "id": "belcher-1955",
+   "ano": 1955.3,
+   "data_exata": "1954 (relatório Belcher, 5 sítios) e 1955 (escolha do Sítio Castanho, governo Café Filho)",
+   "titulo_curto_PT": "O SÍTIO CASTANHO",
+   "legenda": "Com fotos aéreas da firma americana Belcher, a comissão escolhe o lugar exato da capital",
+   "detalhe": "Dos cinco sítios estudados, venceu o Castanho: 5.850 km² entre os rios Preto e Descoberto. O chefe da comissão, marechal José Pessoa, sugeriu chamar a cidade de Vera Cruz.",
+   "local": {"nome": "Palácio do Catete (sede da Presidência de Café Filho) — local inferido", "lat": -22.9258639, "lon": -43.1762278, "coord_fonte": "ptwiki Palácio do Catete (Especial:Map)"},
+   "recurso_visual": "fotos aéreas caem sobre uma mesa; no minimapa, 5 pontos no retângulo e um fica aceso",
+   "numero_impacto": "5.850 KM²",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/História_de_Brasília",
+    "https://biblioteca.ibge.gov.br/visualizacao/dtb/brasilia/brasilia.pdf",
+    "https://en.wikipedia.org/wiki/History_of_Brasília"
+   ],
+   "confianca": "media",
+   "obs": "ptwiki Hist. Brasília: Donald Belcher & Associates; 'cinco pontos favoráveis dentro do Retângulo Cruls'; 'no ano seguinte, já no governo de Café Filho, a comissão escolheu o Sítio Castanho ... 5850 km² entre os rios Preto e Descoberto'; José Pessoa sugeriu 'Vera Cruz'. 5.850 km² igual no IBGE e na enwiki. Local da decisão não escrito: comissão federal, Presidência no Catete (inferido)."
+  },
+  {
+   "id": "novacap-1956",
+   "ano": 1956.72,
+   "data_exata": "Lei 2.874 de 19/09/1956 (comício de Jataí em 04/04/1955 — ou 05/04, ver RESUMO)",
+   "titulo_curto_PT": "A LEI DA NOVACAP",
+   "legenda": "JK sanciona a lei que cria a Novacap e dá à nova capital o nome de Brasília",
+   "detalhe": "Em 1955, num comício em Jataí (GO), um eleitor perguntou se ele cumpriria a Constituição e mudaria a capital; JK prometeu. A lei de 1956 diz no art. 33: 'É dado o nome de Brasília'.",
+   "local": {"nome": "Palácio do Catete (sede da Presidência) — local inferido", "lat": -22.9258639, "lon": -43.1762278, "coord_fonte": "ptwiki Palácio do Catete (Especial:Map)"},
+   "recurso_visual": "a palavra BRASÍLIA se escreve sobre o Catete; seta forte a noroeste; contador 'faltam 3 anos e meio'",
+   "numero_impacto": "19/9/1956",
+   "fontes": [
+    "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l2874.htm",
+    "https://pt.wikipedia.org/wiki/Juscelino_Kubitschek",
+    "https://pt.wikipedia.org/wiki/História_de_Brasília",
+    "https://biblioteca.ibge.gov.br/visualizacao/dtb/brasilia/brasilia.pdf"
+   ],
+   "confianca": "alta",
+   "obs": "Lei 2.874 lida no Planalto: art. 33 'É dado o nome de Brasília à nova Capital Federal'; 'Rio de Janeiro, em 19 de setembro de 1956 ... JUSCELINO KUBITSCHEK'. Lei não diz o palácio: Catete inferido (sede da Presidência até 1960; a residência de JK era o Laranjeiras — ptwiki Palácio Guanabara). Jataí: 4/4/1955 (ptwiki JK, pergunta de 'Toniquinho') × 5/4/1955 (ptwiki Hist. Brasília) — tela não mostra o dia. IBGE: a lei veio da 'Mensagem de Anápolis'. Jataí fica fora do bbox."
+  },
+  {
+   "id": "lei-mudanca-1957",
+   "ano": 1957.75,
+   "data_exata": "Lei 3.273 de 01/10/1957",
+   "titulo_curto_PT": "DATA MARCADA: 21 DE ABRIL",
+   "legenda": "O Congresso aprova e JK sanciona: a capital será transferida no dia 21 de abril de 1960",
+   "detalhe": "Senado (no Monroe) e Câmara (no Tiradentes) votaram a lei; ela também pôs a estrada Rio–Brasília no plano rodoviário. Lacerda e outros críticos atacavam o custo e a pressa da obra.",
+   "local": {"nome": "Palácio Monroe (Senado) — local inferido", "lat": -22.91245, "lon": -43.17545, "coord_fonte": "ptwiki Palácio Monroe (Especial:Map)"},
+   "recurso_visual": "Monroe e Tiradentes acendem juntos; calendário 21/4/1960 aparece; contagem regressiva começa",
+   "numero_impacto": "21/4/1960",
+   "fontes": [
+    "http://www.planalto.gov.br/ccivil_03/leis/l3273.htm",
+    "https://pt.wikipedia.org/wiki/História_de_Brasília",
+    "https://pt.wikipedia.org/wiki/Carlos_Lacerda",
+    "https://pt.wikipedia.org/wiki/Palácio_Monroe",
+    "https://pt.wikipedia.org/wiki/Palácio_Tiradentes"
+   ],
+   "confianca": "alta",
+   "obs": "Lei 3.273 lida no Planalto: art. 1º 'será transferida, no dia 21 de abril de 1960, a Capital da União'; art. 3º inclui 'a ligação Rio-Brasília' no Plano Rodoviário Nacional; 'Rio de Janeiro, em 1º de outubro de 1957'. O pedido citava '1957' sem dia. Críticos (Lacerda, Gudin, Gilberto Freyre, Corção) e custo nunca determinado = ptwiki Hist. Brasília; Lacerda 'atacando ... a construção de Brasília' = ptwiki Carlos Lacerda."
+  },
+  {
+   "id": "guanabara-1960",
+   "ano": 1960.3,
+   "data_exata": "21/04/1960 (capital vai para Brasília); Lei 3.752 de 14/04/1960",
+   "titulo_curto_PT": "ADEUS, CAPITAL",
+   "legenda": "A capital vai para Brasília e o antigo Distrito Federal vira o Estado da Guanabara",
+   "detalhe": "Depois de 197 anos, o Rio virou uma cidade-estado, com os mesmos limites. O Palácio Guanabara passou a sede do novo estado; Catete, Tiradentes e Monroe perderam os poderes da República.",
+   "local": {"nome": "Palácio Guanabara (sede do governo da Guanabara a partir de 1960)", "lat": -22.9375, "lon": -43.18389, "coord_fonte": "ptwiki Palácio Guanabara (Especial:Map)"},
+   "recurso_visual": "estrela de capital apaga sobre Catete, Tiradentes e Monroe e voa para fora do quadro a noroeste; Palácio Guanabara acende; HUD troca para ESTADO DA GUANABARA",
+   "numero_impacto": "197 ANOS CAPITAL",
+   "fontes": [
+    "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l3752.htm",
+    "https://pt.wikipedia.org/wiki/Estado_da_Guanabara",
+    "https://pt.wikipedia.org/wiki/Palácio_Guanabara",
+    "https://pt.wikipedia.org/wiki/Palácio_Tiradentes",
+    "https://pt.wikipedia.org/wiki/Palácio_Monroe",
+    "https://en.wikipedia.org/wiki/Timeline_of_Rio_de_Janeiro"
+   ],
+   "confianca": "alta",
+   "obs": "Copiado do Rio (mesmo id) com local e detalhe novos. Lei 3.752 (Planalto): o DF passa a 'constituir o Estado da Guanabara, com os mesmos limites geográficos'. ptwiki Palácio Guanabara: 'Em 1960 ... passa a ser a sede do Governo do Estado da Guanabara'. Tiradentes vira Assembleia da Guanabara (1960–1975, ptwiki). 197 = 1960 − 1763 (conta). Brasília inaugurada à 0h de 21/4/1960 (ptwiki Hist. Brasília)."
+  }
+ ],
+ "reserva": [
+  {
+   "id": "arcos-1750",
+   "ano": 1750,
+   "data_exata": "inaugurado em 1750 (1º aqueduto pronto em 1723; reconstrução ordenada em 1744)",
+   "recurso_visual": "arcos brancos nascem um a um entre os morros; fio de água corre até o chafariz",
+   "titulo_curto_PT": "OS ARCOS DA CARIOCA",
+   "legenda": "Um aqueduto de pedra leva a água do rio Carioca do morro de Santa Teresa até o centro",
+   "detalhe": "São 42 arcos duplos e 270 metros de comprimento, feitos por trabalho escravizado indígena e africano. A água saía em 16 bicas de bronze, no chafariz junto ao Convento de Santo Antônio.",
+   "local": {"nome": "Arcos da Lapa (Aqueduto da Carioca)", "lat": -22.912594, "lon": -43.17985, "coord_fonte": "ptwiki Aqueduto da Carioca (wgCoordinates)"},
+   "numero_impacto": "42 ARCOS",
+   "fontes": ["https://pt.wikipedia.org/wiki/Aqueduto_da_Carioca", "https://en.wikipedia.org/wiki/Carioca_Aqueduct"],
+   "confianca": "alta",
+   "obs": "Copiado do Rio. Só se o ato precisar de um marco antes de 1763 (cidade pronta para ser capital)."
+  },
+  {
+   "id": "varnhagen-1877",
+   "ano": 1877,
+   "data_exata": "1877 (viagem a Goiás); campanha desde ~1839",
+   "recurso_visual": "seta pontilhada sai do Rio para noroeste; nome FORMOSA aparece no minimapa",
+   "titulo_curto_PT": "VARNHAGEN VAI AO PLANALTO",
+   "legenda": "O historiador Varnhagen viaja a Goiás e escolhe Formosa para a futura capital",
+   "detalhe": "Desde 1839 ele fazia campanha pela mudança. Primeiro quis São João del-Rei; depois preferiu o Planalto Central, a mesma zona que a Missão Cruls demarcaria em 1892.",
+   "local": {"nome": "sem prédio no Rio — genérico (Paço Imperial)", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "genérico: ptwiki Paço Imperial (wgCoordinates)"},
+   "numero_impacto": "1877",
+   "fontes": ["https://pt.wikipedia.org/wiki/História_de_Brasília", "https://biblioteca.ibge.gov.br/visualizacao/dtb/brasilia/brasilia.pdf"],
+   "confianca": "alta",
+   "obs": "Reserva: a viagem é em Goiás (fora do bbox) e nenhuma página lida liga o fato a um prédio do Rio. Melhor citar só no detalhe/fala do cruls-1892 ('na mesma zona indicada por Varnhagen', ptwiki)."
+  },
+  {
+   "id": "abolicao-1888",
+   "ano": 1888.36,
+   "data_exata": "13/05/1888",
+   "recurso_visual": "multidão na Praça XV; luz sobre o Paço",
+   "titulo_curto_PT": "A LEI ÁUREA",
+   "legenda": "No Paço da cidade, a princesa Isabel assina a lei que acaba com a escravidão no Brasil",
+   "detalhe": "A lei tinha dois artigos: 'É declarada extinta a escravidão no Brasil' e 'Revogam-se as disposições em contrário'. O povo lotou o largo em frente ao Paço.",
+   "local": {"nome": "Paço Imperial", "lat": -22.903508, "lon": -43.174233, "coord_fonte": "ptwiki Paço Imperial (wgCoordinates)"},
+   "numero_impacto": "13/5/1888",
+   "fontes": ["https://pt.wikipedia.org/wiki/Lei_Áurea", "https://pt.wikipedia.org/wiki/Paço_Imperial"],
+   "confianca": "alta",
+   "obs": "Copiado do Rio. Ato de poder no Paço; entra se houver tempo no ato."
+  },
+  {
+   "id": "pan-americana-1906",
+   "ano": 1906,
+   "data_exata": "1906 (reinauguração do pavilhão para a 3ª Conferência Pan-Americana; mês não lido)",
+   "recurso_visual": "o Monroe nasce no fim da Avenida Central; bandeiras das Américas na fachada",
+   "titulo_curto_PT": "O MONROE CHEGA AO RIO",
+   "legenda": "O pavilhão do Brasil em St. Louis é remontado na Cinelândia para a Conferência Pan-Americana",
+   "detalhe": "A capital recebia diplomatas de toda a América num prédio novo no fim da Avenida Central. O pavilhão ganhou o nome do presidente americano James Monroe.",
+   "local": {"nome": "Palácio Monroe", "lat": -22.91245, "lon": -43.17545, "coord_fonte": "ptwiki Palácio Monroe (Especial:Map)"},
+   "numero_impacto": "1906",
+   "fontes": ["https://pt.wikipedia.org/wiki/Palácio_Monroe"],
+   "confianca": "media",
+   "obs": "Reserva para o caso de o Monroe precisar nascer antes de 1925. Mês da conferência não lido (ano só)."
+  }
+ ],
+ "motivos": {
+  "nota": "Por que mudar a capital — argumentos da época, cada um com fonte lida. Uso: falas da fase 2 e o bloco final do ato; não são cartões.",
+  "a_favor": [
+   {"motivo": "Segurança: capital no litoral, exposta a ataque pelo mar", "quando": "1808–1823", "fonte": "ptwiki História de Brasília (Sidney Smith 1808, 'motivos estratégicos'); Correio Braziliense 2022 (Hipólito queria 'se proteger de eventuais ataques estrangeiros'); vermelho.org.br (Bonifácio: paralelo 15, clima e segurança)"},
+   {"motivo": "Ocupar e integrar o interior (coesão territorial)", "quando": "1813–1960", "fonte": "Correio Braziliense 2022 ('ocupar o país continental'); ptwiki Hist. Brasília ('defesa estratégica, coesão territorial e criação de uma cultura autenticamente nacional'); enwiki History of Brasília ('lessen the economic and social reliance on Rio de Janeiro and the South-East')"},
+   {"motivo": "Fundar uma cidade nova, como Washington, em vez de usar uma existente", "quando": "1813", "fonte": "vermelho.org.br (Hipólito citava Washington; cita Silva, 1999)"},
+   {"motivo": "Afastar o governo do Rio 'agitado demais' e de sua influência política", "quando": "1922–1926 e 1945–46", "fonte": "ptwiki Hist. Brasília (governo Artur Bernardes; greves do fim do Estado Novo vistas como ameaça à ordem)"},
+   {"motivo": "Desenvolvimentismo de JK: '50 anos em 5', passo para a independência e a unidade do país", "quando": "1955–1960", "fonte": "ptwiki Hist. Brasília (Plano de Metas; discurso 'progressista e entusiasta')"},
+   {"motivo": "Cumprir a Constituição (1891, 1934, 1946)", "quando": "1955", "fonte": "ptwiki Juscelino Kubitschek (pergunta em Jataí sobre o art. 4º do ADCT de 1946)"}
+  ],
+  "contra": [
+   {"motivo": "Gasto desnecessário de dinheiro", "quando": "1945–1946 e 1956–1960", "fonte": "ptwiki Hist. Brasília ('dispêndio desnecessário de recursos'; 'O custo da obra monumental nunca foi determinado')"},
+   {"motivo": "Inflação pela emissão de moeda", "quando": "governo JK", "fonte": "ptwiki Hist. Brasília ('crescimento da inflação pela grande emissão de moeda')"},
+   {"motivo": "Oposição política e crítica à pressa e ao improviso", "quando": "1956–1960", "fonte": "ptwiki Hist. Brasília (Lacerda, Gudin, Gilberto Freyre, Corção); ptwiki Carlos Lacerda"},
+   {"motivo": "Com o Rio saneado e reformado, a mudança parecia menos urgente", "quando": "1903–1919", "fonte": "ptwiki Hist. Brasília (reformas de Rodrigues Alves; moções sem recepção)"},
+   {"motivo": "Disputa pelo lugar (relator de 1949 propôs local fora do Planalto)", "quando": "1949", "fonte": "ptwiki Hist. Brasília (Eunápio de Queirós)"}
+  ]
+ }
+}

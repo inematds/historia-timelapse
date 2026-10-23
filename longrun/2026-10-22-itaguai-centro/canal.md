@@ -21,3 +21,9 @@ Formato: `- AAAA-MM-DD HH:MM · fato|aprendizado|glossário|armadilha · texto`
 - Refazer cena: `bash centro/refaz.sh`; render: `bash centro/motor/render_trechos.sh cidades/itaguai-centro/cena cidades/itaguai-centro/final/video.mp4 60`; fase 3: trocar narracao.json por narracao_avatar.json, rodar centro/scripts/montar_avatar.py, voltar (avatar/ajustes.json corrige 110–124 s que o Whisper pulou).
 - Armadilhas: halo/sombra com _TerrainExtension + position z desloca → halos sem ext; textura de perto borra → chão liso (centro/scripts/textura_lisa.py) + ruas vetoriais; avatar drawbox fill dava clarão amarelo → só borda (cópia em centro/scripts).
 - Tokens (medido 11:12): centro 96,1 M (saída 427 mil); POA 66,7 M; Floripa 167,2 M + 63,6 M (com Itaguaí município).
+
+## 2026-10-23 · capitais do Brasil (outra produção, mesma sessão) — notas para retomar
+- Pedido do Nei: vídeo "as 3 capitais" (Salvador→Rio→Brasília), fase 1 primeiro e mandar; "contar em detalhes como e pq foi a mudança; os prédios têm que ser bem definidos". Plano e passos: `cidades/capitais/FASES.md`.
+- 3 atos = 3 cidades do motor (capitais-ssa, capitais-rio, capitais-bsb), motor da versão centro + `centro/motor/marcos-capitais.js` (tipos novos). Comum: `cidades/capitais/comum.py`. Emenda: `cidades/capitais/montar.py`.
+- Armadilhas: `codex exec` precisa `< /dev/null`; `pkill -f` com padrão do próprio comando mata o comando; Geofabrik lento → openstreetmap.fr por estado; DF: bairros no admin_level 8; `extrai_osm` regrava agua.geojson com o Lago Paranoá (tirar de novo); câmera precisa de `z` (chão×exz) em TODAS as chaves; palácio em destaque só ganha faixa amarela (não pinta tudo).
+- Emendas de ano: SSA termina 1763.55; Rio começa 1763.55 e termina na Novacap (1956.74); BSB começa na visita de JK (2/10/1956).

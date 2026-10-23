@@ -12,17 +12,18 @@ const opt = (k, d) => { const i = resto.indexOf(k); return i >= 0 ? resto[i + 1]
 const vistas = opt('--vistas', 'lateral,drone,igreja,nasce,praca,estacao,futuro').match(/\{[^}]*\}|[^,]+/g);   // nomes ou JSON {"xy":[x,y],"zoom","pitch","bearing"}
 const saida = path.resolve(aqui, opt('--saida', '../vitrine')); fs.mkdirSync(saida, { recursive: true });
 const prefixo = opt('--prefixo', 'vitrine');
+const PAGINA = opt('--pagina', 'vitrine.html');
 const TIPOS = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml' };
 
 const srv = http.createServer((req, res) => {
-  const u = decodeURIComponent(req.url.split('?')[0]), f = path.join(aqui, u === '/' ? 'vitrine.html' : u);
+  const u = decodeURIComponent(req.url.split('?')[0]), f = path.join(aqui, u === '/' ? PAGINA : u);
   if (!f.startsWith(aqui)) { res.writeHead(403); return res.end(); }
   fs.readFile(f, (e, b) => { if (e) { res.writeHead(404); return res.end(); } res.writeHead(200, { 'Content-Type': TIPOS[path.extname(f)] || 'application/octet-stream' }); res.end(b); });
 }).listen(0, '127.0.0.1');
 await new Promise(r => srv.once('listening', r));
 const q = new URLSearchParams({ luz: opt('--luz', 'se'), ez: opt('--ez', '1'), rotulos: opt('--rotulos', '1') });
 if (opt('--k')) q.set('k', opt('--k'));   // progresso fixo da construção (0..1) para todos os marcos sem k próprio
-const url = `http://127.0.0.1:${srv.address().port}/vitrine.html?${q}`;
+const url = `http://127.0.0.1:${srv.address().port}/${PAGINA}?${q}`;
 
 const browser = await chromium.launch({ args: (process.env.GL || '--use-angle=vulkan --enable-features=Vulkan').split(' ').concat(['--ignore-gpu-blocklist', '--enable-gpu-rasterization']) });
 const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });

@@ -1,0 +1,868 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "o_que_e": "Prédios-marco de Salvador para modelar em 3D (deck.gl: caixas/extrusões com telhado, torres, cores) no ato 1 de 'As capitais do Brasil' (Salvador capital, 1549–1763) e no epílogo (Alfândega/Mercado Modelo, Elevador Lacerda). Para cada prédio: forma de hoje (forma) e forma na época da capital (forma_em_1549_1763), que é a que o vídeo usa no ato 1. Prédios com fora_do_periodo=true só entram no epílogo.",
+    "coordenadas": "lat/lon lidos de páginas HTML: página do item no Wikidata (atributos data-lat/data-lon do mapa) ou ptwiki (link Especial:Map / wgCoordinates da infobox) — coord_fonte diz qual. Onde as duas existem, usou-se a de mais casas decimais e a outra fica em obs. Lugar sem coordenada publicada (antiga Sé, portas da cidade) usa o ponto publicado mais próximo e é marcado 'aproximação'. Todos os pontos dentro do bbox (lon -38.66 a -38.30, lat -13.02 a -12.75). Centro antigo = Praça Tomé de Sousa (ptwiki -12.97454, -38.51277).",
+    "medidas": "'publicada' = número lido numa fonte (ptwiki, IPHAN/IPAC via ipatrimonio.org), com a fonte citada. 'estimado' = sem número publicado; o método está em medida_status: (a) escala de foto do Commons usando referência de tamanho conhecido (pessoa ≈ 1,7 m, carro ≈ 1,5 m de altura, porta de igreja ≈ 5 m) contada em pixels na imagem de 960 px; (b) perímetros publicados em palmos (Souza 1885, citado na ptwiki) convertidos com 1 palmo ≈ 0,22 m; (c) área publicada dividida por pavimentos. Comprimentos (profundidade) sem foto aérea ficam como ordem de grandeza ou null com 'medir no footprint OSM' — o extrator OSM ainda não tem os brutos de Salvador. Nada de Google.",
+    "orientacao": "Fachadas: Gabriel Soares de Sousa (Tratado Descritivo do Brasil, 1587, cap. VII–VIII) descreve a praça 'em quadro' com pelourinho no meio: lado SUL = casas dos governadores; NORTE = fazenda, alfândega e armazéns; LESTE = câmara e cadeia; POENTE aberto sobre o mar com artilharia; rua dos mercadores da praça para o norte até a Sé; a Sé 'com o rosto sobre o mar da Bahia'. Onde não há fonte, o rumo foi estimado pela posição relativa das coordenadas publicadas (prédio → largo à frente).",
+    "nota": "21 prédios (16 com forma no período 1549–1763, 2 do epílogo, muralha e 2 portas). Fontes lidas como página HTML (pt/en.wikipedia.org/wiki/..., wikidata.org/wiki/Q..., commons.wikimedia.org/wiki/File:..., ipatrimonio.org com textos do IPHAN/IPAC-BA, bahianoticias.com.br) e o PDF da BBM-USP; nenhuma API usada. Licenças das fotos lidas na página File: do Commons. Validado por script local (python -I)."
+  },
+  "predios": [
+    {
+      "id": "palacio-rio-branco",
+      "nome": "Palácio Rio Branco",
+      "nome_antigo": "Casas dos governadores / Palácio do Governo",
+      "ano_construcao": 1549,
+      "fases": [
+        {"ano": 1549, "o_que_mudou_na_forma": "Casa do governador de taipa de pilão erguida por Tomé de Sousa; depois 'pequenas ampliações'; serviu também de quartel e prisão", "fonte": "https://pt.wikipedia.org/wiki/Palácio_Rio_Branco_(Salvador)"},
+        {"ano": 1587, "o_que_mudou_na_forma": "'Umas nobres casas em que se agasalham os governadores' no lado sul da praça", "fonte": "Gabriel Soares de Sousa, Tratado Descritivo do Brasil em 1587, cap. VII (ed. 1851, BBM-USP)"},
+        {"ano": 1900, "o_que_mudou_na_forma": "Até o fim do séc. XIX mantinha 'a velha fachada colonial portuguesa'; reforma profunda (gov. Luís Viana) para estilo neoclássico de gosto francês", "fonte": "https://pt.wikipedia.org/wiki/Palácio_Rio_Branco_(Salvador)"},
+        {"ano": 1912, "o_que_mudou_na_forma": "Bombardeio de 10/01/1912: prédio 'praticamente em ruínas'", "fonte": "https://pt.wikipedia.org/wiki/Palácio_Rio_Branco_(Salvador)"},
+        {"ano": 1919, "o_que_mudou_na_forma": "Reinaugurado (gov. Muniz Sodré) como Palácio Rio Branco: eclético, dois pavimentos, cúpula central sobre o pórtico", "fonte": "https://pt.wikipedia.org/wiki/Palácio_Rio_Branco_(Salvador)"},
+        {"ano": 1984, "o_que_mudou_na_forma": "Restauração completa (sem mudança de forma descrita)", "fonte": "https://pt.wikipedia.org/wiki/Palácio_Rio_Branco_(Salvador)"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.975883,
+      "lon": -38.511763,
+      "coord_fonte": "Wikidata Q2893436 HTML (data-lat/lon); ptwiki infobox dá -12.97583, -38.51167",
+      "forma": {
+        "planta_largura_m": 43,
+        "planta_comprimento_m": 30,
+        "andares": 2,
+        "altura_m": 14,
+        "telhado": "platibanda (com frontões curvos) + cúpula central",
+        "torres": {"n": 0, "altura_m": null, "obs": "sem torres; cúpula central com lanternim, topo ≈ 28 m"},
+        "cor_paredes": "creme / amarelo-claro",
+        "cor_molduras": "branco",
+        "cor_telhado": "cúpula branca; telhado oculto pela platibanda",
+        "estilo": "eclético (1919)",
+        "fachada_olha_para": "norte (para a Praça Tomé de Sousa; casas dos governadores no lado sul da praça, GSS 1587)",
+        "elementos_marcantes": "corpo central saliente com arco envidraçado e cúpula; duas águias de bronze sobre os corpos laterais; 9 janelas por andar de cada lado"
+      },
+      "forma_em_1549_1763": "Casa colonial portuguesa: no início taipa de pilão com cobertura simples; ao longo do período sobrado de 2 pavimentos, paredes caiadas de branco, telhado de telha cerâmica em 4 águas, sem cúpula. Modelar como caixa branca baixa (≈ 9–10 m) com telhado de telha; a cúpula só a partir de 1919 (epílogo).",
+      "medida_status": "estimado: largura 43 m e altura 14 m (cornija) / 28 m (topo da cúpula) por escala de foto (Commons Webysther_20150907164050, pessoa ≈ 1,7 m ≈ 35 px → ≈ 20 px/m; fachada ≈ 860 px); profundidade 30 m é ordem de grandeza — medir no footprint OSM",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Webysther_20150907164050_-_Palácio_Rio_Branco.jpg", "licenca": "CC BY-SA 4.0"}
+      ],
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Palácio_Rio_Branco_(Salvador)",
+        "https://en.wikipedia.org/wiki/Rio_Branco_Palace",
+        "https://www.wikidata.org/wiki/Q2893436",
+        "https://digital.bbm.usp.br/bitstream/bbm/4795/1/017204_COMPLETO.pdf"
+      ],
+      "confianca": "media",
+      "obs": "Forma colonial não tem medida nem imagem lida; só a descrição 'velha fachada colonial'. Ano 1549 = início; enwiki diz 'dates to 1549', ptwiki diz 'construção atual é de 1919'."
+    },
+    {
+      "id": "paco-municipal",
+      "nome": "Paço Municipal (Câmara Municipal de Salvador)",
+      "nome_antigo": "Casa da Câmara e Cadeia",
+      "ano_construcao": 1549,
+      "fases": [
+        {"ano": 1549, "o_que_mudou_na_forma": "Construída em taipa e palha no ano da fundação (ptwiki); IPAC dá a primeira Casa de Câmara em 1555, por Luís Dias, em taipa coberta de palha", "fonte": "https://pt.wikipedia.org/wiki/Câmara_Municipal_de_Salvador ; https://www.ipatrimonio.org/salvador-paco-municipal/ (texto IPAC-BA)"},
+        {"ano": 1551, "o_que_mudou_na_forma": "Nova Câmara de pedra, cal e barro, coberta com telhas", "fonte": "https://www.bahianoticias.com.br/noticia/200002-mudancas-drasticas-e-retorno-a-aparencia-colonial-os-467-anos-de-arquitetura-da-camara"},
+        {"ano": 1660, "o_que_mudou_na_forma": "Reconstruída pelo gov. Francisco Barreto de Menezes (mestre Antônio Favela); obra 1660–1696; cadeia no térreo", "fonte": "https://www.ipatrimonio.org/salvador-paco-municipal/ (IPAC-BA)"},
+        {"ano": 1698, "o_que_mudou_na_forma": "Gov. João de Lencastro manda construir a torre (abobadada, com sino), casa de audiências e salas", "fonte": "https://www.ipatrimonio.org/salvador-paco-municipal/ (IPAC-BA)"},
+        {"ano": 1795, "o_que_mudou_na_forma": "Cadeia pública, enfermaria, cisterna (Fernando José de Portugal)", "fonte": "https://www.ipatrimonio.org/salvador-paco-municipal/ (IPAC-BA)"},
+        {"ano": 1887, "o_que_mudou_na_forma": "Reforma neoclássica/neorrenascentista (projeto Francisco de Azevedo Caminhoá); BN dá 1885", "fonte": "https://www.ipatrimonio.org/salvador-paco-municipal/ (IPAC-BA)"},
+        {"ano": 1970, "o_que_mudou_na_forma": "Restauração 1969–1970 devolve a fachada colonial (arcadas de cantaria, torre)", "fonte": "https://www.ipatrimonio.org/salvador-paco-municipal/ ; https://pt.wikipedia.org/wiki/Câmara_Municipal_de_Salvador"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.974877,
+      "lon": -38.51252,
+      "coord_fonte": "Wikidata Q53934981 HTML (data-lat/lon)",
+      "forma": {
+        "planta_largura_m": 42,
+        "planta_comprimento_m": 16,
+        "andares": 2,
+        "altura_m": 11,
+        "telhado": "4 águas (telha cerâmica)",
+        "torres": {"n": 1, "altura_m": 20, "obs": "torre central-lateral quadrada com sineira e cobertura em cúpula baixa"},
+        "cor_paredes": "branco",
+        "cor_molduras": "cantaria cor de pedra (bege-acinzentado)",
+        "cor_telhado": "telha cerâmica (terracota)",
+        "estilo": "maneirista / 'estilo chão' português do séc. XVII (fachada reconstituída nos anos 1970)",
+        "fachada_olha_para": "oeste (para a praça e o mar; câmara no lado leste da praça, GSS 1587)",
+        "elementos_marcantes": "arcada térrea de arcos plenos de cantaria sobre colunas toscanas; andar nobre com janelas de sacada e balcão de ferro; venezianas verdes; uma torre"
+      },
+      "forma_em_1549_1763": "1549–1660: casa térrea/sobrado simples de taipa (depois pedra e cal, 1551) com telhado de palha e depois telha. 1660–1763: o prédio de hoje sem os acréscimos de 1795/1887 — sobrado de 2 pavimentos com arcada térrea de cantaria (cadeia no térreo), telhado de telha em 4 águas; a torre só a partir de 1698.",
+      "medida_status": "estimado: escala de foto (Commons Câmara_Municipal_de_Salvador_20211003-6729): ≈ 13 arcos na fachada principal × vão ≈ 3,2 m ≈ 42 m; 2 pavimentos ≈ 11 m; torre ≈ 2× a altura do corpo; profundidade 16 m é ordem de grandeza — medir no footprint OSM",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Câmara_Municipal_de_Salvador_20211003-6729.jpg", "licenca": "CC BY-SA 4.0"}
+      ],
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Câmara_Municipal_de_Salvador",
+        "https://www.ipatrimonio.org/salvador-paco-municipal/",
+        "https://www.bahianoticias.com.br/noticia/200002-mudancas-drasticas-e-retorno-a-aparencia-colonial-os-467-anos-de-arquitetura-da-camara",
+        "https://www.wikidata.org/wiki/Q53934981"
+      ],
+      "confianca": "media",
+      "obs": "Bahia Notícias (2016) escreve que a torre abobadada é de '1969' — erro de digitação; IPAC dá a torre em 1698. Tombado pelo IPAC (Resolução 30.483/84)."
+    },
+    {
+      "id": "se-primitiva",
+      "nome": "Antiga Sé da Bahia (demolida)",
+      "nome_antigo": "Sé de São Salvador / Igreja da Sé",
+      "ano_construcao": 1552,
+      "fases": [
+        {"ano": 1552, "o_que_mudou_na_forma": "Bispo Sardinha chega; por anos uma pequena capela dos jesuítas serve de catedral; igreja da Sé erguida em 1552/1553", "fonte": "https://en.wikipedia.org/wiki/Old_Cathedral_of_Salvador ; https://pt.wikipedia.org/wiki/Cruz_Caída"},
+        {"ano": 1570, "o_que_mudou_na_forma": "Mem de Sá informa que a reconstruiu em pedra e cal, planta de três naves", "fonte": "https://pt.wikipedia.org/wiki/Antiga_Sé_da_Bahia"},
+        {"ano": 1612, "o_que_mudou_na_forma": "Nova reconstrução (gov. Gaspar de Sousa, 1612–1617) no mesmo lugar, fachada para a Baía, interior de nave única", "fonte": "https://pt.wikipedia.org/wiki/Antiga_Sé_da_Bahia"},
+        {"ano": 1625, "o_que_mudou_na_forma": "Usada como posto militar na invasão holandesa (1624) e muito danificada na retomada", "fonte": "https://pt.wikipedia.org/wiki/Antiga_Sé_da_Bahia"},
+        {"ano": 1637, "o_que_mudou_na_forma": "Obras de reparo; estrutura geral pronta no início do séc. XVIII, decoração interna até a década de 1730; fachada com duas torres voltada para a Baía", "fonte": "https://pt.wikipedia.org/wiki/Antiga_Sé_da_Bahia"},
+        {"ano": 1765, "o_que_mudou_na_forma": "Deixa de ser catedral (sede passa à igreja dos jesuítas)", "fonte": "https://pt.wikipedia.org/wiki/Antiga_Sé_da_Bahia"},
+        {"ano": 1805, "o_que_mudou_na_forma": "Início do séc. XIX: muro em frente à fachada rui; demolição preventiva das torres e de grande parte da cantaria da fachada (ano exato não publicado; 1805 = posição)", "fonte": "https://pt.wikipedia.org/wiki/Antiga_Sé_da_Bahia"},
+        {"ano": 1933, "o_que_mudou_na_forma": "Demolida em 7/8/1933 com dois quarteirões, para passagem dos bondes", "fonte": "https://pt.wikipedia.org/wiki/Antiga_Sé_da_Bahia"}
+      ],
+      "ano_demolicao": 1933,
+      "lat": -12.9732,
+      "lon": -38.5118,
+      "coord_fonte": "aproximação: ptwiki Cruz Caída (Especial:Map) — monumento erguido em 1999 'onde se localizava o adro da Sé' (ptwiki Antiga Sé); Praça da Sé ptwiki = -12.97333, -38.51083",
+      "forma": {
+        "planta_largura_m": 18,
+        "planta_comprimento_m": 50,
+        "andares": 1,
+        "altura_m": 12,
+        "telhado": "2 águas (empena triangular na fachada)",
+        "torres": {"n": 0, "altura_m": null, "obs": "em 1928 já sem torres (demolidas no início do séc. XIX)"},
+        "cor_paredes": "branco caiado (manchado)",
+        "cor_molduras": "cantaria cor de pedra",
+        "cor_telhado": "telha cerâmica",
+        "estilo": "maneirista (séc. XVII), muito descaracterizada",
+        "fachada_olha_para": "oeste (para o mar/ancoradouro — 'com o rosto sobre o mar da Bahia', GSS 1587; ptwiki: 'fachada virada para a Baía')",
+        "elementos_marcantes": "empena alta de nave única; portal central em arco com dois portais laterais; capelas laterais mais baixas; óculos na fachada"
+      },
+      "forma_em_1549_1763": "O que o vídeo deve mostrar: 1552–1570 igreja simples (sem forma publicada; modelar como capela de taipa); 1570–1612 igreja de pedra e cal de 3 naves; 1612/1637–1763 igreja grande de nave única com empena de 2 águas, capelas laterais e FACHADA ENQUADRADA POR DUAS TORRES voltada para a Baía, adro com muro sobre a encosta. Era a catedral de todo o período 1549–1763.",
+      "medida_status": "estimado: escala de foto 1928 (Commons Antiga_Sé_da_Bahia,_1928, portal principal ≈ 5 m) → empena ≈ 17–18 m, largura da fachada ≈ 18 m; comprimento 50 m e torres ≈ 25 m são ordem de grandeza (desenho de Vilhena 1802 é reconstituição sem escala)",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Antiga_Sé_da_Bahia,_1928.jpg", "licenca": "domínio público (PD-old)"},
+        {"url": "https://commons.wikimedia.org/wiki/File:Antiga_Sé_da_Bahia_em_1802.jpg", "licenca": "domínio público (PDM) — reconstituição de Vilhena, 1802"}
+      ],
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Antiga_Sé_da_Bahia",
+        "https://en.wikipedia.org/wiki/Old_Cathedral_of_Salvador",
+        "https://pt.wikipedia.org/wiki/Cruz_Caída",
+        "https://digital.bbm.usp.br/bitstream/bbm/4795/1/017204_COMPLETO.pdf"
+      ],
+      "confianca": "baixa (forma) / media (local)",
+      "obs": "Ano de construção: 1552 (ptwiki Cruz Caída, texto) vs 1553 (ptwiki Cruz Caída, 'erguida em 1553'); usado 1552. Torres: só sabemos que existiam e foram demolidas no início do séc. XIX; altura não publicada."
+    },
+    {
+      "id": "catedral-basilica",
+      "nome": "Catedral Basílica Primacial de São Salvador",
+      "nome_antigo": "Igreja do Colégio dos Jesuítas (Igreja de Jesus)",
+      "ano_construcao": 1657,
+      "fases": [
+        {"ano": 1550, "o_que_mudou_na_forma": "Colégio dos Meninos com sua capela, em taipa, várias vezes reedificada", "fonte": "https://pt.wikipedia.org/wiki/Catedral_Basílica_de_Salvador"},
+        {"ano": 1657, "o_que_mudou_na_forma": "Pedra fundamental da igreja atual (ptwiki Terreiro de Jesus dá 1652)", "fonte": "https://pt.wikipedia.org/wiki/Catedral_Basílica_de_Salvador"},
+        {"ano": 1672, "o_que_mudou_na_forma": "Inaugurada e consagrada (27/6/1672)", "fonte": "https://pt.wikipedia.org/wiki/Catedral_Basílica_de_Salvador"},
+        {"ano": 1679, "o_que_mudou_na_forma": "Frontispício (fachada de lioz) concluído", "fonte": "https://pt.wikipedia.org/wiki/Catedral_Basílica_de_Salvador"},
+        {"ano": 1694, "o_que_mudou_na_forma": "Torres arrematadas (sinos chegaram em 1681)", "fonte": "https://pt.wikipedia.org/wiki/Catedral_Basílica_de_Salvador"},
+        {"ano": 1746, "o_que_mudou_na_forma": "Estátuas instaladas na fachada", "fonte": "https://pt.wikipedia.org/wiki/Catedral_Basílica_de_Salvador"},
+        {"ano": 1765, "o_que_mudou_na_forma": "Após a expulsão dos jesuítas (1759/1761), passa interinamente a sé; catedral definitiva em 1933", "fonte": "https://pt.wikipedia.org/wiki/Antiga_Sé_da_Bahia ; https://pt.wikipedia.org/wiki/Terreiro_de_Jesus"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.972833,
+      "lon": -38.510333,
+      "coord_fonte": "Wikidata Q3272450 HTML (data-lat/lon); ptwiki infobox 12°58′22″S 38°30′37″O = -12.97278, -38.51028",
+      "forma": {
+        "planta_largura_m": 25,
+        "planta_comprimento_m": 60,
+        "andares": 2,
+        "altura_m": 17,
+        "telhado": "2 águas atrás do frontão",
+        "torres": {"n": 2, "altura_m": 24, "obs": "torres baixas quadradas nas pontas da fachada, coruchéu piramidal revestido de azulejo/branco com pináculos; frontão central com cruz ≈ 27 m"},
+        "cor_paredes": "pedra de lioz (bege-claro rosado)",
+        "cor_molduras": "lioz (mesmo tom, pilastras em relevo)",
+        "cor_telhado": "telha cerâmica; coruchéus das torres brancos/azulejo",
+        "estilo": "maneirista (fachada) / barroco (interior)",
+        "fachada_olha_para": "~125° (sudeste), para o Terreiro de Jesus — estimado pela posição do Terreiro (ptwiki -12.97315, -38.50988) em relação ao prédio",
+        "elementos_marcantes": "fachada austera de lioz em 5 módulos verticais separados por pilastras; 3 portas verdes com nichos de santos; volutas ligando o frontão às torres; nave única"
+      },
+      "forma_em_1549_1763": "1549–1657: capela de taipa do colégio, pequena e frágil (modelar como capela baixa). 1657–1672: obra em pedra (canteiro). 1672–1763: a igreja de hoje — fachada de lioz pronta em 1679, torres em 1694, estátuas em 1746. Era igreja dos jesuítas, não catedral, até 1765.",
+      "medida_status": "estimado: escala de foto (Commons Catedral_Basílica_de_Salvador_Facade_2019-9898, porta central ≈ 5 m ≈ 165 px → ≈ 33 px/m; fachada ≈ 800 px ≈ 24–25 m; cornija ≈ 17 m; torres ≈ 24 m); comprimento 60 m é ordem de grandeza (≈ 2,4× a largura, nave única) — medir no footprint OSM",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Catedral_Basílica_de_Salvador_Facade_2019-9898.jpg", "licenca": "CC BY-SA 4.0"}
+      ],
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Catedral_Basílica_de_Salvador",
+        "https://pt.wikipedia.org/wiki/Terreiro_de_Jesus",
+        "https://www.wikidata.org/wiki/Q3272450"
+      ],
+      "confianca": "media",
+      "obs": "Infobox ptwiki: 'Andares 2'. Pedra fundamental 1657 (ptwiki Catedral) vs 1652 (ptwiki Terreiro de Jesus: 'entre 1652 e 1672')."
+    },
+    {
+      "id": "colegio-jesuitas",
+      "nome": "Antiga Faculdade de Medicina da Bahia (Terreiro de Jesus)",
+      "nome_antigo": "Colégio dos Jesuítas da Bahia",
+      "ano_construcao": 1549,
+      "fases": [
+        {"ano": 1549, "o_que_mudou_na_forma": "Primeiros indícios: quartos de taipa e palha", "fonte": "https://pt.wikipedia.org/wiki/Faculdade_de_Medicina_da_Bahia"},
+        {"ano": 1561, "o_que_mudou_na_forma": "Primeiras edificações permanentes de pedra e cal (no mínimo em 1561)", "fonte": "https://pt.wikipedia.org/wiki/Faculdade_de_Medicina_da_Bahia"},
+        {"ano": 1590, "o_que_mudou_na_forma": "Edifício do colégio concluído; fachada dividida em dois prédios com dois grandes claustros ligados à igreja", "fonte": "https://pt.wikipedia.org/wiki/Terreiro_de_Jesus ; https://pt.wikipedia.org/wiki/Faculdade_de_Medicina_da_Bahia"},
+        {"ano": 1905, "o_que_mudou_na_forma": "Incêndio consome toda a estrutura do antigo colégio", "fonte": "https://pt.wikipedia.org/wiki/Faculdade_de_Medicina_da_Bahia"},
+        {"ano": 1909, "o_que_mudou_na_forma": "Novo edifício (1905–1908, Teodoro Sampaio / projeto Victor Dubugras), estilo 'terceiro império', fachada pintada toda de branco", "fonte": "https://pt.wikipedia.org/wiki/Faculdade_de_Medicina_da_Bahia"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.972611,
+      "lon": -38.509861,
+      "coord_fonte": "Wikidata Q10279519 HTML (data-lat/lon)",
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": 2,
+        "altura_m": null,
+        "telhado": "4 águas em torno de claustros (época colonial); hoje platibanda",
+        "torres": {"n": 0, "altura_m": null, "obs": ""},
+        "cor_paredes": "hoje creme/amarelo; em 1909 todo branco",
+        "cor_molduras": "branco",
+        "cor_telhado": "telha cerâmica",
+        "estilo": "hoje eclético (1909); colonial antes de 1905",
+        "fachada_olha_para": "Terreiro de Jesus (mesmo alinhamento da igreja, ~125°, estimado)",
+        "elementos_marcantes": "dois claustros quadrados colados à igreja do colégio (desenho do colégio c. 1600)"
+      },
+      "forma_em_1549_1763": "1549–1561 taipa e palha; 1561–1590 blocos de pedra e cal; 1590–1763 conjunto de alas de 2 pavimentos em volta de dois claustros quadrados, encostado ao lado da igreja, telhado de telha em 4 águas, paredes brancas. Ver desenho 'Colegio de jesuitas 1600'.",
+      "medida_status": "estimado: sem número publicado; footprint (≈ dois claustros) a medir no OSM; andares pelo desenho c. 1600",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Colegio_de_jesuitas_1600.png", "licenca": "CC BY 4.0 — reconstituição do conjunto c. 1600"},
+        {"url": "https://commons.wikimedia.org/wiki/File:Faculdade_de_Medicina_da_Bahia,_Salvador.jpg", "licenca": "CC BY 2.0"}
+      ],
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Faculdade_de_Medicina_da_Bahia",
+        "https://pt.wikipedia.org/wiki/Terreiro_de_Jesus",
+        "https://www.wikidata.org/wiki/Q10279519"
+      ],
+      "confianca": "media (datas) / baixa (medidas)",
+      "obs": "Pode ser modelado junto com a catedral-basilica como um bloco único (igreja + colégio)."
+    },
+    {
+      "id": "sao-francisco",
+      "nome": "Igreja e Convento de São Francisco",
+      "nome_antigo": "Convento de São Francisco",
+      "ano_construcao": 1587,
+      "fases": [
+        {"ano": 1587, "o_que_mudou_na_forma": "Chegada dos franciscanos; provável fundação do primeiro convento (fora dos muros, a leste)", "fonte": "https://www.ipatrimonio.org/salvador-convento-e-igreja-de-sao-francisco/"},
+        {"ano": 1624, "o_que_mudou_na_forma": "Igreja e convento em escombros após a invasão holandesa; reconstrução", "fonte": "https://www.ipatrimonio.org/salvador-convento-e-igreja-de-sao-francisco/"},
+        {"ano": 1686, "o_que_mudou_na_forma": "Pedra fundamental da igreja nova, bem maior (20/12/1686 na ptwiki; 'festa de Santo Antônio' no ipatrimonio)", "fonte": "https://pt.wikipedia.org/wiki/Igreja_e_Convento_de_São_Francisco_(Salvador)"},
+        {"ano": 1713, "o_que_mudou_na_forma": "Igreja consagrada, com altares", "fonte": "https://www.ipatrimonio.org/salvador-convento-e-igreja-de-sao-francisco/"},
+        {"ano": 1720, "o_que_mudou_na_forma": "Corpo da igreja e fachada de arenito terminados (data gravada no frontispício)", "fonte": "https://pt.wikipedia.org/wiki/Igreja_e_Convento_de_São_Francisco_(Salvador)"},
+        {"ano": 1796, "o_que_mudou_na_forma": "Torres concluídas (1796–1797) com sinos e relógio; revestimento azul e branco dos coruchéus só ~1 século depois", "fonte": "https://pt.wikipedia.org/wiki/Igreja_e_Convento_de_São_Francisco_(Salvador)"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.974631,
+      "lon": -38.509053,
+      "coord_fonte": "Wikidata Q3279443 HTML (data-lat/lon); ptwiki infobox -12.97472, -38.50917",
+      "forma": {
+        "planta_largura_m": 27,
+        "planta_comprimento_m": 65,
+        "andares": 2,
+        "altura_m": 14,
+        "telhado": "2 águas (igreja); 4 águas em volta do claustro (convento)",
+        "torres": {"n": 2, "altura_m": 32, "obs": "campanários quadrangulares coroados por pirâmides azulejadas (pós-1797)"},
+        "cor_paredes": "arenito ocre/marrom com panos de azulejo/branco nas torres",
+        "cor_molduras": "arenito escuro",
+        "cor_telhado": "telha cerâmica; pirâmides das torres azul e branco",
+        "estilo": "barroco (fachada com influência de Serlio)",
+        "fachada_olha_para": "oeste (para o Largo do Cruzeiro de São Francisco / Terreiro de Jesus) — estimado pela posição relativa",
+        "elementos_marcantes": "bloco central com frontão de grandes volutas e cruz; arcos na base; 3 naves; convento de 2 pavimentos + subsolo em volta de claustro quadrado"
+      },
+      "forma_em_1549_1763": "Antes de 1587: nada (terreno fora dos muros). 1587–1686: convento primitivo menor (forma não publicada; modelar caixa simples). 1686–1720: canteiro da igreja nova. 1720–1763: igreja de hoje com a fachada de arenito e frontão de volutas, MAS SEM AS TORRES (só em 1796–97) + convento com claustro.",
+      "medida_status": "estimado: escala de foto (Commons Igreja_de_São_Francisco_Salvador_2019-6875, carro ≈ 1,5 m ≈ 30 px → ≈ 20 px/m; fachada ≈ 550 px ≈ 27 m; cornija ≈ 14 m; torres ≈ 32 m); comprimento 65 m e claustro são ordem de grandeza — medir no footprint OSM",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Igreja_de_São_Francisco_Salvador_2019-6875.jpg", "licenca": "CC BY-SA 4.0"}
+      ],
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Igreja_e_Convento_de_São_Francisco_(Salvador)",
+        "https://www.ipatrimonio.org/salvador-convento-e-igreja-de-sao-francisco/",
+        "https://www.wikidata.org/wiki/Q3279443"
+      ],
+      "confianca": "media",
+      "obs": "Fim da fachada: 1720 (ptwiki, data gravada) vs ~1723 (ipatrimonio: 'dez anos depois' da consagração de 1713); usado 1720. ptwiki traz '1675' como decisão de reconstruir."
+    },
+    {
+      "id": "forte-sao-marcelo",
+      "nome": "Forte de São Marcelo",
+      "nome_antigo": "Forte de Nossa Senhora do Pópulo / Forte do Mar",
+      "ano_construcao": 1612,
+      "fases": [
+        {"ano": 1612, "o_que_mudou_na_forma": "Risco de 1608 (Frias da Mesquita; ou Torriani 1605); obra posterior a 1612, terminada em 1623 — forte primitivo sobre o banco de arrecifes", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_São_Marcelo"},
+        {"ano": 1650, "o_que_mudou_na_forma": "Reconstrução (carta-régia 4/10/1650, eng. Filipe Guiton): enrocamento em volta do recife, concluído 1652 e preenchido de pedra de lastro", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_São_Marcelo"},
+        {"ano": 1662, "o_que_mudou_na_forma": "Torreão central circular completo, 15 m acima do mar (em 1661 ainda faltava um lance)", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_São_Marcelo"},
+        {"ano": 1714, "o_que_mudou_na_forma": "Ampliação do terrapleno envolvente (anel) para ~241 m de circunferência, +~0,5 m de altura (antes ~220 m, sob Antônio Correia Pinto)", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_São_Marcelo"},
+        {"ano": 1728, "o_que_mudou_na_forma": "Concluídas as canhoneiras do torreão (bateria alta) e do terrapleno (bateria baixa)", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_São_Marcelo"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.969924,
+      "lon": -38.517846,
+      "coord_fonte": "Wikidata Q3078258 HTML (data-lat/lon); ptwiki dá -12.97, -38.51778 (arredondado)",
+      "forma": {
+        "planta_largura_m": 77,
+        "planta_comprimento_m": 77,
+        "andares": 1,
+        "altura_m": 15,
+        "telhado": "terraço (plataforma de artilharia) — torreão coberto por terraço circular",
+        "torres": {"n": 1, "altura_m": 15, "obs": "torreão central circular: 36 m de diâmetro × 15 m de altura (~145 m de circunferência); pátio anelar de 10 m; anel perimetral de 15 m de largura (~241 m de circunferência), achatado a leste"},
+        "cor_paredes": "pedra cinza-escura (arenito até a linha d'água, alvenaria de pedra irregular acima)",
+        "cor_molduras": "pedra",
+        "cor_telhado": "terraço cinza (piso de pedra)",
+        "estilo": "renascentista (único forte de planta circular do Brasil)",
+        "fachada_olha_para": "leste (lado achatado voltado para a cidade, com o acesso)",
+        "elementos_marcantes": "dois anéis concêntricos no mar a ~300 m da costa; piso do anel 15 m acima do terrapleno (12 m a leste), rampas a norte e sul; área construída 2.500 m²"
+      },
+      "forma_em_1549_1763": "1549–1612: só o recife (nada). 1612/1623–1650: forte primitivo (na planta de Albernaz 1631; forma não medida — guia local cita baluarte triangular de madeira, fonte fraca). 1650–1714: enrocamento + torreão circular (36 m, 15 m de altura a partir de 1662) com anel ~220 m. 1714–1763: forma de hoje (anel ~241 m).",
+      "medida_status": "publicada: torreão 36 m Ø × 15 m, pátio 10 m, anel 15 m de largura, circunferência ~241 m, área 2.500 m² (ptwiki Forte de São Marcelo). Ø externo 77 m é estimado = 241 m / π (36+2×10+2×15 = 86 m não fecha com 241 m, porque o anel é achatado a leste)",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Vista_aérea_do_Forte_de_São_Marcelo.jpg", "licenca": "CC BY 3.0 BR"}
+      ],
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Forte_de_São_Marcelo",
+        "https://www.ipatrimonio.org/salvador-forte-de-sao-marcelo/",
+        "https://www.wikidata.org/wiki/Q3078258"
+      ],
+      "confianca": "alta (dimensões) / media (fase pré-1650)",
+      "obs": "Souza (1885) citado na ptwiki: 'circular, com o desenvolvimento de 1.212 palmos' ≈ 267 m (× 0,22 m) — maior que os 241 m modernos. Distância da costa: ~300 m (ptwiki) vs 250 m (bmcnews)."
+    },
+    {
+      "id": "forte-santo-antonio-barra",
+      "nome": "Forte de Santo Antônio da Barra",
+      "nome_antigo": "Forte de Santo Antônio / Vigia da Barra / Forte Grande",
+      "ano_construcao": 1583,
+      "fases": [
+        {"ano": 1583, "o_que_mudou_na_forma": "Primeira estrutura (1583–1587, gov. Manuel Teles Barreto), provavelmente de faxina e terra, na ponta do Padrão", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_Santo_Antônio_da_Barra"},
+        {"ano": 1596, "o_que_mudou_na_forma": "Reconstruído em pedra e cal (1591–1602), planta de Torriani: polígono octogonal regular", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_Santo_Antônio_da_Barra"},
+        {"ano": 1631, "o_que_mudou_na_forma": "Ainda octogonal na planta de Albernaz (o hexágono de 10 m de lado projetado em 1626 não foi feito)", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_Santo_Antônio_da_Barra"},
+        {"ano": 1696, "o_que_mudou_na_forma": "Reedificado 1696–1702 (gov. João de Lencastre, eng. João Coutinho) na forma atual: decágono à barbeta; recebe o farol (1698)", "fonte": "https://www.ipatrimonio.org/salvador-forte-de-santo-antonio-da-barra/ (IPHAN)"},
+        {"ano": 1839, "o_que_mudou_na_forma": "Farol novo: torre troncônica de alvenaria (ver farol-da-barra)", "fonte": "https://pt.wikipedia.org/wiki/Farol_da_Barra_(Salvador)"}
+      ],
+      "ano_demolicao": null,
+      "lat": -13.010278,
+      "lon": -38.532778,
+      "coord_fonte": "Wikidata Q10283940 HTML (data-lat/lon); ptwiki infobox -13.01028, -38.53278",
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": 1,
+        "altura_m": null,
+        "telhado": "terraço (terrapleno à barbeta)",
+        "torres": {"n": 1, "altura_m": 22, "obs": "farol no centro do terrapleno (entrada própria: farol-da-barra)"},
+        "cor_paredes": "branco caiado (muralhas) — conferir na foto",
+        "cor_molduras": "pedra",
+        "cor_telhado": "terraço",
+        "estilo": "fortificação de tipo italiano",
+        "fachada_olha_para": "acesso por túnel em rampa; muralhas voltadas para o mar (S/SO e entrada da baía)",
+        "elementos_marcantes": "decágono irregular com ângulos salientes e quatro reentrantes; casa de comando (séc. XIX); dois salões abobadados flanqueando a entrada"
+      },
+      "forma_em_1549_1763": "1549–1583: só a ponta do Padrão (sem forte). 1583–1596 forte de faxina e terra (forma não publicada). 1596–1696 octógono regular de pedra e cal (dimensão não publicada). 1696–1763 decágono atual com farol de 1698 = torreão quadrangular com lanterna de bronze (não a torre cilíndrica de 1839).",
+      "medida_status": "estimado: footprint sem número publicado — medir no footprint OSM; forma (decágono / octógono) publicada (IPHAN, ptwiki)",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Farol_da_Barra_com_nuvens_ao_fundo.jpg", "licenca": "CC BY-SA 4.0"}
+      ],
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Forte_de_Santo_Antônio_da_Barra",
+        "https://www.ipatrimonio.org/salvador-forte-de-santo-antonio-da-barra/",
+        "https://www.wikidata.org/wiki/Q10283940"
+      ],
+      "confianca": "media",
+      "obs": "Divergência de nome de engenheiro do forte de 1696: ptwiki cita Lencastre; IPHAN cita eng. João Coutinho (compatível). Tombado em 1938."
+    },
+    {
+      "id": "farol-da-barra",
+      "nome": "Farol da Barra",
+      "nome_antigo": "Farol de Santo Antônio / Vigia da Barra",
+      "ano_construcao": 1698,
+      "fases": [
+        {"ano": 1698, "o_que_mudou_na_forma": "Primeiro farol das Américas: torreão quadrangular com lanterna de bronze envidraçada, a óleo de baleia", "fonte": "https://pt.wikipedia.org/wiki/Farol_da_Barra_(Salvador)"},
+        {"ano": 1839, "o_que_mudou_na_forma": "Torre atual (pedra fundamental 29/8/1836, eng. Henry Palmer Philips, inaugurada 2/12/1839): troncônica de alvenaria, lanterna e galeria", "fonte": "https://pt.wikipedia.org/wiki/Farol_da_Barra_(Salvador)"},
+        {"ano": 1890, "o_que_mudou_na_forma": "Modernização da luz (sistema Barbier); sem mudança de forma descrita", "fonte": "https://pt.wikipedia.org/wiki/Farol_da_Barra_(Salvador)"}
+      ],
+      "ano_demolicao": null,
+      "lat": -13.01036,
+      "lon": -38.53291,
+      "coord_fonte": "ptwiki Farol da Barra (Salvador) — link Especial:Map",
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": null,
+        "altura_m": 22,
+        "telhado": "lanterna envidraçada com cúpula",
+        "torres": {"n": 1, "altura_m": 22, "obs": "torre troncônica"},
+        "cor_paredes": "bandas pretas e brancas",
+        "cor_molduras": "branco",
+        "cor_telhado": "lanterna com cúpula escura",
+        "estilo": "farol de alvenaria (1839)",
+        "fachada_olha_para": "n/a (cilíndrico)",
+        "elementos_marcantes": "faixas pretas e brancas; galeria no topo"
+      },
+      "forma_em_1549_1763": "Só existe a partir de 1698: torreão QUADRANGULAR (altura não publicada) com lanterna de bronze no topo, sobre o forte. A torre troncônica listrada de 22 m é de 1839 (fora do período).",
+      "medida_status": "publicada: altura 22 m e bandas pretas/brancas (ptwiki Farol da Barra (Salvador)); diâmetro e altura do torreão de 1698 não publicados",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Farol_da_Barra_com_nuvens_ao_fundo.jpg", "licenca": "CC BY-SA 4.0"}
+      ],
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Farol_da_Barra_(Salvador)",
+        "https://pt.wikipedia.org/wiki/Forte_de_Santo_Antônio_da_Barra"
+      ],
+      "confianca": "alta (1839) / baixa (forma de 1698)",
+      "obs": "Diâmetro da torre de 1839 não publicado: medir em foto/OSM se o motor precisar."
+    },
+    {
+      "id": "muralha-1549",
+      "nome": "Muralha de taipa da cidade (1549) e linha de defesa",
+      "nome_antigo": "Muros e torres de taipa de Tomé de Sousa",
+      "ano_construcao": 1549,
+      "fases": [
+        {"ano": 1549, "o_que_mudou_na_forma": "Cidade 'murada e torreada' por Tomé de Sousa, muros de taipa", "fonte": "Gabriel Soares de Sousa, Tratado Descritivo do Brasil em 1587, cap. VII (ed. 1851, BBM-USP)"},
+        {"ano": 1587, "o_que_mudou_na_forma": "Muros 'vieram ao chão por serem de taipa' e nunca reparados: 'não há memória aonde eles estiveram'", "fonte": "Gabriel Soares de Sousa, cap. VII"},
+        {"ano": 1605, "o_que_mudou_na_forma": "Nova muralha desenhada, envolvendo área 3–4× a da cidade original", "fonte": "https://pt.wikipedia.org/wiki/História_de_Salvador"}
+      ],
+      "ano_demolicao": 1587,
+      "lat": -12.97454,
+      "lon": -38.51277,
+      "coord_fonte": "aproximação: centro = Praça Tomé de Sousa (ptwiki, wgCoordinates); traçado não publicado",
+      "tracado_aproximado": {
+        "pontos": [[-12.97685, -38.51473], [-12.97454, -38.51277], [-12.97167, -38.5083]],
+        "descricao": "linha pelo espigão ligando as duas portas com local publicado: Portas de São Bento (Praça Castro Alves) → Praça Tomé de Sousa → Portas do Carmo (Largo do Pelourinho)",
+        "status": "aproximação — NÃO é traçado medido; as portas são da linha de fortificação da 2ª metade do séc. XVI, não necessariamente do muro de taipa de 1549"
+      },
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": null,
+        "altura_m": null,
+        "telhado": "n/a",
+        "torres": {"n": null, "altura_m": null, "obs": "'torreada' (GSS); número e altura não publicados"},
+        "cor_paredes": "taipa (terra crua ocre-avermelhada)",
+        "cor_molduras": "n/a",
+        "cor_telhado": "n/a",
+        "estilo": "muro de taipa de pilão com torres",
+        "fachada_olha_para": "n/a",
+        "elementos_marcantes": "muro baixo de terra com torres; duas portas (nomes divergem, ver obs)"
+      },
+      "forma_em_1549_1763": "1549 até ~1587: muro de taipa com torres no topo da escarpa, fechando a cidade alta; já caído em 1587. Depois: portas/redutos de faxina e terra refeitos em alvenaria (São Bento 1578–1581; Carmo 1613) e nova muralha desenhada em 1605.",
+      "medida_status": "estimado: sem medida publicada; altura/espessura do muro e torres não encontradas",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:JACaldas-CarmoGate.jpg", "licenca": "domínio público (PDM) — Portas do Carmo, José Antônio Caldas 1759"}
+      ],
+      "fontes": [
+        "https://digital.bbm.usp.br/bitstream/bbm/4795/1/017204_COMPLETO.pdf",
+        "https://pt.wikipedia.org/wiki/História_de_Salvador",
+        "https://pt.wikipedia.org/wiki/Portas_de_São_Bento",
+        "https://pt.wikipedia.org/wiki/Portas_do_Carmo",
+        "https://jornalgrandebahia.com.br/2009/03/salvador-460-anos/"
+      ],
+      "confianca": "baixa",
+      "obs": "Nomes das portas: pedido cita Santa Catarina/São Bento; ptwiki tem Portas de São Bento (SSO) e Portas do Carmo (NNE); Jornal Grande Bahia diz 'apenas duas portas: Carmo e Santa Luzia'. Nenhuma fonte lida cita 'Porta de Santa Catarina' em Salvador (a página ptwiki 'Portas de Santa Catarina' é de Lisboa) — não usar esse nome sem fonte."
+    },
+    {
+      "id": "portas-sao-bento",
+      "nome": "Portas de São Bento",
+      "nome_antigo": "Trincheiras / Redutos / Castelo das Portas de São Bento",
+      "ano_construcao": 1550,
+      "fases": [
+        {"ano": 1550, "o_que_mudou_na_forma": "Porta da linha de fortificações da 2ª metade do séc. XVI, de faxina e terra (ano exato não publicado; 1550 = posição)", "fonte": "https://pt.wikipedia.org/wiki/Portas_de_São_Bento"},
+        {"ano": 1578, "o_que_mudou_na_forma": "Reconstruída em alvenaria (gov. Diogo Lourenço da Veiga, 1578–1581): hornaveque com dois meio-baluartes, corpo da guarda, terrapleno, muralhas e fosso", "fonte": "https://pt.wikipedia.org/wiki/Portas_de_São_Bento"},
+        {"ano": 1732, "o_que_mudou_na_forma": "Desmoronaram", "fonte": "https://pt.wikipedia.org/wiki/Portas_de_São_Bento"}
+      ],
+      "ano_demolicao": 1732,
+      "lat": -12.97685,
+      "lon": -38.51473,
+      "coord_fonte": "aproximação: ptwiki Praça Castro Alves (wgCoordinates) — ptwiki Portas de São Bento: 'altura da atual Praça Castro Alves'",
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": 1,
+        "altura_m": null,
+        "telhado": "terraço (terrapleno)",
+        "torres": {"n": 0, "altura_m": null, "obs": "dois meio-baluartes"},
+        "cor_paredes": "pedra/alvenaria caiada (estimado)",
+        "cor_molduras": "pedra",
+        "cor_telhado": "n/a",
+        "estilo": "hornaveque (fortificação abaluartada)",
+        "fachada_olha_para": "sul-sudoeste (saída sul da cidade)",
+        "elementos_marcantes": "portão entre dois meio-baluartes com fosso"
+      },
+      "forma_em_1549_1763": "Porta/reduto de faxina e terra até 1578; depois hornaveque de alvenaria com dois meio-baluartes e fosso até desmoronar em 1732.",
+      "medida_status": "estimado: sem medida publicada",
+      "fotos_ref": [],
+      "fontes": ["https://pt.wikipedia.org/wiki/Portas_de_São_Bento", "https://pt.wikipedia.org/wiki/Praça_Castro_Alves"],
+      "confianca": "baixa",
+      "obs": "Wikidata Q10351770 não tem coordenada. Sem imagem publicada do reduto; ver JACaldas-CarmoGate (portas-do-carmo) para o tipo de porta/bateria desenhado por Caldas em 1759."
+    },
+    {
+      "id": "portas-do-carmo",
+      "nome": "Portas do Carmo",
+      "nome_antigo": "Castelo das Portas do Carmo",
+      "ano_construcao": 1550,
+      "fases": [
+        {"ano": 1550, "o_que_mudou_na_forma": "Acesso norte da cidade, obra de faxina e terra em posição dominante sobre uma colina (2ª metade do séc. XVI; ano exato não publicado)", "fonte": "https://pt.wikipedia.org/wiki/Portas_do_Carmo"},
+        {"ano": 1613, "o_que_mudou_na_forma": "Reconstruída como bateria em alvenaria (gov. Gaspar de Sousa): corpo da guarda, terrapleno, parapeitos, 5 peças de ferro", "fonte": "https://pt.wikipedia.org/wiki/Portas_do_Carmo"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.97167,
+      "lon": -38.5083,
+      "coord_fonte": "aproximação: ptwiki Largo do Pelourinho (Especial:Map) — ptwiki Portas do Carmo: trecho da muralha 'próxima às Portas do Carmo' preservado no Museu da Gastronomia Baiana (Pelourinho). A ptwiki também diz 'a norte-nordeste nas muralhas da atual Praça Municipal'",
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": 1,
+        "altura_m": null,
+        "telhado": "terraço (bateria)",
+        "torres": {"n": 0, "altura_m": null, "obs": ""},
+        "cor_paredes": "alvenaria de pedra (estimado)",
+        "cor_molduras": "pedra",
+        "cor_telhado": "n/a",
+        "estilo": "bateria / porta fortificada",
+        "fachada_olha_para": "norte (acesso norte)",
+        "elementos_marcantes": "portão com corpo da guarda e parapeitos (perfil de José Antônio Caldas, 1759)"
+      },
+      "forma_em_1549_1763": "Porta de faxina e terra (séc. XVI) → bateria de alvenaria a partir de 1613, existente até depois de 1763.",
+      "medida_status": "estimado: sem medida publicada; o desenho de Caldas (1759) tem perfil e planta mas sem escala lida",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:JACaldas-CarmoGate.jpg", "licenca": "domínio público (PDM)"}
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Portas_do_Carmo", "https://pt.wikipedia.org/wiki/Largo_do_Pelourinho"],
+      "confianca": "baixa",
+      "obs": "Wikidata Q10351771 não tem coordenada. Local ambíguo na própria ptwiki (Praça Municipal vs Museu da Gastronomia/Pelourinho); escolhido o Pelourinho porque o trecho de muralha preservado está lá."
+    },
+    {
+      "id": "guindaste-dos-padres",
+      "nome": "Plano Inclinado Gonçalves",
+      "nome_antigo": "Guindaste dos Padres (rampa dos jesuítas)",
+      "ano_construcao": 1650,
+      "fases": [
+        {"ano": 1650, "o_que_mudou_na_forma": "Rampa aberta na encosta pelos jesuítas no séc. XVII ('Guindaste dos Padres'); ano exato não publicado — 1650 = posição", "fonte": "https://pt.wikipedia.org/wiki/Plano_Inclinado_Gonçalves"},
+        {"ano": 1874, "o_que_mudou_na_forma": "Possível inauguração com trilhos e dois vagões (incerto)", "fonte": "https://pt.wikipedia.org/wiki/Plano_Inclinado_Gonçalves"},
+        {"ano": 1889, "o_que_mudou_na_forma": "Funicular a vapor (Esslingen), inaugurado 25/12/1889", "fonte": "https://pt.wikipedia.org/wiki/Plano_Inclinado_Gonçalves"},
+        {"ano": 1909, "o_que_mudou_na_forma": "Eletrificado; reinaugurado 1910", "fonte": "https://pt.wikipedia.org/wiki/Plano_Inclinado_Gonçalves"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.9724249,
+      "lon": -38.5107014,
+      "coord_fonte": "Wikidata Q10350298 HTML (data-lat/lon)",
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": null,
+        "altura_m": null,
+        "telhado": "n/a",
+        "torres": {"n": 0, "altura_m": null, "obs": ""},
+        "cor_paredes": "n/a",
+        "cor_molduras": "n/a",
+        "cor_telhado": "n/a",
+        "estilo": "rampa / funicular",
+        "fachada_olha_para": "oeste (desce da cidade alta, atrás da Sé/colégio, à cidade baixa)",
+        "elementos_marcantes": "rampa reta na escarpa entre cidade alta e baixa"
+      },
+      "forma_em_1549_1763": "Séc. XVII–1763: rampa dos jesuítas na encosta com guindaste para carga (o antecessor do Elevador Lacerda no período). Modelar como faixa inclinada na escarpa; sem medidas publicadas.",
+      "medida_status": "estimado: sem medida publicada; comprimento da rampa = desnível da escarpa no DEM",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:SalvadorDaBahiaPlanoInclinadoGoncalves.jpg", "licenca": "GFDL / CC BY-SA 3.0"}
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Plano_Inclinado_Gonçalves", "https://www.wikidata.org/wiki/Q10350298"],
+      "confianca": "baixa",
+      "obs": "GSS 1587 descreve 'dous caminhos em voltas para a praia' a partir dos cantos da praça e um 'caminho do carro' para a Conceição — subidas do período além do guindaste."
+    },
+    {
+      "id": "elevador-lacerda",
+      "nome": "Elevador Lacerda",
+      "nome_antigo": "Elevador Hidráulico da Conceição / 'Parafuso'",
+      "ano_construcao": 1869,
+      "fora_do_periodo": true,
+      "fases": [
+        {"ano": 1869, "o_que_mudou_na_forma": "Obras iniciadas em 17/10/1869 (eng. Augusto Frederico de Lacerda)", "fonte": "https://pt.wikipedia.org/wiki/Elevador_Lacerda"},
+        {"ano": 1873, "o_que_mudou_na_forma": "Inaugurado em 8/12/1873 (o mesmo artigo também diz 8/12/1872): torre de 63 m, a mais alta do mundo; hidráulico", "fonte": "https://pt.wikipedia.org/wiki/Elevador_Lacerda ; https://www.ipatrimonio.org/salvador-elevador-lacerda/"},
+        {"ano": 1906, "o_que_mudou_na_forma": "Eletrificado", "fonte": "https://pt.wikipedia.org/wiki/Elevador_Lacerda"},
+        {"ano": 1930, "o_que_mudou_na_forma": "Estrutura atual art déco, 72 m, segunda torre", "fonte": "https://pt.wikipedia.org/wiki/Elevador_Lacerda"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.97421745,
+      "lon": -38.513143886,
+      "coord_fonte": "ptwiki Elevador Lacerda (wgCoordinates / Especial:Map); enwiki geohack -12.974167, -38.513333",
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": null,
+        "altura_m": 72,
+        "telhado": "terraço",
+        "torres": {"n": 2, "altura_m": 72, "obs": "uma torre sai da rocha e fura a Ladeira da Montanha; a outra, mais visível, desce até a cidade baixa"},
+        "cor_paredes": "creme/bege claro (conferir na foto)",
+        "cor_molduras": "branco",
+        "cor_telhado": "n/a",
+        "estilo": "art déco (1930)",
+        "fachada_olha_para": "oeste (para a baía e o Mercado Modelo)",
+        "elementos_marcantes": "torre alta junto à escarpa ligada à Praça Tomé de Sousa por passarela; casa de máquinas no topo"
+      },
+      "forma_em_1549_1763": "Não existe (epílogo). No período, a ligação era por ladeiras e guindastes (ver guindaste-dos-padres).",
+      "medida_status": "publicada: 63 m (1873) e 72 m (1930) — ptwiki Elevador Lacerda e IPHAN via ipatrimonio; planta não publicada",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Elevador_Lacerda_7610.jpg", "licenca": "CC BY-SA 4.0"},
+        {"url": "https://commons.wikimedia.org/wiki/File:Salvador_Bahia_1875.jpg", "licenca": "domínio público (PDM) — Lindemann 1875, 1º elevador"}
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Elevador_Lacerda", "https://www.ipatrimonio.org/salvador-elevador-lacerda/"],
+      "confianca": "alta",
+      "obs": "Epílogo."
+    },
+    {
+      "id": "mercado-modelo-alfandega",
+      "nome": "Mercado Modelo",
+      "nome_antigo": "Casa da Alfândega (3ª de Salvador)",
+      "ano_construcao": 1860,
+      "fora_do_periodo": true,
+      "fases": [
+        {"ano": 1860, "o_que_mudou_na_forma": "Casa da Alfândega construída 1860–1861: corpo central quadrado com telhado de 2 águas + rotunda semicircular com cobertura cônica de cobre", "fonte": "https://www.ipatrimonio.org/salvador-antiga-alfandega/ (IPHAN) ; https://pt.wikipedia.org/wiki/Mercado_Modelo"},
+        {"ano": 1971, "o_que_mudou_na_forma": "Mercado Modelo passa a ocupar a Alfândega (o 1º Mercado, de 1912, 40 × 60 m, ao lado, queimou em 1969)", "fonte": "https://pt.wikipedia.org/wiki/Mercado_Modelo"},
+        {"ano": 1984, "o_que_mudou_na_forma": "Incêndio: restam paredes estruturais e parte da rotunda; restaurado", "fonte": "https://www.ipatrimonio.org/salvador-antiga-alfandega/"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.973,
+      "lon": -38.5141,
+      "coord_fonte": "Wikidata Q3306262 HTML (data-lat/lon); ptwiki -12.9725, -38.51361",
+      "forma": {
+        "planta_largura_m": 65,
+        "planta_comprimento_m": 65,
+        "andares": 2,
+        "altura_m": null,
+        "telhado": "2 águas (corpo quadrado) + cone de cobre (rotunda)",
+        "torres": {"n": 0, "altura_m": null, "obs": "rotunda semicircular voltada para o mar"},
+        "cor_paredes": "branco / creme",
+        "cor_molduras": "cantaria (colunas, cunhais, vergas)",
+        "cor_telhado": "telha; cone de cobre (verde-escuro/oxidado)",
+        "estilo": "neoclássico (fachada tipo templo)",
+        "fachada_olha_para": "estimado: fachada-templo para a Praça Cairu (leste), rotunda para o mar (oeste)",
+        "elementos_marcantes": "rotunda com duas fileiras de colunas toscanas geminadas; janelas e falsas janelas alternadas"
+      },
+      "forma_em_1549_1763": "Não existe (epílogo). No período, a alfândega ficava no lado NORTE da praça da cidade alta (GSS 1587); o local era mar/praia.",
+      "medida_status": "estimado: 65 × 65 m = área publicada 8.410 m² (ptwiki) ÷ 2 pavimentos ≈ 4.200 m² por piso → lado ≈ 65 m (forma real é quadrado + semicírculo); altura não publicada",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Mercado_Modelo_Salvador_2019-0416.jpg", "licenca": "CC BY-SA 4.0"}
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Mercado_Modelo", "https://www.ipatrimonio.org/salvador-antiga-alfandega/", "https://www.wikidata.org/wiki/Q3306262"],
+      "confianca": "media",
+      "obs": "Epílogo. O '2.400 m² (40 × 60 m)' da ptwiki é do 1º Mercado (1912), outro prédio. Inauguração do 1º Mercado: 2/2/1912 vs 9/12/1912 (mesma página ptwiki)."
+    },
+    {
+      "id": "forte-monte-serrat",
+      "nome": "Forte de Nossa Senhora de Monte Serrat",
+      "nome_antigo": "Forte de Monte Serrat",
+      "ano_construcao": 1583,
+      "fases": [
+        {"ano": 1583, "o_que_mudou_na_forma": "Fortim primitivo (séc. XVI; ano exato não lido — 1583 = posição; morte de van Dorth no sítio em 1624 prova que já existia)", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_Nossa_Senhora_de_Monte_Serrat"},
+        {"ano": 1694, "o_que_mudou_na_forma": "Reedificado em pedra e cal (gov. João de Lencastre, 1694–1702), planta de Baccio da Filicaia", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_Nossa_Senhora_de_Monte_Serrat"},
+        {"ano": 1742, "o_que_mudou_na_forma": "Obras concluídas: hexágono irregular à barbeta com guaritas circulares de cúpula nos vértices; edificação de 2 pavimentos no terrapleno", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_Nossa_Senhora_de_Monte_Serrat"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.929965,
+      "lon": -38.517719,
+      "coord_fonte": "Wikidata Q10283857 HTML (data-lat/lon)",
+      "forma": {
+        "planta_largura_m": 36,
+        "planta_comprimento_m": 36,
+        "andares": 2,
+        "altura_m": null,
+        "telhado": "terraço (barbeta) + 4 águas na casa de comando",
+        "torres": {"n": 6, "altura_m": null, "obs": "guaritas circulares cobertas por cúpulas nos vértices"},
+        "cor_paredes": "branco caiado / pedra",
+        "cor_molduras": "pedra",
+        "cor_telhado": "telha cerâmica (casa de comando)",
+        "estilo": "fortificação abaluartada",
+        "fachada_olha_para": "mar (enseada de Itapagipe e entrada do porto)",
+        "elementos_marcantes": "hexágono com guaritas de cúpula; casa de 2 pavimentos"
+      },
+      "forma_em_1549_1763": "Fortim simples até 1694; obra 1694–1742; hexágono com guaritas de 1742 em diante.",
+      "medida_status": "estimado: perímetro publicado 485 palmos (Souza 1885, citado na ptwiki) × 0,22 m ≈ 107 m → hexágono de lado ≈ 18 m, Ø ≈ 36 m",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:MonteSerrateFortress-Salvador-CCBY.jpg", "licenca": "CC BY 2.0"}
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Forte_de_Nossa_Senhora_de_Monte_Serrat", "https://www.wikidata.org/wiki/Q10283857"],
+      "confianca": "media",
+      "obs": "Fica na península de Itapagipe, ~5 km ao norte do centro (dentro do bbox)."
+    },
+    {
+      "id": "forte-santa-maria",
+      "nome": "Forte de Santa Maria",
+      "nome_antigo": "Forte de Santa Maria (da Barra)",
+      "ano_construcao": 1614,
+      "fases": [
+        {"ano": 1614, "o_que_mudou_na_forma": "Erguido a partir de 1614 com risco de Frias da Mesquita (ptwiki); IPAC/IPHAN: levantado em 1627 (gov. Diogo Luís de Oliveira)", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_Santa_Maria ; https://www.ipatrimonio.org/salvador-forte-de-sao-diogo/"},
+        {"ano": 1696, "o_que_mudou_na_forma": "Estrutura atual em pedra e cal (Lencastre, desenho atribuído a José Pais Esteves): heptágono com 4 ângulos salientes e 3 reentrantes, à barbeta, casa de comando de 2 pavimentos, casa da pólvora abobadada", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_Santa_Maria ; https://www.ipatrimonio.org/salvador-forte-de-santa-maria/"}
+      ],
+      "ano_demolicao": null,
+      "lat": -13.0045093,
+      "lon": -38.5339883,
+      "coord_fonte": "Wikidata Q10283907 HTML (data-lat/lon)",
+      "forma": {
+        "planta_largura_m": 36,
+        "planta_comprimento_m": 36,
+        "andares": 2,
+        "altura_m": null,
+        "telhado": "terraço (barbeta) + telha na casa de comando",
+        "torres": {"n": 0, "altura_m": null, "obs": "guarita"},
+        "cor_paredes": "branco caiado / pedra",
+        "cor_molduras": "pedra",
+        "cor_telhado": "telha cerâmica (fachada sul da casa de comando revestida de telhas)",
+        "estilo": "tipo italiano",
+        "fachada_olha_para": "mar (praia do Porto da Barra)",
+        "elementos_marcantes": "heptágono irregular; casa de comando de 2 pavimentos"
+      },
+      "forma_em_1549_1763": "Forte de 1614/1627 (forma não publicada) até 1696; heptágono atual de 1696 em diante. Em 1638 já existiam os três fortes da Barra (IPHAN).",
+      "medida_status": "estimado: perímetro publicado 514 palmos (Souza 1885, citado na ptwiki) × 0,22 m ≈ 113 m → Ø ≈ 36 m",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Forte_de_Santa_Maria_7680.jpg", "licenca": "CC BY-SA 4.0"}
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Forte_de_Santa_Maria", "https://www.ipatrimonio.org/salvador-forte-de-santa-maria/", "https://www.wikidata.org/wiki/Q10283907"],
+      "confianca": "media",
+      "obs": "Souza (1885) chama de 'hectogono' (sic) com 514 palmos."
+    },
+    {
+      "id": "forte-sao-diogo",
+      "nome": "Forte de São Diogo",
+      "nome_antigo": "Estância de São Diogo",
+      "ano_construcao": 1609,
+      "fases": [
+        {"ano": 1609, "o_que_mudou_na_forma": "Risco de Frias da Mesquita no gov. Diogo de Meneses (1609–1613); 'Estância de São Diogo' em Albernaz 1616 (ptwiki); IPAC: levantado em 1629", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_São_Diogo ; https://www.ipatrimonio.org/salvador-forte-de-sao-diogo/"},
+        {"ano": 1626, "o_que_mudou_na_forma": "Reconstruído a partir de 1626 (Diogo Luís de Oliveira); resistiu ainda em obras a Nassau em 1638", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_São_Diogo"},
+        {"ano": 1704, "o_que_mudou_na_forma": "Alterações dão a forma atual: terrapleno acompanha a base do morro cortado; reinaugurado em 1722 com 7 peças", "fonte": "https://pt.wikipedia.org/wiki/Forte_de_São_Diogo"}
+      ],
+      "ano_demolicao": null,
+      "lat": -13.002006,
+      "lon": -38.532746,
+      "coord_fonte": "Wikidata Q10283965 HTML (data-lat/lon)",
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": 2,
+        "altura_m": null,
+        "telhado": "terraço (barbeta) + telha na casa de comando",
+        "torres": {"n": 0, "altura_m": null, "obs": "guarita"},
+        "cor_paredes": "branco caiado / pedra",
+        "cor_molduras": "pedra",
+        "cor_telhado": "telha cerâmica",
+        "estilo": "tipo italiano, planta irregular (6 lados retos e 1 curvo)",
+        "fachada_olha_para": "mar (Porto da Barra), encostado ao morro",
+        "elementos_marcantes": "casa de comando de 2 pavimentos com portada e brasão"
+      },
+      "forma_em_1549_1763": "Estância/forte simples 1609–1626; reconstrução 1626–1638; forma atual a partir de 1704–1722.",
+      "medida_status": "estimado: sem planta publicada ('plano de fogo total de 120 palmos' ≈ 26 m é a frente de tiro, não o perímetro) — medir no footprint OSM",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:JACaldas-SDiogoFort.jpg", "licenca": "domínio público (PDM) — perfil e planta de Caldas"}
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Forte_de_São_Diogo", "https://www.ipatrimonio.org/salvador-forte-de-sao-diogo/", "https://www.wikidata.org/wiki/Q10283965"],
+      "confianca": "media",
+      "obs": ""
+    },
+    {
+      "id": "mosteiro-sao-bento",
+      "nome": "Mosteiro de São Bento",
+      "nome_antigo": "Mosteiro de São Bento da Bahia",
+      "ano_construcao": 1582,
+      "fases": [
+        {"ano": 1582, "o_que_mudou_na_forma": "Primeiro prédio começa a ser construído (fora dos muros, ao sul); habitado em 1584", "fonte": "https://pt.wikipedia.org/wiki/Mosteiro_de_São_Bento_(Salvador)"},
+        {"ano": 1624, "o_que_mudou_na_forma": "Ocupado e saqueado pelos holandeses", "fonte": "https://pt.wikipedia.org/wiki/Mosteiro_de_São_Bento_(Salvador)"},
+        {"ano": 1650, "o_que_mudou_na_forma": "Boa parte do prédio claustral (alas de celas) data de 1650–1700", "fonte": "https://pt.wikipedia.org/wiki/Mosteiro_de_São_Bento_(Salvador)"},
+        {"ano": 1871, "o_que_mudou_na_forma": "Altar-mor; torres atuais do fim do séc. XIX", "fonte": "https://pt.wikipedia.org/wiki/Mosteiro_de_São_Bento_(Salvador)"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.97916667,
+      "lon": -38.51388889,
+      "coord_fonte": "Wikidata Q2820356 HTML (data-lat/lon); ptwiki -12.97917, -38.5139",
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": 2,
+        "altura_m": null,
+        "telhado": "4 águas em volta do claustro; igreja 2 águas",
+        "torres": {"n": 2, "altura_m": null, "obs": "torres do fim do séc. XIX"},
+        "cor_paredes": "branco",
+        "cor_molduras": "cinza/pedra",
+        "cor_telhado": "telha cerâmica",
+        "estilo": "colonial / igreja com fachada do séc. XIX",
+        "fachada_olha_para": "Avenida Sete de Setembro / Largo de São Bento (estimado)",
+        "elementos_marcantes": "igreja + claustro (detalhes a conferir na foto)"
+      },
+      "forma_em_1549_1763": "Nada antes de 1582; 1582–1650 mosteiro simples; 1650–1763 alas claustrais de 2 pavimentos + igreja, SEM as torres atuais (fim do séc. XIX).",
+      "medida_status": "estimado: sem medida publicada — medir no footprint OSM",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Dia_de_São_Bento_no_Mosteiro_de_São_Bento,_Salvador.jpg", "licenca": "CC BY 2.0"}
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Mosteiro_de_São_Bento_(Salvador)", "https://www.wikidata.org/wiki/Q2820356"],
+      "confianca": "baixa (forma)",
+      "obs": "Cores e volumes de hoje não conferidos em foto; só datas lidas."
+    },
+    {
+      "id": "misericordia",
+      "nome": "Igreja e Santa Casa da Misericórdia (Museu da Misericórdia)",
+      "nome_antigo": "Casa da Misericórdia e hospital",
+      "ano_construcao": 1549,
+      "fases": [
+        {"ano": 1549, "o_que_mudou_na_forma": "Casa da Misericórdia do séc. XVI (ano exato não lido; 1549 = posição)", "fonte": "https://pt.wikipedia.org/wiki/Igreja_da_Misericórdia_(Salvador)"},
+        {"ano": 1587, "o_que_mudou_na_forma": "'No cabo da rua dos mercadores, da banda do mar … casa da misericórdia e hospital, cuja igreja não é grande, mas mui bem acabada'", "fonte": "Gabriel Soares de Sousa, cap. VII"},
+        {"ano": 1664, "o_que_mudou_na_forma": "Construção atual iniciada (barroco)", "fonte": "https://pt.wikipedia.org/wiki/Igreja_da_Misericórdia_(Salvador)"},
+        {"ano": 1722, "o_que_mudou_na_forma": "Série de reformas a partir de 1722", "fonte": "https://pt.wikipedia.org/wiki/Igreja_da_Misericórdia_(Salvador)"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.973773,
+      "lon": -38.511996,
+      "coord_fonte": "Wikidata Q55755353 HTML (data-lat/lon); ptwiki infobox -12.97389, -38.51194",
+      "forma": {
+        "planta_largura_m": null,
+        "planta_comprimento_m": null,
+        "andares": 2,
+        "altura_m": null,
+        "telhado": "2 águas",
+        "torres": {"n": null, "altura_m": null, "obs": "não publicado — conferir na foto"},
+        "cor_paredes": "branco",
+        "cor_molduras": "cantaria",
+        "cor_telhado": "telha cerâmica",
+        "estilo": "barroco / rococó",
+        "fachada_olha_para": "rua da Misericórdia (lado leste); fundos sobre a escarpa, para o mar",
+        "elementos_marcantes": "igreja pequena colada ao hospital, à beira da escarpa"
+      },
+      "forma_em_1549_1763": "Séc. XVI: igreja pequena + hospital pobre à beira da escarpa, no fim da rua que sai da praça para o norte. 1664–1763: igreja barroca atual + Santa Casa.",
+      "medida_status": "estimado: sem medida publicada — medir no footprint OSM",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Museu_da_Misericórdia.jpg", "licenca": "CC BY-SA 4.0"}
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Igreja_da_Misericórdia_(Salvador)", "https://digital.bbm.usp.br/bitstream/bbm/4795/1/017204_COMPLETO.pdf"],
+      "confianca": "baixa (forma)",
+      "obs": "Não usar a coordenada da ptwiki 'Santa Casa de Misericórdia da Bahia' (-12.9644, -38.5035): é o hospital atual em Nazaré, não o prédio colonial."
+    },
+    {
+      "id": "conceicao-da-praia",
+      "nome": "Basílica de Nossa Senhora da Conceição da Praia",
+      "nome_antigo": "Ermida de Nossa Senhora da Conceição",
+      "ano_construcao": 1549,
+      "fases": [
+        {"ano": 1549, "o_que_mudou_na_forma": "Capela/ermida de taipa de pilão erigida por Tomé de Sousa no sopé da escarpa, junto ao desembarcadouro", "fonte": "https://pt.wikipedia.org/wiki/Basílica_de_Nossa_Senhora_da_Conceição_da_Praia"},
+        {"ano": 1739, "o_que_mudou_na_forma": "Igreja atual (3ª no local) iniciada, projeto de Manuel Cardoso de Saldanha, toda em lioz vindo de Portugal", "fonte": "https://pt.wikipedia.org/wiki/Basílica_de_Nossa_Senhora_da_Conceição_da_Praia"},
+        {"ano": 1765, "o_que_mudou_na_forma": "Inaugurada (obras concluídas só em 1849)", "fonte": "https://pt.wikipedia.org/wiki/Basílica_de_Nossa_Senhora_da_Conceição_da_Praia"}
+      ],
+      "ano_demolicao": null,
+      "lat": -12.975352,
+      "lon": -38.514284,
+      "coord_fonte": "Wikidata Q9650869 HTML (data-lat/lon); ptwiki infobox -12.97528, -38.51417",
+      "forma": {
+        "planta_largura_m": 43.8,
+        "planta_comprimento_m": 58.5,
+        "andares": 2,
+        "altura_m": 26,
+        "telhado": "2 águas",
+        "torres": {"n": 2, "altura_m": null, "obs": "torres implantadas em diagonal"},
+        "cor_paredes": "pedra de lioz (bege-claro)",
+        "cor_molduras": "lioz",
+        "cor_telhado": "telha cerâmica",
+        "estilo": "barroco com fachada neoclássica e ornatos joaninos",
+        "fachada_olha_para": "noroeste (publicado: ptwiki — sol da tarde na fachada)",
+        "elementos_marcantes": "fachada alta e estreita; torres em diagonal; nave 28,5 × 19,8 m com capela-mor poligonal de 3 faces"
+      },
+      "forma_em_1549_1763": "1549–1739: capela pequena de taipa (depois uma 2ª igreja, forma não publicada) na praia, ao pé da escarpa, perto do desembarcadouro geral. 1739–1763: canteiro da igreja de lioz (pronta só em 1765) — no vídeo, mostrar crescendo a partir de 1739.",
+      "medida_status": "publicada: projeção 58,50 × 43,80 m (≈ 2.562 m²), altura ≈ 26 m, nave 28,50 × 19,80 m (ptwiki Basílica de N. S. da Conceição da Praia); altura das torres não publicada",
+      "fotos_ref": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Basilica-conceicao-da-praia.jpg", "licenca": "CC BY-SA 3.0"}
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Basílica_de_Nossa_Senhora_da_Conceição_da_Praia", "https://www.wikidata.org/wiki/Q9650869"],
+      "confianca": "alta (medidas) / media (capela de 1549)",
+      "obs": "GSS 1587: o caminho do sul da praça 'é serventia para Nossa Senhora da Conceição, aonde está o desembarcadouro geral das mercadorias'."
+    }
+  ]
+}

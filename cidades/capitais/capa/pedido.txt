@@ -1,0 +1,15 @@
+Gere 1 imagem com a ferramenta de geração de imagem (image_gen) e salve nesta pasta como capa.png, formato PAISAGEM 16:9 (o maior tamanho horizontal disponível).
+
+Cena: um panorama aéreo cinematográfico e realista que funde, da esquerda para a direita, as três capitais do Brasil num só horizonte, ao entardecer:
+- à esquerda, Salvador colonial: a escarpa da Cidade Alta sobre a Baía de Todos os Santos, casario e igrejas barrocas com torres, caravelas portuguesas na baía;
+- no centro, o Rio de Janeiro: a Baía de Guanabara com o Pão de Açúcar e um paço colonial de dois andares junto ao cais, veleiros;
+- à direita, Brasília: o Congresso Nacional (as duas torres gêmeas em H, a cúpula e a cuia) no planalto vermelho do cerrado, céu amplo.
+As três paisagens se emendam suavemente (sem molduras), e uma linha luminosa amarela tracejada liga as três cidades como uma rota num mapa. Luz quente de fim de tarde com cores naturais, alto contraste, aspecto de fotografia aérea premium.
+
+Texto DESENHADO dentro da arte, em português, no alto à esquerda, em duas linhas grandes, letra sans-serif geométrica extra-bold (estilo Sora/Montserrat ExtraBold), com sombra para legibilidade:
+Linha 1 (branca, enorme): AS 3 CAPITAIS
+Linha 2 (amarela #FACC15, enorme): DO BRASIL
+Abaixo, menor, branco: SALVADOR · RIO · BRASÍLIA — COMO E POR QUE A CAPITAL MUDOU
+Grafia exata, com acento em BRASÍLIA e POR QUE separado. Nenhum outro texto, logotipo ou marca d'água.
+
+Não mexa em nenhum outro arquivo da pasta. Ao final, liste os arquivos salvos.

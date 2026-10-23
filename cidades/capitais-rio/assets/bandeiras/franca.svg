@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+ <!-- Armas de França (França Moderna: azul com três flores-de-lis de ouro), desenho simples feito para o projeto -->
+ <defs>
+  <g id="f" fill="#f2c230" stroke="#9a7410" stroke-width="1.5">
+   <path d="M0,-34 C9,-24 12,-12 6,2 L4,10 L-4,10 L-6,2 C-12,-12 -9,-24 0,-34 Z"/>
+   <path d="M-4,4 C-14,-12 -30,-10 -30,2 C-30,12 -20,16 -14,10 C-18,8 -20,2 -16,0 C-12,-2 -8,4 -6,10 Z"/>
+   <path d="M4,4 C14,-12 30,-10 30,2 C30,12 20,16 14,10 C18,8 20,2 16,0 C12,-2 8,4 6,10 Z"/>
+   <rect x="-14" y="10" width="28" height="6" rx="2"/>
+   <path d="M-4,16 L4,16 L8,30 L0,24 L-8,30 Z"/>
+  </g>
+ </defs>
+ <rect width="300" height="200" fill="#1f3f9a"/>
+ <use href="#f" x="95" y="62"/><use href="#f" x="205" y="62"/><use href="#f" x="150" y="150"/>
+</svg>

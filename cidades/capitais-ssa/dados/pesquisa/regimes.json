@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "bandeiras_disponiveis": ["portugal.svg", "reino.svg", "imperio.svg", "imperio2.svg", "republica.svg", "brasil.svg", "espanha.svg"],
+    "arquivos_bandeira": "bandeira_arquivo usa SÓ os arquivos locais de motor/assets/bandeiras/ (mesmas chaves de REGIMES_BR em scripts/gerar_cena.py: portugal → reino 1815.95 → imperio 1822.7 → imperio2 1870 → republica 1889.87 → brasil 1960). O nome do arquivo no Commons fica em bandeira_commons, só como referência. Nada foi baixado.",
+    "holanda": "Não há bandeira holandesa em motor/assets/bandeiras/. A ocupação de 1624–1625 é faixa extra opcional (ver 'faixas_extras'). Licenças CONFERIDAS nas páginas HTML do Commons (22/10/2026): File:Flag_of_the_Dutch_West_India_Company.svg — domínio público (PD-self); File:Prinsenvlag.svg (laranja-branco-azul, a bandeira holandesa da época) — domínio público (PD-self). A da Companhia (WIC) é a mais fiel: quem tomou a cidade foi a Companhia das Índias Ocidentais (enwiki Capture of Bahia).",
+    "portugal_1500s": "portugal.svg é a bandeira de 1750 (a mesma de POA/Floripa/Itaguaí/Rio). Para o séc. XVI existe File:Flag_of_Portugal_(1521).svg — opcional, não baixado; licença conferida no Commons em 22/10/2026: domínio público (PD-self / PD-old).",
+    "espanha_nao_usada": "espanha.svg não se aplica: na União Ibérica (1580–1640) os reis de Espanha foram também reis de Portugal, mas Salvador seguiu sendo cidade portuguesa (a armada de 1625 foi luso-espanhola). Mesma decisão do Rio e de Itaguaí. Se o roteiro quiser marcar a União, usar só texto ('UNIÃO IBÉRICA 1580–1640'), sem trocar a bandeira.",
+    "capital": "Salvador foi a sede do Governo-Geral / Estado do Brasil de 29/03/1549 a 1763, com a interrupção de 1624–1625 (capital em Olinda durante a ocupação holandesa) — infobox da ptwiki Estado do Brasil: 'Salvador (1549-1624; 1625-1763) Olinda (1624-1625) Rio de Janeiro (1763-1815)'. Por isso o HUD mostra, além do regime nacional, o status da cidade (extras_hud.status_da_cidade).",
+    "vice_rei": "O título de vice-rei: alguns governadores-gerais o usaram a partir de 1640; TODOS de 1720 até 1808 (enwiki List of governors-general of Brazil). O primeiro desta série é Vasco Fernandes César de Meneses, de 23/11/1720 a 11/05/1735. A ptwiki Estado do Brasil insiste: nunca houve ato que criasse um 'Vice-Reino do Brasil' — a expressão é anacrônica; o Estado do Brasil manteve o nome até 1815. Por isso o HUD diz 'SEDE DO VICE-REI', não 'VICE-REINO'.",
+    "divisoes": "O Governo-Geral foi dividido duas vezes: 1572–1578 (Governo do Norte em Salvador × do Sul no Rio; reunido seis anos depois — enwiki Salvador, Bahia) e 1602–1612 segundo a ptwiki Estado do Brasil × 1607–1613 segundo a enwiki Salvador, Bahia. Nas duas Salvador continuou capital do Norte — o HUD não muda; vale como prenúncio no roteiro. Em 1621 nasce o Estado do Maranhão (São Luís), separado; Salvador segue capital do Estado do Brasil.",
+    "fontes_gerais": [
+      "https://pt.wikipedia.org/wiki/Estado_do_Brasil",
+      "https://en.wikipedia.org/wiki/State_of_Brazil",
+      "https://en.wikipedia.org/wiki/List_of_governors-general_of_Brazil",
+      "https://en.wikipedia.org/wiki/Salvador,_Bahia",
+      "https://pt.wikipedia.org/wiki/Tomé_de_Sousa",
+      "https://en.wikipedia.org/wiki/Capture_of_Bahia",
+      "https://pt.wikipedia.org/wiki/Jornada_dos_Vassalos"
+    ]
+  },
+  "regimes": [
+    {
+      "inicio": 1500,
+      "fim": 1815.96,
+      "data_inicio": "1500 (início do vídeo; nome da baía em 1º/11/1501; cidade em 29/03/1549)",
+      "data_fim": "16/12/1815",
+      "nome_tela": "BRASIL COLÔNIA",
+      "nome_longo": "Brasil Colônia — Reino de Portugal (Estado do Brasil, com sede em Salvador de 1549 a 1763)",
+      "bandeira_arquivo": "portugal.svg",
+      "bandeira_commons": "Flag_of_Portugal_(1750).svg (a mesma do piloto POA/Floripa/Itaguaí/Rio)",
+      "bandeira_descricao": "branca com o brasão real português coroado ao centro",
+      "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "confianca": "alta",
+      "obs": "Antes de 1549 a baía é terra tupinambá; a bandeira pode entrar em 1501 (nome) ou 1536 (Vila do Pereira). Entre 08/05/1624 e 01/05/1625 a cidade está ocupada pela WIC (faixa extra opcional)."
+    },
+    {
+      "inicio": 1815.96,
+      "fim": 1822.78,
+      "data_inicio": "16/12/1815",
+      "data_fim": "12/10/1822",
+      "nome_tela": "REINO UNIDO",
+      "nome_longo": "Reino Unido de Portugal, Brasil e Algarves",
+      "bandeira_arquivo": "reino.svg",
+      "bandeira_commons": "Flag_of_the_United_Kingdom_of_Portugal,_Brazil,_and_the_Algarves_(1815-1825).svg",
+      "bandeira_descricao": "branca com o brasão real sobre a esfera armilar dourada em fundo azul",
+      "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+      "confianca": "alta",
+      "obs": "Só para o epílogo. Na Bahia a guerra da Independência vai até 02/07/1823 (ptwiki Capitania da Baía de Todos os Santos) — a bandeira do Império pode entrar em Salvador só em 1823.5, se o roteiro quiser."
+    },
+    {
+      "inicio": 1822.78,
+      "fim": 1889.87,
+      "data_inicio": "12/10/1822",
+      "data_fim": "15/11/1889",
+      "nome_tela": "IMPÉRIO DO BRASIL",
+      "nome_longo": "Império do Brasil — Salvador capital da Província da Bahia",
+      "bandeira_arquivo": "imperio.svg",
+      "bandeira_arquivo_apos_1870": "imperio2.svg",
+      "bandeira_commons": "Flag_of_Empire_of_Brazil_(1822-1870).svg / Flag_of_Empire_of_Brazil_(1870-1889).svg",
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta",
+      "obs": "Só para o epílogo (Elevador Lacerda, 1873)."
+    },
+    {
+      "inicio": 1889.87,
+      "fim": null,
+      "data_inicio": "15/11/1889",
+      "data_fim": "—",
+      "nome_tela": "REPÚBLICA",
+      "nome_longo": "República — Salvador capital do Estado da Bahia",
+      "bandeira_arquivo": "republica.svg",
+      "bandeiras_seguintes": [{"de": 1960, "ate": null, "arquivo": "brasil.svg", "obs": "o motor usa brasil.svg de 1960 em diante (REGIMES_BR)"}],
+      "bandeira_commons": "Flag_of_Brazil_(1889–1960).svg → Flag_of_Brazil.svg",
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta",
+      "obs": "Fora do ato 1 (o vídeo de Salvador acaba em 1763); listado para manter o formato."
+    }
+  ],
+  "faixas_extras": [
+    {
+      "inicio": 1624.35,
+      "fim": 1625.33,
+      "data_inicio": "08/05/1624 (frota chega; cidade tomada até o amanhecer de 10/05)",
+      "data_fim": "01/05/1625 (rendição à Jornada dos Vassalos)",
+      "nome_tela": "OCUPAÇÃO HOLANDESA",
+      "nome_longo": "Salvador ocupada pela Companhia Holandesa das Índias Ocidentais (WIC); governo do Estado do Brasil em Olinda",
+      "bandeira_arquivo": null,
+      "bandeira_commons": "Flag_of_the_Dutch_West_India_Company.svg",
+      "bandeira_commons_pagina": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Dutch_West_India_Company.svg",
+      "bandeira_descricao": "tricolor holandesa com o monograma da Companhia (cores exatas: conferir no arquivo)",
+      "licenca_conferida": true,
+      "licenca": "domínio público (PD-self), conferido na página HTML do Commons em 22/10/2026",
+      "alternativa": "File:Prinsenvlag.svg (laranja-branco-azul) — domínio público (PD-self), conferido",
+      "uso": "opcional e LOCAL: segunda bandeira pequena sobre o Forte do Mar/Cidade Alta; a bandeira principal do HUD continua portuguesa (a Coroa não reconheceu a perda e retomou a cidade em 1 ano).",
+      "fonte": "https://en.wikipedia.org/wiki/Capture_of_Bahia",
+      "confianca": "alta",
+      "obs": "Descrição das cores do monograma: conferir no próprio arquivo antes de usar (não li a descrição detalhada da página)."
+    }
+  ],
+  "extras_hud": {
+    "status_da_cidade": [
+      {"de": 1501.83, "ate": 1536.85, "nome": "BAÍA DE TODOS OS SANTOS", "data": "1º/11/1501 (nome da baía)", "fonte": "https://pt.wikipedia.org/wiki/Baía_de_Todos-os-Santos", "obs": "sem cidade: só o nome sobre a baía"},
+      {"de": 1536.85, "ate": 1549.24, "nome": "VILA DO PEREIRA", "curto": "VILA DO PEREIRA (VILA VELHA)", "opcional": true, "data": "nov/1536 (chegada do donatário)", "fonte": "https://pt.wikipedia.org/wiki/Capitania_da_Baía_de_Todos_os_Santos", "obs": "capitania hereditária de Francisco Pereira Coutinho; abandonada depois de 1547"},
+      {"de": 1549.24, "ate": 1624.35, "nome": "SEDE DO GOVERNO-GERAL", "curto": "CAPITAL DO BRASIL", "data": "29/03/1549 (chegada de Tomé de Sousa)", "fonte": "https://pt.wikipedia.org/wiki/Estado_do_Brasil", "obs": "nome da cidade: 'Cidade do Salvador' / São Salvador da Bahia de Todos os Santos (enwiki Salvador, Bahia). 1572–1578 e 1602/07–1612/13: capital do Governo do Norte (não mudar o HUD; ver _meta.divisoes)."},
+      {"de": 1624.35, "ate": 1625.33, "nome": "OCUPADA PELOS HOLANDESES", "curto": "OCUPADA (CAPITAL EM OLINDA)", "data": "08/05/1624 → 01/05/1625", "fonte": "https://pt.wikipedia.org/wiki/Estado_do_Brasil", "obs": "infobox ptwiki Estado do Brasil: capital em Olinda 1624–1625"},
+      {"de": 1625.33, "ate": 1720.89, "nome": "SEDE DO GOVERNO-GERAL", "curto": "CAPITAL DO BRASIL", "data": "01/05/1625 (retomada)", "fonte": "https://pt.wikipedia.org/wiki/Jornada_dos_Vassalos", "obs": "alguns governadores já com título de vice-rei a partir de 1640 (enwiki List) — não muda o HUD"},
+      {"de": 1720.89, "ate": 1763.5, "nome": "SEDE DO VICE-REI", "curto": "CAPITAL DO BRASIL (VICE-REI)", "data": "23/11/1720 (posse de Vasco F. César de Meneses; todos os governadores vice-reis a partir daí)", "fonte": "https://en.wikipedia.org/wiki/List_of_governors-general_of_Brazil", "obs": "NÃO escrever 'VICE-REINO' (ptwiki Estado do Brasil: denominação anacrônica, sem ato formal)"},
+      {"de": 1763.5, "ate": 1823.5, "nome": "CIDADE DA BAHIA", "curto": "CAPITAL DA CAPITANIA DA BAHIA", "data": "1763 (capital do Brasil vai para o Rio)", "fonte": "https://pt.wikipedia.org/wiki/Estado_do_Brasil", "obs": "1763.5 é posição (meio do ano) porque o dia da mudança diverge (27/01 carta régia × 31/08 efetivação — ver RESUMO). Continua sede do arcebispado e da Relação."},
+      {"de": 1823.5, "ate": null, "nome": "CAPITAL DA BAHIA", "data": "02/07/1823 (província do Império; estado a partir de 1889)", "fonte": "https://pt.wikipedia.org/wiki/Capitania_da_Baía_de_Todos_os_Santos", "obs": "só para o epílogo"}
+    ],
+    "obs_bandeiras_locais": "Bandeira da cidade/estado da Bahia não pesquisada (fora do recorte 1549–1763)."
+  }
+}

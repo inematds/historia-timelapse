@@ -1,0 +1,415 @@
+{
+ "_meta": {
+  "gerado_em": "2026-10-22",
+  "o_que_e": "Prédios-símbolo de Brasília para modelagem 3D 'bem definida' (reconhecível). Cada medida é um objeto {valor, unidade, fonte} — 'fonte' é a página/artigo lido ou 'medido' (footprint) ou 'estimado' (de foto/planta, com o raciocínio). O motor deve tratar 'estimado' como ajustável.",
+  "coordenadas": "lat/lon lidos de páginas HTML da Wikipédia (wgCoordinates, link geohack ou infobox) — coord_fonte diz qual. Todos dentro do bbox lon -48.12 a -47.60, lat -15.95 a -15.55 (Catetinho fica a 280 m da borda sul: lat -15.9475).",
+  "footprints_medidos": "'medido_ms' = retângulo mínimo girado do polígono Microsoft Global ML Building Footprints (dl/msbuild/qk210131231.csv.gz, arquivo local já baixado, quadkey de Brasília), calculado por script local (shapely) em 22/10/2026. O ML às vezes funde prédio + anexo ou parte um prédio em dois — por isso cada medida medida vem com observação. Nenhuma API usada.",
+  "azimutes": "Azimute em graus a partir do norte, sentido horário. O Eixo Monumental corre a ~106°/286° (ver eixos.json): 286° = da Praça dos Três Poderes para oeste (Rodoviária, Torre, Memorial JK). 'fachada_principal_az' = para onde a fachada principal OLHA.",
+  "lado_relativo": "Convenção 'olhando da Esplanada para o Congresso' (de oeste para leste): esquerda = norte, direita = sul.",
+  "fotos": "Licenças lidas nas páginas File: do Commons (22/10/2026). 'CC0' aparece em quase toda página do Commons por causa dos dados estruturados — onde é a única licença listada, marcar 'conferir'. Fotos não-DP servem só de referência de modelagem, não vão para a tela.",
+  "pendente": "Planalto e STF não têm dimensões publicadas nas páginas lidas: as medidas vêm do footprint ML e de estimativa. Conferir no OSM (building=*) quando o pbf do Centro-Oeste for baixado."
+ },
+ "eixo_monumental_az": {"valor": 286, "unidade": "graus (Praça → oeste)", "fonte": "medido_ms: lado maior das torres do Congresso 105,5°, Planalto 105,4°, blocos dos ministérios 105–106,5° (perpendicular ao lado maior 14,9–16,6°); coordenadas das páginas (Praça dos Três Poderes → Memorial JK) dão 288,3°", "confianca": "alta (±2°)"},
+ "predios": [
+  {
+   "id": "congresso",
+   "nome": "Palácio do Congresso Nacional",
+   "arquiteto": "Oscar Niemeyer; estrutura Joaquim Cardozo",
+   "ano_inicio": 1958,
+   "ano_inauguracao": 1960.3,
+   "data_inauguracao": "21/04/1960",
+   "lat": -15.799722, "lon": -47.864167,
+   "coord_fonte": "enwiki National Congress Palace (wgCoordinates); ptwiki: 15°47′59″S 47°51′51″O",
+   "fachada_principal_az": {"valor": 286, "fonte": "a fachada oeste, 'voltada para a Esplanada', tem o peristilo de 160 m (Vitruvius arquitextos 131.00)"},
+   "partes": [
+    {"parte": "plataforma (edifício principal / laje das cúpulas)",
+     "forma": "caixa baixa e longa, de mármore branco, com a laje de cobertura como 'esplanada' onde pousam as cúpulas; colunata (peristilo) na fachada oeste",
+     "comprimento": {"valor": 160, "unidade": "m", "fonte": "peristilo de 160 m na face oeste (Vitruvius arquitextos 131.00); medido_ms 160,4 m (lado maior a 16,6°, isto é, N–S)"},
+     "largura": {"valor": 65, "unidade": "m", "fonte": "medido_ms 65,1 m (E–O)"},
+     "altura_sobre_esplanada": {"valor": 11, "unidade": "m", "fonte": "estimado: 2 pavimentos acima do talude, pano de vidro de 5,3 m por pavimento (Vitruvius 131.00) + laje de 0,7 m na borda"},
+     "pavimentos": {"valor": 3, "fonte": "semienterrado, térreo e esplanada (ptwiki Palácio do Congresso Nacional)"},
+     "laje": {"valor": "laje nervurada dupla, 70 cm na borda a 3 m no vão", "fonte": "Vitruvius 131.00"},
+     "colunas": {"valor": "pilares elípticos em malha 10 × 15 m; na face oeste a fileira avança 6 m à frente do vidro e a cobertura avança mais 6 m em balanço", "fonte": "Vitruvius 131.00; ptwiki"},
+     "orientacao_lado_maior_az": {"valor": 16.6, "fonte": "medido_ms"}},
+    {"parte": "cúpula do Senado (convexa, 'virada para baixo')",
+     "forma": "parabolóide de revolução (calota), casca de concreto de 10 cm no topo e 35 cm na base",
+     "diametro": {"valor": 38, "unidade": "m", "fonte": "ptwiki Palácio do Congresso Nacional; Vitruvius 131.00"},
+     "altura": {"valor": 10, "unidade": "m", "fonte": "ptwiki ('aproximadamente 10 metros'); Vitruvius 131.00"},
+     "lado": "NORTE — à esquerda das torres para quem olha da Esplanada (ptwiki/enwiki: Senado 'à esquerda das torres', Câmara 'à direita')",
+     "obs": "A ptwiki chama a do Senado de 'côncava' e a da Câmara de 'convexa' (vistas de baixo); o site do Congresso: 'a cúpula menor, voltada para baixo, abriga o Senado'. Em 3D: Senado = domo (bojo para cima); Câmara = tigela (abertura para cima)."},
+    {"parte": "cuia da Câmara (côncava, 'virada para cima')",
+     "forma": "elipsóide de revolução com tronco de cone tangente — tigela larga apoiada na laje como se só pousasse; vão circular de ~22 m no fundo e anel de 14,5 m perfurado na laje acima",
+     "diametro": {"valor": 62, "unidade": "m", "fonte": "ptwiki; enwiki; Vitruvius 131.00"},
+     "altura": {"valor": 10, "unidade": "m", "fonte": "'os mesmos 10 metros de altura da cúpula do Senado' (ptwiki); Vitruvius 131.00"},
+     "lado": "SUL — à direita das torres para quem olha da Esplanada"},
+    {"parte": "torres (Anexo I da Câmara e do Senado)",
+     "forma": "duas lâminas de 28 pavimentos, paredes leste e oeste fechadas em mármore branco (empenas estreitas); as faces voltadas uma para a outra são duas faces diagonais discretas; estrutura de aço revestida",
+     "quantidade": 2,
+     "altura": {"valor": 100, "unidade": "m", "fonte": "ptwiki ('se elevam a cem metros'); ptwiki Praça dos Três Poderes ('28 pavimentos, com cem metros de altura')"},
+     "pavimentos": {"valor": 28, "fonte": "ptwiki; enwiki; Câmara (www2.camara.leg.br, 'duas torres de 28 andares'); Vitruvius 131.00"},
+     "comprimento_pavimento": {"valor": 45, "unidade": "m", "fonte": "Vitruvius 131.00; ptwiki — e medido_ms: bloco das duas torres com lado de 45,0 m a 105,5° (E–O)"},
+     "largura_empena": {"valor": 10.5, "unidade": "m", "fonte": "Vitruvius 131.00 (empenas leste e oeste)"},
+     "largura_centro": {"valor": 12.25, "unidade": "m", "fonte": "Vitruvius 131.00"},
+     "orientacao_lado_maior_az": {"valor": 105.5, "fonte": "medido_ms — o lado de 45 m corre paralelo ao Eixo; da Esplanada se vê a empena estreita de cada torre"},
+     "vao_entre_torres": {"valor": 17, "unidade": "m", "fonte": "estimado: medido_ms dá 41,2 m para as duas torres juntas (N–S) − 2 × 12,25 m"},
+     "posicao": "atrás (a leste) da plataforma, entre as cúpulas, mais perto da cúpula do Senado (norte) 'para passar uma sensação de equilíbrio' (ptwiki). medido_ms: centro do bloco das torres em -15.79968, -47.86335 (~70 m a leste do centro da plataforma).",
+     "passarela": {"valor": "bloco de ligação entre as torres a meia altura, formando o 'H' visto da Esplanada — andar exato não publicado nas páginas lidas", "andares_estimados": "≈ 11º ao 13º (estimado de foto)", "fonte": "Arquivo Público do DF (descrição citada em resumo de busca: 'unidas por meio de passarelas suspensas'); Senado 'interligadas à meia altura' (citado em resumo de busca, página não aberta)", "confianca": "baixa"}},
+    {"parte": "rampa", "forma": "rampa longa do nível da Esplanada (oeste) até a laje das cúpulas; outra rampa leva ao Salão Negro", "fonte": "ptwiki ('A rampa para a Esplanada, onde ficam as cúpulas, costuma ficar fechada'; 'A rampa de acesso leva direto ao Salão Negro')", "dimensoes": "estimado: ~8 m de largura × ~60 m, no eixo, face oeste"},
+    {"parte": "espelhos d'água", "forma": "grande espelho d'água em volta, com palmeiras imperiais", "fonte": "ptwiki Praça dos Três Poderes ('palmeiras imperiais que circundam a grande superfície de água à altura do Congresso Nacional'; 'possui um espelho d'água')", "dimensoes": "estimado de foto"}
+   ],
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:National_Congress_of_Brazil.jpg", "licenca": "CC BY-SA 2.0"},
+    {"url": "https://commons.wikimedia.org/wiki/File:Maquete_do_Congresso_Nacional_-_BR_RJANRIO_PH_0_FOT_00745_0008,_Acervo_do_Arquivo_Nacional.jpg", "licenca": "Domínio público (Arquivo Nacional) — maquete de época"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Palácio_do_Congresso_Nacional", "https://en.wikipedia.org/wiki/National_Congress_Palace", "https://vitruvius.com.br/revistas/read/arquitextos/11.131/3829", "https://www2.camara.leg.br/a-camara/visiteacamara/palacio-do-congresso-nacional", "https://pt.wikipedia.org/wiki/Praça_dos_Três_Poderes"],
+   "confianca": "alta (cúpulas, torres); média (plataforma); baixa (passarela)",
+   "obs": "A infobox da ptwiki traz 'diâmetro 166 metros' para o palácio — provavelmente o comprimento da plataforma; usado 160 (peristilo lido + medido)."
+  },
+  {
+   "id": "planalto",
+   "nome": "Palácio do Planalto",
+   "arquiteto": "Oscar Niemeyer; estrutura Joaquim Cardozo",
+   "ano_inicio": 1958.52, "data_inicio": "10/07/1958",
+   "ano_inauguracao": 1960.3, "data_inauguracao": "21/04/1960",
+   "lat": -15.799167, "lon": -47.860833,
+   "coord_fonte": "enwiki Planalto Palace (wgCoordinates); ptwiki infobox 15°47′56″S 47°51′38″O",
+   "fachada_principal_az": {"valor": 196, "fonte": "estimado: o palácio fica ao NORTE da Praça dos Três Poderes (coordenadas) e a rampa/parlatório se dirige ao público na Praça (ptwiki)", "confianca": "media"},
+   "geometria": {
+    "comprimento": {"valor": 126, "unidade": "m", "fonte": "medido_ms 126,2 m, lado maior a 105,4° (paralelo ao Eixo)", "obs": "pode incluir varanda/espelho; conferir no OSM"},
+    "largura": {"valor": 75, "unidade": "m", "fonte": "medido_ms 75,1 m", "obs": "parece largo para o bloco envidraçado — provável inclusão de jardins/anexo colado; conferir"},
+    "altura": {"valor": 20, "unidade": "m", "fonte": "estimado de foto: 4 pavimentos acima do solo (enwiki/ptwiki: 4 andares + 1 subsolo)"},
+    "pavimentos": {"valor": "4 + 1 subsolo", "fonte": "ptwiki infobox; enwiki"},
+    "area_construida": {"valor": 36000, "unidade": "m²", "fonte": "enwiki ('area of 36,000 square metres')"},
+    "colunas": {"forma": "'velas' — colunas curvas, variação das do Alvorada mas dispostas TRANSVERSALMENTE ao corpo do edifício (vistas de perfil na fachada longa)", "quantidade": "9 por fachada longa (citado em resumo de busca de guia de turismo/Arquivo Público do DF; não lido em página aberta — conferir na foto)", "fonte": "ptwiki/enwiki (forma); quantidade: estimado/conferir"},
+    "rampa": {"forma": "rampa externa que sobe ao salão e ao parlatório (plataforma de discurso)", "fonte": "ptwiki/enwiki"},
+    "espelho_dagua": {"area": {"valor": 1635, "unidade": "m²"}, "profundidade": {"valor": 1.1, "unidade": "m"}, "ano": 1991, "fonte": "ptwiki/enwiki ('construída em 1991'; 1.635 m², 1.900 m³, 110 cm)"},
+    "heliponto": "junto à fachada norte (enwiki)"
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Fachada_do_Palácio_do_Planalto_-_49727772326.jpg", "licenca": "CC BY 2.0"},
+    {"url": "https://commons.wikimedia.org/wiki/File:Planalto_(330085806).jpg", "licenca": "CC BY-SA 2.0"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Palácio_do_Planalto", "https://en.wikipedia.org/wiki/Palácio_do_Planalto"],
+   "confianca": "media (forma); baixa (dimensões)",
+   "obs": "ATENÇÃO: o resumo de busca atribuiu ao Planalto a planta '84 × 75 m, 9 semiarcos a 6,5 m' — conferido na fonte (INOJOSA & BUZAR, Mecánica Computacional 2010, seção 4.6; Vitruvius arquitextos 161.02): é o PALÁCIO DA JUSTIÇA, não o Planalto."
+  },
+  {
+   "id": "alvorada",
+   "nome": "Palácio da Alvorada",
+   "arquiteto": "Oscar Niemeyer; estrutura Joaquim Cardozo; obra da Construtora Rabello",
+   "ano_inicio": 1957.25, "data_inicio": "03/04/1957",
+   "ano_inauguracao": 1958.49, "data_inauguracao": "30/06/1958",
+   "lat": -15.792772, "lon": -47.822175,
+   "coord_fonte": "enwiki/ptwiki Palácio da Alvorada (15°47′33,98″S 47°49′19,83″O)",
+   "fachada_principal_az": {"valor": 270, "fonte": "estimado: esplanada gramada frontal com renque de palmeiras e jardim na parte posterior, voltada para o lago (Almeida, UFRGS/PROPAR); confirmar no OSM", "confianca": "baixa"},
+   "geometria": {
+    "comprimento": {"valor": 110, "unidade": "m", "fonte": "'barra retangular de 30,75 m × 110,00 m' (G. de Almeida, 'A madeira como molde: o caso da coluna do Alvorada', UFRGS/PROPAR)"},
+    "largura": {"valor": 30.75, "unidade": "m", "fonte": "idem"},
+    "varanda": {"valor": 5, "unidade": "m", "fonte": "'afastamento de 5,00 m da caixa de vidro em relação ao peristilo' nas fachadas longas (idem)"},
+    "pavimentos": {"valor": "subsolo semienterrado + 2 acima do solo", "fonte": "idem; ptwiki ('três andares: subsolo, térreo e segundo andar')"},
+    "area": {"valor": 7000, "unidade": "m²", "fonte": "ptwiki/enwiki ('7 000 metros quadrados')"},
+    "altura": {"valor": 9, "unidade": "m acima do terreno", "fonte": "estimado = altura da coluna (8,95 m) com a laje de cobertura"},
+    "colunas": {
+      "forma": "a 'coluna do Alvorada': perfil parabólico em que dois arcos invertidos se encontram, tocando o chão por um vértice ('as colunas apenas tocam o chão, dando a impressão de que o edifício flutua'); semi-colunas nos cantos e na entrada",
+      "altura_total": {"valor": 8.95, "unidade": "m", "fonte": "Almeida/UFRGS (1,20 m de 'base' + 7,75 m de 'fuste')"},
+      "largura": {"valor": 0.75, "unidade": "m", "fonte": "Almeida/UFRGS"},
+      "intercolunio": {"valor": 10, "unidade": "m", "fonte": "Almeida/UFRGS"},
+      "quantidade_por_fachada_longa": {"valor": 12, "fonte": "estimado = 110 m / 10 m + 1 (inclui semi-colunas de canto); conferir em foto"},
+      "fachadas": "colunata só nas duas fachadas longas (peristilo); as internas são circulares"},
+    "capela": "capela anexa à esquerda do palácio, a 24 m, ligada por passarela (Almeida/UFRGS: 'À esquerda do palácio e distante 24,00 m situa-…' — texto truncado)",
+    "espelho_dagua": "espelho d'água à frente, que reflete o palácio, com esculturas (ptwiki); dimensões estimadas de foto"
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Construção_de_Brasília_Palácio_do_Alvorada_1959-2.jpg", "licenca": "Domínio público (Arquivo Nacional)"},
+    {"url": "https://commons.wikimedia.org/wiki/File:Homologação_do_tombamento_de_obras_do_Niemeyer_(34321040524).jpg", "licenca": "CC BY 2.0"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Palácio_da_Alvorada", "https://en.wikipedia.org/wiki/Palácio_da_Alvorada", "https://www.ufrgs.br/propar/wp-content/uploads/2023/11/15_Guilherme-de-Almeida.pdf"],
+   "confianca": "alta (planta e coluna); baixa (orientação)",
+   "obs": "O footprint ML NÃO detectou o Alvorada (só construções pequenas em volta) — usar as medidas do artigo. 1º prédio de alvenaria inaugurado em Brasília (ptwiki)."
+  },
+  {
+   "id": "stf",
+   "nome": "Palácio do Supremo Tribunal Federal",
+   "arquiteto": "Oscar Niemeyer; estrutura Joaquim Cardozo",
+   "ano_inicio": 1958, "ano_inauguracao": 1960.3, "data_inauguracao": "21/04/1960",
+   "lat": -15.802222, "lon": -47.861944,
+   "coord_fonte": "enwiki Supreme Federal Court Palace (wgCoordinates); ptwiki Praça: 15°48′08″S 47°51′43″O",
+   "fachada_principal_az": {"valor": 16, "fonte": "estimado: fica ao SUL da Praça (coordenadas) e da fachada principal 'voltada para a Praça dos Três Poderes' (ptwiki Praça dos Três Poderes)", "confianca": "media"},
+   "geometria": {
+    "comprimento": {"valor": 75, "unidade": "m", "fonte": "medido_ms 75,5 m (lado maior a 15°)", "obs": "o ML pode ter unido o palácio a anexo; conferir no OSM"},
+    "largura": {"valor": 56, "unidade": "m", "fonte": "medido_ms 56,2 m"},
+    "pavimentos_visiveis": {"valor": 4, "fonte": "'da fachada principal, voltada para a Praça dos Três Poderes, são visíveis apenas quatro andares' (ptwiki Praça dos Três Poderes, sem fonte na página)"},
+    "altura": {"valor": 15, "unidade": "m", "fonte": "estimado de foto (colunas mais baixas que as do Planalto: arquiteto Cláudio Queiroz no Correio Braziliense, 11/01/2020)"},
+    "colunas": {"forma": "mesmo modelo do Planalto e do Alvorada, 'pilares externos com formas parecidas e função estrutural secundária, recebendo carga apenas da cobertura e da parte externa da primeira laje'", "fonte": "Vitruvius arquitextos 161.02; ptwiki Praça dos Três Poderes"},
+    "escultura": "'A Justiça' (Alfredo Ceschiatti), sentada, em frente à fachada principal — não medida nas páginas lidas"
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Supreme_Federal_Court_of_Brazil.jpg", "licenca": "CC BY-SA 2.0"}
+   ],
+   "fontes": ["https://en.wikipedia.org/wiki/Supreme_Federal_Court_Palace", "https://pt.wikipedia.org/wiki/Praça_dos_Três_Poderes", "https://vitruvius.com.br/revistas/read/arquitextos/14.161/4913", "https://www.correiobraziliense.com.br/app/noticia/cidades/2020/01/11/interna_cidadesdf,819741/brasilia-sexagenaria-palacio-do-planalto-e-stf-se-destacam-pelas-curv.shtml"],
+   "confianca": "baixa (dimensões)"
+  },
+  {
+   "id": "catedral",
+   "nome": "Catedral Metropolitana de Brasília",
+   "arquiteto": "Oscar Niemeyer; estrutura Joaquim Cardozo",
+   "ano_inicio": 1958.7, "data_inicio": "12/09/1958",
+   "ano_estrutura_pronta": 1960.3,
+   "ano_inauguracao": 1970.41, "data_inauguracao": "31/05/1970 (consagrada 12/10/1968, ainda sem teto)",
+   "lat": -15.798397, "lon": -47.875553,
+   "coord_fonte": "ptwiki Catedral Metropolitana de Brasília (15°47′54,23″S 47°52′31,99″O); enwiki -15.79833, -47.87556",
+   "fachada_principal_az": {"valor": null, "fonte": "planta circular; a entrada é por túnel a partir da praça de acesso, onde estão os 4 evangelistas"},
+   "geometria": {
+    "forma": "hiperbolóide de revolução de 16 colunas de concreto curvas (forma de bumerangue), unidas por anel no topo; vitrais entre as colunas",
+    "colunas": {"valor": 16, "peso_cada": {"valor": 90, "unidade": "t"}, "fonte": "ptwiki; enwiki"},
+    "diametro_base": {"valor": 60, "unidade": "m", "fonte": "anel de concreto no solo de 60 m (ptwiki); '16 pilares distribuídos em uma circunferência de 60 metros de diâmetro' (Inojosa & Buzar 2010)", "obs": "ptwiki também diz 'área de setenta metros de diâmetro' e enwiki '70-meter diameter' — 70 m = praça circular/espelho em volta; medido_ms 56 m"},
+    "altura": {"valor": 42, "unidade": "m", "fonte": "enwiki ('42-meter roof')"},
+    "anel_topo": {"valor": 6.8, "unidade": "m (diâmetro)", "fonte": "ptwiki ('cinta de concreto armado no topo, com cerca de 6,8 metros de diâmetro')"},
+    "piso_interno": "3 m abaixo do solo (ptwiki, projeto)",
+    "espelho_dagua": {"largura": {"valor": 12, "unidade": "m"}, "profundidade": {"valor": 0.4, "unidade": "m"}, "fonte": "ptwiki ('piscina refletora de 12 metros de largura e 40 centímetros de profundidade rodeia a catedral')"},
+    "campanario": {"altura": {"valor": 20, "unidade": "m"}, "posicao": "fora da catedral, à direita de quem olha a entrada", "fonte": "enwiki ('20-meter tall bell tower', 4 sinos)"},
+    "evangelistas": {"valor": 4, "altura": "3 m (ptwiki) / 2,5 m (enwiki)", "fonte": "ptwiki; enwiki"},
+    "anjos": "3 anjos de Ceschiatti suspensos por cabos na nave (ptwiki menciona 'os anjos na nave')",
+    "batisterio": "volume oval baixo ao lado (enwiki 'ovoid roof of the baptistry')"
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Catedral_Metropolitana_de_Brasilia.jpg", "licenca": "CC BY-SA 4.0"},
+    {"url": "https://commons.wikimedia.org/wiki/File:Brasilia_cathedral_2007.jpg", "licenca": "Domínio público (conferir autor na página)"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Catedral_Metropolitana_de_Brasília", "https://en.wikipedia.org/wiki/Cathedral_of_Brasília", "https://cimec.org.ar/ojs/index.php/mc/article/viewFile/3712/3623"],
+   "confianca": "alta"
+  },
+  {
+   "id": "esplanada_bloco",
+   "nome": "Esplanada dos Ministérios — bloco-tipo",
+   "arquiteto": "Oscar Niemeyer (sobre o plano de Lúcio Costa)",
+   "ano_inicio": 1958, "ano_inauguracao": 1960.3,
+   "lat": -15.79547, "lon": -47.87136,
+   "coord_fonte": "medido_ms: centróide de um bloco do lado norte (N1); não há coordenada por bloco nas páginas",
+   "fachada_principal_az": {"valor": "as fachadas longas olham para oeste/leste (≈286° e ≈106°)", "fonte": "medido_ms: lado maior a 14,9–16,6° (perpendicular ao Eixo)"},
+   "geometria": {
+    "quantidade": {"valor": 17, "fonte": "ptwiki Eixo Monumental: 'dezessete blocos idênticos dos ministérios… a N1 tem dez prédios, a S1 tem sete'"},
+    "distribuicao": "10 do lado norte, 7 do lado sul (o espaço que sobra no sul é da Catedral e da Cúria) — mais o Palácio da Justiça (N1) e o Itamaraty (S1) a leste dos blocos",
+    "comprimento": {"valor": 102.5, "unidade": "m", "fonte": "medido_ms: 8 blocos entre 101,1 e 103,1 m"},
+    "largura": {"valor": 17.6, "unidade": "m", "fonte": "medido_ms: 16,9–18,1 m (os de ~20 m são anexos atrás)"},
+    "altura": {"valor": 30, "unidade": "m", "fonte": "'gabarito máximo de cerca de 30 metros' dos prédios da Esplanada (mdc.arq.br, 'A praça do espanto', 2009)"},
+    "pavimentos": {"valor": 10, "fonte": "estimado (térreo + 9; anúncio comercial citado em resumo de busca fala em 9 andares; projeto preliminar com 10 pavimentos citado da revista Thesis — PDF não abriu)"},
+    "espacamento_centros": {"valor": 88, "unidade": "m", "fonte": "medido_ms: centros consecutivos a 87–88 m ao longo do Eixo (vão livre ≈ 70 m)"},
+    "distancia_entre_fileiras": {"valor": 410, "unidade": "m (eixo a eixo dos blocos)", "fonte": "medido_ms (aprox.)"},
+    "estrutura": "esqueleto de aço (testado antes no Brasília Palace Hotel), fachadas de vidro com brises; anexos posteriores atrás de vários blocos"
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Construção_de_Brasília_1959-10.jpg", "licenca": "Domínio público (Arquivo Nacional) — blocos em obra, 1959"},
+    {"url": "https://commons.wikimedia.org/wiki/File:Fotos_produzidas_pelo_Senado_(36041796984)_(edited).jpg", "licenca": "CC BY 2.0"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Esplanada_dos_Ministérios", "https://mdc.arq.br/2009/01/20/a-praca-do-espanto/"],
+   "confianca": "alta (número e planta); média (altura)"
+  },
+  {
+   "id": "itamaraty",
+   "nome": "Palácio do Itamaraty (Palácio dos Arcos)",
+   "arquiteto": "Oscar Niemeyer; estrutura Joaquim Cardozo; jardins Burle Marx",
+   "ano_inicio": 1963, "ano_inauguracao": 1970.3, "data_inauguracao": "20/04/1970 (enwiki infobox) ou 21/04/1970 (enwiki texto; Inojosa & Buzar)",
+   "lat": -15.800556, "lon": -47.867222,
+   "coord_fonte": "enwiki Itamaraty Palace (wgCoordinates)",
+   "fachada_principal_az": {"valor": 16, "fonte": "estimado: fica no lado sul (S1) do Eixo, a leste dos blocos; fachada de arcos voltada para o Eixo (norte)"},
+   "geometria": {
+    "planta": {"valor": "quadrada, 84 × 84 m", "fonte": "Vitruvius arquitextos 161.02; Inojosa & Buzar 2010 ('forma quadrada de 84 metros de lado')"},
+    "altura": {"valor": 17.57, "unidade": "m", "fonte": "Vitruvius 161.02 (17,57 m); Inojosa & Buzar (17,56 m, dos quais 4,27 no subsolo)"},
+    "arcos": {"valor": "15 pilares por fachada, a 6 m entre si, formando 14 arcos plenos (R = 2,80 m; os dos cantos R = 2,497 m)", "fonte": "Vitruvius 161.02"},
+    "espelho_dagua": "o palácio está cercado por um espelho d'água (com a escultura 'O Meteoro', de Bruno Giorgi) — dimensões estimadas de foto",
+    "anexo": "Anexo I, prédio mais alto e estreito atrás (enwiki); medido_ms 163 × 28 m perto"
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Palácio_Itamaraty_by_Diego_Baravelli.jpg", "licenca": "CC BY-SA 4.0"},
+    {"url": "https://commons.wikimedia.org/wiki/File:Oscar_Niemeyer-Itamaraty_Palace-photo_by_Paul_Clemence.jpg", "licenca": "CC BY-SA 4.0"}
+   ],
+   "fontes": ["https://en.wikipedia.org/wiki/Itamaraty_Palace", "https://vitruvius.com.br/revistas/read/arquitextos/14.161/4913", "https://cimec.org.ar/ojs/index.php/mc/article/viewFile/3712/3623"],
+   "confianca": "alta",
+   "obs": "O footprint ML não pegou o palácio no ponto (pegou anexos). A ptwiki 'Palácio do Itamaraty' é a do Rio — não usar."
+  },
+  {
+   "id": "teatro",
+   "nome": "Teatro Nacional Cláudio Santoro",
+   "arquiteto": "Oscar Niemeyer; estrutura Bruno Contarini; painéis Athos Bulcão",
+   "ano_inicio": 1960.58, "data_inicio": "30/07/1960",
+   "ano_inauguracao": 1981.3, "data_inauguracao": "21/04/1981 (Sala Martins Pena aberta em 1966)",
+   "lat": -15.7922, "lon": -47.8802,
+   "coord_fonte": "enwiki Cláudio Santoro National Theater (wgCoordinates); ptwiki 15°47′31″S 47°52′49″O",
+   "geometria": {
+    "forma": "pirâmide truncada (sem o topo), 'remetendo a uma arquitetura de povos pré-colombianos'",
+    "altura_total": {"valor": 46, "unidade": "m", "fonte": "ptwiki ('cerca de 46 metros — 24,5 acima do solo e 19 subterrâneos')"},
+    "altura_acima_solo": {"valor": 24.5, "unidade": "m", "fonte": "ptwiki"},
+    "lateral": {"valor": 136, "unidade": "m", "fonte": "ptwiki ('136 metros na lateral')"},
+    "fachadas_oeste_leste": {"valor": "45 m e 95 m", "fonte": "ptwiki ('fachadas oeste e leste têm 45 e 95 metros') — interpretado como largura das faces", "confianca": "media"},
+    "paineis_laterais": {"valor": "relevo de blocos de concreto de Athos Bulcão (1966) com 125 m de base e 27 m de altura, 1.700 m², nas fachadas laterais", "fonte": "ptwiki"},
+    "orientacao": "as faces de 136 m (com os painéis) correm paralelas ao Eixo (≈106°/286°); fica entre o Eixo (N1) e a N2, no Setor Cultural Norte (ptwiki Eixo Monumental)"
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Teatro_Nacional_Claudio_Santoro_02.jpg", "licenca": "Domínio público (conferir)"},
+    {"url": "https://commons.wikimedia.org/wiki/File:Elevantion_of_theatre_(1994).jpg", "licenca": "CC BY-SA 4.0 (desenho de elevação)"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Teatro_Nacional_Cláudio_Santoro", "https://en.wikipedia.org/wiki/Cláudio_Santoro_National_Theater"],
+   "confianca": "media",
+   "obs": "O footprint ML partiu o teatro em dois (79 × 35 e 66 × 32 m) — não usar."
+  },
+  {
+   "id": "torre_tv",
+   "nome": "Torre de TV de Brasília",
+   "arquiteto": "Lúcio Costa",
+   "ano_inicio": null, "ano_mirante": 1965, "ano_inauguracao": 1967,
+   "lat": -15.790499, "lon": -47.892977,
+   "coord_fonte": "enwiki Brasília TV Tower (wgCoordinates); ptwiki 15°47′26″S 47°53′35″O",
+   "geometria": {
+    "altura_total": {"valor": 224, "unidade": "m", "fonte": "ptwiki; enwiki (originalmente 218 m; +6 m da TV Bandeirantes — enwiki)"},
+    "base": {"valor": "volume triangular de concreto aparente com 25 m de altura, fechado com vidro, sustentado por três pilares em V", "fonte": "ptwiki"},
+    "torre_metalica": {"valor": 192, "unidade": "m", "trechos": "122 + 45 + 24 m (ptwiki; a soma dá 191)", "fonte": "ptwiki"},
+    "mirante": {"valor": 75, "unidade": "m de altura", "fonte": "ptwiki"},
+    "footprint_base": {"valor": "45 × 41 m", "fonte": "medido_ms"},
+    "fonte_luminosa": "fonte de 80 m de diâmetro ao lado (2010) — ptwiki"
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Torre_de_TV_de_Brasília_-_DSC00092.JPG", "licenca": "conferir (página só listou CC0)"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Torre_de_TV_de_Brasília", "https://en.wikipedia.org/wiki/Brasília_TV_Tower"],
+   "confianca": "alta"
+  },
+  {
+   "id": "catetinho",
+   "nome": "Catetinho (Palácio das Tábuas)",
+   "arquiteto": "Oscar Niemeyer",
+   "ano_inicio": 1956.81, "data_inicio": "22/10/1956",
+   "ano_inauguracao": 1956.86, "data_inauguracao": "10/11/1956",
+   "lat": -15.9475, "lon": -47.988333,
+   "coord_fonte": "ptwiki Catetinho (link geohack 15_56_51_S_47_59_18_W)",
+   "geometria": {
+    "forma": "casa de madeira de dois pavimentos, comprida e estreita, com o piso 'pendurado sobre pilotis' e varanda; telhado de uma água",
+    "comprimento": {"valor": 18, "unidade": "m", "fonte": "medido_ms 17,9 × 9,5 m (inclui varanda)"},
+    "largura": {"valor": 9.5, "unidade": "m", "fonte": "medido_ms"},
+    "altura": {"valor": 7, "unidade": "m", "fonte": "estimado de foto (pilotis + 1 pavimento + telhado)"},
+    "material": "madeira (tábuas) — 'construído em 10 dias' entre 22 e 31/10/1956 (ptwiki)"
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Vista_do_Catetinho.jpg", "licenca": "CC BY-SA 4.0"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Catetinho"],
+   "confianca": "media",
+   "obs": "Fica a ~280 m da borda sul do bbox (lat -15.95)."
+  },
+  {
+   "id": "rodoviaria",
+   "nome": "Rodoviária do Plano Piloto",
+   "arquiteto": "Lúcio Costa",
+   "ano_inicio": 1957.4, "ano_inauguracao": 1960.7, "data_inauguracao": "12/09/1960",
+   "lat": -15.793389, "lon": -47.882611,
+   "coord_fonte": "ptwiki Rodoviária do Plano Piloto (15°47′36,2″S 47°52′57,4″O)",
+   "geometria": {
+    "forma": "plataforma de vários níveis no cruzamento dos eixos (Marco Zero): o Eixo Rodoviário passa por baixo; a plataforma superior liga os setores de diversões Sul e Norte",
+    "corte_de_terra": {"valor": 10, "unidade": "m", "fonte": "ptwiki ('um corte de cerca de dez metros… entre junho e agosto de 1957', ~350 caminhões)"},
+    "plataforma_superior": {"valor": "125 × 23 m (parte medida)", "fonte": "medido_ms — o ML pega só parte; a plataforma real é maior (conferir no OSM)"}
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Vistas_de_Brasília_-_Rodoviária_de_Brasília_(3).jpg", "licenca": "Domínio público (conferir)"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Rodoviária_do_Plano_Piloto", "https://pt.wikipedia.org/wiki/Marco_zero_de_Brasília"],
+   "confianca": "media"
+  },
+  {
+   "id": "ponte_jk",
+   "nome": "Ponte Juscelino Kubitschek (Ponte JK)",
+   "arquiteto": "Alexandre Chan; engenheiro Mário Vila Verde",
+   "ano_inicio": 2000, "ano_inauguracao": 2002.95, "data_inauguracao": "15/12/2002",
+   "lat": -15.823611, "lon": -47.829444,
+   "coord_fonte": "enwiki Juscelino Kubitschek bridge (wgCoordinates); ptwiki 15°49′25″S 47°49′46″O",
+   "geometria": {
+    "forma": "três arcos de aço assimétricos, cada um num plano diferente, cruzando o tabuleiro em diagonal, com estais em forma cruzada ('pedra quicando sobre o espelho d'água')",
+    "comprimento_total": {"valor": 1200, "unidade": "m", "fonte": "ptwiki; enwiki"},
+    "vaos_arcos": {"valor": "3 × 240 m (720 m)", "fonte": "ptwiki; enwiki"},
+    "largura": {"valor": 24, "unidade": "m", "fonte": "ptwiki; enwiki"},
+    "altura_arcos": {"valor": 62, "unidade": "m", "fonte": "ptwiki ('altura máxima 62 m'); enwiki diz 60 m"},
+    "pilares": "4 apoios com pilares submersos no lago (ptwiki)",
+    "estais": "48 cabos (ptwiki)",
+    "vao_livre": {"valor": 18, "unidade": "m", "fonte": "enwiki ('clearance below 18 m')"}
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Ponte_JK_Brasília_Brazil.jpg", "licenca": "CC BY 3.0"},
+    {"url": "https://commons.wikimedia.org/wiki/File:Ponte_JK_será_interditada_na_manhã_de_domingo_(19357314503).jpg", "licenca": "CC BY 2.0"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Ponte_Juscelino_Kubitschek", "https://en.wikipedia.org/wiki/Juscelino_Kubitschek_bridge"],
+   "confianca": "alta",
+   "obs": "Orientação da ponte: não lida — tirar do OSM (way 'Ponte JK') quando o pbf existir."
+  },
+  {
+   "id": "memorial_jk",
+   "nome": "Memorial JK",
+   "arquiteto": "Oscar Niemeyer; estátua de Honório Peçanha",
+   "ano_inicio": 1980, "ano_inauguracao": 1981.7, "data_inauguracao": "12/09/1981",
+   "lat": -15.784358, "lon": -47.913081,
+   "coord_fonte": "ptwiki Memorial JK (15°47′03,69″S 47°54′47,09″O)",
+   "geometria": {
+    "forma": "volume baixo de mármore branco + pedestal-pilar de concreto em forma de foice/ponto de interrogação com a estátua de JK numa 'concha'",
+    "pedestal": {"valor": 28, "unidade": "m", "fonte": "ptwiki ('pedestal de concreto armado de 28 metros de altura')"},
+    "estatua": {"valor": 4.5, "unidade": "m", "fonte": "ptwiki"},
+    "footprint": {"valor": "118 × 31,5 m", "fonte": "medido_ms (lado maior a 14,8°)"},
+    "area_construida": {"valor": 2189, "unidade": "m²", "fonte": "ptwiki"}
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Memorial_J_Kubitschek_Brasilia_2009.jpg", "licenca": "CC BY-SA 3.0"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Memorial_JK"],
+   "confianca": "media",
+   "obs": "Fica na Praça do Cruzeiro, ponto mais alto do Plano Piloto, onde foi rezada a 1ª missa (3/5/1957)."
+  },
+  {
+   "id": "panteao",
+   "nome": "Panteão da Pátria e da Liberdade Tancredo Neves",
+   "arquiteto": "Oscar Niemeyer",
+   "ano_inicio": 1985, "ano_inauguracao": 1986.68, "data_inauguracao": "07/09/1986",
+   "lat": -15.801567, "lon": -47.860244,
+   "coord_fonte": "ptwiki Panteão (geohack 15_48_05.64_S_47_51_36.88_W)",
+   "geometria": {
+    "forma": "volume de mármore em forma de pomba estilizada (duas abas curvas), na Praça dos Três Poderes",
+    "footprint": {"valor": "48 × 31,5 m", "fonte": "medido_ms"},
+    "pavimentos": {"valor": 3, "fonte": "ptwiki ('três pavimentos, 2.105 m²')"}
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Panteão_da_Pátria_Tancredo_Neves.jpg", "licenca": "conferir (página só listou CC0)"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Panteão_da_Pátria_e_da_Liberdade_Tancredo_Neves"],
+   "confianca": "media"
+  },
+  {
+   "id": "museu_nacional",
+   "nome": "Museu Nacional Honestino Guimarães",
+   "arquiteto": "Oscar Niemeyer",
+   "ano_inicio": 1999, "ano_inauguracao": 2006.95, "data_inauguracao": "15/12/2006",
+   "lat": -15.797152, "lon": -47.878679,
+   "coord_fonte": "ptwiki Museu Nacional Honestino Guimarães (geohack 15_47_49.747_S_47_52_43.244_W)",
+   "geometria": {
+    "forma": "cúpula semiesférica branca com rampa curva externa",
+    "raio_cupula": {"valor": 25, "unidade": "m", "fonte": "ptwiki ('cúpula com 25 metros de raio, partindo de uma base com 35,55 metros de raio')"},
+    "raio_base": {"valor": 35.55, "unidade": "m", "fonte": "ptwiki"},
+    "altura": {"valor": 26.25, "unidade": "m", "fonte": "ptwiki"},
+    "footprint": {"valor": "91 × 89 m (inclui a rampa)", "fonte": "medido_ms"}
+   },
+   "fotos_ref": [
+    {"url": "https://commons.wikimedia.org/wiki/File:Museu_Nacional_da_República_-_Brasília_-_20201005080343.jpg", "licenca": "CC BY-SA 4.0"},
+    {"url": "https://commons.wikimedia.org/wiki/File:Arquivo_da_Agência_Brasil_-_Brasília_16.jpg", "licenca": "CC BY 3.0"}
+   ],
+   "fontes": ["https://pt.wikipedia.org/wiki/Museu_Nacional_Honestino_Guimarães"],
+   "confianca": "alta"
+  },
+  {
+   "id": "mastro_bandeira",
+   "nome": "Mastro da Bandeira (Praça dos Três Poderes)",
+   "arquiteto": "Sérgio Bernardes",
+   "ano_inauguracao": 1972,
+   "lat": -15.8008, "lon": -47.8614,
+   "coord_fonte": "aproximação: coordenada da Praça dos Três Poderes (ptwiki, 15°48′03″S 47°51′41″O); o mastro não tem coordenada própria nas páginas lidas",
+   "geometria": {"altura": {"valor": 100, "unidade": "m", "fonte": "ptwiki Praça dos Três Poderes ('cem metros de altura')"}},
+   "fontes": ["https://pt.wikipedia.org/wiki/Praça_dos_Três_Poderes"],
+   "confianca": "media",
+   "obs": "Ano 1972 NÃO lido (a página cita só a Lei 5.700 de 1971 sobre a bandeira perene) — confirmar antes de usar o ano."
+  }
+ ]
+}

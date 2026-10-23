@@ -1,0 +1,55 @@
+{
+ "nome": "Brasília",
+ "bbox": [
+  -48.12,
+  -15.95,
+  -47.6,
+  -15.55
+ ],
+ "pbf": "dl/distrito-federal.osm.pbf",
+ "pbf_url": "https://download.openstreetmap.fr/extracts/south-america/brazil/central-west/distrito-federal-latest.osm.pbf",
+ "municipio_osm": "Distrito Federal",
+ "nivel_municipio": "4",
+ "centro_antigo": [
+  -47.8611,
+  -15.8
+ ],
+ "agua_baixa_m": 6.0,
+ "tex": 3,
+ "musicas": [
+  "~/projetos/output/musicas/balao-exploracao-20260818/faixa-1.mp3",
+  "~/projetos/output/musicas/balao-exploracao-20260818/faixa-2.mp3"
+ ],
+ "cor_satelite": true,
+ "feicoes_nomes": [
+  "Congresso Nacional",
+  "Palácio do Planalto",
+  "Palácio da Alvorada",
+  "Catedral Metropolitana de Brasília",
+  "Supremo Tribunal Federal",
+  "Eixo Monumental",
+  "Lago Paranoá",
+  "Ponte JK",
+  "Torre de TV"
+ ],
+ "feicoes_ferrovias": false,
+ "vizinhos_anos": [
+  1957,
+  2020
+ ],
+ "_nota": "Parte 3 de 'As capitais do Brasil' (Brasília 1956–hoje). Ver cidades/capitais/.",
+ "nivel_bairro": "8",
+ "efeitos": {
+  "linhas": {
+   "ponte_jk": {
+    "nome_osm": "Ponte Juscelino Kubitschek"
+   },
+   "ponte_costa": {
+    "nome_osm": "Ponte Honestino Guimarães"
+   },
+   "ponte_bragueto": {
+    "nome_osm": "Ponte do Bragueto"
+   }
+  }
+ }
+}

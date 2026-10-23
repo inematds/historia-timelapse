@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Vitrine capitais</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --amb:#FACC15; --ink:#0c0c10; }
+  html,body { margin:0; width:1920px; height:1080px; overflow:hidden; background:#9fc3dc; }
+  #ceu { position:absolute; inset:0; background:linear-gradient(#7fb0d6 0%, #b9d4e6 38%, #dfe8e2 60%, #dfe8e2 100%); }
+  #mapa { position:absolute; inset:0; }
+  .sombra { text-shadow:0 2px 8px rgba(0,0,0,.75), 0 0 3px rgba(0,0,0,.9); }
+  #hud { position:absolute; left:48px; top:36px; color:#fff; font:800 34px Sora; }
+  #hud small { display:block; font:600 20px Inter; opacity:.9; margin-top:6px; }
+  #hud b { color:var(--amb); }
+  #tag { position:absolute; right:56px; top:40px; background:rgba(12,12,16,.82); border:2px solid var(--amb); border-radius:10px; padding:10px 18px; color:#fff; font:700 26px Inter; opacity:0; }
+  #tag small { display:block; font:600 17px Inter; color:var(--amb); }
+  #marca { position:absolute; right:60px; bottom:30px; color:#fff; font:700 22px Sora; opacity:.85; }
+  #marca i { color:var(--amb); font-style:normal; }
+  #legenda { position:absolute; left:48px; bottom:34px; color:#fff; font:600 18px Inter; opacity:.9; line-height:1.5; }
+</style>
+<script src="assets/deck.min.js"></script>
+<script src="marcos.js"></script>
+<script src="marcos-capitais.js"></script>
+</head><body>
+<div id="ceu"></div><div id="mapa"></div>
+<div id="hud" class="sombra">VITRINE · <b>capitais</b> do Brasil<small id="sub">maquete paramétrica · SimpleMeshLayer · tudo local</small></div>
+<div id="tag"><span id="tagt">VISÃO DE FUTURO</span><small>imaginação, não é projeto aprovado</small></div>
+<div id="legenda" class="sombra"></div>
+<div id="marca" class="sombra">INEMA<i>.</i>CLUB</div>
+<script>
+const Q = Object.fromEntries(new URLSearchParams(location.search));
+const LON0 = -47.8611, LAT0 = -15.8000, M_LAT = 111320, M_LON = M_LAT * Math.cos(LAT0 * Math.PI / 180);
+const ll = (x, y) => [LON0 + x / M_LON, LAT0 + y / M_LAT];
+const EZ = Number(Q.ez || 1);
+const LUZ = Q.luz === 'ne' ? [-2, -3, -4] : MARCOS.LUZ_PADRAO;
+const { PALETA: P, c255 } = MARCOS;
+
+// ---- cena da vitrine (metros a partir da origem; rumo 180 = frente para o sul, rumo 0 = frente para o norte)
+const marcos = [
+  { id: 'congresso', tipo: 'congresso', ...xy(0, 0), rumo: 180, larg: 160, comp: 65, rot: 'CONGRESSO NACIONAL\ncúpula · cuia · torres gêmeas' },
+  { id: 'planalto', tipo: 'palacio_colunas', ...xy(-330, -60), rumo: 180, larg: 140, comp: 60, pisos: 3, colunas: 'planalto', rampa: true, rot: 'PALÁCIO DO PLANALTO' },
+  { id: 'stf', tipo: 'palacio_colunas', ...xy(330, -60), rumo: 180, larg: 90, comp: 50, pisos: 2, colunas: 'stf', rot: 'STF' },
+  { id: 'alvorada', tipo: 'palacio_colunas', ...xy(-330, 220), rumo: 180, larg: 110, comp: 31, pisos: 2, pe: 3.6, colunas: 'alvorada', col_n: 11, rot: 'PALÁCIO DA ALVORADA' },
+  { id: 'catedral', tipo: 'catedral_bsb', ...xy(0, 330), rumo: 180, raio: 30, alt: 40, larg: 104, comp: 104, rot: 'CATEDRAL' },
+  { id: 'min1', tipo: 'ministerio', ...xy(330, 200), rumo: 180, larg: 102, comp: 17, rot: 'MINISTÉRIO' },
+  { id: 'min2', tipo: 'ministerio', ...xy(330, 260), rumo: 180, larg: 102, comp: 17, rot: '' },
+  { id: 'itamaraty', tipo: 'itamaraty', ...xy(-120, 360), rumo: 180, larg: 84, comp: 84, rot: 'ITAMARATY' },
+  { id: 'torre', tipo: 'torre_tv', ...xy(150, 330), rumo: 180, larg: 48, comp: 48, rot: 'TORRE DE TV' },
+  { id: 'catetinho', tipo: 'catetinho', ...xy(-200, 220), rumo: 180, larg: 34, comp: 10, rot: 'CATETINHO' },
+  { id: 'teatro', tipo: 'teatro_piramide', ...xy(330, 400), rumo: 180, larg: 100, comp: 70, alt: 40, rot: 'TEATRO NACIONAL' },
+  // Rio / Salvador
+  { id: 'tiradentes', tipo: 'palacio', ...xy(-330, 600), rumo: 180, larg: 70, comp: 50, andares: 3, pe: 6, cupula: { r: 11, h: 11, cor: 'verde', estatua: true }, portico: { n: 8, larg: 30 }, estatuas_canto: true, cor: '#F2EDE3', parede: '#E5DCC8', rot: 'PALÁCIO TIRADENTES' },
+  { id: 'catete', tipo: 'palacio', ...xy(-200, 600), rumo: 180, larg: 46, comp: 60, andares: 3, pe: 5.5, avanco: 0, estatuas_canto: true, parede: '#D9CDB6', cor: '#F2EDE3', rot: 'PALÁCIO DO CATETE' },
+  { id: 'paco', tipo: 'sobrado', ...xy(-70, 600), rumo: 180, larg: 60, comp: 34, andares: 2, pe: 4.6, cor: 'verde', rot: 'PAÇO IMPERIAL' },
+  { id: 'riobranco', tipo: 'palacio', ...xy(60, 600), rumo: 180, larg: 50, comp: 40, andares: 3, pe: 5, cupula: { r: 6.5, h: 7, cor: 'prata' }, portico: { n: 4, larg: 14 }, parede: '#EFE6CF', cor: '#F2EDE3', rot: 'PALÁCIO RIO BRANCO' },
+  { id: 'smarcelo', tipo: 'forte_redondo', ...xy(190, 600), rumo: 180, raio: 23, larg: 48, comp: 48, rot: 'FORTE DE SÃO MARCELO' },
+  { id: 'lacerda', tipo: 'elevador', ...xy(300, 600), rumo: 180, larg: 12, comp: 10, alt: 72, rot: 'ELEVADOR LACERDA' },
+  { id: 'se', tipo: 'igreja', ...xy(400, 600), rumo: 180, larg: 18, comp: 50, pe: 14, torres: 2, coroa: 'piramide', cor: 'azul', rot: 'IGREJA (2 torres)' },
+];
+function xy(x, y) { const [lon, lat] = ll(x, y); return { lon, lat, z: 0 }; }
+const praca = [ll(-5, -6.5), ll(62, -6.5), ll(62, -52), ll(-5, -52)];
+const C = {
+  exz: 1, exb: EZ, anos: [[0, 1700], [100, 2100]], luz: LUZ,
+  marcos: marcos.map(m => ({ ...m, k: m.k ?? (Q.k !== undefined ? Number(Q.k) : undefined), sempre: m.k === undefined, t0: -100, dura: 1 })),
+};
+// rótulos
+const ALT = { itamaraty: 20, torre_tv: 226, catetinho: 9, congresso: 104, palacio_colunas: 18, catedral_bsb: 42, ministerio: 40, teatro_piramide: 42, palacio: 34, forte_redondo: 16, elevador: 78, igreja: 31, sobrado: 15, casa: 9, casarao: 11, prefeitura: 17, estacao: 11, coreto: 9, estacao_castelo: 14, chafariz: 6, claustro: 14, moderno: 18, catedral_moderna: 26 };
+const rotulos = marcos.filter(m => m.rot).map(m => ({ p: [m.lon, m.lat, (ALT[m.tipo] || 10) * EZ + 2], texto: m.rot }));
+const luz = new deck.LightingEffect({
+  amb: new deck.AmbientLight({ color: [255, 255, 255], intensity: 1.0 }),
+  sol: new deck.DirectionalLight({ color: [255, 244, 228], intensity: 1.6, direction: LUZ }),
+});
+const VISTAS = {
+  congresso: { xy: [0, 20], zoom: 17.2, pitch: 62, bearing: 0 },
+  congresso3: { xy: [0, 40], zoom: 17.3, pitch: 60, bearing: 90 },
+  itam: { xy: [-60, 350], zoom: 17.4, pitch: 58, bearing: 0 },
+  congresso2: { xy: [0, 30], zoom: 16.9, pitch: 55, bearing: 35 },
+  tres: { xy: [0, 0], zoom: 16.0, pitch: 58, bearing: 0 },
+  planalto: { xy: [-330, -40], zoom: 17.6, pitch: 58, bearing: -20 },
+  alvorada: { xy: [-330, 230], zoom: 17.8, pitch: 55, bearing: 10 },
+  catedral: { xy: [0, 330], zoom: 18.0, pitch: 55, bearing: 0 },
+  esplanada: { xy: [330, 280], zoom: 16.9, pitch: 58, bearing: -15 },
+  rio: { xy: [-200, 600], zoom: 17.4, pitch: 58, bearing: -10 },
+  ssa: { xy: [240, 600], zoom: 17.4, pitch: 58, bearing: -10 },
+};
+let mapa, aguardando = null;
+function camadas(t) {
+  const L = [];
+  L.push(new deck.SolidPolygonLayer({ id: 'chao', data: [[ll(-3000, -3000), ll(3000, -3000), ll(3000, 3000), ll(-3000, 3000)]], getPolygon: d => d, getFillColor: [142, 154, 134], material: false }));
+  L.push(...MARCOS.camadas(t, 2000, C, D, { luz: LUZ }));
+  if (Q.rotulos !== '0') L.push(new deck.TextLayer({ id: 'rotulos', data: rotulos, getPosition: r => r.p, getText: r => r.texto, getSize: 17, getColor: [255, 255, 255],
+    fontFamily: 'Inter', fontWeight: 700, characterSet: 'auto', fontSettings: { sdf: true, fontSize: 48, buffer: 6 }, outlineWidth: 4, outlineColor: [0, 0, 0, 220],
+    billboard: true, getTextAnchor: 'middle', getAlignmentBaseline: 'bottom', getPixelOffset: [0, -16], lineHeight: 1.15 }));
+  return L;
+}
+const D = {};
+window.render = (vista, t = 0) => new Promise(res => {
+  const v = typeof vista === 'string' ? VISTAS[vista] : vista, [lon, lat] = ll(v.xy[0], v.xy[1]);
+  document.getElementById('tag').style.opacity = (v === VISTAS.futuro) ? 1 : 0;
+  document.getElementById('legenda').innerHTML = `vista <b>${typeof vista === 'string' ? vista : 'custom'}</b> · zoom ${v.zoom} · pitch ${v.pitch}° · bearing ${v.bearing}° · luz [${LUZ}] · ez ${EZ}`;
+  aguardando = res;
+  mapa.setProps({ viewState: { longitude: lon, latitude: lat, zoom: v.zoom, pitch: v.pitch, bearing: v.bearing, maxZoom: 24, maxPitch: 85 }, layers: camadas(t) });
+  mapa.redraw(true);
+});
+window.pronto = (async () => {
+  try { await Promise.race([Promise.all([document.fonts.load('700 40px Inter'), document.fonts.load('800 40px Sora')]), new Promise(r => setTimeout(r, 4000))]); } catch (e) {}
+  const [lon, lat] = ll(0, 0);
+  mapa = new deck.Deck({ parent: document.getElementById('mapa'), width: 1920, height: 1080, controller: false, useDevicePixels: 1, effects: [luz],
+    initialViewState: { longitude: lon, latitude: lat, zoom: 19, pitch: 60, bearing: -28, maxZoom: 24, maxPitch: 85 }, parameters: { clearColor: [0, 0, 0, 0] }, layers: camadas(0),
+    onAfterRender: () => { if (!aguardando) return; const r = aguardando; aguardando = null; requestAnimationFrame(() => r(true)); } });
+  await new Promise(r => setTimeout(r, 300));
+  return true;
+})();
+</script></body></html>

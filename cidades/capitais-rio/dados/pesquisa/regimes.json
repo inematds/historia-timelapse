@@ -1,0 +1,87 @@
+{
+ "_meta": {
+  "gerado_em": "2026-10-22",
+  "origem": "Cópia de cidades/rio/dados/pesquisa/regimes.json cortada para 1763–1960 (sem a faixa da França Antártica e sem os status depois de 1960). Ato 2 de 'As capitais do Brasil'.",
+  "bandeiras_disponiveis": ["portugal.svg", "reino.svg", "imperio.svg", "imperio2.svg", "republica.svg", "brasil.svg"],
+  "arquivos_bandeira": "bandeira_arquivo usa SÓ os arquivos locais de motor/assets/bandeiras/ (mesmas chaves de REGIMES_BR em scripts/gerar_cena.py: portugal → reino 1815.95 → imperio 1822.7 → imperio2 1870 → republica 1889.87 → brasil 1960). Nada baixado.",
+  "capital": "O Rio foi capital do Brasil de 1763 a 1960 (ptwiki História da cidade do Rio de Janeiro); sede do Reino Unido de 1815 a 1821; capital do Império 1822–1889 e da República 1889–1960. O HUD mostra, além do regime nacional, o status da cidade (extras_hud.status_da_cidade).",
+  "fontes_gerais": [
+   "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+   "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+   "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro",
+   "https://pt.wikipedia.org/wiki/Município_Neutro",
+   "https://pt.wikipedia.org/wiki/Estado_da_Guanabara",
+   "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao91.htm",
+   "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l3752.htm"
+  ]
+ },
+ "regimes": [
+  {
+   "inicio": 1763,
+   "fim": 1815.96,
+   "data_inicio": "1763 (início do ato: o Rio vira sede do Estado do Brasil)",
+   "data_fim": "16/12/1815",
+   "nome_tela": "BRASIL COLÔNIA",
+   "nome_longo": "Brasil Colônia — Reino de Portugal (sede do Estado do Brasil no Rio a partir de 1763)",
+   "bandeira_arquivo": "portugal.svg",
+   "bandeira_commons": "Flag_of_Portugal_(1750).svg (a mesma do piloto POA/Floripa/Itaguaí)",
+   "bandeira_descricao": "branca com o brasão real português coroado ao centro",
+   "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+   "confianca": "alta",
+   "obs": "Continua a mesma faixa do ato 1 (Salvador): a bandeira não muda em 1763, só o status da cidade."
+  },
+  {
+   "inicio": 1815.96,
+   "fim": 1822.78,
+   "data_inicio": "16/12/1815",
+   "data_fim": "12/10/1822 (aclamação de Pedro I no Rio; Independência em 07/09/1822)",
+   "nome_tela": "REINO UNIDO",
+   "nome_longo": "Reino Unido de Portugal, Brasil e Algarves — o Rio é a sede da monarquia",
+   "bandeira_arquivo": "reino.svg",
+   "bandeira_commons": "Flag_of_the_United_Kingdom_of_Portugal,_Brazil,_and_the_Algarves_(1815-1825).svg",
+   "bandeira_descricao": "branca com o brasão real sobre a esfera armilar dourada em fundo azul",
+   "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves",
+   "confianca": "alta",
+   "obs": "REGIMES_BR do motor troca para Império em 1822.7 (setembro); a troca em 1822.78 casa com o evento imperio-1822. Decidir no roteiro."
+  },
+  {
+   "inicio": 1822.78,
+   "fim": 1889.87,
+   "data_inicio": "12/10/1822",
+   "data_fim": "15/11/1889",
+   "nome_tela": "IMPÉRIO DO BRASIL",
+   "nome_longo": "Império do Brasil — o Rio é a capital (a 'Corte'); Município Neutro a partir de 12/08/1834",
+   "bandeira_arquivo": "imperio.svg",
+   "bandeira_arquivo_apos_1870": "imperio2.svg",
+   "bandeira_commons": "Flag_of_Empire_of_Brazil_(1822-1870).svg / Flag_of_Empire_of_Brazil_(1870-1889).svg",
+   "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+   "confianca": "alta",
+   "obs": "A Proclamação da República (15/11/1889) acontece no próprio Rio, no Campo de Santana."
+  },
+  {
+   "inicio": 1889.87,
+   "fim": 1960.3,
+   "data_inicio": "15/11/1889",
+   "data_fim": "21/04/1960 (fim do ato: a capital vai para Brasília)",
+   "nome_tela": "REPÚBLICA",
+   "nome_longo": "República dos Estados Unidos do Brasil",
+   "bandeira_arquivo": "republica.svg",
+   "bandeiras_seguintes": [{"de": 1960, "ate": null, "arquivo": "brasil.svg", "obs": "o motor usa brasil.svg de 1960 em diante (REGIMES_BR) — a troca coincide com a saída da capital; o ato 3 (Brasília) começa com ela"}],
+   "bandeira_commons": "Flag_of_Brazil_(1889–1960).svg → Flag_of_Brazil.svg",
+   "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+   "confianca": "alta",
+   "obs": "Fim em 1960.3 só para este ato; o regime continua no ato 3."
+  }
+ ],
+ "extras_hud": {
+  "status_da_cidade": [
+   {"de": 1763, "ate": 1808.18, "nome": "SEDE DO VICE-REINO", "curto": "CAPITAL DO BRASIL COLÔNIA", "data": "1763 (Pombal transfere a sede de Salvador para o Rio)", "fonte": "https://pt.wikipedia.org/wiki/História_da_cidade_do_Rio_de_Janeiro", "obs": "O pedido pede 'Sede do Vice-Reino'; o Rio usava 'Capital do Brasil Colônia'. Os dois são verdadeiros: o Conde da Cunha foi o 1º vice-rei com sede no Rio (ptwiki António Álvares da Cunha). Usar um dos dois."},
+   {"de": 1808.18, "ate": 1815.96, "nome": "SEDE DA CORTE PORTUGUESA", "curto": "CORTE", "data": "08/03/1808", "fonte": "https://pt.wikipedia.org/wiki/Transferência_da_corte_portuguesa_para_o_Brasil", "obs": "Neste ato não é opcional: é o nome que o pedido usa ('Corte')."},
+   {"de": 1815.96, "ate": 1822.78, "nome": "CAPITAL DO REINO UNIDO", "data": "16/12/1815", "fonte": "https://en.wikipedia.org/wiki/United_Kingdom_of_Portugal,_Brazil_and_the_Algarves", "obs": "ptwiki História da cidade: sediou o Reino Unido 'entre 1815 e abril de 1821'; depois o príncipe Pedro governa do Rio como regente — manter o nome até 1822."},
+   {"de": 1822.78, "ate": 1834.61, "nome": "CAPITAL DO IMPÉRIO", "data": "12/10/1822 (aclamação)", "fonte": "https://pt.wikipedia.org/wiki/Pedro_I_do_Brasil", "obs": ""},
+   {"de": 1834.61, "ate": 1891.15, "nome": "CAPITAL DO IMPÉRIO · MUNICÍPIO NEUTRO", "curto": "MUNICÍPIO NEUTRO (CORTE)", "data": "12/08/1834 (Ato Adicional)", "fonte": "https://pt.wikipedia.org/wiki/Município_Neutro", "obs": "Continua 'Município Neutro' depois de 15/11/1889 até a Constituição de 24/02/1891 (art. 2º, lido no Planalto). Alternativa: 'CAPITAL DA REPÚBLICA' de 1889.87 a 1891.15."},
+   {"de": 1891.15, "ate": 1960.3, "nome": "CAPITAL DA REPÚBLICA · DISTRITO FEDERAL", "curto": "DISTRITO FEDERAL (CAPITAL)", "data": "24/02/1891 (1ª Constituição republicana, art. 2º)", "fonte": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao91.htm", "obs": "Art. 2º: 'o antigo Município Neutro constituirá o Distrito Federal, continuando a ser a Capital da União, enquanto não se der execução ao disposto no artigo seguinte' (o art. 3º manda a capital para o Planalto) — a frase pode ir para a tela."},
+   {"de": 1960.3, "ate": null, "nome": "ESTADO DA GUANABARA", "data": "21/04/1960 (Lei 3.752 de 14/04/1960)", "fonte": "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l3752.htm", "obs": "Só o último segundo do ato. 'Com os mesmos limites geográficos, tendo por Capital ... a Cidade do Rio de Janeiro' (art. 1º)."}
+  ]
+ }
+}

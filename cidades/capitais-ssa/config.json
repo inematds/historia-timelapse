@@ -1,0 +1,38 @@
+{
+ "nome": "Salvador",
+ "bbox": [
+  -38.66,
+  -13.02,
+  -38.3,
+  -12.75
+ ],
+ "pbf": "dl/bahia.osm.pbf",
+ "pbf_url": "https://download.openstreetmap.fr/extracts/south-america/brazil/northeast/bahia-latest.osm.pbf",
+ "municipio_osm": "Salvador",
+ "centro_antigo": [
+  -38.5126,
+  -12.9737
+ ],
+ "agua_baixa_m": 6.0,
+ "tex": 3,
+ "musicas": [
+  "~/projetos/output/musicas/balao-exploracao-20260818/faixa-1.mp3",
+  "~/projetos/output/musicas/balao-exploracao-20260818/faixa-2.mp3"
+ ],
+ "cor_satelite": true,
+ "feicoes_nomes": [
+  "Elevador Lacerda",
+  "Forte de São Marcelo",
+  "Forte de Santo Antônio da Barra",
+  "Palácio Rio Branco",
+  "Catedral Basílica de Salvador",
+  "Mercado Modelo",
+  "Pelourinho"
+ ],
+ "feicoes_ferrovias": true,
+ "vizinhos_anos": [
+  1850,
+  2020
+ ],
+ "_nota": "Parte 1 de 'As capitais do Brasil' (Salvador 1549–1763). Ver cidades/capitais/."
+}

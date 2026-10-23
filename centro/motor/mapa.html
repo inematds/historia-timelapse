@@ -78,6 +78,7 @@
 <script src="assets/topojson-client.min.js"></script>
 <script src="cena.js"></script>
 <script src="marcos.js"></script>
+<script src="marcos-capitais.js"></script>
 </head><body>
 <div id="ceu"></div><div id="mapa"></div><div id="nevoa"></div><div id="tom"></div><div id="topo"></div><svg id="linhas" width="1920" height="1080" style="position:absolute;inset:0;pointer-events:none"></svg><div id="chamadas"></div><div id="epoca"><div class="q"><img></div><div class="c sombra"></div></div>
 <div id="linha"><div class="trilho"></div><div class="feito"></div></div>
@@ -218,6 +219,12 @@ function camadas(t) {
     material: MAT_PRED, extensions: EXT_FILTRO,
     filterRange: [[1500, ano], [ano, 1e5]], filterSoftRange: [[1500, ano - (C.nascer || 2.5)], [ano + 1.5, 1e5]] }));
 
+  // ÁGUAS QUE NASCEM (capitais: Lago Paranoá): polígonos lon/lat que enchem de ano0 a ano1 (alfa sobe), cor de água
+  for (const g of (C.aguas || [])) {
+    if (ano < g.ano0) continue; const k = clamp01((ano - g.ano0) / Math.max(.01, g.ano1 - g.ano0));
+    L.push(new deck.SolidPolygonLayer({ id: 'agua-' + g.id, data: g.poligonos, getPolygon: d => d, getFillColor: [...(g.cor || [56, 104, 140]), Math.round(245 * k)],
+      updateTriggers: { getFillColor: Math.round(k * 60) }, extensions: EXT_TERRA, material: false }));
+  }
   // ÁREAS (aterros) em faixas: água antes, faixa a faixa vira cor forte, depois volta ao normal
   for (const a of (C.areas || [])) {
     const fx = (D.F.areas || {})[a.id]; if (!fx) continue;
@@ -447,6 +454,7 @@ function html(t) {
   linhaDoTempo(t, ano);
   const cart = $('cartao'), c = (C.cartoes || []).find(x => t >= x.t0 && t <= x.t1);
   if (c) {
+    if (C.cartaoDireita && !D._cgOk) { D._cgOk = true; cart.querySelector('.cg').style.right = C.cartaoDireita + 'px'; cart.querySelector('.cg').style.left = (C.cartaoEsquerda || 560) + 'px'; }
     cart.querySelector('.n').textContent = c.numero || ''; cart.querySelector('.n').style.display = c.numero ? '' : 'none';
     cart.querySelector('.t').innerHTML = c.titulo; cart.querySelector('.l').textContent = c.legenda || '';
     for (const q of cart.querySelectorAll('.cg > div')) { q.style.transform = ''; const w = q.scrollWidth, m = q.clientWidth;

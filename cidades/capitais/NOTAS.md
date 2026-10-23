@@ -1,0 +1,1 @@
+- Brasília (capitais-bsb): extrai_osm regrava dados/brutos/agua.geojson COM o Lago Paranoá; tirar o lago de novo antes de prep_terreno (o lago entra por C.aguas, 1959–60).

@@ -1,0 +1,39 @@
+{
+ "_meta": {
+  "gerado_em": "2026-10-22",
+  "o_que_e": "Linhas do Plano Piloto para desenhar no mapa — o 'sinal da cruz' de Lúcio Costa: Eixo Monumental (reta) × Eixo Rodoviário (arco). Pontos = lugares com coordenada publicada nas páginas lidas (wgCoordinates/infobox/geohack da Wikipédia) ao longo de cada eixo. Nenhuma coordenada inventada; os poucos pontos 'estimado' estão marcados.",
+  "recomendacao": "Quando o pbf do Centro-Oeste estiver em dl/, trocar estes pontos pela geometria real do OSM (ways 'Eixo Monumental' e 'Eixo Rodoviário'/'Eixão'). Estes pontos servem para o traço animado ('os eixos riscados no cerrado'), não para colar em rua.",
+  "azimute": "Eixo Monumental ≈ 286° (da Praça para oeste) / 106° (para leste), medido na orientação dos footprints Microsoft (torres do Congresso 105,5°, Planalto 105,4°, blocos dos ministérios 105–106,5°); as coordenadas das páginas Praça dos Três Poderes → Memorial JK dão 288,3°. O Eixo Rodoviário cruza perpendicular na Rodoviária (≈16°/196°) e as pontas das asas recuam para oeste ('asas enflechadas'): a ponta norte (Ponte do Bragueto) está a 350° da Rodoviária, a 7,1 km."
+ },
+ "eixo_monumental": {
+  "descricao": "reta leste–oeste: Praça dos Três Poderes (leste) → Esplanada → Rodoviária (cruzamento) → Torre de TV → Buriti → Memorial JK → Rodoferroviária (oeste). 250 m de largura, 6 faixas por sentido (ptwiki Eixo Monumental); a ptwiki/enwiki dão 16 km de extensão total, mas Praça → Rodoferroviária são 9,0 km em linha reta.",
+  "pontos": [
+   {"nome": "Praça dos Três Poderes (ponta leste)", "lat": -15.800833, "lon": -47.861389, "coord_fonte": "ptwiki Praça dos Três Poderes (15°48′03″S 47°51′41″O)", "dist_praca_m": 0},
+   {"nome": "Congresso Nacional", "lat": -15.799722, "lon": -47.864167, "coord_fonte": "enwiki National Congress Palace", "dist_praca_m": 322},
+   {"nome": "Rodoviária do Plano Piloto (cruzamento — Marco Zero)", "lat": -15.793389, "lon": -47.882611, "coord_fonte": "ptwiki Rodoviária do Plano Piloto", "dist_praca_m": 2416},
+   {"nome": "Torre de TV", "lat": -15.790499, "lon": -47.892977, "coord_fonte": "enwiki Brasília TV Tower", "dist_praca_m": 3572},
+   {"nome": "Palácio do Buriti (Praça do Buriti)", "lat": -15.784444, "lon": -47.908056, "coord_fonte": "ptwiki Palácio do Buriti (15°47′04″S 47°54′29″O)", "dist_praca_m": 5316, "obs": "fica ~160 m ao norte da linha"},
+   {"nome": "Memorial JK (Praça do Cruzeiro)", "lat": -15.784358, "lon": -47.913081, "coord_fonte": "ptwiki Memorial JK", "dist_praca_m": 5826},
+   {"nome": "Estação Rodoferroviária (ponta oeste)", "lat": -15.775556, "lon": -47.940833, "coord_fonte": "ptwiki Rodoferroviária de Brasília (15°46′32″S 47°56′27″O)", "dist_praca_m": 8952}
+  ],
+  "confianca": "alta (desvio dos pontos intermediários à reta Praça–Rodoferroviária: 3 a 72 m, exceto o Buriti)"
+ },
+ "eixo_rodoviario": {
+  "descricao": "arco norte–sul que cruza o Eixo Monumental na Rodoviária, com as superquadras dos dois lados: Asa Norte e Asa Sul. Ponta norte = Ponte do Bragueto ('A ponte marca o extremo norte do Eixo Rodoviário', ptwiki). As asas recuam para oeste nas pontas.",
+  "pontos": [
+   {"nome": "Ponte do Bragueto (ponta norte)", "lat": -15.730556, "lon": -47.894167, "coord_fonte": "ptwiki Ponte do Bragueto (15°43′50″S 47°53′39″O)", "confianca": "alta"},
+   {"nome": "Asa Norte (centro do bairro)", "lat": -15.763056, "lon": -47.883611, "coord_fonte": "ptwiki Asa Norte (wgCoordinates)", "confianca": "media", "obs": "ponto representativo do bairro, não da pista — fica a poucas centenas de metros do Eixão"},
+   {"nome": "Rodoviária (cruzamento com o Eixo Monumental)", "lat": -15.793389, "lon": -47.882611, "coord_fonte": "ptwiki Rodoviária do Plano Piloto", "confianca": "alta"},
+   {"nome": "Asa Sul (centro do bairro)", "lat": -15.813056, "lon": -47.896111, "coord_fonte": "ptwiki Asa Sul (wgCoordinates)", "confianca": "media", "obs": "ponto representativo do bairro"},
+   {"nome": "Igrejinha N. S. de Fátima (entrequadra 307/308 Sul, ao lado do eixo)", "lat": -15.813889, "lon": -47.903611, "coord_fonte": "ptwiki Igrejinha (15°48′50″S 47°54′13″O)", "confianca": "baixa", "obs": "fica nas quadras 300, a oeste do Eixão — usar só como referência"},
+   {"nome": "ponta sul (estimada por simetria)", "lat": null, "lon": null, "coord_fonte": "NÃO ACHADA em página lida — por simetria com a norte, ~7 km da Rodoviária a ~226°; tirar do OSM", "confianca": "pendente"}
+  ]
+ },
+ "quadrilatero_cruls": {
+  "descricao": "retângulo demarcado pela Comissão Exploradora do Planalto Central (Missão Cruls, 1892–1894) para o futuro Distrito Federal",
+  "area_km2": {"valor": 14400, "fonte": "Senado, 'Floriano manda Cruls escolher local para a nova capital' (PDF DF_Brasilia_P008_R0081, www2.senado.leg.br) — '14.400 quilômetros quadrados… sob a forma de um retângulo'"},
+  "area_km2_alt": {"valor": 14440, "fonte": "ptwiki Quadrilátero Cruls"},
+  "vertices": null,
+  "vertices_obs": "Coordenadas dos 4 vértices NÃO encontradas nas páginas lidas (ptwiki Quadrilátero Cruls, ptwiki Missão Cruls, PDF do Senado). Fonte provável: Relatório Cruls (1894, reed. 1947) ou o capítulo 'Quadrilátero Cruls' (M. de R. Vergara, Ibict 2024 — o download não abriu). De todo modo um retângulo de 14.400 km² passa muito do bbox (~2.460 km²) do vídeo — só cabe numa vista aberta/globo, ou como texto."
+ }
+}

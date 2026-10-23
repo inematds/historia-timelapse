@@ -1,0 +1,516 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "projeto": "historia-timelapse — As capitais do Brasil, parte Rio de Janeiro capital (1763–1960)",
+    "metodo": "Leitura de páginas HTML (pt/en.wikipedia.org/wiki/…, commons.wikimedia.org/wiki/File:…, www12.senado.leg.br, camara.leg.br PDF 'Palácio Tiradentes 90 anos', diariodorio.com, correiodamanha.com.br, correiobraziliense.com.br, cranebriefing.com, observador.pt, portalsaofrancisco.com.br) com curl/fetch + grep local; SEM api.php/REST/SPARQL/Overpass/IBGE. Coordenadas: wgCoordinates/infobox/geohack das páginas da Wikipédia. Planta (comprimento × largura e azimute do eixo longo): retângulo de área mínima do polígono OSM local (dl/sudeste.osm.pbf → cidades/rio/dados/brutos/predios.json, extraído pelo scripts/extrai_osm.py; nada de Overpass). Orientação da fachada: eixo do polígono OSM + rumo das ruas/praças/edifícios vizinhos em cidades/rio/dados/brutos/ruas.geojson e predios.json (sempre 'estimado'). Alturas sem número publicado: estimadas por nº de pavimentos × pé-direito de época (≈4,5–5,5 m para palácio do séc. XIX) e fotos.",
+    "convencoes": "Unidades em metros; azimute em graus a partir do norte geográfico, sentido horário (0 = N, 90 = L). 'comprimento' = lado maior do retângulo mínimo, 'largura' = lado menor, 'eixo_longo_az' = direção do lado maior (0–180). 'fachada_principal_az' = direção para onde a fachada OLHA. Cada medida é {valor, fonte} ou {valor, fonte:'estimado: como'}. Cores hex aproximadas (fotos) marcadas 'estimado'. 'fases' = estados de FORMA ao longo do tempo (para o motor trocar o modelo no ano certo).",
+    "decisao_cadeia_tiradentes": "Dois ids (cadeia_velha e palacio_tiradentes) no MESMO lugar, ligados por 'sucessor'/'substitui'. Motivo: a forma não tem nada em comum (sobrado colonial de 2 pisos, telhado de telha → palácio eclético de 5 pavimentos com cúpula de 45 m). Linha do tempo: Cadeia Velha até 1922 (demolida), canteiro 1922–1926, Palácio Tiradentes de 06/05/1926 em diante. A Cadeia Velha não tem coordenada própria na Wikipédia: usa-se a do Palácio Tiradentes, justificada pelo PDF da Câmara (o palácio foi erguido no quadrilátero Misericórdia / República do Peru / S. José / D. Manoel, 'lugar tradicional onde existia a Cadeia Velha').",
+    "fonte_osm_local": "OSM local: /home/nmaldaner/projetos/historia-timelapse/dl/sudeste.osm.pbf → cidades/rio/dados/brutos/predios.json (campos poly/area/lv/h); retângulo mínimo calculado localmente. Tags 'h' do OSM são altura mapeada por voluntário, não altura publicada.",
+    "fotos_conferidas": "Abertas e olhadas (640 px, Commons): Palácio_Tiradentes_2.JPG, Câmara_Deputados_Gerais (Cadeia Velha c.1880), Rio-PalacioItamaraty5.JPG, Palácio_Monroe_(0074050cx006e007-01).jpg, Palácio_Guanabara_em_Laranjeiras.jpg, Teatro_Municipal_-_panoramio_(4).jpg. Para Paço Imperial, Catete, São Cristóvão e Conde dos Arcos a licença da foto foi lida mas a imagem NÃO foi aberta: cores/telhado desses quatro são estimativa de memória visual, conferir antes de modelar.",
+    "bbox_ok": "todas as coordenadas dentro de lon −43,82…−43,04 e lat −23,10…−22,72"
+  },
+  "predios": [
+    {
+      "id": "paco_imperial",
+      "nome": "Paço Imperial",
+      "nomes_anteriores": ["Armazém d'El Rey / Casa da Moeda (pré-existentes)", "Casa dos Governadores (1743)", "Paço dos Vice-Reis (1763)", "Paço Real (1808)", "Paço Imperial / Paço do Rio de Janeiro (1822)", "Agência Central dos Correios e Telégrafos (após 1889)"],
+      "anos": {
+        "pedido_licenca": {"valor": 1733, "fonte": "pt.wikipedia Paço Imperial"},
+        "inicio_obra": {"valor": 1738, "fonte": "pt.wikipedia (infobox; 'cerca de 1738')"},
+        "inauguracao": {"valor": 1743, "fonte": "pt/en.wikipedia"},
+        "reformas_de_forma": [
+          {"ano": 1808, "o_que": "acrescentado um novo andar CENTRAL (3º pavimento só no corpo central) na fachada voltada para a Baía; passadiço elevado ligando ao Convento do Carmo", "fonte": "pt.wikipedia ('novo andar central à fachada voltada para a Baía da Guanabara'); en.wikipedia ('third floor was added to the central portion of the façade … which faced the sea')"},
+          {"ano": 1817, "o_que": "primeira ampliação", "fonte": "pt.wikipedia infobox"},
+          {"ano": 1818, "o_que": "'Varanda' monumental provisória entre o Paço e o Carmo para a aclamação de D. João VI (reusada em 1822 e 1841; demolida no Segundo Reinado)", "fonte": "pt.wikipedia (sem ano exato de demolição)"},
+          {"ano": 1840, "o_que": "segunda ampliação; platibanda em torno do 3º andar ocultando o telhado (década de 1840)", "fonte": "pt.wikipedia"},
+          {"ano": 1929, "o_que": "Correios: platibanda retirada, 3º andar estendido a TODO o perímetro, pátio central ocupado, frontões neocoloniais na fachada", "fonte": "pt.wikipedia (sem ano, 'após 1889'); diariodorio.com ('reforma de 1929 … terceiro andar ocupando todo perímetro')"},
+          {"ano": 1985, "o_que": "restauração pelo IPHAN devolve a forma de ~1818 (3º andar só no centro, telhado de telha à vista)", "fonte": "pt.wikipedia (restauro iniciado 1982, 'forma que tinha em 1818'); en.wikipedia (1980); WebSearch/Agência Brasil 2026 (reabertura 1985)"}
+        ],
+        "demolicao": null
+      },
+      "funcao_no_poder": [
+        "Casa dos Governadores da capitania 1743–1763",
+        "Paço dos Vice-Reis (sede do governo do Estado do Brasil) 1763–1808",
+        "Paço Real, despacho de D. João (Príncipe-Regente/Rei) 1808–1821",
+        "Paço Imperial (despacho e residência eventual de Pedro I e Pedro II) 1822–1889; Dia do Fico 09/01/1822; Lei Áurea assinada aqui pela Princesa Isabel em 1888 (en.wikipedia)",
+        "Correios e Telégrafos 1889–1980s; centro cultural desde 1985"
+      ],
+      "lat": -22.9035083,
+      "lon": -43.1742333,
+      "coord_fonte": "en/pt.wikipedia wgCoordinates (geohack 22°54′12.63″S 43°10′27.24″W)",
+      "centro_poligono_osm": {"lat": -22.903586, "lon": -43.174251},
+      "forma": {
+        "planta": {"tipo": "bloco retangular com pátios internos (quadra com pátio central)", "fonte": "pt/en.wikipedia ('vários pátios', 'pátio central')"},
+        "comprimento": {"valor": 90.7, "fonte": "OSM local, polígono 'Paço Imperial' (2.353,8 m²), retângulo mínimo"},
+        "largura": {"valor": 33.0, "fonte": "OSM local, idem"},
+        "eixo_longo_az": {"valor": 53, "fonte": "OSM local"},
+        "pavimentos": {"valor": "2 (1743–1808); 2 + corpo central de 3 (1808–c.1929 e desde 1985); 3 em todo o perímetro (c.1929–1982)", "fonte": "pt.wikipedia (sequência de reformas); contagem de 2 pisos base: estimado pela pintura de Debret 1830 e foto atual"},
+        "altura_beiral": {"valor": 12, "fonte": "OSM local: tag h=12,02 num trecho de 1.310 m² do Paço (altura mapeada, não publicada)"},
+        "altura_corpo_central_3_andares": {"valor": 17, "fonte": "estimado: 12 m + 1 pavimento de ~5 m"},
+        "telhado": {"valor": "telha cerâmica em 4 águas (vista em 1743–1840 e desde 1985); oculto por platibanda 1840s–1889 e no período dos Correios", "fonte": "pt.wikipedia (platibanda 'que ocultava o telhado'); tipo de telhado: estimado por fotos"},
+        "torres": {"valor": "sem torres; o 'torreão' é o corpo central elevado de 3 pavimentos sobre a fachada", "fonte": "pt/en.wikipedia + estimado por fotos"},
+        "cores": {"parede": "#EEEAE0 (caiado branco)", "molduras_cantaria": "#8E8A82 (granito/lioz cinza)", "esquadrias": "#2F4A3B (verde-escuro, estimado)", "telha": "#A9533A", "fonte": "estimado: foto Commons 20220826172010 (2022)"},
+        "estilo": {"valor": "barroco/colonial português ('casa senhorial' portuguesa)", "fonte": "pt.wikipedia ('Colonial'); en.wikipedia ('plain Baroque')"},
+        "fachada_principal_az": {"valor": 323, "fonte": "estimado: normal NO do eixo longo OSM (53°); Arco do Teles a 340° e Chafariz do Mestre Valentim/da Pirâmide a 22° do centro do Paço (predios.json) → a fachada longa NO olha para a Praça XV. Em 1808 o largo abria direto no mar, por isso 'fachada voltada para a Baía' é esta mesma fachada (o aterro veio depois)."},
+        "a_frente": "Praça XV de Novembro (antigo Largo do Carmo/do Paço), Chafariz do Mestre Valentim, e originalmente o cais e a baía",
+        "elementos_marcantes": ["portada barroca em pedra de lioz (mármore português)", "janelas com pequenas sacadas e vergas curvas", "corpo central de 3 andares (1808)", "passadiço elevado para o Convento do Carmo (1808)", "Sala do Trono / Beija-mão", "Varanda da aclamação (provisória, 1818)"]
+      },
+      "fotos_referencia": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Pa%C3%A7o_Imperial_-_Rio_de_Janeiro_-_20220826172010.jpg", "licenca": "CC BY-SA 4.0 (lida na página)", "mostra": "estado atual (forma de 1818)"},
+        {"url": "https://commons.wikimedia.org/wiki/File:Pa%C3%A7o_Imperial_1830.jpg", "licenca": "domínio público (lida na página)", "mostra": "Debret 1830, Largo do Paço com o Carmo ao fundo"}
+      ],
+      "divergencias": [
+        "Coordenada: a pt.wikipedia traz duas — Especial:Map −22,90361/−43,17417 (infobox) e wgCoordinates −22,9035083/−43,1742333; usada a wgCoordinates (= en.wikipedia).",
+        "Restauração: pt.wikipedia 'em 1982 o IPHAN restaurou'; en.wikipedia 'in 1980 a major restoration'; reabertura ao público em 1985 (Agência Brasil via busca).",
+        "Expansão do 3º andar pelos Correios: pt.wikipedia não dá ano (após 1889); Diário do Rio cita 'reforma de 1929'.",
+        "OSM tem dois polígonos sobrepostos: 'Paço Imperial' 90,7×33,0 m e um trecho de 64,3×33,0 m com h=12; Microsoft Building 90,5×32,7 m."
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Pa%C3%A7o_Imperial", "https://en.wikipedia.org/wiki/Pa%C3%A7o_Imperial", "https://diariodorio.com/historia-do-paco-imperial-2/"],
+      "confianca": "alta para datas/funções e planta; média para alturas e orientação (estimadas)"
+    },
+    {
+      "id": "cadeia_velha",
+      "nome": "Cadeia Velha (Casa de Câmara e Cadeia / Paço da Assembleia)",
+      "nomes_anteriores": ["Casa de Câmara e Cadeia", "Cadeia da Relação / Casa da Relação", "Paço da Cadeia", "Câmara dos Deputados Gerais"],
+      "sucessor": "palacio_tiradentes",
+      "anos": {
+        "construcao": {"valor": 1640, "fonte": "en.wikipedia Tiradentes Palace (pedido 1631, construída 1640); pt.wikipedia Palácio Tiradentes ('construído no ano de 1640')"},
+        "reformas_de_forma": [
+          {"ano": 1823, "o_que": "reformada por iniciativa de José Bonifácio para receber a Assembleia Constituinte (adaptação interna; forma externa: estimado sem grande mudança)", "fonte": "pt.wikipedia Palácio Tiradentes"}
+        ],
+        "demolicao": {"valor": 1922, "fonte": "pt/en.wikipedia Palácio Tiradentes"}
+      },
+      "funcao_no_poder": [
+        "Senado da Câmara (vereança) + cadeia no térreo até 1808 (Tiradentes preso aqui ~3 anos)",
+        "Assembleia Geral Constituinte e Legislativa 1823 (fechada por Pedro I na 'noite da agonia', 1823)",
+        "Câmara dos Deputados do Império 1826–1889 (Lei Áurea votada aqui, 1888)",
+        "Câmara dos Deputados da República 1891–1914 (depois foi para o Monroe)"
+      ],
+      "lat": -22.90387008806,
+      "lon": -43.17387700083,
+      "coord_fonte": "Mesma do Palácio Tiradentes (pt/en.wikipedia wgCoordinates/geohack 22°54′13.93″S 43°10′25.96″W); a página pt 'Cadeia Velha' não tem coordenada. Mesmo lote: PDF Câmara 'Palácio Tiradentes 90 anos'.",
+      "forma": {
+        "planta": {"tipo": "retângulo (sobrado colonial)", "fonte": "estimado: foto c.1880 (Commons Câmara_Deputados_Gerais)"},
+        "comprimento": {"valor": 50, "fonte": "estimado: foto c.1880 conferida (prédio de esquina, ~9 vãos na fachada longa + corpo de esquina mais alto com 3 vãos; ~4 m por vão), cabendo no lote do Tiradentes (71 m)"},
+        "largura": {"valor": 25, "fonte": "estimado: proporção típica de casa de câmara e cadeia; sem planta publicada encontrada"},
+        "eixo_longo_az": {"valor": 55, "fonte": "estimado: mesmo alinhamento de quadra do Tiradentes/Paço (OSM)"},
+        "pavimentos": {"valor": "3 no estado c.1880 (térreo + 2 andares com sacadas de ferro); provavelmente 2 no período colonial", "fonte": "foto c.1880 conferida (Commons Câmara_Deputados_Gerais); textos: pt.wikipedia ('andar térreo' = cadeia), en.wikipedia ('upper floor' = câmara)"},
+        "altura_platibanda": {"valor": 15, "fonte": "estimado: 3 pavimentos (~4,5–5 m) na foto c.1880; corpo de esquina ~1 m mais alto"},
+        "telhado": {"valor": "telhado baixo oculto por platibanda lisa (c.1880)", "fonte": "foto c.1880 conferida"},
+        "torres": {"valor": "nenhuma; corpo da esquina ligeiramente mais alto", "fonte": "foto c.1880 conferida"},
+        "cores": {"parede": "#D9D1C2 (reboco claro)", "molduras_cantaria": "#B8B0A2", "fonte": "estimado: foto P&B c.1880 (cor real desconhecida)"},
+        "estilo": {"valor": "sobrado de esquina com janelas de sacada, algumas em arco pleno (feição do Império)", "fonte": "foto c.1880 conferida"},
+        "fachada_principal_az": {"valor": 235, "fonte": "estimado: mesmo lado do Palácio Tiradentes (para a Rua Primeiro de Março, antiga Rua Direita)"},
+        "a_frente": "Rua Direita (atual Primeiro de Março); lateral para a antiga Rua da Cadeia, rebatizada Rua da Assembleia em 1825 (en.wikipedia)",
+        "elementos_marcantes": ["térreo gradeado de cadeia", "sala da Assembleia no andar superior"]
+      },
+      "fotos_referencia": [
+        {"url": "https://commons.wikimedia.org/wiki/File:C%C3%A2mara_Deputados_Gerais_(Rio_de_Janeiro).jpg", "licenca": "domínio público (lida na página)", "mostra": "o prédio c.1880"},
+        {"url": "https://commons.wikimedia.org/wiki/File:Cadeia_Velha,_atual_Pal%C3%A1cio_Tiradentes_(037SL03028).jpg", "licenca": "domínio público (lida na página)", "mostra": "Cadeia Velha antes da demolição"}
+      ],
+      "divergencias": [
+        "Construção: pt.wikipedia 'Cadeia Velha' diz data desconhecida, 'possivelmente em 1636'; páginas do Palácio Tiradentes (pt/en) dizem 1640 (pedido em 1631).",
+        "Câmara dos Deputados aqui: PDF Câmara '1826 a 1914'; navbox pt.wikipedia separa 1826–1889 e 1891–1914.",
+        "Pavimentos: textos falam em térreo (cadeia) + andar superior; a foto c.1880 mostra 3 pavimentos — o prédio foi alteado em algum momento (ano não encontrado). Para 1763–1822 usar 2 pavimentos (estimado)."
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Cadeia_Velha", "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_Tiradentes", "https://en.wikipedia.org/wiki/Tiradentes_Palace", "https://www2.camara.leg.br/a-camara/visiteacamara/cultura-na-camara/arquivos/palacio-tiradentes-90-anos"],
+      "confianca": "alta para datas/funções/lugar; BAIXA para dimensões (todas estimadas)"
+    },
+    {
+      "id": "palacio_tiradentes",
+      "nome": "Palácio Tiradentes",
+      "nomes_anteriores": [],
+      "substitui": "cadeia_velha",
+      "anos": {
+        "inicio_obra": {"valor": 1922, "fonte": "pt/en.wikipedia"},
+        "inauguracao": {"valor": 1926, "fonte": "pt/en.wikipedia (06/05/1926)"},
+        "reformas_de_forma": [],
+        "demolicao": null
+      },
+      "funcao_no_poder": [
+        "Câmara dos Deputados 1926–1937 e 1946–1960 (última sessão 20/04/1960, en.wikipedia); posse de todos os presidentes 1926–1960 (Washington Luís a JK)",
+        "Departamento de Imprensa e Propaganda (DIP) no Estado Novo 1937–1945",
+        "Assembleia Legislativa da Guanabara 1960–1975; ALERJ 1975–2021"
+      ],
+      "lat": -22.90387008806,
+      "lon": -43.17387700083,
+      "coord_fonte": "pt/en.wikipedia wgCoordinates/geohack 22°54′13.932317″S 43°10′25.957203″W",
+      "centro_poligono_osm": {"lat": -22.903904, "lon": -43.17388},
+      "forma": {
+        "planta": {"tipo": "retângulo com pátio frontal (estátua + duas Vitórias Aladas) e cúpula central sobre o plenário", "fonte": "PDF Câmara (pátio frontal, cúpula do plenário); retângulo: OSM local"},
+        "comprimento": {"valor": 71.0, "fonte": "OSM local, polígono 'Palácio Tiradentes' (2.274,4 m²), retângulo mínimo"},
+        "largura": {"valor": 37.1, "fonte": "OSM local, idem"},
+        "eixo_longo_az": {"valor": 55, "fonte": "OSM local"},
+        "area_coberta": {"valor": 3000, "fonte": "PDF Câmara 'Palácio Tiradentes 90 anos' ('3 mil metros de área coberta'); Diário do Rio/Correio da Manhã 2026 ('cerca de 3 mil m²')"},
+        "pavimentos": {"valor": 5, "fonte": "PDF Câmara ('cinco pavimentos')"},
+        "altura_topo_cupula": {"valor": 45, "fonte": "PDF Câmara ('altura de 45 metros do chão ao topo da cúpula'); Diário do Rio 2026"},
+        "altura_corpo": {"valor": 26, "fonte": "estimado: 5 pavimentos; na foto conferida o ático com grupos escultóricos fica a ~0,6 da altura total"},
+        "telhado": {"valor": "terraço com ático/platibanda ornada de estátuas; cúpula central nervurada com lanternim atrás do ático", "fonte": "foto Commons Palácio_Tiradentes_2.JPG conferida"},
+        "cupula": {"diametro": {"valor": 18, "fonte": "estimado: ~1/2 da largura do bloco nas fotos"}, "altura_sobre_corpo": {"valor": 19, "fonte": "estimado: 45 m (publicado) − 26 m do corpo (estimado)"}, "detalhe": "esculturas alegóricas da Independência e da República; vitral interno com o céu de 15/11/1889 (estrutura de aço)", "fonte_detalhe": "pt.wikipedia; PDF Câmara"},
+        "torres": {"valor": "sem torres; dois pavilhões laterais salientes, cada um coroado por um grupo escultórico equestre", "fonte": "foto conferida"},
+        "cores": {"parede": "#D6CBB6 (pedra/argamassa bege-acinzentada)", "cupula": "#8C8F8C (cinza com vidro escuro entre nervuras)", "esculturas": "#CFC5B0 (mesma pedra) / estátua de Tiradentes #4A4A44 (bronze escuro)", "fonte": "estimado: foto Commons Palácio_Tiradentes_2.JPG conferida"},
+        "estilo": {"valor": "eclético classicizante (neo-grego nas esculturas), concreto armado", "fonte": "pt.wikipedia; PDF Câmara"},
+        "fachada_principal_az": {"valor": 235, "fonte": "estimado e INCERTO: endereço oficial 'Rua Primeiro de Março s/n' (en.wikipedia) e a rua está a 247° do centro do polígono (ruas.geojson) → lado curto SO. Conferir no satélite antes de modelar."},
+        "a_frente": "Rua Primeiro de Março (antiga Rua Direita); Paço Imperial ao norte (52 m)",
+        "elementos_marcantes": ["estátua de Tiradentes de quase 5 m (Francisco de Andrade) no pátio frontal, no ponto aproximado da antiga cela (PDF Câmara)", "duas Vitórias Aladas no pátio frontal", "cúpula com esculturas alegóricas", "pórtico de 6 colunas coríntias de ordem colossal (2 andares) entre dois pavilhões (foto conferida)", "escadaria larga em toda a frente (foto conferida)"]
+      },
+      "fotos_referencia": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_Tiradentes_2.JPG", "licenca": "CC BY-SA 4.0 (lida na página)", "mostra": "fachada e cúpula atuais"}
+      ],
+      "divergencias": [
+        "Arquiteto: 'Francisque Couchet' (pt.wikipedia) / 'Francisco Couchet' (PDF Câmara, imprensa) — mesma pessoa.",
+        "Fim da ALERJ no prédio: pt.wikipedia 'entre 1975 e 2021'; en.wikipedia diz 'current seat' (desatualizada).",
+        "Última sessão federal: pt.wikipedia 'última sessão do Congresso Nacional no palácio … 6 de abril' de 1960; en.wikipedia 'Chamber of Deputies until 20 April 1960'."
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Pal%C3%A1cio_Tiradentes", "https://en.wikipedia.org/wiki/Tiradentes_Palace", "https://www2.camara.leg.br/a-camara/visiteacamara/cultura-na-camara/arquivos/palacio-tiradentes-90-anos", "https://diariodorio.com/palacio-tiradentes-vira-patrimonio-historico-e-cultural-do-rio/", "https://www.correiodamanha.com.br/esporte/2026/05/287225-palacio-tiradentes-vira-patrimonio-do-estado.html"],
+      "confianca": "alta (altura total, pavimentos e área publicados; planta OSM); média para cúpula e orientação"
+    },
+    {
+      "id": "palacio_catete",
+      "nome": "Palácio do Catete",
+      "nomes_anteriores": ["Palácio Nova Friburgo", "Palacete do Largo do Valdetaro", "apelido: Palácio das Águias"],
+      "anos": {
+        "inicio_obra": {"valor": 1858, "fonte": "pt/en.wikipedia"},
+        "fim_obra": {"valor": 1866, "fonte": "pt/en.wikipedia ('terminou oficialmente em 1866'; acabamento por mais uma década)"},
+        "reformas_de_forma": [
+          {"ano": 1897, "o_que": "reforma geral (Aarão Reis) para a Presidência: interiores, jardim (Paul Villon), usina elétrica lateral", "fonte": "pt.wikipedia"},
+          {"ano": 1900, "o_que": "águias de ferro do topo da fachada trocadas por 7 esculturas alegóricas de bronze (5 na frente, 2 no jardim)", "fonte": "pt.wikipedia ('por volta de 1900')"},
+          {"ano": 1910, "o_que": "esculturas trocadas por 7 harpias de bronze de Rodolfo Bernardelli (5 na frente, 2 nos fundos) — as 'águias'", "fonte": "pt.wikipedia"}
+        ],
+        "demolicao": null
+      },
+      "funcao_no_poder": [
+        "Residência do Barão de Nova Friburgo 1866–1889",
+        "Sede da Presidência da República 24/02/1897–1960 (inaugurada por Manuel Vitorino); morte de Afonso Pena 1909; suicídio de Getúlio Vargas 24/08/1954",
+        "Museu da República desde 1960"
+      ],
+      "lat": -22.9258639,
+      "lon": -43.1762278,
+      "coord_fonte": "pt.wikipedia (coordenada de título 22°55′33,11″S 43°10′34,42″O)",
+      "centro_poligono_osm": {"lat": -22.92589, "lon": -43.176195},
+      "forma": {
+        "planta": {"tipo": "bloco retangular compacto com pátio/varanda interna para o jardim; jardim nos fundos até a Praia do Flamengo", "fonte": "pt.wikipedia (varanda para o pátio interno; terreno até a Praia do Flamengo); retângulo: OSM local"},
+        "comprimento": {"valor": 32.9, "fonte": "OSM local, polígono 'Palácio do Catete' (723,8 m²), retângulo mínimo (Microsoft Building: 34,7 × 28,6 m)"},
+        "largura": {"valor": 26.2, "fonte": "OSM local, idem"},
+        "eixo_longo_az": {"valor": 85, "fonte": "OSM local (perpendicular à Rua do Catete)"},
+        "pavimentos": {"valor": 3, "fonte": "pt.wikipedia/en.wikipedia (infobox 'Andares 3')"},
+        "altura_platibanda": {"valor": 19, "fonte": "estimado: 3 pavimentos de pé-direito alto (~5,5 m) + platibanda ~2,5 m"},
+        "altura_com_esculturas": {"valor": 22, "fonte": "estimado: harpias/estátuas de ~3 m sobre a platibanda (fotos 1897/hoje)"},
+        "telhado": {"valor": "telhado baixo oculto por platibanda com balaustrada e esculturas", "fonte": "pt.wikipedia (esculturas na platibanda, foto Marc Ferrez 1897) + estimado"},
+        "torres": {"valor": "nenhuma", "fonte": "estimado: fotos"},
+        "cores": {"parede": "#9A9690 (granito cinza) com painéis #D8A9A0 (mármore rosa)", "portais": "#F2EFE8 (mármore branco)", "esculturas": "#3F3A33 (bronze escuro)", "fonte": "portalsaofrancisco.com.br ('fachada revestida de granito e mármore rosa e portais emoldurados por mármore branco'); hex estimado"},
+        "estilo": {"valor": "neoclássico/eclético inspirado nos palácios renascentistas de Veneza e Florença", "fonte": "pt.wikipedia"},
+        "fachada_principal_az": {"valor": 265, "fonte": "estimado: Rua do Catete a 275° e 40 m do centro do polígono (ruas.geojson); eixo OSM 85° → fachada curta para O"},
+        "a_frente": "Rua do Catete (antigo Largo do Valdetaro, com chafariz); fundos: jardim de Glaziou até a Praia do Flamengo",
+        "elementos_marcantes": ["5 harpias de bronze no topo da fachada (desde 1910)", "portão de ferro fundido alemão", "saguão com 6 colunas de mármore e escadaria", "jardim tombado (1938)"]
+      },
+      "fotos_referencia": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_do_Catete_-_Museu_da_Rep%C3%BAblica.jpg", "licenca": "CC BY-SA 3.0 (lida na página)", "mostra": "fachada atual com harpias"},
+        {"url": "https://commons.wikimedia.org/wiki/File:Palacio_Catete-1897.jpg", "licenca": "domínio público (lida na página)", "mostra": "1897, esculturas alegóricas na platibanda (Marc Ferrez)"}
+      ],
+      "divergencias": [
+        "Fim da obra: pt/en.wikipedia 'oficialmente 1866'; en.wikipedia (lead) 'ended in 1867'.",
+        "Coordenada: pt.wikipedia título −22,9258639/−43,1762278; infobox −22,92583/−43,17611; en.wikipedia −22,9258/−43,1761 (diferenças < 15 m).",
+        "Nº de presidentes que ocuparam: pt.wikipedia 'dezenove pessoas'; portalsaofrancisco '18 presidentes'.",
+        "Polígono OSM (724 m²) parece cobrir só o bloco principal; a área real do palácio com alas pode ser maior — conferir no satélite."
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Pal%C3%A1cio_do_Catete", "https://en.wikipedia.org/wiki/Catete_Palace", "https://www.portalsaofrancisco.com.br/?p=47752"],
+      "confianca": "alta para datas/funções/andares; média para planta (OSM) e cores; alturas estimadas"
+    },
+    {
+      "id": "palacio_monroe",
+      "nome": "Palácio Monroe",
+      "nomes_anteriores": ["Pavilhão São Luiz / Pavilhão do Brasil na Exposição de St. Louis (1904)"],
+      "anos": {
+        "projeto_e_montagem_st_louis": {"valor": 1904, "fonte": "pt/en.wikipedia"},
+        "reconstrucao_rio_inauguracao": {"valor": 1906, "fonte": "pt/en.wikipedia (3ª Conferência Pan-Americana)"},
+        "reformas_de_forma": [
+          {"ano": 1924, "o_que": "reforma interna de 1 ano e meio para o Senado (colunas internas removidas, andares novos criados, 2 elevadores); exterior mantido", "fonte": "Senado Notícias 'Que fim levou o Palácio Monroe?'; pt.wikipedia"}
+        ],
+        "demolicao": {"valor": 1976, "fonte": "pt/en.wikipedia (março de 1976; em jan/1976 já estava sem janelas e sem cúpula)"}
+      },
+      "funcao_no_poder": [
+        "3ª Conferência Pan-Americana 1906",
+        "Câmara dos Deputados (sede provisória) 1914–1922",
+        "Senado Federal 03/05/1925–1960 (fechado no Estado Novo 1937–1945: Ministério da Justiça/DIP; TSE 1945–1946)",
+        "Estado-Maior das Forças Armadas na ditadura; demolido 1976"
+      ],
+      "lat": -22.91245,
+      "lon": -43.17545,
+      "coord_fonte": "en.wikipedia infobox/geohack 22°54′44.82″S 43°10′31.62″W (= pt.wikipedia Especial:Map −22.91245/−43.17545). Prédio demolido: não há polígono no OSM; o lugar é hoje a praça/estação Cinelândia do metrô.",
+      "forma": {
+        "planta": {"tipo": "bloco compacto simétrico (quase quadrado) com cúpula central e duas entradas opostas com escadaria", "fonte": "Senado ('duas escadarias de acesso'); Correio Braziliense ('duas entradas … uma na avenida Rio Branco e outra no Passeio Público'); forma: estimado por fotos"},
+        "area_construida": {"valor": 1700, "fonte": "pt.wikipedia ('1 700 metros quadrados de área construída'); en.wikipedia (floor area 1,700 m²)"},
+        "comprimento": {"valor": 46, "fonte": "estimado: foto conferida (fachada com 11 eixos de vãos + 2 rotundas; a escadaria ocupa ~1/5 da largura) e área de 1.700–2.000 m²"},
+        "largura": {"valor": 38, "fonte": "estimado: área ÷ comprimento; sem planta publicada (há planta de 1924 no Arquivo Nacional, não consultada)"},
+        "eixo_longo_az": {"valor": 0, "fonte": "estimado: eixo das duas entradas, Av. Rio Branco (N) ↔ Passeio Público (S)"},
+        "pavimentos": {"valor": "por fora: embasamento + 2 ordens de janelas; por dentro: 3 andares e mezanino (após a reforma de 1924)", "fonte": "Senado/Museu ('três andares e um mezanino … mais de 2.000 m² de área construída'); Senado Notícias ('andares novos foram criados'); contagem externa: foto Commons conferida"},
+        "altura_corpo": {"valor": 18, "fonte": "estimado: fotos (embasamento + 2 ordens de colunas + platibanda)"},
+        "altura_topo_cupula": {"valor": 35, "fonte": "estimado: corpo 18 m + tambor e cúpula de 15 m de diâmetro. Há citação de '41 metros de altura' (jornalopcao.com.br, vista só em resultado de busca; página não carregou) — não confirmada"},
+        "cupula": {"diametro": {"valor": 15, "fonte": "Senado/Museu 'Palácio Monroe: meio século de um final trágico' ('cúpula de 15 metros de diâmetro revestida em bronze'); Correio Braziliense (15 m, 300 t)"}, "peso_t": {"valor": 300, "fonte": "Correio Braziliense (Diário de Notícias 1976)"}, "cor": "#6F5A3A (bronze; estimado)"},
+        "telhado": {"valor": "terraço com platibanda/balaustrada e grupos escultóricos; cúpula central de bronze com anjos", "fonte": "estimado: fotos; anjos: Senado/Wikipédia"},
+        "torres": {"valor": "cúpula central alta (sobre tambor com lanternim e mastro) + 4 cupulinhas/pináculos nos cantos; nas pontas da fachada, varandas semicirculares de colunas (rotundas) de 2 andares", "fonte": "foto Commons Palácio_Monroe_(0074050cx006e007-01).jpg conferida"},
+        "cores": {"parede": "#F0ECE3 (branco)", "colunas": "#F4F1EA (mármore)", "cupula": "#6F5A3A (bronze; na foto P&B aparece escura)", "leoes": "#F2F0EC (mármore de Carrara)", "fonte": "estimado: foto P&B conferida (prédio todo claro); mármore das colunas: pt.wikipedia; bronze da cúpula: Senado"},
+        "estilo": {"valor": "eclético ('traços afrancesados'), estrutura metálica desmontável", "fonte": "pt.wikipedia; Senado Notícias"},
+        "fachada_principal_az": {"valor": 350, "fonte": "estimado: entrada principal para a Av. Rio Branco/Cinelândia (Praça Floriano a 340°, ruas.geojson); a outra entrada olha para o Passeio Público (S)"},
+        "a_frente": "Cinelândia (Praça Floriano) e o fim da Avenida Central/Rio Branco; atrás, Passeio Público",
+        "elementos_marcantes": ["36 colunas emoldurando a fachada (Senado)", "4 leões de mármore de Carrara de 2,5 m, um par em cada uma das 2 escadarias (Senado; Correio Braziliense: 8 t cada, de Vaccari Sonino)", "cúpula de bronze de 15 m com anjos de bronze de 3 m", "18 vitrais, o principal com 20 m² (Senado)"]
+      },
+      "fotos_referencia": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_Monroe_(0074050cx006e007-01).jpg", "licenca": "domínio público (lida na página)", "mostra": "fachada com cúpula e leões"}
+      ],
+      "divergencias": [
+        "Anjos de bronze: Senado/Museu diz 'seis anjos'; pt.wikipedia e Correio Braziliense dizem oito.",
+        "Área: 1.700 m² (pt/en.wikipedia) vs 'mais de 2.000 m² de área construída' (Senado/Museu, página lida).",
+        "Câmara no Monroe: pt.wikipedia '1914–1922'; infobox en.wikipedia 'Brazilian Congress seat (1914–1920)'.",
+        "Senado no Monroe: 1925–1960 (sessão inaugural 03/05/1925) vs navbox pt.wikipedia Conde dos Arcos '1826–1924'.",
+        "Altura: 41 m citada em artigo de opinião (não lido) vs ~35 m estimado."
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Pal%C3%A1cio_Monroe", "https://en.wikipedia.org/wiki/Monroe_Palace", "https://www12.senado.leg.br/noticias/especiais/arquivo-s/que-fim-levou-o-palacio-monroe", "https://www12.senado.leg.br/institucional/museu/news/palacio-monroe-meio-seculo-de-um-final-tragico/apresentacao", "https://www.correiobraziliense.com.br/mundo/2024/10/6970571-quem-demoliu-o-monroe-a-historia-do-mais-polemico-predio-publico-brasileiro.html"],
+      "confianca": "alta para lugar, datas, cúpula (15 m), leões e colunas; BAIXA para planta e alturas (estimadas, sem polígono)"
+    },
+    {
+      "id": "palacio_itamaraty",
+      "nome": "Palácio do Itamaraty (Rio de Janeiro)",
+      "nomes_anteriores": ["Palácio do Conde de Itamarati (residência da família Rocha Leão)"],
+      "anos": {
+        "inicio_obra": {"valor": 1851, "fonte": "en.wikipedia"},
+        "fim_obra": {"valor": 1855, "fonte": "en.wikipedia"},
+        "reformas_de_forma": [
+          {"ano": 1930, "o_que": "1927–1930: biblioteca e mapoteca nos fundos (Gire/Floderer), galerias de acesso, alterações na fachada; espelho d'água com palmeiras imperiais nos fundos", "fonte": "en.wikipedia"}
+        ],
+        "demolicao": null
+      },
+      "funcao_no_poder": [
+        "Sede do governo republicano (Presidência) 1889–1897 (Deodoro, Floriano, Prudente)",
+        "Ministério das Relações Exteriores 1899–1970 (o nome 'Itamaraty' virou sinônimo do ministério)"
+      ],
+      "lat": -22.903055555555554,
+      "lon": -43.18805555555555,
+      "coord_fonte": "en.wikipedia wgCoordinates (geohack 22°54′11″S 43°11′17″W); não há artigo próprio na pt.wikipedia (URLs testadas deram 404)",
+      "centro_poligono_osm": {"lat": -22.902787, "lon": -43.188026},
+      "forma": {
+        "planta": {"tipo": "palácio neoclássico estritamente simétrico; bloco principal na rua + pátio com espelho d'água e anexos nos fundos", "fonte": "en.wikipedia ('strictly symmetrical'; water mirror at the back)"},
+        "comprimento": {"valor": 55.8, "fonte": "OSM local, polígono 'Palácio do Itamaraty' (1.379,8 m², lv=2), retângulo mínimo"},
+        "largura": {"valor": 42.7, "fonte": "OSM local, idem"},
+        "eixo_longo_az": {"valor": 160, "fonte": "OSM local (eixo N–S; a fachada é no lado CURTO, para a rua)"},
+        "pavimentos": {"valor": 2, "fonte": "OSM local (tag building:levels=2) + fotos"},
+        "altura_platibanda": {"valor": 14, "fonte": "estimado: 2 pavimentos nobres (~6 m) + embasamento/platibanda"},
+        "telhado": {"valor": "telhado baixo oculto por platibanda lisa com cornija", "fonte": "foto conferida"},
+        "torres": {"valor": "nenhuma", "fonte": "foto conferida"},
+        "cores": {"parede": "#E6B8B4 (rosa)", "molduras_cunhais": "#F1EEE8 (branco/cantaria clara)", "gradis": "#3A3F45 (ferro)", "portoes": "#8FA59A (verde-acinzentado)", "fonte": "estimado: foto Commons Rio-PalacioItamaraty5.JPG conferida"},
+        "estilo": {"valor": "neoclássico (José Maria Jacinto Rebelo, discípulo de Grandjean de Montigny), com intervenções ecléticas", "fonte": "en.wikipedia"},
+        "fachada_principal_az": {"valor": 340, "fonte": "estimado: frente para a Av. Marechal Floriano (antiga Rua Larga de São Joaquim), ao norte; Av. Presidente Vargas fica a 168° (sul, ruas.geojson); eixo OSM 160° → lado curto N"},
+        "a_frente": "Avenida Marechal Floriano (antiga Rua Larga); fundos: espelho d'água com palmeiras imperiais",
+        "elementos_marcantes": ["fachada simétrica neoclássica rosa com janelas em arco pleno nos 2 andares", "balcão corrido de ferro fundido no andar nobre", "portões em arco no térreo", "espelho d'água ladeado de palmeiras imperiais (fundos)", "biblioteca de 1928–1930"]
+      },
+      "fotos_referencia": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Rio-PalacioItamaraty5.JPG", "licenca": "domínio público (lida na página)", "mostra": "fachada na Av. Marechal Floriano"}
+      ],
+      "divergencias": [
+        "Fim como sede do governo: en.wikipedia 'seat of the Republican Government (1889–1898)'; pt.wikipedia Palácio do Catete: Presidência inaugurada no Catete em 24/02/1897.",
+        "Nome 'Itamarati' (grafia antiga do título) vs 'Itamaraty'."
+      ],
+      "fontes": ["https://en.wikipedia.org/wiki/Itamaraty_Palace_(Rio_de_Janeiro)", "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_do_Catete"],
+      "confianca": "média: datas e planta OSM ok; cores, altura e orientação estimadas"
+    },
+    {
+      "id": "palacio_sao_cristovao",
+      "nome": "Paço de São Cristóvão (Palácio da Quinta da Boa Vista, hoje Museu Nacional)",
+      "nomes_anteriores": ["Casa de Elias Antônio Lopes (c.1803–1808)", "Paço Real de São Cristóvão", "Paço Imperial de São Cristóvão", "Museu Nacional (anos 1890)"],
+      "anos": {
+        "construcao_casa": {"valor": 1803, "fonte": "pt.wikipedia ('Elias Antônio Lopes … havia construído, por volta de 1803, um casarão sobre uma colina'); a infobox dá 'início da construção 1808' (ano da doação a D. João)"},
+        "reformas_de_forma": [
+          {"ano": 1808, "o_que": "doado a D. João; vira residência real; portão (hoje no Zoológico); torreão de estilo mourisco num lado", "fonte": "pt/en.wikipedia (portão; 'Moorish style side tower')"},
+          {"ano": 1826, "o_que": "1826–1831 (Pézerát): 2º torreão simétrico no lado sul, 3º pavimento começa sobre os 2 existentes; projeto neoclássico", "fonte": "pt.wikipedia ('apenas um torreão no lado norte … ganhou outro simétrico, no lado sul, e um terceiro pavimento')"},
+          {"ano": 1847, "o_que": "1847–1868: Porto-Alegre e depois Theodor Marx harmonizam as fachadas (forma neoclássica definitiva; torreão mourisco refeito neoclássico)", "fonte": "pt/en.wikipedia"},
+          {"ano": 1910, "o_que": "Jardim Terraço à italiana no pátio em frente ao palácio (Luiz Reys)", "fonte": "pt.wikipedia"},
+          {"ano": 2018, "o_que": "incêndio de 02/09/2018 destrói quase tudo, resta a fachada; cobertura metálica provisória de 5.000 m²", "fonte": "pt/en.wikipedia"}
+        ],
+        "demolicao": null
+      },
+      "funcao_no_poder": [
+        "Residência da Família Real 1808–1821 e da Família Imperial 1822–1889 (Pedro I e Leopoldina desde 1817; aqui nasceram D. Maria II em 1819, D. Pedro II em 02/12/1825 e a Princesa Isabel em 1846; morreu Leopoldina em 1826 — pt.wikipedia)",
+        "Assembleia Constituinte da 1ª Constituição republicana, no governo provisório 1890–1891 (pt.wikipedia: 'serviu brevemente')",
+        "Museu Nacional (UFRJ) desde o início da década de 1890 (infobox pt.wikipedia: 'Inauguração 1893')"
+      ],
+      "lat": -22.90583,
+      "lon": -43.22611,
+      "coord_fonte": "pt.wikipedia infobox (22°54′21″S 43°13′34″O)",
+      "centro_poligono_osm": {"lat": -22.905715, "lon": -43.226457},
+      "forma": {
+        "planta": {"tipo": "quadra com pátio(s) interno(s), fachada longa com torreões nas duas pontas", "fonte": "pt/en.wikipedia (torreões norte e sul); pátio: estimado por satélite/foto aérea"},
+        "comprimento": {"valor": 105.5, "fonte": "OSM local, polígono 'Paço de São Cristóvão' (4.124,1 m², lv=3), retângulo mínimo (Microsoft Building 108,9 × 71,2 m)"},
+        "largura": {"valor": 73.9, "fonte": "OSM local, idem"},
+        "eixo_longo_az": {"valor": 78, "fonte": "OSM local"},
+        "area_construida": {"valor": 13616.79, "fonte": "pt.wikipedia infobox ('13,616,79 m²')"},
+        "pavimentos": {"valor": "2 (até 1826); 3 (após 1826–1868)", "fonte": "pt.wikipedia"},
+        "altura_telhado": {"valor": 23, "fonte": "en.wikipedia infobox (Roof 23 m)"},
+        "altura_corpo_platibanda": {"valor": 18, "fonte": "estimado: 3 pavimentos; 23 m publicado é o telhado/topo"},
+        "telhado": {"valor": "telhado oculto por platibanda com balaustrada e estátuas (forma neoclássica)", "fonte": "estimado: fotos/pintura Stahl 1862"},
+        "torres": {"valor": "2 torreões (um em cada ponta da fachada principal), ~1 pavimento acima do corpo", "fonte": "pt.wikipedia (norte original, sul simétrico após 1826); altura relativa estimada por fotos"},
+        "cores": {"parede": "#E9D9B8 (creme-amarelado)", "molduras": "#F4F0E8 (branco)", "fonte": "estimado: foto Commons Museu_Nacional_UFRJ.jpg (antes de 2018)"},
+        "estilo": {"valor": "neoclássico (Pézerát; Porto-Alegre; Theodor Marx)", "fonte": "pt/en.wikipedia"},
+        "fachada_principal_az": {"valor": 168, "fonte": "estimado e INCERTO: normal do eixo longo OSM (78°) para o lado do Jardim Terraço/monumento a Pedro II e do parque; conferir no satélite"},
+        "a_frente": "Jardim Terraço (1910) e alamedas da Quinta da Boa Vista; monumento a D. Pedro II em frente ao paço",
+        "elementos_marcantes": ["dois torreões simétricos", "portão monumental (hoje na entrada do Zoológico)", "escadaria semicircular (en.wikipedia)", "Sala do Trono e Sala dos Embaixadores"]
+      },
+      "fotos_referencia": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Museu_Nacional_UFRJ.jpg", "licenca": "CC BY-SA 3.0 (lida na página)", "mostra": "fachada antes do incêndio"},
+        {"url": "https://commons.wikimedia.org/wiki/File:Palace_of_sao_cristovao_by_stahl_1862.jpg", "licenca": "domínio público (lida na página)", "mostra": "1862, após a intervenção neoclássica"}
+      ],
+      "divergencias": [
+        "Área: 13.616,79 m² (pt.wikipedia, infobox) vs 11.417 m² construídos, 3.500 de exposição (observador.pt) vs 5.920 m² 'grounds' (en.wikipedia) vs ~12 mil m² (FAPESP, só em resultado de busca).",
+        "Coordenada: pt.wikipedia −22,90583/−43,22611; en.wikipedia −22,90556/−43,22583 (~40 m).",
+        "Infobox pt: 'Inauguração 1893' (ano do Museu no palácio; ano exato da mudança do Museu não conferido em outra fonte).",
+        "Torreão original: pt.wikipedia 'lado norte'; en.wikipedia 'Moorish style side tower' e Pézerát 'added a new tower to the left of the main façade'."
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Pa%C3%A7o_de_S%C3%A3o_Crist%C3%B3v%C3%A3o", "https://en.wikipedia.org/wiki/Pa%C3%A7o_de_S%C3%A3o_Crist%C3%B3v%C3%A3o", "https://en.wikipedia.org/wiki/National_Museum_of_Brazil", "https://observador.pt/?p=2800845"],
+      "confianca": "alta para planta (OSM), pavimentos, torreões, altura 23 m; média para orientação e cores"
+    },
+    {
+      "id": "theatro_municipal",
+      "nome": "Theatro Municipal do Rio de Janeiro",
+      "nomes_anteriores": [],
+      "nota_poder": "Não é sede de poder; entra como marco cívico da capital republicana (obra da reforma Pereira Passos/Avenida Central, vizinho do Monroe na Cinelândia).",
+      "anos": {
+        "inicio_obra": {"valor": 1905, "fonte": "pt/en.wikipedia"},
+        "inauguracao": {"valor": 1909, "fonte": "pt/en.wikipedia (14/07/1909, Nilo Peçanha)"},
+        "reformas_de_forma": [
+          {"ano": 1934, "o_que": "ampliação da sala de 1.739 para 2.205 lugares em 3 meses (interna; forma externa: estimado sem mudança)", "fonte": "pt/en.wikipedia"},
+          {"ano": 2010, "o_que": "restauro 2008–2010: fachada, 3 cúpulas douradas e águia de cobre dourado restauradas (ouro 23 quilates)", "fonte": "pt.wikipedia (restauro 2009–2010, reinauguração 27/05/2010)"}
+        ],
+        "demolicao": null
+      },
+      "funcao_no_poder": ["Teatro municipal da capital federal 1909–1960 (cenário cívico da Cinelândia)"],
+      "lat": -22.90889,
+      "lon": -43.17667,
+      "coord_fonte": "pt.wikipedia infobox (Especial:Map −22.90889/−43.17667) — escolhida por bater com o centro do polígono OSM (−22.908989/−43.176644)",
+      "centro_poligono_osm": {"lat": -22.908989, "lon": -43.176644},
+      "forma": {
+        "planta": {"tipo": "retângulo alongado de teatro à italiana: foyer/fachada na ponta SSE, sala, caixa de palco alta na ponta NNO", "fonte": "estimado: tipologia Garnier + polígono OSM"},
+        "comprimento": {"valor": 84.5, "fonte": "OSM local, polígono 'Theatro Municipal' (3.616,9 m²), retângulo mínimo"},
+        "largura": {"valor": 68.0, "fonte": "OSM local, idem (pode incluir escadarias/terraços laterais)"},
+        "eixo_longo_az": {"valor": 158, "fonte": "OSM local"},
+        "pavimentos": {"valor": "fachada com 3 níveis (térreo, galeria de colunas, ático)", "fonte": "estimado: fotos"},
+        "altura_beiral": {"valor": 21, "fonte": "OSM local: tag h=20,56 (provavelmente beiral/corpo, não topo da cúpula)"},
+        "altura_topo_cupula_central": {"valor": 45, "fonte": "estimado: cúpula sobre a sala + águia de 4 m; sem número publicado encontrado"},
+        "cupulas": {"quantidade": {"valor": 3, "fonte": "pt.wikipedia ('três cúpulas douradas')"}, "cupula_central_diametro": {"valor": 20, "fonte": "estimado: fotos/satélite"}, "cor": "#3E7A5E (verde azinhavre) com nervuras/ornatos #C9A227 (dourado)", "cor_fonte": "estimado: fotos pós-restauro (dourado: pt.wikipedia)"},
+        "aguia": {"altura": {"valor": 4, "fonte": "cranebriefing.com (350 kg, 4 m de altura, 6 m de envergadura)"}, "envergadura": {"valor": 6, "fonte": "cranebriefing.com"}, "posicao": "no centro do telhado, sobre a cúpula", "fonte_posicao": "pt.wikipedia ('águia dourada de cobre … no centro do telhado'); en.wikipedia ('atop the dome')"},
+        "telhado": {"valor": "mansardas/telhado metálico escuro com 3 cúpulas (central grande + 2 menores nas laterais da fachada)", "fonte": "estimado: fotos; nº de cúpulas: pt.wikipedia"},
+        "torres": {"valor": "2 cúpulas menores nos cantos da fachada fazem papel de torreões", "fonte": "estimado: fotos"},
+"cores": {"parede": "#E8DFC9 (pedra creme)", "colunas": "#D9D0BC", "embasamento": "#8E8574 (granito)", "dourados": "#C9A227", "cupula": "#3E8A78 (verde-azulado)", "fonte": "estimado: foto Commons Teatro_Municipal_-_panoramio_(4).jpg conferida (cúpulas verde-azuladas com ornatos dourados, águia dourada sobre esfera)"},
+        "estilo": {"valor": "eclético inspirado na Ópera de Paris (Garnier); projeto Francisco de Oliveira Passos com Albert Guilbert", "fonte": "pt/en.wikipedia"},
+        "fachada_principal_az": {"valor": 158, "fonte": "estimado: lado curto SSE do polígono OSM, voltado para a Praça Floriano (a 135° e 65 m do centro, ruas.geojson); o Monroe ficava ~400 m ao sul, na outra ponta da praça"},
+        "a_frente": "Praça Floriano (Cinelândia); laterais Av. Rio Branco (L) e Rua Evaristo da Veiga",
+        "elementos_marcantes": ["águia de cobre dourado (4 m × 6 m) no alto", "3 cúpulas douradas/verdes", "escadaria de pedra na fachada", "nomes de artistas inscritos nas paredes externas", "fundação de estacas de madeira"]
+      },
+      "fotos_referencia": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Teatro_Municipal_-_panoramio_(4).jpg", "licenca": "CC BY 3.0 (lida na página)", "mostra": "fachada"}
+      ],
+      "divergencias": [
+        "Estacas da fundação: pt.wikipedia 1.600; en.wikipedia 1.180.",
+        "Capacidade atual: pt.wikipedia 2.361; en.wikipedia 2.244.",
+        "Coordenada: en.wikipedia −22,9092222/−43,1764917 vs pt.wikipedia −22,90889/−43,17667 (~40 m); usada a pt (bate com OSM).",
+        "Material da águia: cobre dourado (pt.wikipedia) vs 'bronze' em outras fontes vistas só na busca."
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Theatro_Municipal_do_Rio_de_Janeiro", "https://en.wikipedia.org/wiki/Theatro_Municipal_(Rio_de_Janeiro)", "https://www.cranebriefing.com/news/carvalhao-transportes-carvalho-assists-in-restoration-of-theatre-in-rio-de-janeiro/2046310.article"],
+      "confianca": "alta para planta (OSM), datas, nº de cúpulas e águia; alturas e cores estimadas"
+    },
+    {
+      "id": "senado_conde_dos_arcos",
+      "nome": "Palácio do Conde dos Arcos (Senado do Império)",
+      "nomes_anteriores": ["Solar do Conde dos Arcos (1819)", "Senado Imperial / Casa dos Senadores", "Senado Federal (1891–1925)", "hoje Faculdade Nacional de Direito (UFRJ)"],
+      "anos": {
+        "construcao": {"valor": 1819, "fonte": "pt.wikipedia Palácio do Conde dos Arcos (Rio de Janeiro)"},
+        "reformas_de_forma": [
+          {"ano": 1826, "o_que": "adaptado para o Senado (forma externa: estimado sem grande mudança)", "fonte": "pt.wikipedia (sede do Senado desde 1826, navbox e FND)"}
+        ],
+        "demolicao": null
+      },
+      "funcao_no_poder": [
+        "Residência do Conde dos Arcos (último vice-rei) 1819–1821",
+        "Senado do Império 1826–1889 (juramento da Princesa Isabel, 1875)",
+        "Senado Federal 1891–1924/1925 (depois foi para o Monroe)",
+        "Faculdade Nacional de Direito (UFRJ)"
+      ],
+      "lat": -22.90713,
+      "lon": -43.19057,
+      "coord_fonte": "pt.wikipedia 'Palácio do Conde dos Arcos (Rio de Janeiro)' (geohack 22°54′25.682″S 43°11′26.048″O)",
+      "centro_poligono_osm": {"lat": -22.907185, "lon": -43.190603},
+      "forma": {
+        "planta": {"tipo": "quadra quase quadrada com pátio interno (casa nobre de esquina)", "fonte": "OSM local (48 × 46 m) + estimado: pátio por satélite/maquete Agência Senado citada na pt.wikipedia"},
+        "comprimento": {"valor": 48.1, "fonte": "OSM local, polígono 'Faculdade de Direito da UFRJ' (1.173,7 m²), retângulo mínimo"},
+        "largura": {"valor": 46.3, "fonte": "OSM local, idem"},
+        "eixo_longo_az": {"valor": 165, "fonte": "OSM local"},
+        "pavimentos": {"valor": 2, "fonte": "estimado: foto Commons Palaciocondedosarcos.jpg (sobrado nobre)"},
+        "altura_beiral": {"valor": 12, "fonte": "estimado: 2 pavimentos altos + platibanda"},
+        "telhado": {"valor": "telha em 4 águas atrás de platibanda", "fonte": "estimado: foto"},
+        "torres": {"valor": "nenhuma", "fonte": "estimado"},
+        "cores": {"parede": "#EDE6D6 (claro)", "molduras": "#8F8477 (cantaria)", "telha": "#A9533A", "fonte": "estimado: foto Commons"},
+        "estilo": {"valor": "neoclássico/colonial tardio (solar joanino)", "fonte": "estimado: fotos"},
+        "fachada_principal_az": {"valor": 70, "fonte": "estimado: frente para a Praça da República/Campo de Santana, a 69° e 34 m do centro (ruas.geojson); pt.wikipedia: a casa ficava 'defronte' à praça da Aclamação"},
+        "a_frente": "Campo de Santana (Praça da Aclamação → Praça da República); esquina com a Rua Moncorvo Filho (antiga Rua do Areal)",
+        "elementos_marcantes": ["sala do Senado onde a Princesa Isabel jurou (1875, quadro de Victor Meirelles)"]
+      },
+      "fotos_referencia": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Palaciocondedosarcos.jpg", "licenca": "domínio público (lida na página)", "mostra": "fachada do palácio"}
+      ],
+      "divergencias": [
+        "Fim do Senado no prédio: navbox pt.wikipedia e página da FND '1826–1924'; texto pt.wikipedia 'até 1925'; sessão inaugural no Monroe 03/05/1925.",
+        "A pt.wikipedia 'Faculdade Nacional de Direito' dá coordenada −22,90722/−43,19056 (≈10 m da do palácio)."
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Pal%C3%A1cio_do_Conde_dos_Arcos_(Rio_de_Janeiro)", "https://pt.wikipedia.org/wiki/Faculdade_Nacional_de_Direito", "https://www12.senado.leg.br/noticias/especiais/arquivo-s/que-fim-levou-o-palacio-monroe"],
+      "confianca": "alta para lugar/datas; média para planta (OSM do prédio atual, que pode ter acréscimos da Faculdade); altura e cores estimadas"
+    },
+    {
+      "id": "palacio_guanabara",
+      "nome": "Palácio Guanabara",
+      "nomes_anteriores": ["casa de José Machado Coelho (1853)", "Paço Isabel / Palácio Isabel (1865–1889)"],
+      "anos": {
+        "inicio_obra": {"valor": 1853, "fonte": "pt.wikipedia"},
+        "reformas_de_forma": [
+          {"ano": 1865, "o_que": "comprado pela família imperial e reformado (José Maria Jacinto Rebelo) para a Princesa Isabel e o Conde d'Eu", "fonte": "pt.wikipedia"},
+          {"ano": 1908, "o_que": "reforma de Francisco Marcelino de Souza Aguiar dá à fachada características ECLÉTICAS (forma atual)", "fonte": "pt.wikipedia"},
+          {"ano": 1968, "o_que": "anexo de 6 pavimentos (prédio separado; fora do recorte 1763–1960)", "fonte": "pt.wikipedia"}
+        ],
+        "demolicao": null
+      },
+      "funcao_no_poder": [
+        "Residência da Princesa Isabel (herdeira do trono) 1865–1889",
+        "Confiscado pela República 1889 (decreto 1891)",
+        "Residência oficial de Getúlio Vargas no Estado Novo 1937–1945 (atacado no putsch integralista de 1938)",
+        "Prefeitura do Distrito Federal 1946–1960; Governo da Guanabara 1960–1975; Governo do Estado do RJ desde 1975"
+      ],
+      "lat": -22.9375,
+      "lon": -43.18389,
+      "coord_fonte": "pt/en.wikipedia (22°56′15″S 43°11′02″O)",
+      "centro_poligono_osm": {"lat": -22.937612, "lon": -43.184034},
+      "forma": {
+        "planta": {"tipo": "bloco quase quadrado com pátio central (palacete), jardim simétrico à frente", "fonte": "OSM local (54 × 52 m) + pt.wikipedia ('jardim simétrico'); pátio: estimado"},
+        "comprimento": {"valor": 53.9, "fonte": "OSM local, polígono 'Palácio Guanabara' (1.769,7 m²), retângulo mínimo"},
+        "largura": {"valor": 51.7, "fonte": "OSM local, idem"},
+        "eixo_longo_az": {"valor": 64, "fonte": "OSM local"},
+        "pavimentos": {"valor": "2 no corpo central (térreo + andar nobre com colunata) e 3 nos torreões", "fonte": "foto Commons Palácio_Guanabara_em_Laranjeiras.jpg conferida"},
+        "altura_platibanda": {"valor": 14, "fonte": "estimado: foto conferida (corpo central)"},
+        "altura_torreoes_com_cupula": {"valor": 24, "fonte": "estimado: foto conferida (torreões ~1,7× o corpo)"},
+        "telhado": {"valor": "corpo central com platibanda/balaustrada e frontão ornado ao centro; telhado oculto (após 1908); antes, neoclássico", "fonte": "foto conferida + pt.wikipedia (eclético 1908)"},
+        "torres": {"valor": "2 torreões nas pontas da fachada, de 3 pavimentos, com cúpulas-mansarda cinza-ardósia de planta quadrada/oitavada", "fonte": "foto conferida (forma pós-1908)"},
+        "cores": {"parede": "#E9D9A6 (amarelo-creme)", "molduras_colunas": "#F3ECD8 (creme claro)", "cupulas_torreoes": "#8D98A3 (ardósia/zinco)", "fonte": "estimado: foto Commons conferida"},
+        "estilo": {"valor": "neoclássico (1853/1865) → eclético (1908)", "fonte": "pt.wikipedia"},
+        "fachada_principal_az": {"valor": 100, "fonte": "estimado: Rua Pinheiro Machado (antiga Rua Guanabara) a 101° e 48 m do centro (ruas.geojson); no Império o acesso era pela Rua Paissandu (pt.wikipedia)"},
+        "a_frente": "jardim simétrico e Rua Pinheiro Machado; eixo histórico de acesso pela Rua Paissandu com palmeiras imperiais",
+        "elementos_marcantes": ["Rua Paissandu com ~100 palmeiras-imperiais (acesso imperial)", "jardim simétrico frontal", "fachada eclética de 1908 com 2 torreões de cúpula cinza", "colunata/loggia no andar nobre do corpo central (foto conferida)"]
+      },
+      "fotos_referencia": [
+        {"url": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_Guanabara_em_Laranjeiras.jpg", "licenca": "CC BY-SA 3.0 (lida na página)", "mostra": "fachada atual (eclética)"},
+        {"url": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_Isabel_1865.jpg", "licenca": "domínio público (lida na página)", "mostra": "Paço Isabel em 1865 (neoclássico)"}
+      ],
+      "divergencias": [
+        "Polígono Microsoft Building (81 × 74 m, 2.651 m²) é bem maior que o do OSM (54 × 52 m) — provavelmente inclui alas/terraços; usado o do OSM."
+      ],
+      "fontes": ["https://pt.wikipedia.org/wiki/Pal%C3%A1cio_Guanabara", "https://en.wikipedia.org/wiki/Guanabara_Palace"],
+      "confianca": "alta para datas/funções; média para planta; alturas, cores e orientação estimadas"
+    }
+  ]
+}
