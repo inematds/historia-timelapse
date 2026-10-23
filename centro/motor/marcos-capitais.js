@@ -144,14 +144,14 @@ ARQ.palacio_colunas = (m, F, cor) => {
           for (let j = 8; j >= 1; j--) { const u = j / 8; pol.push([lerp(xb - passo * .06, xm + .25, u ** .55), Hc - (Hc - .6) * u ** 1.7]); }
           pol.push([xb - passo * .06, Hc]);
           const zk = pol.map(([x, z]) => [x, Hc - (Hc - z) * k]);
-          placa(M, zk, 'y', yy + s * .2, .8, cc); void w; } }
+          placa(M, zk, 'y', yy + s * .2, m.col_esp || 1.5, cc); void w; } }
       else {
         // Planalto/STF: aleta fina no plano perpendicular à fachada; toca o chão num ponto e "abre" para fora no meio
-        const ab = m.col_abre || (tipo === 'stf' ? 3.6 : 6);
+        const ab = m.col_abre || (tipo === 'stf' ? 4.2 : 8);
         for (let i = 0; i <= n; i++) { const x = x0 + 2 + i * (L - 4) / n, pol = [], N2 = 10;
           for (let j = 0; j <= N2; j++) { const u = j / N2, z = Hc * u; pol.push([yy + s * (ab * Math.sin(Math.PI * u) ** .8 + .3), Hc - (Hc - z) * k]); }
           for (let j = N2; j >= 0; j--) { const u = j / N2, z = Hc * u; pol.push([yy + s * (ab * .45 * Math.sin(Math.PI * u) ** .8 * (1 - u * .3)), Hc - (Hc - z) * k]); }
-          placa(M, pol, 'x', x, m.col_esp || 1.0, cc); } }
+          placa(M, pol, 'x', x, m.col_esp || 1.7, cc); } }
     }
     // rampa do Planalto (parlatório): rampa da frente até o 2º piso
     if (m.rampa) { const rw = 8, za = (m.base || 1.2) + pe, ya = y0 - 40;
@@ -275,6 +275,21 @@ ARQ.catetinho = (m, F, cor) => {
     for (let x = x0 + 1.5; x < x1 - 1; x += 2.6) if (hp > 4.6) M.caixa(x - .55, x + .55, y0 - .06, y0, 3.8, 5.2, P.vidro); }
   if (F.telhado > 0) M.quad([x0 - .6, y0 - 1, 6.2], [x1 + .6, y0 - 1, 6.2], [x1 + .6, y1 + .6, 6.2 + 1.4 * F.telhado], [x0 - .6, y1 + .6, 6.2 + 1.4 * F.telhado], P.zinco, [0, 0, 0]);
   return { M, alt: 7.6, sombra: hp };
+};
+
+
+// ARCOS DE PONTE (Ponte JK): n arcos de aço em diagonal sobre o tabuleiro, alternando o lado; o tabuleiro corre ao longo de y
+// m: comp (tabuleiro), n (arcos), alt (altura do arco acima do tabuleiro), larg (tabuleiro), z_tab (altura do tabuleiro sobre a água)
+ARQ.ponte_arcos = (m, F, cor) => {
+  const M = new Malha(), Lc = m.comp || 720, n = m.n || 3, ha = (m.alt || 60) * F.paredes, w = m.larg || 24, zt = m.z_tab || 8, aco = hex('#F1F1EC');
+  if (F.laje > 0) M.caixa(-w / 2, w / 2, -Lc / 2, -Lc / 2 + Lc * F.laje, zt - 1.6, zt, { lado: Q.conc2, topo: hex('#6B6E72') });
+  if (ha < .5) return { M, alt: zt, sombra: 0 };
+  const vao = Lc / n;
+  for (let i = 0; i < n; i++) { const y0 = -Lc / 2 + i * vao, y1 = y0 + vao, s = i % 2 ? 1 : -1, N = 16; let prev = null;
+    for (let j = 0; j <= N; j++) { const u = j / N, x = s * w * .55 * (1 - 2 * u), y = lerp(y0, y1, u), z = zt + ha * 4 * u * (1 - u), p = [x, y, z];
+      if (prev) M.barra(prev, p, 2.4, 2.4, aco); prev = p;
+      if (j > 0 && j < N && j % 2 === 0) { M.barra(p, [w / 2 * Math.sign(x || 1) * .9, y, zt], .25, .25, aco); M.barra(p, [-w / 2 * Math.sign(x || 1) * .9, y, zt], .25, .25, aco); } } }
+  return { M, alt: zt + ha, sombra: 0 };
 };
 
 // ============================================================ RIO e SALVADOR

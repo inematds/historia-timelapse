@@ -19,7 +19,7 @@ bloco = fazedor_bloco(EV)
 C0 = cam(-38.48, -12.885, 11.2, 0, 0)
 BAIA = cam(-38.56, -12.93, 11.9, 48, 290)
 RECON = cam(-38.56, -12.86, 11.7, 42, 320)
-VILAV = cam(-38.5325, -13.0005, 16.4, 58, 190)
+VILAV = cam(-38.5320, -12.9990, 15.3, 52, 190)
 BARRA = cam(-38.531, -13.004, 15.2, 56, 200)
 ESCARPA = cam(-38.5140, -12.9745, 16.4, 60, 90)
 PRACA = cam(-38.5129, -12.9749, 18.5, 58, 135)
@@ -49,13 +49,13 @@ blocos = [
                "rotulos": [{"lon": -51, "lat": -11, "texto": "BRASIL", "de": 380, "ate": 3500, "tam": 84},
                            {"lon": -41.5, "lat": -12.3, "texto": "BAHIA", "de": 2600, "ate": 40000, "tam": 60},
                            {"lon": -38.51, "lat": -12.97, "texto": "SALVADOR", "de": 30000, "ate": 2e6, "tam": 72, "ponto": True}]}},
-    bloco("tupinambas-1500", [1500, 1500], C0, BAIA, 9.0, destaque=1, pulso_r=3000),
+    bloco("tupinambas-1500", [1500, 1500], C0, BAIA, 9.0, destaque=1, pulso_r=3000, numero="1500"),
     bloco("todos-os-santos-1501", [1500, 1501.83, 1501.9], BAIA, BAIA, 9.0, pulo=0.6, destaque=3,
           frota={"de": [-38.62, -13.08], "para": [-38.60, -12.93], "n": 3, "r": 120, "cor": PT, "dura": 6, "rotulo": "Expedição portuguesa", "sub": "1º/11/1501"}),
     bloco("caramuru-1510", [1501.9, 1510, 1510.5], BAIA, VILAV, 8.5, pulo=0.6, destaque=1),
     bloco("vila-do-pereira-1536", [1510.5, 1536.85, 1537], VILAV, VILAV, 8.5, pulo=0.8, destaque=1),
     bloco("coutinho-1547", [1537, 1547, 1547.5], VILAV, BARRA, 8.5, pulo=0.6, destaque=1, tom={"cor": "#a15050", "forca": 0.3},
-          tropas={"lon": -38.5333, "lat": -13.0033, "n": 70, "raio_km": 0.7, "a0": 0.3, "a1": 2.8, "cor": [200, 60, 40]}),
+          tropas={"lon": -38.531, "lat": -12.997, "n": 70, "raio_km": 0.45, "a0": 0.3, "a1": 2.8, "cor": [200, 60, 40]}),
     bloco("porque-regimento-1548", [1547.5, 1548.96, 1549.0], BARRA, C0, 9.0, pulo=0.5, destaque=2),
     bloco("porque-bahia-1549", [1549.0, 1549.1, 1549.2], C0, BAIA, 9.0, pulo=0.2, destaque=1),
     bloco("tome-de-sousa-1549", [1549.2, 1549.24, 1549.28], BAIA, BARRA, 9.5, pulo=0.2, destaque=2,

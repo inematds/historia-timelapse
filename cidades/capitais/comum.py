@@ -82,6 +82,8 @@ def fazedor_bloco(EV):
              "cartao": {"titulo": kw.pop("titulo", titulo(e, kw.pop("destaque", 1))), "numero": kw.pop("numero", e.get("numero_impacto", "")),
                         "legenda": kw.pop("legenda", e["legenda"]), "detalhe": kw.pop("detalhe", e.get("detalhe", "")),
                         "fonte": fonte(e), "local": [e["local"]["lon"], e["local"]["lat"]]}}
+        if "cartao_de" in kw:   # o cartão entra depois que a câmera chega (fração do bloco)
+            b["cartao"]["de"] = kw.pop("cartao_de")
         b.update(kw)
         return b
     return bloco

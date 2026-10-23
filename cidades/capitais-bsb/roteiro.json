@@ -282,6 +282,23 @@
    "pronto": 1967.5
   },
   {
+   "id": "ponte_arcos",
+   "tipo": "ponte_arcos",
+   "lon": -47.829969,
+   "lat": -15.824079,
+   "rumo": 151.3,
+   "ano": 2002.95,
+   "z": 1000.0,
+   "comp": 720,
+   "n": 3,
+   "alt": 60,
+   "larg": 24,
+   "z_tab": 6,
+   "rotulo": "Ponte JK",
+   "sub": "2002 · 3 arcos de 240 m",
+   "pronto": 2002.985
+  },
+  {
    "id": "teatro",
    "tipo": "teatro_piramide",
    "lon": -47.880344,
@@ -4699,7 +4716,7 @@
       "lon": -47.3,
       "lat": -14.6,
       "texto": "PLANALTO CENTRAL",
-      "de": 600,
+      "de": 1500,
       "ate": 6000,
       "tam": 56
      },
@@ -5042,10 +5059,10 @@
      "z": 1745.3
     },
     {
-     "lon": -47.8228,
+     "lon": -47.8226,
      "lat": -15.7928,
-     "zoom": 17.4,
-     "pitch": 60,
+     "zoom": 18.3,
+     "pitch": 56,
      "bearing": 90,
      "z": 1617.1
     }
@@ -5081,10 +5098,10 @@
    ],
    "cam": [
     {
-     "lon": -47.8228,
+     "lon": -47.8226,
      "lat": -15.7928,
-     "zoom": 17.4,
-     "pitch": 60,
+     "zoom": 18.3,
+     "pitch": 56,
      "bearing": 90,
      "z": 1617.1
     },
@@ -5764,15 +5781,15 @@
      "z": 1690.3
     },
     {
-     "lon": -47.829,
-     "lat": -15.835,
-     "zoom": 14.6,
-     "pitch": 58,
-     "bearing": 0,
-     "z": 1628.1
+     "lon": -47.83,
+     "lat": -15.8241,
+     "zoom": 15.6,
+     "pitch": 60,
+     "bearing": 241,
+     "z": 1600.0
     }
    ],
-   "dur": 9.5,
+   "dur": 10.0,
    "cartao": {
     "titulo": "TRÊS ARCOS <b>SOBRE O LAGO</b>",
     "numero": "1.200 M",
@@ -5782,12 +5799,14 @@
     "local": [
      -47.829444,
      -15.823611
-    ]
+    ],
+    "de": 0.3
    },
    "pulo": 1.4,
    "destaca": [
-    "linha:ponte_jk"
-   ]
+    "marco:ponte_arcos"
+   ],
+   "chega": 0.35
   },
   {
    "id": "censo-2022",
@@ -5798,12 +5817,12 @@
    ],
    "cam": [
     {
-     "lon": -47.829,
-     "lat": -15.835,
-     "zoom": 14.6,
-     "pitch": 58,
-     "bearing": 0,
-     "z": 1628.1
+     "lon": -47.83,
+     "lat": -15.8241,
+     "zoom": 15.6,
+     "pitch": 60,
+     "bearing": 241,
+     "z": 1600.0
     },
     {
      "lon": -47.86,

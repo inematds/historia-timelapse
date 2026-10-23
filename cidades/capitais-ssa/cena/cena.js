@@ -339,7 +339,7 @@ window.CENA = {
     "zoom": 11.2,
     "pitch": 0,
     "bearing": 0,
-    "z": 109.2
+    "z": 106.5
    }
   ],
   [
@@ -350,7 +350,7 @@ window.CENA = {
     "zoom": 11.2,
     "pitch": 0,
     "bearing": 0,
-    "z": 109.2
+    "z": 106.5
    }
   ],
   [
@@ -361,7 +361,7 @@ window.CENA = {
     "zoom": 11.2,
     "pitch": 0,
     "bearing": 0,
-    "z": 109.2
+    "z": 106.5
    }
   ],
   [
@@ -372,7 +372,7 @@ window.CENA = {
     "zoom": 11.2,
     "pitch": 0,
     "bearing": 0,
-    "z": 109.2
+    "z": 106.5
    }
   ],
   [
@@ -383,7 +383,7 @@ window.CENA = {
     "zoom": 11.2,
     "pitch": 0,
     "bearing": 0,
-    "z": 109.2
+    "z": 106.5
    }
   ],
   [
@@ -455,10 +455,10 @@ window.CENA = {
   [
    37.525,
    {
-    "lon": -38.5325,
-    "lat": -13.0005,
-    "zoom": 16.4,
-    "pitch": 58,
+    "lon": -38.532,
+    "lat": -12.999,
+    "zoom": 15.3,
+    "pitch": 52,
     "bearing": 190,
     "z": 0.0
    }
@@ -466,10 +466,10 @@ window.CENA = {
   [
    42.199,
    {
-    "lon": -38.5325,
-    "lat": -13.0005,
-    "zoom": 16.52,
-    "pitch": 58,
+    "lon": -38.532,
+    "lat": -12.999,
+    "zoom": 15.42,
+    "pitch": 52,
     "bearing": 190,
     "z": 0.0
    }
@@ -477,10 +477,10 @@ window.CENA = {
   [
    42.2,
    {
-    "lon": -38.5325,
-    "lat": -13.0005,
-    "zoom": 16.52,
-    "pitch": 58,
+    "lon": -38.532,
+    "lat": -12.999,
+    "zoom": 15.42,
+    "pitch": 52,
     "bearing": 190,
     "z": 0.0
    }
@@ -488,10 +488,10 @@ window.CENA = {
   [
    46.825,
    {
-    "lon": -38.5325,
-    "lat": -13.0005,
-    "zoom": 16.4,
-    "pitch": 58,
+    "lon": -38.532,
+    "lat": -12.999,
+    "zoom": 15.3,
+    "pitch": 52,
     "bearing": 190,
     "z": 0.0
    }
@@ -499,10 +499,10 @@ window.CENA = {
   [
    51.499,
    {
-    "lon": -38.5325,
-    "lat": -13.0005,
-    "zoom": 16.52,
-    "pitch": 58,
+    "lon": -38.532,
+    "lat": -12.999,
+    "zoom": 15.42,
+    "pitch": 52,
     "bearing": 190,
     "z": 0.0
    }
@@ -510,10 +510,10 @@ window.CENA = {
   [
    51.5,
    {
-    "lon": -38.5325,
-    "lat": -13.0005,
-    "zoom": 16.52,
-    "pitch": 58,
+    "lon": -38.532,
+    "lat": -12.999,
+    "zoom": 15.42,
+    "pitch": 52,
     "bearing": 190,
     "z": 0.0
    }
@@ -559,7 +559,7 @@ window.CENA = {
     "zoom": 11.2,
     "pitch": 0,
     "bearing": 0,
-    "z": 109.2
+    "z": 106.5
    }
   ],
   [
@@ -570,7 +570,7 @@ window.CENA = {
     "zoom": 11.319999999999999,
     "pitch": 0,
     "bearing": 0,
-    "z": 109.2
+    "z": 106.5
    }
   ],
   [
@@ -581,7 +581,7 @@ window.CENA = {
     "zoom": 11.319999999999999,
     "pitch": 0,
     "bearing": 0,
-    "z": 109.2
+    "z": 106.5
    }
   ],
   [
@@ -955,7 +955,7 @@ window.CENA = {
     "zoom": 12.9,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -966,7 +966,7 @@ window.CENA = {
     "zoom": 13.02,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -977,7 +977,7 @@ window.CENA = {
     "zoom": 13.02,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -988,7 +988,7 @@ window.CENA = {
     "zoom": 12.9,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -999,7 +999,7 @@ window.CENA = {
     "zoom": 13.02,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1010,7 +1010,7 @@ window.CENA = {
     "zoom": 13.02,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1054,7 +1054,7 @@ window.CENA = {
     "zoom": 12.9,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1065,7 +1065,7 @@ window.CENA = {
     "zoom": 13.02,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1076,7 +1076,7 @@ window.CENA = {
     "zoom": 13.02,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1120,7 +1120,7 @@ window.CENA = {
     "zoom": 12.9,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1131,7 +1131,7 @@ window.CENA = {
     "zoom": 13.02,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1142,7 +1142,7 @@ window.CENA = {
     "zoom": 13.02,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1186,7 +1186,7 @@ window.CENA = {
     "zoom": 12.9,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1197,7 +1197,7 @@ window.CENA = {
     "zoom": 13.02,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1208,7 +1208,7 @@ window.CENA = {
     "zoom": 13.02,
     "pitch": 48,
     "bearing": 215,
-    "z": 8.6
+    "z": 7.3
    }
   ],
   [
@@ -1331,7 +1331,7 @@ window.CENA = {
  "cartoes": [
   {
    "titulo": "A BAÍA DOS <b>TUPINAMBÁS</b>",
-   "numero": "ANO 1000",
+   "numero": "1500",
    "legenda": "Quando os europeus chegam, a baía é terra dos tupinambás, vindos da Amazônia",
    "detalhe": "Por volta do ano 1000 os tupis expulsaram para o interior os povos aratus, que por sua vez tinham sucedido os sambaquieiros (Pedra Oca, em Periperi, de 3.000 anos atrás).",
    "fonte": "Wikipédia",
@@ -1763,10 +1763,10 @@ window.CENA = {
  ],
  "tropas": [
   {
-   "lon": -38.5333,
-   "lat": -13.0033,
+   "lon": -38.531,
+   "lat": -12.997,
    "n": 70,
-   "raio_km": 0.7,
+   "raio_km": 0.45,
    "a0": 0.3,
    "a1": 2.8,
    "cor": [

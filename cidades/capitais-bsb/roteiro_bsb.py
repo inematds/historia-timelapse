@@ -24,7 +24,7 @@ CATET = cam(-47.9882, -15.9468, 17.6, 58, -20)
 CLIVRE = cam(-47.966, -15.866, 14.0, 52, -25)
 MZERO = cam(-47.8835, -15.7930, 15.8, 58, 106)
 CRUZ = cam(-47.9140, -15.7840, 15.8, 55, 106)
-ALV = cam(-47.8228, -15.7928, 17.4, 60, 90)
+ALV = cam(-47.8226, -15.7928, 18.3, 56, 90)
 TAGUA = cam(-48.050, -15.833, 13.3, 50, -15)
 ESPL = cam(-47.8712, -15.7972, 16.2, 62, 106)
 CONG = cam(-47.8645, -15.7994, 17.2, 64, 106)
@@ -35,7 +35,7 @@ PRACA = cam(-47.8625, -15.8003, 17.0, 60, 286)
 TORRE = cam(-47.8936, -15.7902, 16.3, 45, 106)
 UNB = cam(-47.8664, -15.7620, 15.0, 55, -20)
 CEIL = cam(-48.085, -15.822, 13.2, 50, -35)
-PONTE = cam(-47.829, -15.835, 14.6, 58, 0)
+PONTE = cam(-47.8300, -15.8241, 15.6, 60, 241)
 FIM = cam(-47.86, -15.78, 12.3, 36, -10)
 FIM2 = cam(-47.86, -15.77, 12.2, 28, -4)
 
@@ -47,7 +47,7 @@ blocos = [
                "chaves": [[0, {"lon": -43.2, "lat": -22.9, "ls": 7.6}], [0.3, {"lon": -45.6, "lat": -19.0, "ls": 6.3}],
                           [0.65, {"lon": -47.7, "lat": -15.9, "ls": 8.4}], [1, {"lon": C0["lon"], "lat": C0["lat"], "ls": ls(C0["zoom"], C0["lat"])}]],
                "rotulos": [{"lon": -43.20, "lat": -22.90, "texto": "RIO DE JANEIRO", "de": 300, "ate": 4500, "tam": 50, "ponto": True},
-                           {"lon": -47.3, "lat": -14.6, "texto": "PLANALTO CENTRAL", "de": 600, "ate": 6000, "tam": 56},
+                           {"lon": -47.3, "lat": -14.6, "texto": "PLANALTO CENTRAL", "de": 1500, "ate": 6000, "tam": 56},
                            {"lon": -47.88, "lat": -15.79, "texto": "BRASÍLIA", "de": 5000, "ate": 2e6, "tam": 72, "ponto": True}]}},
     bloco("jk-primeira-visita-1956", [1956.74, 1956.75, 1956.8], C0, DF, 9.5, pulo=0.2, destaque=2, pulso_r=1500),
     bloco("catetinho-1956", [1956.8, 1956.86, 1956.95], DF, CATET, 9.0, pulo=0.3, destaque=2, destaca=["marco:catetinho"]),
@@ -74,7 +74,7 @@ blocos = [
     bloco("unesco-1987", [1984.5, 1987.93, 1987.97], CONG, PLANO, 9.0, pulo=1.0, destaque=2,
           destaca=["linha:eixo_l", "linha:eixo_o", "linha:eixo_n", "linha:eixo_s"]),
     bloco("constituicao-1988", [1987.97, 1988.76, 1988.9], PLANO, PRACA, 9.0, pulo=0.6, destaque=2, destaca=["marco:congresso"]),
-    bloco("ponte-jk-2002", [1988.9, 2002.95, 2002.99], PRACA, PONTE, 9.5, pulo=1.4, destaque=3, destaca=["linha:ponte_jk"]),
+    bloco("ponte-jk-2002", [1988.9, 2002.95, 2002.99], PRACA, PONTE, 10.0, pulo=1.4, destaque=3, destaca=["marco:ponte_arcos"], chega=0.35, cartao_de=0.3),
     bloco("censo-2022", [2003, 2022.6, 2024], PONTE, FIM, 10.0, pulo=1.5, destaque=2),
     {"id": "fecho", "anos": [2024, 2024], "cam": [FIM, FIM2], "dur": 14.0},
 ]
@@ -135,6 +135,8 @@ MARCOS = [
     M("vitral", "catedral_bsb", -47.875557, -15.798332, 286, 1969.8, 1970.3, raio=30, alt=42, larg=60, comp=60, so_vitral=True, rotulo="Catedral", sub="vitrais · 1970"),
     M("itamaraty", "itamaraty", -47.867295, -15.80078, 16, 1963, 1970.3, larg=84, comp=84, rotulo="Itamaraty", sub="1970 · 14 arcos por face"),
     M("torre", "torre_tv", -47.892977, -15.790499, 106, 1965, 1967.5, larg=45, comp=41, rotulo="Torre de TV", sub="1967"),
+    M("ponte_arcos", "ponte_arcos", -47.829969, -15.824079, 151.3, 2002.95, 2002.985, comp=720, n=3, alt=60, larg=24, z_tab=6,
+      rotulo="Ponte JK", sub="2002 · 3 arcos de 240 m"),
     M("teatro", "teatro_piramide", -47.880344, -15.79196, 106, 1960.6, 1966, larg=136, comp=70, alt=24.5),
 ] + [M(f"min_n{i}", "ministerio", lo, la, 288, 1958.6 + i * 0.12, 1959.9 + i * 0.03, larg=104, comp=18) for i, (lo, la) in enumerate(MIN_N)] \
   + [M(f"min_s{i}", "ministerio", lo, la, 288, 1958.7 + i * 0.12, 1960.0 + i * 0.03, larg=104, comp=18) for i, (lo, la) in enumerate(MIN_S)]

@@ -397,7 +397,7 @@
      "zoom": 11.2,
      "pitch": 0,
      "bearing": 0,
-     "z": 109.2
+     "z": 106.5
     },
     {
      "lon": -38.48,
@@ -405,7 +405,7 @@
      "zoom": 11.2,
      "pitch": 0,
      "bearing": 0,
-     "z": 109.2
+     "z": 106.5
     }
    ],
    "dur": 5.5,
@@ -428,7 +428,7 @@
      "zoom": 11.2,
      "pitch": 0,
      "bearing": 0,
-     "z": 109.2
+     "z": 106.5
     },
     {
      "lon": -38.48,
@@ -436,7 +436,7 @@
      "zoom": 11.2,
      "pitch": 0,
      "bearing": 0,
-     "z": 109.2
+     "z": 106.5
     }
    ],
    "dur": 9.0,
@@ -524,7 +524,7 @@
      "zoom": 11.2,
      "pitch": 0,
      "bearing": 0,
-     "z": 109.2
+     "z": 106.5
     },
     {
      "lon": -38.56,
@@ -538,7 +538,7 @@
    "dur": 9.0,
    "cartao": {
     "titulo": "A BAÍA DOS <b>TUPINAMBÁS</b>",
-    "numero": "ANO 1000",
+    "numero": "1500",
     "legenda": "Quando os europeus chegam, a baía é terra dos tupinambás, vindos da Amazônia",
     "detalhe": "Por volta do ano 1000 os tupis expulsaram para o interior os povos aratus, que por sua vez tinham sucedido os sambaquieiros (Pedra Oca, em Periperi, de 3.000 anos atrás).",
     "fonte": "Wikipédia",
@@ -625,10 +625,10 @@
      "z": 0.0
     },
     {
-     "lon": -38.5325,
-     "lat": -13.0005,
-     "zoom": 16.4,
-     "pitch": 58,
+     "lon": -38.532,
+     "lat": -12.999,
+     "zoom": 15.3,
+     "pitch": 52,
      "bearing": 190,
      "z": 0.0
     }
@@ -665,18 +665,18 @@
    ],
    "cam": [
     {
-     "lon": -38.5325,
-     "lat": -13.0005,
-     "zoom": 16.4,
-     "pitch": 58,
+     "lon": -38.532,
+     "lat": -12.999,
+     "zoom": 15.3,
+     "pitch": 52,
      "bearing": 190,
      "z": 0.0
     },
     {
-     "lon": -38.5325,
-     "lat": -13.0005,
-     "zoom": 16.4,
-     "pitch": 58,
+     "lon": -38.532,
+     "lat": -12.999,
+     "zoom": 15.3,
+     "pitch": 52,
      "bearing": 190,
      "z": 0.0
     }
@@ -713,10 +713,10 @@
    ],
    "cam": [
     {
-     "lon": -38.5325,
-     "lat": -13.0005,
-     "zoom": 16.4,
-     "pitch": 58,
+     "lon": -38.532,
+     "lat": -12.999,
+     "zoom": 15.3,
+     "pitch": 52,
      "bearing": 190,
      "z": 0.0
     },
@@ -747,10 +747,10 @@
     "forca": 0.3
    },
    "tropas": {
-    "lon": -38.5333,
-    "lat": -13.0033,
+    "lon": -38.531,
+    "lat": -12.997,
     "n": 70,
-    "raio_km": 0.7,
+    "raio_km": 0.45,
     "a0": 0.3,
     "a1": 2.8,
     "cor": [
@@ -782,7 +782,7 @@
      "zoom": 11.2,
      "pitch": 0,
      "bearing": 0,
-     "z": 109.2
+     "z": 106.5
     }
    ],
    "dur": 9.0,
@@ -818,7 +818,7 @@
      "zoom": 11.2,
      "pitch": 0,
      "bearing": 0,
-     "z": 109.2
+     "z": 106.5
     },
     {
      "lon": -38.56,
@@ -1422,7 +1422,7 @@
      "zoom": 12.9,
      "pitch": 48,
      "bearing": 215,
-     "z": 8.6
+     "z": 7.3
     }
    ],
    "dur": 9.0,
@@ -1462,7 +1462,7 @@
      "zoom": 12.9,
      "pitch": 48,
      "bearing": 215,
-     "z": 8.6
+     "z": 7.3
     },
     {
      "lon": -38.515,
@@ -1470,7 +1470,7 @@
      "zoom": 12.9,
      "pitch": 48,
      "bearing": 215,
-     "z": 8.6
+     "z": 7.3
     }
    ],
    "dur": 9.0,
@@ -1510,7 +1510,7 @@
      "zoom": 12.9,
      "pitch": 48,
      "bearing": 215,
-     "z": 8.6
+     "z": 7.3
     },
     {
      "lon": -38.5129,
@@ -1557,7 +1557,7 @@
      "zoom": 12.9,
      "pitch": 48,
      "bearing": 215,
-     "z": 8.6
+     "z": 7.3
     }
    ],
    "dur": 9.0,
@@ -1597,7 +1597,7 @@
      "zoom": 12.9,
      "pitch": 48,
      "bearing": 215,
-     "z": 8.6
+     "z": 7.3
     },
     {
      "lon": -38.5129,
@@ -1647,7 +1647,7 @@
      "zoom": 12.9,
      "pitch": 48,
      "bearing": 215,
-     "z": 8.6
+     "z": 7.3
     }
    ],
    "dur": 9.0,
@@ -1687,7 +1687,7 @@
      "zoom": 12.9,
      "pitch": 48,
      "bearing": 215,
-     "z": 8.6
+     "z": 7.3
     },
     {
      "lon": -38.5104,
@@ -1743,7 +1743,7 @@
      "zoom": 12.9,
      "pitch": 48,
      "bearing": 215,
-     "z": 8.6
+     "z": 7.3
     }
    ],
    "dur": 9.0,
@@ -1787,7 +1787,7 @@
      "zoom": 12.9,
      "pitch": 48,
      "bearing": 215,
-     "z": 8.6
+     "z": 7.3
     },
     {
      "lon": -38.515,

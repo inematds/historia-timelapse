@@ -52,7 +52,7 @@ blocos = [
                "rotulos": [{"lon": -38.51, "lat": -12.97, "texto": "SALVADOR", "de": 300, "ate": 4500, "tam": 50, "ponto": True},
                            {"lon": -44.4, "lat": -18.6, "texto": "MINAS · OURO", "de": 400, "ate": 4000, "tam": 48},
                            {"lon": -43.20, "lat": -22.90, "texto": "RIO DE JANEIRO", "de": 4000, "ate": 2e6, "tam": 72, "ponto": True}]}},
-    bloco("capital-1763", [1763.55, 1763.56, 1763.9], C0, PACO, 10.0, pulo=0.2, destaque=1, destaca=["marco:paco"]),
+    bloco("capital-1763", [1763.55, 1763.56, 1763.9], C0, PACO, 11.0, pulo=0.2, destaque=1, destaca=["marco:paco"], chega=0.3, cartao_de=0.3),
     bloco("corte-1808", [1763.9, 1808.18, 1808.3], PACO, BAIA, 10.0, pulo=1.6, destaque=2,
           frota={"de": [-43.13, -23.05], "para": [-43.170, -22.905], "n": 17, "r": 110, "espalha_km": 3, "cor": [30, 120, 60], "dura": 7,
                  "rotulo": "A frota da Corte", "sub": "1808 · de Lisboa"}),
@@ -66,17 +66,21 @@ blocos = [
     bloco("republica-1889", [1835, 1889.87, 1889.88], MUNI, CAMPO, 9.0, pulo=1.6, destaque=1),
     bloco("itamaraty-1889", [1889.88, 1889.9, 1890.5], CAMPO, ITAM, 8.0, pulo=0.2, destaque=1, destaca=["marco:itamaraty"]),
     bloco("constituicao-1891", [1890.5, 1891.15, 1891.4], ITAM, SCRIST, 10.0, pulo=0.4, destaque=2, destaca=["marco:scristovao"]),
-    bloco("cruls-1892", [1891.4, 1892.5, 1892.9], SCRIST, CASTELO, 10.0, pulo=0.4, destaque=2),
+    bloco("cruls-1892", [1891.4, 1892.5, 1892.9], SCRIST, CASTELO, 10.0, pulo=0.4, destaque=2,
+          rotulos=[{"lon": -43.1930, "lat": -22.8905, "texto": "↖ PLANALTO CENTRAL · RETÂNGULO CRULS", "z": 200, "tam": 38}]),
     bloco("catete-1897", [1892.9, 1897.15, 1897.4], CASTELO, CATETE, 8.5, pulo=0.6, destaque=1, destaca=["marco:catete"]),
     bloco("avenida-central-1904", [1897.4, 1904.2, 1904.6], CATETE, AVENIDA, 8.5, pulo=0.6, destaque=1),
     bloco("municipal-1909", [1904.6, 1909.53, 1909.7], AVENIDA, THEATRO, 8.5, pulo=0.6, destaque=1, destaca=["marco:theatro"]),
-    bloco("pedra-fundamental-1922", [1909.7, 1922.05, 1922.3], THEATRO, CATETE, 10.0, pulo=1.2, destaque=1, destaca=["marco:catete"]),
+    bloco("pedra-fundamental-1922", [1909.7, 1922.05, 1922.3], THEATRO, CATETE, 10.0, pulo=1.2, destaque=1, destaca=["marco:catete"],
+          rotulos=[{"lon": -43.1752, "lat": -22.9256, "texto": "↙ PLANALTO CENTRAL (PLANALTINA)", "z": 70, "tam": 38}]),
     bloco("monroe-1925", [1922.3, 1925, 1925.3], CATETE, MONROE, 8.5, pulo=0.6, destaque=1, destaca=["marco:monroe"]),
     bloco("tiradentes-1926", [1925.3, 1926.34, 1926.6], MONROE, CADEIA, 9.0, pulo=0.4, destaque=1, destaca=["marco:tiradentes"]),
     bloco("constituicao-1946", [1926.6, 1946.71, 1946.9], CADEIA, CADEIA, 10.0, pulo=1.4, destaque=2, destaca=["marco:tiradentes"]),
     bloco("vargas-1954", [1946.9, 1954.65, 1954.8], CADEIA, CATETE, 8.5, pulo=0.8, destaque=2, tom={"cor": "#3a3a4a", "forca": 0.3}),
-    bloco("belcher-1955", [1954.8, 1955.3, 1955.6], CATETE, CATETE, 9.0, pulo=0.3, destaque=2),
-    bloco("porque-planalto-1956", [1955.6, 1956.1, 1956.3], CATETE, CIDADE, 10.0, pulo=0.4, destaque=2),
+    bloco("belcher-1955", [1954.8, 1955.3, 1955.6], CATETE, CATETE, 9.0, pulo=0.3, destaque=2,
+          rotulos=[{"lon": -43.1752, "lat": -22.9256, "texto": "↙ SÍTIO CASTANHO · PLANALTO CENTRAL", "z": 70, "tam": 38}]),
+    bloco("porque-planalto-1956", [1955.6, 1956.1, 1956.3], CATETE, CIDADE, 11.0, pulo=0.4, destaque=2, chega=0.3, cartao_de=0.3,
+          rotulos=[{"lon": -43.31, "lat": -22.86, "texto": "↖ PLANALTO CENTRAL", "z": 700, "tam": 44}]),
     bloco("novacap-1956", [1956.3, 1956.72, 1956.74], CIDADE, FIM, 11.0, pulo=0.5, destaque=2, chega=0.6, destaca=["marco:catete"]),
 ]
 
@@ -97,7 +101,7 @@ ROT = {"imperio-1822": ("CAMPO DE SANTANA", -43.188563, -22.906701), "republica-
 for b in blocos:
     if b["id"] in ROT:
         nm, lo, la = ROT[b["id"]]
-        b["rotulos"] = [{"lon": lo, "lat": la, "texto": nm, "z": round(zc(lo, la, 6) * EXZ + (500 if b["id"] == "municipio-neutro-1834" else 60), 1), "tam": 30}]
+        b.setdefault("rotulos", []).append({"lon": lo, "lat": la, "texto": nm, "z": round(zc(lo, la, 6) * EXZ + (500 if b["id"] == "municipio-neutro-1834" else 60), 1), "tam": 30})
 ajusta_anos(blocos)
 grava_marcas("rio", blocos)
 

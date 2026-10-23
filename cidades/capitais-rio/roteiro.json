@@ -507,7 +507,7 @@
      "z": 6.4
     }
    ],
-   "dur": 10.0,
+   "dur": 11.0,
    "cartao": {
     "titulo": "O RIO VIRA <b>CAPITAL</b>",
     "numero": "1763",
@@ -517,12 +517,14 @@
     "local": [
      -43.174233,
      -22.903508
-    ]
+    ],
+    "de": 0.3
    },
    "pulo": 0.2,
    "destaca": [
     "marco:paco"
    ],
+   "chega": 0.3,
    "imagem": {
     "src": "assets/epoca/e00.jpg",
     "legenda": "A baía e a cidade de São Sebastião, mapa de 1775",
@@ -1093,12 +1095,14 @@
     ]
    },
    "pulo": 0.4,
-   "imagem": {
-    "src": "assets/epoca/e07.jpg",
-    "legenda": "A Comissão Cruls no Planalto Central, 1894",
-    "credito": "Henrique Charles Morize · 1894 · domínio público (Wikimedia Commons)"
-   },
    "rotulos": [
+    {
+     "lon": -43.193,
+     "lat": -22.8905,
+     "texto": "↖ PLANALTO CENTRAL · RETÂNGULO CRULS",
+     "z": 200,
+     "tam": 38
+    },
     {
      "lon": -43.174532,
      "lat": -22.906927,
@@ -1106,7 +1110,12 @@
      "z": 91.3,
      "tam": 30
     }
-   ]
+   ],
+   "imagem": {
+    "src": "assets/epoca/e07.jpg",
+    "legenda": "A Comissão Cruls no Planalto Central, 1894",
+    "credito": "Henrique Charles Morize · 1894 · domínio público (Wikimedia Commons)"
+   }
   },
   {
    "id": "catete-1897",
@@ -1290,6 +1299,15 @@
    "pulo": 1.2,
    "destaca": [
     "marco:catete"
+   ],
+   "rotulos": [
+    {
+     "lon": -43.1752,
+     "lat": -22.9256,
+     "texto": "↙ PLANALTO CENTRAL (PLANALTINA)",
+     "z": 70,
+     "tam": 38
+    }
    ]
   },
   {
@@ -1508,7 +1526,16 @@
      -22.9258639
     ]
    },
-   "pulo": 0.3
+   "pulo": 0.3,
+   "rotulos": [
+    {
+     "lon": -43.1752,
+     "lat": -22.9256,
+     "texto": "↙ SÍTIO CASTANHO · PLANALTO CENTRAL",
+     "z": 70,
+     "tam": 38
+    }
+   ]
   },
   {
    "id": "porque-planalto-1956",
@@ -1535,7 +1562,7 @@
      "z": 48.3
     }
    ],
-   "dur": 10.0,
+   "dur": 11.0,
    "cartao": {
     "titulo": "POR QUE <b>O PLANALTO?</b>",
     "numero": "3 MOTIVOS",
@@ -1545,9 +1572,20 @@
     "local": [
      -43.1762278,
      -22.9258639
-    ]
+    ],
+    "de": 0.3
    },
-   "pulo": 0.4
+   "pulo": 0.4,
+   "chega": 0.3,
+   "rotulos": [
+    {
+     "lon": -43.31,
+     "lat": -22.86,
+     "texto": "↖ PLANALTO CENTRAL",
+     "z": 700,
+     "tam": 44
+    }
+   ]
   },
   {
    "id": "novacap-1956",
