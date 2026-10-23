@@ -5,6 +5,7 @@
  "marcos_ez": 1.25,
  "predios_neutros": true,
  "voo_alto": true,
+ "popArredAte": 1870,
  "cartaoDireita": 660,
  "cartaoEsquerda": 500,
  "hud_de_bloco": "tupinambas-1500",
@@ -765,7 +766,7 @@
    "anos": [
     1547.5,
     1548.96,
-    1548.9650000000001
+    1548.9601
    ],
    "cam": [
     {

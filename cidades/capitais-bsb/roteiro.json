@@ -71,7 +71,7 @@
  "popRotulo": "habitantes no DF",
  "fim": {
   "titulo": "As 3 capitais do Brasil",
-  "sub": "Salvador 1549 · Rio de Janeiro 1763 · Brasília 1960",
+  "sub": "Salvador 1549 → Rio 1763: ouro e fronteira sul → Brasília 1960: interiorizar e unir o país",
   "marca": "INEMA<span>.CLUB</span>",
   "fica": true,
   "escuro": 0.25,
@@ -4834,7 +4834,7 @@
    "anos": [
     1956.95,
     1956.97,
-    1956.9750000000001
+    1956.9701
    ],
    "cam": [
     {
@@ -4871,16 +4871,7 @@
     "src": "assets/epoca/e03.jpg",
     "legenda": "Acampamento e galpões no cerrado, 1957",
     "credito": "Agência Nacional · 1957 · domínio público (Wikimedia Commons)"
-   },
-   "rotulos": [
-    {
-     "lon": -47.967778,
-     "lat": -15.87,
-     "texto": "CIDADE LIVRE (NÚCLEO BANDEIRANTE)",
-     "z": 1687.8,
-     "tam": 30
-    }
-   ]
+   }
   },
   {
    "id": "plano-piloto-1957",
@@ -5107,12 +5098,12 @@
      "z": 1617.1
     },
     {
-     "lon": -48.05,
-     "lat": -15.833,
-     "zoom": 13.3,
+     "lon": -48.0564,
+     "lat": -15.8333,
+     "zoom": 13.6,
      "pitch": 50,
      "bearing": -15,
-     "z": 1920.7
+     "z": 1908.1
     }
    ],
    "dur": 8.5,
@@ -5143,16 +5134,16 @@
    "anos": [
     1958.95,
     1959.37,
-    1959.375
+    1959.3701
    ],
    "cam": [
     {
-     "lon": -48.05,
-     "lat": -15.833,
-     "zoom": 13.3,
+     "lon": -48.0564,
+     "lat": -15.8333,
+     "zoom": 13.6,
      "pitch": 50,
      "bearing": -15,
-     "z": 1920.7
+     "z": 1908.1
     },
     {
      "lon": -47.882,
@@ -5185,7 +5176,7 @@
   {
    "id": "congresso-obra-1959",
    "anos": [
-    1959.372,
+    1959.3701,
     1959.5,
     1959.65
    ],
@@ -5421,7 +5412,7 @@
    "anos": [
     1960.6,
     1960.67,
-    1960.6750000000002
+    1960.6701
    ],
    "cam": [
     {
@@ -5458,7 +5449,7 @@
   {
    "id": "unb-1962",
    "anos": [
-    1960.672,
+    1960.6701,
     1962.3,
     1962.5
    ],
@@ -5770,7 +5761,7 @@
    "anos": [
     1988.9,
     2002.95,
-    2002.9550000000002
+    2002.9501
    ],
    "cam": [
     {

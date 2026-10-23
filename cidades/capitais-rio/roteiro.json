@@ -5,6 +5,7 @@
  "marcos_ez": 1.25,
  "predios_neutros": true,
  "voo_alto": true,
+ "popArredAte": 1870,
  "cartaoDireita": 660,
  "cartaoEsquerda": 500,
  "hud_de_bloco": "capital-1763",
@@ -601,7 +602,7 @@
    "anos": [
     1808.3,
     1815.96,
-    1815.9650000000001
+    1815.9601
    ],
    "cam": [
     {
@@ -1097,10 +1098,10 @@
    "pulo": 0.4,
    "rotulos": [
     {
-     "lon": -43.193,
-     "lat": -22.8905,
+     "lon": -43.1765,
+     "lat": -22.903,
      "texto": "↖ PLANALTO CENTRAL · RETÂNGULO CRULS",
-     "z": 450,
+     "z": 300,
      "tam": 38
     }
    ],

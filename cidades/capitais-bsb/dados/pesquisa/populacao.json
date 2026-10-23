@@ -16,7 +16,9 @@
    "nota_territorio": "Área destinada ao futuro DF (ainda Goiás). ~50% em áreas já ocupadas antes (zona rural e cidade de Planaltina). Contagem populacional do IBGE de 1957 — NÃO é o Censo Experimental (que é de 1959). Outra fonte dá 12.700 (ver RESUMO-POP.md).",
    "fonte_url": "https://ipe.df.gov.br/documents/d/ipedf/trajetoria-das-mulheres-no-distrito-federal-50-anos-de-conquistas-pdf",
    "fonte_nome": "IPEDF/GDF, 'Trajetória das mulheres no Distrito Federal — 50 anos de conquistas' (mar. 2016): 'Em 1957, segundo a contagem populacional realizada pelo IBGE, já se encontravam na área destinada ao futuro Distrito Federal 12.283 habitantes'",
-   "confianca": "media"
+   "confianca": "media",
+   "ano_exato": 1957.5,
+   "nota_ano_exato": "contagem do IBGE de 1957 sem mês publicado: posta no meio do ano; antes disso o contador mostra 'sem contagem'"
   },
   {
    "ano": 1959,

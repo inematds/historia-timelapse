@@ -94,7 +94,7 @@ def ajusta_anos(blocos):
     for b in blocos:
         a = b["anos"]
         if len(a) == 3 and "cartao" in b:
-            a[2] = max(a[1] + 0.005, min(a[2], math.floor(a[1]) + 0.95))
+            a[2] = max(a[1] + 0.0001, min(a[2], math.floor(a[1]) + 0.95))
 
 
 def marcas_do(blocos):

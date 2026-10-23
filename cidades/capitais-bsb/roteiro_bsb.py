@@ -25,7 +25,7 @@ CLIVRE = cam(-47.966, -15.866, 14.0, 52, -25)
 MZERO = cam(-47.8835, -15.7930, 15.8, 58, 106)
 CRUZ = cam(-47.9140, -15.7840, 15.8, 55, 106)
 ALV = cam(-47.8226, -15.7928, 18.3, 56, 90)
-TAGUA = cam(-48.050, -15.833, 13.3, 50, -15)
+TAGUA = cam(-48.0564, -15.8333, 13.6, 50, -15)
 ESPL = cam(-47.8712, -15.7972, 16.2, 62, 106)
 CONG = cam(-47.8645, -15.7994, 17.2, 64, 106)
 CONG_N = cam(-47.8638, -15.7990, 17.0, 60, 196)
@@ -58,15 +58,15 @@ blocos = [
     bloco("corte-rodoviaria-1957", [1957.45, 1957.5, 1957.9], CRUZ, MZERO, 8.5, pulo=0.2, destaque=2),
     bloco("alvorada-1958", [1957.9, 1958.49, 1958.6], MZERO, ALV, 10.0, pulo=0.8, destaque=2, destaca=["marco:alvorada"]),
     bloco("taguatinga-1958", [1958.6, 1958.65, 1958.95], ALV, TAGUA, 8.5, pulo=0.3, destaque=1, numero="1958"),
-    bloco("censo-experimental-1959", [1958.95, 1959.37, 1959.372], TAGUA, PLANO_A, 8.5, pulo=0.4, destaque=2),
-    bloco("congresso-obra-1959", [1959.372, 1959.5, 1959.65], PLANO_A, CONG, 10.0, pulo=0.2, destaque=2, destaca=["marco:congresso"]),
+    bloco("censo-experimental-1959", [1958.95, 1959.37, 1959.3701], TAGUA, PLANO_A, 8.5, pulo=0.4, destaque=2),
+    bloco("congresso-obra-1959", [1959.3701, 1959.5, 1959.65], PLANO_A, CONG, 10.0, pulo=0.2, destaque=2, destaca=["marco:congresso"]),
     bloco("lago-paranoa-1959", [1959.65, 1959.7, 1959.85], CONG, LAGO, 10.0, pulo=0.2, destaque=1),
     bloco("esplanada-1959", [1959.85, 1959.9, 1960.1], LAGO, ESPL, 9.5, pulo=0.2, destaque=2),
     bloco("catedral-estrutura-1960", [1960.1, 1960.29, 1960.295], ESPL, CATED, 9.0, pulo=0.3, destaque=2, destaca=["marco:catedral"]),
     bloco("inauguracao-1960", [1960.295, 1960.3, 1960.6], CATED, PRACA, 12.0, pulo=0.2, destaque=2,
           destaca=["marco:congresso", "marco:planalto"]),
-    bloco("censo-1960", [1960.6, 1960.67, 1960.672], PRACA, DF, 8.5, pulo=0.2, destaque=2),
-    bloco("unb-1962", [1960.672, 1962.3, 1962.5], DF, UNB, 8.0, pulo=0.8, destaque=2),
+    bloco("censo-1960", [1960.6, 1960.67, 1960.6701], PRACA, DF, 8.5, pulo=0.2, destaque=2),
+    bloco("unb-1962", [1960.6701, 1962.3, 1962.5], DF, UNB, 8.0, pulo=0.8, destaque=2),
     bloco("golpe-1964", [1962.5, 1964.25, 1964.5], UNB, CONG_N, 9.0, pulo=0.8, destaque=2, tom=AZUL_FRIO),
     bloco("torre-tv-1967", [1964.5, 1967.5, 1967.7], CONG_N, TORRE, 9.0, pulo=1.0, destaque=2, destaca=["marco:torre"]),
     bloco("catedral-itamaraty-1970", [1967.7, 1970.3, 1970.5], TORRE, CATED, 10.0, pulo=1.0, destaque=2, destaca=["marco:vitral"], numero="1970"),
@@ -98,7 +98,7 @@ for b in blocos:
     if b["id"] == "fecho":
         b["galeria"] = {"fica": True, "titulo": "Imagens <b>da época</b>", "itens": ["assets/epoca/g_ssa1.jpg", "assets/epoca/g_ssa2.jpg", "assets/epoca/g_rio1.jpg", "assets/epoca/g_rio2.jpg"] + [f"assets/epoca/e{i:02d}.jpg" for i in (0, 4, 5, 7, 12, 13)],
                         "creditos": "Salvador, Rio e Brasília · gravuras, pinturas e fotos em domínio público (Wikimedia Commons; Arquivo Nacional)"}
-ROT = {"jk-primeira-visita-1956": ("FAZENDA DO GAMA", -47.988333, -15.9475), "cidade-livre-1956": ("CIDADE LIVRE (NÚCLEO BANDEIRANTE)", -47.967778, -15.87),
+ROT = {"jk-primeira-visita-1956": ("FAZENDA DO GAMA", -47.988333, -15.9475),
        "primeira-missa-1957": ("PRAÇA DO CRUZEIRO", -47.913081, -15.784358), "corte-rodoviaria-1957": ("MARCO ZERO (RODOVIÁRIA)", -47.882611, -15.793389),
        "taguatinga-1958": ("TAGUATINGA", -48.056389, -15.833333), "lago-paranoa-1959": ("LAGO PARANOÁ", -47.84, -15.78),
        "unb-1962": ("UNB", -47.866389, -15.761389), "ceilandia-1971": ("CEILÂNDIA", -48.1083, -15.819167),
@@ -150,7 +150,7 @@ roteiro = {
     "hud_de_bloco": "jk-primeira-visita-1956",
     "linha": linha_completa(),
     "popRotulo": "habitantes no DF",
-    "fim": {"titulo": "As 3 capitais do Brasil", "sub": "Salvador 1549 · Rio de Janeiro 1763 · Brasília 1960", "marca": "INEMA<span>.CLUB</span>",
+    "fim": {"titulo": "As 3 capitais do Brasil", "sub": "Salvador 1549 → Rio 1763: ouro e fronteira sul → Brasília 1960: interiorizar e unir o país", "marca": "INEMA<span>.CLUB</span>",
             "fica": True, "escuro": 0.25, "dura": 7.0},
     "longe": {"auto": True},
     "regimes": REGIMES,

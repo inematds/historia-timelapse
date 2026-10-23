@@ -45,7 +45,7 @@ def main():
          "anos": [], "cam": [], "pop": pop, "cartoes": [], "cheias": [], "rotulos": [], "tropas": [], "tons": [],
          "muroDestaque": [], "falas": [], "frotas": [], "pulsos": [], "imagens": [], "chamadas": [],
          "regimes": rot.get("regimes", REGIMES_BR)}
-    for k in ("aterro", "globo", "linha", "fim", "hud_de", "ultimoCenso", "popRotulo", "predios_neutros", "marcos_ez", "arvores", "arvores_auto", "pisos", "ruas", "corLonge", "longe", "teto", "satLonge", "aguas", "cartaoDireita", "cartaoEsquerda"):
+    for k in ("aterro", "globo", "linha", "fim", "hud_de", "ultimoCenso", "popRotulo", "predios_neutros", "marcos_ez", "arvores", "arvores_auto", "pisos", "ruas", "corLonge", "longe", "teto", "satLonge", "aguas", "cartaoDireita", "cartaoEsquerda", "popArredAte"):
         if k in rot:
             C[k] = rot[k]
     C.setdefault("aterro", {"ano0": 1960, "ano1": 1978}) if CFG.get("feicoes", {}).get("aterro") else None

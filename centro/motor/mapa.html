@@ -447,7 +447,7 @@ function html(t) {
   $('ano').innerHTML = `<small>ano</small>${Math.floor(ano)}`;
   const fut = C.futuro && t >= C.futuro.t0 - 0.3;
   $('ano').innerHTML = fut ? `<small>visão</small>${Math.floor(ano)}?` : $('ano').innerHTML;
-  $('pop').innerHTML = fut ? `—<span>imaginação</span>` : ano < C.pop[0][0] ? `—<span>sem contagem</span>` : `${fmt(popEm(ano))}<span>${C.popRotulo || 'habitantes'}</span>`;
+  $('pop').innerHTML = fut ? `—<span>imaginação</span>` : ano < C.pop[0][0] ? `—<span>sem contagem</span>` : `${(C.popArredAte && ano < C.popArredAte) ? '~' + fmt(Math.round(popEm(ano) / (popEm(ano) > 20000 ? 1000 : 100)) * (popEm(ano) > 20000 ? 1000 : 100)) : fmt(popEm(ano))}<span>${C.popRotulo || 'habitantes'}</span>`;
   $('popf').textContent = fut ? 'visão imaginada · não é dado nem projeto oficial' : ano >= (C.ultimoCenso || 2022) ? `último censo: ${C.ultimoCenso || 2022} · fonte: IBGE` : 'fonte: IBGE e estimativas históricas';
   const r = [...C.regimes].reverse().find(x => ano >= x.ano) || C.regimes[0];
   if ($('regnome').textContent !== r.nome) { $('regnome').textContent = r.nome; $('bandeira').innerHTML = `<img src="assets/bandeiras/${r.bandeira}.svg">`; }

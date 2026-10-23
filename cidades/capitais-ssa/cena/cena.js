@@ -87,7 +87,7 @@ window.CENA = {
   ],
   [
    70.099,
-   1548.9650000000001
+   1548.9601
   ],
   [
    70.1,
@@ -2305,6 +2305,7 @@ window.CENA = {
  },
  "cartaoDireita": 660,
  "cartaoEsquerda": 500,
+ "popArredAte": 1870,
  "fortes": [],
  "linhas": [
   {

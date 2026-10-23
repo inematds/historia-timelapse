@@ -150,7 +150,7 @@ REG = [{"ano": 1500, "nome": "Terra dos tupinambás", "bandeira": "portugal"},
 
 roteiro = {
     "titulo": "As capitais do Brasil · ato 1: Salvador",
-    "exz": EXZ, "exb": 1.5, "marcos_ez": EZ, "predios_neutros": True, "voo_alto": True, "cartaoDireita": 660, "cartaoEsquerda": 500,
+    "exz": EXZ, "exb": 1.5, "marcos_ez": EZ, "predios_neutros": True, "voo_alto": True, "popArredAte": 1870, "cartaoDireita": 660, "cartaoEsquerda": 500,
     "hud_de_bloco": "tupinambas-1500",
     "linha": linha_completa(),
     "popRotulo": "habitantes em Salvador",

@@ -67,7 +67,7 @@ blocos = [
     bloco("itamaraty-1889", [1889.88, 1889.9, 1890.5], CAMPO, ITAM, 8.0, pulo=0.2, destaque=1, destaca=["marco:itamaraty"]),
     bloco("constituicao-1891", [1890.5, 1891.15, 1891.4], ITAM, SCRIST, 10.0, pulo=0.4, destaque=2, destaca=["marco:scristovao"]),
     bloco("cruls-1892", [1891.4, 1892.5, 1892.9], SCRIST, CASTELO, 10.0, pulo=0.4, destaque=2,
-          rotulos=[{"lon": -43.1930, "lat": -22.8905, "texto": "↖ PLANALTO CENTRAL · RETÂNGULO CRULS", "z": 450, "tam": 38}]),
+          rotulos=[{"lon": -43.1765, "lat": -22.9030, "texto": "↖ PLANALTO CENTRAL · RETÂNGULO CRULS", "z": 300, "tam": 38}]),
     bloco("catete-1897", [1892.9, 1897.15, 1897.4], CASTELO, CATETE, 8.5, pulo=0.6, destaque=1, destaca=["marco:catete"]),
     bloco("avenida-central-1904", [1897.4, 1904.2, 1904.6], CATETE, AVENIDA, 8.5, pulo=0.6, destaque=1),
     bloco("municipal-1909", [1904.6, 1909.53, 1909.7], AVENIDA, THEATRO, 8.5, pulo=0.6, destaque=1, destaca=["marco:theatro"]),
@@ -151,7 +151,7 @@ for m in MARCOS:
 
 roteiro = {
     "titulo": "As capitais do Brasil · ato 2: Rio de Janeiro",
-    "exz": EXZ, "exb": 1.5, "marcos_ez": EZ, "predios_neutros": True, "voo_alto": True, "cartaoDireita": 660, "cartaoEsquerda": 500,
+    "exz": EXZ, "exb": 1.5, "marcos_ez": EZ, "predios_neutros": True, "voo_alto": True, "popArredAte": 1870, "cartaoDireita": 660, "cartaoEsquerda": 500,
     "hud_de_bloco": "capital-1763",
     "linha": linha_completa(),
     "popRotulo": "habitantes no Rio",

@@ -47,7 +47,7 @@ window.CENA = {
   ],
   [
    41.599,
-   1815.9650000000001
+   1815.9601
   ],
   [
    41.6,
@@ -1651,10 +1651,10 @@ window.CENA = {
    "t1": 106.7
   },
   {
-   "lon": -43.193,
-   "lat": -22.8905,
+   "lon": -43.1765,
+   "lat": -22.903,
    "texto": "↖ PLANALTO CENTRAL · RETÂNGULO CRULS",
-   "z": 450,
+   "z": 300,
    "tam": 38,
    "t0": 125.7,
    "t1": 135.7
@@ -2121,6 +2121,7 @@ window.CENA = {
  },
  "cartaoDireita": 660,
  "cartaoEsquerda": 500,
+ "popArredAte": 1870,
  "fortes": [],
  "linhas": [],
  "areas": [],
