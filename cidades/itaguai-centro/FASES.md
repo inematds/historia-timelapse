@@ -6,8 +6,8 @@ Motor desta versão: cópia em `centro/motor/` (o `motor/` original não foi mex
 
 | Fase | O que é | Estado |
 |---|---|---|
-| 1 | Sem narração, só música (`final/itaguai-centro-v1.mp4`, 321 s) | pronto, enviado ao bot v3; lives26 bloqueado (YouTube: limite diário de uploads) — plano em `~/.local/share/yt-pubx/trabalhos/20261022-071116-itaguai-centro-v1-mp4/plano.json` |
-| 2 | Fase 1 + narração na voz do Nei (`narracao.json`, 31 falas; `final/itaguai-centro-narrado.mp4`) | pronto, enviado ao bot v3; lives26 bloqueado (mesmo limite) — plano em `~/.local/share/yt-pubx/trabalhos/20261022-080404-itaguai-centro-narrado-mp4/plano.json` |
+| 1 | Sem narração, só música (`final/itaguai-centro-v1.mp4`, 321 s) | pronto, enviado ao bot v3; na fila do lives26 (`~/projetos/wifi/fila-cidades`, 10 h e 18 h) desde 22/10/2026 — plano em `~/.local/share/yt-pubx/trabalhos/20261022-071116-itaguai-centro-v1-mp4/plano.json` |
+| 2 | Fase 1 + narração na voz do Nei (`narracao.json`, 31 falas; `final/itaguai-centro-narrado.mp4`) | pronto, enviado ao bot v3; na fila do lives26 (`~/projetos/wifi/fila-cidades`, 10 h e 18 h) desde 22/10/2026 — plano em `~/.local/share/yt-pubx/trabalhos/20261022-080404-itaguai-centro-narrado-mp4/plano.json` |
 | 3 | Fase 2 + avatar do Nei embaixo da bandeira (estúdio HeyGen `historia-itaguai-centro-narrado-v1`, id 12888f6491874b61a0daf1f42bc13b39) | pronto (`final/itaguai-centro-avatar.mp4`), enviado ao bot v3; o Nei pediu só as fases 1 e 2 no lives26 |
 
 ## Refazer do zero
