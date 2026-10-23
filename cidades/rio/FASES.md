@@ -5,7 +5,7 @@ O vídeo-base (fase 1) não muda. As fases 2 e 3 são camadas por cima de `final
 | Fase | O que é | Estado |
 |---|---|---|
 | 1 | Sem narração, só música (`final/rio-v2.mp4`, 418,3 s, 40 cartões; v2 = correções do revisor independente sobre a v1) | 540p enviado ao bot v3 em 22/10/2026 (v1 msg 2289, v2 msg 2293); na fila do lives26 (`~/projetos/wifi/fila-cidades`, 10 h e 18 h) desde 22/10/2026 com OK do Nei |
-| 2 | Fase 1 + narração na voz do Nei (`narracao.json`, 42 falas; `final/rio-narrado.mp4`) | 540p no bot v3 (msg 2317); na fila do lives26 (`~/projetos/wifi/fila-cidades`) desde 22/10/2026 com OK do Nei |
+| 2 | Fase 1 + narração na voz do Nei (`narracao.json`, 42 falas; `final/rio-narrado.mp4`) | 540p no bot v3 (msg 2317); publicado no lives26 em 22/10/2026: https://www.youtube.com/watch?v=Useg7_N_38E |
 | 3 | Fase 2 + avatar do Nei no **canto inferior direito, acima do INEMA.CLUB**, entrando **depois da capa e do globo** (pedido do Nei, 22/10/2026). Estúdio HeyGen `historia-rio-narrado-v1` (id a48eb80e4bb744bb929b2064207e82e7) | em produção |
 
 Motor: o original, sem mudança (1,82 milhão de prédios OSM + Microsoft carregam em ~8 s no GB10). Só arquivos da cidade: `config.json`, `roteiro_rio.py`, `imagens_uso.json`, `assets/bandeiras/franca.svg` (França Antártica, desenho simples das armas de França).
