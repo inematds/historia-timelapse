@@ -13,6 +13,11 @@ sys.path.insert(0, os.path.join(AQUI, "..", "capitais"))
 from comum import *  # noqa
 
 EV = carrega(AQUI)
+# cartão-síntese do porquê de 1960 (fontes lidas na pesquisa: RESUMO.md, "O porquê da mudança para Brasília")
+EV["porque-planalto-1956"] = {"id": "porque-planalto-1956", "titulo_curto_PT": "POR QUE O PLANALTO?", "numero_impacto": "3 MOTIVOS",
+    "legenda": "Tirar a sede do litoral exposto, ocupar o interior e unir o país em volta de um centro",
+    "detalhe": "Defesa, coesão do território e ocupação do Centro-Oeste: os argumentos vêm de Hipólito da Costa (1813) e da Missão Cruls (1892). JK somou o '50 anos em 5' e cumpriu a Constituição.",
+    "local": {"lon": -43.1762278, "lat": -22.9258639}, "fontes": ["https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_Bras%C3%ADlia", "https://pt.wikipedia.org/wiki/Miss%C3%A3o_Cruls"]}
 EXZ = 1.6
 zc = Chao(AQUI)
 cam = fazedor_cam(zc, EXZ)
@@ -30,7 +35,7 @@ CAMPO = cam(-43.1895, -22.9070, 16.0, 55, 60)
 SENADO = cam(-43.1898, -22.9075, 18.2, 58, 250)
 MUNI = cam(-43.30, -22.92, 11.6, 35, -5)
 ITAM = cam(-43.1878, -22.9036, 18.3, 58, 160)
-SCRIST = cam(-43.2258, -22.9066, 17.9, 58, 348)
+SCRIST = cam(-43.2258, -22.9080, 16.0, 52, 348)
 CASTELO = cam(-43.1735, -22.9080, 16.0, 55, -20)
 CATETE = cam(-43.1757, -22.9259, 18.5, 58, 85)
 AVENIDA = cam(-43.1765, -22.9080, 15.9, 60, 340)
@@ -71,7 +76,8 @@ blocos = [
     bloco("constituicao-1946", [1926.6, 1946.71, 1946.9], CADEIA, CADEIA, 10.0, pulo=1.4, destaque=2, destaca=["marco:tiradentes"]),
     bloco("vargas-1954", [1946.9, 1954.65, 1954.8], CADEIA, CATETE, 8.5, pulo=0.8, destaque=2, tom={"cor": "#3a3a4a", "forca": 0.3}),
     bloco("belcher-1955", [1954.8, 1955.3, 1955.6], CATETE, CATETE, 9.0, pulo=0.3, destaque=2),
-    bloco("novacap-1956", [1955.6, 1956.72, 1956.74], CATETE, FIM, 11.0, pulo=0.5, destaque=2, chega=0.6, destaca=["marco:catete"]),
+    bloco("porque-planalto-1956", [1955.6, 1956.1, 1956.3], CATETE, CIDADE, 10.0, pulo=0.4, destaque=2),
+    bloco("novacap-1956", [1956.3, 1956.72, 1956.74], CIDADE, FIM, 11.0, pulo=0.5, destaque=2, chega=0.6, destaca=["marco:catete"]),
 ]
 
 IMGS = {"capital-1763": (0, "A baía e a cidade de São Sebastião, mapa de 1775"), "corte-1808": (1, "Desembarque de D. Leopoldina diante do Paço, 1817"),
@@ -87,11 +93,11 @@ for b in blocos:
         b["imagem"] = imagem(AQUI, i, leg)
 ROT = {"imperio-1822": ("CAMPO DE SANTANA", -43.188563, -22.906701), "republica-1889": ("CAMPO DE SANTANA", -43.188563, -22.906701),
        "cruls-1892": ("MORRO DO CASTELO (OBSERVATÓRIO)", -43.174532, -22.906927), "avenida-central-1904": ("AVENIDA CENTRAL", -43.1775, -22.9047),
-       "municipio-neutro-1834": ("MUNICÍPIO NEUTRO DA CORTE", -43.40, -22.93)}
+       "municipio-neutro-1834": ("MUNICÍPIO NEUTRO DA CORTE", -43.33, -22.90)}
 for b in blocos:
     if b["id"] in ROT:
         nm, lo, la = ROT[b["id"]]
-        b["rotulos"] = [{"lon": lo, "lat": la, "texto": nm, "z": round(zc(lo, la) * EXZ + 60, 1), "tam": 30}]
+        b["rotulos"] = [{"lon": lo, "lat": la, "texto": nm, "z": round(zc(lo, la, 6) * EXZ + (500 if b["id"] == "municipio-neutro-1834" else 60), 1), "tam": 30}]
 ajusta_anos(blocos)
 grava_marcas("rio", blocos)
 
@@ -141,7 +147,7 @@ for m in MARCOS:
 
 roteiro = {
     "titulo": "As capitais do Brasil · ato 2: Rio de Janeiro",
-    "exz": EXZ, "exb": 1.5, "marcos_ez": EZ, "predios_neutros": True, "cartaoDireita": 660, "cartaoEsquerda": 500,
+    "exz": EXZ, "exb": 1.5, "marcos_ez": EZ, "predios_neutros": True, "voo_alto": True, "cartaoDireita": 660, "cartaoEsquerda": 500,
     "hud_de_bloco": "capital-1763",
     "linha": linha_completa(),
     "popRotulo": "habitantes no Rio",

@@ -4,6 +4,7 @@
  "exb": 1.5,
  "marcos_ez": 1.25,
  "predios_neutros": true,
+ "voo_alto": true,
  "cartaoDireita": 660,
  "cartaoEsquerda": 500,
  "hud_de_bloco": "capital-1763",
@@ -50,6 +51,7 @@
    1926,
    1947,
    1955,
+   1956,
    1957,
    1958,
    1959,
@@ -59,7 +61,6 @@
    1964,
    1968,
    1970,
-   1971,
    1984,
    1988,
    1989,
@@ -728,7 +729,7 @@
      "lon": -43.188563,
      "lat": -22.906701,
      "texto": "CAMPO DE SANTANA",
-     "z": 77.2,
+     "z": 75.5,
      "tam": 30
     }
    ]
@@ -904,10 +905,10 @@
    "pulo": 0.6,
    "rotulos": [
     {
-     "lon": -43.4,
-     "lat": -22.93,
+     "lon": -43.33,
+     "lat": -22.9,
      "texto": "MUNICÍPIO NEUTRO DA CORTE",
-     "z": 110.0,
+     "z": 797.0,
      "tam": 30
     }
    ]
@@ -960,7 +961,7 @@
      "lon": -43.188563,
      "lat": -22.906701,
      "texto": "CAMPO DE SANTANA",
-     "z": 77.2,
+     "z": 75.5,
      "tam": 30
     }
    ]
@@ -1025,11 +1026,11 @@
     },
     {
      "lon": -43.2258,
-     "lat": -22.9066,
-     "zoom": 17.9,
-     "pitch": 58,
+     "lat": -22.908,
+     "zoom": 16.0,
+     "pitch": 52,
      "bearing": 348,
-     "z": 25.4
+     "z": 17.1
     }
    ],
    "dur": 10.0,
@@ -1064,11 +1065,11 @@
    "cam": [
     {
      "lon": -43.2258,
-     "lat": -22.9066,
-     "zoom": 17.9,
-     "pitch": 58,
+     "lat": -22.908,
+     "zoom": 16.0,
+     "pitch": 52,
      "bearing": 348,
-     "z": 25.4
+     "z": 17.1
     },
     {
      "lon": -43.1735,
@@ -1102,7 +1103,7 @@
      "lon": -43.174532,
      "lat": -22.906927,
      "texto": "MORRO DO CASTELO (OBSERVATÓRIO)",
-     "z": 94.5,
+     "z": 91.3,
      "tam": 30
     }
    ]
@@ -1202,7 +1203,7 @@
      "lon": -43.1775,
      "lat": -22.9047,
      "texto": "AVENIDA CENTRAL",
-     "z": 110.7,
+     "z": 103.6,
      "tam": 30
     }
    ]
@@ -1510,11 +1511,11 @@
    "pulo": 0.3
   },
   {
-   "id": "novacap-1956",
+   "id": "porque-planalto-1956",
    "anos": [
     1955.6,
-    1956.72,
-    1956.74
+    1956.1,
+    1956.3
    ],
    "cam": [
     {
@@ -1524,6 +1525,45 @@
      "pitch": 58,
      "bearing": 85,
      "z": 17.8
+    },
+    {
+     "lon": -43.25,
+     "lat": -22.92,
+     "zoom": 11.9,
+     "pitch": 40,
+     "bearing": -5,
+     "z": 48.3
+    }
+   ],
+   "dur": 10.0,
+   "cartao": {
+    "titulo": "POR QUE <b>O PLANALTO?</b>",
+    "numero": "3 MOTIVOS",
+    "legenda": "Tirar a sede do litoral exposto, ocupar o interior e unir o país em volta de um centro",
+    "detalhe": "Defesa, coesão do território e ocupação do Centro-Oeste: os argumentos vêm de Hipólito da Costa (1813) e da Missão Cruls (1892). JK somou o '50 anos em 5' e cumpriu a Constituição.",
+    "fonte": "Wikipédia",
+    "local": [
+     -43.1762278,
+     -22.9258639
+    ]
+   },
+   "pulo": 0.4
+  },
+  {
+   "id": "novacap-1956",
+   "anos": [
+    1956.3,
+    1956.72,
+    1956.74
+   ],
+   "cam": [
+    {
+     "lon": -43.25,
+     "lat": -22.92,
+     "zoom": 11.9,
+     "pitch": 40,
+     "bearing": -5,
+     "z": 48.3
     },
     {
      "lon": -43.2,

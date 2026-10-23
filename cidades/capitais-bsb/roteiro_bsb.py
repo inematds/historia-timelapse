@@ -16,8 +16,8 @@ cam = fazedor_cam(zc, EXZ)
 bloco = fazedor_bloco(EV)
 
 # ---------------------------------------------------------------- câmeras (bearing 106 = olhando para leste pelo Eixo Monumental)
-C0 = cam(-47.86, -15.75, 10.75, 0, 0)               # DF de cima (fim do globo)
-DF = cam(-47.87, -15.79, 11.2, 35, -10)
+C0 = cam(-47.86, -15.75, 12.4, 0, 0)               # DF de cima (fim do globo)
+DF = cam(-47.87, -15.77, 12.4, 25, -10)
 PLANO = cam(-47.875, -15.792, 12.4, 45, -14)
 PLANO_A = cam(-47.882, -15.793, 12.9, 40, 106)
 CATET = cam(-47.9882, -15.9468, 17.6, 58, -20)
@@ -36,8 +36,8 @@ TORRE = cam(-47.8936, -15.7902, 16.3, 45, 106)
 UNB = cam(-47.8664, -15.7620, 15.0, 55, -20)
 CEIL = cam(-48.085, -15.822, 13.2, 50, -35)
 PONTE = cam(-47.829, -15.835, 14.6, 58, 0)
-FIM = cam(-47.86, -15.77, 11.4, 42, -10)
-FIM2 = cam(-47.86, -15.77, 11.2, 30, -4)
+FIM = cam(-47.86, -15.78, 12.3, 36, -10)
+FIM2 = cam(-47.86, -15.77, 12.2, 28, -4)
 
 AZUL_FRIO = {"cor": "#5a6a8a", "forca": 0.25}
 
@@ -58,20 +58,19 @@ blocos = [
     bloco("corte-rodoviaria-1957", [1957.45, 1957.5, 1957.9], CRUZ, MZERO, 8.5, pulo=0.2, destaque=2),
     bloco("alvorada-1958", [1957.9, 1958.49, 1958.6], MZERO, ALV, 10.0, pulo=0.8, destaque=2, destaca=["marco:alvorada"]),
     bloco("taguatinga-1958", [1958.6, 1958.65, 1958.95], ALV, TAGUA, 8.5, pulo=0.3, destaque=1, numero="1958"),
-    bloco("censo-experimental-1959", [1958.95, 1959.37, 1959.45], TAGUA, PLANO_A, 8.5, pulo=0.4, destaque=2),
-    bloco("congresso-obra-1959", [1959.45, 1959.5, 1959.65], PLANO_A, CONG, 10.0, pulo=0.2, destaque=2, destaca=["marco:congresso"]),
+    bloco("censo-experimental-1959", [1958.95, 1959.37, 1959.372], TAGUA, PLANO_A, 8.5, pulo=0.4, destaque=2),
+    bloco("congresso-obra-1959", [1959.372, 1959.5, 1959.65], PLANO_A, CONG, 10.0, pulo=0.2, destaque=2, destaca=["marco:congresso"]),
     bloco("lago-paranoa-1959", [1959.65, 1959.7, 1959.85], CONG, LAGO, 10.0, pulo=0.2, destaque=1),
     bloco("esplanada-1959", [1959.85, 1959.9, 1960.1], LAGO, ESPL, 9.5, pulo=0.2, destaque=2),
     bloco("catedral-estrutura-1960", [1960.1, 1960.29, 1960.295], ESPL, CATED, 9.0, pulo=0.3, destaque=2, destaca=["marco:catedral"]),
     bloco("inauguracao-1960", [1960.295, 1960.3, 1960.6], CATED, PRACA, 12.0, pulo=0.2, destaque=2,
           destaca=["marco:congresso", "marco:planalto"]),
-    bloco("censo-1960", [1960.6, 1960.67, 1960.95], PRACA, DF, 8.5, pulo=0.2, destaque=2),
-    bloco("unb-1962", [1960.95, 1962.3, 1962.5], DF, UNB, 8.0, pulo=0.8, destaque=2),
+    bloco("censo-1960", [1960.6, 1960.67, 1960.672], PRACA, DF, 8.5, pulo=0.2, destaque=2),
+    bloco("unb-1962", [1960.672, 1962.3, 1962.5], DF, UNB, 8.0, pulo=0.8, destaque=2),
     bloco("golpe-1964", [1962.5, 1964.25, 1964.5], UNB, CONG_N, 9.0, pulo=0.8, destaque=2, tom=AZUL_FRIO),
     bloco("torre-tv-1967", [1964.5, 1967.5, 1967.7], CONG_N, TORRE, 9.0, pulo=1.0, destaque=2, destaca=["marco:torre"]),
-    bloco("catedral-itamaraty-1970", [1967.7, 1970.3, 1970.5], TORRE, CATED, 10.0, pulo=1.0, destaque=2, destaca=["marco:vitral", "marco:itamaraty"]),
-    bloco("ceilandia-1971", [1970.5, 1971.24, 1971.5], CATED, CEIL, 9.0, pulo=0.5, destaque=1),
-    bloco("diretas-1984", [1971.5, 1984.32, 1984.5], CEIL, CONG, 9.0, pulo=1.4, destaque=2, tom=AZUL_FRIO),
+    bloco("catedral-itamaraty-1970", [1967.7, 1970.3, 1970.5], TORRE, CATED, 10.0, pulo=1.0, destaque=2, destaca=["marco:vitral"], numero="1970"),
+    bloco("diretas-1984", [1970.5, 1984.32, 1984.5], CATED, CONG, 9.0, pulo=1.4, destaque=2, tom=AZUL_FRIO),
     bloco("unesco-1987", [1984.5, 1987.93, 1987.97], CONG, PLANO, 9.0, pulo=1.0, destaque=2,
           destaca=["linha:eixo_l", "linha:eixo_o", "linha:eixo_n", "linha:eixo_s"]),
     bloco("constituicao-1988", [1987.97, 1988.76, 1988.9], PLANO, PRACA, 9.0, pulo=0.6, destaque=2, destaca=["marco:congresso"]),
@@ -145,7 +144,7 @@ lago = json.load(open(f"{AQUI}/dados/lago.json"))
 
 roteiro = {
     "titulo": "As capitais do Brasil · ato 3: Brasília",
-    "exz": EXZ, "exb": 1.5, "marcos_ez": 1.25, "predios_neutros": True, "cartaoDireita": 660, "cartaoEsquerda": 500,
+    "exz": EXZ, "exb": 1.5, "marcos_ez": 1.25, "predios_neutros": True, "voo_alto": True, "cartaoDireita": 660, "cartaoEsquerda": 500,
     "hud_de_bloco": "jk-primeira-visita-1956",
     "linha": linha_completa(),
     "popRotulo": "habitantes no DF",

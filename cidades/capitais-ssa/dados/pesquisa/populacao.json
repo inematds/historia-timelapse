@@ -1,218 +1,220 @@
 {
-  "_meta": {
-    "municipio": "Salvador (BA), antiga Cidade do Salvador da Bahia de Todos os Santos, capital do Estado do Brasil de 1549 a 1763 — código IBGE 2927408",
-    "gerado_em": "2026-10-22",
-    "nota_territorio": "Salvador NÃO tem o território estável do Rio. (1) Colônia: a cidade recebeu um termo de ~36 km² e um rossio; ao termo pertenciam 7 paróquias rurais (Itapuã, Pirajá, Cotegipe, Paripe, Matoim, Ilha de Maré, Passé) e, até a Independência, também as da ilha de Itaparica, Santo Amaro, Abrantes e Mata de São João. A 'zona urbana' eram 10 freguesias: Sé, Conceição da Praia, Pilar, Carmo/Santo Antônio, Santana, São Pedro, Rua do Passo, Brotas, Vitória e Penha (leiamaisba, citando Mattoso). Por isso os números coloniais são marcados 'cidade' (freguesias urbanas) ou 'termo/município' (com subúrbios) — em 1775 e 1780 os dois existem (40,9 mil × 57 mil; 39.209 × 65.285). (2) Depois de 1872 o município PERDEU território: Candeias (lei estadual 1.028 de 14/08/1958), Simões Filho (ex-Água Comprida, lei 1.538 de 07/11/1961), Lauro de Freitas (ex-Ipitanga, lei 1.753 de 17/07/1962) e Madre de Deus (lei 5.016 de 13/06/1989); ganhou as ilhas de Bom Jesus, Frades, Madre de Deus e Santo Antônio em 1931. Os censos 1872–1950 contam áreas que hoje são de outros municípios. A tabela 'Evolução da população segundo os municípios 1872/2010' do IBGE é a fonte usada de 1920 a 2010 (mesma do Rio); a ptwiki/Sinopse 2010 traz números um pouco diferentes para 1970–2010 (ver RESUMO-POP.md). Fontes: https://biblioteca.ibge.gov.br/visualizacao/dtb/bahia/salvador.pdf ; https://leiamaisba.com.br/2021/05/07/veja-quem-morava-em-salvador-no-seculo-18-nossos-primeiros-censos",
-    "uso_no_video": "Interpolar com curva suave e mostrar no HUD arredondado (antes de 1872 com '~'). Vizinhos/fogos viram pessoas multiplicando por 5 (o mesmo fator de Contreiras Rodrigues usado por Carrara); quando a fonte já dá pessoas, vale o número dela. O ato 1 (1549–1763) usa os pontos 1549 → 1759: ~1.000 → ~14 mil → ~13,5 mil → ~21,6 mil → ~37 mil → ~40 mil. O século XVII fica quase reto (1587 → 1681) porque as fontes são assim (Mattoso fala em estagnação e até 'regressão' da população; houve a invasão holandesa de 1624 e epidemias em 1617 e 1680–84) — não é falta de pesquisa. De 1759 a 1807 a série é só da CIDADE (freguesias urbanas); 1872 já é o município com as freguesias rurais, por isso o salto 1807→1872 (51 mil → 129 mil) é em parte territorial (em 1780 o município tinha 65 mil contra 39 mil da cidade). 2010→2022 é queda real (−9,7%), o território não mudou desde 1989.",
-    "o_que_fica_de_fora": "Números de CAPITANIA ou do termo inteiro com o Recôncavo, que não entram na curva da cidade: Gândavo c. 1570 (1.100 vizinhos portugueses na Bahia); Fernão Cardim 1583 ('a cidade com seu termo passante de três mil vizinhos portugueses, oito mil índios cristãos e três ou quatro mil escravos de Guiné' ≈ 26 mil); Anchieta 1585 (2.000 vizinhos, 3.000 escravos, 8.000 índios na Bahia); c. 1590 (1.500 vizinhos, 18.000 escravos, 3.600 índios); Diogo de Campos Moreno 1611 ('passam de três mil os moradores brancos' no Recôncavo); Contreiras Rodrigues meados do séc. XVII (Salvador e Recôncavo: 10 mil portugueses + 30 mil escravos); padre Gonçalo Soares de França 1724 (~80 mil na capitania, 80% em Salvador e Recôncavo). Todos estão em Carrara (Tempo, 2014) ou leiamaisba. Também ficou fora o censo de 1775 por cor (35.253), descartado por Mattoso. Ver RESUMO-POP.md."
+ "_meta": {
+  "municipio": "Salvador (BA), antiga Cidade do Salvador da Bahia de Todos os Santos, capital do Estado do Brasil de 1549 a 1763 — código IBGE 2927408",
+  "gerado_em": "2026-10-22",
+  "nota_territorio": "Salvador NÃO tem o território estável do Rio. (1) Colônia: a cidade recebeu um termo de ~36 km² e um rossio; ao termo pertenciam 7 paróquias rurais (Itapuã, Pirajá, Cotegipe, Paripe, Matoim, Ilha de Maré, Passé) e, até a Independência, também as da ilha de Itaparica, Santo Amaro, Abrantes e Mata de São João. A 'zona urbana' eram 10 freguesias: Sé, Conceição da Praia, Pilar, Carmo/Santo Antônio, Santana, São Pedro, Rua do Passo, Brotas, Vitória e Penha (leiamaisba, citando Mattoso). Por isso os números coloniais são marcados 'cidade' (freguesias urbanas) ou 'termo/município' (com subúrbios) — em 1775 e 1780 os dois existem (40,9 mil × 57 mil; 39.209 × 65.285). (2) Depois de 1872 o município PERDEU território: Candeias (lei estadual 1.028 de 14/08/1958), Simões Filho (ex-Água Comprida, lei 1.538 de 07/11/1961), Lauro de Freitas (ex-Ipitanga, lei 1.753 de 17/07/1962) e Madre de Deus (lei 5.016 de 13/06/1989); ganhou as ilhas de Bom Jesus, Frades, Madre de Deus e Santo Antônio em 1931. Os censos 1872–1950 contam áreas que hoje são de outros municípios. A tabela 'Evolução da população segundo os municípios 1872/2010' do IBGE é a fonte usada de 1920 a 2010 (mesma do Rio); a ptwiki/Sinopse 2010 traz números um pouco diferentes para 1970–2010 (ver RESUMO-POP.md). Fontes: https://biblioteca.ibge.gov.br/visualizacao/dtb/bahia/salvador.pdf ; https://leiamaisba.com.br/2021/05/07/veja-quem-morava-em-salvador-no-seculo-18-nossos-primeiros-censos",
+  "uso_no_video": "Interpolar com curva suave e mostrar no HUD arredondado (antes de 1872 com '~'). Vizinhos/fogos viram pessoas multiplicando por 5 (o mesmo fator de Contreiras Rodrigues usado por Carrara); quando a fonte já dá pessoas, vale o número dela. O ato 1 (1549–1763) usa os pontos 1549 → 1759: ~1.000 → ~14 mil → ~13,5 mil → ~21,6 mil → ~37 mil → ~40 mil. O século XVII fica quase reto (1587 → 1681) porque as fontes são assim (Mattoso fala em estagnação e até 'regressão' da população; houve a invasão holandesa de 1624 e epidemias em 1617 e 1680–84) — não é falta de pesquisa. De 1759 a 1807 a série é só da CIDADE (freguesias urbanas); 1872 já é o município com as freguesias rurais, por isso o salto 1807→1872 (51 mil → 129 mil) é em parte territorial (em 1780 o município tinha 65 mil contra 39 mil da cidade). 2010→2022 é queda real (−9,7%), o território não mudou desde 1989.",
+  "o_que_fica_de_fora": "Números de CAPITANIA ou do termo inteiro com o Recôncavo, que não entram na curva da cidade: Gândavo c. 1570 (1.100 vizinhos portugueses na Bahia); Fernão Cardim 1583 ('a cidade com seu termo passante de três mil vizinhos portugueses, oito mil índios cristãos e três ou quatro mil escravos de Guiné' ≈ 26 mil); Anchieta 1585 (2.000 vizinhos, 3.000 escravos, 8.000 índios na Bahia); c. 1590 (1.500 vizinhos, 18.000 escravos, 3.600 índios); Diogo de Campos Moreno 1611 ('passam de três mil os moradores brancos' no Recôncavo); Contreiras Rodrigues meados do séc. XVII (Salvador e Recôncavo: 10 mil portugueses + 30 mil escravos); padre Gonçalo Soares de França 1724 (~80 mil na capitania, 80% em Salvador e Recôncavo). Todos estão em Carrara (Tempo, 2014) ou leiamaisba. Também ficou fora o censo de 1775 por cor (35.253), descartado por Mattoso. Ver RESUMO-POP.md."
+ },
+ "serie": [
+  {
+   "ano": 1549,
+   "pop": 1000,
+   "tipo": "estimativa",
+   "nota_territorio": "Cidade recém-fundada: 'com o governador vieram nas embarcações mais de mil pessoas' (320 nomeadas com salário, ~600 militares, degredados e fidalgos). A antiga Vila do Pereira (Vila Velha, na Barra, de 1536) tinha cerca de 100 habitantes.",
+   "fonte_url": "https://pt.wikipedia.org/wiki/Salvador_(Bahia)",
+   "fonte_nome": "Wikipédia, 'Salvador (Bahia)', seção História (ref. 49); também 'História de Salvador'. Vila Velha ~100 hab.: ObservaSSA/UFBA, bairro Barra (Vasconcelos, 2016)",
+   "confianca": "media"
   },
-  "serie": [
-    {
-      "ano": 1549,
-      "pop": 1000,
-      "tipo": "estimativa",
-      "nota_territorio": "Cidade recém-fundada: 'com o governador vieram nas embarcações mais de mil pessoas' (320 nomeadas com salário, ~600 militares, degredados e fidalgos). A antiga Vila do Pereira (Vila Velha, na Barra, de 1536) tinha cerca de 100 habitantes.",
-      "fonte_url": "https://pt.wikipedia.org/wiki/Salvador_(Bahia)",
-      "fonte_nome": "Wikipédia, 'Salvador (Bahia)', seção História (ref. 49); também 'História de Salvador'. Vila Velha ~100 hab.: ObservaSSA/UFBA, bairro Barra (Vasconcelos, 2016)",
-      "confianca": "media"
-    },
-    {
-      "ano": 1587,
-      "pop": 14000,
-      "tipo": "estimativa",
-      "nota_territorio": "CIDADE. Gabriel Soares de Sousa (Tratado descritivo, 1587): 'cerca de 800 vizinhos' na cidade (800 × 5 = 4.000 brancos) e 'mais de dois mil vizinhos' por fora, nos recôncavos. Mattoso lê o mesmo autor como 14.000 habitantes na cidade em 1585, 'dos quais 4.000 teriam sido brancos' — é a mesma conta, contada uma vez só.",
-      "fonte_url": "https://revistas.usp.br/revhistoria/article/download/62048/64877",
-      "fonte_nome": "Katia M. de Queirós Mattoso, 'Bahia opulenta: uma capital portuguesa no Novo Mundo (1549–1763)', Revista de História (USP) n. 114, 1983, p. 6; confirmação dos 800 vizinhos em A. A. Carrara, 'A população do Brasil, 1570-1700', Tempo v. 20, 2014 (https://www.scielo.br/j/tem/a/ffLjkWqpG7Dz6QQpzrpwvmz/?lang=pt)",
-      "confianca": "baixa"
-    },
-    {
-      "ano": 1681,
-      "pop": 13500,
-      "tipo": "estimativa",
-      "nota_territorio": "CIDADE. Desembargador Sebastião Cardoso de Sampaio, início da década de 1680: 'a cidade da Bahia passa de 3.000 vizinhos, e no recôncavo e sertão com inumerável gente'; Carrara converte em 'entre 12 e 15 mil pessoas' — usado o meio. Provavelmente conta só os vizinhos (famílias livres), por isso não passa os 14 mil de 1587.",
-      "fonte_url": "https://www.scielo.br/j/tem/a/ffLjkWqpG7Dz6QQpzrpwvmz/?lang=pt",
-      "fonte_nome": "Angelo Alves Carrara, 'A população do Brasil, 1570-1700: uma revisão historiográfica', Tempo (UFF) v. 20, 2014",
-      "confianca": "baixa"
-    },
-    {
-      "ano": 1706,
-      "pop": 21601,
-      "tipo": "estimativa",
-      "nota_territorio": "CIDADE. Primeiro recenseamento feito pela Igreja (1706); Katia Mattoso considera 21.601 habitantes o dado 'mais aceitável'.",
-      "fonte_url": "https://leiamaisba.com.br/2021/05/07/veja-quem-morava-em-salvador-no-seculo-18-nossos-primeiros-censos",
-      "fonte_nome": "Leia Mais BA, 'Veja quem morava em Salvador no século 18 (nossos primeiros censos)', 2021, citando Katia Mattoso",
-      "confianca": "media"
-    },
-    {
-      "ano": 1757,
-      "pop": 37000,
-      "tipo": "estimativa",
-      "nota_territorio": "CIDADE: 'por volta de 1757 Salvador teria tido 37.000 habitantes'.",
-      "fonte_url": "https://revistas.usp.br/revhistoria/article/download/62048/64877",
-      "fonte_nome": "Mattoso, 'Bahia opulenta', Revista de História (USP) n. 114, 1983, p. 6",
-      "confianca": "media"
-    },
-    {
-      "ano": 1759,
-      "pop": 40200,
-      "tipo": "estimativa",
-      "nota_territorio": "Levantamento de 1759 (época da Notícia Geral de José Antônio Caldas): 40,2 mil habitantes SEM as crianças menores de 7 anos ('possivelmente a população do município, incluindo os subúrbios'). Leia Mais BA cita, para 'a segunda metade do século XVIII', um recenseamento de janeiro com 40.922 pessoas, também sem os menores de 7 anos — provavelmente a mesma contagem.",
-      "fonte_url": "http://www.cidade-salvador.com/seculo-18.htm",
-      "fonte_nome": "Cidade-Salvador.com, 'Salvador no Século 18' (quadro 'População de Salvador em 1779'), apoiado em Mattoso, Bahia Século XIX (1992); 40.922 em leiamaisba.com.br",
-      "confianca": "baixa"
-    },
-    {
-      "ano": 1775,
-      "pop": 40900,
-      "tipo": "estimativa",
-      "nota_territorio": "CIDADE: 40,9 mil na Cidade e 16,1 mil nos subúrbios (município ≈ 57 mil). Outro censo de 1775, por cor e condição, dá 35.253 pessoas, mas foi descartado por Mattoso.",
-      "fonte_url": "http://www.cidade-salvador.com/seculo-18.htm",
-      "fonte_nome": "Cidade-Salvador.com, 'Salvador no Século 18'; 35.253 em leiamaisba.com.br (citando Mattoso)",
-      "confianca": "baixa"
-    },
-    {
-      "ano": 1780,
-      "pop": 39209,
-      "tipo": "estimativa",
-      "nota_territorio": "CIDADE: 39.209 na Cidade e 26.076 nos subúrbios = 65.285 no município. 'Mappa da enumeração da gente e povo desta Capitania', de 5/12/1780 (feito em 1779), publicado por Brás do Amaral nas Memórias de Accioli (ed. 1931, v. III, p. 83). Leia Mais BA dá os mesmos 39.209 para 1779, depois do êxodo para o sertão e do recrutamento para o Sul.",
-      "fonte_url": "http://www.cidade-salvador.com/seculo-18.htm",
-      "fonte_nome": "Cidade-Salvador.com, 'Salvador no Século 18' (citando Brás do Amaral/Accioli); leiamaisba.com.br",
-      "confianca": "media"
-    },
-    {
-      "ano": 1805,
-      "pop": 45600,
-      "tipo": "estimativa",
-      "nota_territorio": "CIDADE, sem os subúrbios: censo eclesiástico de 1805.",
-      "fonte_url": "http://www.cidade-salvador.com/seculo-18.htm",
-      "fonte_nome": "Cidade-Salvador.com, 'Salvador no Século 18'; mesmo número (45.600) em leiamaisba.com.br",
-      "confianca": "media"
-    },
-    {
-      "ano": 1807,
-      "pop": 51100,
-      "tipo": "estimativa",
-      "nota_territorio": "CIDADE, sem os subúrbios: 51,1 mil. Mattoso: 'em 1807 mais de 50.000'.",
-      "fonte_url": "http://www.cidade-salvador.com/seculo-18.htm",
-      "fonte_nome": "Cidade-Salvador.com, 'Salvador no Século 18'; Mattoso, Revista de História (USP) n. 114, 1983, p. 6",
-      "confianca": "media"
-    },
-    {
-      "ano": 1872,
-      "pop": 129109,
-      "tipo": "censo",
-      "nota_territorio": "Município (cidade + freguesias suburbanas e rurais, inclusive áreas que hoje são Candeias, Simões Filho, Lauro de Freitas e Madre de Deus): 112.641 livres + 16.468 escravizados.",
-      "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
-      "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (Recenseamento de 1872)",
-      "confianca": "alta"
-    },
-    {
-      "ano": 1890,
-      "pop": 174412,
-      "tipo": "censo",
-      "nota_territorio": "Município de S. Salvador (capital), total das freguesias.",
-      "fonte_url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv25490.pdf",
-      "fonte_nome": "Directoria Geral de Estatística, Synopse do Recenseamento de 31/12/1890 (1898), quadro da Bahia; mesmo número na ptwiki (Salvador, Demografia) e na enwiki (Timeline of Salvador)",
-      "confianca": "media"
-    },
-    {
-      "ano": 1900,
-      "pop": 205813,
-      "tipo": "censo",
-      "nota_territorio": "Município. A tabela 'Evolução da população 1872/2010' do IBGE traz 97.642 para Salvador em 1900, o que daria uma queda impossível entre 1890 (174.412) e 1920 (283.422); usado 205.813 (Sinopse do Censo 2010, tab. 1.6, capitais 1872/2010).",
-      "fonte_url": "https://pt.wikipedia.org/wiki/Salvador_(Bahia)",
-      "fonte_nome": "Wikipédia, 'Salvador (Bahia)', tabela Crescimento populacional (IBGE 1872-2022); enwiki 'Timeline of Salvador, Bahia' cita IBGE, Sinopse do Censo 2010, tabela 1.6",
-      "confianca": "media"
-    },
-    {
-      "ano": 1920,
-      "pop": 283422,
-      "tipo": "censo",
-      "nota_territorio": "Município, com território que incluía as áreas que depois viraram Candeias, Simões Filho e Lauro de Freitas.",
-      "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
-      "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1920)",
-      "confianca": "alta"
-    },
-    {
-      "ano": 1940,
-      "pop": 290443,
-      "tipo": "censo",
-      "nota_territorio": "Município; todo classificado como urbano na tabela (290.443 urbana).",
-      "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
-      "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1940)",
-      "confianca": "alta"
-    },
-    {
-      "ano": 1950,
-      "pop": 417235,
-      "tipo": "censo",
-      "nota_territorio": "Município: 389.422 urbana + 27.813 rural (ainda com Candeias, Água Comprida/Simões Filho e Ipitanga/Lauro de Freitas; Madre de Deus e Bom Jesus vieram de S. Francisco do Conde em 1947).",
-      "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
-      "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1950)",
-      "confianca": "alta"
-    },
-    {
-      "ano": 1960,
-      "pop": 655735,
-      "tipo": "censo",
-      "nota_territorio": "Município sem Candeias (1958); ainda com Água Comprida e Ipitanga. 638.592 urbana + 17.143 rural.",
-      "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
-      "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1960)",
-      "confianca": "alta"
-    },
-    {
-      "ano": 1970,
-      "pop": 1007195,
-      "tipo": "censo",
-      "nota_territorio": "Município sem Simões Filho (1961) e Lauro de Freitas (1962), ainda com Madre de Deus. Passa de 1 milhão. A ptwiki dá 1.027.142.",
-      "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
-      "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1970)",
-      "confianca": "alta"
-    },
-    {
-      "ano": 1980,
-      "pop": 1502013,
-      "tipo": "censo",
-      "nota_territorio": "Município (ainda com Madre de Deus). A ptwiki dá 1.531.242.",
-      "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
-      "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1980)",
-      "confianca": "alta"
-    },
-    {
-      "ano": 1991,
-      "pop": 2075273,
-      "tipo": "censo",
-      "nota_territorio": "Município no território atual (Madre de Deus saiu em 1989). A ptwiki dá 2.072.058.",
-      "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
-      "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1991)",
-      "confianca": "alta"
-    },
-    {
-      "ano": 2000,
-      "pop": 2443107,
-      "tipo": "censo",
-      "nota_territorio": "Município. A ptwiki dá 2.440.828.",
-      "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
-      "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (2000)",
-      "confianca": "alta"
-    },
-    {
-      "ano": 2010,
-      "pop": 2676606,
-      "tipo": "censo",
-      "nota_territorio": "Município (2.675.875 urbana + 731 rural). Pico da série. A ptwiki/enwiki dão 2.675.656.",
-      "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
-      "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (2010)",
-      "confianca": "alta"
-    },
-    {
-      "ano": 2022,
-      "pop": 2417678,
-      "tipo": "censo",
-      "nota_territorio": "Município. Queda real de 9,7% sobre 2010 (território igual desde 1989).",
-      "fonte_url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Populacao_e_domicilios_Primeiros_resultados/Resultados_da_2a_apuracao_20231027/POP2022_Municipios_Primeiros_Resultados_20231222.pdf",
-      "fonte_nome": "IBGE, Censo 2022, População e domicílios — Primeiros resultados (2ª apuração), tabela por município (BA 27408 Salvador)",
-      "confianca": "alta"
-    }
-  ]
+  {
+   "ano": 1587,
+   "pop": 14000,
+   "tipo": "estimativa",
+   "nota_territorio": "CIDADE. Gabriel Soares de Sousa (Tratado descritivo, 1587): 'cerca de 800 vizinhos' na cidade (800 × 5 = 4.000 brancos) e 'mais de dois mil vizinhos' por fora, nos recôncavos. Mattoso lê o mesmo autor como 14.000 habitantes na cidade em 1585, 'dos quais 4.000 teriam sido brancos' — é a mesma conta, contada uma vez só.",
+   "fonte_url": "https://revistas.usp.br/revhistoria/article/download/62048/64877",
+   "fonte_nome": "Katia M. de Queirós Mattoso, 'Bahia opulenta: uma capital portuguesa no Novo Mundo (1549–1763)', Revista de História (USP) n. 114, 1983, p. 6; confirmação dos 800 vizinhos em A. A. Carrara, 'A população do Brasil, 1570-1700', Tempo v. 20, 2014 (https://www.scielo.br/j/tem/a/ffLjkWqpG7Dz6QQpzrpwvmz/?lang=pt)",
+   "confianca": "baixa"
+  },
+  {
+   "ano": 1681,
+   "pop": 13500,
+   "tipo": "estimativa",
+   "nota_territorio": "CIDADE. Desembargador Sebastião Cardoso de Sampaio, início da década de 1680: 'a cidade da Bahia passa de 3.000 vizinhos, e no recôncavo e sertão com inumerável gente'; Carrara converte em 'entre 12 e 15 mil pessoas' — usado o meio. Provavelmente conta só os vizinhos (famílias livres), por isso não passa os 14 mil de 1587.",
+   "fonte_url": "https://www.scielo.br/j/tem/a/ffLjkWqpG7Dz6QQpzrpwvmz/?lang=pt",
+   "fonte_nome": "Angelo Alves Carrara, 'A população do Brasil, 1570-1700: uma revisão historiográfica', Tempo (UFF) v. 20, 2014",
+   "confianca": "baixa",
+   "usar": false,
+   "por_que_nao_usar": "faixa '12 a 15 mil' (meio 13.500) é da mesma ordem dos 14.000 de 1587; fora da curva do contador para ele não cair sem motivo na tela (decisão de 23/10/2026)"
+  },
+  {
+   "ano": 1706,
+   "pop": 21601,
+   "tipo": "estimativa",
+   "nota_territorio": "CIDADE. Primeiro recenseamento feito pela Igreja (1706); Katia Mattoso considera 21.601 habitantes o dado 'mais aceitável'.",
+   "fonte_url": "https://leiamaisba.com.br/2021/05/07/veja-quem-morava-em-salvador-no-seculo-18-nossos-primeiros-censos",
+   "fonte_nome": "Leia Mais BA, 'Veja quem morava em Salvador no século 18 (nossos primeiros censos)', 2021, citando Katia Mattoso",
+   "confianca": "media"
+  },
+  {
+   "ano": 1757,
+   "pop": 37000,
+   "tipo": "estimativa",
+   "nota_territorio": "CIDADE: 'por volta de 1757 Salvador teria tido 37.000 habitantes'.",
+   "fonte_url": "https://revistas.usp.br/revhistoria/article/download/62048/64877",
+   "fonte_nome": "Mattoso, 'Bahia opulenta', Revista de História (USP) n. 114, 1983, p. 6",
+   "confianca": "media"
+  },
+  {
+   "ano": 1759,
+   "pop": 40200,
+   "tipo": "estimativa",
+   "nota_territorio": "Levantamento de 1759 (época da Notícia Geral de José Antônio Caldas): 40,2 mil habitantes SEM as crianças menores de 7 anos ('possivelmente a população do município, incluindo os subúrbios'). Leia Mais BA cita, para 'a segunda metade do século XVIII', um recenseamento de janeiro com 40.922 pessoas, também sem os menores de 7 anos — provavelmente a mesma contagem.",
+   "fonte_url": "http://www.cidade-salvador.com/seculo-18.htm",
+   "fonte_nome": "Cidade-Salvador.com, 'Salvador no Século 18' (quadro 'População de Salvador em 1779'), apoiado em Mattoso, Bahia Século XIX (1992); 40.922 em leiamaisba.com.br",
+   "confianca": "baixa"
+  },
+  {
+   "ano": 1775,
+   "pop": 40900,
+   "tipo": "estimativa",
+   "nota_territorio": "CIDADE: 40,9 mil na Cidade e 16,1 mil nos subúrbios (município ≈ 57 mil). Outro censo de 1775, por cor e condição, dá 35.253 pessoas, mas foi descartado por Mattoso.",
+   "fonte_url": "http://www.cidade-salvador.com/seculo-18.htm",
+   "fonte_nome": "Cidade-Salvador.com, 'Salvador no Século 18'; 35.253 em leiamaisba.com.br (citando Mattoso)",
+   "confianca": "baixa"
+  },
+  {
+   "ano": 1780,
+   "pop": 39209,
+   "tipo": "estimativa",
+   "nota_territorio": "CIDADE: 39.209 na Cidade e 26.076 nos subúrbios = 65.285 no município. 'Mappa da enumeração da gente e povo desta Capitania', de 5/12/1780 (feito em 1779), publicado por Brás do Amaral nas Memórias de Accioli (ed. 1931, v. III, p. 83). Leia Mais BA dá os mesmos 39.209 para 1779, depois do êxodo para o sertão e do recrutamento para o Sul.",
+   "fonte_url": "http://www.cidade-salvador.com/seculo-18.htm",
+   "fonte_nome": "Cidade-Salvador.com, 'Salvador no Século 18' (citando Brás do Amaral/Accioli); leiamaisba.com.br",
+   "confianca": "media"
+  },
+  {
+   "ano": 1805,
+   "pop": 45600,
+   "tipo": "estimativa",
+   "nota_territorio": "CIDADE, sem os subúrbios: censo eclesiástico de 1805.",
+   "fonte_url": "http://www.cidade-salvador.com/seculo-18.htm",
+   "fonte_nome": "Cidade-Salvador.com, 'Salvador no Século 18'; mesmo número (45.600) em leiamaisba.com.br",
+   "confianca": "media"
+  },
+  {
+   "ano": 1807,
+   "pop": 51100,
+   "tipo": "estimativa",
+   "nota_territorio": "CIDADE, sem os subúrbios: 51,1 mil. Mattoso: 'em 1807 mais de 50.000'.",
+   "fonte_url": "http://www.cidade-salvador.com/seculo-18.htm",
+   "fonte_nome": "Cidade-Salvador.com, 'Salvador no Século 18'; Mattoso, Revista de História (USP) n. 114, 1983, p. 6",
+   "confianca": "media"
+  },
+  {
+   "ano": 1872,
+   "pop": 129109,
+   "tipo": "censo",
+   "nota_territorio": "Município (cidade + freguesias suburbanas e rurais, inclusive áreas que hoje são Candeias, Simões Filho, Lauro de Freitas e Madre de Deus): 112.641 livres + 16.468 escravizados.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (Recenseamento de 1872)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 1890,
+   "pop": 174412,
+   "tipo": "censo",
+   "nota_territorio": "Município de S. Salvador (capital), total das freguesias.",
+   "fonte_url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv25490.pdf",
+   "fonte_nome": "Directoria Geral de Estatística, Synopse do Recenseamento de 31/12/1890 (1898), quadro da Bahia; mesmo número na ptwiki (Salvador, Demografia) e na enwiki (Timeline of Salvador)",
+   "confianca": "media"
+  },
+  {
+   "ano": 1900,
+   "pop": 205813,
+   "tipo": "censo",
+   "nota_territorio": "Município. A tabela 'Evolução da população 1872/2010' do IBGE traz 97.642 para Salvador em 1900, o que daria uma queda impossível entre 1890 (174.412) e 1920 (283.422); usado 205.813 (Sinopse do Censo 2010, tab. 1.6, capitais 1872/2010).",
+   "fonte_url": "https://pt.wikipedia.org/wiki/Salvador_(Bahia)",
+   "fonte_nome": "Wikipédia, 'Salvador (Bahia)', tabela Crescimento populacional (IBGE 1872-2022); enwiki 'Timeline of Salvador, Bahia' cita IBGE, Sinopse do Censo 2010, tabela 1.6",
+   "confianca": "media"
+  },
+  {
+   "ano": 1920,
+   "pop": 283422,
+   "tipo": "censo",
+   "nota_territorio": "Município, com território que incluía as áreas que depois viraram Candeias, Simões Filho e Lauro de Freitas.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1920)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 1940,
+   "pop": 290443,
+   "tipo": "censo",
+   "nota_territorio": "Município; todo classificado como urbano na tabela (290.443 urbana).",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1940)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 1950,
+   "pop": 417235,
+   "tipo": "censo",
+   "nota_territorio": "Município: 389.422 urbana + 27.813 rural (ainda com Candeias, Água Comprida/Simões Filho e Ipitanga/Lauro de Freitas; Madre de Deus e Bom Jesus vieram de S. Francisco do Conde em 1947).",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1950)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 1960,
+   "pop": 655735,
+   "tipo": "censo",
+   "nota_territorio": "Município sem Candeias (1958); ainda com Água Comprida e Ipitanga. 638.592 urbana + 17.143 rural.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1960)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 1970,
+   "pop": 1007195,
+   "tipo": "censo",
+   "nota_territorio": "Município sem Simões Filho (1961) e Lauro de Freitas (1962), ainda com Madre de Deus. Passa de 1 milhão. A ptwiki dá 1.027.142.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1970)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 1980,
+   "pop": 1502013,
+   "tipo": "censo",
+   "nota_territorio": "Município (ainda com Madre de Deus). A ptwiki dá 1.531.242.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1980)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 1991,
+   "pop": 2075273,
+   "tipo": "censo",
+   "nota_territorio": "Município no território atual (Madre de Deus saiu em 1989). A ptwiki dá 2.072.058.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (1991)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 2000,
+   "pop": 2443107,
+   "tipo": "censo",
+   "nota_territorio": "Município. A ptwiki dá 2.440.828.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (2000)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 2010,
+   "pop": 2676606,
+   "tipo": "censo",
+   "nota_territorio": "Município (2.675.875 urbana + 731 rural). Pico da série. A ptwiki/enwiki dão 2.675.656.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população, segundo os municípios 1872/2010 (2010)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 2022,
+   "pop": 2417678,
+   "tipo": "censo",
+   "nota_territorio": "Município. Queda real de 9,7% sobre 2010 (território igual desde 1989).",
+   "fonte_url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Populacao_e_domicilios_Primeiros_resultados/Resultados_da_2a_apuracao_20231027/POP2022_Municipios_Primeiros_Resultados_20231222.pdf",
+   "fonte_nome": "IBGE, Censo 2022, População e domicílios — Primeiros resultados (2ª apuração), tabela por município (BA 27408 Salvador)",
+   "confianca": "alta"
+  }
+ ]
 }

@@ -4,6 +4,7 @@
  "exb": 1.5,
  "marcos_ez": 1.25,
  "predios_neutros": true,
+ "voo_alto": true,
  "cartaoDireita": 660,
  "cartaoEsquerda": 500,
  "hud_de_bloco": "jk-primeira-visita-1956",
@@ -50,6 +51,7 @@
    1926,
    1947,
    1955,
+   1956,
    1957,
    1958,
    1959,
@@ -59,7 +61,6 @@
    1964,
    1968,
    1970,
-   1971,
    1984,
    1988,
    1989,
@@ -4627,7 +4628,7 @@
     {
      "lon": -47.86,
      "lat": -15.75,
-     "zoom": 10.75,
+     "zoom": 12.4,
      "pitch": 0,
      "bearing": 0,
      "z": 1600.0
@@ -4635,7 +4636,7 @@
     {
      "lon": -47.86,
      "lat": -15.75,
-     "zoom": 10.75,
+     "zoom": 12.4,
      "pitch": 0,
      "bearing": 0,
      "z": 1600.0
@@ -4680,7 +4681,7 @@
       {
        "lon": -47.86,
        "lat": -15.75,
-       "ls": 11.196
+       "ls": 12.339
       }
      ]
     ],
@@ -4725,18 +4726,18 @@
     {
      "lon": -47.86,
      "lat": -15.75,
-     "zoom": 10.75,
+     "zoom": 12.4,
      "pitch": 0,
      "bearing": 0,
      "z": 1600.0
     },
     {
      "lon": -47.87,
-     "lat": -15.79,
-     "zoom": 11.2,
-     "pitch": 35,
+     "lat": -15.77,
+     "zoom": 12.4,
+     "pitch": 25,
      "bearing": -10,
-     "z": 1686.1
+     "z": 1674.1
     }
    ],
    "dur": 9.5,
@@ -4773,11 +4774,11 @@
    "cam": [
     {
      "lon": -47.87,
-     "lat": -15.79,
-     "zoom": 11.2,
-     "pitch": 35,
+     "lat": -15.77,
+     "zoom": 12.4,
+     "pitch": 25,
      "bearing": -10,
-     "z": 1686.1
+     "z": 1674.1
     },
     {
      "lon": -47.9882,
@@ -5124,7 +5125,7 @@
    "anos": [
     1958.95,
     1959.37,
-    1959.45
+    1959.375
    ],
    "cam": [
     {
@@ -5166,7 +5167,7 @@
   {
    "id": "congresso-obra-1959",
    "anos": [
-    1959.45,
+    1959.372,
     1959.5,
     1959.65
    ],
@@ -5402,7 +5403,7 @@
    "anos": [
     1960.6,
     1960.67,
-    1960.95
+    1960.6750000000002
    ],
    "cam": [
     {
@@ -5415,11 +5416,11 @@
     },
     {
      "lon": -47.87,
-     "lat": -15.79,
-     "zoom": 11.2,
-     "pitch": 35,
+     "lat": -15.77,
+     "zoom": 12.4,
+     "pitch": 25,
      "bearing": -10,
-     "z": 1686.1
+     "z": 1674.1
     }
    ],
    "dur": 8.5,
@@ -5439,18 +5440,18 @@
   {
    "id": "unb-1962",
    "anos": [
-    1960.95,
+    1960.672,
     1962.3,
     1962.5
    ],
    "cam": [
     {
      "lon": -47.87,
-     "lat": -15.79,
-     "zoom": 11.2,
-     "pitch": 35,
+     "lat": -15.77,
+     "zoom": 12.4,
+     "pitch": 25,
      "bearing": -10,
-     "z": 1686.1
+     "z": 1674.1
     },
     {
      "lon": -47.8664,
@@ -5597,7 +5598,7 @@
    "dur": 10.0,
    "cartao": {
     "titulo": "CATEDRAL <b>E ITAMARATY</b>",
-    "numero": "84 × 84 M",
+    "numero": "1970",
     "legenda": "Dez anos depois, a Catedral ganha os vitrais e é inaugurada; o Itamaraty abre seus arcos",
     "detalhe": "A Catedral tinha sido consagrada em 1968 ainda sem teto. O Itamaraty, quadrado de 84 m de lado cercado de água, levou de 1963 a 1970.",
     "fonte": "Wikipédia; Vitruvius",
@@ -5608,8 +5609,7 @@
    },
    "pulo": 1.0,
    "destaca": [
-    "marco:vitral",
-    "marco:itamaraty"
+    "marco:vitral"
    ],
    "imagem": {
     "src": "assets/epoca/e13.jpg",
@@ -5618,11 +5618,11 @@
    }
   },
   {
-   "id": "ceilandia-1971",
+   "id": "diretas-1984",
    "anos": [
     1970.5,
-    1971.24,
-    1971.5
+    1984.32,
+    1984.5
    ],
    "cam": [
     {
@@ -5632,54 +5632,6 @@
      "pitch": 56,
      "bearing": 160,
      "z": 1720.6
-    },
-    {
-     "lon": -48.085,
-     "lat": -15.822,
-     "zoom": 13.2,
-     "pitch": 50,
-     "bearing": -35,
-     "z": 1953.8
-    }
-   ],
-   "dur": 9.0,
-   "cartao": {
-    "titulo": "CEI: NASCE A <b>CEILÂNDIA</b>",
-    "numero": "1971",
-    "legenda": "A Campanha de Erradicação de Invasões leva para longe do centro as famílias das vilas",
-    "detalhe": "As 20 primeiras famílias vieram da invasão do IAPI, nas terras da antiga Fazenda Guariroba. O nome junta a sigla CEI ao '-lândia'.",
-    "fonte": "Wikipédia",
-    "local": [
-     -48.1083,
-     -15.819167
-    ]
-   },
-   "pulo": 0.5,
-   "rotulos": [
-    {
-     "lon": -48.1083,
-     "lat": -15.819167,
-     "texto": "CEILÂNDIA",
-     "z": 2111.9,
-     "tam": 30
-    }
-   ]
-  },
-  {
-   "id": "diretas-1984",
-   "anos": [
-    1971.5,
-    1984.32,
-    1984.5
-   ],
-   "cam": [
-    {
-     "lon": -48.085,
-     "lat": -15.822,
-     "zoom": 13.2,
-     "pitch": 50,
-     "bearing": -35,
-     "z": 1953.8
     },
     {
      "lon": -47.8645,
@@ -5855,11 +5807,11 @@
     },
     {
      "lon": -47.86,
-     "lat": -15.77,
-     "zoom": 11.4,
-     "pitch": 42,
+     "lat": -15.78,
+     "zoom": 12.3,
+     "pitch": 36,
      "bearing": -10,
-     "z": 1643.7
+     "z": 1609.8
     }
    ],
    "dur": 10.0,
@@ -5885,17 +5837,17 @@
    "cam": [
     {
      "lon": -47.86,
-     "lat": -15.77,
-     "zoom": 11.4,
-     "pitch": 42,
+     "lat": -15.78,
+     "zoom": 12.3,
+     "pitch": 36,
      "bearing": -10,
-     "z": 1643.7
+     "z": 1609.8
     },
     {
      "lon": -47.86,
      "lat": -15.77,
-     "zoom": 11.2,
-     "pitch": 30,
+     "zoom": 12.2,
+     "pitch": 28,
      "bearing": -4,
      "z": 1643.7
     }

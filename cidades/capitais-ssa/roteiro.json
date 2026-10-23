@@ -4,6 +4,7 @@
  "exb": 1.5,
  "marcos_ez": 1.25,
  "predios_neutros": true,
+ "voo_alto": true,
  "cartaoDireita": 660,
  "cartaoEsquerda": 500,
  "hud_de_bloco": "tupinambas-1500",
@@ -50,6 +51,7 @@
    1926,
    1947,
    1955,
+   1956,
    1957,
    1958,
    1959,
@@ -59,7 +61,6 @@
    1964,
    1968,
    1970,
-   1971,
    1984,
    1988,
    1989,
@@ -174,7 +175,7 @@
    "lon": -38.5118,
    "lat": -12.9732,
    "rumo": 270,
-   "ano": 1551.3,
+   "ano": 1550.4,
    "z": 42.5,
    "larg": 18,
    "comp": 50,
@@ -184,7 +185,7 @@
    "cor": "azul",
    "rotulo": "Sé",
    "sub": "1552 · demolida em 1933",
-   "pronto": 1553
+   "pronto": 1551.2
   },
   {
    "id": "colegio",
@@ -984,10 +985,10 @@
      "z": 18.7
     },
     {
-     "lon": -38.5128,
-     "lat": -12.9748,
-     "zoom": 17.7,
-     "pitch": 60,
+     "lon": -38.5129,
+     "lat": -12.9749,
+     "zoom": 18.5,
+     "pitch": 58,
      "bearing": 135,
      "z": 80.3
     }
@@ -1019,20 +1020,20 @@
    ],
    "cam": [
     {
-     "lon": -38.5128,
-     "lat": -12.9748,
-     "zoom": 17.7,
-     "pitch": 60,
+     "lon": -38.5129,
+     "lat": -12.9749,
+     "zoom": 18.5,
+     "pitch": 58,
      "bearing": 135,
      "z": 80.3
     },
     {
-     "lon": -38.5103,
-     "lat": -12.9729,
-     "zoom": 17.7,
-     "pitch": 58,
+     "lon": -38.5104,
+     "lat": -12.9727,
+     "zoom": 18.5,
+     "pitch": 56,
      "bearing": 315,
-     "z": 100.7
+     "z": 94.1
     }
    ],
    "dur": 8.5,
@@ -1061,20 +1062,20 @@
    ],
    "cam": [
     {
-     "lon": -38.5103,
-     "lat": -12.9729,
-     "zoom": 17.7,
-     "pitch": 58,
+     "lon": -38.5104,
+     "lat": -12.9727,
+     "zoom": 18.5,
+     "pitch": 56,
      "bearing": 315,
-     "z": 100.7
+     "z": 94.1
     },
     {
-     "lon": -38.512,
-     "lat": -12.9733,
-     "zoom": 17.8,
-     "pitch": 58,
+     "lon": -38.5119,
+     "lat": -12.9732,
+     "zoom": 18.6,
+     "pitch": 56,
      "bearing": 90,
-     "z": 53.7
+     "z": 67.9
     }
    ],
    "dur": 8.5,
@@ -1103,12 +1104,12 @@
    ],
    "cam": [
     {
-     "lon": -38.512,
-     "lat": -12.9733,
-     "zoom": 17.8,
-     "pitch": 58,
+     "lon": -38.5119,
+     "lat": -12.9732,
+     "zoom": 18.6,
+     "pitch": 56,
      "bearing": 90,
-     "z": 53.7
+     "z": 67.9
     },
     {
      "lon": -38.56,
@@ -1119,12 +1120,12 @@
      "z": 0.0
     }
    ],
-   "dur": 9.0,
+   "dur": 9.5,
    "cartao": {
     "titulo": "40 ENGENHOS <b>NO RECÔNCAVO</b>",
     "numero": "40 ENGENHOS",
     "legenda": "O açúcar enriquece a cidade: 40 engenhos ao redor da baía, movidos por escravizados",
-    "detalhe": "Gabriel Soares conta 800 vizinhos na cidade e mais de 2 mil no Recôncavo. Os muros de taipa já tinham caído: a cidade crescia para fora deles e 'não há memória aonde eles estiveram'.",
+    "detalhe": "Gabriel Soares de Sousa conta 40 engenhos ao redor da baía em 1587. Os pontos no mapa só ilustram a volta da baía: os engenhos não têm local publicado.",
     "fonte": "digital.bbm.usp.br; Wikipédia",
     "local": [
      -38.633,
@@ -1132,6 +1133,20 @@
     ]
    },
    "pulo": 1.4,
+   "tropas": {
+    "lon": -38.465,
+    "lat": -12.815,
+    "n": 40,
+    "raio_km": 4.5,
+    "a0": 0.0,
+    "a1": 6.28,
+    "r": 230,
+    "cor": [
+     170,
+     105,
+     40
+    ]
+   },
    "imagem": {
     "src": "assets/epoca/e09.jpg",
     "legenda": "Engenhos de açúcar do Recôncavo (gravura de 1645)",
@@ -1164,9 +1179,9 @@
      "z": 0.0
     },
     {
-     "lon": -38.5126,
-     "lat": -12.9745,
-     "zoom": 17.0,
+     "lon": -38.5127,
+     "lat": -12.9747,
+     "zoom": 17.8,
      "pitch": 56,
      "bearing": 100,
      "z": 80.3
@@ -1200,9 +1215,9 @@
    ],
    "cam": [
     {
-     "lon": -38.5126,
-     "lat": -12.9745,
-     "zoom": 17.0,
+     "lon": -38.5127,
+     "lat": -12.9747,
+     "zoom": 17.8,
      "pitch": 56,
      "bearing": 100,
      "z": 80.3
@@ -1286,11 +1301,11 @@
      "z": 0.0
     },
     {
-     "lon": -38.517,
-     "lat": -12.972,
-     "zoom": 15.4,
+     "lon": -38.528,
+     "lat": -12.978,
+     "zoom": 14.0,
      "pitch": 55,
-     "bearing": 80,
+     "bearing": 250,
      "z": 0.0
     }
    ],
@@ -1313,12 +1328,12 @@
    },
    "frota": {
     "de": [
-     -38.62,
-     -13.05
+     -38.66,
+     -12.99
     ],
     "para": [
-     -38.53,
-     -12.965
+     -38.545,
+     -12.968
     ],
     "n": 52,
     "r": 90,
@@ -1347,20 +1362,20 @@
    ],
    "cam": [
     {
-     "lon": -38.517,
-     "lat": -12.972,
-     "zoom": 15.4,
+     "lon": -38.528,
+     "lat": -12.978,
+     "zoom": 14.0,
      "pitch": 55,
-     "bearing": 80,
+     "bearing": 250,
      "z": 0.0
     },
     {
-     "lon": -38.5103,
-     "lat": -12.9729,
-     "zoom": 17.7,
-     "pitch": 58,
+     "lon": -38.5104,
+     "lat": -12.9727,
+     "zoom": 18.5,
+     "pitch": 56,
      "bearing": 315,
-     "z": 100.7
+     "z": 94.1
     }
    ],
    "dur": 8.5,
@@ -1394,12 +1409,12 @@
    ],
    "cam": [
     {
-     "lon": -38.5103,
-     "lat": -12.9729,
-     "zoom": 17.7,
-     "pitch": 58,
+     "lon": -38.5104,
+     "lat": -12.9727,
+     "zoom": 18.5,
+     "pitch": 56,
      "bearing": 315,
-     "z": 100.7
+     "z": 94.1
     },
     {
      "lon": -38.515,
@@ -1498,10 +1513,10 @@
      "z": 8.6
     },
     {
-     "lon": -38.5128,
-     "lat": -12.9748,
-     "zoom": 17.7,
-     "pitch": 60,
+     "lon": -38.5129,
+     "lat": -12.9749,
+     "zoom": 18.5,
+     "pitch": 58,
      "bearing": 135,
      "z": 80.3
     }
@@ -1529,10 +1544,10 @@
    ],
    "cam": [
     {
-     "lon": -38.5128,
-     "lat": -12.9748,
-     "zoom": 17.7,
-     "pitch": 60,
+     "lon": -38.5129,
+     "lat": -12.9749,
+     "zoom": 18.5,
+     "pitch": 58,
      "bearing": 135,
      "z": 80.3
     },
@@ -1585,10 +1600,10 @@
      "z": 8.6
     },
     {
-     "lon": -38.5128,
-     "lat": -12.9748,
-     "zoom": 17.7,
-     "pitch": 60,
+     "lon": -38.5129,
+     "lat": -12.9749,
+     "zoom": 18.5,
+     "pitch": 58,
      "bearing": 135,
      "z": 80.3
     }
@@ -1619,10 +1634,10 @@
    ],
    "cam": [
     {
-     "lon": -38.5128,
-     "lat": -12.9748,
-     "zoom": 17.7,
-     "pitch": 60,
+     "lon": -38.5129,
+     "lat": -12.9749,
+     "zoom": 18.5,
+     "pitch": 58,
      "bearing": 135,
      "z": 80.3
     },
@@ -1675,12 +1690,12 @@
      "z": 8.6
     },
     {
-     "lon": -38.5103,
-     "lat": -12.9729,
-     "zoom": 17.7,
-     "pitch": 58,
+     "lon": -38.5104,
+     "lat": -12.9727,
+     "zoom": 18.5,
+     "pitch": 56,
      "bearing": 315,
-     "z": 100.7
+     "z": 94.1
     }
    ],
    "dur": 8.5,
@@ -1715,12 +1730,12 @@
    ],
    "cam": [
     {
-     "lon": -38.5103,
-     "lat": -12.9729,
-     "zoom": 17.7,
-     "pitch": 58,
+     "lon": -38.5104,
+     "lat": -12.9727,
+     "zoom": 18.5,
+     "pitch": 56,
      "bearing": 315,
-     "z": 100.7
+     "z": 94.1
     },
     {
      "lon": -38.515,

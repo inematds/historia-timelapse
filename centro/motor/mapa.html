@@ -480,13 +480,16 @@ function html(t) {
   for (const m of (C.marcos || [])) if (m.rotulo && dentro(t, m.destaque) && anoEm(t) >= m.ano)
     alvo.push({ p: [m.lon, m.lat, (m.z || 0) * EXZ + (m.alt_rotulo || 22) * EXB], txt: m.rotulo, sub: m.sub, o: 1 });
   for (const c of (C.chamadas || [])) if (t >= c.t0 && t <= c.t1) alvo.push({ p: [c.lon, c.lat, (c.z || 10) * EXZ], txt: c.texto, sub: c.sub, o: Math.min(1, (t - c.t0) / .5, (c.t1 - t) / .5) });
+  const postas = [];   // etiquetas já colocadas: a próxima que cair em cima desce
   if (vp) for (const a of alvo) {
     const [x, y] = vp.project(a.p); if (!(x > -50 && x < 1970 && y > 0 && y < 1080)) continue;
     const esq = x > 1050, ex = esq ? Math.max(60, x - 420) : x + 150;   // perto do painel da direita: etiqueta vai para a esquerda
     if (y < 330) continue;   // objeto atrás do título/HUD: sem etiqueta (a linha cruzaria o título)
     const ey = y < 470 ? Math.min(y + 90, 880) : Math.max(c ? 300 : (esq ? 360 : 280), y - 150);   // objeto alto na tela: etiqueta embaixo
-    svg += `<line x1="${x}" y1="${y}" x2="${ex}" y2="${ey + 24}" stroke="#FACC15" stroke-width="3" opacity="${a.o}"/><circle cx="${x}" cy="${y}" r="7" fill="#FACC15" opacity="${a.o}"/>`;
-    htm += `<div class="et" style="left:${ex}px;top:${ey}px;opacity:${a.o}">${a.txt}${a.sub ? `<small>${a.sub}</small>` : ''}</div>`;
+    let ey2 = ey; for (let k = 0; k < 6 && postas.some(([px, py]) => Math.abs(px - ex) < 380 && Math.abs(py - ey2) < 64); k++) ey2 += 70;
+    postas.push([ex, ey2]);
+    svg += `<line x1="${x}" y1="${y}" x2="${ex}" y2="${ey2 + 24}" stroke="#FACC15" stroke-width="3" opacity="${a.o}"/><circle cx="${x}" cy="${y}" r="7" fill="#FACC15" opacity="${a.o}"/>`;
+    htm += `<div class="et" style="left:${ex}px;top:${ey2}px;opacity:${a.o}">${a.txt}${a.sub ? `<small>${a.sub}</small>` : ''}</div>`;
   }
   lin.innerHTML = svg; ch.innerHTML = htm;
   // IMAGEM DA ÉPOCA (esquerda)

@@ -26,6 +26,8 @@ Timelapse 3D da história de cidades (mapa real + prédios do OSM + cartões com
 Quando o Nei corrigir algo ou eu pegar um erro meu: antes de continuar, acrescentar a lição como uma linha no TOPO da seção Lessons abaixo.
 
 ## Lessons
+- Vídeo com várias vistas de perto (palácios): a câmera indo de uma à outra atravessa os prédios — roteiro com `"voo_alto": true` (centro/scripts/gerar_cena.py sobe no meio da viagem). Contador × censo: usar `ano_exato` no populacao.json e segurar o ano do bloco na data do censo. (23/10/2026)
+- Vista de cima no fim do globo (zoom ~10,7) mostra o quadrado do recorte quando o bbox é pequeno (Brasília): fechar o zoom até o recorte encher a tela. Navios/pontos que o cartão cita têm que entrar NO quadro (frota vindo de trás da câmera não aparece). (23/10/2026)
 - Cidade com muito aterro (Rio): o motor desenha a orla e o relevo de HOJE desde o início — aeroporto/Flamengo/porto aparecem em 1502 e morros arrasados (Castelo) não existem. O revisor reprova (6). Antes de prometer "a cidade sobe o morro"/"o aterro nasce", ver se o mapa mostra; senão, precisa de máscara de orla antiga + morro reconstruído (mudança de motor, em cópia). (22/10/2026)
 - Câmera de perto (zoom ≥ 18) sobre morro: o alvo do viewState fica no nível do mar e o prédio sai do quadro — passar `position: [0, 0, z_chão × exz]` (versão centro). De perto a textura do chão borra: ruas como vetor (PathLayer em metros, uma camada só, cada rua nasce com as casas dela). (22/10/2026)
 - Marco 3D sobre prédio do OSM/Microsoft: esconder os comuns no lote do marco e dentro das praças (`centro/scripts/limpa_marcos.py`), senão a caixa atravessa a igreja ou tapa o coreto. (22/10/2026)

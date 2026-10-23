@@ -21,11 +21,24 @@ REGIMES_BR = [
     {"ano": 1960, "nome": "República", "bandeira": "brasil"}]
 
 
+def voo(a, b):
+    """chave intermediária alta quando as duas vistas são de perto (zoom > 15,5) e distantes (> 500 m)"""
+    import math
+    d = math.hypot((a["lon"] - b["lon"]) * 111320 * math.cos(math.radians(a["lat"])), (a["lat"] - b["lat"]) * 111320)
+    if d < 500 or min(a["zoom"], b["zoom"]) < 15.5:
+        return None
+    z = max(13.2, min(a["zoom"], b["zoom"]) - 1.4 - 0.9 * math.log2(d / 500))
+    m = {k: (a[k] + b[k]) / 2 for k in a}
+    m.update(zoom=round(z, 2), pitch=min(a["pitch"], b["pitch"], 48))
+    return m
+
+
 def main():
     rot = json.load(open(f"{DIR}/roteiro.json"))
     tf = f"{DIR}/narracao/tempos.json"
     tempos = json.load(open(tf)) if os.path.exists(tf) else {}
-    pop = [[int(p["ano"]), int(p["pop"])] for p in json.load(open(f"{PESQ}/populacao.json"))["serie"]]
+    # "ano_exato" (data de referência do censo) e "usar": false (ponto fora da curva do contador) — opcionais, versão centro
+    pop = [[p.get("ano_exato", int(p["ano"])), int(p["pop"])] for p in json.load(open(f"{PESQ}/populacao.json"))["serie"] if p.get("usar", True)]
     pop.append([2026, pop[-1][1]])
 
     C = {"exz": rot.get("exz", 1.6), "exb": rot.get("exb", 1.5), "nascer": 2.5, "ajusteAgua": 0.5, "muroAlt": 22,
@@ -62,7 +75,11 @@ def main():
             # sem narração: chega ao alvo cedo e segura com leve avanço enquanto o cartão é lido
             ch_ = t0 + pre + (dur - pre) * b.get("chega", 0.45)
             fim_ = dict(b["cam"][1]); fim_["zoom"] = fim_["zoom"] + 0.12
-            C["cam"] += [[round(t0, 3), b["cam"][0]], [round(ch_, 3), b["cam"][1]], [round(t1 - 0.001, 3), fim_]]
+            via = voo(b["cam"][0], b["cam"][1]) if rot.get("voo_alto") else None
+            if via:   # viagem longa entre vistas de perto: sobe acima dos telhados no meio do caminho (não atravessa prédios)
+                C["cam"] += [[round(t0, 3), b["cam"][0]], [round(t0 + (ch_ - t0) * 0.5, 3), via], [round(ch_, 3), b["cam"][1]], [round(t1 - 0.001, 3), fim_]]
+            else:
+                C["cam"] += [[round(t0, 3), b["cam"][0]], [round(ch_, 3), b["cam"][1]], [round(t1 - 0.001, 3), fim_]]
             b["cam"][1] = fim_
         else:
             C["cam"] += [[round(t0, 3), b["cam"][0]], [round(t1 - 0.001, 3), b["cam"][1]]]

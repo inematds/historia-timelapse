@@ -22,11 +22,12 @@ RECON = cam(-38.56, -12.86, 11.7, 42, 320)
 VILAV = cam(-38.5325, -13.0005, 16.4, 58, 190)
 BARRA = cam(-38.531, -13.004, 15.2, 56, 200)
 ESCARPA = cam(-38.5140, -12.9745, 16.4, 60, 90)
-PRACA = cam(-38.5128, -12.9748, 17.7, 60, 135)
-PRACA_L = cam(-38.5126, -12.9745, 17.0, 56, 100)
-TERREIRO = cam(-38.5103, -12.9729, 17.7, 58, 315)
-SE = cam(-38.5120, -12.9733, 17.8, 58, 90)
+PRACA = cam(-38.5129, -12.9749, 18.5, 58, 135)
+PRACA_L = cam(-38.5127, -12.9747, 17.8, 56, 100)
+TERREIRO = cam(-38.5104, -12.9727, 18.5, 56, 315)
+SE = cam(-38.5119, -12.9732, 18.6, 56, 90)
 PORTO = cam(-38.5170, -12.9720, 15.4, 55, 80)
+MAR = cam(-38.528, -12.978, 14.0, 55, 250)     # da cidade para a baía: a armada chega de frente
 LONGE = cam(-38.515, -12.975, 12.9, 48, 215)     # da cidade para o sul/sudoeste, onde ficam Minas, o Rio e o Prata
 FIM = cam(-38.515, -12.965, 12.6, 42, 250)
 
@@ -63,13 +64,15 @@ blocos = [
     bloco("primeiros-predios-1549", [1549.4, 1549.5, 1549.58], ESCARPA, PRACA, 9.0, pulo=0.2, destaque=2, destaca=["marco:palacio", "marco:camara"]),
     bloco("jesuitas-1549", [1549.58, 1549.6, 1549.9], PRACA, TERREIRO, 8.5, pulo=0.2, destaque=1, destaca=["marco:colegio"]),
     bloco("bispado-1551", [1549.9, 1551.15, 1551.4], TERREIRO, SE, 8.5, pulo=0.4, destaque=2, destaca=["marco:se"]),
-    bloco("engenhos-1587", [1551.4, 1587, 1587.5], SE, RECON, 9.0, pulo=1.4, destaque=2),
+    bloco("engenhos-1587", [1551.4, 1587, 1587.5], SE, RECON, 9.5, pulo=1.4, destaque=2,
+          detalhe="Gabriel Soares de Sousa conta 40 engenhos ao redor da baía em 1587. Os pontos no mapa só ilustram a volta da baía: os engenhos não têm local publicado.",
+          tropas={"lon": -38.465, "lat": -12.815, "n": 40, "raio_km": 4.5, "a0": 0.0, "a1": 6.28, "r": 230, "cor": [170, 105, 40]}),
     bloco("relacao-1609", [1587.5, 1609.18, 1609.4], RECON, PRACA_L, 8.5, pulo=1.0, destaque=1),
     bloco("holandeses-1624", [1609.4, 1624.35, 1624.4], PRACA_L, PORTO, 10.0, pulo=0.8, destaque=2, tom={"cor": "#a15050", "forca": 0.3},
           frota={"de": [-38.60, -13.03], "para": [-38.522, -12.968], "n": 35, "r": 90, "espalha_km": 3, "cor": NL, "dura": 7, "rotulo": "Frota holandesa", "sub": "1624 · 35 navios"}),
-    bloco("jornada-vassalos-1625", [1624.4, 1625.33, 1625.4], PORTO, PORTO, 10.0, pulo=0.3, destaque=2, tom={"cor": "#a15050", "forca": 0.25},
-          frota={"de": [-38.62, -13.05], "para": [-38.53, -12.965], "n": 52, "r": 90, "espalha_km": 4, "cor": IB, "dura": 7, "rotulo": "Jornada dos Vassalos", "sub": "1625 · 52 navios"}),
-    bloco("catedral-1672", [1625.4, 1672.49, 1672.6], PORTO, TERREIRO, 8.5, pulo=1.2, destaque=2, destaca=["marco:jesus"]),
+    bloco("jornada-vassalos-1625", [1624.4, 1625.33, 1625.4], PORTO, MAR, 10.0, pulo=0.3, destaque=2, tom={"cor": "#a15050", "forca": 0.25},
+          frota={"de": [-38.66, -12.99], "para": [-38.545, -12.968], "n": 52, "r": 90, "espalha_km": 4, "cor": IB, "dura": 7, "rotulo": "Jornada dos Vassalos", "sub": "1625 · 52 navios"}),
+    bloco("catedral-1672", [1625.4, 1672.49, 1672.6], MAR, TERREIRO, 8.5, pulo=1.2, destaque=2, destaca=["marco:jesus"]),
     bloco("porque-sacramento-1680", [1672.6, 1680.06, 1680.3], TERREIRO, LONGE, 9.0, pulo=0.6, destaque=2, rotulos=seta("↖ COLÔNIA DO SACRAMENTO · RIO DA PRATA")),
     bloco("porque-ouro-1695", [1680.3, 1695, 1695.4], LONGE, LONGE, 9.0, pulo=0.8, destaque=2, rotulos=seta("↑ MINAS GERAIS · OURO")),
     bloco("porque-moeda-1699", [1695.4, 1699, 1699.4], LONGE, PRACA, 9.0, pulo=0.5, destaque=2),
@@ -118,7 +121,7 @@ MARCOS = [
     M("camara", "palacio", -38.51252, -12.974877, 270, 1549.44, 1549.56, larg=42, comp=16, andares=2, pe=5.0, platibanda=0, telhado_visivel=True, avanco=0,
       escadaria=False, parede="#F2EEE4", cor="#B8AE98", rotulo="Casa de Câmara e Cadeia", sub="1549"),
     M("camara_torre", "sobrado", -38.51252 - 0.00009, -12.974877, 270, 1698, larg=6.5, comp=6.5, andares=4, pe=3.8, cor="#B8AE98", sacadas=False),
-    M("se", "igreja", -38.5118, -12.9732, 270, 1551.3, 1553, larg=18, comp=50, pe=12, torres=2, coroa="piramide", cor="azul", rotulo="Sé", sub="1552 · demolida em 1933"),
+    M("se", "igreja", -38.5118, -12.9732, 270, 1550.4, 1551.2, larg=18, comp=50, pe=12, torres=2, coroa="piramide", cor="azul", rotulo="Sé", sub="1552 · demolida em 1933"),
     M("colegio", "claustro", -38.509771, -12.972282, 135, 1549.62, 1590, lado=56, ala_larg=9, andares=2, cor="azul", rotulo="Colégio dos Jesuítas", sub="1549 → 1590"),
     M("jesus", "igreja", -38.510533, -12.972633, 135, 1657, 1672.49, larg=25, comp=58, pe=17, torres=2, coroa="piramide", cor="ocre",
       rotulo="Igreja dos Jesuítas", sub="1672 · hoje Catedral Basílica"),
@@ -146,7 +149,7 @@ REG = [{"ano": 1500, "nome": "Terra dos tupinambás", "bandeira": "portugal"},
 
 roteiro = {
     "titulo": "As capitais do Brasil · ato 1: Salvador",
-    "exz": EXZ, "exb": 1.5, "marcos_ez": EZ, "predios_neutros": True, "cartaoDireita": 660, "cartaoEsquerda": 500,
+    "exz": EXZ, "exb": 1.5, "marcos_ez": EZ, "predios_neutros": True, "voo_alto": True, "cartaoDireita": 660, "cartaoEsquerda": 500,
     "hud_de_bloco": "tupinambas-1500",
     "linha": linha_completa(),
     "popRotulo": "habitantes em Salvador",
