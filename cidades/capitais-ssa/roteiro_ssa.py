@@ -16,7 +16,7 @@ zc = Chao(AQUI)
 cam = fazedor_cam(zc, EXZ)
 bloco = fazedor_bloco(EV)
 
-C0 = cam(-38.48, -12.885, 11.2, 0, 0)
+C0 = cam(-38.50, -12.91, 12.35, 0, 0)
 BAIA = cam(-38.56, -12.93, 11.9, 48, 290)
 RECON = cam(-38.56, -12.86, 11.7, 42, 320)
 VILAV = cam(-38.5320, -12.9990, 15.3, 52, 190)
@@ -74,7 +74,8 @@ blocos = [
           frota={"de": [-38.66, -12.99], "para": [-38.545, -12.968], "n": 52, "r": 90, "espalha_km": 4, "cor": IB, "dura": 7, "rotulo": "Jornada dos Vassalos", "sub": "1625 · 52 navios"}),
     bloco("catedral-1672", [1625.4, 1672.49, 1672.6], MAR, TERREIRO, 8.5, pulo=1.2, destaque=2, destaca=["marco:jesus"]),
     bloco("porque-sacramento-1680", [1672.6, 1680.06, 1680.3], TERREIRO, LONGE, 9.0, pulo=0.6, destaque=2, rotulos=seta("↖ COLÔNIA DO SACRAMENTO · RIO DA PRATA")),
-    bloco("porque-ouro-1695", [1680.3, 1695, 1695.4], LONGE, LONGE, 9.0, pulo=0.8, destaque=2, rotulos=seta("↑ MINAS GERAIS · OURO")),
+    bloco("porque-ouro-1695", [1680.3, 1695, 1695.4], LONGE, LONGE, 9.0, pulo=0.8, destaque=2,
+          legenda="Bandeirantes acham ouro no interior, em Minas Gerais: começa a maior corrida do ouro da época", rotulos=seta("↑ MINAS GERAIS · OURO")),
     bloco("porque-moeda-1699", [1695.4, 1699, 1699.4], LONGE, PRACA, 9.0, pulo=0.5, destaque=2),
     bloco("porque-caminho-novo-1707", [1699.4, 1707, 1707.4], PRACA, LONGE, 9.0, pulo=0.6, destaque=2, rotulos=seta("↑ RIO DE JANEIRO · PORTO DO OURO")),
     bloco("vice-rei-1720", [1707.4, 1720.89, 1720.95], LONGE, PRACA, 8.5, pulo=0.8, destaque=2, destaca=["marco:palacio"]),
@@ -122,7 +123,7 @@ MARCOS = [
       escadaria=False, parede="#F2EEE4", cor="#B8AE98", rotulo="Casa de Câmara e Cadeia", sub="1549"),
     M("camara_torre", "sobrado", -38.51252 - 0.00009, -12.974877, 270, 1698, larg=6.5, comp=6.5, andares=4, pe=3.8, cor="#B8AE98", sacadas=False),
     M("se", "igreja", -38.5118, -12.9732, 270, 1550.4, 1551.2, larg=18, comp=50, pe=12, torres=2, coroa="piramide", cor="azul", rotulo="Sé", sub="1552 · demolida em 1933"),
-    M("colegio", "claustro", -38.509771, -12.972282, 135, 1549.62, 1590, lado=56, ala_larg=9, andares=2, cor="azul", rotulo="Colégio dos Jesuítas", sub="1549 → 1590"),
+    M("colegio", "claustro", -38.509771, -12.972282, 135, 1549.62, 1590, lado=56, ala_larg=9, andares=2, cor="azul", rotulo="Colégio dos Jesuítas", sub="1549 · fechado em 1759"),
     M("jesus", "igreja", -38.510533, -12.972633, 135, 1657, 1672.49, larg=25, comp=58, pe=17, torres=2, coroa="piramide", cor="ocre",
       rotulo="Igreja dos Jesuítas", sub="1672 · hoje Catedral Basílica"),
     M("misericordia", "igreja", -38.511982, -12.973867, 40, 1550, 1552, larg=9, comp=28, pe=9, torres=1, cor="vinho"),

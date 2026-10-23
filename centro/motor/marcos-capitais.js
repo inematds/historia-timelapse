@@ -169,7 +169,7 @@ ARQ.catedral_bsb = (m, F, cor) => {
   const cint = m.cintura || .14, topo = m.topo || .36, zc = m.z_cintura || .76;
   const rEm = u => u < zc ? lerp(R, R * cint, Math.sin(u / zc * Math.PI / 2) ** 1.25) : lerp(R * cint, R * topo, ((u - zc) / (1 - zc)) ** 1.6);
   const wEm = u => .9 + 2.4 * Math.sin(Math.min(1, u / .8) * Math.PI) ** .8 + (u > .85 ? (1 - u) * 4 : 0);   // largura radial (bumerangue)
-  if (F.laje > 0 && !m.so_vitral) { const k = F.laje;
+  if (F.laje > 0 && (m.so_vitral || m.espelho !== false)) { const k = F.laje;
     revol(M, [[R + 22, .12], [R + 22, 0]], 0, 0, 48, Q.agua); disco(M, 0, 0, R + 22, .12, 48, Q.agua);  // espelho d'água
     disco(M, 0, 0, R + 1.5, .5 * k + .13, 48, Q.conc2); revol(M, [[R + 1.5, .13], [R + 1.5, .5 * k + .13]], 0, 0, 48, Q.conc2); }
   const kc = m.so_vitral ? 1 : F.paredes;

@@ -380,34 +380,34 @@ window.CENA = {
   [
    23.55,
    {
-    "lon": -47.9882,
-    "lat": -15.9468,
-    "zoom": 17.6,
-    "pitch": 58,
+    "lon": -47.9883,
+    "lat": -15.9472,
+    "zoom": 18.7,
+    "pitch": 55,
     "bearing": -20,
-    "z": 1887.2
+    "z": 1887.6
    }
   ],
   [
    28.499,
    {
-    "lon": -47.9882,
-    "lat": -15.9468,
-    "zoom": 17.720000000000002,
-    "pitch": 58,
+    "lon": -47.9883,
+    "lat": -15.9472,
+    "zoom": 18.82,
+    "pitch": 55,
     "bearing": -20,
-    "z": 1887.2
+    "z": 1887.6
    }
   ],
   [
    28.5,
    {
-    "lon": -47.9882,
-    "lat": -15.9468,
-    "zoom": 17.720000000000002,
-    "pitch": 58,
+    "lon": -47.9883,
+    "lat": -15.9472,
+    "zoom": 18.82,
+    "pitch": 55,
     "bearing": -20,
-    "z": 1887.2
+    "z": 1887.6
    }
   ],
   [
@@ -1599,7 +1599,7 @@ window.CENA = {
    "lon": -47.988333,
    "lat": -15.9475,
    "texto": "FAZENDA DO GAMA",
-   "z": 1949.7,
+   "z": 1904.7,
    "tam": 30,
    "t0": 9.7,
    "t1": 19.2
@@ -1608,7 +1608,7 @@ window.CENA = {
    "lon": -47.967778,
    "lat": -15.87,
    "texto": "CIDADE LIVRE (NÚCLEO BANDEIRANTE)",
-   "z": 1732.8,
+   "z": 1687.8,
    "tam": 30,
    "t0": 28.7,
    "t1": 36.7
@@ -1617,7 +1617,7 @@ window.CENA = {
    "lon": -47.905,
    "lat": -15.787,
    "texto": "EIXO MONUMENTAL",
-   "z": 1886.1,
+   "z": 1841.1,
    "tam": 30,
    "t0": 37.2,
    "t1": 48.2
@@ -1626,7 +1626,7 @@ window.CENA = {
    "lon": -47.913081,
    "lat": -15.784358,
    "texto": "PRAÇA DO CRUZEIRO",
-   "z": 1930.4,
+   "z": 1885.4,
    "tam": 30,
    "t0": 48.4,
    "t1": 56.9
@@ -1635,7 +1635,7 @@ window.CENA = {
    "lon": -47.882611,
    "lat": -15.793389,
    "texto": "MARCO ZERO (RODOVIÁRIA)",
-   "z": 1799.3,
+   "z": 1754.3,
    "tam": 30,
    "t0": 57.1,
    "t1": 65.6
@@ -1644,7 +1644,7 @@ window.CENA = {
    "lon": -48.056389,
    "lat": -15.833333,
    "texto": "TAGUATINGA",
-   "z": 1968.1,
+   "z": 1923.1,
    "tam": 30,
    "t0": 76.7,
    "t1": 85.2
@@ -1653,7 +1653,7 @@ window.CENA = {
    "lon": -47.84,
    "lat": -15.78,
    "texto": "LAGO PARANOÁ",
-   "z": 1660.0,
+   "z": 1615.0,
    "tam": 30,
    "t0": 104.5,
    "t1": 114.5
@@ -1662,7 +1662,7 @@ window.CENA = {
    "lon": -47.866389,
    "lat": -15.761389,
    "texto": "UNB",
-   "z": 1688.6,
+   "z": 1643.6,
    "tam": 30,
    "t0": 155.2,
    "t1": 163.2
@@ -6360,6 +6360,7 @@ window.CENA = {
    "comp": 60,
    "vitral": false,
    "campanario": false,
+   "espelho": false,
    "rotulo": "Catedral",
    "sub": "16 colunas",
    "pronto": 1960.29,
@@ -6869,16 +6870,18 @@ window.CENA = {
   "fica": true,
   "titulo": "Imagens <b>da época</b>",
   "itens": [
+   "assets/epoca/g_ssa1.jpg",
+   "assets/epoca/g_ssa2.jpg",
+   "assets/epoca/g_rio1.jpg",
+   "assets/epoca/g_rio2.jpg",
    "assets/epoca/e00.jpg",
-   "assets/epoca/e02.jpg",
    "assets/epoca/e04.jpg",
    "assets/epoca/e05.jpg",
    "assets/epoca/e07.jpg",
-   "assets/epoca/e09.jpg",
    "assets/epoca/e12.jpg",
    "assets/epoca/e13.jpg"
   ],
-  "creditos": "Arquivo Nacional · domínio público (Wikimedia Commons)",
+  "creditos": "Salvador, Rio e Brasília · gravuras, pinturas e fotos em domínio público (Wikimedia Commons; Arquivo Nacional)",
   "t0": 247.2,
   "t1": 260.9
  },

@@ -1654,17 +1654,8 @@ window.CENA = {
    "lon": -43.193,
    "lat": -22.8905,
    "texto": "↖ PLANALTO CENTRAL · RETÂNGULO CRULS",
-   "z": 200,
+   "z": 450,
    "tam": 38,
-   "t0": 125.7,
-   "t1": 135.7
-  },
-  {
-   "lon": -43.174532,
-   "lat": -22.906927,
-   "texto": "MORRO DO CASTELO (OBSERVATÓRIO)",
-   "z": 91.3,
-   "tam": 30,
    "t0": 125.7,
    "t1": 135.7
   },
@@ -2361,7 +2352,7 @@ window.CENA = {
    "pe": 6,
    "platibanda": 1.4,
    "avanco": 0,
-   "parede": "#9A9690",
+   "parede": "#C9C2B6",
    "cor": "#F2EFE8",
    "estatuas_canto": true,
    "rotulo": "Palácio do Catete",

@@ -178,6 +178,19 @@ def main():
         for msk in (aguaT, ~aguaT):
             alvo = rec[msk].mean(0); atual = img[msk].mean(0)
             img = np.where(msk[..., None], img * (alvo / np.maximum(atual, 1)), img)
+    if CFG.get("cor_alvo_bm"):   # opcional: média de terra/água = pixels verdes/azuis do Blue Marble da região (não depende do encaixe da máscara)
+        from PIL import Image as _I
+        _I.MAX_IMAGE_PIXELS = None
+        sat = np.asarray(_I.open(f"{ASSETS}/regiao.jpg").convert("RGB")).astype(np.float32)
+        verde = (sat[..., 1] > sat[..., 2] + 8) & (sat[..., 1] > 40)
+        rw, rs, re_, rn = rb   # água: mar do satélite DENTRO do recorte (perto da costa), não o oceano fundo da região
+        sx0, sx1 = int((W - rw) / (re_ - rw) * sat.shape[1]), int((E - rw) / (re_ - rw) * sat.shape[1])
+        sy0, sy1 = int((rn - N) / (rn - rs) * sat.shape[0]), int((rn - S) / (rn - rs) * sat.shape[0])
+        rec = sat[sy0:sy1, sx0:sx1].reshape(-1, 3); azul = rec[rec[:, 2] > rec[:, 1] + 8]
+        vrec = rec[(rec[:, 1] > rec[:, 2] + 8) & (rec[:, 1] > 40)]
+        alvos = ((~aguaT, (vrec if len(vrec) > 20 else sat[verde]).mean(0) * CFG.get("cor_alvo_fator", 1.0)),) + (((aguaT, azul.mean(0)),) if len(azul) > 20 else ())
+        for msk, alvo in alvos:
+            atual = img[msk].mean(0); img = np.where(msk[..., None], img * (alvo / np.maximum(atual, 1)), img)
     img = np.clip(img, 0, 255).astype(np.uint8)
     # cor média da faixa da borda (terra e água): fundo além do recorte sem emenda (longe.auto)
     bd = np.zeros(aguaT.shape, bool); m_ = max(4, aguaT.shape[0] // 40)

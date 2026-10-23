@@ -67,7 +67,7 @@ blocos = [
     bloco("itamaraty-1889", [1889.88, 1889.9, 1890.5], CAMPO, ITAM, 8.0, pulo=0.2, destaque=1, destaca=["marco:itamaraty"]),
     bloco("constituicao-1891", [1890.5, 1891.15, 1891.4], ITAM, SCRIST, 10.0, pulo=0.4, destaque=2, destaca=["marco:scristovao"]),
     bloco("cruls-1892", [1891.4, 1892.5, 1892.9], SCRIST, CASTELO, 10.0, pulo=0.4, destaque=2,
-          rotulos=[{"lon": -43.1930, "lat": -22.8905, "texto": "↖ PLANALTO CENTRAL · RETÂNGULO CRULS", "z": 200, "tam": 38}]),
+          rotulos=[{"lon": -43.1930, "lat": -22.8905, "texto": "↖ PLANALTO CENTRAL · RETÂNGULO CRULS", "z": 450, "tam": 38}]),
     bloco("catete-1897", [1892.9, 1897.15, 1897.4], CASTELO, CATETE, 8.5, pulo=0.6, destaque=1, destaca=["marco:catete"]),
     bloco("avenida-central-1904", [1897.4, 1904.2, 1904.6], CATETE, AVENIDA, 8.5, pulo=0.6, destaque=1),
     bloco("municipal-1909", [1904.6, 1909.53, 1909.7], AVENIDA, THEATRO, 8.5, pulo=0.6, destaque=1, destaca=["marco:theatro"]),
@@ -96,7 +96,7 @@ for b in blocos:
         i, leg = IMGS[b["id"]]
         b["imagem"] = imagem(AQUI, i, leg)
 ROT = {"imperio-1822": ("CAMPO DE SANTANA", -43.188563, -22.906701), "republica-1889": ("CAMPO DE SANTANA", -43.188563, -22.906701),
-       "cruls-1892": ("MORRO DO CASTELO (OBSERVATÓRIO)", -43.174532, -22.906927), "avenida-central-1904": ("AVENIDA CENTRAL", -43.1775, -22.9047),
+       "avenida-central-1904": ("AVENIDA CENTRAL", -43.1775, -22.9047),
        "municipio-neutro-1834": ("MUNICÍPIO NEUTRO DA CORTE", -43.33, -22.90)}
 for b in blocos:
     if b["id"] in ROT:
@@ -133,7 +133,7 @@ MARCOS = [
     M("itamaraty", "palacio", -43.18806, -22.903056, 340, 1851, 1855, larg=56, comp=43, andares=2, pe=6.5, platibanda=1.4, avanco=18,
       parede="#E6B8B4", cor="#F1EEE8", rotulo="Palácio Itamaraty", sub="governo · 1889–1897"),
     M("catete", "palacio", -43.1762278, -22.9258639, 265, 1858, 1866, larg=33, comp=26, andares=3, pe=6, platibanda=1.4, avanco=0,
-      parede="#9A9690", cor="#F2EFE8", estatuas_canto=True, rotulo="Palácio do Catete", sub="Presidência · 1897–1960"),
+      parede="#C9C2B6", cor="#F2EFE8", estatuas_canto=True, rotulo="Palácio do Catete", sub="Presidência · 1897–1960"),
     M("theatro", "palacio", -43.17667, -22.90889, 158, 1905.3, 1909.5, larg=68, comp=84, andares=3, pe=7, platibanda=1.6, avanco=34,
       parede="#E8DFC9", cor="#C9A227", portico={"n": 8, "larg": 30, "alt": 14, "frontao": False},
       cupula={"r": 10, "h": 11, "tambor": 3, "cor": "verde", "cor2": "#C9A227", "estatua": True, "dy": 8}, torres_canto={"larg": 9, "alt": 5},

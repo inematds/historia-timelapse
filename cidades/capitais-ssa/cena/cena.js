@@ -334,56 +334,56 @@ window.CENA = {
   [
    0.0,
    {
-    "lon": -38.48,
-    "lat": -12.885,
-    "zoom": 11.2,
+    "lon": -38.5,
+    "lat": -12.91,
+    "zoom": 12.35,
     "pitch": 0,
     "bearing": 0,
-    "z": 106.5
+    "z": 0.0
    }
   ],
   [
    5.499,
    {
-    "lon": -38.48,
-    "lat": -12.885,
-    "zoom": 11.2,
+    "lon": -38.5,
+    "lat": -12.91,
+    "zoom": 12.35,
     "pitch": 0,
     "bearing": 0,
-    "z": 106.5
+    "z": 0.0
    }
   ],
   [
    5.5,
    {
-    "lon": -38.48,
-    "lat": -12.885,
-    "zoom": 11.2,
+    "lon": -38.5,
+    "lat": -12.91,
+    "zoom": 12.35,
     "pitch": 0,
     "bearing": 0,
-    "z": 106.5
+    "z": 0.0
    }
   ],
   [
    14.499,
    {
-    "lon": -38.48,
-    "lat": -12.885,
-    "zoom": 11.2,
+    "lon": -38.5,
+    "lat": -12.91,
+    "zoom": 12.35,
     "pitch": 0,
     "bearing": 0,
-    "z": 106.5
+    "z": 0.0
    }
   ],
   [
    14.5,
    {
-    "lon": -38.48,
-    "lat": -12.885,
-    "zoom": 11.2,
+    "lon": -38.5,
+    "lat": -12.91,
+    "zoom": 12.35,
     "pitch": 0,
     "bearing": 0,
-    "z": 106.5
+    "z": 0.0
    }
   ],
   [
@@ -554,34 +554,34 @@ window.CENA = {
   [
    65.15,
    {
-    "lon": -38.48,
-    "lat": -12.885,
-    "zoom": 11.2,
+    "lon": -38.5,
+    "lat": -12.91,
+    "zoom": 12.35,
     "pitch": 0,
     "bearing": 0,
-    "z": 106.5
+    "z": 0.0
    }
   ],
   [
    70.099,
    {
-    "lon": -38.48,
-    "lat": -12.885,
-    "zoom": 11.319999999999999,
+    "lon": -38.5,
+    "lat": -12.91,
+    "zoom": 12.469999999999999,
     "pitch": 0,
     "bearing": 0,
-    "z": 106.5
+    "z": 0.0
    }
   ],
   [
    70.1,
    {
-    "lon": -38.48,
-    "lat": -12.885,
-    "zoom": 11.319999999999999,
+    "lon": -38.5,
+    "lat": -12.91,
+    "zoom": 12.469999999999999,
     "pitch": 0,
     "bearing": 0,
-    "z": 106.5
+    "z": 0.0
    }
   ],
   [
@@ -1566,7 +1566,7 @@ window.CENA = {
   {
    "titulo": "OURO NAS <b>MINAS GERAIS</b>",
    "numero": "800 T DE OURO",
-   "legenda": "Bandeirantes acham ouro no interior do Sul e começa a maior corrida do ouro da época",
+   "legenda": "Bandeirantes acham ouro no interior, em Minas Gerais: começa a maior corrida do ouro da época",
    "detalhe": "Borba Gato achou ouro no Rio das Velhas e Vila Rica surgiu em 1698. Oficialmente 800 toneladas foram para Portugal no século XVIII. O centro da riqueza desce do açúcar do Norte para Minas.",
    "fonte": "Wikipédia",
    "local": [
@@ -2445,7 +2445,7 @@ window.CENA = {
    "andares": 2,
    "cor": "azul",
    "rotulo": "Colégio dos Jesuítas",
-   "sub": "1549 → 1590",
+   "sub": "1549 · fechado em 1759",
    "pronto": 1590,
    "destaque": [
     [
@@ -2798,9 +2798,9 @@ window.CENA = {
    [
     14.5,
     {
-     "lon": -38.48,
-     "lat": -12.885,
-     "ls": 11.495
+     "lon": -38.5,
+     "lat": -12.91,
+     "ls": 12.292
     }
    ]
   ],

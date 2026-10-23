@@ -35,5 +35,7 @@
   2020
  ],
  "_nota": "Parte 1 de 'As capitais do Brasil' (Salvador 1549–1763). Ver cidades/capitais/.",
- "_cor_satelite": "desligado em 23/10/2026: com o recorte ampliado (Itaparica) a média do Blue Marble sob a máscara de terra saiu azul (terra caía no oceano do satélite)"
+ "_cor_satelite": "desligado em 23/10/2026: com o recorte ampliado (Itaparica) a média do Blue Marble sob a máscara de terra saiu azul (terra caía no oceano do satélite)",
+ "cor_alvo_bm": true,
+ "cor_alvo_fator": 0.82
 }

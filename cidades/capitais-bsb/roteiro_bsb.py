@@ -20,7 +20,7 @@ C0 = cam(-47.86, -15.75, 12.4, 0, 0)               # DF de cima (fim do globo)
 DF = cam(-47.87, -15.77, 12.4, 25, -10)
 PLANO = cam(-47.875, -15.792, 12.4, 45, -14)
 PLANO_A = cam(-47.882, -15.793, 12.9, 40, 106)
-CATET = cam(-47.9882, -15.9468, 17.6, 58, -20)
+CATET = cam(-47.9883, -15.9472, 18.7, 55, -20)
 CLIVRE = cam(-47.966, -15.866, 14.0, 52, -25)
 MZERO = cam(-47.8835, -15.7930, 15.8, 58, 106)
 CRUZ = cam(-47.9140, -15.7840, 15.8, 55, 106)
@@ -96,8 +96,8 @@ for b in blocos:
         i, leg = IMGS[b["id"]]
         b["imagem"] = imagem(AQUI, i, leg)
     if b["id"] == "fecho":
-        b["galeria"] = {"fica": True, "titulo": "Imagens <b>da época</b>", "itens": [f"assets/epoca/e{i:02d}.jpg" for i in (0, 2, 4, 5, 7, 9, 12, 13)],
-                        "creditos": "Arquivo Nacional · domínio público (Wikimedia Commons)"}
+        b["galeria"] = {"fica": True, "titulo": "Imagens <b>da época</b>", "itens": ["assets/epoca/g_ssa1.jpg", "assets/epoca/g_ssa2.jpg", "assets/epoca/g_rio1.jpg", "assets/epoca/g_rio2.jpg"] + [f"assets/epoca/e{i:02d}.jpg" for i in (0, 4, 5, 7, 12, 13)],
+                        "creditos": "Salvador, Rio e Brasília · gravuras, pinturas e fotos em domínio público (Wikimedia Commons; Arquivo Nacional)"}
 ROT = {"jk-primeira-visita-1956": ("FAZENDA DO GAMA", -47.988333, -15.9475), "cidade-livre-1956": ("CIDADE LIVRE (NÚCLEO BANDEIRANTE)", -47.967778, -15.87),
        "primeira-missa-1957": ("PRAÇA DO CRUZEIRO", -47.913081, -15.784358), "corte-rodoviaria-1957": ("MARCO ZERO (RODOVIÁRIA)", -47.882611, -15.793389),
        "taguatinga-1958": ("TAGUATINGA", -48.056389, -15.833333), "lago-paranoa-1959": ("LAGO PARANOÁ", -47.84, -15.78),
@@ -106,7 +106,7 @@ ROT = {"jk-primeira-visita-1956": ("FAZENDA DO GAMA", -47.988333, -15.9475), "ci
 for b in blocos:
     if b["id"] in ROT:
         nm, lo, la = ROT[b["id"]]
-        b["rotulos"] = [{"lon": lo, "lat": la, "texto": nm, "z": round(zc(lo, la) * EXZ + 60, 1), "tam": 30}]
+        b["rotulos"] = [{"lon": lo, "lat": la, "texto": nm, "z": round(zc(lo, la) * EXZ + 15, 1), "tam": 30}]
 ajusta_anos(blocos)
 grava_marcas("bsb", blocos)
 
@@ -130,7 +130,7 @@ MARCOS = [
     M("planalto", "palacio_colunas", -47.860677, -15.799138, 196, 1958.52, 1960.25, larg=120, comp=60, pisos=4, pe=4.4, colunas="planalto", rampa=True,
       rotulo="Palácio do Planalto", sub="1960"),
     M("stf", "palacio_colunas", -47.861925, -15.802236, 16, 1958.6, 1960.25, larg=66, comp=40, pisos=3, pe=4.2, colunas="stf", rotulo="STF", sub="1960"),
-    M("catedral", "catedral_bsb", -47.875557, -15.798332, 286, 1958.7, 1960.29, raio=30, alt=42, larg=60, comp=60, vitral=False, campanario=False,
+    M("catedral", "catedral_bsb", -47.875557, -15.798332, 286, 1958.7, 1960.29, raio=30, alt=42, larg=60, comp=60, vitral=False, campanario=False, espelho=False,
       rotulo="Catedral", sub="16 colunas"),
     M("vitral", "catedral_bsb", -47.875557, -15.798332, 286, 1969.8, 1970.3, raio=30, alt=42, larg=60, comp=60, so_vitral=True, rotulo="Catedral", sub="vitrais · 1970"),
     M("itamaraty", "itamaraty", -47.867295, -15.80078, 16, 1963, 1970.3, larg=84, comp=84, rotulo="Itamaraty", sub="1970 · 14 arcos por face"),
