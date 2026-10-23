@@ -12,6 +12,7 @@ Timelapse 3D da história de cidades (mapa real + prédios do OSM + cartões com
 - Design INEMA: ler `~/projetos/inema-design/DESIGN.md` e `video/*` antes de mudar o visual.
 - Todo número na tela tem fonte escrita; divergências entre fontes ficam em `dados/pesquisa/RESUMO.md`.
 - Mostrar quadros-chave ao Nei antes do render completo (e seguir trabalhando, sem esperar resposta); publicar (Aventuras, lives26) só com OK dele.
+- **Cidade nova: o Nei aprova antes de qualquer publicação (22/10/2026).** Ele vê a fase 1 primeiro ("na fase 1 a gente vê como fica"). Com o OK: a fase 2 (narrada) é publicada direto no lives26 e a fase 1 entra na fila (`python3 ~/projetos/wifi/fila-cidades/fila_cidades.py --add <mp4> --nome "..." --plano|--contexto ...`, 3 por dia às 9, 15 e 21 h). Sem OK, nada sobe.
 - Revisão: revisor independente (`~/.claude/runbooks/revisor-independente.md`) com a lista `REVISAO-LISTA.md`; registrar notas no `~/projetos/wifi/scripts/revisor-nota.py --fluxo historia-timelapse`.
 
 ## Regra do motor: versão narrada = camada de áudio (Nei, 21/10/2026)
