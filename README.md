@@ -29,6 +29,10 @@ O motor não tem nada preso a uma cidade ou país: tudo o que muda fica em `cida
 - No roteiro: `globo.pais` (nome no Natural Earth, padrão Brazil), `globo.uf` + `globo.subdiv_arquivo`/`subdiv_prop` (estados/províncias, padrão `brasil-uf.geojson`), `longe.auto` (fundo além do mapa pelo contorno dos países)
 - Bandeiras: `cidades/<id>/assets/bandeiras/<nome>.svg` tem prioridade sobre `motor/assets/bandeiras/`
 
+## Render com luz real (Mitsuba)
+
+Comparação medida de render na GPU (motor atual deck.gl × Blender × Mitsuba 3), com prédios, relevo e tempo de cada cidade: [docs/RENDER-GPU-ALTERNATIVAS.md](docs/RENDER-GPU-ALTERNATIVAS.md). O motor atual faz um vídeo em 5–18 min; o Mitsuba dá sombra e luz de maquete em 1–5 h; o Blender, aqui, levaria dias.
+
 ## Estrutura
 
 - `motor/` — página deck.gl (`mapa.html`) e render (`render.mjs`, Playwright + Chrome/GPU)

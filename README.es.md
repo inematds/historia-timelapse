@@ -23,6 +23,10 @@ Guía completa (landing + paso a paso): **https://inematds.github.io/historia-ti
 
 Nada en el motor está atado a una ciudad o país: todo lo que cambia vive en `cidades/<id>/config.json` — `bbox`, `centro_antigo`, `pbf_url`/`pbf`, `municipio_osm`, `nivel_municipio`/`nivel_bairro` (niveles admin de OSM, por defecto 8/10), `regiao_bbox` (ventana NASA Blue Marble, por defecto ciudad ± 10°), `pais_microsoft`, `km_lon`, `vizinhos_anos`. En el guion: `globo.pais`, `globo.uf` + `globo.subdiv_arquivo`/`subdiv_prop`, `longe.auto`. Las banderas en `cidades/<id>/assets/bandeiras/` tienen prioridad sobre las del motor.
 
+## Render con luz real (Mitsuba)
+
+Comparación medida de render en GPU (motor actual deck.gl × Blender × Mitsuba 3), con edificios, relieve y tiempo de cada ciudad (en portugués): [docs/RENDER-GPU-ALTERNATIVAS.md](docs/RENDER-GPU-ALTERNATIVAS.md). El motor actual hace un video en 5–18 min; Mitsuba agrega luz y sombras de maqueta en 1–5 h; Blender tardaría días en esta máquina.
+
 ## Estructura
 
 - `motor/` — página deck.gl (`mapa.html`) y render (`render.mjs`, Playwright + Chrome/GPU)

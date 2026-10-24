@@ -90,9 +90,12 @@ Peças: terreno, mancha urbana por época extrudada em blocos, caminho de câmer
 |---|---|---|---|
 | **A. deck.gl** (TerrainLayer + extrusões) | Motor do Alerta Sul (`tempo-sul-2026-10-09/motor`, Vulkan, ~0,1 s por quadro) | Rápido, geo-referenciado de verdade, OSM direto | Visual mais "mapa" que "maquete" |
 | B. three.js | reel3d (Remotion + three) | Visual de maquete e luz bonita | Montar o terreno e a geo à mão; o path tracing levou horas |
-| C. Blender | reel3d-blender (pendente) | O visual mais próximo da referência | Render longo e pipeline novo |
+| C. Blender | reel3d-blender (medido em 24/10) | O visual mais próximo da referência | Nesta máquina só roda no processador: ~40–80 s por quadro, 4 a 6 dias por vídeo |
+| D. Mitsuba 3 (path tracing na GPU) | `scripts/bench_mitsuba.py` (medido em 24/10) | Luz e sombra fotorrealistas na GPU NVIDIA; tudo por script Python | ~0,2–0,4 s por quadro na cena simples: 1–5 h por vídeo, contra 5–18 min do deck.gl |
 
 **Recomendação:** **A (deck.gl)** no piloto. Ele cobre ~80% do visual em minutos de render, e o HUD e os cartões vão em camada HTML por cima (HyperFrames ou o próprio `render.mjs`). Se o visual não convencer, passamos a B ou C usando os mesmos dados.
+
+**Atualização 24/10/2026:** o motor A ficou: 0,07–0,11 s por quadro, 5 a 18 min por vídeo, medido nos logs de render. O Blender (C) não usa a GPU desta máquina (ARM64). O **Mitsuba 3 (D)** usa, e é a opção para o visual de "maquete" com luz real, num render híbrido: o Mitsuba desenha relevo e prédios, o motor A desenha HUD, cartões e efeitos por cima. A medida por cidade (prédios, relevo e tempo de cada motor) está em [RENDER-GPU-ALTERNATIVAS.md](RENDER-GPU-ALTERNATIVAS.md).
 
 ## 6. O gargalo é o dado, não o render
 
