@@ -149,15 +149,24 @@
 
 <section id="exemplos"><div class="wrap">
   <span class="chip">Videos</span>
-  <h2>Los dos primeros videos</h2>
-  <p class="sub">Hechos con este motor. Míralos en YouTube.</p>
+  <h2>Los videos</h2>
+  <p class="sub">Hechos con este motor, en el canal Aventuras INEMA (en portugués). Cada ciudad tiene versión sin narración y narrada.</p>
   <div class="grid g2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
-    <div class="vid"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/auBCnC78Xtk" title="Florianópolis en 3D" loading="lazy" allowfullscreen></iframe></div>
+    <div class="vid"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/auBCnC78Xtk" title="Florianópolis — de Desterro a capital" loading="lazy" allowfullscreen></iframe></div>
       <h3>Florianópolis — de Desterro a capital</h3>
-      <p>6 min, sin narración: sambaquíes, Dias Velho, fortalezas, azorianos, la invasión española de 1777, el cambio de nombre en 1894, los puentes y los rellenos. <a href="https://www.youtube.com/watch?v=auBCnC78Xtk" target="_blank" rel="noopener">Abrir en YouTube</a></p></div>
-    <div class="vid"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/MBBZXnTh6Lg" title="Porto Alegre en 3D" loading="lazy" allowfullscreen></iframe></div>
+      <p>6 min: sambaquíes, Dias Velho, fortalezas, azorianos, la invasión española de 1777, los puentes y los rellenos. Narrada: <a href="https://www.youtube.com/watch?v=GBJRZvfHRVU" target="_blank" rel="noopener">aquí</a>. <a href="https://www.youtube.com/watch?v=auBCnC78Xtk" target="_blank" rel="noopener">Abrir en YouTube</a></p></div>
+    <div class="vid"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/Ij4KsTN_SB0" title="Río de Janeiro — de 1500 a la metrópoli" loading="lazy" allowfullscreen></iframe></div>
+      <h3>Río de Janeiro — de 1500 a la metrópoli</h3>
+      <p>7 min: tupinambás, Francia Antártica, la Corte en 1808, Imperio y República. Narrada: <a href="https://www.youtube.com/watch?v=Useg7_N_38E" target="_blank" rel="noopener">aquí</a>. <a href="https://www.youtube.com/watch?v=Ij4KsTN_SB0" target="_blank" rel="noopener">Abrir en YouTube</a></p></div>
+    <div class="vid"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/NY7K_vMYLx8" title="Itaguaí — de la aldea al puerto" loading="lazy" allowfullscreen></iframe></div>
+      <h3>Itaguaí — de la aldea al puerto</h3>
+      <p>6 min: de la aldea jesuita a la hacienda de Santa Cruz y al puerto. Narrada: <a href="https://www.youtube.com/watch?v=CNwLpoIqQ_A" target="_blank" rel="noopener">aquí</a>. <a href="https://www.youtube.com/watch?v=NY7K_vMYLx8" target="_blank" rel="noopener">Abrir en YouTube</a></p></div>
+    <div class="vid"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/dalR1xWPFlE" title="Centro de Itaguaí — las calles, de cerca" loading="lazy" allowfullscreen></iframe></div>
+      <h3>Centro de Itaguaí — las calles, de cerca</h3>
+      <p>5 min, con la cámara en las calles y los edificios históricos. Narrada: <a href="https://www.youtube.com/watch?v=XiF00d20oi8" target="_blank" rel="noopener">aquí</a>. <a href="https://www.youtube.com/watch?v=dalR1xWPFlE" target="_blank" rel="noopener">Abrir en YouTube</a></p></div>
+    <div class="vid"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/MBBZXnTh6Lg" title="Porto Alegre — 1772 a 2024" loading="lazy" allowfullscreen></iframe></div>
       <h3>Porto Alegre — 1772 a 2024</h3>
-      <p>1 min 35 s, narrado: fundación, sitios farroupilhas, la inundación de 1941, el Muro da Mauá y la inundación de 2024. <a href="https://www.youtube.com/watch?v=MBBZXnTh6Lg" target="_blank" rel="noopener">Abrir en YouTube</a></p></div>
+      <p>1min35, narrado (el piloto): fundación, sitios farrapos, la inundación de 1941, el Muro de Mauá y la de 2024. <a href="https://www.youtube.com/watch?v=MBBZXnTh6Lg" target="_blank" rel="noopener">Abrir en YouTube</a></p></div>
   </div>
 </div></section>
 
@@ -307,6 +316,12 @@
 <span class="k">python3 scripts/montar_narrada.py</span>   <span class="c"># final/audio-narrado.wav</span>
 <span class="k">ffmpeg</span> -i cidades/floripa/final/video.mp4 -i cidades/floripa/final/audio-narrado.wav -map 0:v -map 1:a -c:v copy -c:a aac -shortest cidades/floripa/final/floripa-narrado.mp4</pre>
   </div></div>
+  <div class="step"><div class="b">9</div><div>
+    <h3>Render con luz real (opcional, GPU NVIDIA)</h3>
+    <p>El mismo video con el relieve y los edificios iluminados por <em>path tracing</em> en <strong>Mitsuba 3</strong>: sombras entre edificios, aspecto de maqueta y edificios que suben en su año. El motor sigue dibujando encima el HUD, las tarjetas y los efectos. Unos 45 min para 95 s de video (el render normal, ~5 min). Detalles (en portugués): <a href="https://github.com/inematds/historia-timelapse/blob/main/docs/RENDER-LUZ-REAL.md">docs/RENDER-LUZ-REAL.md</a>.</p>
+<pre><span class="k">.venv/bin/pip install</span> mitsuba==3.9.1 drjit==1.5.0 mapbox-earcut
+<span class="k">bash motor/render_luz.sh</span> cidades/floripa/cena cidades/floripa/final/floripa-mitsuba-video.mp4 64</pre>
+  </div></div>
 </div></section>
 
 <section id="roadmap"><div class="wrap">
@@ -314,7 +329,7 @@
   <h2>Próximos pasos</h2>
   <p class="sub">Lo que ya existe y lo que viene.</p>
   <div class="phase"><div class="tag">Hecho</div><div class="d"><strong>Porto Alegre e Florianópolis</strong><span>Motor con globo, línea de tiempo, tarjetas con fuente, inundaciones, sitios, fortalezas, puentes y rellenos.</span></div></div>
-  <div class="phase"><div class="tag">En prueba</div><div class="d"><strong>Luz real con Mitsuba (GPU)</strong><span>Sombras y luz de maqueta por path tracing. <a href="https://github.com/inematds/historia-timelapse/blob/main/docs/RENDER-GPU-ALTERNATIVAS.md">Comparación medida: deck.gl × Blender × Mitsuba</a> (en portugués).</span></div></div>
+  <div class="phase"><div class="tag">Nuevo</div><div class="d"><strong>Luz real con Mitsuba (GPU)</strong><span>Sombras y luz de maqueta por path tracing. <a href="https://github.com/inematds/historia-timelapse/blob/main/docs/RENDER-GPU-ALTERNATIVAS.md">Comparación medida: deck.gl × Blender × Mitsuba</a> (en portugués).</span></div></div>
   <div class="phase"><div class="tag">Próximo</div><div class="d"><strong>Versión con imágenes antiguas</strong><span>Grabados y fotos históricas de dominio público entrando junto con los eventos.</span></div></div>
   <div class="phase"><div class="tag">Después</div><div class="d"><strong>Más ciudades y skill</strong><span>Convertir el flujo en una skill para hacer una ciudad nueva solo con la investigación.</span></div></div>
 </div></section>

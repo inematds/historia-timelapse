@@ -14,10 +14,13 @@ Guia completo (landing + passo a passo): **https://inematds.github.io/historia-t
 
 ## 🎬 Vídeos
 
-- Florianópolis — de Desterro à capital (6 min, sem narração): https://www.youtube.com/watch?v=auBCnC78Xtk
-- Itaguaí — da aldeia ao porto (6 min, sem narração): https://www.youtube.com/watch?v=NY7K_vMYLx8
-  - narrada: https://www.youtube.com/watch?v=CNwLpoIqQ_A · com apresentador: https://www.youtube.com/watch?v=X4u-dDnNc64
-- Porto Alegre — 1772 a 2024 (narrado): https://www.youtube.com/watch?v=MBBZXnTh6Lg
+Canal [Aventuras INEMA](https://www.youtube.com/@aventurasinema). Cada cidade sai em versão sem narração (cartões e música) e narrada.
+
+- **Florianópolis** — de Desterro à capital (6 min): sem narração https://www.youtube.com/watch?v=auBCnC78Xtk · narrada https://www.youtube.com/watch?v=GBJRZvfHRVU
+- **Rio de Janeiro** — de 1500 à metrópole (7 min): sem narração https://www.youtube.com/watch?v=Ij4KsTN_SB0 · narrada https://www.youtube.com/watch?v=Useg7_N_38E
+- **Itaguaí** — da aldeia ao porto (6 min): sem narração https://www.youtube.com/watch?v=NY7K_vMYLx8 · narrada https://www.youtube.com/watch?v=CNwLpoIqQ_A
+- **Centro de Itaguaí** — as ruas, de perto (5 min): sem narração https://www.youtube.com/watch?v=dalR1xWPFlE · narrada https://www.youtube.com/watch?v=XiF00d20oi8
+- **Porto Alegre** — 1772 a 2024, o piloto (1min35, narrado): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
 ## Qualquer lugar do mundo
 
@@ -42,7 +45,7 @@ O motor não tem nada preso a uma cidade ou país: tudo o que muda fica em `cida
 | 5 | Roteiro e cena | `cidades/<id>/roteiro_<id>.py` (modelo: `roteiro_floripa.py`) → `scripts/gerar_cena.py` | 🧠 |
 | 6 | Quadros-chave | `cd motor && node render.mjs ../cidades/<id>/cena --quadros t1,t2,…` → mostrar ao Nei e seguir | 🧠 |
 | 7 | Vídeo (fase 1) | `scripts/montar_musica.py` + `bash motor/render_trechos.sh cidades/<id>/cena cidades/<id>/final/video.mp4 60` (5–18 min) | ⚙️ |
-| 7b | Vídeo com luz real (opcional) | `bash motor/render_luz.sh cidades/<id>/cena cidades/<id>/final/<id>-mitsuba-video.mp4 64`: Mitsuba na GPU desenha relevo e prédios (sombra, prédios subindo), o motor desenha HUD e cartões por cima (~45 min por 95 s). Ver [docs/RENDER-GPU-ALTERNATIVAS.md](docs/RENDER-GPU-ALTERNATIVAS.md) | ⚙️ |
+| 7b | Vídeo com luz real (opcional) | `bash motor/render_luz.sh cidades/<id>/cena cidades/<id>/final/<id>-mitsuba-video.mp4 64`: Mitsuba na GPU desenha relevo e prédios (sombra, prédios subindo), o motor desenha HUD e cartões por cima (~45 min por 95 s). Como usar: [docs/RENDER-LUZ-REAL.md](docs/RENDER-LUZ-REAL.md); comparação: [docs/RENDER-GPU-ALTERNATIVAS.md](docs/RENDER-GPU-ALTERNATIVAS.md) | ⚙️ |
 | 8 | Revisão | revisor independente com `REVISAO-LISTA.md`; nota em `revisor-nota.py --fluxo historia-timelapse` | 🤖 |
 | 9 | Fase 2 (narrada) | `narracao.json` → `narrar.py` → `qa_narracao.py` → `montar_narrada.py` (mesmo vídeo, outra trilha) | ⚙️ |
 | 10 | Fase 3 (avatar) | avatar do Nei no estúdio HeyGen (OK por produção) → `montar_avatar.py` | 🧠 |

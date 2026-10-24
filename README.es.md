@@ -14,10 +14,13 @@ Guía completa (landing + paso a paso): **https://inematds.github.io/historia-ti
 
 ## 🎬 Videos
 
-- Florianópolis — de Desterro a capital (6 min, sin narración): https://www.youtube.com/watch?v=auBCnC78Xtk
-- Itaguaí — de la aldea al puerto (6 min, sin narración): https://www.youtube.com/watch?v=NY7K_vMYLx8
-  - narrada: https://www.youtube.com/watch?v=CNwLpoIqQ_A · con presentador: https://www.youtube.com/watch?v=X4u-dDnNc64
-- Porto Alegre — 1772 a 2024 (narrado): https://www.youtube.com/watch?v=MBBZXnTh6Lg
+Canal [Aventuras INEMA](https://www.youtube.com/@aventurasinema) (en portugués). Cada ciudad sale en versión sin narración (tarjetas y música) y narrada.
+
+- **Florianópolis** — de Desterro a capital (6 min): sin narración https://www.youtube.com/watch?v=auBCnC78Xtk · narrada https://www.youtube.com/watch?v=GBJRZvfHRVU
+- **Río de Janeiro** — de 1500 a la metrópoli (7 min): sin narración https://www.youtube.com/watch?v=Ij4KsTN_SB0 · narrada https://www.youtube.com/watch?v=Useg7_N_38E
+- **Itaguaí** — de la aldea al puerto (6 min): sin narración https://www.youtube.com/watch?v=NY7K_vMYLx8 · narrada https://www.youtube.com/watch?v=CNwLpoIqQ_A
+- **Centro de Itaguaí** — las calles, de cerca (5 min): sin narración https://www.youtube.com/watch?v=dalR1xWPFlE · narrada https://www.youtube.com/watch?v=XiF00d20oi8
+- **Porto Alegre** — 1772 a 2024, el piloto (1min35, narrado): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
 ## Cualquier lugar del mundo
 
@@ -38,6 +41,8 @@ Nada en el motor está atado a una ciudad o país: todo lo que cambia vive en `c
 ## Render con luz real (Mitsuba)
 
 Comparación medida de render en GPU (motor actual deck.gl × Blender × Mitsuba 3), con edificios, relieve y tiempo de cada ciudad (en portugués): [docs/RENDER-GPU-ALTERNATIVAS.md](docs/RENDER-GPU-ALTERNATIVAS.md). El motor actual hace un video en 5–18 min; Mitsuba agrega luz y sombras de maqueta en 1–5 h; Blender tardaría días en esta máquina.
+
+Cómo usarlo (en portugués): [docs/RENDER-LUZ-REAL.md](docs/RENDER-LUZ-REAL.md).
 
 ## Estructura
 

@@ -14,10 +14,13 @@ Full guide (landing + step by step): **https://inematds.github.io/historia-timel
 
 ## 🎬 Videos
 
-- Florianópolis — from Desterro to capital (6 min, no narration): https://www.youtube.com/watch?v=auBCnC78Xtk
-- Itaguaí — from village to port (6 min, no narration): https://www.youtube.com/watch?v=NY7K_vMYLx8
-  - narrated: https://www.youtube.com/watch?v=CNwLpoIqQ_A · with presenter: https://www.youtube.com/watch?v=X4u-dDnNc64
-- Porto Alegre — 1772 to 2024 (narrated): https://www.youtube.com/watch?v=MBBZXnTh6Lg
+[Aventuras INEMA](https://www.youtube.com/@aventurasinema) channel (in Portuguese). Each city comes in a version without narration (cards and music) and a narrated one.
+
+- **Florianópolis** — from Desterro to capital (6 min): no narration https://www.youtube.com/watch?v=auBCnC78Xtk · narrated https://www.youtube.com/watch?v=GBJRZvfHRVU
+- **Rio de Janeiro** — from 1500 to the metropolis (7 min): no narration https://www.youtube.com/watch?v=Ij4KsTN_SB0 · narrated https://www.youtube.com/watch?v=Useg7_N_38E
+- **Itaguaí** — from village to port (6 min): no narration https://www.youtube.com/watch?v=NY7K_vMYLx8 · narrated https://www.youtube.com/watch?v=CNwLpoIqQ_A
+- **Downtown Itaguaí** — the streets, up close (5 min): no narration https://www.youtube.com/watch?v=dalR1xWPFlE · narrated https://www.youtube.com/watch?v=XiF00d20oi8
+- **Porto Alegre** — 1772 to 2024, the pilot (1min35, narrated): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
 ## Anywhere in the world
 
@@ -38,6 +41,8 @@ Nothing in the engine is tied to one city or country: everything that changes li
 ## Realistic lighting render (Mitsuba)
 
 Measured GPU render comparison (current deck.gl engine × Blender × Mitsuba 3), with buildings, terrain and time for each city (in Portuguese): [docs/RENDER-GPU-ALTERNATIVAS.md](docs/RENDER-GPU-ALTERNATIVAS.md). The current engine renders a video in 5–18 min; Mitsuba adds model-like light and shadows in 1–5 h; Blender would take days on this machine.
+
+How to use (in Portuguese): [docs/RENDER-LUZ-REAL.md](docs/RENDER-LUZ-REAL.md).
 
 ## Layout
 
