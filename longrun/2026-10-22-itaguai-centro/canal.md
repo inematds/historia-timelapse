@@ -27,3 +27,8 @@ Formato: `- AAAA-MM-DD HH:MM · fato|aprendizado|glossário|armadilha · texto`
 - 3 atos = 3 cidades do motor (capitais-ssa, capitais-rio, capitais-bsb), motor da versão centro + `centro/motor/marcos-capitais.js` (tipos novos). Comum: `cidades/capitais/comum.py`. Emenda: `cidades/capitais/montar.py`.
 - Armadilhas: `codex exec` precisa `< /dev/null`; `pkill -f` com padrão do próprio comando mata o comando; Geofabrik lento → openstreetmap.fr por estado; DF: bairros no admin_level 8; `extrai_osm` regrava agua.geojson com o Lago Paranoá (tirar de novo); câmera precisa de `z` (chão×exz) em TODAS as chaves; palácio em destaque só ganha faixa amarela (não pinta tudo).
 - Emendas de ano: SSA termina 1763.55; Rio começa 1763.55 e termina na Novacap (1956.74); BSB começa na visita de JK (2/10/1956).
+
+## 2026-10-24 · capitais fase 1 v5 entregue; pedido novo: construção de Brasília
+- Capitais: v5 (`cidades/capitais/final/capitais-v5-bot.mp4`, 12:42) no bot v3; commit 535dd4b; revisor v5 nota 7; aguardando OK do Nei (nada publicado).
+- Pedido novo do Nei (24/10): vídeo da CONSTRUÇÃO DE BRASÍLIA — prévia do planejamento (Cruls, pedra fundamental, Sítio Castanho, concurso do Plano Piloto), DE ONDE se comandava a obra (Catetinho, sede da Novacap na Candangolândia/Velhacap, Cidade Livre, acampamentos da Vila Planalto) e O QUE EXISTIA na região antes (Planaltina 1859, Brazlândia, fazendas, rio Paranoá antes do lago).
+- Base para reaproveitar: `cidades/capitais-bsb/` (dados do DF já prontos, marcos 3D de Brasília em `centro/motor/marcos-capitais.js`, roteiro_bsb.py). Cidade nova → fase 1 primeiro, Nei aprova antes de publicar.

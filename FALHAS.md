@@ -1,5 +1,7 @@
 | data | o que quebrou | menor correção | prompt \| infra |
 |---|---|---|---|
+| 2026-10-24 | setas/rótulos do Planalto (1.100 m) sumiam do quadro | `z` de rótulo e chamada é em metros crus (o motor multiplica por EXZ); seta fixa na tela (`setas_tela`) para lugar fora do mapa | prompt |
+| 2026-10-24 | obelisco de 1922 invisível no topo do morro | mediana do chão enterrava o marco na encosta: `z` = topo; câmera mirando o marco (olhando ao sul, alvo ao sul dele) | prompt |
 | 2026-10-22 | capitais: `codex exec` da capa ficou parado em "Reading additional input from stdin" | rodar com `< /dev/null` | infra |
 | 2026-10-22 | capitais: `pkill -f "codex exec …"` matou o próprio comando (padrão na linha dele) | não usar pkill com padrão que aparece no próprio comando | prompt |
 | 2026-10-22 | capitais: download do Geofabrik a 82 KB/s (horas) | recorte por estado do openstreetmap.fr (bahia 132 MB, DF 62 MB) | infra |

@@ -88,7 +88,12 @@ def main():
             C["falas"].append({"id": b["id"], "t0": round(te, 3), "dur": round(fala, 3)})
         if "globo" in b:
             g = dict(b["globo"]); g["chaves"] = [[round(t0 + k * dur, 3), v] for k, v in g["chaves"]]; g["t1"] = round(t1, 3)
-            C["globo"] = g
+            if g.get("entra"):   # globo no meio do vídeo (entra com fade): vai para a lista C.globos
+                g["t0"] = round(t0, 3); C.setdefault("globos", [C["globo"]] if "globo" in C else []).append(g)
+            else:
+                C["globo"] = g
+                if "globos" in C:
+                    C["globos"].insert(0, g)
         if rot.get("hud_de_bloco") == b["id"]:
             C["hud_de"] = round(t0, 3)
         if "capa" in b:
@@ -115,6 +120,8 @@ def main():
             C["frotas"].append({**fr, "t0": round(te, 3), "t1": round(te + fr.get("dura", corpo * 0.7), 3)})
         if "imagem" in b:
             C["imagens"].append({**b["imagem"], "t0": round(te + 0.6, 3), "t1": round(t1 - 0.3, 3)})
+        for st in b.get("setas_tela", []):
+            C.setdefault("setasTela", []).append({**st, "t0": round(te + 0.5, 3), "t1": round(t1 - 0.3, 3)})
         for c in b.get("chamadas", []):
             C["chamadas"].append({**c, "t0": round(te + 0.5, 3), "t1": round(t1 - 0.3, 3)})
         if "galeria" in b:

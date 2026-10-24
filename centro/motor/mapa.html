@@ -99,6 +99,18 @@ const EXZ = C.exz || 1.6, EXB = C.exb || 1.5;
 const lerp = (a, b, k) => a + (b - a) * k;
 const ease = k => k < 0 ? 0 : k > 1 ? 1 : k * k * (3 - 2 * k);
 const clamp01 = k => Math.max(0, Math.min(1, k));
+
+// polígonos no globo (opcional): G.poligonos = [{coords: [[lon,lat],...], de, ate (escala, como os rótulos), cor, preench, largura, tracejado}]
+function globoPoligonos(ctx, path, v, G) {
+  for (const pg of (G.poligonos || [])) {
+    const a = clamp01((v.ls - Math.log(pg.de || 1)) / 0.4) * clamp01((Math.log(pg.ate || 1e7) - v.ls) / 0.4); if (a <= 0) continue;
+    let anel = pg.coords.slice(); if (anel[0][0] !== anel[anel.length - 1][0] || anel[0][1] !== anel[anel.length - 1][1]) anel.push(anel[0]);
+    let g = { type: 'Polygon', coordinates: [anel] }; if (d3.geoArea(g) > 2 * Math.PI) g = { type: 'Polygon', coordinates: [anel.slice().reverse()] };
+    ctx.save(); ctx.globalAlpha = a; ctx.beginPath(); path(g);
+    if (pg.preench) { ctx.fillStyle = pg.preench; ctx.fill(); }
+    ctx.setLineDash(pg.tracejado || []); ctx.strokeStyle = pg.cor || '#FACC15'; ctx.lineWidth = pg.largura || 4; ctx.shadowColor = 'rgba(0,0,0,.8)'; ctx.shadowBlur = 6; ctx.stroke(); ctx.restore();
+  }
+}
 const $ = id => document.getElementById(id);
 
 function chave(lista, t, suave = true) {
@@ -159,16 +171,18 @@ async function carrega() {
       for (const pol of pols) D.longeTerra.push(pol.map(r => r.map(([x, y]) => [x, y, -2.5])));
     }
   }
-  if (C.globo) {
+  if (C.globo || C.globos) {
+    const G0 = C.globo || C.globos[0];
     const mundo = await (await fetch('assets/mundo-50m.json')).json();
     D.paises = topojson.feature(mundo, mundo.objects.countries).features;
-    const rs = await fetch('assets/' + (C.globo.subdiv_arquivo || 'brasil-uf.geojson'));   // estados/províncias do país (opcional)
+    const rs = await fetch('assets/' + (G0.subdiv_arquivo || 'brasil-uf.geojson'));   // estados/províncias do país (opcional)
     D.ufs = rs.ok ? (await rs.json()).features : [];
     for (const f of D.ufs) if (d3.geoArea(f) > 2 * Math.PI) {   // anel na orientação errada = "o mundo menos o estado"
       const g = f.geometry; const inv = pol => pol.map(r => r.slice().reverse());
       g.coordinates = g.type === 'Polygon' ? inv(g.coordinates) : g.coordinates.map(inv); }
   }
-  if (C.globo && C.globo.raster) {
+  if (C.globos) $('cartao').style.zIndex = 2;   // globo no meio do vídeo: o cartão fica por cima dele
+  if ((C.globos || [C.globo]).some(g => g && g.raster)) {
     const dados = async src => { const im = new Image(); im.src = src; await im.decode(); const c = document.createElement('canvas');
       c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); return { w: im.width, h: im.height, d: x.getImageData(0, 0, im.width, im.height).data }; };
     D.bm = await dados('assets/terra/blue_marble.jpg'); D.reg = D.T.regiao ? await dados('assets/regiao.jpg') : null; D.tx = await dados('assets/textura.jpg');
@@ -337,11 +351,17 @@ function camadas(t) {
 }
 
 // GLOBO (abertura): d3 ortográfico, zoom exponencial do planeta até a cidade
+// globo ativo: C.globos (lista, um pode entrar no meio do vídeo com `entra` s de fade) ou o C.globo da abertura
+function globoAtivo(t) {
+  if (!C.globos) return C.globo;
+  return C.globos.find(g => t >= (g.t0 ?? -1e9) - 0.05 && t <= g.t1 + 0.05) || null;
+}
+const globoOpac = (G, t) => Math.min(1, (G.t1 - t) / (G.some || 1.2), G.entra ? (t - G.t0) / G.entra : 1);
 function globo(t) {
-  const G = C.globo, cv = $('globo');
+  const G = globoAtivo(t), cv = $('globo');
   if (!G || t > G.t1 + 0.05) { cv.style.opacity = 0; return; }
   if (!G.raster) return globoVetor(t);
-  cv.style.opacity = Math.min(1, (G.t1 - t) / (G.some || 1.2));
+  cv.style.opacity = globoOpac(G, t);
   const v = chave(G.chaves, t), R = Math.exp(v.ls), ctx = cv.getContext('2d');
   const g = ctx.createRadialGradient(960, 540, 100, 960, 540, 1300); g.addColorStop(0, '#08121f'); g.addColorStop(1, '#010205');
   ctx.fillStyle = g; ctx.fillRect(0, 0, 1920, 1080);
@@ -382,10 +402,11 @@ function globo(t) {
   // contornos e rótulos
   const pr = d3.geoOrthographic().rotate([-v.lon, -v.lat]).scale(R).translate([960, 540]);
   const path0 = d3.geoPath(pr, ctx), path = f => { try { path0(f); } catch (e) {} };
-  const br = D.paises.find(f => f.properties.name === (C.globo.pais || 'Brazil'));
+  const br = D.paises.find(f => f.properties.name === (G.pais || 'Brazil'));
   ctx.beginPath(); path(br); ctx.strokeStyle = `rgba(250,204,21,${0.95 * clamp01((v.ls - Math.log(300)) / 0.5) * clamp01((Math.log(G.br_ate || 9000) - v.ls) / 0.6)})`; ctx.lineWidth = 3; ctx.stroke();
   const uf = D.ufs.find(f => f.properties[G.subdiv_prop || 'uf'] === G.uf);
   if (uf) { ctx.beginPath(); path(uf); ctx.strokeStyle = `rgba(250,204,21,${clamp01((v.ls - Math.log(G.uf_de || 1800)) / 0.6) * clamp01((Math.log(G.uf_ate || 60000) - v.ls) / 0.7)})`; ctx.lineWidth = 3.5; ctx.stroke(); }
+  globoPoligonos(ctx, path, v, G);
   ctx.textAlign = 'center'; ctx.shadowColor = 'rgba(0,0,0,.9)'; ctx.shadowBlur = 10;
   for (const r of (G.rotulos || [])) {
     const a = clamp01((v.ls - Math.log(r.de)) / 0.4) * clamp01((Math.log(r.ate) - v.ls) / 0.4); if (a <= 0) continue;
@@ -397,9 +418,9 @@ function globo(t) {
 }
 
 function globoVetor(t) {
-  const G = C.globo, cv = $('globo');
+  const G = globoAtivo(t), cv = $('globo');
   if (!G || t > G.t1 + 0.05) { cv.style.opacity = 0; return; }
-  cv.style.opacity = Math.min(1, (G.t1 - t) / (G.some || 1.2));
+  cv.style.opacity = globoOpac(G, t);
   const v = chave(G.chaves, t), s = Math.exp(v.ls);
   const ctx = cv.getContext('2d');
   const g = ctx.createRadialGradient(960, 540, 100, 960, 540, 1300); g.addColorStop(0, '#0b1a2e'); g.addColorStop(1, '#03060c');
@@ -418,8 +439,9 @@ function globoVetor(t) {
   for (const f of D.ufs) { ctx.beginPath(); path(f);
     if (f.properties[G.subdiv_prop || 'uf'] === G.uf) { ctx.fillStyle = `rgba(250,204,21,${0.85 * clamp01((v.ls - Math.log(G.uf_de || 2200)) / 0.6) * clamp01((Math.log(G.uf_ate || 30000) - v.ls) / 0.7)})`; ctx.fill(); }
     ctx.strokeStyle = `rgba(255,255,255,${0.5 * kBR})`; ctx.lineWidth = 1.2; ctx.stroke(); }
-  const br = D.paises.find(f => f.properties.name === (C.globo.pais || 'Brazil'));
+  const br = D.paises.find(f => f.properties.name === (G.pais || 'Brazil'));
   ctx.beginPath(); path(br); ctx.strokeStyle = `rgba(250,204,21,${0.9 * clamp01((v.ls - Math.log(300)) / 0.5)})`; ctx.lineWidth = 4; ctx.stroke();
+  globoPoligonos(ctx, path, v, G);
   ctx.textAlign = 'center'; ctx.fillStyle = '#fff'; ctx.shadowColor = 'rgba(0,0,0,.8)'; ctx.shadowBlur = 8;
   for (const r of (G.rotulos || [])) {
     const a = clamp01((v.ls - Math.log(r.de)) / 0.4) * clamp01((Math.log(r.ate) - v.ls) / 0.4); if (a <= 0) continue;
@@ -491,6 +513,9 @@ function html(t) {
     svg += `<line x1="${x}" y1="${y}" x2="${ex}" y2="${ey2 + 24}" stroke="#FACC15" stroke-width="3" opacity="${a.o}"/><circle cx="${x}" cy="${y}" r="7" fill="#FACC15" opacity="${a.o}"/>`;
     htm += `<div class="et" style="left:${ex}px;top:${ey2}px;opacity:${a.o}">${a.txt}${a.sub ? `<small>${a.sub}</small>` : ''}</div>`;
   }
+  // SETAS NA TELA (opcional): direção de um lugar fora do mapa (Rio, Anápolis...), em posição fixa da tela
+  for (const st of (C.setasTela || [])) if (t >= st.t0 && t <= st.t1)
+    htm += `<div class="et" style="left:${st.x}px;top:${st.y}px;opacity:${Math.min(1, (t - st.t0) / .5, (st.t1 - t) / .5)}">${st.texto}${st.sub ? `<small>${st.sub}</small>` : ''}</div>`;
   lin.innerHTML = svg; ch.innerHTML = htm;
   // IMAGEM DA ÉPOCA (esquerda)
   const ep = $('epoca'), im = (C.imagens || []).find(x => t >= x.t0 && t <= x.t1);

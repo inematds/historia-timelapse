@@ -1,0 +1,123 @@
+{
+ "_meta": {
+  "municipio": "Brasília / Distrito Federal — código IBGE 5300108 (o DF é município único para o IBGE: a linha 'Brasília' = DF inteiro)",
+  "gerado_em": "2026-10-22",
+  "nota_territorio": "Série principal = DF INTEIRO (o quadrilátero; de 1960 a 2022 o IBGE publica sempre a mesma linha 5300108, sem mudança de território registrada nas fontes lidas). O DF é dividido em regiões administrativas (RAs), que não são municípios: o IBGE só publica o total. 1957 e 1959 contam a 'área destinada ao futuro Distrito Federal' (ainda Goiás), não só o canteiro do Plano Piloto: segundo o IPEDF, ~50% dos 12.283 de 1957 moravam em áreas já ocupadas antes (zona rural e a cidade de Planaltina). O Plano Piloto sozinho é bem menor: ver 'serie_plano_piloto'. O bbox do vídeo (lon −48,12 a −47,60; lat −15,95 a −15,55) NÃO cobre o DF inteiro: Gama, Santa Maria e Brazlândia (e talvez Água Quente, Sol Nascente e Ponte Alta) ficam fora; o número no HUD é do DF.",
+  "regra_da_serie": "Resultado definitivo do IBGE: 1960–1991 da tabela 'Evolução da população segundo os municípios 1872/2010' (IBGE, linha 5300108); 2000 e 2010 da Sinopse do Censo 2010 (IBGE); 2022 dos Primeiros Resultados (2ª apuração). 1957 = contagem do IBGE (via IPEDF); 1959 = Censo Experimental de Brasília. Os números das Sinopses Preliminares (141.742 em 1960; 546.015 em 1970) e os da tabela da ptwiki (1.203.333 em 1980; 1.598.415 em 1991; 2.043.169 em 2000) NÃO entraram: ver RESUMO-POP.md.",
+  "censo_experimental": "O pedido falava em 'censo experimental 1957'. A data real do Censo Experimental de Brasília é 17/05/1959 (IPEDF, 'Trajetória das mulheres no DF', 2016; Boletim Geográfico IBGE 1973 cita 'Censo Experimental de Brasília, Rio de Janeiro, 1959'). O número de 1957 é uma CONTAGEM populacional do IBGE, não o censo experimental.",
+  "uso_no_video": "Interpolar com curva suave e mostrar no HUD arredondado ('~' em 1957). O salto 1957→1960 (12 mil → 140 mil) é real: obra da capital. 'ano' é inteiro porque o motor faz int(p['ano']) (scripts/modelo_anos.py e gerar_cena.py); a data exata do censo experimental (17/05/1959 = 1959.37) fica em 'data_referencia'.",
+  "o_que_fica_de_fora": "Sem fonte conferida para 1956 (antes da obra). A série do Plano Piloto separada só tem 1 ponto conferido (PDAD 2010/2011); as PDADs mais novas e o Censo 1960 por localidade não foram lidos. Ver divergências em RESUMO-POP.md."
+ },
+ "serie": [
+  {
+   "ano": 1957,
+   "pop": 12283,
+   "tipo": "contagem",
+   "nota_territorio": "Área destinada ao futuro DF (ainda Goiás). ~50% em áreas já ocupadas antes (zona rural e cidade de Planaltina). Contagem populacional do IBGE de 1957 — NÃO é o Censo Experimental (que é de 1959). Outra fonte dá 12.700 (ver RESUMO-POP.md).",
+   "fonte_url": "https://ipe.df.gov.br/documents/d/ipedf/trajetoria-das-mulheres-no-distrito-federal-50-anos-de-conquistas-pdf",
+   "fonte_nome": "IPEDF/GDF, 'Trajetória das mulheres no Distrito Federal — 50 anos de conquistas' (mar. 2016): 'Em 1957, segundo a contagem populacional realizada pelo IBGE, já se encontravam na área destinada ao futuro Distrito Federal 12.283 habitantes'",
+   "confianca": "media",
+   "ano_exato": 1957.5,
+   "nota_ano_exato": "contagem do IBGE de 1957 sem mês publicado: posta no meio do ano; antes disso o contador mostra 'sem contagem'"
+  },
+  {
+   "ano": 1958,
+   "pop": 28804,
+   "tipo": "contagem",
+   "ano_exato": 1958.2,
+   "fonte_url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv44769.pdf",
+   "fonte_nome": "ver eventos_novos.json contagem-1958",
+   "nota": "IBGE, Veredas de Brasília (2010), cap. 'Em 1959, o censo experimental na alvorada de Brasília' (L. A. Pinto de Oliveira): 'número que alcançou algo em torno de 500 pessoas no final de dezembro'; 'Em janeiro de 1957 ... cerca de 2 500 pessoas'; 'Em julho de 1957, o IBGE efetuou uma Contagem Populacio",
+   "confianca": "alta"
+  },
+  {
+   "ano": 1959,
+   "data_referencia": "17/05/1959 (1959.37)",
+   "pop": 64314,
+   "tipo": "censo_experimental",
+   "nota_territorio": "Censo Experimental de Brasília, data de referência 17/05/1959; 42.332 homens e 21.982 mulheres (quase 2 homens por mulher).",
+   "fonte_url": "https://ipe.df.gov.br/documents/d/ipedf/trajetoria-das-mulheres-no-distrito-federal-50-anos-de-conquistas-pdf",
+   "fonte_nome": "IPEDF/GDF, 'Trajetória das mulheres no DF' (2016), citando Codeplan 'Evolução dos Movimentos Migratórios para o DF 1959–2010' (2013); mesmo total em Paviani & Barbosa, Boletim Geográfico IBGE nº 235 (1973), que cita 'Censo Experimental de Brasília, Rio de Janeiro, 1959'",
+   "fontes_extra": [
+    "https://biblioteca.ibge.gov.br/visualizacao/periodicos/19/bg_1973_v32_n235_jul_ago.pdf"
+   ],
+   "confianca": "alta",
+   "ano_exato": 1959.37
+  },
+  {
+   "ano": 1960,
+   "pop": 140164,
+   "tipo": "censo",
+   "nota_territorio": "DF inteiro (88.334 urbana + 51.830 rural). A Sinopse Preliminar (1962) dava 141.742, número que a ptwiki usa.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da divisão territorial do Brasil 1872–2010 — Evolução da população segundo os municípios, linha 5300108 Brasília",
+   "confianca": "alta",
+   "ano_exato": 1960.67
+  },
+  {
+   "ano": 1970,
+   "pop": 537492,
+   "tipo": "censo",
+   "nota_territorio": "DF inteiro (516.007 urbana + 21.485 rural). Sinopse Preliminar 1971: 546.015.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população segundo os municípios 1872/2010, linha 5300108",
+   "confianca": "alta"
+  },
+  {
+   "ano": 1980,
+   "pop": 1176908,
+   "tipo": "censo",
+   "nota_territorio": "DF inteiro (1.138.994 urbana + 37.914 rural). ptwiki: 1.203.333 (sem fonte primária lida).",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população segundo os municípios 1872/2010, linha 5300108",
+   "confianca": "alta"
+  },
+  {
+   "ano": 1991,
+   "pop": 1601094,
+   "tipo": "censo",
+   "nota_territorio": "DF inteiro (1.515.889 urbana + 85.205 rural). ptwiki: 1.598.415.",
+   "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_da_populacao_segundo_os_municipios.pdf",
+   "fonte_nome": "IBGE, Evolução da população segundo os municípios 1872/2010, linha 5300108",
+   "confianca": "alta"
+  },
+  {
+   "ano": 2000,
+   "pop": 2051146,
+   "tipo": "censo",
+   "nota_territorio": "DF inteiro. Mesmo número na tabela Evolução e na Sinopse do Censo 2010. ptwiki: 2.043.169.",
+   "fonte_url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv49230.pdf",
+   "fonte_nome": "IBGE, Sinopse do Censo Demográfico 2010 (tabela por capital: Brasília 2.051.146 em 2000) + tabela Evolução 1872/2010",
+   "confianca": "alta"
+  },
+  {
+   "ano": 2010,
+   "pop": 2570160,
+   "tipo": "censo",
+   "nota_territorio": "DF inteiro. A tabela 'Evolução 1872/2010' traz 2.562.963 (2.483.574 urbana + 87.867 rural) — divergência interna do IBGE; vale o número da Sinopse 2010, que é o divulgado como resultado do censo.",
+   "fonte_url": "https://biblioteca.ibge.gov.br/visualizacao/livros/liv49230.pdf",
+   "fonte_nome": "IBGE, Sinopse do Censo Demográfico 2010 (Brasília 2.570.160; taxa 2000/2010 2,28% a.a.)",
+   "confianca": "alta"
+  },
+  {
+   "ano": 2022,
+   "pop": 2817381,
+   "tipo": "censo",
+   "nota_territorio": "DF inteiro. +9,6% sobre 2010.",
+   "fonte_url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Populacao_e_domicilios_Primeiros_resultados/Resultados_da_2a_apuracao_20231027/POP2022_Municipios_Primeiros_Resultados_20231222.pdf",
+   "fonte_nome": "IBGE, Censo Demográfico 2022 — População e Domicílios, Primeiros Resultados (2ª apuração, 22/12/2023), linha DF 53 00108 Brasília; mesmo número na ptwiki",
+   "confianca": "alta"
+  }
+ ],
+ "serie_plano_piloto": [
+  {
+   "ano": 2011,
+   "pop": 214529,
+   "tipo": "pesquisa_amostral",
+   "nota_territorio": "Só a RA I (Plano Piloto), com os limites da RA em 2010/2011 (Sudoeste/Octogonal, Varjão, Lago Sul e Lago Norte já separados). UM ponto só — não é série; não usar no HUD sem outra fonte.",
+   "fonte_url": "https://pt.wikipedia.org/wiki/Plano_Piloto_(Distrito_Federal)",
+   "fonte_nome": "ptwiki 'Plano Piloto (Distrito Federal)', infobox, citando Codeplan PDAD 2010/2011 (PDF da Codeplan não lido: link antigo)",
+   "confianca": "media"
+  }
+ ]
+}

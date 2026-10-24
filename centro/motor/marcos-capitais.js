@@ -277,6 +277,60 @@ ARQ.catetinho = (m, F, cor) => {
   return { M, alt: 7.6, sombra: hp };
 };
 
+// GALPÃO de obra (madeira, telhado de zinco em duas águas, cumeeira ao longo de x): escritórios da Novacap, hospital de madeira, alojamentos
+// m: larg (x), comp (y), pe (altura da parede), n (galpões paralelos), vao (distância entre eles, em y), madeira (cor), zinco (cor)
+ARQ.galpao = (m, F, cor) => {
+  const M = new Malha(), L = m.larg || 40, C = m.comp || 9, pe = m.pe || 3.2, n = m.n || 1, vao = m.vao || C + 6;
+  const mad = hex(m.madeira || '#A9784E'), mad2 = esc(mad, .78), zn = m.zinco ? hex(m.zinco) : P.zinco;
+  const yIni = -((n - 1) * vao) / 2;
+  for (let k = 0; k < n; k++) {
+    const fk = clamp01(F.paredes * n - k);   // os galpões sobem um depois do outro
+    const yc = yIni + k * vao, x0 = -L / 2, x1 = L / 2, y0 = yc - C / 2, y1 = yc + C / 2;
+    if (F.laje > 0) M.caixa(x0 - .4, x1 + .4, y0 - .4, y1 + .4, 0, .3 * F.laje, P.pedra);
+    const hp = pe * fk; if (hp < .05) continue;
+    M.caixa(x0, x1, y0, y1, .3, .3 + hp, { lado: mad, topo: mad2 });
+    if (fk > .9) for (let x = x0 + 2; x < x1 - 1.5; x += 3.2) for (const yy of [y0 - .05, y1 + .05]) M.caixa(x - .6, x + .6, Math.min(yy, yy + (yy < yc ? -.05 : .05)), Math.max(yy, yy + (yy < yc ? -.05 : .05)), 1.4, 2.5, P.vidro);
+    const ft = clamp01(F.telhado * n - k); if (ft <= 0) continue;
+    const zb = .3 + pe, zt = zb + C * .22 * ft, b = .7;
+    M.quad([x0 - b, y0 - b, zb - .2], [x1 + b, y0 - b, zb - .2], [x1 + b, yc, zt], [x0 - b, yc, zt], zn, [0, (y0 + yc) / 2, zb - 3]);
+    M.quad([x0 - b, yc, zt], [x1 + b, yc, zt], [x1 + b, y1 + b, zb - .2], [x0 - b, y1 + b, zb - .2], esc(zn, .9), [0, (yc + y1) / 2, zb - 3]);
+    for (const xx of [x0, x1]) M.tri([xx, y0, zb], [xx, y1, zb], [xx, yc, zt], mad2, [xx + (xx < 0 ? 5 : -5), yc, zb]);
+  }
+  return { M, alt: pe + C * .22 + .3, sombra: pe };
+};
+
+// IGREJINHA (N. S. de Fátima, Brasília 1958): planta triangular, paredes baixas e laje triangular inclinada que sobe até a ponta da frente
+// m: lado (do triângulo), pe (parede), alt (ponta da laje)
+ARQ.igrejinha = (m, F, cor) => {
+  const M = new Malha(), Ld = m.lado || 22, pe = m.pe || 4.5, H = m.alt || 19, br = Q.marmore, az = hex('#3E6E9E');
+  const A = [0, -Ld * .58], B = [Ld / 2, Ld * .29], Cc = [-Ld / 2, Ld * .29];   // A = ponta da frente (−y)
+  if (F.laje > 0) M.caixa(-Ld / 2 - 2, Ld / 2 + 2, -Ld * .58 - 4, Ld * .29 + 2, 0, .3 * F.laje, P.pedra);
+  const hp = pe * F.paredes; if (hp < .05) return { M, alt: .3, sombra: 0 };
+  const pts = [A, B, Cc];
+  for (let i = 0; i < 3; i++) { const p = pts[i], q = pts[(i + 1) % 3]; const k = .82;
+    const p2 = [p[0] * k, p[1] * k], q2 = [q[0] * k, q[1] * k];
+    M.quad([p2[0], p2[1], .3], [q2[0], q2[1], .3], [q2[0], q2[1], .3 + hp], [p2[0], p2[1], .3 + hp], i === 1 ? az : br, [0, 0, hp / 2]); }
+  if (F.telhado > 0) { const zA = .3 + pe + (H - pe) * F.telhado, zb = .3 + pe;
+    M.tri([A[0], A[1], zA], [B[0], B[1], zb], [Cc[0], Cc[1], zb], br, [0, 0, zb - 3]);
+    M.tri([A[0], A[1], zA - .5], [B[0], B[1], zb - .5], [Cc[0], Cc[1], zb - .5], esc(br, .8), [0, 0, zb + 8]);
+    for (const p of pts) M.caixa(p[0] - .3, p[0] + .3, p[1] - .3, p[1] + .3, 0, p === A ? zA : zb, br); }
+  return { M, alt: H, sombra: pe };
+};
+
+// OBELISCO (Pedra Fundamental de 1922): base em degraus e agulha de 4 faces afinando até a ponta
+// m: alt (total), base (lado da base), cor (pedra)
+ARQ.obelisco = (m, F, cor) => {
+  const M = new Malha(), H = m.alt || 3.8, B = m.base || 2.2, pd = hex(m.pedra || '#E8E2D2'), pd2 = esc(pd, .85);
+  if (F.laje > 0) { M.caixa(-B, B, -B, B, 0, .35 * F.laje, pd2); M.caixa(-B * .7, B * .7, -B * .7, B * .7, .35, .35 + .35 * F.laje, pd); }
+  const h = (H - .7) * F.paredes; if (h < .05) return { M, alt: .7, sombra: 0 };
+  const r0 = B * .38, r1 = B * .38 * (1 - .6 * F.paredes), z0 = .7, z1 = z0 + h;
+  const p = [[-r0, -r0], [r0, -r0], [r0, r0], [-r0, r0]], q = [[-r1, -r1], [r1, -r1], [r1, r1], [-r1, r1]];
+  for (let i = 0; i < 4; i++) { const j = (i + 1) % 4;
+    M.quad([p[i][0], p[i][1], z0], [p[j][0], p[j][1], z0], [q[j][0], q[j][1], z1], [q[i][0], q[i][1], z1], i % 2 ? pd : pd2, [0, 0, (z0 + z1) / 2]); }
+  if (F.paredes >= 1) for (let i = 0; i < 4; i++) { const j = (i + 1) % 4; M.tri([q[i][0], q[i][1], z1], [q[j][0], q[j][1], z1], [0, 0, z1 + r1 * 2.2], i % 2 ? pd : pd2, [0, 0, z1 - 1]); }
+  return { M, alt: z1 + r1 * 2.2, sombra: z1 };
+};
+
 
 // ARCOS DE PONTE (Ponte JK): n arcos de aço em diagonal sobre o tabuleiro, alternando o lado; o tabuleiro corre ao longo de y
 // m: comp (tabuleiro), n (arcos), alt (altura do arco acima do tabuleiro), larg (tabuleiro), z_tab (altura do tabuleiro sobre a água)

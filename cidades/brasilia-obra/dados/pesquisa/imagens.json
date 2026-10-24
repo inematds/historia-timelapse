@@ -1,0 +1,159 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "metodo": "Candidatos achados pelas páginas HTML de categoria do Commons (Category:Brasília_in_the_1950s, 1957/1958/1959/1960/1967_in_Brasília, Opening_of_Brasília) e por Special:Search (ns6) em HTML, sem API. Cada arquivo teve a página HTML https://commons.wikimedia.org/wiki/File:<arquivo> aberta em 22/10/2026; data, autor e licença lidos da própria página (Summary e Licensing). Todas são do acervo do Arquivo Nacional (parceria GLAM Arquivo Nacional + Wikimedia Brasil). Download: https://commons.wikimedia.org/wiki/Special:FilePath/<arquivo>?width=1600, convertido para JPG RGB (PIL, qualidade 90), no máximo 1600 px de largura; todas com ≥ 1243 px. Conferidas visualmente numa folha de contato.",
+    "fora_do_dp": "Croqui do Plano Piloto de Lúcio Costa (m. 1998): não é DP, não procurado/baixado. Fotos da 'Arquivo da Agência Brasil' (Arquivo_da_Agência_Brasil_-_Brasília_12/15.jpg, 2016) e Palácio_da_Alvorada_durante_construção.jpg (reprodução de 2010) têm licença Agência Brasil (CC BY), não DP — descartadas. 0741_NOV_B_05_Esplanada_dos_Ministerios_Brasilia_DF_03_09_1959.jpg: licença livre do carregador, não DP — descartada. Brasília_1_-_BR_RJANRIO_PH_0_FOT_00694_0005 (1957, DP) só tem 432 px — descartada. Foto_de_construção_do_Congresso_Nacional_…00742_0003 (DP, 939 px) — trocada por imagem melhor. Torre de TV (1967), Itamaraty e Ponte JK (2002): não achei foto DP no Commons; as fotos recentes são CC BY/CC BY-SA. Catedral em estrutura: Catedral_de_Brasília_Primeira_Missa_-_BR_RJANRIO_PH_0_FOT_00694_0051 (DP) mostra a estrutura da Catedral com multidão, mas a página dá 1957, impossível (a estrutura é de 1959–60) — não usada.",
+    "atencao": "e00: a série 'Presidente Juscelino Kubitschek … fora do Palácio da Alvorada - visita Brasília' (Fundo Agência Nacional) tem títulos/data genéricos (data '1956' da série); 'Catetinho (1)' mostra na verdade o prédio do Banco Nacional, então os títulos dessa série não são confiáveis. A e00 (Catetinho (3)) mostra o prédio de madeira sobre pilotis que corresponde ao Catetinho, mas trate o ano 1956 como aproximado. e04: página dá 'Unknown date'; o ano 1958 (junho) vem só do título. e12: página dá 22/04/1960 (a inauguração foi em 21/04; o hasteamento pode ter sido no dia seguinte ou a data estar um dia off). e03: 'Photographer: Agência Nacional', mas descrição diz Fundo Correio da Manhã — conflito na própria página. Licença: e00, e05, e07, e08 = PD-Arquivo Nacional + PD-Brazil-URAA (foto documental anterior a 1998); as demais (Fundo Correio da Manhã) = PD-Arquivo Nacional + PD-BrazilGov."
+  },
+  "imagens": [
+    {
+      "arquivo": "Presidente_Juscelino_Kubitschek_de_Oliveira_(1956-1961)_fora_do_Palácio_da_Alvorada_-_visita_Brasília_-_Catetinho_(3).jpg",
+      "arquivo_local": "e00.jpg",
+      "descricao": "O Catetinho, 'palácio de tábuas' sobre pilotis no cerrado, primeira residência presidencial em Brasília; oficial em primeiro plano",
+      "ano": 1956,
+      "autor": "Agência Nacional (fotógrafo não identificado), Fundo Agência Nacional, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-Brazil-URAA)",
+      "url": "https://commons.wikimedia.org/wiki/File:Presidente_Juscelino_Kubitschek_de_Oliveira_(1956-1961)_fora_do_Palácio_da_Alvorada_-_visita_Brasília_-_Catetinho_(3).jpg",
+      "uso_sugerido": "abertura 1956: o Catetinho, primeira construção da nova capital"
+    },
+    {
+      "arquivo": "Trabalhadores_da_construção_de_Brasília_-_BR_RJANRIO_PH_0_FOT_02937_0001,_Acervo_do_Arquivo_Nacional.jpg",
+      "arquivo_local": "e01.jpg",
+      "descricao": "Trabalhadores da construção de Brasília (candangos) comendo em mesa comprida no refeitório do canteiro",
+      "ano": 1957,
+      "data": "1957-03-14",
+      "autor": "Fotógrafo desconhecido, Fundo Correio da Manhã, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-BrazilGov)",
+      "url": "https://commons.wikimedia.org/wiki/File:Trabalhadores_da_construção_de_Brasília_-_BR_RJANRIO_PH_0_FOT_02937_0001,_Acervo_do_Arquivo_Nacional.jpg",
+      "uso_sugerido": "candangos: quem construiu a cidade"
+    },
+    {
+      "arquivo": "Primeira_missa_de_Brasília_-_BR_RJANRIO_PH_0_FOT_00694_0090,_Acervo_do_Arquivo_Nacional.jpg",
+      "arquivo_local": "e02.jpg",
+      "descricao": "Primeira missa de Brasília: altar ao ar livre com cruz de madeira, bispo e multidão",
+      "ano": 1957,
+      "data": "1957-05-01",
+      "autor": "Fotógrafo desconhecido, Fundo Correio da Manhã, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-BrazilGov)",
+      "url": "https://commons.wikimedia.org/wiki/File:Primeira_missa_de_Brasília_-_BR_RJANRIO_PH_0_FOT_00694_0090,_Acervo_do_Arquivo_Nacional.jpg",
+      "uso_sugerido": "1957: primeira missa no planalto, ainda cerrado"
+    },
+    {
+      "arquivo": "Brasília_-_BR_RJANRIO_PH_0_FOT_00746_0003,_Acervo_do_Arquivo_Nacional.jpg",
+      "arquivo_local": "e03.jpg",
+      "descricao": "Brasília em 1957: casas e galpões do acampamento entre árvores do cerrado, cercas e terra revolvida",
+      "ano": 1957,
+      "data": "1957-07-29",
+      "autor": "Agência Nacional (campo 'Photographer'); Fundo Correio da Manhã, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-BrazilGov)",
+      "url": "https://commons.wikimedia.org/wiki/File:Brasília_-_BR_RJANRIO_PH_0_FOT_00746_0003,_Acervo_do_Arquivo_Nacional.jpg",
+      "uso_sugerido": "primeiros trabalhos: o cerrado virando canteiro"
+    },
+    {
+      "arquivo": "Levantamento_aerofotográfico_de_Brasília_em_junho_de_1958_-_BR_RJANRIO_PH_0_FOT_00743_0004,_Acervo_do_Arquivo_Nacional.jpg",
+      "arquivo_local": "e04.jpg",
+      "descricao": "Levantamento aerofotográfico de Brasília em junho de 1958: os eixos do Plano Piloto riscados no cerrado",
+      "ano": 1958,
+      "autor": "Fotógrafo desconhecido, Fundo Correio da Manhã, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-BrazilGov)",
+      "url": "https://commons.wikimedia.org/wiki/File:Levantamento_aerofotográfico_de_Brasília_em_junho_de_1958_-_BR_RJANRIO_PH_0_FOT_00743_0004,_Acervo_do_Arquivo_Nacional.jpg",
+      "uso_sugerido": "vista aérea 1958: o desenho do Plano Piloto aparecendo no chão (casa com o mapa 3D)"
+    },
+    {
+      "arquivo": "Palácio_da_Alvorada_(3).jpg",
+      "arquivo_local": "e05.jpg",
+      "descricao": "Palácio da Alvorada recém-concluído, com as colunas de Niemeyer, em terreno ainda sem jardim",
+      "ano": 1958,
+      "autor": "Agência Nacional (fotógrafo não identificado), Fundo Agência Nacional, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-Brazil-URAA)",
+      "url": "https://commons.wikimedia.org/wiki/File:Palácio_da_Alvorada_(3).jpg",
+      "uso_sugerido": "1958: Palácio da Alvorada, primeiro palácio pronto"
+    },
+    {
+      "arquivo": "Cúpula_do_Senado_Federal_-_BR_RJANRIO_PH_0_FOT_00742_0006,_Acervo_do_Arquivo_Nacional.jpg",
+      "arquivo_local": "e06.jpg",
+      "descricao": "Cúpula do Senado Federal em concreto, em obra, com escadas e pessoas no topo",
+      "ano": 1959,
+      "data": "1959-01-26",
+      "autor": "Fotógrafo desconhecido, Fundo Correio da Manhã, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-BrazilGov)",
+      "url": "https://commons.wikimedia.org/wiki/File:Cúpula_do_Senado_Federal_-_BR_RJANRIO_PH_0_FOT_00742_0006,_Acervo_do_Arquivo_Nacional.jpg",
+      "uso_sugerido": "Congresso em construção: a cúpula do Senado"
+    },
+    {
+      "arquivo": "Construção_do_Congresso_Nacional_Esplanada_dos_Ministérios_1959-10.jpg",
+      "arquivo_local": "e07.jpg",
+      "descricao": "Obras do Congresso Nacional: as duas torres em estrutura com andaimes, grupo de visitantes caminhando no canteiro",
+      "ano": 1959,
+      "autor": "Agência Nacional (fotógrafo não identificado), Fundo Agência Nacional, Arquivo Nacional (BR_RJANRIO_EH_0_FOT_EVE_01691_0017)",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-Brazil-URAA)",
+      "url": "https://commons.wikimedia.org/wiki/File:Construção_do_Congresso_Nacional_Esplanada_dos_Ministérios_1959-10.jpg",
+      "uso_sugerido": "Congresso em construção: as torres subindo"
+    },
+    {
+      "arquivo": "Construção_de_Brasília_1959-Ministérios-1.jpg",
+      "arquivo_local": "e08.jpg",
+      "descricao": "Obras de construção dos Ministérios: blocos da Esplanada no descampado",
+      "ano": 1959,
+      "autor": "Agência Nacional (fotógrafo não identificado), Fundo Agência Nacional, Arquivo Nacional (BR_RJANRIO_EH_0_FOT_EVE_01706_0001)",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-Brazil-URAA)",
+      "url": "https://commons.wikimedia.org/wiki/File:Construção_de_Brasília_1959-Ministérios-1.jpg",
+      "uso_sugerido": "Esplanada dos Ministérios em obra"
+    },
+    {
+      "arquivo": "Lago_Paranoá_-_BR_RJANRIO_PH_0_FOT_00694_0089,_Acervo_do_Arquivo_Nacional.jpg",
+      "arquivo_local": "e09.jpg",
+      "descricao": "Lago Paranoá enchendo, com troncos e restos de vegetação na água",
+      "ano": 1960,
+      "data": "1960-04-01",
+      "autor": "Fotógrafo desconhecido, Fundo Correio da Manhã, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-BrazilGov)",
+      "url": "https://commons.wikimedia.org/wiki/File:Lago_Paranoá_-_BR_RJANRIO_PH_0_FOT_00694_0089,_Acervo_do_Arquivo_Nacional.jpg",
+      "uso_sugerido": "1960: o lago artificial se forma às vésperas da inauguração"
+    },
+    {
+      "arquivo": "Inauguração_de_Brasília_-_BR_RJANRIO_PH_0_FOT_00749_0084,_Acervo_do_Arquivo_Nacional.jpg",
+      "arquivo_local": "e10.jpg",
+      "descricao": "Inauguração de Brasília: fila de gente numa avenida, cruz ao fundo e prédios da Esplanada",
+      "ano": 1960,
+      "data": "1960-04-21",
+      "autor": "Fotógrafo desconhecido, Fundo Correio da Manhã, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-BrazilGov)",
+      "url": "https://commons.wikimedia.org/wiki/File:Inauguração_de_Brasília_-_BR_RJANRIO_PH_0_FOT_00749_0084,_Acervo_do_Arquivo_Nacional.jpg",
+      "uso_sugerido": "21/04/1960: o povo na inauguração"
+    },
+    {
+      "arquivo": "Missa_de_inauguração_de_Brasília_-_BR_RJANRIO_PH_0_FOT_00749_0017,_Acervo_do_Arquivo_Nacional.jpg",
+      "arquivo_local": "e11.jpg",
+      "descricao": "Missa de inauguração de Brasília: autoridades sentadas diante do altar, clero e multidão atrás",
+      "ano": 1960,
+      "data": "1960-04-21",
+      "autor": "Fotógrafo desconhecido, Fundo Correio da Manhã, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-BrazilGov)",
+      "url": "https://commons.wikimedia.org/wiki/File:Missa_de_inauguração_de_Brasília_-_BR_RJANRIO_PH_0_FOT_00749_0017,_Acervo_do_Arquivo_Nacional.jpg",
+      "uso_sugerido": "21/04/1960: missa de inauguração"
+    },
+    {
+      "arquivo": "JK_hasteando_a_bandeira_na_inauguração_de_Brasília_-_BR_RJANRIO_PH_0_FOT_00749_0010,_Acervo_do_Arquivo_Nacional.jpg",
+      "arquivo_local": "e12.jpg",
+      "descricao": "Juscelino Kubitschek hasteando a bandeira na inauguração de Brasília, torres do Congresso ao fundo",
+      "ano": 1960,
+      "data": "1960-04-22 (data da página)",
+      "autor": "Fotógrafo desconhecido, Fundo Correio da Manhã, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-BrazilGov)",
+      "url": "https://commons.wikimedia.org/wiki/File:JK_hasteando_a_bandeira_na_inauguração_de_Brasília_-_BR_RJANRIO_PH_0_FOT_00749_0010,_Acervo_do_Arquivo_Nacional.jpg",
+      "uso_sugerido": "JK em Brasília: a capital inaugurada"
+    },
+    {
+      "arquivo": "Catedra_de_Brasília_-_BR_RJANRIO_PH_0_FOT_00743_0026,_Acervo_do_Arquivo_Nacional.jpg",
+      "arquivo_local": "e13.jpg",
+      "descricao": "Catedral de Brasília pronta, com estátua à frente",
+      "ano": 1970,
+      "data": "1970-05-01",
+      "autor": "Fotógrafo desconhecido, Fundo Correio da Manhã, Arquivo Nacional",
+      "licenca": "Domínio público (PD-Arquivo Nacional / PD-BrazilGov)",
+      "url": "https://commons.wikimedia.org/wiki/File:Catedra_de_Brasília_-_BR_RJANRIO_PH_0_FOT_00743_0026,_Acervo_do_Arquivo_Nacional.jpg",
+      "uso_sugerido": "1970: a Catedral pronta"
+    }
+  ]
+}

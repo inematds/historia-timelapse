@@ -1,0 +1,177 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-24",
+    "metodo": "Busca pela página HTML Special:Search do Commons (ns6); cada arquivo teve a página HTML https://commons.wikimedia.org/wiki/File:<arquivo> aberta em 24/10/2026, e data, autor e licença foram lidos dela (Summary/Licensing). Download por https://commons.wikimedia.org/wiki/Special:FilePath/<arquivo>?width=1600 (User-Agent do projeto), convertido para JPG RGB qualidade 90, no máximo 1600 px de largura. Conferidas numa folha de contato.",
+    "descartadas": "'23 11 2023 - -TBT A vida operária da Vila Planalto (53350972094).jpg' (CC BY 2.0 da Agência Brasília, mas a foto é 'Divulgação/Arquivo Público DF' e mostra a 'Prefeitura Comunitária da Vila Planalto — sede provisória', que não é da época da obra). Fotos de Gautherot e croqui de Lúcio Costa: não buscados. Planaltina antiga (antes de 1956), Vila Amaury, Ermida em 1957, sede da Novacap na Candangolândia e Vila Planalto da época: nenhuma foto em domínio público achada no Commons.",
+    "alerta": "n03, n04 e n13 são fotos ATUAIS de lugares antigos (não usar como 'imagem da época'). n07/n08 são de 1960, depois do fechamento da barragem (12/09/1959)."
+  },
+  "imagens": [
+    {
+      "arquivo": "n00.jpg",
+      "arquivo_commons": "Morize - Comissão Cruls.jpg",
+      "ano": 1894,
+      "titulo": "Membros da Comissão Exploradora do Planalto Central (Missão Cruls), em grupo diante de um muro de pedra",
+      "autor": "Henrique Charles Morize (1860–1930) / Heliog. Dujardin",
+      "licenca": "Domínio público (PD-old / PDM)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Morize_-_Comiss%C3%A3o_Cruls.jpg",
+      "evento_id": "cruls-mestre-darmas-1892",
+      "obs": "mesmo arquivo de cidades/capitais-rio/assets/epoca/e07.jpg (baixado de novo a 1600 px)"
+    },
+    {
+      "arquivo": "n01.jpg",
+      "arquivo_commons": "Morize - Comissão Cruls - acampamento.jpg",
+      "ano": 1894,
+      "titulo": "Acampamento da Comissão Exploradora às margens do rio Paranaíba: barracas, tropa e uma canoa",
+      "autor": "Henrique Morize (m. 1930)",
+      "licenca": "Domínio público (PD-old / PDM)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Morize_-_Comiss%C3%A3o_Cruls_-_acampamento.jpg",
+      "evento_id": "relatorio-cruls-1894",
+      "baixa_resolucao": true,
+      "obs": "620 × 435 px (é o tamanho original no Commons); rio Paranaíba, fora do DF"
+    },
+    {
+      "arquivo": "n02.jpg",
+      "arquivo_commons": "Quadrilatero-cruls.jpg",
+      "ano": 1894,
+      "titulo": "Esboço da zona de 14.400 km² demarcada no Planalto Central para o Distrito Federal, com os caminhamentos entre Pirenópolis, Santa Luzia e Formosa",
+      "autor": "Dr. Antonio Pimentel (livro 'A Nova Capital Federal e o Planalto Central do Brazil', mapa dobrável)",
+      "licenca": "Domínio público (PD-US / PD-old)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Quadrilatero-cruls.jpg",
+      "evento_id": "quadrilatero-cruls-1892",
+      "baixa_resolucao": true,
+      "obs": "478 × 352 px (original); insubstituível — único mapa do quadrilátero achado em DP"
+    },
+    {
+      "arquivo": "n03.jpg",
+      "arquivo_commons": "Pedra Fundamental de Brasília (17176328022).jpg",
+      "ano": 2015,
+      "titulo": "Foto atual: o obelisco da Pedra Fundamental no Morro do Centenário, Planaltina",
+      "autor": "Gabriel Jabur / Agência Brasília",
+      "licenca": "CC BY 2.0",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Pedra_Fundamental_de_Bras%C3%ADlia_(17176328022).jpg",
+      "evento_id": "pedra-fundamental-planalto-1922",
+      "obs": "foto de 17/04/2015; crédito obrigatório"
+    },
+    {
+      "arquivo": "n04.jpg",
+      "arquivo_commons": "IgrejaSSebastiao 01.jpg",
+      "ano": 2015,
+      "titulo": "Foto atual: a Igreja de São Sebastião, em Planaltina — capela térrea branca com portas azuis",
+      "autor": "Tony Winston / Agência Brasília",
+      "licenca": "CC BY 2.0",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:IgrejaSSebastiao_01.jpg",
+      "evento_id": "igreja-sao-sebastiao-planaltina",
+      "obs": "foto de 20/08/2015; crédito obrigatório. Alternativa CC0: 'Igrejinha de São Sebastião em Planaltina 2.jpg' (Adeilton O. de Souza, 2024, vista aérea) — não baixada; o arquivo irmão está na categoria 'Planaltina (Goiás)', então conferir se é Planaltina-DF antes de usar"
+    },
+    {
+      "arquivo": "n05.jpg",
+      "arquivo_commons": "Vistas de Brasília - NOVACAP - Departamento de Viação e Obras.jpg",
+      "ano": 1958,
+      "titulo": "Barracão de madeira da Novacap com a placa 'Departamento de Viação e Obras' e um grupo de homens na frente",
+      "autor": "Agência Nacional (Fundo Agência Nacional, Arquivo Nacional)",
+      "licenca": "Domínio público (Arquivo Nacional)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Vistas_de_Bras%C3%ADlia_-_NOVACAP_-_Departamento_de_Via%C3%A7%C3%A3o_e_Obras.jpg",
+      "evento_id": "novacap-sede-1956",
+      "obs": "o local exato do barracão não está na página (pode ser na Candangolândia, não confirmado)"
+    },
+    {
+      "arquivo": "n06.jpg",
+      "arquivo_commons": "Vistas de Brasília - Israel Pinheiro apresenta o projeto de construção de Brasília.jpg",
+      "ano": 1960,
+      "titulo": "Vala de fundação e estruturas metálicas de prédios em obra (o título do arquivo cita Israel Pinheiro, que não aparece)",
+      "autor": "Agência Nacional (Fundo Agência Nacional, Arquivo Nacional)",
+      "licenca": "Domínio público (Arquivo Nacional)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Vistas_de_Bras%C3%ADlia_-_Israel_Pinheiro_apresenta_o_projeto_de_constru%C3%A7%C3%A3o_de_Bras%C3%ADlia.jpg",
+      "evento_id": "novacap-sede-1956",
+      "obs": "título e imagem não batem; usar como 'obra em andamento', sem citar Israel Pinheiro"
+    },
+    {
+      "arquivo": "n07.jpg",
+      "arquivo_commons": "Construção barragem Lago Paranoá 1960-1.jpg",
+      "ano": 1960,
+      "titulo": "Estrada de terra sobre a crista da barragem do Paranoá, com o lago à esquerda",
+      "autor": "Agência Nacional (Fundo Agência Nacional, Arquivo Nacional)",
+      "licenca": "Domínio público (Arquivo Nacional)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Constru%C3%A7%C3%A3o_barragem_Lago_Parano%C3%A1_1960-1.jpg",
+      "evento_id": "barragem-paranoa-obra-1957",
+      "obs": "foto de 1960, posterior ao fechamento (12/09/1959)"
+    },
+    {
+      "arquivo": "n08.jpg",
+      "arquivo_commons": "Construção barragem Lago Paranoá 1960-2.jpg",
+      "ano": 1960,
+      "titulo": "O lago já formado e a barragem ao fundo, vistos de um morro com cerrado",
+      "autor": "Agência Nacional (Fundo Agência Nacional, Arquivo Nacional)",
+      "licenca": "Domínio público (Arquivo Nacional)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Constru%C3%A7%C3%A3o_barragem_Lago_Parano%C3%A1_1960-2.jpg",
+      "evento_id": "barragem-paranoa-obra-1957",
+      "obs": "1960; serve também para lago-paranoa-1959 de eventos.json"
+    },
+    {
+      "arquivo": "n09.jpg",
+      "arquivo_commons": "Igreja de Nossa Senhora de Fátima - BR RJANRIO PH 0 FOT 00694 0053, Acervo do Arquivo Nacional.jpg",
+      "ano": 1958,
+      "titulo": "A Igrejinha de Fátima recém-pronta, com a laje triangular, e o povo na entrada",
+      "autor": "desconhecido (Fundo Correio da Manhã, Arquivo Nacional)",
+      "licenca": "Domínio público (Arquivo Nacional)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Igreja_de_Nossa_Senhora_de_F%C3%A1tima_-_BR_RJANRIO_PH_0_FOT_00694_0053,_Acervo_do_Arquivo_Nacional.jpg",
+      "evento_id": "fatima-1958",
+      "obs": "data na página: 01/07/1958"
+    },
+    {
+      "arquivo": "n10.jpg",
+      "arquivo_commons": "Desmatamento para construção da Rodovia Belém-Brasília e região amazônica.jpg",
+      "ano": 1959,
+      "titulo": "Trator abre a mata para a Rodovia Belém–Brasília",
+      "autor": "Agência Nacional (Fundo Agência Nacional, Arquivo Nacional)",
+      "licenca": "Domínio público (Arquivo Nacional)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Desmatamento_para_constru%C3%A7%C3%A3o_da_Rodovia_Bel%C3%A9m-Bras%C3%ADlia_e_regi%C3%A3o_amaz%C3%B4nica.jpg",
+      "evento_id": "belem-brasilia-1958",
+      "obs": ""
+    },
+    {
+      "arquivo": "n11.jpg",
+      "arquivo_commons": "Estação ferroviária de Anápolis (GO).tif",
+      "ano": 1958,
+      "titulo": "A estação ferroviária de Anápolis, ponta dos trilhos mais perto do canteiro",
+      "autor": "desconhecido (Fundo Correio da Manhã, Arquivo Nacional)",
+      "licenca": "Domínio público (Arquivo Nacional)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Esta%C3%A7%C3%A3o_ferrovi%C3%A1ria_de_An%C3%A1polis_(GO).tif",
+      "evento_id": "rota-anapolis",
+      "obs": "tirada em setembro de 1958; original TIF, baixado como JPG de 1280 px (thumbnail do Commons)"
+    },
+    {
+      "arquivo": "n12.jpg",
+      "arquivo_commons": "0140 NOV B 01 Matriz da Igreja Sao Joao Bosco Nucleo Bandeirante DF 1957 1960.jpg",
+      "ano": 1957,
+      "titulo": "A primeira igreja da Cidade Livre (Núcleo Bandeirante), galpão de madeira com torre e cruz",
+      "autor": "Mário Fontenelle (atribuída) / Arquivo Público do Distrito Federal",
+      "licenca": "CC BY-SA 4.0",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:0140_NOV_B_01_Matriz_da_Igreja_Sao_Joao_Bosco_Nucleo_Bandeirante_DF_1957_1960.jpg",
+      "evento_id": "cidade-livre-1956",
+      "obs": "evento de eventos.json; crédito e compartilhamento pela mesma licença obrigatórios; autoria 'atribuída' — conferir antes de publicar"
+    },
+    {
+      "arquivo": "n13.jpg",
+      "arquivo_commons": "Remanescentes do Conjunto Hospitalar Juscelino Kubitschek de Oliveira.tif",
+      "ano": 2017,
+      "titulo": "Foto atual: pátio e galpões de madeira restaurados do antigo Hospital JK (Museu Vivo da Memória Candanga)",
+      "autor": "Gabriel de Abreu Costa Pinto",
+      "licenca": "CC BY-SA 4.0",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:Remanescentes_do_Conjunto_Hospitalar_Juscelino_Kubitschek_de_Oliveira.tif",
+      "evento_id": "hjko-1957",
+      "obs": "foto de 28/09/2017; original TIF de 51 MB, baixado como JPG 1600 px"
+    },
+    {
+      "arquivo": "n14.jpg",
+      "arquivo_commons": "JK discursando depois de sancionar a lei que fixa o dia da mudança para Brasília - BR RJANRIO PH 0 FOT 00749 0062, Acervo do Arquivo Nacional.jpg",
+      "ano": 1957,
+      "titulo": "JK discursa num salão cheio, depois de sancionar a lei que fixa o dia da mudança para Brasília",
+      "autor": "desconhecido (Fundo Correio da Manhã, Arquivo Nacional)",
+      "licenca": "Domínio público (Arquivo Nacional)",
+      "url_pagina_commons": "https://commons.wikimedia.org/wiki/File:JK_discursando_depois_de_sancionar_a_lei_que_fixa_o_dia_da_mudan%C3%A7a_para_Bras%C3%ADlia_-_BR_RJANRIO_PH_0_FOT_00749_0062,_Acervo_do_Arquivo_Nacional.jpg",
+      "evento_id": "lei-3273-1957",
+      "obs": "data na página: 02/10/1957 (lei de 01/10/1957); o local não está na página"
+    }
+  ]
+}

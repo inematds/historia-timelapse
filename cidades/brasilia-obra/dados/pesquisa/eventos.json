@@ -1,0 +1,847 @@
+{
+ "_meta": {
+  "gerado_em": "2026-10-22",
+  "coordenadas": "lat/lon de páginas HTML da Wikipédia (wgCoordinates, infobox ou link geohack) — local.coord_fonte diz qual. Nenhuma coordenada inventada. Lugar sem coordenada publicada → ponto publicado mais próximo, marcado 'aproximação'. Todos dentro do bbox do config (lon -48.12 a -47.60, lat -15.95 a -15.55).",
+  "nota": "28 eventos de 1956 a 2022 + 10 de reserva (2023 só na reserva). Títulos ≤ 30 caracteres (MAIÚSCULAS), legenda ≤ 95, detalhe ≤ 220 — validados por script local. Fontes lidas como página HTML (pt/en.wikipedia.org/wiki/…, vitruvius.com.br, camara.leg.br, PDFs de artigos); nenhuma API.",
+  "anos_fracionados": "ano com fração = mês/dia (ex.: 1960.3 = 21 de abril, a mesma convenção do Rio), só para ordenar eventos do mesmo ano. Na tela mostrar só o ano inteiro.",
+  "antes_de_1956": "Cruls (1892–1894, Quadrilátero de 14.400 km²) e a pedra fundamental de 1922 ficam no ato do Rio; aqui só como referência no detalhe do 1º evento.",
+  "fora_do_bbox": "Gama (lat -16.02) e Santa Maria/Brazlândia ficam fora — o Gama entra só no detalhe do evento das cidades-satélites de 1960. A Fazenda do Gama (pouso de JK em 2/10/1956) não tem coordenada publicada: usado o Catetinho como aproximação.",
+  "imagens": "eNN = cidades/capitais-bsb/assets/epoca/eNN.jpg (ver imagens.json)."
+ },
+ "eventos": [
+  {
+   "id": "novacap-1956",
+   "ano": 1956.72,
+   "data_exata": "19/09/1956 (Lei nº 2.874)",
+   "titulo_curto_PT": "NASCE A NOVACAP",
+   "legenda": "JK sanciona a lei que cria a Novacap: Israel Pinheiro preside, Niemeyer é o arquiteto",
+   "detalhe": "No cerrado vazio do Planalto Central, a companhia vai erguer a capital que a Constituição mandava mudar desde 1891. A Missão Cruls já tinha demarcado o quadrilátero em 1892–94.",
+   "local": {
+    "nome": "Candangolândia (galpões e alojamentos da Novacap)",
+    "lat": -15.854444,
+    "lon": -47.95,
+    "coord_fonte": "enwiki Candangolândia (wgCoordinates) — aproximação: a ptwiki Candango diz que a Novacap 'se instalou na região da atual Candangolândia'"
+   },
+   "recurso_visual": "mapa só de relevo e cerrado, sem nenhuma rua; rótulo 'NOVACAP' no ponto dos galpões",
+   "numero_impacto": "LEI 2.874",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Companhia_Urbanizadora_da_Nova_Capital",
+    "https://pt.wikipedia.org/wiki/Construção_de_Brasília",
+    "https://pt.wikipedia.org/wiki/Candango"
+   ],
+   "confianca": "alta",
+   "obs": "Data e lei na infobox e no texto da ptwiki Novacap; Construção de Brasília: 'A Novacap foi regulamentada em lei de 19 de setembro'."
+  },
+  {
+   "id": "jk-primeira-visita-1956",
+   "ano": 1956.75,
+   "data_exata": "02/10/1956",
+   "titulo_curto_PT": "JK PISA NO CERRADO",
+   "legenda": "Na 1ª visita ao sítio da capital, o presidente dorme na Fazenda do Gama: não há onde ficar",
+   "detalhe": "Quinze dias depois surge a ideia de uma casa provisória de madeira para o presidente e a Novacap — o futuro Catetinho.",
+   "local": {
+    "nome": "Fazenda do Gama (aproximação: Catetinho, na mesma região)",
+    "lat": -15.9475,
+    "lon": -47.988333,
+    "coord_fonte": "ptwiki Catetinho (geohack) — aproximação"
+   },
+   "recurso_visual": "câmera desce sobre o cerrado; um ponto de luz no sul do mapa",
+   "numero_impacto": "2/10/1956",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Catetinho",
+    "https://pt.wikipedia.org/wiki/Gama_(Distrito_Federal)"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Catetinho: 'JK teve que se abrigar provisoriamente na Fazenda do Gama em 2 de outubro de 1956'; ptwiki Gama: '02 de outubro de 1956, na ocasião de sua primeira visita à região'."
+  },
+  {
+   "id": "catetinho-1956",
+   "ano": 1956.86,
+   "data_exata": "10/11/1956 (obra de 22 a 31/10/1956)",
+   "titulo_curto_PT": "PALÁCIO DE TÁBUAS EM 10 DIAS",
+   "legenda": "O Catetinho, de Niemeyer, é a 1ª residência oficial do presidente no cerrado",
+   "detalhe": "Casa de madeira sobre pilotis, erguida por cerca de vinte homens em dez dias. O nome brinca com o Palácio do Catete, sede do governo no Rio.",
+   "local": {
+    "nome": "Catetinho",
+    "lat": -15.9475,
+    "lon": -47.988333,
+    "coord_fonte": "ptwiki Catetinho (geohack 15_56_51_S_47_59_18_W)"
+   },
+   "recurso_visual": "o Catetinho (modelo 3D de madeira) nasce no sul do mapa; foto e00",
+   "numero_impacto": "10 DIAS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Catetinho"
+   ],
+   "confianca": "alta",
+   "obs": "'O projeto temporário foi desenvolvido durante dez dias (entre 22 e 31 de outubro de 1956)… inaugurado em 10 de novembro de 1956'; 'aproximadamente vinte homens'."
+  },
+  {
+   "id": "cidade-livre-1956",
+   "ano": 1956.97,
+   "data_exata": "19/12/1956",
+   "titulo_curto_PT": "A CIDADE LIVRE",
+   "legenda": "Nasce o acampamento comercial dos operários, hoje Núcleo Bandeirante",
+   "detalhe": "Casas simples de madeira erguidas para os trabalhadores migrantes; era o centro comercial pulsante do canteiro. Devia ser removida depois da obra — ficou.",
+   "local": {
+    "nome": "Núcleo Bandeirante (Cidade Livre)",
+    "lat": -15.87,
+    "lon": -47.967778,
+    "coord_fonte": "ptwiki Núcleo Bandeirante (wgCoordinates)"
+   },
+   "recurso_visual": "mancha de casinhas de madeira acende no sudoeste",
+   "numero_impacto": "1956",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Núcleo_Bandeirante",
+    "https://pt.wikipedia.org/wiki/Construção_de_Brasília",
+    "https://pt.wikipedia.org/wiki/Candango"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Núcleo Bandeirante: 'Em 19 de dezembro de 1956, foi implementada a Cidade Livre'."
+  },
+  {
+   "id": "plano-piloto-1957",
+   "ano": 1957.2,
+   "data_exata": "16/03/1957 (resultado do concurso)",
+   "titulo_curto_PT": "O SINAL DA CRUZ",
+   "legenda": "Lúcio Costa vence o concurso do Plano Piloto com dois eixos que se cruzam em ângulo reto",
+   "detalhe": "Foram 26 propostas. O Eixo Monumental leva os palácios; o Rodoviário, curvo, leva as superquadras das asas Sul e Norte. O júri foi unânime.",
+   "local": {
+    "nome": "Marco Zero (cruzamento dos eixos, hoje Rodoviária)",
+    "lat": -15.793389,
+    "lon": -47.882611,
+    "coord_fonte": "ptwiki Rodoviária do Plano Piloto (infobox) — o Marco Zero fica sob a Rodoviária (ptwiki Marco zero)"
+   },
+   "recurso_visual": "os dois eixos riscados no cerrado (eixos.json): primeiro a reta leste–oeste, depois o arco norte–sul",
+   "numero_impacto": "26 PROJETOS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Concurso_para_o_Plano_Piloto_de_Brasília",
+    "https://pt.wikipedia.org/wiki/Construção_de_Brasília",
+    "https://pt.wikipedia.org/wiki/Marco_zero_de_Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "Construção de Brasília: 'No dia 16 foi apresentado oficialmente como vencedor o plano de Lúcio Costa, em votação unânime.' Concurso: '26 propostas foram apresentadas e validadas' (62 inscritos)."
+  },
+  {
+   "id": "primeira-missa-1957",
+   "ano": 1957.337,
+   "data_exata": "03/05/1957",
+   "titulo_curto_PT": "A PRIMEIRA MISSA",
+   "legenda": "Missa campal no ponto mais alto do Plano Piloto, onde hoje está o Memorial JK",
+   "detalhe": "Celebrada por Dom Carlos Carmelo de Vasconcelos Mota na Praça do Cruzeiro, com uma grande cruz de madeira. No mesmo dia abriu o aeroporto.",
+   "local": {
+    "nome": "Praça do Cruzeiro (Memorial JK)",
+    "lat": -15.784358,
+    "lon": -47.913081,
+    "coord_fonte": "ptwiki Memorial JK (infobox)"
+   },
+   "recurso_visual": "cruz pequena acende na ponta oeste do Eixo Monumental; foto e02",
+   "numero_impacto": "3/5/1957",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Memorial_JK"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Memorial JK: 'no dia 3 de maio de 1957 foi celebrada a primeira missa de Brasília'. A foto e02 (Commons) traz 01/05/1957 — data da página do arquivo, divergente; ver RESUMO."
+  },
+  {
+   "id": "corte-rodoviaria-1957",
+   "ano": 1957.5,
+   "data_exata": "junho a agosto de 1957",
+   "titulo_curto_PT": "O CORTE DO MARCO ZERO",
+   "legenda": "Cerca de 350 caminhões tiram terra do cruzamento dos eixos para a Praça dos Três Poderes",
+   "detalhe": "Um corte de uns dez metros abre o lugar da Rodoviária, onde o Eixo Rodoviário passa por baixo do Monumental. 'A obra mais portentosa de Brasília exigiu extremado movimento de terra.'",
+   "local": {
+    "nome": "Rodoviária do Plano Piloto",
+    "lat": -15.793389,
+    "lon": -47.882611,
+    "coord_fonte": "ptwiki Rodoviária do Plano Piloto (infobox)"
+   },
+   "recurso_visual": "rebaixo no terreno no cruzamento; pontinhos (caminhões) indo para o leste",
+   "numero_impacto": "350 CAMINHÕES",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Rodoviária_do_Plano_Piloto"
+   ],
+   "confianca": "media",
+   "obs": "ptwiki Rodoviária: 'Um corte de cerca de dez metros. Entre junho e agosto de 1957. Aproximadamente 350 caminhões… a terra era levada para a Praça dos Três Poderes'."
+  },
+  {
+   "id": "taguatinga-1958",
+   "ano": 1958.43,
+   "data_exata": "05/06/1958",
+   "titulo_curto_PT": "A 1ª CIDADE-SATÉLITE",
+   "legenda": "Taguatinga nasce para tirar do Plano Piloto os acampamentos de operários",
+   "detalhe": "A Novacap prometeu a cidade aos moradores da Vila Sarah Kubitschek, uma invasão. O plano previa remover os acampamentos depois da obra; o DF cresceu nas satélites.",
+   "local": {
+    "nome": "Taguatinga",
+    "lat": -15.833333,
+    "lon": -48.056389,
+    "coord_fonte": "ptwiki Taguatinga (Distrito Federal) (wgCoordinates)"
+   },
+   "recurso_visual": "mancha urbana acende a oeste, longe do Plano Piloto — o vazio entre os dois fica visível",
+   "numero_impacto": "1958",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Taguatinga_(Distrito_Federal)",
+    "https://pt.wikipedia.org/wiki/Construção_de_Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "A data de 5/6/1958 foi adotada em 1967 'em alusão ao dia ao qual a Novacap prometeu aos moradores da Vila Sarah Kubitschek a criação de Taguatinga' (ptwiki)."
+  },
+  {
+   "id": "alvorada-1958",
+   "ano": 1958.49,
+   "data_exata": "30/06/1958 (obra desde 03/04/1957)",
+   "titulo_curto_PT": "PALÁCIO DA ALVORADA",
+   "legenda": "O 1º palácio inaugurado na nova capital: a residência do presidente, à beira do futuro lago",
+   "detalhe": "Barra de vidro de 110 × 30,75 m cercada pelas colunas que só tocam o chão. No mesmo dia abre o Brasília Palace Hotel, ao lado.",
+   "local": {
+    "nome": "Palácio da Alvorada",
+    "lat": -15.792772,
+    "lon": -47.822175,
+    "coord_fonte": "enwiki/ptwiki Palácio da Alvorada (wgCoordinates)"
+   },
+   "recurso_visual": "modelo 3D do Alvorada nasce na península; foto e05",
+   "numero_impacto": "18 MESES DE OBRA",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Palácio_da_Alvorada",
+    "https://pt.wikipedia.org/wiki/Brasília_Palace_Hotel",
+    "https://www.ufrgs.br/propar/wp-content/uploads/2023/11/15_Guilherme-de-Almeida.pdf"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki: 'primeiro edifício inaugurado na Capital Federal, em 30 de junho de 1958'; obra 'iniciou-se em 3 de abril de 1957 e durou dezoito meses'. Hotel: 'Inaugurado em 30 de junho de 1958'."
+  },
+  {
+   "id": "massacre-geb-1959",
+   "ano": 1959.1,
+   "data_exata": "08/02/1959 (noite)",
+   "titulo_curto_PT": "MASSACRE NO ACAMPAMENTO",
+   "legenda": "A Guarda Especial de Brasília ataca operários da Pacheco Fernandes Dantas na Vila Planalto",
+   "detalhe": "Com o pagamento adiado para o carnaval, operários quebram o refeitório por causa da comida estragada; a guarda abre fogo. No acampamento viviam cerca de 1.300 candangos.",
+   "local": {
+    "nome": "Vila Planalto (aproximação: Palácio do Planalto)",
+    "lat": -15.799167,
+    "lon": -47.860833,
+    "coord_fonte": "enwiki Planalto Palace — aproximação: a Vila Planalto fica 'entre o Palácio do Planalto e o Palácio da Alvorada' (ptwiki) e não tem coordenada publicada"
+   },
+   "recurso_visual": "cartão sóbrio sobre o acampamento; sem efeito de tiro",
+   "numero_impacto": "CARNAVAL DE 1959",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Massacre_da_Pacheco_Fernandes",
+    "https://pt.wikipedia.org/wiki/Construção_de_Brasília"
+   ],
+   "confianca": "media",
+   "obs": "Número de mortos NÃO usado (não lido de forma clara). Construção de Brasília: 'No carnaval de 1959 dezenas de operários foram metralhados'."
+  },
+  {
+   "id": "censo-experimental-1959",
+   "ano": 1959.37,
+   "data_exata": "17/05/1959 (data de referência)",
+   "titulo_curto_PT": "64 MIL NO CANTEIRO",
+   "legenda": "O Censo Experimental conta 64.314 pessoas no futuro DF; em 1957 eram 12.283",
+   "detalhe": "Cinco vezes mais gente em dois anos — quase todos operários e suas famílias, vindos sobretudo do Nordeste.",
+   "local": {
+    "nome": "Plano Piloto (centro)",
+    "lat": -15.79389,
+    "lon": -47.88278,
+    "coord_fonte": "ptwiki Plano Piloto (Distrito Federal) (wgCoordinates)"
+   },
+   "recurso_visual": "contador sobe de 12.283 para 64.314",
+   "numero_impacto": "64.314",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Construção_de_Brasília",
+    "https://ipe.df.gov.br/documents/d/ipedf/trajetoria-das-mulheres-no-distrito-federal-50-anos-de-conquistas-pdf"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Construção: '12.283 pessoas em julho de 1957, passando para 64.314 em julho de 1959'; IPEDF (via populacao.json): Censo Experimental de 17/05/1959. Mês diverge (julho × maio) — ver RESUMO."
+  },
+  {
+   "id": "congresso-obra-1959",
+   "ano": 1959.5,
+   "data_exata": "1959 (fotos do Arquivo Nacional)",
+   "titulo_curto_PT": "AS CÚPULAS SOBEM",
+   "legenda": "Cúpula do Senado, cuia da Câmara e as torres de 28 andares em obra na ponta do Eixo",
+   "detalhe": "Joaquim Cardozo calculou do Rio as cascas de concreto: a da Câmara tinha de parecer só pousada na laje. As vigas de aço das torres vieram dos Estados Unidos.",
+   "local": {
+    "nome": "Congresso Nacional",
+    "lat": -15.799722,
+    "lon": -47.864167,
+    "coord_fonte": "enwiki National Congress Palace (wgCoordinates)"
+   },
+   "recurso_visual": "torres do Congresso sobem em estrutura (sem fachada) e as cúpulas aparecem; fotos e06 e e07",
+   "numero_impacto": "28 ANDARES",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Palácio_do_Congresso_Nacional",
+    "https://vitruvius.com.br/revistas/read/arquitextos/11.131/3829"
+   ],
+   "confianca": "media",
+   "obs": "Ano do evento = data das fotos (ptwiki: 'Cúpula em construção, 1959. Arquivo Nacional'); início exato da obra não lido."
+  },
+  {
+   "id": "lago-paranoa-1959",
+   "ano": 1959.7,
+   "data_exata": "12/09/1959 (represamento do rio Paranoá)",
+   "titulo_curto_PT": "O LAGO COMEÇA A ENCHER",
+   "legenda": "A barragem fecha o rio Paranoá: nasce o lago de 48 km² que Lúcio Costa pôs no plano",
+   "detalhe": "As águas cobrem a Vila Amaury, um acampamento de operários, e a velocidade da cheia surpreende os moradores. O lago só chega ao nível cheio depois das chuvas.",
+   "local": {
+    "nome": "Lago Paranoá",
+    "lat": -15.783,
+    "lon": -47.817,
+    "coord_fonte": "ptwiki Lago Paranoá (wgCoordinates)"
+   },
+   "recurso_visual": "o lago enche: água sobe nos vales dos ribeirões até o contorno de hoje; foto e09",
+   "numero_impacto": "48 KM²",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Lago_Paranoá"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki: 'Com o represamento do Rio Paranoá em 12 de setembro de 1959'; área 48 km², prof. máx. 38 m. Cota 1000 só após as chuvas de 1961 (bairros_epocas.json/obras). PRECISA de máscara de água por época (o motor desenha o lago de hoje)."
+  },
+  {
+   "id": "esplanada-1959",
+   "ano": 1959.8,
+   "data_exata": "1959 (fotos do Arquivo Nacional)",
+   "titulo_curto_PT": "17 BLOCOS IGUAIS",
+   "legenda": "Os ministérios sobem em esqueleto de aço dos dois lados do gramado da Esplanada",
+   "detalhe": "Dez blocos ao norte, sete ao sul; o espaço que sobra no sul é da Catedral. Cada bloco tem cerca de 103 m por 18 m.",
+   "local": {
+    "nome": "Esplanada dos Ministérios (bloco N1)",
+    "lat": -15.79547,
+    "lon": -47.87136,
+    "coord_fonte": "medido no footprint Microsoft (dl/msbuild) — sem coordenada de bloco nas páginas"
+   },
+   "recurso_visual": "os 17 blocos (predios.json) nascem um a um, alinhados ao Eixo; foto e08",
+   "numero_impacto": "17 MINISTÉRIOS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Esplanada_dos_Ministérios",
+    "https://pt.wikipedia.org/wiki/Construção_de_Brasília"
+   ],
+   "confianca": "media",
+   "obs": "ptwiki Eixo Monumental: 'dezessete blocos idênticos… a N1 tem dez prédios, a S1 tem sete'. Ano = fotos de 1959 ('Construção da Esplanada dos Ministérios em 1959')."
+  },
+  {
+   "id": "catedral-estrutura-1960",
+   "ano": 1960.29,
+   "data_exata": "21/04/1960 (estrutura considerada terminada)",
+   "titulo_curto_PT": "16 COLUNAS NO CÉU",
+   "legenda": "A estrutura da Catedral fica pronta no dia da inauguração: só as colunas, sem vidro nem teto",
+   "detalhe": "Dezesseis colunas de 90 toneladas cada, num círculo de 60 m. A obra parou e a catedral só foi inaugurada dez anos depois.",
+   "local": {
+    "nome": "Catedral Metropolitana",
+    "lat": -15.798397,
+    "lon": -47.875553,
+    "coord_fonte": "ptwiki Catedral Metropolitana de Brasília (infobox)"
+   },
+   "recurso_visual": "a Catedral em 'esqueleto' (16 colunas sem vitral) no lado sul da Esplanada",
+   "numero_impacto": "16 COLUNAS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Catedral_Metropolitana_de_Brasília",
+    "https://en.wikipedia.org/wiki/Cathedral_of_Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki: 'A estrutura dos pilares foi considerada terminada em 21 de abril de 1960… com apenas as colunas de concreto visíveis acima do solo'."
+  },
+  {
+   "id": "inauguracao-1960",
+   "ano": 1960.3,
+   "data_exata": "21/04/1960 (missa à meia-noite)",
+   "titulo_curto_PT": "BRASÍLIA EM 41 MESES",
+   "legenda": "À meia-noite, numa missa solene, a capital é declarada inaugurada; o Rio deixa de ser capital",
+   "detalhe": "Cerca de 30 mil operários, os candangos, trabalharam dia e noite. A data é o Dia de Tiradentes. Inauguram juntos o Congresso, o Planalto, o STF e a Esplanada.",
+   "local": {
+    "nome": "Praça dos Três Poderes",
+    "lat": -15.800833,
+    "lon": -47.861389,
+    "coord_fonte": "ptwiki Praça dos Três Poderes (infobox)"
+   },
+   "recurso_visual": "todos os palácios acendem juntos; bandeira troca para brasil.svg; HUD 'CAPITAL DA REPÚBLICA'; fotos e10, e11, e12",
+   "numero_impacto": "30 MIL CANDANGOS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Construção_de_Brasília",
+    "https://pt.wikipedia.org/wiki/Distrito_Federal_(Brasil)",
+    "https://pt.wikipedia.org/wiki/Juscelino_Kubitschek",
+    "https://pt.wikipedia.org/wiki/Inauguração_de_Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki DF: 'Trinta mil operários construíram Brasília em 41 meses'; ptwiki JK: 'Mais de duzentas máquinas e trinta mil operários'; enwiki Brasília: 'built in 41 months'."
+  },
+  {
+   "id": "satelites-1960",
+   "ano": 1960.36,
+   "data_exata": "13/05/1960 (Sobradinho); 12/10/1960 (Gama)",
+   "titulo_curto_PT": "SOBRADINHO E GAMA",
+   "legenda": "Novas cidades-satélites recebem os candangos que não cabem no Plano Piloto",
+   "detalhe": "Sobradinho, ao norte, foi construída entre 1959 e 1960 pela Novacap. O Gama, ao sul, foi planejado em forma de colmeia por Paulo Hungria (fora deste mapa).",
+   "local": {
+    "nome": "Sobradinho",
+    "lat": -15.653056,
+    "lon": -47.791389,
+    "coord_fonte": "ptwiki Sobradinho (Distrito Federal) (wgCoordinates)"
+   },
+   "recurso_visual": "mancha acende ao norte; seta saindo do mapa para o sul (Gama)",
+   "numero_impacto": "1960",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Sobradinho_(Distrito_Federal)",
+    "https://pt.wikipedia.org/wiki/Gama_(Distrito_Federal)"
+   ],
+   "confianca": "alta",
+   "obs": "Datas 'de fundação' adotadas em 1967 (ptwiki). Gama: lat -16.02, fora do bbox."
+  },
+  {
+   "id": "censo-1960",
+   "ano": 1960.67,
+   "data_exata": "Censo IBGE 1960",
+   "titulo_curto_PT": "140 MIL MORADORES",
+   "legenda": "O primeiro censo da capital conta 140.164 pessoas no Distrito Federal",
+   "detalhe": "O plano previa 500 mil habitantes no ano 2000. Em meados da década, o Plano Piloto tinha quase 90 mil e as satélites, cerca de 130 mil.",
+   "local": {
+    "nome": "Plano Piloto (centro)",
+    "lat": -15.79389,
+    "lon": -47.88278,
+    "coord_fonte": "ptwiki Plano Piloto (Distrito Federal) (wgCoordinates)"
+   },
+   "recurso_visual": "contador em 140.164",
+   "numero_impacto": "140.164",
+   "fontes": [
+    "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/",
+    "https://en.wikipedia.org/wiki/Brasília",
+    "https://pt.wikipedia.org/wiki/Construção_de_Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "Número de populacao.json (IBGE); enwiki: 'almost 140,000 residents'. Sinopse preliminar dá 141.742 (RESUMO-POP). 500 mil em 2000: ptwiki Construção. 90 mil/130 mil: ptwiki Construção ('Na metade da década, quando o Plano Piloto contava com quase noventa mil habitantes, e mais cerca de 130 mil nas cidades-satélites'). Ano 1960.67 só para ordenar (data de referência do censo não lida)."
+  },
+  {
+   "id": "unb-1962",
+   "ano": 1962.3,
+   "data_exata": "21/04/1962",
+   "titulo_curto_PT": "NASCE A UNB",
+   "legenda": "A Universidade de Brasília é inaugurada na Asa Norte, com Darcy Ribeiro",
+   "detalhe": "O campus fica à beira do lago, a leste das superquadras. O Instituto Central de Ciências, o 'Minhocão' de cerca de 720 m, só ficou pronto em 1975.",
+   "local": {
+    "nome": "Universidade de Brasília (Campus Darcy Ribeiro)",
+    "lat": -15.761389,
+    "lon": -47.866389,
+    "coord_fonte": "ptwiki Universidade de Brasília (wgCoordinates)"
+   },
+   "recurso_visual": "ponto de luz no campus da Asa Norte (o ICC longo só a partir de 1975)",
+   "numero_impacto": "21/4/1962",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Universidade_de_Brasília",
+    "https://cimec.org.ar/ojs/index.php/mc/article/viewFile/3712/3623"
+   ],
+   "confianca": "alta",
+   "obs": "ICC 1962–1975 'cerca de 720 metros de extensão' (Inojosa & Buzar 2010)."
+  },
+  {
+   "id": "golpe-1964",
+   "ano": 1964.25,
+   "data_exata": "02/04/1964 (madrugada)",
+   "titulo_curto_PT": "O CONGRESSO DECLARA VAGO",
+   "legenda": "Com Jango ainda no país, o Congresso declara vaga a Presidência: começa o regime militar",
+   "detalhe": "O golpe de 31 de março–1º de abril abre 21 anos de ditadura. JK, então senador por Goiás, teve o mandato cassado em 1964.",
+   "local": {
+    "nome": "Congresso Nacional",
+    "lat": -15.799722,
+    "lon": -47.864167,
+    "coord_fonte": "enwiki National Congress Palace (wgCoordinates)"
+   },
+   "recurso_visual": "HUD entra na faixa 'REGIME MILITAR' (regimes.json); luz fria sobre a Praça",
+   "numero_impacto": "1964–1985",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Golpe_de_Estado_no_Brasil_em_1964",
+    "https://pt.wikipedia.org/wiki/Juscelino_Kubitschek"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Golpe: 'declaração de vacância da Presidência da República pelo Congresso Nacional, em 2 de abril'. JK senador '4/10/1961 até 8/08/1964' na infobox — texto: 'com o golpe militar de 1964… teve seu mandato' cassado."
+  },
+  {
+   "id": "torre-tv-1967",
+   "ano": 1967.5,
+   "data_exata": "1967 (mirante aberto em 1965)",
+   "titulo_curto_PT": "TORRE DE 218 METROS",
+   "legenda": "A Torre de TV de Lúcio Costa fica pronta no Eixo Monumental: a estrutura mais alta do Brasil",
+   "detalhe": "Base triangular de concreto com 25 m e torre metálica; mirante a 75 m. Foi a mais alta do país de 1967 a 1986. Hoje tem 224 m.",
+   "local": {
+    "nome": "Torre de TV",
+    "lat": -15.790499,
+    "lon": -47.892977,
+    "coord_fonte": "enwiki Brasília TV Tower (wgCoordinates)"
+   },
+   "recurso_visual": "a torre (predios.json) sobe a oeste da Rodoviária",
+   "numero_impacto": "218 M",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Torre_de_TV_de_Brasília",
+    "https://en.wikipedia.org/wiki/Brasília_TV_Tower"
+   ],
+   "confianca": "alta",
+   "obs": "enwiki: 'The tower originally had a height of 218 metres… added another six metres' (Bandeirantes). Tela em 1967 = 218 m; 3D atual = 224 m."
+  },
+  {
+   "id": "catedral-itamaraty-1970",
+   "ano": 1970.3,
+   "data_exata": "Itamaraty 20 ou 21/04/1970; Catedral 31/05/1970",
+   "titulo_curto_PT": "CATEDRAL E ITAMARATY",
+   "legenda": "Dez anos depois, a Catedral ganha os vitrais e é inaugurada; o Itamaraty abre seus arcos",
+   "detalhe": "A Catedral tinha sido consagrada em 1968 ainda sem teto. O Itamaraty, quadrado de 84 m de lado cercado de água, levou de 1963 a 1970.",
+   "local": {
+    "nome": "Catedral Metropolitana",
+    "lat": -15.798397,
+    "lon": -47.875553,
+    "coord_fonte": "ptwiki Catedral Metropolitana de Brasília (infobox)"
+   },
+   "recurso_visual": "a Catedral ganha os vitrais; o Itamaraty nasce no lado sul, a leste dos blocos; foto e13",
+   "numero_impacto": "84 × 84 M",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Catedral_Metropolitana_de_Brasília",
+    "https://en.wikipedia.org/wiki/Itamaraty_Palace",
+    "https://vitruvius.com.br/revistas/read/arquitextos/14.161/4913"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Catedral: 'consagrada em 12 de outubro de 1968 (ainda sem teto) e… inaugurada… em 31 de maio de 1970'."
+  },
+  {
+   "id": "ceilandia-1971",
+   "ano": 1971.24,
+   "data_exata": "27/03/1971",
+   "titulo_curto_PT": "CEI: NASCE A CEILÂNDIA",
+   "legenda": "A Campanha de Erradicação de Invasões leva para longe do centro as famílias das vilas",
+   "detalhe": "As 20 primeiras famílias vieram da invasão do IAPI, nas terras da antiga Fazenda Guariroba. O nome junta a sigla CEI ao '-lândia'.",
+   "local": {
+    "nome": "Ceilândia",
+    "lat": -15.819167,
+    "lon": -48.1083,
+    "coord_fonte": "ptwiki Ceilândia (wgCoordinates)"
+   },
+   "recurso_visual": "mancha grande acende na borda oeste do mapa; linhas saindo das vilas perto do Plano Piloto",
+   "numero_impacto": "1971",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Ceilândia"
+   ],
+   "confianca": "media",
+   "obs": "ptwiki: fundada em 27/03/1971; 'assentamento das vinte primeiras famílias da invasão do IAPI'; prefixo 'cei-' = Campanha de Erradicação das Invasões. Lotes 'ao norte de Taguatinga, nas antigas terras da Fazenda Guariroba'."
+  },
+  {
+   "id": "diretas-1984",
+   "ano": 1984.32,
+   "data_exata": "25/04/1984",
+   "titulo_curto_PT": "DIRETAS JÁ: 298 VOTOS",
+   "legenda": "A emenda das eleições diretas tem 298 votos a favor, mas não alcança os dois terços",
+   "detalhe": "Foram 65 contra, 3 abstenções e 113 ausentes. O governo cercou o prédio e cortou os telefones dos parlamentares durante o debate.",
+   "local": {
+    "nome": "Congresso Nacional",
+    "lat": -15.799722,
+    "lon": -47.864167,
+    "coord_fonte": "enwiki National Congress Palace (wgCoordinates)"
+   },
+   "recurso_visual": "Congresso cercado; galerias lotadas (luz sobre o plenário)",
+   "numero_impacto": "298 A FAVOR",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Emenda_Dante_de_Oliveira",
+    "https://pt.wikipedia.org/wiki/Construção_de_Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "Votos da infobox da ptwiki Emenda Dante de Oliveira. Cerco/telefones: ptwiki Construção ('o governo cortou o telefone dos parlamentares por várias horas, cercou o prédio')."
+  },
+  {
+   "id": "unesco-1987",
+   "ano": 1987.93,
+   "data_exata": "07/12/1987 (Comitê do Patrimônio Mundial, Paris)",
+   "titulo_curto_PT": "PATRIMÔNIO DA HUMANIDADE",
+   "legenda": "A UNESCO inscreve o Conjunto Urbanístico de Brasília na lista do Patrimônio Mundial",
+   "detalhe": "É a maior área tombada do mundo: 112,5 km². Lúcio Costa participou do tombamento.",
+   "local": {
+    "nome": "Plano Piloto (ponto da UNESCO)",
+    "lat": -15.793889,
+    "lon": -47.882778,
+    "coord_fonte": "ptwiki Conjunto Urbanístico de Brasília (infobox UNESCO, 15°47′38″S 47°52′58″O)"
+   },
+   "recurso_visual": "contorno do 'avião' (Plano Piloto) brilha",
+   "numero_impacto": "112,5 KM²",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Conjunto_Urbanístico_de_Brasília",
+    "https://pt.wikipedia.org/wiki/Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Conjunto Urbanístico: 'Em 7 de dezembro de 1987 acontece em Paris a 11ª Reunião Ordinária do Comitê do Patrimônio Mundial'; ptwiki Brasília: 'maior área tombada do mundo, com 112,5 quilômetros quadrados'."
+  },
+  {
+   "id": "constituicao-1988",
+   "ano": 1988.76,
+   "data_exata": "05/10/1988",
+   "titulo_curto_PT": "A CONSTITUIÇÃO CIDADÃ",
+   "legenda": "Promulgada no Congresso a Constituição que devolve ao DF eleições próprias",
+   "detalhe": "Até então o governador do DF era nomeado pelo presidente e as leis locais passavam pelo Senado. A 1ª eleição para governador e Câmara Legislativa foi em 1990.",
+   "local": {
+    "nome": "Congresso Nacional",
+    "lat": -15.799722,
+    "lon": -47.864167,
+    "coord_fonte": "enwiki National Congress Palace (wgCoordinates)"
+   },
+   "recurso_visual": "luz quente volta ao Congresso; HUD sai da faixa do regime militar (já em 1985)",
+   "numero_impacto": "5/10/1988",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Constituição_brasileira_de_1988",
+    "https://pt.wikipedia.org/wiki/Câmara_Legislativa_do_Distrito_Federal",
+    "https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal_(Brasil)"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki Constituição: 'promulgada em 5 de outubro de 1988'. CLDF: 'primeiras eleições ocorreram em outubro de 1990'; Comissão do DF no Senado legislou de 1961 a 1991; governadores 'nomeados pelo poder executivo da União até 1990'."
+  },
+  {
+   "id": "ponte-jk-2002",
+   "ano": 2002.95,
+   "data_exata": "15/12/2002",
+   "titulo_curto_PT": "TRÊS ARCOS SOBRE O LAGO",
+   "legenda": "A Ponte JK liga o Lago Sul ao centro com três arcos de aço que cruzam o tabuleiro",
+   "detalhe": "São 1.200 m de travessia e três vãos de 240 m. O desenho lembra uma pedra quicando na água.",
+   "local": {
+    "nome": "Ponte JK",
+    "lat": -15.823611,
+    "lon": -47.829444,
+    "coord_fonte": "enwiki Juscelino Kubitschek bridge (wgCoordinates)"
+   },
+   "recurso_visual": "a ponte (predios.json) se desenha de margem a margem, depois os 3 arcos",
+   "numero_impacto": "1.200 M",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Ponte_Juscelino_Kubitschek",
+    "https://en.wikipedia.org/wiki/Juscelino_Kubitschek_bridge"
+   ],
+   "confianca": "alta",
+   "obs": "Arcos 62 m (ptwiki) × 60 m (enwiki) — fora da tela."
+  },
+  {
+   "id": "censo-2022",
+   "ano": 2022.6,
+   "data_exata": "Censo IBGE 2022",
+   "titulo_curto_PT": "2,8 MILHÕES NO DF",
+   "legenda": "O Censo de 2022 conta 2.817.381 moradores no Distrito Federal",
+   "detalhe": "Em 1960 eram 140.164 — vinte vezes menos. O Plano Piloto, pensado para 500 mil, é hoje uma pequena parte do DF.",
+   "local": {
+    "nome": "Brasília (ponto da infobox)",
+    "lat": -15.79389,
+    "lon": -47.88278,
+    "coord_fonte": "ptwiki Brasília (wgCoordinates)"
+   },
+   "recurso_visual": "contador para em 2.817.381; zoom out mostra o lago, o Plano Piloto e as satélites",
+   "numero_impacto": "2.817.381",
+   "fontes": [
+    "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Populacao_e_domicilios_Primeiros_resultados/",
+    "https://en.wikipedia.org/wiki/Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "Número: populacao.json (PDF IBGE) e enwiki (tabela 2022 2,817,381). 'Vinte vezes' = 2.817.381 / 140.164 ≈ 20,1."
+  }
+ ],
+ "reserva": [
+  {
+   "id": "aeroporto-1957",
+   "ano": 1957.335,
+   "data_exata": "03/05/1957",
+   "titulo_curto_PT": "A PISTA NO CERRADO",
+   "legenda": "Inaugurado o aeroporto de Brasília: o canteiro passa a receber aviões direto",
+   "detalhe": "Substituiu o Aeroporto de Vera Cruz, de 1955. Tudo o que não vinha pelas novas rodovias chegava pelo ar.",
+   "local": {
+    "nome": "Aeroporto de Brasília",
+    "lat": -15.871111,
+    "lon": -47.918611,
+    "coord_fonte": "ptwiki Aeroporto Internacional de Brasília (infobox 15°52′16″S 47°55′07″O)"
+   },
+   "recurso_visual": "risco da pista acende ao sul do futuro lago",
+   "numero_impacto": "1957",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Aeroporto_Internacional_de_Brasília"
+   ],
+   "confianca": "alta",
+   "obs": "Infobox: 'Inauguração 3 de maio de 1957, substituindo o Aeroporto de Vera Cruz'."
+  },
+  {
+   "id": "ai5-1968",
+   "ano": 1968.95,
+   "data_exata": "13/12/1968",
+   "titulo_curto_PT": "AI-5 FECHA O CONGRESSO",
+   "legenda": "O Ato Institucional nº 5 põe o Congresso em recesso por tempo indeterminado",
+   "detalhe": "O fechamento durou até 21 de outubro de 1969. O AI-5 permitia cassar mandatos e suspender direitos políticos.",
+   "local": {
+    "nome": "Congresso Nacional",
+    "lat": -15.799722,
+    "lon": -47.864167,
+    "coord_fonte": "enwiki National Congress Palace (wgCoordinates)"
+   },
+   "recurso_visual": "luzes do Congresso apagam até o fim de 1969",
+   "numero_impacto": "10 MESES FECHADO",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Ato_Institucional_n.º_5"
+   ],
+   "confianca": "alta",
+   "obs": "ptwiki AI-5: 'Instituído em 13 de dezembro de 1968'; 'fechamento do Congresso Nacional por tempo indeterminado, que durou até 21 de outubro de 1969' (≈10 meses)."
+  },
+  {
+   "id": "brasilia-palace-1958",
+   "ano": 1958.49,
+   "data_exata": "30/06/1958",
+   "titulo_curto_PT": "O PRIMEIRO HOTEL",
+   "legenda": "O Brasília Palace Hotel abre no mesmo dia do Alvorada, à beira do futuro lago",
+   "detalhe": "Seu esqueleto de aço serviu de protótipo para os blocos dos ministérios.",
+   "local": {
+    "nome": "Brasília Palace Hotel",
+    "lat": -15.788481,
+    "lon": -47.830739,
+    "coord_fonte": "ptwiki Brasília Palace Hotel (geohack)"
+   },
+   "recurso_visual": "bloco baixo perto do Alvorada",
+   "numero_impacto": "1958",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Brasília_Palace_Hotel"
+   ],
+   "confianca": "media",
+   "obs": "Protótipo de aço: resumo de busca citando a revista Thesis (PDF não abriu) — confiança média."
+  },
+  {
+   "id": "rodoviaria-1960",
+   "ano": 1960.7,
+   "data_exata": "12/09/1960",
+   "titulo_curto_PT": "A RODOVIÁRIA",
+   "legenda": "Inaugurada a Rodoviária do Plano Piloto, sobre o Marco Zero",
+   "detalhe": "Projeto de Lúcio Costa: o coração do plano, onde o Eixo Rodoviário passa sob o Monumental.",
+   "local": {
+    "nome": "Rodoviária do Plano Piloto",
+    "lat": -15.793389,
+    "lon": -47.882611,
+    "coord_fonte": "ptwiki Rodoviária do Plano Piloto (infobox)"
+   },
+   "recurso_visual": "plataforma no cruzamento",
+   "numero_impacto": "1960",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Rodoviária_do_Plano_Piloto"
+   ],
+   "confianca": "alta",
+   "obs": ""
+  },
+  {
+   "id": "ponte-costa-e-silva-1976",
+   "ano": 1976,
+   "data_exata": "1976",
+   "titulo_curto_PT": "A PONTE DE NIEMEYER",
+   "legenda": "Ponte Costa e Silva (hoje Honestino Guimarães) liga o Setor de Clubes Sul ao Lago Sul",
+   "detalhe": "452 m, com vão central de 220 m entre dois de 110 m. Niemeyer a chamou de Ponte Monumental.",
+   "local": {
+    "nome": "Ponte Honestino Guimarães",
+    "lat": null,
+    "lon": null,
+    "coord_fonte": "sem coordenada na página lida — tirar do OSM"
+   },
+   "recurso_visual": "ponte em arco baixo",
+   "numero_impacto": "452 M",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Ponte_Costa_e_Silva",
+    "https://cimec.org.ar/ojs/index.php/mc/article/viewFile/3712/3623"
+   ],
+   "confianca": "alta",
+   "obs": "Sem coordenada: só usar depois de ter o ponto."
+  },
+  {
+   "id": "teatro-1981",
+   "ano": 1981.3,
+   "data_exata": "21/04/1981",
+   "titulo_curto_PT": "A PIRÂMIDE DO TEATRO",
+   "legenda": "O Teatro Nacional, pirâmide sem topo de Niemeyer, é inaugurado depois de 21 anos de obra",
+   "detalhe": "Obra começou em 30/07/1960; a Sala Martins Pena já funcionava desde 1966.",
+   "local": {
+    "nome": "Teatro Nacional",
+    "lat": -15.7922,
+    "lon": -47.8802,
+    "coord_fonte": "enwiki Cláudio Santoro National Theater (wgCoordinates)"
+   },
+   "recurso_visual": "pirâmide truncada no Setor Cultural Norte",
+   "numero_impacto": "21 ANOS",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Teatro_Nacional_Cláudio_Santoro"
+   ],
+   "confianca": "alta",
+   "obs": ""
+  },
+  {
+   "id": "memorial-jk-1981",
+   "ano": 1981.7,
+   "data_exata": "12/09/1981",
+   "titulo_curto_PT": "MEMORIAL JK",
+   "legenda": "JK ganha memorial no lugar da 1ª missa; estátua sobre pedestal de 28 m",
+   "detalhe": "Inaugurado no dia em que ele faria 79 anos, depois de 17 meses de obra.",
+   "local": {
+    "nome": "Memorial JK",
+    "lat": -15.784358,
+    "lon": -47.913081,
+    "coord_fonte": "ptwiki Memorial JK (infobox)"
+   },
+   "recurso_visual": "pilar curvo com a estátua",
+   "numero_impacto": "28 M",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Memorial_JK"
+   ],
+   "confianca": "alta",
+   "obs": ""
+  },
+  {
+   "id": "eleicao-df-1990",
+   "ano": 1990.78,
+   "data_exata": "outubro de 1990",
+   "titulo_curto_PT": "O DF VOTA",
+   "legenda": "Pela primeira vez o Distrito Federal elege governador e deputados distritais",
+   "detalhe": "Antes de 1990 os governadores eram nomeados; a Comissão do DF no Senado legislava pelo DF desde 1961.",
+   "local": {
+    "nome": "Palácio do Buriti",
+    "lat": -15.784444,
+    "lon": -47.908056,
+    "coord_fonte": "ptwiki Palácio do Buriti (infobox)"
+   },
+   "recurso_visual": "",
+   "numero_impacto": "1990",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Câmara_Legislativa_do_Distrito_Federal",
+    "https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal_(Brasil)"
+   ],
+   "confianca": "alta",
+   "obs": ""
+  },
+  {
+   "id": "museu-nacional-2006",
+   "ano": 2006.95,
+   "data_exata": "15/12/2006",
+   "titulo_curto_PT": "A CÚPULA DO MUSEU",
+   "legenda": "O Museu Nacional e a Biblioteca Nacional completam o Complexo Cultural da República",
+   "detalhe": "Inaugurados no dia dos 99 anos de Niemeyer; a cúpula tem 26,25 m de altura.",
+   "local": {
+    "nome": "Museu Nacional",
+    "lat": -15.797152,
+    "lon": -47.878679,
+    "coord_fonte": "ptwiki Museu Nacional Honestino Guimarães (geohack)"
+   },
+   "recurso_visual": "cúpula branca",
+   "numero_impacto": "26,25 M",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Museu_Nacional_Honestino_Guimarães"
+   ],
+   "confianca": "alta",
+   "obs": ""
+  },
+  {
+   "id": "oito-de-janeiro-2023",
+   "ano": 2023.02,
+   "data_exata": "08/01/2023",
+   "titulo_curto_PT": "8 DE JANEIRO",
+   "legenda": "Cerca de 4 mil golpistas invadem e depredam o Congresso, o Planalto e o STF",
+   "detalhe": "Por volta das 13 h a multidão rompeu a barreira, ocupou a rampa e a laje do Congresso e vandalizou os três palácios.",
+   "local": {
+    "nome": "Praça dos Três Poderes",
+    "lat": -15.800833,
+    "lon": -47.861389,
+    "coord_fonte": "ptwiki Praça dos Três Poderes (infobox)"
+   },
+   "recurso_visual": "cartão sóbrio sobre a Praça",
+   "numero_impacto": "4 MIL",
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Palácio_do_Planalto"
+   ],
+   "confianca": "alta",
+   "obs": "Trecho 'Ataques de 8 de janeiro' transcluído na ptwiki Palácio do Planalto ('cerca de quatro mil manifestantes golpistas'). Tema político recente — só com OK do Nei."
+  }
+ ]
+}

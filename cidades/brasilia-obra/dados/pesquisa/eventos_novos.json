@@ -1,0 +1,531 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-24",
+    "escopo": "Construção de Brasília: (A) o que existia antes de 1956, (B) prévia do planejamento 1892–1955, (C) de onde a obra era comandada 1956–1960. Complementa eventos.json (não repete os ids de lá).",
+    "esquema": "igual a eventos.json + local.dentro_bbox. ATENÇÃO: na 'reserva', 4 entradas têm lat/lon null (só texto, fora do mapa ou sem coordenada); nenhum script do motor lê 'reserva' hoje (grep em 24/10/2026)",
+    "esquema_extra": "campos extras (bbox lon -48.12 a -47.60, lat -15.95 a -15.55) + campos extras quando úteis (vertices, imagem).",
+    "metodo": "Páginas HTML (pt/en.wikipedia.org/wiki, jornaldebrasilia.com.br, correiobraziliense.com.br, doc.brazilia.jor.br, planalto.gov.br, agenciabrasil.ebc.com.br, guiadasemana) e PDFs (Senado/BDSF, CLDF 'Missão Cruls' com o Relatório Cruls 1894 integral, IBGE 'Veredas de Brasília' 2010 e DTB Planaltina, SBGf 2010, Correio da Manhã 09/03/2026, Correio Braziliense 28/09 e 05/10/2025, IFB). Nenhuma API. Coordenadas 'OSM local' vêm do arquivo dl/distrito-federal.osm.pbf (Geofabrik) lido com pyosmium (cidades/brasilia-obra/scripts/acha_osm.py).",
+    "conversao_cruls": "Longitudes do Relatório Cruls estão em tempo a oeste de Greenwich: 3h09m25s = 47°21'15\" W = -47.354167; 3h15m25s = 48°51'15\" W = -48.854167. Latitudes 15°20'00\" S = -15.333333; 16°08'35\" S = -16.143056."
+  },
+  "eventos": [
+    {
+      "id": "igreja-sao-sebastiao-planaltina",
+      "ano": 1810.5,
+      "data_exata": "capela de taipa em 1810; ampliada por volta de 1881 (sem documento preciso); infobox diz 'inauguração 1890'",
+      "titulo_curto_PT": "A IGREJA MAIS ANTIGA DO DF",
+      "legenda": "A capela de São Sebastião, em Planaltina, é a igreja mais antiga do atual Distrito Federal",
+      "detalhe": "Erguida em taipa por promessa contra uma peste e ampliada no fim do século XIX, tem paredes de tijolo de barro, porta principal e duas laterais. Foi tombada pelo DF em 19/08/1982.",
+      "local": {
+        "nome": "Igreja de São Sebastião (Igrejinha), Praça São Sebastião, Planaltina",
+        "lat": -15.62333,
+        "lon": -47.66222,
+        "coord_fonte": "ptwiki Igreja de São Sebastião (Planaltina), infobox 15°37′24″S 47°39′44″O",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "marco 3D pequeno (capela térrea de telhado de duas águas, branca com portas azuis — ver foto n04) acende na praça",
+      "numero_impacto": "1810",
+      "dimensoes": "não encontrado (nenhuma página lida dá metros); a foto n04 mostra capela térrea com uma porta frontal e duas laterais",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Igreja_de_São_Sebastião_(Planaltina)",
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/goias/planaltina.pdf"
+      ],
+      "confianca": "media",
+      "obs": "ptwiki: 'Ainda durante o Brasil Colónia, em 1810, foi erguida, a mando das famílias Gomes Rabelo e Carlos de Alarcão ... em cumprimento de uma promessa feita para acabar uma peste'; 'Por volta de 1881 (não existem documentos precisos sobre a data correta) a capela de taipa foi expandida'; 'É a igreja mais antiga do Distrito Federal'; 'Em 19 de agosto de 1982, a igreja foi tombada ... pelo Decreto 6940'. Infobox: 'Inauguração 1890'. IBGE DTB: 'José Gomes Rabello – erigiu nas sua propriedades da lagoa, uma capela sob a invocação de S. Sebastião'. OSM local tem também 'Paróquia São Sebastião' (-15.621167, -47.658048), que é outra igreja (a matriz nova) — não usar."
+    },
+    {
+      "id": "mestre-darmas-1859",
+      "ano": 1859.63,
+      "data_exata": "19/08/1859 (data adotada em 1967 por convenção; ver RESUMO)",
+      "titulo_curto_PT": "O ARRAIAL DE MESTRE D'ARMAS",
+      "legenda": "Planaltina nasce como Mestre d'Armas, pouso da Estrada Real com nome de um ferreiro",
+      "detalhe": "Fazendeiros Gomes Rabelo ergueram uma capela a São Sebastião junto à lagoa; perto dela um ferreiro, 'mestre' em consertar armas, deu nome à vila. Já havia cemitério em 1812.",
+      "local": {
+        "nome": "Planaltina — Praça São Sebastião de Mestre D'Armas (Setor Tradicional)",
+        "lat": -15.623547,
+        "lon": -47.66226,
+        "coord_fonte": "OSM local (way 'Praça São Sebastião', centróide); bate com a coord. da Igreja de São Sebastião na ptwiki (-15.62333, -47.66222)",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "único povoado aceso no cerrado vazio; rótulo 'MESTRE D'ARMAS' no nordeste do mapa; casinhas baixas em volta da praça",
+      "numero_impacto": "1859",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Planaltina_(Distrito_Federal)",
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/goias/planaltina.pdf"
+      ],
+      "confianca": "media",
+      "obs": "ptwiki: 'Em 1967, Planaltina passou a adotar como data de fundação 19 de agosto de 1859, mesmo dia de fundação do município goiano, em alusão a Lei nº 03 da Assembleia Provincial de Goiás, que instituiu o distrito de Mestre d’Armas'. IBGE DTB: 'É difícil dizer-se precisamente a fundação do povoado ... em 1812 já havia um cemitério em Mestre D’Armas'; 'Distrito criado com a denominação de Mestre D’Armas, pela lei ou resolução provincial nº 615, de 02-04-1880'; vila em 19-03-1891; instalado 28-02-1892; Altamir 1910; Planaltina 1917. Ferreiro: 'um ótimo ferreiro – perito no concerto de armas – o qual era julgado mestre em sua profissão' (IBGE DTB). Na tela usar só '1859' com a palavra 'distrito' ou trocar por 'século XIX'."
+    },
+    {
+      "id": "cruls-mestre-darmas-1892",
+      "ano": 1892.72,
+      "data_exata": "partida do Rio 09/06/1892; saída de Uberaba 29/06; Pirenópolis 01/08; Mestre d'Armas 20/09/1892",
+      "titulo_curto_PT": "A MISSÃO CRULS CHEGA",
+      "legenda": "A Comissão Exploradora chega a Mestre d'Armas: 22 homens e 9,6 toneladas em lombo de burro",
+      "detalhe": "Saiu do Rio de trem em 9/6/1892 até Uberaba, fim da linha da Mogiana, e seguiu a cavalo. Em 20/9 chegou à vila de Mestre d'Armas; no dia 21 a turma de Tasso Fragoso partiu para o vértice NW.",
+      "local": {
+        "nome": "Vila de Mestre d'Armas (Planaltina)",
+        "lat": -15.623547,
+        "lon": -47.66226,
+        "coord_fonte": "OSM local, Praça São Sebastião (centro histórico); o relatório não dá o ponto do pouso dentro da vila",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "fila de cavaleiros e burros entra pelo nordeste do mapa até a vila; contador de km '4.000 KM' no canto; foto n00 (membros, 1894)",
+      "numero_impacto": "22 HOMENS",
+      "imagem": "n00.jpg",
+      "fontes": [
+        "https://biblioteca.cl.df.gov.br/dspace/bitstream/123456789/1668/1/Miss%C3%A3o%20Cruls.pdf",
+        "https://www.correiobraziliense.com.br/app/noticia/cidades/2018/07/06/interna_cidadesdf,693203/conheca-a-historia-do-belga-que-demarcou-o-territorio-do-distrito-fede.shtml",
+        "https://pt.wikipedia.org/wiki/Missão_Cruls"
+      ],
+      "confianca": "alta",
+      "obs": "Relatório Cruls (reprodução integral no PDF da CLDF): 'A 9 de junho partia a Commissão do Rio de janeiro para Uberaba, ponto terminal da linha ferrea da Companhia Mogyana'; '... fardos pesando ao todo 9.640 kilogrammas'; 'A 29 de junho a Commissão deixou Uberaba ... a 1º de Agosto ella chegava a Pyrenopolis'; 'A 20 de Setembro chegámos à villa de Mestre d'Armas, d'onde a 21 seguímos para Santa Luzia. No mesmo dia separou-se de nós a turma dirigida pelo Sr. Tasso Fragoso, em direcção ao vertice NW'. Correio Braziliense 2018: 'Na manhã de 9 de junho de 1892, 22 homens partiram do Rio de Janeiro rumo a Goiás. Eles levavam 206 caixotes e fardos (cerca de 10 toneladas)'. ptwiki: Cruls + 'outros 21 membros'. Desenvolvimento total dos caminhamentos 'excedia a 4.000 kilometros' (Relatório)."
+    },
+    {
+      "id": "quadrilatero-cruls-1892",
+      "ano": 1892.85,
+      "data_exata": "vértices marcados entre outubro e dezembro de 1892 (turmas de volta a Pirenópolis em 16/11, 17/11 e 05/12/1892); relatório publicado em 1894",
+      "titulo_curto_PT": "O QUADRILÁTERO CRULS",
+      "legenda": "Quatro turmas marcam os cantos de um retângulo de 160 × 90 km: 14.400 km² para a futura capital",
+      "detalhe": "Dois arcos de paralelo (15°20' e 16°08'35\" S) e dois de meridiano. Tasso Fragoso marcou o NW, Cruls o SW, Julião de Oliveira o NE e Morize o SE. O retângulo inteiro é seis vezes o nosso mapa.",
+      "local": {
+        "nome": "Centro geométrico do Quadrilátero Cruls (calculado dos vértices)",
+        "lat": -15.738195,
+        "lon": -48.10417,
+        "coord_fonte": "calculado: média dos vértices prescritos no Relatório Cruls (ver 'vertices'); cai no oeste do bbox, perto de Brazlândia",
+        "dentro_bbox": true
+      },
+      "vertices": {
+        "fonte": "Relatório Cruls 1894, 'Instrucções' (PDF CLDF); longitudes convertidas de tempo para graus",
+        "A_NW": {"lat": -15.333333, "lon": -48.854167, "original": "15°20'0\" S; 3h 15m 25s W Gr.", "dentro_bbox": false},
+        "B_NE": {"lat": -15.333333, "lon": -47.354167, "original": "15°20'0\" S; 3h 9m 25s W Gr.", "dentro_bbox": false},
+        "C_SE": {"lat": -16.143056, "lon": -47.354167, "original": "16°8'35\" S; 3h 9m 25s W Gr.", "dentro_bbox": false},
+        "D_SW": {"lat": -16.143056, "lon": -48.854167, "original": "16°8'35\" S; 3h 15m 25s W Gr.", "dentro_bbox": false},
+        "lado_EW_km_calc": 160.5,
+        "lado_NS_km_calc": 90.0,
+        "observados_em_campo": {
+          "NW_acampamento_Tasso_Fragoso": "15°20'7.4\" S; 3h14m55.6s W Gr. (o vértice ficava a 29,3 s de tempo a W e 7,4\" ao S do acampamento)",
+          "SE_observatorio_Morize": "16°8'14\" S; 3h 9m 6.7s W Gr. (o marco ficou a 8.124,6 m do observatório)"
+        }
+      },
+      "recurso_visual": "só no globo/minimapa: retângulo vermelho 160×90 km com os 4 cantos rotulados; o bbox do vídeo aparece como quadradinho dentro dele; mapa n02 (Pimentel, 1894)",
+      "numero_impacto": "14.400 KM²",
+      "imagem": "n02.jpg",
+      "fontes": [
+        "https://biblioteca.cl.df.gov.br/dspace/bitstream/123456789/1668/1/Miss%C3%A3o%20Cruls.pdf",
+        "https://pirenopolis.tur.br/cultura/historia/comissao-cruls",
+        "https://jornaldebrasilia.com.br/60anos/o-linda-situacao-para-uma-nova-cidade/"
+      ],
+      "confianca": "alta",
+      "obs": "Relatório: 'Para latitude do parallelo mais septentrional, adoptámos 15º20'0''' e 'Arcos de parallelo 15º20'0\". 0 Latitude S 16º8'35\". 00 Latitude S Arcos de meridiano 3h 9m 25'. 0 ... 3 15 25 . 0 Longitude W de Greenwich'; fórmula dá 'S = 14.406 kilometros' [quadrados]. A tabela de vértices logo abaixo traz 'A 15º 10' 0\"' e 'B 15º 10'' — erro tipográfico (a 15°10' o lado N–S teria ~108 km; com 15°20' dá 90 km, e Tasso Fragoso diz 'parallelo de 15º20' S ... prescriptos pelo nosso Chefe'). Turmas (texto de apresentação da CLDF): 'A turma que assinalou o vértice noroeste foi chefiada por Augusto Tasso Fragoso; a turma sudoeste foi chefiada por Luiz Cruls; a nordeste, por Julião de Oliveira e a sudeste, por Henrique Morize'. Jornal de Brasília atribui a aresta NE a Antônio Cavalcanti de Albuquerque (o Relatório tem 'Relatório de A. Cavalcanti Fragoso, chefe da turma NE') — divergência no RESUMO. Chegadas a Pirenópolis: NW 16/11, SW 17/11, SE 05/12/1892 (pirenopolis.tur.br). Os quatro vértices ficam FORA do bbox (lon -48,85 e -47,35 passam das bordas)."
+    },
+    {
+      "id": "acampamento-cruls-1894",
+      "ano": 1894.85,
+      "data_exata": "início de novembro de 1894 (Cruls recebe a turma de Morize no acampamento em 16/11/1894)",
+      "titulo_curto_PT": "CRULS ACAMPA NO PARANOÁ",
+      "legenda": "Na 2ª missão, Cruls monta o acampamento-geral no vale do Paranoá, na beira do Bananal",
+      "detalhe": "O botânico Glaziou anda pelo vale dos rios Torto, Gama, Riacho Fundo e Bananal e propõe fechar a garganta do Paranoá com um dique para formar 'um lago navegável'. O relatório de 1896 aponta o platô Gama–Torto.",
+      "local": {
+        "nome": "Confluência do Ribeirão Bananal com o Córrego do Acampamento (inferido)",
+        "lat": -15.728406,
+        "lon": -47.912798,
+        "coord_fonte": "OSM local: nó comum às vias 'Ribeirão Bananal' e 'Córrego do Acampamento'. Identificação do córrego inferida (OCR truncado no PDF do Senado)",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "barracas no vale verde ao norte do futuro Plano Piloto; uma linha tracejada azul desenha onde seria o lago de Glaziou",
+      "numero_impacto": "20 A 25 KM DE LAGO",
+      "fontes": [
+        "https://www2.senado.leg.br/jspui/bitstream/id/711972/1/DF_Brasilia_P008_R0081.pdf",
+        "http://doc.brazilia.jor.br/HistDocs/Relatorios/1896-missao-Cruls-Glaziou-lago-Paranoa.shtml",
+        "http://doc.brazilia.jor.br/HistDocs/Relatorios/1896-Cruls-sitio-Brasilia.shtml",
+        "https://pt.wikipedia.org/wiki/Lago_Paranoá"
+      ],
+      "confianca": "baixa",
+      "obs": "Senado (OCR): 'Nos primeiros dias de novembro de 1894, Luis Cruls ... foi logo escolhido um local definitivo ... no centro do quadrilátero já demarcado para servir de Acampamento e ponto-de-encontro. Este, situou-se na confluência do Ribeirão Bananal e do Córrego / Brejo, que: depois recebeu o nome de Cór[...]' [texto cortado]; 'Cruls recebeu no Acampamento, a 16 de novembro, a turma de Henrique Morize'; 'Hastimphilo de Moura fez o nivelamento do Rio Torto para servir água ao Acampamento'. ptwiki Ribeirão Bananal lista 'córrego do Acampamento' como afluente — base da inferência. Glaziou: 'cheguei a um vastíssimo vale banhado pelos rios Torto, Gama, Vicente Pires, riacho Fundo, Bananal ... o chefe da Comissão, o Sr. Dr. Cruls, mandou estabelecer aí o acampamento geral'; 'fechando essa brecha com uma obra de arte (dique ... cujo comprimento não excede de 500 a 600 metros, nem a elevação de 20 a 25 metros) ... formará um lago navegável ... num comprimento de 20 a 25 quilômetros sobre uma largura de 16 a 18'. Relatório 1896: escolha 'quer na região compreendida entre os rios Gama e Torto, quer no vale do rio Descoberto'."
+    },
+    {
+      "id": "pedra-fundamental-planalto-1922",
+      "ano": 1922.68,
+      "data_exata": "07/09/1922, ao meio-dia (decreto 4.494 de 18/01/1922)",
+      "titulo_curto_PT": "A PEDRA NO MORRO",
+      "legenda": "No centenário da Independência, um obelisco de 3,75 m marca a futura capital no planalto",
+      "detalhe": "A ordem de Epitácio Pessoa só chegou ao diretor da Estrada de Ferro Goiás, Balduíno de Almeida, em 27/8: ele ergueu o obelisco a 450 km dos trilhos em dez dias. Delegações federais e de Goiás assistiram.",
+      "local": {
+        "nome": "Pedra Fundamental de Brasília, Morro do Centenário (Planaltina)",
+        "lat": -15.685365,
+        "lon": -47.679135,
+        "coord_fonte": "OSM local (nó historic=monument 'Pedra Fundamental de Brasília'); ptwiki: -15.6853, -47.6792 (diferença < 10 m)",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "obelisco branco 3D de 3,75 m (exagerar a escala) no alto do morro, 7 km a SSW da praça de Planaltina; placa com a inscrição; foto atual n03",
+      "numero_impacto": "3,75 M",
+      "imagem": "n03.jpg",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Pedra_fundamental_de_Brasília",
+        "https://biblioteca.ibge.gov.br/visualizacao/dtb/goias/planaltina.pdf",
+        "https://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-4494-18-janeiro-1922-545132-publicacaooriginal-57116-pl.html"
+      ],
+      "confianca": "alta",
+      "obs": "ptwiki infobox: 'Altura 3,75 m'; 'Material Concreto, alvenaria e ferro'; inscrição: '... foi aqui colocada em 07 de setembro de 1922 ao meio-dia, a Pedra Fundamental da Futura Capital Federal'; 'Morro do Centenário a 1 033 metros de altitude'; 'o diretor da Estrada de Ferro Goiás em Araguari (MG), Balduíno Ernesto de Almeida, foi informado ... por telegrama somente em 27 de agosto ... a 450 km dali'. IBGE DTB: ato 'assistido por delegações dos Governos Federal e Estadual e do Ministério da Guerra'. Epitácio não estava lá: ptwiki diz que ele 'fez assentar' a pedra. ptwiki diz 'a exatamente 10 km de Planaltina'; em linha reta da praça dá 7,1 km (cálculo) — usar '10 km' só se citar a ptwiki, ou não usar. Mesmo fato do evento 'pedra-fundamental-1922' de capitais-rio, mas aqui no local real (id diferente)."
+    },
+    {
+      "id": "brazlandia-1933",
+      "ano": 1933.42,
+      "data_exata": "05/06/1933 (subprefeitura; data adotada em 1967 por convenção); distrito criado em 15/04/1932",
+      "titulo_curto_PT": "BRAZLÂNDIA",
+      "legenda": "O povoado de Brazlândia, no oeste, é o outro núcleo antigo da área do futuro DF",
+      "detalhe": "Nasceu como distrito de Santa Luzia (Luziânia) em 1932. Em 1959 o censo experimental ainda o chamava de 'povoado', ao lado da cidade de Planaltina e da zona rural.",
+      "local": {
+        "nome": "Brazlândia",
+        "lat": -15.675,
+        "lon": -48.20083,
+        "coord_fonte": "ptwiki Brazlândia (Especial:Map). O texto da mesma página dá -15,6104 -48,1201",
+        "dentro_bbox": false
+      },
+      "recurso_visual": "fora do mapa: seta na borda oeste com rótulo 'BRAZLÂNDIA (1933)'",
+      "numero_impacto": "1933",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Brazlândia",
+        "https://biblioteca.ibge.gov.br/visualizacao/livros/liv44769.pdf"
+      ],
+      "confianca": "media",
+      "obs": "ptwiki: 'Em 1967, Brazlândia passou a adotar como data de fundação o dia 5 de junho de 1933, em alusão a data de criação da subprefeitura ... após a criação do distrito de Brazlândia em Santa Luzia, através do Decreto-lei nº 55, de 15 de abril de 1932'. IBGE (Veredas de Brasília, 2010, cap. censo experimental): 'população pequena e esparsa, com dois reduzidos núcleos de antiga formação, quais sejam, a cidade de Planaltina e o povoado de Brazlândia'. As duas coordenadas da ptwiki ficam fora do bbox (lon < -48,12)."
+    },
+    {
+      "id": "sitio-castanho-1955",
+      "ano": 1955.29,
+      "data_exata": "13/04/1955 (subcomissão: 867 pontos) e 15/04/1955 (aprovação em plenário da Comissão de Localização)",
+      "titulo_curto_PT": "O SÍTIO CASTANHO",
+      "legenda": "Das cinco áreas do relatório Belcher, vence o Castanho; seu ponto mais alto é o atual Cruzeiro",
+      "detalhe": "A comissão do marechal José Pessoa pontuou os sítios Amarelo, Azul, Verde, Castanho e Vermelho. O Castanho somou 867 pontos contra 800 do Verde. No alto dele, a 1.172 m, fica hoje a Praça do Cruzeiro.",
+      "local": {
+        "nome": "Praça do Cruzeiro (ponto mais alto do Sítio Castanho, 1.172 m)",
+        "lat": -15.783374,
+        "lon": -47.915365,
+        "coord_fonte": "OSM local, nó 'Praça do Cruzeiro'; eventos.json usa -15.784358, -47.913081 para a mesma praça (primeira-missa-1957)",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "cinco manchas coloridas aparecem e quatro somem; a castanha fica; pino no Cruzeiro com '1.172 M'",
+      "numero_impacto": "867 PONTOS",
+      "fontes": [
+        "https://edicao.correiobraziliense.com.br/correiobraziliense/2025/09/28/140198/pdf/A17-CID-2809-DIG.pdf",
+        "https://www.jornalopcao.com.br/colunas-e-blogs/imprensa/uma-pequena-historia-de-como-brasilia-foi-possivel-e-se-tornou-a-capital-do-brasil-47766/",
+        "https://jornaldebrasilia.com.br/60anos/o-senhor-prometeu-cumprir-a-constituicao/",
+        "https://pt.wikipedia.org/wiki/História_de_Brasília"
+      ],
+      "confianca": "media",
+      "obs": "Jornal de Brasília: 'a comissão visitou, na ordem, os Sítios Amarelo e Azul, próximos da capital goiana e de Anápolis ... e o Verde e o Castanho, mais próximos a Planaltina ... Sítio Vermelho — já em Minas Gerais, sobre a região de Unaí'; 'em 4 de abril de 1955, um sistema escalonado de pontos foi concebido ... Nove dias depois ... contabilizou 867 pontos para o Castanho — contra 800 do vizinho Verde';'aprovam a escolha do chamado SÍTIO CASTANHO' (ata do dia 15). Jornal Opção: 'chegam no ponto mais alto do Sítio Castanho (1.172 metros), onde é hoje o Cruzeiro — no Eixo Monumental — próximo ao Memorial JK'; Belcher contratada em 25/02/1954 após a aerofotogrametria da Cruzeiro do Sul (jan/1954). Correio Braziliense 28/09/2025: 'No dia 13 de abril de 1955 ... foram escolhidos os sítios Castanho e Verde'. Mesmo tema do 'belcher-1955' de capitais-rio, mas aqui no planalto."
+    },
+    {
+      "id": "novacap-sede-1956",
+      "ano": 1956.8,
+      "data_exata": "sede erguida em 1956 (Candangolândia fundada em 03/11/1956); centro de comando das obras de 1956 a 1959",
+      "titulo_curto_PT": "O QUARTEL-GENERAL DA OBRA",
+      "legenda": "Num barracão de madeira na Candangolândia, a Novacap de Israel Pinheiro comanda a construção",
+      "detalhe": "Em volta da sede: alojamento para 1.200 solteiros, posto de saúde, o caixa-forte que pagava os operários em dinheiro vivo, escola e o restaurante do SAPS, com 1.500 refeições por dia.",
+      "local": {
+        "nome": "Primeira sede da Novacap (\"Velhacap\"), Candangolândia",
+        "lat": -15.853872,
+        "lon": -47.949839,
+        "coord_fonte": "OSM local, prédio 'Administração Regional de Candangolândia - RA XIX'. O Correio da Manhã diz que a antiga sede 'depois abrigou a Administração Regional' — o prédio exato pode ser outro na mesma área. NÃO usar o 'Novacap' do OSM (-15.8175, -47.9529), que é a sede atual (desde ~1960)",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "galpões de madeira acendem no sul do mapa; rótulo 'NOVACAP'; linhas finas saem dali para cada canteiro (Alvorada, Praça, barragem); foto n05 (barracão do Departamento de Viação e Obras, 1958)",
+      "numero_impacto": "1956–1959",
+      "imagem": "n05.jpg",
+      "fontes": [
+        "https://digital.correiodamanha.com.br/jornalcorreiodamanha/2026/03/09/23481c/pdf/0903df_cmanha20.pdf",
+        "https://jornaldebrasilia.com.br/60anos/a-terra-dos-candangos/",
+        "https://biblioteca.ibge.gov.br/visualizacao/livros/liv44769.pdf",
+        "https://pt.wikipedia.org/wiki/Candangolândia",
+        "https://pt.wikipedia.org/wiki/Bernardo_Sayão_Carvalho_Araújo"
+      ],
+      "confianca": "media",
+      "obs": "Correio da Manhã 09/03/2026: 'Sua primeira sede, erguida ainda em 1956 na Candangolândia, funcionou como centro de comando das obras entre 1956 e 1959. Foi ali que o engenheiro Israel Pinheiro, então presidente da companhia, coordenou parte decisiva do esforço'; 'O prédio, que depois abrigou a Administração Regional da Candangolândia ... reinaugurado como Polo de Educação Profissional Israel Pinheiro'; sede atual 'no mesmo local há 66 anos'. Jornal de Brasília: 'posto de saúde, hospital, alojamentos ... uma escola ... (cujas primeiras aulas se deram no barracão-sede da empresa) ... o caixa-forte, do qual saíam os pagamentos'; 'capacidade para cerca de 1.200 proletários solteiros'; SAPS 'cerca de 1.500 refeições diárias'. IBGE 2010, legenda de foto: 'escritório-sede da NOVACAP – Candangolandia, DF'. ptwiki Candangolândia: 'Fundação: 3 de novembro de 1956'; nomes 'Lonalândia, Sacolândia e Vila dos Candangos'. Jornal de Brasília 1983 (via busca, não lido): 'Candangolândia (Velhacap)'. Diretoria: Israel Pinheiro presidente; Bernardo Sayão, Ernesto Silva e Íris Meinberg diretores desde set/1956 (ptwiki Sayão). Onde a equipe de Niemeyer desenhava no canteiro: NÃO ENCONTRADO."
+    },
+    {
+      "id": "vila-planalto-1957",
+      "ano": 1957.09,
+      "data_exata": "03/02/1957 (início do 1º acampamento, segundo resumo de busca); tombada em 1988",
+      "titulo_curto_PT": "OS ACAMPAMENTOS DA OBRA",
+      "legenda": "Ao lado do Alvorada e da futura Praça, as construtoras montam 22 acampamentos de madeira",
+      "detalhe": "Rabelo (Brasília Palace) e Pacheco Fernandes (Alvorada) chegaram primeiro; depois DFL, Nacional, Atlas, Pederneiras, Tamboril e a Planalto, que deu nome à vila. Eram cerca de 320 hectares.",
+      "local": {
+        "nome": "Vila Planalto",
+        "lat": -15.79268,
+        "lon": -47.850277,
+        "coord_fonte": "OSM local, nó place 'Vila Planalto' (a pesquisa anterior não tinha coordenada)",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "fileiras de galpões de madeira entre o Alvorada e a Praça dos Três Poderes; parte deles some quando o lago enche (1959–61)",
+      "numero_impacto": "22 ACAMPAMENTOS",
+      "fontes": [
+        "https://jornaldebrasilia.com.br/60anos/uma-vila-para-o-planalto/",
+        "https://pt.wikipedia.org/wiki/Vila_Planalto"
+      ],
+      "confianca": "media",
+      "obs": "Jornal de Brasília: 'Já em 1957 chegaram as primeiras, encarregadas da edificação do Brasília Palace Hotel e do Palácio da Alvorada. Eram, respectivamente, a Rabelo e a Pacheco Fernandes'; 'Ao todo, foram 22 alojamentos, instalados às margens do Plano Piloto, que ocupavam cerca de 320 hectares. Dentre eles ... os do Departamento de Força e Luz (DFL), da Nacional, da Atlas, da Pederneiras, da Tamboril ... a Planalto'. ptwiki: 'acampamentos das construtoras Rabello ... e da Pacheco Fernandes Dantas, que construiu o Brasília Palace Hotel' (atribuição invertida em relação ao JBr — divergência no RESUMO); 'Em 1958, já estavam construídos, aproximadamente, vinte e dois acampamentos'; 'O Lago Paranoá cobriu parte de alguns desses acampamentos'; tombada em 1988. Data 03/02/1957 e o engenheiro Peri Rocha França vieram de resumo de busca (Correio Braziliense 2022), não lidos na página. Número de operários por acampamento: NÃO ENCONTRADO. A coord. vale também como aproximação para 'massacre-geb-1959' de eventos.json."
+    },
+    {
+      "id": "ermida-dom-bosco-1957",
+      "ano": 1957.34,
+      "data_exata": "04/05/1957 (inauguração, só em guia de turismo); ptwiki: 'concluída em 1957'",
+      "titulo_curto_PT": "A ERMIDA DE DOM BOSCO",
+      "legenda": "Uma pirâmide de Niemeyer na beira do vale lembra o sonho de Dom Bosco, de 1883",
+      "detalhe": "Em 30/8/1883 o santo teria sonhado com uma terra prometida entre os paralelos 15 e 20, junto a um lago. Israel Pinheiro mandou usar os primeiros materiais que chegaram na capela.",
+      "local": {
+        "nome": "Ermida Dom Bosco (Lago Sul)",
+        "lat": -15.798343,
+        "lon": -47.809504,
+        "coord_fonte": "OSM local, way amenity=chapel 'Ermida Dom Bosco'; ptwiki infobox 15°47′54″S 47°48′34″O (-15.79833, -47.80944)",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "pirâmide branca pequena num morro à margem leste do vale (antes do lago); em 1959 a água chega ao pé dela",
+      "numero_impacto": "1883",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Ermida_Dom_Bosco",
+        "https://www.guiadasemana.com.br/brasilia/turismo/pontos-turisticos/ermida-dom-bosco"
+      ],
+      "confianca": "baixa",
+      "obs": "ptwiki: 'A construção da Ermida Dom Bosco foi iniciada na década de 1950 e concluída em 1957, sendo a primeira obra de alvenaria erguida em Brasília'; 'a profecia atribuída a Dom Bosco, que, em 1883, teria vislumbrado uma \"terra prometida\" entre os paralelos 15° e 20°'; 'traçado piramidal'; tombada pelo Decreto 11.032 de 02/03/1988. Guia da Semana: 'Inaugurado em 4 de maio de 1957, o local é o primeiro templo de Brasília'. Dia 30/08/1883 e o pedido de Israel Pinheiro vieram de resumos de busca (Correio Braziliense; Salesianos), não lidos — conferir antes de pôr na tela. Na tela, usar 'sonho de 1883' e '1957'. 'Primeira obra de alvenaria' também é dita da Igrejinha de Fátima ('primeiro templo católico em alvenaria') — ver RESUMO."
+    },
+    {
+      "id": "barragem-paranoa-obra-1957",
+      "ano": 1957.44,
+      "data_exata": "contrato em 12/06/1957; ensecadeira dez/1958–jan/1959; fechamento em 12/09/1959; cota 1000 só depois das chuvas de 1961",
+      "titulo_curto_PT": "A BARRAGEM DO PARANOÁ",
+      "legenda": "Na garganta onde o Paranoá sai do vale, começa a barragem que vai criar o lago",
+      "detalhe": "A americana Raymond Concrete Pile tinha 17 meses; atrasou e a obra passou a seis firmas brasileiras. A barragem fechou em 12/9/1959 e inundou a Vila Amaury.",
+      "local": {
+        "nome": "Barragem do Paranoá",
+        "lat": -15.799752,
+        "lon": -47.784798,
+        "coord_fonte": "OSM local, nó waterway=dam 'Barragem do Paranoá' (a way da barragem tem centróide -15.800074, -47.784981)",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "1957: canteiro e corte no vale do rio; 1959: muro fecha e a água sobe para oeste pelos braços do Gama/Riacho Fundo e do Torto/Bananal; fotos n07/n08 (1960)",
+      "numero_impacto": "12/9/1959",
+      "imagem": "n07.jpg",
+      "fontes": [
+        "https://www2.senado.leg.br/jspui/bitstream/id/715165/1/DF_Brasilia_P053_R0127.pdf",
+        "https://pt.wikipedia.org/wiki/Lago_Paranoá",
+        "https://pt.wikipedia.org/wiki/Vila_Amaury"
+      ],
+      "confianca": "alta",
+      "obs": "Senado/BDSF (Correio Braziliense): 'A empresa contratada para a obra da barragem e da usina do Rio Paranoá, a norte-americana Raymond Concrete Pile, teria 17 meses para concluir a obra, a partir de 12 de junho de 1957, quando o contrato foi firmado. Menos de dois anos depois, a obra não estava pronta, e o contrato ... foi alterado ... e a tarefa foi entregue a um pool de seis empresas brasileiras'; 'Depois da temporada de chuvas de 1961 ... as águas finalmente atingiram a planejada cota 1000'. ptwiki Lago: 'represamento do Rio Paranoá em 12 de setembro de 1959'. Fotos n07/n08 são de 1960 (barragem pronta), não de 1957–59. Complementa 'lago-paranoa-1959' de eventos.json (que usa o centro do lago); este dá o ponto da barragem. Usina inaugurada em set/1962 (Correio Braziliense 2024, via busca)."
+    },
+    {
+      "id": "vila-amaury-1957",
+      "ano": 1957.5,
+      "data_exata": "1957–1959; alagada com o fechamento das comportas em 12/09/1959",
+      "titulo_curto_PT": "A VILA QUE VIROU LAGO",
+      "legenda": "A Vila Amaury, de operários com família, cresce na beira do Bananal e some sob o lago",
+      "detalhe": "Também chamada Vila Bananal, Vila Areia e Sacolândia, chegou a cerca de 16 mil moradores. Os alojamentos das firmas só aceitavam solteiros. Com a água, as famílias foram para Sobradinho, Taguatinga e Gama.",
+      "local": {
+        "nome": "Vila Amaury (submersa) — enseada entre o Iate Clube e os Fuzileiros Navais",
+        "lat": -15.781,
+        "lon": -47.856,
+        "coord_fonte": "aproximação: ponto na água entre 'Iate Clube de Brasília' (-15.7776, -47.8583) e 'Grupamento dos Fuzileiros Navais' (-15.7841, -47.8581) do OSM local, conforme a SBGf 2010; não há coordenada publicada",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "casinhas de lona e tábua na beira do rio; em 1959.7 a água azul sobe e as cobre; rótulo '16 MIL MORADORES' se apaga",
+      "numero_impacto": "16 MIL",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Vila_Amaury",
+        "https://sbgf.org.br/mysbgf/eventos/expanded_abstracts/IV_SimBGf/Aplica%c3%a7%c3%a3o%20do%20sonar%20de%20varredura%20lateral%20para%20o%20reconhecimento%20de%20vest%c3%adgios%20da%20Vila%20Amauri%20no%20Lago%20Parano%c3%a1%20(Bras%c3%adlia-DF).pdf",
+        "https://pt.wikipedia.org/wiki/Lago_Paranoá"
+      ],
+      "confianca": "baixa",
+      "obs": "ptwiki Vila Amaury: 'assentamento urbano de operários que existiu entre 1957 e 1959'; 'Inicialmente se chamou Vila Bananal, por se situar a margem do Rio Bananal ... também recebendo o nome de Vila Areia e Sacolândia'; 'recebeu aproximadamente 16 mil moradores'; 'Com o fechamento das comportas do Lago Paranoá, em 12 de setembro de 1959, o local foi alagado, e seus moradores foram realocados, principalmente para Sobradinho, Taguatinga e Gama'. ptwiki Lago: alojamentos 'reservado somente aos solteiros' [carece de fontes]. SBGf 2010: 'posição indicativa da Vila Amauri, na enseada entre o Iate Clube e o destacamento da Marinha (Clube dos Fuzileiros Navais) ... Não existindo registros certos da localização'. 'Sacolândia' também é nome antigo da Candangolândia (ptwiki Candangolândia) — não confundir."
+    },
+    {
+      "id": "hjko-1957",
+      "ano": 1957.51,
+      "data_exata": "06/07/1957 (inauguração, após 2 meses de obra); desativado em 1974",
+      "titulo_curto_PT": "O HOSPITAL DOS CANDANGOS",
+      "legenda": "O Hospital JK, 23 prédios de madeira erguidos em dois meses, atende operários acidentados",
+      "detalhe": "Primeiro hospital do novo DF, perto da sede da Novacap e da Cidade Livre: hospital, casas de médicos e alojamentos. Fechou em 1974; desde 1990 é o Museu Vivo da Memória Candanga.",
+      "local": {
+        "nome": "Hospital Juscelino Kubitschek de Oliveira (hoje Museu Vivo da Memória Candanga)",
+        "lat": -15.860222,
+        "lon": -47.959553,
+        "coord_fonte": "OSM local, nó 'Museu Vivo da Memória Candanga'; ptwiki Museu Vivo: 15°51'37.85\"S 47°57'33.103\"O (-15.86051, -47.95920)",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "conjunto de 23 caixas baixas de madeira com uma cruz vermelha, ~1,2 km a SW da sede da Novacap; foto atual n13",
+      "numero_impacto": "23 PRÉDIOS",
+      "imagem": "n13.jpg",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Hospital_Juscelino_Kubitschek_de_Oliveira",
+        "https://pt.wikipedia.org/wiki/Museu_Vivo_da_Memória_Candanga"
+      ],
+      "confianca": "alta",
+      "obs": "ptwiki HJKO: 'O conjunto do HJKO era composto por 23 edificações em madeira'; 'o tempo de construção foi de apenas dois meses, e dessa forma, o HJKO pode ser inaugurado em 6 de julho de 1957'; 'desativado em 1974'; tombado em 13/11/1985; museu 'em 26 de abril de 1990'. ptwiki Museu Vivo: infobox 'Inauguração 1991' (divergência com 1990 — fora da tela); 'próximo ao Núcleo Bandeirante (antiga Cidade Livre) e à Candangolândia (antiga sede da Novacap)'."
+    },
+    {
+      "id": "lei-3273-1957",
+      "ano": 1957.75,
+      "data_exata": "01/10/1957 (Lei 3.273, assinada no Rio de Janeiro)",
+      "titulo_curto_PT": "DATA MARCADA: 21/4/1960",
+      "legenda": "Do Rio, JK sanciona a lei que marca a mudança da capital para 21 de abril de 1960",
+      "detalhe": "O governo seguia despachando do Rio: a lei da Novacap (1956) e esta (1957) foram assinadas lá. No planalto, JK ia ao Catetinho e voltava no mesmo dia; morou no Catetão de maio/1957 a junho/1958.",
+      "local": {
+        "nome": "Rio de Janeiro (Palácio do Catete — local inferido)",
+        "lat": -22.9258639,
+        "lon": -43.1762278,
+        "coord_fonte": "ptwiki Palácio do Catete (Especial:Map), mesma coord. de capitais-rio; a lei diz só 'Rio de Janeiro'",
+        "dentro_bbox": false
+      },
+      "recurso_visual": "fora do mapa: cartão com a data '21/4/1960' e contador regressivo 'FALTAM 2 ANOS E 6 MESES'; foto n14 (JK discursa após sancionar, 02/10/1957)",
+      "numero_impacto": "21/4/1960",
+      "imagem": "n14.jpg",
+      "fontes": [
+        "https://planalto.gov.br/ccivil_03/LEIS/L3273.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l2874.htm",
+        "https://pt.wikipedia.org/wiki/Catetinho"
+      ],
+      "confianca": "alta",
+      "obs": "Lei 3.273, Art. 1º: 'será transferida, no dia 21 de abril de 1960, a Capital da União para o novo Distrito Federal já delimitado no planalto central do País'; Art. 3º inclui 'a ligação Rio-Brasília' no Plano Rodoviário; fecho: 'Rio de Janeiro, em 1º de outubro de 1957'. Lei 2.874: 'Rio de Janeiro, em 19 de setembro de 1956'. ptwiki Catetinho: 'O projeto serviria como palácio de despachos, já que o presidente vinha em visitas diária e retornava ao Rio de Janeiro no mesmo dia, eventualmente pernoitava'; 'a partir de maio de 1957, quando foi inaugurado o Catetinho nº 2, ou Catetão ... Nele o presidente e sua família residiram até a mudança para o Palácio da Alvorada em 30 de junho de 1958'; 'foi assinado o primeiro despacho' no almoço de inauguração. Número de visitas/despachos de JK no Catetinho: NÃO ENCONTRADO. Catete como lugar exato: inferido."
+    },
+    {
+      "id": "fatima-1958",
+      "ano": 1958.49,
+      "data_exata": "pedra em 26/10/1957; inaugurada em 28/06/1958 (data remarcada três vezes)",
+      "titulo_curto_PT": "A IGREJINHA EM 100 DIAS",
+      "legenda": "A Igrejinha de Fátima, promessa de dona Sarah, fica pronta em cem dias na 307/308 Sul",
+      "detalhe": "Projeto de Niemeyer com cálculo de Joaquim Cardozo: três apoios e uma laje triangular inclinada, 19 m de altura e cerca de 100 lugares. Foi o primeiro templo católico de alvenaria da cidade.",
+      "local": {
+        "nome": "Igrejinha Nossa Senhora de Fátima (EQS 307/308 Sul)",
+        "lat": -15.813973,
+        "lon": -47.903762,
+        "coord_fonte": "OSM local, way 'Igrejinha Nossa Senhora de Fátima'; ptwiki 15°48′50″S 47°54′13″O (-15.81389, -47.90361)",
+        "dentro_bbox": true
+      },
+      "recurso_visual": "laje triangular branca 3D no meio da Asa Sul ainda vazia; foto n09 (inauguração, 1958)",
+      "numero_impacto": "100 DIAS",
+      "imagem": "n09.jpg",
+      "fontes": [
+        "https://pt.wikipedia.org/wiki/Igreja_Nossa_Senhora_de_Fátima_(Brasília)"
+      ],
+      "confianca": "alta",
+      "obs": "ptwiki: 'Início da construção 26 de outubro de 1957 Inauguração 28 de junho de 1958'; 'Altura 19 metro Área 300 m²'; 'Capacidade 100 fiéis (aproximadamente)'; 'o primeiro templo católico em alvenaria a ser erguido em Brasília'; 'construída em cem dias, com o objetivo de pagar uma promessa da primeira-dama Sarah Kubitschek'; 'A data de inauguração da capela foi remarcada por três vezes: 03/05/1958 ... 13/05'. Obs.: de 26/10/1957 a 28/06/1958 são 245 dias — os 'cem dias' são da página (talvez contados do início efetivo da obra); na tela preferir 'inaugurada em 1958'. Tombada pelo IPHAN em 1987."
+    }
+  ],
+  "reserva": [
+    {
+      "id": "relatorio-cruls-1894",
+      "ano": 1894.9,
+      "data_exata": "relatório parcial em junho de 1893; relatório geral no fim de 1894",
+      "titulo_curto_PT": "O RELATÓRIO CRULS",
+      "legenda": "Sai o relatório da Comissão Exploradora: clima, rios, solo e o retângulo do futuro DF",
+      "detalhe": "Mais de 4.000 km de caminhamentos em sete meses de campo, de meados de 1892 ao início de 1893, viraram 365 páginas, mapas e fotos de Henrique Morize.",
+      "local": {"nome": "Rio de Janeiro (Observatório) — só texto", "lat": null, "lon": null, "coord_fonte": "sem ponto no planalto", "dentro_bbox": false},
+      "recurso_visual": "cartão com a capa do relatório e a foto n01 (acampamento no rio Paranaíba, 1894)",
+      "numero_impacto": "4.000 KM",
+      "imagem": "n01.jpg",
+      "fontes": ["https://biblioteca.cl.df.gov.br/dspace/bitstream/123456789/1668/1/Miss%C3%A3o%20Cruls.pdf", "https://jornaldebrasilia.com.br/60anos/o-linda-situacao-para-uma-nova-cidade/"],
+      "confianca": "media",
+      "obs": "Relatório: 'Esse Relatorio, intitulado \"Relatorio parcial\", foi publicado em junho de 1893'; CLDF: 'em sete meses de trabalho, de meados de 1892 a princípios de 1893, foram percorridos mais de quatro mil quilômetros'. JBr: 'compilado em 365 páginas e publicado no final de 1894'. JBr diz que a missão voltou ao Rio 'no primeiro mês do ano seguinte' (jan/1893); ptwiki diz 'treze meses'."
+    },
+    {
+      "id": "jatai-1955",
+      "ano": 1955.26,
+      "data_exata": "04/04/1955 (ptwiki JK e Jornal de Brasília) ou 05/04/1955 (ptwiki História de Brasília)",
+      "titulo_curto_PT": "A PROMESSA DE JATAÍ",
+      "legenda": "No 1º comício da campanha, em Jataí (GO), JK promete cumprir a Constituição e mudar a capital",
+      "detalhe": "Um eleitor, o 'Toniquinho', perguntou se ele cumpriria a mudança. No mesmo 4 de abril, no Rio, a comissão de José Pessoa recebia os critérios que iam escolher o Sítio Castanho.",
+      "local": {"nome": "Jataí (GO) — fora do mapa, só texto", "lat": null, "lon": null, "coord_fonte": "fora do bbox; coord. não buscada", "dentro_bbox": false},
+      "recurso_visual": "cartão de texto com a frase de JK",
+      "numero_impacto": "4/4/1955",
+      "fontes": ["https://jornaldebrasilia.com.br/60anos/o-senhor-prometeu-cumprir-a-constituicao/", "https://pt.wikipedia.org/wiki/Juscelino_Kubitschek"],
+      "confianca": "alta",
+      "obs": "JBr: 'No mesmo 4 de abril em que o marechal Pessoa recebeu os critérios da votação que definiu o Sítio Castanho como futura capital, JK discursava em Jataí, cidade a cerca de 290 km ao sul de Goiânia'; JK: 'se a Constituição exige a construção da nova capital, vou respeitá-la e construirei a nova capital do Brasil no Planalto Central'. Já consta no evento novacap-1956 de capitais-rio (RESUMO de lá registra 4 × 5/4)."
+    },
+    {
+      "id": "fazenda-bananal-1955",
+      "ano": 1955.99,
+      "data_exata": "30/12/1955 (escritura de desapropriação amigável, Palácio das Esmeraldas, Goiânia)",
+      "titulo_curto_PT": "A FAZENDA BANANAL",
+      "legenda": "Goiás compra a Fazenda Bananal, 4.330 alqueires onde hoje está quase toda Brasília",
+      "detalhe": "Goiás desapropriou as terras por decreto estadual, porque Café Filho não quis assinar o federal. A primeira gleba, de Jerônimo José da Silva e Jorge Pelles, foi comprada em 30/12/1955.",
+      "local": {"nome": "Fazenda Bananal (área do Plano Piloto) — sem sede localizada", "lat": null, "lon": null, "coord_fonte": "não encontrado: nenhuma fonte lida dá a sede da fazenda", "dentro_bbox": true},
+      "recurso_visual": "mancha da fazenda cobrindo o futuro Plano Piloto, com 'DESAPROPRIADA' carimbado",
+      "numero_impacto": "4.330 ALQUEIRES",
+      "fontes": ["https://edicao.correiobraziliense.com.br/correiobraziliense/2025/10/05/14212a/pdf/A17-CID-0510-DIG.pdf", "https://www.jornalopcao.com.br/colunas-e-blogs/imprensa/uma-pequena-historia-de-como-brasilia-foi-possivel-e-se-tornou-a-capital-do-brasil-47766/", "https://agenciabrasil.ebc.com.br/radioagencia-nacional/cultura/audio/2020-02/brasilia-60-anos-lago-paranoa-hoje-do-surfe-pesca-tem"],
+      "confianca": "media",
+      "obs": "Correio Braziliense 05/10/2025: 'a primeira gleba da fazenda Bananal, dentro do Sítio Castanho, com 4.330 alqueires, pertencia a Jerônimo José da Silva e Jorge Pelles, já havia sido adquirida no dia 30 de dezembro de 1955'; 'escritório móvel para compra de terras, inaugurado em Luziânia no dia 19 de maio de 1956'; 'Em 19 de maio de 1956, delimitou 1.634,02 alqueires geométricos'. Jornal Opção: 'assinam a escritura de desapropriação amigável da Fazenda Bananal, que abriga, hoje, quase toda a área onde está edificada Brasília'; Café Filho 'nega-se a mandar elaborar o decreto de desapropriação'; Goiás: Decreto 480/1955. Quantas fazendas: 'Cerca de mil fazendas ... tiveram de ser total ou parcialmente desapropriadas' (Agência Brasil 2020) × '103 fazendas de criação extensiva' em 1955 (Pébayle, RBG/IBGE, via resumo de busca) — nenhum é contagem oficial."
+    },
+    {
+      "id": "aeroporto-vera-cruz-1956",
+      "ano": 1956.75,
+      "data_exata": "02/10/1956 (primeira visita de JK ao Sítio Castanho)",
+      "titulo_curto_PT": "A PISTA VERA CRUZ",
+      "legenda": "O avião de JK sobrevoa a pista Vera Cruz, onde hoje fica a antiga Rodoferroviária",
+      "detalhe": "Na primeira visita, JK percorreu o Sítio Castanho de carro até o Gama e mandou Israel Pinheiro começar as obras na semana seguinte; deu à Novacap 'três anos e 10 meses, nem mais um dia'.",
+      "local": {"nome": "Antiga Rodoferroviária de Brasília (local da pista Vera Cruz)", "lat": -15.775576, "lon": -47.94072, "coord_fonte": "OSM local, nó 'Antiga Rodoferroviária de Brasília'", "dentro_bbox": true},
+      "recurso_visual": "risco de pista de terra na ponta oeste do futuro Eixo Monumental",
+      "numero_impacto": "2/10/1956",
+      "fontes": ["https://edicao.correiobraziliense.com.br/correiobraziliense/2025/10/05/14212a/pdf/A17-CID-0510-DIG.pdf"],
+      "confianca": "baixa",
+      "obs": "Correio Braziliense 05/10/2025: 'o avião presidencial trazendo Juscelino Kubitschek e sua comitiva sobrevoava o aeroporto Vera Cruz, localizado onde hoje fica a Rodoferroviária'; 'Primeira visita de JK ao Sítio Castanho – 2 de outubro de 1956'; 'deu ordens a Israel para iniciar as obras na semana seguinte'; '— dou-lhe três anos e 10 meses, nem mais um dia'. O texto (diagramação em colunas) também fala em levar os aviões 'para o recém-construído aeroporto do Gama' — não ficou claro onde o avião de JK pousou. Complementa 'jk-primeira-visita-1956' de eventos.json."
+    },
+    {
+      "id": "contagem-1958",
+      "ano": 1958.2,
+      "data_exata": "março de 1958 (contagem do IBGE)",
+      "titulo_curto_PT": "28.804 PESSOAS",
+      "legenda": "Oito meses depois da contagem de 1957, o IBGE conta 28.804 pessoas no futuro DF",
+      "detalhe": "Eram cerca de 500 em alojamentos no fim de 1956 e 2.500 em janeiro de 1957. Crescia em média 2.100 pessoas por mês.",
+      "local": {"nome": "Plano Piloto (centro) — mesmo ponto dos censos de eventos.json", "lat": -15.79389, "lon": -47.88278, "coord_fonte": "igual a censo-experimental-1959 de eventos.json", "dentro_bbox": true},
+      "recurso_visual": "contador de população salta",
+      "numero_impacto": "28.804",
+      "fontes": ["https://biblioteca.ibge.gov.br/visualizacao/livros/liv44769.pdf", "https://repositorio.ifb.edu.br/bitstreams/d0227a09-f705-48c3-bd24-07fb90ff4648/download"],
+      "confianca": "alta",
+      "obs": "IBGE, Veredas de Brasília (2010), cap. 'Em 1959, o censo experimental na alvorada de Brasília' (L. A. Pinto de Oliveira): 'número que alcançou algo em torno de 500 pessoas no final de dezembro'; 'Em janeiro de 1957 ... cerca de 2 500 pessoas'; 'Em julho de 1957, o IBGE efetuou uma Contagem Populacional em todo o território do futuro Distrito Federal, encontrando uma população que já atingia a 12 283 pessoas, das quais aproximadamente a metade estava radicada nas \"zonas velhas\", ou seja, as áreas rurais e a antiga cidade de Planaltina. Em março de 1958 ... nova Contagem já alcançava um total de 28 804 pessoas ... crescimento médio mensal de 2 100 pessoas'. IFB cita 'IBGE (2010)' mas diz '250 candangos' em 1956 e chama os 28.804 de 'operários' — divergência no RESUMO. Pode entrar no populacao.json como ponto extra."
+    },
+    {
+      "id": "rota-anapolis",
+      "ano": 1958.7,
+      "data_exata": "foto da estação em setembro de 1958; distância da ptwiki",
+      "titulo_curto_PT": "O TREM PARAVA EM ANÁPOLIS",
+      "legenda": "O material chegava de trem até Anápolis, a 139 km do canteiro, e seguia de caminhão",
+      "detalhe": "Não havia materiais no planalto além de pedra, tijolo e madeira; muito vinha de avião. O asfalto só chegou a Brasília em 1960, na fase final da obra.",
+      "local": {"nome": "Anápolis (GO) — fora do mapa, só seta/rótulo", "lat": -16.32694, "lon": -48.9528, "coord_fonte": "ptwiki Anápolis (Especial:Map)", "dentro_bbox": false},
+      "recurso_visual": "seta de caminhões entrando pela borda sudoeste com rótulo 'ANÁPOLIS 139 KM'; foto n11 (estação de Anápolis, 1958)",
+      "numero_impacto": "139 KM",
+      "imagem": "n11.jpg",
+      "fontes": ["https://pt.wikipedia.org/wiki/Construção_de_Brasília", "https://pt.wikipedia.org/wiki/Anápolis"],
+      "confianca": "media",
+      "obs": "ptwiki Construção: 'Não existiam materiais no local salvo a pedra, tijo[lo] ... boa parte do transporte era via aérea'; 'o principal ponto de transbordo de carga era Anápolis, a 139 km da capital, e o asfalto só chegou em Brasília em 1960'. Em linha reta, Anápolis–Rodoviária dá 129 km (cálculo). Ano de abertura da estrada Anápolis–Brasília (BR-060): NÃO ENCONTRADO. A Lei 3.273/1957 incluiu 'a ligação Rio-Brasília' no Plano Rodoviário."
+    },
+    {
+      "id": "belem-brasilia-1958",
+      "ano": 1958.5,
+      "data_exata": "obra 1958–1960; Bernardo Sayão morre em 15/01/1959 no trecho norte",
+      "titulo_curto_PT": "A BELÉM–BRASÍLIA",
+      "legenda": "JK manda Bernardo Sayão, diretor da Novacap, abrir a estrada de Brasília a Belém",
+      "detalhe": "Cerca de 2.000 km de mata e cerrado abertos entre 1958 e 1960. Em janeiro de 1959 uma árvore derrubada caiu sobre o barracão de Sayão, que morreu no mesmo dia; a estrada leva o nome dele.",
+      "local": {"nome": "Saída norte — fora do mapa, só texto/seta", "lat": null, "lon": null, "coord_fonte": "fora do bbox", "dentro_bbox": false},
+      "recurso_visual": "seta para o norte com 'BELÉM 2.000 KM'; foto n10 (desmatamento, 1959)",
+      "numero_impacto": "1958–1960",
+      "imagem": "n10.jpg",
+      "fontes": ["https://pt.wikipedia.org/wiki/Bernardo_Sayão_Carvalho_Araújo", "https://en.wikipedia.org/wiki/Belém–Brasília_Highway"],
+      "confianca": "media",
+      "obs": "ptwiki Sayão: 'Em setembro de 1956, tornou-se um dos diretores da NOVACAP'; 'Em 1958, Juscelino Kubitschek lhe encarrega a construção do trecho norte da Transbrasiliana (a Belém-Brasília)'; 'no início de janeiro de 1959 ... uma árvore é derrubada de forma equivocada e atinge o barracão onde se encontrava Sayão, que morre no mesmo dia'. Infobox: morte 15/01/1959 em 'Brasília, DF' × texto 'Imperatriz' — divergência. enwiki: 'built between 1958 and 1960, and paved in 1974'. Extensão (~1.950 km, BR-010) veio de resumo de busca — conferir."
+    },
+    {
+      "id": "vila-paranoa-1957",
+      "ano": 1957.5,
+      "data_exata": "1957 (acampamento da barragem)",
+      "titulo_curto_PT": "A VILA DA BARRAGEM",
+      "legenda": "Os operários da barragem formam a Vila Paranoá, nome herdado da antiga Fazenda Paranauá",
+      "detalhe": "A Fazenda Paranauá ou Paranoá foi uma das cerca de mil desapropriadas para o DF; em 1957 já existia a Vila Paranoá, que em 1964 virou região administrativa.",
+      "local": {"nome": "Paranoá (RA VII)", "lat": -15.76861, "lon": -47.77972, "coord_fonte": "ptwiki Paranoá (Especial:Map) — RA atual; o núcleo original 'não ocorreu na área original' (RESUMO-POP)", "dentro_bbox": true},
+      "recurso_visual": "barracos ao lado da barragem",
+      "numero_impacto": "1957",
+      "fontes": ["https://agenciabrasil.ebc.com.br/radioagencia-nacional/cultura/audio/2020-02/brasilia-60-anos-lago-paranoa-hoje-do-surfe-pesca-tem", "https://pt.wikipedia.org/wiki/Paranoá"],
+      "confianca": "baixa",
+      "obs": "Agência Brasil 2020: 'Cerca de mil fazendas ... tiveram de ser total ou parcialmente desapropriadas. Uma delas era a Paranauá ou Paranoá que emprestou o nome àquela que, em 1957, era a Vila Paranoá e, sete anos depois, se tornou a sétima região administrativa do DF'. Coord. é da RA atual, não da vila de 1957."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+Gere 1 imagem com a ferramenta de geração de imagem (image_gen) e salve nesta pasta como capa.png, formato PAISAGEM 16:9 (o maior tamanho horizontal disponível).
+
+Cena: fotografia aérea cinematográfica e realista do canteiro de obras de Brasília em 1959, ao entardecer, no planalto de terra vermelha do cerrado:
+- no centro, o Congresso Nacional EM OBRA: as duas torres gêmeas em estrutura de aço com andaimes, a cúpula e a cuia de concreto ainda cinzentas, guindastes;
+- em volta, caminhões levantando poeira vermelha, galpões de madeira com telhado de zinco dos acampamentos, operários (candangos) pequenos ao longe;
+- ao fundo, os dois eixos riscados na terra formando uma cruz e o horizonte enorme do cerrado com árvores retorcidas, céu amplo com nuvens.
+Tons quentes de fim de tarde, leve aspecto de foto antiga colorizada, alto contraste, aspecto premium. Sem pessoas reconhecíveis.
+
+Texto DESENHADO dentro da arte, em português, no alto à esquerda, em duas linhas grandes, letra sans-serif geométrica extra-bold (estilo Sora/Montserrat ExtraBold), com sombra para legibilidade:
+Linha 1 (branca, enorme): A CONSTRUÇÃO
+Linha 2 (amarela #FACC15, enorme): DE BRASÍLIA
+Abaixo, menor, branco: DO PLANEJAMENTO À INAUGURAÇÃO · 1892–1960
+Grafia exata, com Ç e acentos. Nenhum outro texto, logotipo ou marca d'água.
+
+Não mexa em nenhum outro arquivo da pasta. Ao final, liste os arquivos salvos.

@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "gerado_em": "2026-10-22",
+    "bandeiras_disponiveis": ["portugal.svg", "reino.svg", "imperio.svg", "imperio2.svg", "republica.svg", "brasil.svg", "espanha.svg"],
+    "arquivos_bandeira": "bandeira_arquivo usa SÓ os arquivos locais de motor/assets/bandeiras/ (mesmas chaves de REGIMES_BR em scripts/gerar_cena.py: … → republica 1889.87 → brasil 1960). Para Brasília (vídeo 1956–hoje) só entram republica.svg (1956–1960) e brasil.svg (1960 em diante). Nada foi baixado.",
+    "convencao_ano_decimal": "Como no Rio: 1960.3 = 21/04/1960 (inauguração). 1956.72 = 19/09/1956; 1959.7 = 12/09/1959; 1964.25 = 31/03/1964; 1985.2 = 15/03/1985; 1987.93 = 07/12/1987; 1988.76 = 05/10/1988; 1990.2 = 14/03/1990.",
+    "coincidencia": "A bandeira troca para brasil.svg em 1960, o ano da inauguração de Brasília — o motor já faz isso sozinho."
+  },
+  "regimes": [
+    {
+      "inicio": 1889.87,
+      "fim": null,
+      "data_inicio": "15/11/1889",
+      "data_fim": "—",
+      "nome_tela": "REPÚBLICA",
+      "nome_longo": "República dos Estados Unidos do Brasil (1889–1967) / República Federativa do Brasil",
+      "bandeira_arquivo": "republica.svg",
+      "bandeiras_seguintes": [
+        {"de": 1960, "ate": null, "arquivo": "brasil.svg", "obs": "o motor usa brasil.svg de 1960 em diante (REGIMES_BR); as variações de 1968 e 1992 só mudam o número de estrelas"}
+      ],
+      "bandeira_commons": "Flag_of_Brazil_(1889–1960).svg → Flag_of_Brazil.svg",
+      "fonte": "https://en.wikipedia.org/wiki/Flag_of_Brazil",
+      "confianca": "alta",
+      "obs": "O vídeo começa em 1956: o HUD mostra 'REPÚBLICA' o tempo todo, com republica.svg até 1960 e brasil.svg depois. Datas e fonte copiadas do regimes.json do Rio (mesmo país, mesmos arquivos)."
+    }
+  ],
+  "faixas_extras": [
+    {
+      "inicio": 1964.25,
+      "fim": 1985.2,
+      "data_inicio": "31/03–1º/04/1964 (golpe)",
+      "data_fim": "15/03/1985 (posse do governo civil — 'Nova República')",
+      "nome_tela": "REGIME MILITAR",
+      "nome_longo": "Ditadura militar brasileira (1964–1985)",
+      "bandeira_arquivo": null,
+      "fonte": "https://pt.wikipedia.org/wiki/Ditadura_militar_brasileira",
+      "fontes_extra": ["https://pt.wikipedia.org/wiki/Golpe_de_Estado_no_Brasil_em_1964"],
+      "confianca": "alta",
+      "obs": "Infobox da ptwiki: 'Golpe de Estado 31 de março–1 de abril de 1964' e 'Nova República 15 de março de 1985'. Faixa de texto, não troca bandeira. Em Brasília: a Ponte Costa e Silva (1976) foi inaugurada por Geisel com o nome de outro presidente da ditadura (ptwiki Ponte Honestino Guimarães)."
+    }
+  ],
+  "extras_hud": {
+    "status_da_cidade": [
+      {
+        "de": 1956,
+        "ate": 1956.72,
+        "nome": "ÁREA DO FUTURO DISTRITO FEDERAL",
+        "opcional": true,
+        "data": "início do vídeo até 19/09/1956",
+        "fonte": "https://ipe.df.gov.br/documents/d/ipedf/trajetoria-das-mulheres-no-distrito-federal-50-anos-de-conquistas-pdf",
+        "obs": "Ainda território de Goiás (as terras foram desapropriadas pelo governo de Goiás de 1956 a 1958 — ptwiki Gama/Ceilândia); o IPEDF chama de 'área destinada ao futuro Distrito Federal'. Alternativa: começar já com 'CANTEIRO DA NOVA CAPITAL' em 1956.0."
+      },
+      {
+        "de": 1956.72,
+        "ate": 1960.3,
+        "nome": "CANTEIRO DA NOVA CAPITAL",
+        "curto": "NOVA CAPITAL EM OBRAS",
+        "data": "19/09/1956 (Lei 2.874 cria a Novacap)",
+        "fonte": "https://pt.wikipedia.org/wiki/Companhia_Urbanizadora_da_Nova_Capital",
+        "fontes_extra": ["https://ipe.df.gov.br/documents/d/ipedf/estudo-urbano-ambiental-plano-piloto-pdf"],
+        "obs": "ptwiki Novacap: 'fundada em 19 de setembro de 1956, mediante aprovação da Lei nº 2874/1956 sancionada pelo presidente Juscelino Kubitschek'. 1957: plano de Lúcio Costa vence o concurso (IPEDF)."
+      },
+      {
+        "de": 1960.3,
+        "ate": null,
+        "nome": "CAPITAL DA REPÚBLICA",
+        "data": "21/04/1960 (inauguração de Brasília)",
+        "fonte": "https://ipe.df.gov.br/documents/d/ipedf/estudo-urbano-ambiental-plano-piloto-pdf",
+        "obs": "IPEDF: '21 de abril de 1960: Inauguração de Brasília'. No mesmo dia o Rio vira Estado da Guanabara (regimes.json do Rio)."
+      }
+    ],
+    "linhas_opcionais": [
+      {
+        "ano": 1987.93,
+        "texto": "PATRIMÔNIO MUNDIAL (UNESCO)",
+        "data": "07/12/1987",
+        "fonte": "https://pt.wikipedia.org/wiki/Bras%C3%ADlia",
+        "fontes_extra": ["https://ipe.df.gov.br/documents/d/ipedf/estudo-urbano-ambiental-sudoeste-octogonal-pdf", "https://pt.wikipedia.org/wiki/Plano_Piloto_de_Bras%C3%ADlia"],
+        "obs": "ptwiki Brasília: 'Patrimônio Mundial pela UNESCO, desde 7 de dezembro de 1987'; IPEDF Sudoeste: 'em 7 de dezembro [de 1987] a poligonal de preservação… foi inscrita pela UNESCO'. A página da UNESCO (whc.unesco.org/en/list/445) bloqueou o acesso (Cloudflare) — não conferida.",
+        "confianca": "alta"
+      },
+      {
+        "ano": 1988.76,
+        "texto": "AUTONOMIA POLÍTICA DO DF",
+        "data": "05/10/1988 (Constituição)",
+        "fonte": "https://pt.wikipedia.org/wiki/Distrito_Federal_(Brasil)",
+        "fontes_extra": ["https://pt.wikipedia.org/wiki/C%C3%A2mara_Legislativa_do_Distrito_Federal"],
+        "obs": "ptwiki DF: a Constituição de 1988 aprovou a autonomia política do DF, com eleições diretas para governador, vice e 24 deputados distritais. A data 05/10/1988 é a da promulgação (não citada nas páginas lidas — conferir se for para a tela).",
+        "confianca": "media"
+      },
+      {
+        "ano": 1990.75,
+        "texto": "1ª ELEIÇÃO PARA GOVERNADOR E CÂMARA LEGISLATIVA",
+        "data": "outubro de 1990 (posse da 1ª legislatura em 1º/01/1991)",
+        "fonte": "https://pt.wikipedia.org/wiki/C%C3%A2mara_Legislativa_do_Distrito_Federal",
+        "obs": "ptwiki CLDF: 'suas primeiras eleições ocorreram em outubro de 1990'; 'Em outubro de 1990, os eleitores do DF foram às urnas para eleger, pela primeira vez, seus representantes locais, bem como o governador'; 24 parlamentares empossados em 1º de [janeiro de 1991]. Divergência: ptwiki DF diz que o 1º governador eleito, Joaquim Roriz, teve 'mandato de 1988 a 1990' (ver RESUMO-POP.md). Até 1991 o Senado legislava pelo DF (Comissão do DF, 1961–1991).",
+        "confianca": "media"
+      },
+      {
+        "ano": 1990.2,
+        "texto": "TOMBADA PELO IPHAN",
+        "data": "14/03/1990 (Livro do Tombo Histórico); Portaria IPHAN 314 de 08/10/1992",
+        "fonte": "https://pt.wikipedia.org/wiki/Plano_Piloto_de_Bras%C3%ADlia",
+        "fontes_extra": ["https://ipe.df.gov.br/documents/d/ipedf/estudo-urbano-ambiental-plano-piloto-pdf"],
+        "obs": "ptwiki Plano Piloto de Brasília: 'Em 14 de março de 1990, o conjunto urbanístico de Brasília foi inscrito no Livro do Tombo Histórico do IPHAN'; IPEDF: '1992: é publicada a Portaria 314 de 8/10/1992 do IPHAN'. Antes disso: tombamento distrital pelo decreto 10.829 de 1987 (ptwiki).",
+        "confianca": "alta"
+      }
+    ]
+  }
+}
