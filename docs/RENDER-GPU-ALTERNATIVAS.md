@@ -2,7 +2,13 @@
 
 Pergunta do Nei: quanto custaria fazer o timelapse em Blender, e qual alternativa usa a GPU da nossa máquina.
 
-**Resposta curta:** o Blender que temos não usa a GPU, então cada vídeo levaria de 4 a 6 dias de render. O **Mitsuba 3** roda na GPU (NVIDIA GB10) e, medido com os prédios e o relevo de cada cidade, faria um vídeo inteiro em **1 a 5 horas**.
+**Resposta curta:** o Blender que temos não usa a GPU, então cada vídeo levaria de 4 a 6 dias de render. O **Mitsuba 3** roda na GPU (NVIDIA GB10) e, medido com os prédios e o relevo de cada cidade, faria um vídeo inteiro em **1 a 5 horas**. Para comparar: o motor atual (deck.gl no Chrome) faz o mesmo vídeo em **5 a 18 minutos**, medido nos logs de render.
+
+## O que é cada coisa
+
+- **Motor atual (deck.gl):** é como os vídeos são feitos hoje, e **não é o Remotion**. É uma página web (`motor/mapa.html`) que desenha o mapa 3D com a biblioteca deck.gl. O script `motor/render.mjs` abre essa página num Chrome sem janela, usando a GPU pelo Vulkan, e fotografa quadro por quadro; o `render_trechos.sh` faz isso em trechos de 60 s e junta tudo com o ffmpeg. Desenha como um jogo (rasterização): muito rápido, mas com luz e sombra simplificadas, daí o visual de "mapa".
+- **Mitsuba 3:** programa de render de código aberto, criado por pesquisadores da EPFL (Suíça). Calcula a luz como na vida real (*path tracing*): segue milhões de raios de luz quicando na cena, e daí saem sombras macias, luz rebatida entre prédios e céu realista. É o mesmo princípio do Cycles do Blender, o visual de "maquete fotografada". Não tem tela nem editor como o Blender: a cena é toda montada por um script Python, o que combina com o nosso jeito de trabalhar, porque o motor já é todo por script. Roda na GPU NVIDIA pelo OptiX. Instala com `pip install mitsuba`.
+- **Blender:** programa completo de 3D, com editor visual. Aqui só roda pelo processador (ver seção 2).
 
 ## 1. A máquina
 
@@ -48,20 +54,22 @@ Medido num quarto de 8 m² (cena simples), por quadro: EEVEE por software ~40 s,
 - `quadro` = tempo de render de um quadro.
 - `atualiza` = tempo para mudar a altura de todos os prédios e refazer a estrutura de raios. É o que acontece a cada quadro do timelapse, em que os prédios nascem e crescem.
 
-| Cidade | Prédios | Relevo (pontos) | Altitude máx. | Recorte | Triângulos | Vídeo | Quadros (30 fps) | Mitsuba por quadro (render + atualiza) | **Mitsuba, cena simples** | **Mitsuba, ×4 (visual final)** | Blender EEVEE por software (~40 s) |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| Floripa | 356.526 | 1692×2124 | 1263 m | 46×65 km | 10,7 M | 6,3 min | 11.274 | 0,15 + 0,08 s | 0,7 h | **~3 h** | ~125 h |
-| Rio | 1.818.599 | 2808×1368 | 980 m | 80×42 km | 25,9 M | 7,0 min | 12.549 | 0,16 + 0,21 s | 1,3 h | **~5 h** | ~139 h |
-| Itaguaí | 801.802 | 2700×1980 | 1635 m | 77×61 km | 18,7 M | 6,1 min | 10.992 | 0,16 + 0,15 s | 0,9 h | **~4 h** | ~122 h |
-| Itaguaí centro | 21.781 | 180×162 | 43 m | 5×5 km | 0,3 M | 5,3 min | 9.630 | 0,21 + 0,02 s | 0,6 h | **~2 h** | ~107 h |
-| Porto Alegre | 533.407 | 1476×1440 | 305 m | 39×44 km | 9,6 M | 1,6 min | 2.850 | 0,14 + 0,07 s | 0,2 h | **~1 h** | ~32 h |
-| Capitais: Salvador | 389.344 | 1800×1368 | 179 m | 54×42 km | 8,8 M | 4,4 min | 7.941 | 0,12 + 0,06 s | 0,4 h | **~2 h** | ~88 h |
-| Capitais: Rio | 1.818.599 | 2808×1368 | 980 m | 80×42 km | 25,9 M | 4,1 min | 7.368 | 0,16 + 0,21 s | 0,8 h | **~3 h** | ~82 h |
-| Capitais: Brasília | 837.811 | 1872×1440 | 1342 m | 56×44 km | 13,8 M | 4,3 min | 7.826 | 0,14 + 0,11 s | 0,5 h | **~2 h** | ~87 h |
+| Cidade | Prédios | Relevo (pontos) | Altitude máx. | Recorte | Triângulos | Vídeo | Quadros (30 fps) | **Motor atual (deck.gl), medido** | Mitsuba por quadro (render + atualiza) | Mitsuba, cena simples | **Mitsuba, ×4 (visual final)** | Blender EEVEE por software (~40 s) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Floripa | 356.526 | 1692×2124 | 1263 m | 46×65 km | 10,7 M | 6,3 min | 11.274 | **0,08 s/quadro · ~17 min** | 0,15 + 0,08 s | 0,7 h | **~3 h** | ~125 h |
+| Rio | 1.818.599 | 2808×1368 | 980 m | 80×42 km | 25,9 M | 7,0 min | 12.549 | **0,08 s/quadro · ~18 min** | 0,16 + 0,21 s | 1,3 h | **~5 h** | ~139 h |
+| Itaguaí | 801.802 | 2700×1980 | 1635 m | 77×61 km | 18,7 M | 6,1 min | 10.992 | **0,07 s/quadro · ~15 min** | 0,16 + 0,15 s | 0,9 h | **~4 h** | ~122 h |
+| Itaguaí centro | 21.781 | 180×162 | 43 m | 5×5 km | 0,3 M | 5,3 min | 9.630 | **0,07 s/quadro · ~12 min** | 0,21 + 0,02 s | 0,6 h | **~2 h** | ~107 h |
+| Porto Alegre | 533.407 | 1476×1440 | 305 m | 39×44 km | 9,6 M | 1,6 min | 2.850 | **0,10 s/quadro · ~5 min** | 0,14 + 0,07 s | 0,2 h | **~1 h** | ~32 h |
+| Capitais: Salvador | 389.344 | 1800×1368 | 179 m | 54×42 km | 8,8 M | 4,4 min | 7.941 | **0,07 s/quadro · ~11 min** | 0,12 + 0,06 s | 0,4 h | **~2 h** | ~88 h |
+| Capitais: Rio | 1.818.599 | 2808×1368 | 980 m | 80×42 km | 25,9 M | 4,1 min | 7.368 | **0,08 s/quadro · ~11 min** | 0,16 + 0,21 s | 0,8 h | **~3 h** | ~82 h |
+| Capitais: Brasília | 837.811 | 1872×1440 | 1342 m | 56×44 km | 13,8 M | 4,3 min | 7.826 | **0,08 s/quadro · ~11 min** | 0,14 + 0,11 s | 0,5 h | **~2 h** | ~87 h |
 
 ![Floripa no Mitsuba](img/mitsuba-floripa.jpg) ![Rio no Mitsuba](img/mitsuba-rio.jpg)
 
-O Capitais inteiro (12,7 min) daria **~7 h** no Mitsuba contra **~10 dias** no Blender por software.
+O Capitais inteiro (12,7 min) levou **~33 min** no motor atual. No Mitsuba daria **~7 h**; no Blender por software, **~10 dias**.
+
+Os tempos do motor atual saem dos logs `cidades/<id>/final/trechos/t*.log` (renders de 21–23/10). O tempo total soma a abertura do Chrome a cada trecho de 60 s. Mesmo com a cena simples, o Mitsuba é ~3× mais lento por quadro que o deck.gl. Com o visual final, a diferença deve ficar perto de 12×.
 
 **De onde vêm os números:**
 - `atualiza` foi medido em Floripa (0,08 s) e no Rio (0,21 s). Nas outras cidades está estimado pelo número de triângulos.
@@ -79,7 +87,7 @@ O ×4 é margem, não medida. O próximo passo é medir um trecho real com textu
 
 ## 5. Conclusão
 
-- **O render deixa de ser problema com o Mitsuba:** horas, não dias. Uma revisão por noite é viável.
+- **Com o Mitsuba, o render sai em horas, não dias.** Ainda assim é mais lento que o motor atual (minutos). Uma revisão por noite é viável, mas acaba o "corrige e vê de novo em 15 min" de hoje.
 - **O maior custo passa a ser refazer o motor.** É levar para o Mitsuba o que hoje o `mapa.html` faz no deck.gl: globo, câmera por bloco, prédios por ano, ruas, marcos. Conta em semanas de sessão.
 - **Caminho barato para testar o visual:**
   1. Renderizar 1 bloco de Floripa (10–20 s) no Mitsuba, com textura de satélite e câmera do `roteiro.json`.
