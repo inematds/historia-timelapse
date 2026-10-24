@@ -28,3 +28,9 @@ Para a conversa: impacto em cada item no motor (deck.gl), no roteiro/tempo e na 
 - **Início em detalhe** (o público não sabe nada disso): açorianos, Porto de Viamão/dos Casais, fundação, capital etc.
 - **Imagens antigas** (gravuras, fotos históricas): fazer **duas versões, com e sem imagens**.
 - **Linha do tempo correndo no topo** da tela com a data.
+
+## 24/10/2026 — versão com luz real (Mitsuba), publicada a pedido do Nei
+- Publicado no Aventuras (lives26): https://www.youtube.com/watch?v=WzPVdaal1OY (`final/poa-mitsuba.mp4`, 540p no bot v3).
+- Feito: luz real (sombras, prédios subindo), fecho com título + INEMA.CLUB (HUD some), rótulo do muro acima dos prédios, áudio −14 LUFS, cheia de 2024 some antes da volta no tempo, cheia de 1941 escoa antes de o ano andar, ano parado em 2010 com o cartão do censo.
+- Revisor independente: 6 (v1) e 6 (v2); a v3 corrige os itens de tempo apontados.
+- Ainda abertos: chão borrado de perto em 1772 (textura do satélite ~9 m/px), margem antiga do Guaíba com borda reta, "250 anos" na capa (1772→2024 = 252), e os itens 2–7 acima (Farroupilha em detalhe, trem/bonde/fábricas, aterro crescendo, muro, globo, história completa).

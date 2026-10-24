@@ -20,6 +20,7 @@ Full guide (landing + step by step): **https://inematds.github.io/historia-timel
 - **Rio de Janeiro** — from 1500 to the metropolis (7 min): no narration https://www.youtube.com/watch?v=Ij4KsTN_SB0 · narrated https://www.youtube.com/watch?v=Useg7_N_38E
 - **Itaguaí** — from village to port (6 min): no narration https://www.youtube.com/watch?v=NY7K_vMYLx8 · narrated https://www.youtube.com/watch?v=CNwLpoIqQ_A
 - **Downtown Itaguaí** — the streets, up close (5 min): no narration https://www.youtube.com/watch?v=dalR1xWPFlE · narrated https://www.youtube.com/watch?v=XiF00d20oi8
+- **Porto Alegre with realistic lighting** — terrain and buildings in Mitsuba, real shadows (1min35, narrated): https://www.youtube.com/watch?v=WzPVdaal1OY
 - **Porto Alegre** — 1772 to 2024, the pilot (1min35, narrated): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
 ## Anywhere in the world

@@ -20,6 +20,7 @@ Canal [Aventuras INEMA](https://www.youtube.com/@aventurasinema) (en portugués)
 - **Río de Janeiro** — de 1500 a la metrópoli (7 min): sin narración https://www.youtube.com/watch?v=Ij4KsTN_SB0 · narrada https://www.youtube.com/watch?v=Useg7_N_38E
 - **Itaguaí** — de la aldea al puerto (6 min): sin narración https://www.youtube.com/watch?v=NY7K_vMYLx8 · narrada https://www.youtube.com/watch?v=CNwLpoIqQ_A
 - **Centro de Itaguaí** — las calles, de cerca (5 min): sin narración https://www.youtube.com/watch?v=dalR1xWPFlE · narrada https://www.youtube.com/watch?v=XiF00d20oi8
+- **Porto Alegre con luz real** — relieve y edificios en Mitsuba, sombras reales (1min35, narrado): https://www.youtube.com/watch?v=WzPVdaal1OY
 - **Porto Alegre** — 1772 a 2024, el piloto (1min35, narrado): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
 ## Cualquier lugar del mundo

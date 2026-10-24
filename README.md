@@ -20,6 +20,7 @@ Canal [Aventuras INEMA](https://www.youtube.com/@aventurasinema). Cada cidade sa
 - **Rio de Janeiro** — de 1500 à metrópole (7 min): sem narração https://www.youtube.com/watch?v=Ij4KsTN_SB0 · narrada https://www.youtube.com/watch?v=Useg7_N_38E
 - **Itaguaí** — da aldeia ao porto (6 min): sem narração https://www.youtube.com/watch?v=NY7K_vMYLx8 · narrada https://www.youtube.com/watch?v=CNwLpoIqQ_A
 - **Centro de Itaguaí** — as ruas, de perto (5 min): sem narração https://www.youtube.com/watch?v=dalR1xWPFlE · narrada https://www.youtube.com/watch?v=XiF00d20oi8
+- **Porto Alegre com luz real** — relevo e prédios no Mitsuba, sombras de verdade (1min35, narrado): https://www.youtube.com/watch?v=WzPVdaal1OY
 - **Porto Alegre** — 1772 a 2024, o piloto (1min35, narrado): https://www.youtube.com/watch?v=MBBZXnTh6Lg
 
 ## Qualquer lugar do mundo
