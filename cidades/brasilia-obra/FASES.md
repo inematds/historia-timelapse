@@ -30,4 +30,10 @@ Cidade nova: o Nei aprova a fase 1 antes de qualquer publicação. Com o OK, a f
 - Fotos atuais (Igreja de São Sebastião, Pedra Fundamental, Hospital JK) têm "hoje (foto de 20xx)" na legenda.
 
 ## Estado
-- 24/10/2026: render da fase 1 v1.
+- 24/10/2026: v1 (revisor 5) → v2 (revisor novo 5) → v3 enviada ao bot v3; aguardando OK do Nei. Nada publicado.
+- Correções v2/v3: rios do vale com nome, barragem = contrato 12/6/1957, Vila Amaury em 1959, lago enche de 1959,70 a 1959,95, contador parado nos cartões de censo, fecho sobre a Esplanada, capa 1810–1960, Asa Sul pioneira (550 prédios 1958–60 em `anos_antigos.py`), sede da Novacap no quadro, retângulo Cruls só na vista aberta.
+
+## Pendências (limite do motor)
+- Chão do cerrado borrado de perto (textura de 1 px ≈ 15–20 m): o "o que existia" fica no texto + rótulos; precisaria de textura mais fina ou relevo sombreado.
+- Fazendas sem coordenada publicada: não estão no mapa.
+- Cidade Livre e Vila Amaury sem casario próprio (sem dado de lote da época).

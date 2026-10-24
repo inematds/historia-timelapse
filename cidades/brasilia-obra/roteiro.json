@@ -282,6 +282,8 @@
    "vitral": false,
    "campanario": false,
    "espelho": false,
+   "rotulo": "Catedral",
+   "sub": "em 1960, só a estrutura",
    "pronto": 1960.29
   },
   {
@@ -493,7 +495,7 @@
   {
    "id": "paranoa",
    "ano0": 1959.7,
-   "ano1": 1959.83,
+   "ano1": 1959.95,
    "poligonos": [
     [
      [
@@ -4760,7 +4762,7 @@
      "lon": -47.66222,
      "lat": -15.62333,
      "texto": "SÃO SEBASTIÃO · 1810",
-     "z": 985.6,
+     "z": 1095.6,
      "tam": 30
     }
    ]
@@ -4790,25 +4792,25 @@
      "z": 1513.1
     }
    ],
-   "dur": 9.0,
+   "dur": 8.5,
    "cartao": {
     "titulo": "O ARRAIAL DE <b>MESTRE D'ARMAS</b>",
     "numero": "1859",
     "legenda": "Planaltina nasce como Mestre d'Armas, pouso da Estrada Real com nome de um ferreiro",
-    "detalhe": "Fazendeiros Gomes Rabelo ergueram uma capela a São Sebastião junto à lagoa; perto dela um ferreiro, 'mestre' em consertar armas, deu nome à vila. Já havia cemitério em 1812.",
+    "detalhe": "A data de fundação adotada é 19/8/1859. Junto à capela de São Sebastião, um ferreiro, mestre em consertar armas, deu nome à vila. Já havia cemitério em 1812.",
     "fonte": "Wikipédia; IBGE",
     "local": [
      -47.66226,
      -15.623547
     ]
    },
-   "pulo": 1.6,
+   "pulo": 1.4,
    "rotulos": [
     {
      "lon": -47.6615,
      "lat": -15.62,
      "texto": "MESTRE D'ARMAS (PLANALTINA)",
-     "z": 989.2,
+     "z": 1099.2,
      "tam": 30
     }
    ]
@@ -4957,7 +4959,7 @@
        ]
       ],
       "de": 9000,
-      "ate": 2000000.0,
+      "ate": 52000,
       "cor": "#FACC15",
       "preench": "rgba(250,204,21,.12)",
       "largura": 5
@@ -4965,11 +4967,11 @@
     ],
     "rotulos": [
      {
-      "lon": -48.104,
-      "lat": -15.45,
-      "texto": "QUADRILÁTERO CRULS · 160 × 90 KM",
+      "lon": -46.98,
+      "lat": -15.74,
+      "texto": "160 × 90 KM",
       "de": 14000,
-      "ate": 90000,
+      "ate": 52000,
       "tam": 44,
       "cor": "#FACC15"
      },
@@ -5036,20 +5038,41 @@
     ]
    },
    "pulo": 0.8,
-   "imagem": {
-    "src": "assets/epoca/n01.jpg",
-    "legenda": "Um acampamento da Comissão Exploradora",
-    "credito": "Henrique Morize · 1894 · domínio público (Wikimedia Commons)"
-   },
    "rotulos": [
+    {
+     "lon": -47.885,
+     "lat": -15.838,
+     "texto": "RIACHO FUNDO · GAMA",
+     "z": 1161.7,
+     "tam": 28
+    },
+    {
+     "lon": -47.85,
+     "lat": -15.745,
+     "texto": "TORTO · BANANAL",
+     "z": 1177.2,
+     "tam": 28
+    },
+    {
+     "lon": -47.795,
+     "lat": -15.8,
+     "texto": "RIO PARANOÁ",
+     "z": 1183.2,
+     "tam": 28
+    },
     {
      "lon": -47.85,
      "lat": -15.79,
      "texto": "VALE DO PARANOÁ · ONDE GLAZIOU QUER O LAGO",
-     "z": 1064.4,
+     "z": 1174.4,
      "tam": 30
     }
-   ]
+   ],
+   "imagem": {
+    "src": "assets/epoca/n01.jpg",
+    "legenda": "Um acampamento da Comissão Exploradora",
+    "credito": "Henrique Morize · 1894 · domínio público (Wikimedia Commons)"
+   }
   },
   {
    "id": "pedra-fundamental-planalto-1922",
@@ -5123,10 +5146,10 @@
      "z": 1774.4
     }
    ],
-   "dur": 8.5,
+   "dur": 8.0,
    "cartao": {
     "titulo": "BRAZLÂNDIA <b></b>",
-    "numero": "1933",
+    "numero": "POVOADO",
     "legenda": "O povoado de Brazlândia, no oeste, é o outro núcleo antigo da área do futuro DF",
     "detalhe": "Nasceu como distrito de Santa Luzia (Luziânia) em 1932. Em 1959 o censo experimental ainda o chamava de 'povoado', ao lado da cidade de Planaltina e da zona rural.",
     "fonte": "Wikipédia; IBGE",
@@ -5236,7 +5259,7 @@
      "lon": -47.915365,
      "lat": -15.783374,
      "texto": "SÍTIO CASTANHO · 1.172 M (HOJE O CRUZEIRO)",
-     "z": 1212.0,
+     "z": 1322.0,
      "tam": 30
     }
    ]
@@ -5284,7 +5307,7 @@
      "lon": -47.88,
      "lat": -15.79,
      "texto": "FAZENDA BANANAL",
-     "z": 1123.7,
+     "z": 1233.7,
      "tam": 30
     }
    ]
@@ -5353,12 +5376,12 @@
      "z": 1643.7
     },
     {
-     "lon": -47.986,
-     "lat": -15.938,
-     "zoom": 14.6,
-     "pitch": 52,
+     "lon": -47.978,
+     "lat": -15.912,
+     "zoom": 14.2,
+     "pitch": 50,
      "bearing": -20,
-     "z": 1851.9
+     "z": 1781.6
     }
    ],
    "dur": 9.0,
@@ -5379,7 +5402,7 @@
      "lon": -47.988333,
      "lat": -15.9475,
      "texto": "FAZENDA DO GAMA",
-     "z": 1221.0,
+     "z": 1331.0,
      "tam": 30
     }
    ]
@@ -5393,12 +5416,12 @@
    ],
    "cam": [
     {
-     "lon": -47.986,
-     "lat": -15.938,
-     "zoom": 14.6,
-     "pitch": 52,
+     "lon": -47.978,
+     "lat": -15.912,
+     "zoom": 14.2,
+     "pitch": 50,
      "bearing": -20,
-     "z": 1851.9
+     "z": 1781.6
     },
     {
      "lon": -47.9499,
@@ -5526,7 +5549,7 @@
      "lon": -47.967778,
      "lat": -15.87,
      "texto": "CIDADE LIVRE",
-     "z": 1085.5,
+     "z": 1195.5,
      "tam": 30
     }
    ]
@@ -5548,12 +5571,12 @@
      "z": 1647.4
     },
     {
-     "lon": -47.952,
-     "lat": -15.858,
-     "zoom": 15.2,
-     "pitch": 50,
+     "lon": -47.95,
+     "lat": -15.8546,
+     "zoom": 17.4,
+     "pitch": 52,
      "bearing": -30,
-     "z": 1643.8
+     "z": 1659.1
     }
    ],
    "dur": 11.0,
@@ -5603,12 +5626,12 @@
    ],
    "cam": [
     {
-     "lon": -47.952,
-     "lat": -15.858,
-     "zoom": 15.2,
-     "pitch": 50,
+     "lon": -47.95,
+     "lat": -15.8546,
+     "zoom": 17.4,
+     "pitch": 52,
      "bearing": -30,
-     "z": 1643.8
+     "z": 1659.1
     },
     {
      "lon": -47.8508,
@@ -5647,7 +5670,7 @@
      "lon": -47.8503,
      "lat": -15.7927,
      "texto": "ACAMPAMENTOS · VILA PLANALTO",
-     "z": 1074.4,
+     "z": 1184.4,
      "tam": 30
     }
    ]
@@ -5707,7 +5730,7 @@
      "lon": -47.905,
      "lat": -15.787,
      "texto": "EIXO MONUMENTAL",
-     "z": 1181.3,
+     "z": 1291.3,
      "tam": 30
     }
    ]
@@ -5760,7 +5783,7 @@
      "lon": -47.913081,
      "lat": -15.784358,
      "texto": "PRAÇA DO CRUZEIRO",
-     "z": 1209.0,
+     "z": 1319.0,
      "tam": 30
     }
    ]
@@ -5793,9 +5816,9 @@
    "dur": 9.0,
    "cartao": {
     "titulo": "A BARRAGEM <b>DO PARANOÁ</b>",
-    "numero": "12/9/1959",
-    "legenda": "Na garganta onde o Paranoá sai do vale, começa a barragem que vai criar o lago",
-    "detalhe": "A americana Raymond Concrete Pile tinha 17 meses; atrasou e a obra passou a seis firmas brasileiras. A barragem fechou em 12/9/1959 e inundou a Vila Amaury.",
+    "numero": "12/6/1957",
+    "legenda": "Na garganta onde o Paranoá sai do vale, a Novacap contrata a barragem que vai criar o lago",
+    "detalhe": "A americana Raymond Concrete Pile tinha 17 meses; atrasou e a obra passou a seis firmas brasileiras. A barragem só fechou em 12/9/1959.",
     "fonte": "Senado; Wikipédia",
     "local": [
      -47.784798,
@@ -5813,17 +5836,17 @@
      "lon": -47.784798,
      "lat": -15.799752,
      "texto": "BARRAGEM DO PARANOÁ",
-     "z": 1038.4,
+     "z": 1148.4,
      "tam": 30
     }
    ]
   },
   {
-   "id": "vila-amaury-1957",
+   "id": "hjko-1957",
    "anos": [
     1957.47,
-    1957.5,
-    1957.505
+    1957.51,
+    1957.7
    ],
    "cam": [
     {
@@ -5833,54 +5856,6 @@
      "pitch": 55,
      "bearing": 40,
      "z": 1697.8
-    },
-    {
-     "lon": -47.858,
-     "lat": -15.775,
-     "zoom": 14.6,
-     "pitch": 52,
-     "bearing": 120,
-     "z": 1618.4
-    }
-   ],
-   "dur": 9.0,
-   "cartao": {
-    "titulo": "A VILA QUE <b>VIROU LAGO</b>",
-    "numero": "16 MIL",
-    "legenda": "A Vila Amaury, de operários com família, cresce na beira do Bananal e some sob o lago",
-    "detalhe": "Também chamada Vila Bananal, Vila Areia e Sacolândia, chegou a cerca de 16 mil moradores. Os alojamentos das firmas só aceitavam solteiros. Com a água, as famílias foram para Sobradinho, Taguatinga e Gama.",
-    "fonte": "Wikipédia; sbgf.org.br",
-    "local": [
-     -47.856,
-     -15.781
-    ]
-   },
-   "pulo": 0.2,
-   "rotulos": [
-    {
-     "lon": -47.856,
-     "lat": -15.781,
-     "texto": "VILA AMAURY",
-     "z": 1040.0,
-     "tam": 30
-    }
-   ]
-  },
-  {
-   "id": "hjko-1957",
-   "anos": [
-    1957.505,
-    1957.51,
-    1957.7
-   ],
-   "cam": [
-    {
-     "lon": -47.858,
-     "lat": -15.775,
-     "zoom": 14.6,
-     "pitch": 52,
-     "bearing": 120,
-     "z": 1618.4
     },
     {
      "lon": -47.9596,
@@ -5941,7 +5916,7 @@
    "dur": 9.0,
    "cartao": {
     "titulo": "DATA <b>MARCADA: 21/4/1960</b>",
-    "numero": "21/4/1960",
+    "numero": "1/10/1957",
     "legenda": "Do Rio, JK sanciona a lei que marca a mudança da capital para 21 de abril de 1960",
     "detalhe": "O governo seguia despachando do Rio: a lei da Novacap (1956) e esta (1957) foram assinadas lá. No planalto, JK ia ao Catetinho e voltava no mesmo dia; morou no Catetão de maio/1957 a junho/1958.",
     "fonte": "planalto.gov.br; Planalto; Wikipédia",
@@ -6034,7 +6009,7 @@
     "titulo": "PALÁCIO <b>DA ALVORADA</b>",
     "numero": "18 MESES DE OBRA",
     "legenda": "O 1º palácio inaugurado na nova capital: a residência do presidente, à beira do futuro lago",
-    "detalhe": "Barra de vidro de 110 × 30,75 m cercada pelas colunas que só tocam o chão. No mesmo dia abre o Brasília Palace Hotel, ao lado.",
+    "detalhe": "Barra de vidro de 110 × 30,75 m cercada pelas colunas que só tocam o chão.",
     "fonte": "Wikipédia; ufrgs.br",
     "local": [
      -47.822175,
@@ -6286,11 +6261,11 @@
    }
   },
   {
-   "id": "lago-paranoa-1959",
+   "id": "vila-amaury-1957",
    "anos": [
     1959.65,
-    1959.7,
-    1959.85
+    1959.66,
+    1959.69
    ],
    "cam": [
     {
@@ -6300,6 +6275,54 @@
      "pitch": 64,
      "bearing": 106,
      "z": 1692.8
+    },
+    {
+     "lon": -47.858,
+     "lat": -15.775,
+     "zoom": 14.6,
+     "pitch": 52,
+     "bearing": 120,
+     "z": 1618.4
+    }
+   ],
+   "dur": 9.0,
+   "cartao": {
+    "titulo": "A VILA QUE <b>VIROU LAGO</b>",
+    "numero": "1957–1959",
+    "legenda": "A Vila Amaury, de operários com família, cresceu na beira do Bananal: chegou a cerca de 16 mil",
+    "detalhe": "Também chamada Vila Bananal, Vila Areia e Sacolândia, chegou a cerca de 16 mil moradores. Os alojamentos das firmas só aceitavam solteiros. Com a água, as famílias foram para Sobradinho, Taguatinga e Gama.",
+    "fonte": "Wikipédia; sbgf.org.br",
+    "local": [
+     -47.856,
+     -15.781
+    ]
+   },
+   "pulo": 0.2,
+   "rotulos": [
+    {
+     "lon": -47.856,
+     "lat": -15.781,
+     "texto": "VILA AMAURY",
+     "z": 1150.0,
+     "tam": 30
+    }
+   ]
+  },
+  {
+   "id": "lago-paranoa-1959",
+   "anos": [
+    1959.69,
+    1959.7,
+    1959.76
+   ],
+   "cam": [
+    {
+     "lon": -47.858,
+     "lat": -15.775,
+     "zoom": 14.6,
+     "pitch": 52,
+     "bearing": 120,
+     "z": 1618.4
     },
     {
      "lon": -47.835,
@@ -6333,7 +6356,7 @@
      "lon": -47.84,
      "lat": -15.78,
      "texto": "LAGO PARANOÁ",
-     "z": 1040.0,
+     "z": 1150.0,
      "tam": 30
     }
    ]
@@ -6422,7 +6445,9 @@
    "pulo": 0.3,
    "destaca": [
     "marco:congresso",
-    "marco:planalto"
+    "marco:planalto",
+    "marco:stf",
+    "marco:catedral"
    ],
    "imagem": {
     "src": "assets/epoca/e12.jpg",
@@ -6447,12 +6472,12 @@
      "z": 1690.3
     },
     {
-     "lon": -47.86,
-     "lat": -15.78,
-     "zoom": 12.3,
-     "pitch": 36,
-     "bearing": -10,
-     "z": 1609.8
+     "lon": -47.87,
+     "lat": -15.7968,
+     "zoom": 15.4,
+     "pitch": 55,
+     "bearing": 106,
+     "z": 1713.9
     }
    ],
    "dur": 9.0,
@@ -6472,25 +6497,25 @@
   {
    "id": "fecho",
    "anos": [
-    1960.6701,
-    1960.6701
+    1960.67,
+    1960.67
    ],
    "cam": [
     {
-     "lon": -47.86,
-     "lat": -15.78,
-     "zoom": 12.3,
-     "pitch": 36,
-     "bearing": -10,
-     "z": 1609.8
+     "lon": -47.87,
+     "lat": -15.7968,
+     "zoom": 15.4,
+     "pitch": 55,
+     "bearing": 106,
+     "z": 1713.9
     },
     {
-     "lon": -47.86,
-     "lat": -15.77,
-     "zoom": 12.2,
-     "pitch": 28,
-     "bearing": -4,
-     "z": 1643.7
+     "lon": -47.8735,
+     "lat": -15.7958,
+     "zoom": 15.1,
+     "pitch": 50,
+     "bearing": 106,
+     "z": 1721.2
     }
    ],
    "dur": 14.0,
@@ -6504,10 +6529,8 @@
      "assets/epoca/n11.jpg",
      "assets/epoca/e00.jpg",
      "assets/epoca/e04.jpg",
-     "assets/epoca/e05.jpg",
      "assets/epoca/e07.jpg",
-     "assets/epoca/e12.jpg",
-     "assets/epoca/n09.jpg"
+     "assets/epoca/e12.jpg"
     ],
     "creditos": "Fotos e mapas em domínio público (Arquivo Nacional; Missão Cruls, 1894) · Wikimedia Commons"
    }

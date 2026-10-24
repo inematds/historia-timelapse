@@ -42,10 +42,10 @@ PEDRA = cam(-47.679135, -15.68555, 19.0, 45, 180)
 OESTE = cam(-47.98, -15.78, 12.9, 45, 260)          # olhando para Brazlândia
 CAST = cam(-47.905, -15.790, 13.6, 50, -20)          # Sítio Castanho / Cruzeiro
 PLANO = cam(-47.875, -15.792, 12.6, 45, -14)
-GAMA = cam(-47.986, -15.938, 14.6, 52, -20)
+GAMA = cam(-47.978, -15.912, 14.2, 50, -20)
 CATET = cam(-47.9883, -15.9472, 18.7, 55, -20)
 NOVA = cam(-47.9499, -15.8543, 18.4, 56, -30)        # sede da Novacap
-COMANDO = cam(-47.952, -15.858, 15.2, 50, -30)
+COMANDO = cam(-47.9500, -15.8546, 17.4, 52, -30)
 CLIVRE = cam(-47.966, -15.866, 14.6, 52, -25)
 VPLAN = cam(-47.8508, -15.7938, 17.2, 56, 0)
 CRUZ = cam(-47.9140, -15.7840, 15.8, 55, 106)
@@ -62,9 +62,12 @@ CONG = cam(-47.8645, -15.7994, 17.2, 64, 106)
 LAGO = cam(-47.835, -15.795, 12.3, 48, -25)
 ESPL = cam(-47.8712, -15.7972, 16.2, 62, 106)
 PRACA = cam(-47.8625, -15.8003, 17.0, 60, 286)
-FIM = cam(-47.86, -15.78, 12.3, 36, -10)
-FIM2 = cam(-47.86, -15.77, 12.2, 28, -4)
+FIM = cam(-47.8700, -15.7968, 15.4, 55, 106)    # fecho sobre a Esplanada: a cidade inaugurada fica na tela
+FIM2 = cam(-47.8735, -15.7958, 15.1, 50, 106)
 
+# rios do vale antes do lago (braço sul: Gama e Riacho Fundo; braço norte: Torto e Bananal; saída: Paranoá) — onde hoje é o lago
+RIOS = [{"lon": lo, "lat": la, "texto": t, "z": round(zc(lo, la) + 150, 1), "tam": 28} for t, lo, la in
+        [("RIACHO FUNDO · GAMA", -47.885, -15.838), ("TORTO · BANANAL", -47.850, -15.745), ("RIO PARANOÁ", -47.795, -15.800)]]
 AZUL_FRIO = {"cor": "#5a6a8a", "forca": 0.25}
 VERMELHO = {"cor": "#a15050", "forca": 0.3}
 CRULS = [[-48.854167, -15.333333], [-47.354167, -15.333333], [-47.354167, -16.143056], [-48.854167, -16.143056]]
@@ -89,7 +92,8 @@ blocos = [
                            {"lon": -47.662, "lat": -15.622, "texto": "MESTRE D'ARMAS", "de": 6000, "ate": 2e6, "tam": 56, "ponto": True}]}},
     # ------------------------------------------------ 1. o que existia
     bloco("igreja-sao-sebastiao-planaltina", [1810, 1810.5, 1810.9], C0, PLAN_I, 9.5, pulo=0.3, destaque=3, destaca=["marco:igreja_ss"], pulso_r=900),
-    bloco("mestre-darmas-1859", [1810.9, 1859.63, 1859.9], PLAN_I, PLAN, 9.0, pulo=1.6, destaque=2),
+    bloco("mestre-darmas-1859", [1810.9, 1859.63, 1859.9], PLAN_I, PLAN, 8.5, pulo=1.4, destaque=2,
+          detalhe="A data de fundação adotada é 19/8/1859. Junto à capela de São Sebastião, um ferreiro, mestre em consertar armas, deu nome à vila. Já havia cemitério em 1812."),
     bloco("cruls-mestre-darmas-1892", [1859.9, 1892.72, 1892.8], PLAN, PLAN_L, 9.5, pulo=1.4, destaque=2),
     # ------------------------------------------------ 2. o planejamento
     {**bloco("quadrilatero-cruls-1892", [1892.8, 1892.85, 1892.95], PLAN_L, DFTOP, 12.0, pulo=0.2, destaque=2, pulso=False),
@@ -97,13 +101,13 @@ blocos = [
                "chaves": [[0, {"lon": PLAN_L["lon"], "lat": PLAN_L["lat"], "ls": ls(14.3, PLAN_L["lat"])}],
                           [0.32, {"lon": -48.104, "lat": -15.738, "ls": 10.55}], [0.72, {"lon": -48.104, "lat": -15.738, "ls": 10.55}],
                           [1, {"lon": DFTOP["lon"], "lat": DFTOP["lat"], "ls": ls(DFTOP["zoom"], DFTOP["lat"])}]],
-               "poligonos": [{"coords": CRULS, "de": 9000, "ate": 2e6, "cor": "#FACC15", "preench": "rgba(250,204,21,.12)", "largura": 5}],
-               "rotulos": [{"lon": -48.104, "lat": -15.45, "texto": "QUADRILÁTERO CRULS · 160 × 90 KM", "de": 14000, "ate": 90000, "tam": 44, "cor": "#FACC15"},
+               "poligonos": [{"coords": CRULS, "de": 9000, "ate": 52000, "cor": "#FACC15", "preench": "rgba(250,204,21,.12)", "largura": 5}],
+               "rotulos": [{"lon": -46.98, "lat": -15.74, "texto": "160 × 90 KM", "de": 14000, "ate": 52000, "tam": 44, "cor": "#FACC15"},
                            {"lon": -47.662, "lat": -15.622, "texto": "MESTRE D'ARMAS", "de": 14000, "ate": 90000, "tam": 34, "ponto": True},
                            {"lon": -47.86, "lat": -15.85, "texto": "ESTE MAPA", "de": 14000, "ate": 90000, "tam": 34}]}},
-    bloco("acampamento-cruls-1894", [1892.95, 1894.85, 1894.9], DFTOP, VALE, 9.5, pulo=0.8, destaque=2),
+    bloco("acampamento-cruls-1894", [1892.95, 1894.85, 1894.9], DFTOP, VALE, 9.5, pulo=0.8, destaque=2, rotulos=RIOS),
     bloco("pedra-fundamental-planalto-1922", [1894.9, 1922.68, 1922.8], VALE, PEDRA, 10.0, pulo=1.4, destaque=2, destaca=["marco:pedra"]),
-    bloco("brazlandia-1933", [1922.8, 1933.42, 1933.6], PEDRA, OESTE, 8.5, pulo=0.8, destaque=1,
+    bloco("brazlandia-1933", [1922.8, 1933.42, 1933.6], PEDRA, OESTE, 8.0, pulo=0.8, destaque=1, numero="POVOADO",
           **seta("← BRAZLÂNDIA", "povoado de 1933 · fora do mapa")),
     bloco("constituicao-1946", [1933.6, 1946.71, 1946.8], OESTE, DF, 8.5, pulo=0.8, destaque=1, **seta("↘ RIO DE JANEIRO", "a capital do país")),
     bloco("sitio-castanho-1955", [1946.8, 1955.29, 1955.35], DF, CAST, 10.0, pulo=0.8, destaque=2, pulso_r=2500),
@@ -122,25 +126,29 @@ blocos = [
     bloco("plano-piloto-1957", [1957.15, 1957.2, 1957.3], VPLAN, PLANO, 11.0, pulo=0.2, destaque=2, chega=0.3,
           destaca=["linha:eixo_l", "linha:eixo_o", "linha:eixo_n", "linha:eixo_s"]),
     bloco("primeira-missa-1957", [1957.3, 1957.337, 1957.4], PLANO, CRUZ, 8.5, pulo=0.2, destaque=2),
-    bloco("barragem-paranoa-obra-1957", [1957.4, 1957.44, 1957.47], CRUZ, BARR, 9.0, pulo=0.2, destaque=2),
-    bloco("vila-amaury-1957", [1957.47, 1957.5, 1957.505], BARR, AMAURY, 9.0, pulo=0.2, destaque=2),
-    bloco("hjko-1957", [1957.505, 1957.51, 1957.7], AMAURY, HJKO, 9.0, pulo=0.2, destaque=2, destaca=["marco:hjko"]),
-    bloco("lei-3273-1957", [1957.7, 1957.75, 1958.1], HJKO, PLANO, 9.0, pulo=0.3, destaque=2, **seta("↘ RIO DE JANEIRO", "JK sanciona a lei")),
+    bloco("barragem-paranoa-obra-1957", [1957.4, 1957.44, 1957.47], CRUZ, BARR, 9.0, pulo=0.2, destaque=2, numero="12/6/1957",
+          legenda="Na garganta onde o Paranoá sai do vale, a Novacap contrata a barragem que vai criar o lago",
+          detalhe="A americana Raymond Concrete Pile tinha 17 meses; atrasou e a obra passou a seis firmas brasileiras. A barragem só fechou em 12/9/1959."),
+    bloco("hjko-1957", [1957.47, 1957.51, 1957.7], BARR, HJKO, 9.0, pulo=0.2, destaque=2, destaca=["marco:hjko"]),
+    bloco("lei-3273-1957", [1957.7, 1957.75, 1958.1], HJKO, PLANO, 9.0, pulo=0.3, destaque=2, numero="1/10/1957", **seta("↘ RIO DE JANEIRO", "JK sanciona a lei")),
     # ------------------------------------------------ 4. a obra
     bloco("contagem-1958", [1958.1, 1958.2, 1958.2], PLANO, PLANO_A, 8.5, pulo=0.3, destaque=1, numero="28.804"),
-    bloco("alvorada-1958", [1958.4, 1958.49, 1958.492], PLANO_A, ALV, 10.0, pulo=0.3, destaque=2, destaca=["marco:alvorada"]),
+    bloco("alvorada-1958", [1958.4, 1958.49, 1958.492], PLANO_A, ALV, 10.0, pulo=0.3, destaque=2,
+          detalhe="Barra de vidro de 110 × 30,75 m cercada pelas colunas que só tocam o chão.", destaca=["marco:alvorada"]),
     bloco("fatima-1958", [1958.492, 1958.493, 1958.6], ALV, FATIMA, 9.0, pulo=0.2, destaque=2, destaca=["marco:fatima"]),
     bloco("rota-anapolis", [1958.6, 1958.7, 1958.95], FATIMA, SUDOESTE, 9.0, pulo=0.3, destaque=2, pulso=False,
           **seta("↙ ANÁPOLIS · 139 KM", "fim dos trilhos")),
     bloco("massacre-geb-1959", [1958.95, 1959.1, 1959.3], SUDOESTE, VPLAN, 9.0, pulo=0.3, destaque=2, tom=VERMELHO),
     bloco("censo-experimental-1959", [1959.3, 1959.37, 1959.3701], VPLAN, PLANO_A, 8.5, pulo=0.2, destaque=2),
     bloco("congresso-obra-1959", [1959.3701, 1959.5, 1959.65], PLANO_A, CONG, 10.0, pulo=0.2, destaque=2, destaca=["marco:congresso"]),
-    bloco("lago-paranoa-1959", [1959.65, 1959.7, 1959.85], CONG, LAGO, 10.0, pulo=0.2, destaque=1),
+    bloco("vila-amaury-1957", [1959.65, 1959.66, 1959.69], CONG, AMAURY, 9.0, pulo=0.2, destaque=2, numero="1957–1959",
+          legenda="A Vila Amaury, de operários com família, cresceu na beira do Bananal: chegou a cerca de 16 mil"),
+    bloco("lago-paranoa-1959", [1959.69, 1959.7, 1959.76], AMAURY, LAGO, 10.0, pulo=0.2, destaque=1),
     bloco("esplanada-1959", [1959.85, 1959.9, 1960.1], LAGO, ESPL, 9.5, pulo=0.2, destaque=2),
-    bloco("inauguracao-1960", [1960.1, 1960.3, 1960.6], ESPL, PRACA, 12.0, pulo=0.3, destaque=2, numero="41 MESES",
-          detalhe="A data é o Dia de Tiradentes. Inauguram juntos o Congresso, o Planalto, o STF e a Esplanada; a Catedral ainda era só a estrutura das colunas.", destaca=["marco:congresso", "marco:planalto"]),
+    bloco("inauguracao-1960", [1960.1, 1960.3, 1960.6], ESPL, PRACA, 12.0, pulo=0.3, destaque=2, numero="41 MESES", destaca=["marco:congresso", "marco:planalto", "marco:stf", "marco:catedral"],
+          detalhe="A data é o Dia de Tiradentes. Inauguram juntos o Congresso, o Planalto, o STF e a Esplanada; a Catedral ainda era só a estrutura das colunas.",),
     bloco("censo-1960", [1960.6, 1960.67, 1960.6701], PRACA, FIM, 9.0, pulo=0.2, destaque=2),
-    {"id": "fecho", "anos": [1960.6701, 1960.6701], "cam": [FIM, FIM2], "dur": 14.0},
+    {"id": "fecho", "anos": [1960.67, 1960.67], "cam": [FIM, FIM2], "dur": 14.0},
 ]
 
 # ---------------------------------------------------------------- imagens de época
@@ -180,7 +188,7 @@ for b in blocos:
         b["imagem"] = IMGS[b["id"]]
     if b["id"] == "fecho":
         b["galeria"] = {"fica": True, "titulo": "Imagens <b>da época</b>",
-                        "itens": [f"assets/epoca/n{i:02d}.jpg" for i in (0, 2, 5, 11)] + [f"assets/epoca/e{i:02d}.jpg" for i in (0, 4, 5, 7, 12)] + ["assets/epoca/n09.jpg"],
+                        "itens": [f"assets/epoca/n{i:02d}.jpg" for i in (0, 2, 5, 11)] + [f"assets/epoca/e{i:02d}.jpg" for i in (0, 4, 7, 12)],
                         "creditos": "Fotos e mapas em domínio público (Arquivo Nacional; Missão Cruls, 1894) · Wikimedia Commons"}
 ROT = {"igreja-sao-sebastiao-planaltina": ("SÃO SEBASTIÃO · 1810", -47.66222, -15.62333),
        "mestre-darmas-1859": ("MESTRE D'ARMAS (PLANALTINA)", -47.6615, -15.6200),
@@ -199,7 +207,7 @@ ROT = {"igreja-sao-sebastiao-planaltina": ("SÃO SEBASTIÃO · 1810", -47.66222,
 for b in blocos:
     if b["id"] in ROT:
         nm, lo, la = ROT[b["id"]]
-        b.setdefault("rotulos", []).append({"lon": lo, "lat": la, "texto": nm, "z": round(zc(lo, la) + 40, 1), "tam": 30})
+        b.setdefault("rotulos", []).append({"lon": lo, "lat": la, "texto": nm, "z": round(zc(lo, la) + 150, 1), "tam": 30})
 # o cartão "de onde se mandava" aponta os dois lugares no mapa
 for b in blocos:
     if b["id"] == "comando-1957":
@@ -241,7 +249,8 @@ MARCOS = [
     M("planalto", "palacio_colunas", -47.860677, -15.799138, 196, 1958.52, 1960.25, larg=120, comp=60, pisos=4, pe=4.4, colunas="planalto", rampa=True,
       rotulo="Palácio do Planalto", sub="1960"),
     M("stf", "palacio_colunas", -47.861925, -15.802236, 16, 1958.6, 1960.25, larg=66, comp=40, pisos=3, pe=4.2, colunas="stf", rotulo="STF", sub="1960"),
-    M("catedral", "catedral_bsb", -47.875557, -15.798332, 286, 1958.7, 1960.29, raio=30, alt=42, larg=60, comp=60, vitral=False, campanario=False, espelho=False),
+    M("catedral", "catedral_bsb", -47.875557, -15.798332, 286, 1958.7, 1960.29, raio=30, alt=42, larg=60, comp=60, vitral=False, campanario=False, espelho=False,
+      rotulo="Catedral", sub="em 1960, só a estrutura"),
 ] + [M(f"min_n{i}", "ministerio", lo, la, 288, 1958.6 + i * 0.12, 1959.9 + i * 0.03, larg=104, comp=18) for i, (lo, la) in enumerate(MIN_N)] \
   + [M(f"min_s{i}", "ministerio", lo, la, 288, 1958.7 + i * 0.12, 1960.0 + i * 0.03, larg=104, comp=18) for i, (lo, la) in enumerate(MIN_S)]
 
@@ -265,7 +274,7 @@ roteiro = {
     "longe": {"auto": True},
     "regimes": REG,
     "marcos": MARCOS,
-    "aguas": [{"id": "paranoa", "ano0": 1959.7, "ano1": 1959.83, "poligonos": lago["poligonos"]}],
+    "aguas": [{"id": "paranoa", "ano0": 1959.7, "ano1": 1959.95, "poligonos": lago["poligonos"]}],
     "linhas": [{"id": "eixo_l", "ano": 1957.2, "desenha": 0.04, "sobe": 3, "cor": [236, 232, 220], "largura": 6},
                {"id": "eixo_o", "ano": 1957.2, "desenha": 0.05, "sobe": 3, "cor": [236, 232, 220], "largura": 6},
                {"id": "eixo_n", "ano": 1957.24, "desenha": 0.05, "sobe": 3, "cor": [236, 232, 220], "largura": 6},
