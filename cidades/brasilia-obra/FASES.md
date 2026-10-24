@@ -37,3 +37,5 @@ Cidade nova: o Nei aprova a fase 1 antes de qualquer publicação. Com o OK, a f
 - Chão do cerrado borrado de perto (textura de 1 px ≈ 15–20 m): o "o que existia" fica no texto + rótulos; precisaria de textura mais fina ou relevo sombreado.
 - Fazendas sem coordenada publicada: não estão no mapa.
 - Cidade Livre e Vila Amaury sem casario próprio (sem dado de lote da época).
+- 3º revisor (v3): nota 5 de novo — 3 rodadas sem subir a nota; parado para o Nei decidir (regra de execução longa).
+- Correções baratas já listadas para a v4: título "28.804 / 28.804 PESSOAS" repetido; capela de São Sebastião sem torre (foto não tem); Alvorada "1º palácio definitivo" (o Catetinho veio antes); cartão para o salto 1810→1859 (casario aparece em 1834 sem cartão); conferir "no mesmo dia abriu o aeroporto" e "asfalto só em 1960"; Brazlândia: alinhar 1932 (distrito) × 1933 (data adotada).
