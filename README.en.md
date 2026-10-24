@@ -23,6 +23,18 @@ Full guide (landing + step by step): **https://inematds.github.io/historia-timel
 
 Nothing in the engine is tied to one city or country: everything that changes lives in `cidades/<id>/config.json` — `bbox`, `centro_antigo`, `pbf_url`/`pbf`, `municipio_osm`, `nivel_municipio`/`nivel_bairro` (OSM admin levels, default 8/10), `regiao_bbox` (NASA Blue Marble window, default city ± 10°), `pais_microsoft`, `km_lon`, `vizinhos_anos`. In the script: `globo.pais`, `globo.uf` + `globo.subdiv_arquivo`/`subdiv_prop`, `longe.auto`. Flags in `cidades/<id>/assets/bandeiras/` override the engine ones.
 
+## The process, start to finish
+
+| # | Step | Command | Who |
+|---|---|---|---|
+| 1–3 | Request, config, research | `cidades/<id>/config.json` + `dados/pesquisa/` (every number with a source) | session |
+| 4 | Data | `CIDADE=<id> .venv/bin/python -I scripts/baixar_dados.py` and the `extrai_*`/`prep_*`/`modelo_anos` scripts | script |
+| 5 | Script and scene | `roteiro_<id>.py` → `scripts/gerar_cena.py` | session |
+| 6 | Key frames | `node motor/render.mjs <cena> --quadros t1,t2` | session |
+| 7 | Video | `bash motor/render_trechos.sh <cena> <out.mp4> 60` (5–18 min) | script |
+| 7b | Realistic light (optional) | `bash motor/render_luz.sh <cena> <out.mp4> 64` — Mitsuba on the GPU for terrain and buildings, the engine for HUD and cards (~45 min per 95 s) | script |
+| 8–12 | Review, narration, avatar, publish, notify | independent reviewer, `narrar.py`/`montar_narrada.py`, `montar_avatar.py`, `yt-pubx`, bot v3 | mixed |
+
 ## Realistic lighting render (Mitsuba)
 
 Measured GPU render comparison (current deck.gl engine × Blender × Mitsuba 3), with buildings, terrain and time for each city (in Portuguese): [docs/RENDER-GPU-ALTERNATIVAS.md](docs/RENDER-GPU-ALTERNATIVAS.md). The current engine renders a video in 5–18 min; Mitsuba adds model-like light and shadows in 1–5 h; Blender would take days on this machine.

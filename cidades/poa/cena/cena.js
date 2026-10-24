@@ -545,7 +545,7 @@ window.CENA = {
    "lon": -51.22987,
    "lat": -30.027,
    "texto": "MURO DA MAUÁ",
-   "z": 45,
+   "z": 140,
    "tam": 30,
    "cor": [
     255,
@@ -710,5 +710,14 @@ window.CENA = {
   "segura": 5.0,
   "t1": 5.0
  },
- "duracao": 94.969
+ "duracao": 94.969,
+ "fim": {
+  "titulo": "Porto Alegre · 250 anos",
+  "sub": "duas vezes debaixo d'água · 1772 → 2024",
+  "marca": "INEMA<span>.</span>CLUB",
+  "dura": 4,
+  "escuro": 0.55,
+  "fica": true,
+  "esconde_hud": true
+ }
 };

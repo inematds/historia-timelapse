@@ -1,5 +1,8 @@
 | data | o que quebrou | menor correção | prompt \| infra |
 |---|---|---|---|
+| 2026-10-24 | Mitsuba: pontos pretos (NaN) nos prédios com cor por vértice (`mesh_attribute`) | cor via paleta bitmap 1024x1 + texcoords | infra |
+| 2026-10-24 | Mitsuba: imagem só com céu (cidade a 40 km; `far_clip` padrão 10 km) e prédios pretos (material de um lado só) | `far_clip: 1e6` e BSDF `twosided` | infra |
+| 2026-10-24 | POA (Mitsuba v1): fim com 4 s de preto e HUD por cima, rótulo do muro tapado, áudio −18 LUFS (revisor nota 6) | `fim` com título + `esconde_hud`, rótulo z=140, `loudnorm -14` no mux | prompt |
 | 2026-10-24 | setas/rótulos do Planalto (1.100 m) sumiam do quadro | `z` de rótulo e chamada é em metros crus (o motor multiplica por EXZ); seta fixa na tela (`setas_tela`) para lugar fora do mapa | prompt |
 | 2026-10-24 | obelisco de 1922 invisível no topo do morro | mediana do chão enterrava o marco na encosta: `z` = topo; câmera mirando o marco (olhando ao sul, alvo ao sul dele) | prompt |
 | 2026-10-22 | capitais: `codex exec` da capa ficou parado em "Reading additional input from stdin" | rodar com `< /dev/null` | infra |

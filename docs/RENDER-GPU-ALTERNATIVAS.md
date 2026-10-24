@@ -94,6 +94,20 @@ O ×4 é margem, não medida. O próximo passo é medir um trecho real com textu
   2. Comparar com o mesmo bloco do motor atual.
   3. Em paralelo, testar o three-gpu-pathtracer no Chrome, que muda menos o motor.
 
+## 6. Porto Alegre refeito com o Mitsuba (24/10/2026)
+
+**Como foi feito (render híbrido):**
+- `node motor/render.mjs <cena> --camada <pasta>` abre o mesmo `mapa.html` com `?camada`. Relevo e prédios ficam transparentes, só na profundidade. Grava por quadro a camada (HUD, cartões, globo, cerco, cheias, muro, aterro) e a câmera (`info.jsonl`).
+- `scripts/mitsuba_render.py` monta relevo (`elev.png` × EXZ, textura do satélite) e prédios (contornos reais, subindo ao longo de `nascer` anos) e renderiza com a mesma câmera. Monta céu → Mitsuba → tom → camada.
+- Tudo de uma vez: `bash motor/render_luz.sh <cena> <saida.mp4> 64`.
+
+**Conferências:**
+- Mistura 50/50 com o quadro do motor atual sem contorno duplo.
+- Floripa no modo normal idêntica (diferença 0 em 3 quadros).
+- Cintilação igual à do deck.gl.
+
+**Tempo (95 s, 2.849 quadros, 64 amostras):** camada 0,15 s por quadro e Mitsuba 0,79 s por quadro, total ~45 min. O motor atual faz o mesmo vídeo em ~5 min.
+
 ## Como reproduzir
 
 ```bash

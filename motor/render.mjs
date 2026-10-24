@@ -1,4 +1,6 @@
 // node render.mjs <pasta-da-cena (tem cena.js)> <saida.mp4 | --quadros t1,t2,...> [--fps 30] [--de s] [--ate s]
+// node render.mjs <pasta-da-cena> --camada <pasta-saida> [--de s] [--ate s] [--quadros t1,t2]: modo luz real (Mitsuba):
+//   grava c_NNNNN.png (camada transparente) + info.jsonl (câmera e ano de cada quadro) para scripts/mitsuba_render.py.
 // Serve o motor por HTTP local (fetch de binários não funciona em file://) e captura quadro a quadro.
 import { chromium } from 'playwright';
 import { spawn } from 'node:child_process';
@@ -31,13 +33,27 @@ const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
 page.on('pageerror', e => console.error('pageerror', e.message));
 page.on('console', m => { if (m.type() === 'error') console.error('console', m.text()); });
 const t0 = Date.now();
-await page.goto(url);
+await page.goto(saida === '--camada' ? url + '?camada' : url);
 await page.waitForFunction(() => window.pronto, null, { timeout: 120000 });
 await page.evaluate(() => window.pronto);
 console.error(`carregado em ${((Date.now() - t0) / 1000).toFixed(1)} s`);
 const dur = await page.evaluate(() => window.CENA.duracao);
 
-if (saida === '--quadros') {
+if (saida === '--camada') {
+  const dir = path.resolve(resto[0]); fs.mkdirSync(dir, { recursive: true });
+  const qs = opt('--quadros');
+  const lista = qs ? qs.split(',').map(x => Math.round(Number(x) * fps))
+    : (() => { const a = []; for (let i = Math.round(Number(opt('--de') || 0) * fps); i < Math.round(Number(opt('--ate') || dur) * fps); i++) a.push(i); return a; })();
+  const info = fs.createWriteStream(path.join(dir, 'info.jsonl'), { flags: 'a' }); const ti = Date.now();
+  for (const [k, i] of lista.entries()) {
+    await page.evaluate(t => window.render(t), i / fps);
+    if (qs) await page.evaluate(t => window.render(t), i / fps);
+    await page.screenshot({ path: path.join(dir, `c_${String(i).padStart(5, '0')}.png`), omitBackground: true });
+    info.write(JSON.stringify({ i, ...(await page.evaluate(() => window.INFO)) }) + '\n');
+    if (k % 30 === 0) process.stderr.write(`quadro ${k}/${lista.length} ${((Date.now() - ti) / 1000 / (k + 1)).toFixed(2)} s/quadro\n`);
+  }
+  await new Promise(r => info.end(r));
+} else if (saida === '--quadros') {
   const ts = (opt('--quadros') || resto[0]).split(',').map(Number);
   for (const t of ts) {
     await page.evaluate(t => window.render(t), t);
