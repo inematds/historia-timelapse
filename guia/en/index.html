@@ -322,6 +322,12 @@
   <div class="step"><div class="b">9</div><div>
     <h3>Realistic lighting render (optional, NVIDIA GPU)</h3>
     <p>The same video with terrain and buildings lit by <em>path tracing</em> in <strong>Mitsuba 3</strong>: shadows between buildings, a scale-model look and buildings rising in their own year. The engine still draws the HUD, cards and effects on top. About 45 min for 95 s of video (the normal render takes ~5 min). Details (in Portuguese): <a href="https://github.com/inematds/historia-timelapse/blob/main/docs/RENDER-LUZ-REAL.md">docs/RENDER-LUZ-REAL.md</a>.</p>
+    <p><strong>The two formats and Blender</strong> (same script, same cards and effects; only terrain and buildings change):</p>
+    <ul>
+      <li><strong>Standard</strong> (deck.gl in Chrome): 0.07–0.11 s per frame. Porto Alegre (95 s) in ~5 min, Florianópolis (6 min) in ~17 min. Used for every video and every review.</li>
+      <li><strong>Realistic light</strong> (Mitsuba + engine on top): ~0.75–0.95 s per frame. Porto Alegre in ~45 min, Florianópolis in ~3 h (estimated). Showcase version, after the standard one is approved.</li>
+      <li><strong>Blender</strong> (not used): runs on CPU only here, ~40 s per frame. Porto Alegre would take ~32 h and Florianópolis ~5 days. There is no official GPU Blender for Linux ARM64.</li>
+    </ul>
 <pre><span class="k">.venv/bin/pip install</span> mitsuba==3.9.1 drjit==1.5.0 mapbox-earcut
 <span class="k">bash motor/render_luz.sh</span> cidades/floripa/cena cidades/floripa/final/floripa-mitsuba-video.mp4 64</pre>
   </div></div>

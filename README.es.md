@@ -39,11 +39,28 @@ Nada en el motor está atado a una ciudad o país: todo lo que cambia vive en `c
 | 7b | Luz real (opcional) | `bash motor/render_luz.sh <cena> <salida.mp4> 64` — Mitsuba en la GPU para relieve y edificios, el motor para HUD y tarjetas (~45 min por 95 s) | script |
 | 8–12 | Revisión, narración, avatar, publicar, avisar | revisor independiente, `narrar.py`/`montar_narrada.py`, `montar_avatar.py`, `yt-pubx`, bot v3 | mixto |
 
-## Render con luz real (Mitsuba)
+## Los dos formatos de video (y Blender)
 
-Comparación medida de render en GPU (motor actual deck.gl × Blender × Mitsuba 3), con edificios, relieve y tiempo de cada ciudad (en portugués): [docs/RENDER-GPU-ALTERNATIVAS.md](docs/RENDER-GPU-ALTERNATIVAS.md). El motor actual hace un video en 5–18 min; Mitsuba agrega luz y sombras de maqueta en 1–5 h; Blender tardaría días en esta máquina.
+El mismo guion (`cena.js`) sale en dos formatos. Tarjetas, contador, bandera, globo y efectos (inundaciones, sitios, rellenos) son iguales en los dos. Solo cambia la forma de dibujar el relieve y los edificios.
 
-Cómo usarlo (en portugués): [docs/RENDER-LUZ-REAL.md](docs/RENDER-LUZ-REAL.md).
+| | Formato estándar | Formato luz real | Blender (no usado) |
+|---|---|---|---|
+| Cómo dibuja | deck.gl en un Chrome sin ventana (`motor/render_trechos.sh`), luz simple de videojuego | híbrido: **Mitsuba 3** dibuja relieve y edificios con *path tracing* en la GPU, y el motor dibuja HUD y tarjetas encima (`motor/render_luz.sh`) | Cycles/EEVEE, programa 3D completo |
+| Aspecto | mapa nítido, edificios con sombreado plano que aparecen en el año del barrio | sombras entre edificios, luz rebotada, volumen de maqueta, edificios **subiendo** | igual que Mitsuba (mismo principio de luz) |
+| Tiempo por cuadro (1080p) | 0,07–0,11 s (medido) | ~0,75–0,95 s (medido: capa + Mitsuba) | ~40 s (medido, por procesador) |
+| Porto Alegre, 95 s | **~5 min** (medido) | **~45 min** (medido: 7 min de capa + 30–38 min de Mitsuba) | ~32 h (estimado) |
+| Florianópolis, 6,3 min | **~17 min** (medido) | ~3 h (estimado) | ~5 días (estimado) |
+| ¿Usa la GPU de esta máquina? | sí (Vulkan) | sí (CUDA/OptiX, con eliminador de ruido) | no: no existe Blender oficial para Linux ARM64 con GPU, y aquí corre por software |
+| Ejemplo | [Florianópolis](https://www.youtube.com/watch?v=auBCnC78Xtk) y las otras ciudades de arriba | [Porto Alegre con luz real](https://www.youtube.com/watch?v=WzPVdaal1OY) | — |
+
+**Cuándo usar cada uno:**
+- **Estándar:** todo video nuevo y toda revisión. Se corrige y se vuelve a ver en minutos.
+- **Luz real:** versión destacada, después de aprobar la estándar. Cada revisión cuesta ~1 hora en vez de minutos.
+- **Blender:** descartado. Solo usaría la GPU compilándolo para ARM64 con CUDA (días de trabajo, con riesgo de romperse), y aun así haría el mismo tipo de luz que Mitsuba ya hace por script.
+
+**Qué es Mitsuba:** programa de render de código abierto, creado por investigadores de la EPFL (Suiza). Calcula la luz siguiendo los rayos como en la vida real, el mismo principio del Cycles de Blender. No tiene interfaz: la escena se arma con un script Python, como el resto del motor.
+
+Detalles (en portugués): comparación medida por ciudad en [docs/RENDER-GPU-ALTERNATIVAS.md](docs/RENDER-GPU-ALTERNATIVAS.md); cómo usar el formato luz real en [docs/RENDER-LUZ-REAL.md](docs/RENDER-LUZ-REAL.md).
 
 ## Estructura
 

@@ -322,6 +322,12 @@
   <div class="step"><div class="b">9</div><div>
     <h3>Render com luz real (opcional, GPU NVIDIA)</h3>
     <p>O mesmo vídeo com o relevo e os prédios iluminados por <em>path tracing</em> no <strong>Mitsuba 3</strong>: sombras entre os prédios, volume de maquete e prédios subindo no ano deles. O motor desenha por cima o HUD, os cartões e os efeitos, como sempre. Leva ~45 min para 95 s de vídeo (o render normal, ~5 min). Detalhes: <a href="https://github.com/inematds/historia-timelapse/blob/main/docs/RENDER-LUZ-REAL.md">docs/RENDER-LUZ-REAL.md</a>.</p>
+    <p><strong>Os dois formatos e o Blender</strong> (mesmo roteiro, mesmos cartões e efeitos; muda só o relevo e os prédios):</p>
+    <ul>
+      <li><strong>Padrão</strong> (deck.gl no Chrome): 0,07–0,11 s por quadro. Porto Alegre (95 s) em ~5 min, Florianópolis (6 min) em ~17 min. É o de todo vídeo e toda revisão.</li>
+      <li><strong>Luz real</strong> (Mitsuba + motor por cima): ~0,75–0,95 s por quadro. Porto Alegre em ~45 min, Florianópolis em ~3 h (estimado). Versão de destaque, depois do padrão aprovado.</li>
+      <li><strong>Blender</strong> (não usado): aqui roda só pelo processador, ~40 s por quadro. Porto Alegre levaria ~32 h e Florianópolis ~5 dias. Não há Blender oficial com GPU para Linux ARM64.</li>
+    </ul>
 <pre><span class="k">.venv/bin/pip install</span> mitsuba==3.9.1 drjit==1.5.0 mapbox-earcut
 <span class="k">bash motor/render_luz.sh</span> cidades/floripa/cena cidades/floripa/final/floripa-mitsuba-video.mp4 64</pre>
   </div></div>
