@@ -31,7 +31,8 @@ Cidade nova: o Nei aprova a fase 1 antes de qualquer publicação. Com o OK, a f
 
 ## Estado
 - 26/10/2026, Nei sobre a v3: "achei ela fraca, perdeu muito tempo indo para lá e para cá, e quando terminou foi simples". Medido: 26 dos 36 blocos com viagem longa, câmera chega aos 45% de cada bloco. v4: eventos agrupados por região, vista média, menos blocos, final com revelação do Plano Piloto.
-- 26/10/2026: v4 pronta (`final/brasilia-obra-v4.mp4`, 4min52, −14,6 LUFS; bot v3 msg 2723). 32 blocos; cortados acampamento Cruls, Brazlândia, Bananal, HJKO, barragem e rota de Anápolis (marcos continuam no mapa); Igrejinha antes do Alvorada (28/6 × 30/6/1958); epílogo 1960 → 2022 (censo-2022) e fecho sobre o DF de hoje. Revisor independente rodando. Nada publicado.
+- 26/10/2026: v4 pronta (`final/brasilia-obra-v4.mp4`, 4min52, −14,6 LUFS; bot v3 msg 2723). 32 blocos; cortados acampamento Cruls, Brazlândia, Bananal, HJKO, barragem e rota de Anápolis (marcos continuam no mapa); Igrejinha antes do Alvorada (28/6 × 30/6/1958); epílogo 1960 → 2022 (censo-2022) e fecho sobre o DF de hoje. Revisor: 7, reprovado (borda preta no Gama, comando confuso, capa sem aviso).
+- 26–27/10/2026: v5 (`final/brasilia-obra-v5.mp4`, 4min54; bot v3) com as correções; revisor novo: aprovado, 7 (ritmo resolvido, final forte). Rótulos do fim ajustados depois da revisão. Aguardando o OK do Nei. Ainda abertos: chão borrado de perto, marcos pequenos (igreja, obelisco, Catetinho), massacre da GEB sem marca no mapa.
 - 24/10/2026: v1 (revisor 5) → v2 (revisor novo 5) → v3 enviada ao bot v3; aguardando OK do Nei. Nada publicado.
 - Correções v2/v3: rios do vale com nome, barragem = contrato 12/6/1957, Vila Amaury em 1959, lago enche de 1959,70 a 1959,95, contador parado nos cartões de censo, fecho sobre a Esplanada, capa 1810–1960, Asa Sul pioneira (550 prédios 1958–60 em `anos_antigos.py`), sede da Novacap no quadro, retângulo Cruls só na vista aberta.
 

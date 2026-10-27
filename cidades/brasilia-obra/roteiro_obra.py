@@ -161,10 +161,10 @@ blocos = [
     bloco("inauguracao-1960", [1960.1, 1960.3, 1960.6], ESPL, PRACA, 12.0, pulo=0.3, destaque=2, numero="41 MESES", chega=0.3,
           destaca=["marco:congresso", "marco:planalto", "marco:stf", "marco:catedral"],
           detalhe="A data é o Dia de Tiradentes. Inauguram juntos o Congresso, o Planalto, o STF e a Esplanada; a Catedral ainda era só a estrutura das colunas.",),
-    bloco("censo-1960", [1960.6, 1960.67, 1960.6701], PRACA, REVELA, 11.0, pulo=0.2, destaque=2, chega=0.55,
+    bloco("censo-1960", [1960.6, 1960.67, 1960.6701], PRACA, REVELA, 11.0, pulo=0.2, destaque=2, chega=0.35,
           rotulos=[{"lon": lo, "lat": la, "texto": t, "z": round(zc(lo, la) + 150, 1), "tam": 40} for t, lo, la in
-                   [("ASA SUL", -47.897, -15.818), ("EIXO MONUMENTAL", -47.893, -15.776), ("PRAÇA DOS TRÊS PODERES", -47.861, -15.801),
-                    ("LAGO PARANOÁ", -47.835, -15.770)]]),
+                   [("ASA SUL", -47.905, -15.830), ("EIXO MONUMENTAL", -47.893, -15.776), ("PRAÇA DOS TRÊS PODERES", -47.861, -15.801),
+                    ("LAGO PARANOÁ", -47.840, -15.745)]]),
     # epílogo: a cruz riscada em 1960 vira a cidade de hoje (os prédios nascem no ano do bairro até 2022)
     bloco("censo-2022", [1960.6701, 2022.6, 2022.6], REVELA, REVELA2, 11.0, pulo=3.5, destaque=2, chega=0.5),
     {"id": "fecho", "anos": [2022.6, 2022.6], "cam": [REVELA2, REVELA3], "dur": 12.0},
