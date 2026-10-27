@@ -87,12 +87,12 @@ PLAN_I = cam(-47.66222, -15.62233, 17.6, 55, 160)
 PEDRA_W = cam(-47.672, -15.668, 14.4, 48, 185)        # Planaltina e o morro da pedra no mesmo quadro
 PEDRA = cam(-47.679135, -15.68555, 17.6, 45, 180)
 PLANO_W = cam(-47.885, -15.790, 13.0, 45, -14)
-SUL_W = cam(-47.965, -15.885, 13.6, 50, -20)          # Gama, Catetinho, Candangolândia e Cidade Livre juntos
-CATET_W = cam(-47.9883, -15.9440, 15.6, 52, -20)
-CATET = cam(-47.9883, -15.9472, 17.6, 55, -20)
-NOVA = cam(-47.9499, -15.8543, 17.4, 56, -30)
-CLIVRE = cam(-47.962, -15.864, 15.4, 52, -25)
-COMANDO_W = cam(-47.957, -15.862, 14.8, 52, -30)
+SUL_W = cam(-47.965, -15.895, 13.6, 50, 170)          # Gama, Catetinho, Candangolândia e Cidade Livre juntos
+GAMA_W = cam(-47.986, -15.940, 14.6, 38, 165)        # Catetinho fica a 300 m da borda sul do mapa: vista de perto ou de longe, nunca média
+CATET = cam(-47.9883, -15.9472, 18.0, 55, 165)
+NOVA = cam(-47.9499, -15.8543, 17.4, 56, 175)
+CLIVRE = cam(-47.966, -15.874, 15.4, 50, 178)
+COMANDO_W = cam(-47.969, -15.900, 13.15, 30, 112)        # Novacap e Catetinho juntos no quadro, quase de cima
 VPLAN = cam(-47.8508, -15.7938, 16.4, 56, 0)
 CRUZ = cam(-47.9100, -15.7900, 15.2, 55, 106)
 PLANO_A = cam(-47.885, -15.795, 13.4, 42, 106)
@@ -104,7 +104,7 @@ REVELA2 = cam(-47.880, -15.800, 12.3, 22, 112)          # epílogo: o DF de hoje
 REVELA3 = cam(-47.880, -15.800, 12.2, 20, 116)
 
 blocos = [
-    {"id": "capa", "anos": [1810, 1810], "cam": [C0, C0], "dur": 5.0, "capa": {"imagem": "assets/capa_full.jpg", "segura": 5.0, "some": 0.8}},
+    {"id": "capa", "anos": [1810, 1810], "cam": [C0, C0], "dur": 5.0, "capa": {"imagem": "assets/capa_ilust.jpg", "segura": 5.0, "some": 0.8}},
     {"id": "globo", "anos": [1810, 1810], "cam": [C0, C0], "dur": 9.0, "corte": True,
      "globo": {"raster": True, "br_ate": 9000, "some": 1.2,
                "chaves": [[0, {"lon": -43.2, "lat": -22.9, "ls": 7.6}], [0.3, {"lon": -45.6, "lat": -19.0, "ls": 6.3}],
@@ -113,10 +113,11 @@ blocos = [
                            {"lon": -47.3, "lat": -14.6, "texto": "PLANALTO CENTRAL", "de": 1500, "ate": 9000, "tam": 56},
                            {"lon": -47.662, "lat": -15.622, "texto": "MESTRE D'ARMAS", "de": 6000, "ate": 2e6, "tam": 56, "ponto": True}]}},
     # ------------------------------------------------ 1. o que existia e o planejamento (Planaltina)
-    bloco("igreja-sao-sebastiao-planaltina", [1810, 1810.5, 1810.9], C0, PLAN_I, 9.0, pulo=0.3, destaque=3, destaca=["marco:igreja_ss"], pulso_r=900),
-    bloco("mestre-darmas-1859", [1810.9, 1859.63, 1859.9], PLAN_I, PLAN, 7.5, pulo=1.2, destaque=2, chega=0.3,
+    bloco("igreja-sao-sebastiao-planaltina", [1810, 1810.5, 1810.9], C0, PLAN_I, 9.0, pulo=0.3, destaque=3,
+          legenda="Erguida em 1810, a capela de São Sebastião, em Planaltina, é a igreja mais antiga do atual Distrito Federal", destaca=["marco:igreja_ss"], pulso_r=900),
+    bloco("mestre-darmas-1859", [1810.9, 1859.63, 1859.9], PLAN_I, PLAN, 7.5, pulo=0.9, destaque=2, chega=0.3,
           detalhe="A data de fundação adotada é 19/8/1859. Junto à capela de São Sebastião, um ferreiro, mestre em consertar armas, deu nome à vila. Já havia cemitério em 1812."),
-    bloco("cruls-mestre-darmas-1892", [1859.9, 1892.72, 1892.8], PLAN, PLAN_L, 7.5, pulo=1.2, destaque=2, chega=0.3),
+    bloco("cruls-mestre-darmas-1892", [1859.9, 1892.72, 1892.8], PLAN, PLAN_L, 7.5, pulo=0.9, destaque=2, chega=0.3),
     {**bloco("quadrilatero-cruls-1892", [1892.8, 1892.85, 1892.95], PLAN_L, PEDRA_W, 11.0, pulo=0.2, destaque=2, pulso=False),
      "globo": {"raster": True, "entra": 1.0, "some": 1.3, "br_ate": 9000, "uf": None,
                "chaves": [[0, {"lon": PLAN_L["lon"], "lat": PLAN_L["lat"], "ls": ls(14.3, PLAN_L["lat"])}],
@@ -126,19 +127,18 @@ blocos = [
                "rotulos": [{"lon": -46.98, "lat": -15.74, "texto": "160 × 90 KM", "de": 14000, "ate": 52000, "tam": 44, "cor": "#FACC15"},
                            {"lon": -47.662, "lat": -15.622, "texto": "MESTRE D'ARMAS", "de": 14000, "ate": 90000, "tam": 34, "ponto": True},
                            {"lon": -47.86, "lat": -15.85, "texto": "ESTE MAPA", "de": 14000, "ate": 90000, "tam": 34}]}},
-    bloco("pedra-fundamental-planalto-1922", [1892.95, 1922.68, 1922.8], PEDRA_W, PEDRA, 8.5, pulo=1.2, destaque=2, chega=0.3, destaca=["marco:pedra"]),
+    bloco("pedra-fundamental-planalto-1922", [1892.95, 1922.68, 1922.8], PEDRA_W, PEDRA, 8.5, pulo=0.9, destaque=2, chega=0.3, destaca=["marco:pedra"]),
     # ------------------------------------------------ 2. a escolha do sítio (uma viagem: Planaltina → Plano)
     bloco("constituicao-1946", [1922.8, 1946.71, 1946.8], PEDRA, PLANO_W, 8.5, pulo=0.8, destaque=1, **seta("↘ RIO DE JANEIRO", "a capital do país")),
     bloco("sitio-castanho-1955", [1946.8, 1955.29, 1955.35], PLANO_W, CAST, 8.5, pulo=0.8, destaque=2, pulso_r=2500, chega=0.3),
     # ------------------------------------------------ 3. o comando da obra (Gama, Candangolândia, Cidade Livre: tudo a ~10 km)
-    bloco("novacap-1956", [1955.35, 1956.72, 1956.74], CAST, SUL_W, 8.5, pulo=0.4, destaque=2, **seta("↘ RIO DE JANEIRO", "JK assina a lei no Catete")),
-    bloco("jk-primeira-visita-1956", [1956.74, 1956.75, 1956.79], SUL_W, CATET_W, 7.5, pulo=0.2, destaque=2, chega=0.3),
-    bloco("catetinho-1956", [1956.79, 1956.8, 1956.83], CATET_W, CATET, 7.5, pulo=0.2, destaque=2, chega=0.3, destaca=["marco:catetinho"]),
-    bloco("novacap-sede-1956", [1956.83, 1956.84, 1956.9], CATET, NOVA, 8.5, pulo=0.2, destaque=2, destaca=["marco:novacap"]),
+    bloco("novacap-1956", [1955.35, 1956.72, 1956.74], CAST, SUL_W, 8.5, pulo=0.4, destaque=2, **seta("↖ RIO DE JANEIRO", "JK assina a lei no Catete")),
+    bloco("jk-primeira-visita-1956", [1956.74, 1956.75, 1956.79], SUL_W, GAMA_W, 7.5, pulo=0.2, destaque=2, chega=0.3),
+    bloco("catetinho-1956", [1956.79, 1956.86, 1956.88], GAMA_W, CATET, 8.0, pulo=0.2, destaque=2, chega=0.3, destaca=["marco:catetinho"]),
+    bloco("novacap-sede-1956", [1956.88, 1956.885, 1956.9], CATET, NOVA, 8.5, pulo=0.2, destaque=2, destaca=["marco:novacap"]),
     bloco("cidade-livre-1956", [1956.9, 1956.97, 1957.0], NOVA, CLIVRE, 7.5, pulo=0.2, destaque=1, chega=0.3),
-    bloco("comando-1957", [1957.0, 1957.02, 1957.05], CLIVRE, COMANDO_W, 10.0, pulo=0.2, destaque=2, numero="3 LUGARES", pulso=False, chega=0.3,
-          setas_tela=[{"texto": "↘ RIO DE JANEIRO", "sub": "as leis e o governo", "x": 1440, "y": 600},
-                      {"texto": "↙ CATETINHO · 11 KM", "sub": "as visitas de JK", "x": 60, "y": 520}]),
+    bloco("comando-1957", [1957.0, 1957.02, 1957.05], CLIVRE, COMANDO_W, 12.5, pulo=0.2, destaque=2, numero="3 LUGARES", pulso=False, chega=0.25,
+          setas_tela=[{"texto": "↗ RIO DE JANEIRO", "sub": "as leis e o governo · 930 km", "x": 1440, "y": 660}]),
     # ------------------------------------------------ 4. a obra, no Plano (vista média, poucos metros de câmera)
     bloco("vila-planalto-1957", [1957.05, 1957.09, 1957.15], COMANDO_W, VPLAN, 9.0, pulo=0.2, destaque=2, destaca=["marco:vp1", "marco:vp2", "marco:vp3"]),
     bloco("plano-piloto-1957", [1957.15, 1957.2, 1957.3], VPLAN, PLANO, 9.5, pulo=0.2, destaque=2, chega=0.3,
@@ -230,7 +230,8 @@ for b in blocos:
 # o cartão "de onde se mandava" aponta os dois lugares no mapa
 for b in blocos:
     if b["id"] == "comando-1957":
-        b["chamadas"] = [{"lon": -47.949839, "lat": -15.853872, "z": round(zc(-47.949839, -15.853872) + 15, 1), "texto": "Sede da Novacap", "sub": "o canteiro, todo dia"}]
+        b["chamadas"] = [{"lon": -47.949839, "lat": -15.853872, "z": round(zc(-47.949839, -15.853872) + 15, 1), "texto": "Sede da Novacap", "sub": "o canteiro, todo dia"},
+                         {"lon": -47.988333, "lat": -15.9475, "z": round(zc(-47.988333, -15.9475) + 15, 1), "texto": "Catetinho", "sub": "as visitas de JK · 11 km"}]
 ajusta_anos(blocos)
 for b in blocos:   # contagens e censos: o contador fica parado no número do cartão
     if b["id"] in ("contagem-1958", "censo-experimental-1959", "censo-1960"):
