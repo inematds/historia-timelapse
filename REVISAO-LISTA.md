@@ -12,3 +12,5 @@
 10. Texto na tela sem erro de português, sem sobreposição, sem cortar nas bordas.
 11. Duração compatível com a promessa da capa ("90 segundos").
 12. Final: fecha a história (não termina seco), sem tela quebrada.
+13. Ritmo (26/10/2026, Nei reprovou a Construção de Brasília v3 por isso): a câmera não passa mais tempo viajando do que mostrando o lugar do cartão; nada de ir e voltar entre vista aberta e de perto a cada evento; medir quantos segundos de cada bloco são viagem.
+14. Ápice: o final tem um momento forte (revelação, antes × depois, a cidade inteira) e não é só a galeria; se o vídeo acabasse 20 s antes, faria falta.

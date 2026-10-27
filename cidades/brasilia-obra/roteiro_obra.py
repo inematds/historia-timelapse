@@ -81,74 +81,93 @@ def seta(texto, sub=None):   # lugar fora do mapa: etiqueta fixa na tela, no lad
     return {"setas_tela": [{"texto": texto, "sub": sub, "x": x, "y": y}]}   # o motor multiplica z pelo exagero
 
 
+# v4 (26/10/2026, Nei: "perdeu muito tempo indo para lá e para cá"): um ato por região, vista média, cartões trocando com
+# a câmera quase parada (chega 0,3); só 4 viagens longas (Planaltina → Plano → Gama/Novacap → Plano). Final: revelação do Plano.
+PLAN_I = cam(-47.66222, -15.62233, 17.6, 55, 160)
+PEDRA_W = cam(-47.672, -15.668, 14.4, 48, 185)        # Planaltina e o morro da pedra no mesmo quadro
+PEDRA = cam(-47.679135, -15.68555, 17.6, 45, 180)
+PLANO_W = cam(-47.885, -15.790, 13.0, 45, -14)
+SUL_W = cam(-47.965, -15.885, 13.6, 50, -20)          # Gama, Catetinho, Candangolândia e Cidade Livre juntos
+CATET_W = cam(-47.9883, -15.9440, 15.6, 52, -20)
+CATET = cam(-47.9883, -15.9472, 17.6, 55, -20)
+NOVA = cam(-47.9499, -15.8543, 17.4, 56, -30)
+CLIVRE = cam(-47.962, -15.864, 15.4, 52, -25)
+COMANDO_W = cam(-47.957, -15.862, 14.8, 52, -30)
+VPLAN = cam(-47.8508, -15.7938, 16.4, 56, 0)
+CRUZ = cam(-47.9100, -15.7900, 15.2, 55, 106)
+PLANO_A = cam(-47.885, -15.795, 13.4, 42, 106)
+FATIMA = cam(-47.9038, -15.8145, 16.8, 56, -20)
+ALV = cam(-47.8226, -15.7928, 17.2, 56, 90)
+CONG = cam(-47.8645, -15.7994, 16.6, 62, 106)
+REVELA = cam(-47.865, -15.790, 12.55, 18, 106)          # o Plano de cima: eixos em cruz, Asa Sul e o lago inteiro
+REVELA2 = cam(-47.880, -15.800, 12.3, 22, 112)          # epílogo: o DF de hoje, com as satélites
+REVELA3 = cam(-47.880, -15.800, 12.2, 20, 116)
+
 blocos = [
-    {"id": "capa", "anos": [1810, 1810], "cam": [C0, C0], "dur": 5.5, "capa": {"imagem": "assets/capa_full.jpg", "segura": 5.5, "some": 0.8}},
-    {"id": "globo", "anos": [1810, 1810], "cam": [C0, C0], "dur": 9.5, "corte": True,
+    {"id": "capa", "anos": [1810, 1810], "cam": [C0, C0], "dur": 5.0, "capa": {"imagem": "assets/capa_full.jpg", "segura": 5.0, "some": 0.8}},
+    {"id": "globo", "anos": [1810, 1810], "cam": [C0, C0], "dur": 9.0, "corte": True,
      "globo": {"raster": True, "br_ate": 9000, "some": 1.2,
                "chaves": [[0, {"lon": -43.2, "lat": -22.9, "ls": 7.6}], [0.3, {"lon": -45.6, "lat": -19.0, "ls": 6.3}],
                           [0.65, {"lon": -47.7, "lat": -15.8, "ls": 8.6}], [1, {"lon": C0["lon"], "lat": C0["lat"], "ls": ls(C0["zoom"], C0["lat"])}]],
                "rotulos": [{"lon": -43.20, "lat": -22.90, "texto": "RIO DE JANEIRO", "de": 300, "ate": 4500, "tam": 50, "ponto": True},
                            {"lon": -47.3, "lat": -14.6, "texto": "PLANALTO CENTRAL", "de": 1500, "ate": 9000, "tam": 56},
                            {"lon": -47.662, "lat": -15.622, "texto": "MESTRE D'ARMAS", "de": 6000, "ate": 2e6, "tam": 56, "ponto": True}]}},
-    # ------------------------------------------------ 1. o que existia
-    bloco("igreja-sao-sebastiao-planaltina", [1810, 1810.5, 1810.9], C0, PLAN_I, 9.5, pulo=0.3, destaque=3, destaca=["marco:igreja_ss"], pulso_r=900),
-    bloco("mestre-darmas-1859", [1810.9, 1859.63, 1859.9], PLAN_I, PLAN, 8.5, pulo=1.4, destaque=2,
+    # ------------------------------------------------ 1. o que existia e o planejamento (Planaltina)
+    bloco("igreja-sao-sebastiao-planaltina", [1810, 1810.5, 1810.9], C0, PLAN_I, 9.0, pulo=0.3, destaque=3, destaca=["marco:igreja_ss"], pulso_r=900),
+    bloco("mestre-darmas-1859", [1810.9, 1859.63, 1859.9], PLAN_I, PLAN, 7.5, pulo=1.2, destaque=2, chega=0.3,
           detalhe="A data de fundação adotada é 19/8/1859. Junto à capela de São Sebastião, um ferreiro, mestre em consertar armas, deu nome à vila. Já havia cemitério em 1812."),
-    bloco("cruls-mestre-darmas-1892", [1859.9, 1892.72, 1892.8], PLAN, PLAN_L, 9.5, pulo=1.4, destaque=2),
-    # ------------------------------------------------ 2. o planejamento
-    {**bloco("quadrilatero-cruls-1892", [1892.8, 1892.85, 1892.95], PLAN_L, DFTOP, 12.0, pulo=0.2, destaque=2, pulso=False),
-     "globo": {"raster": True, "entra": 1.2, "some": 1.4, "br_ate": 9000, "uf": None,
+    bloco("cruls-mestre-darmas-1892", [1859.9, 1892.72, 1892.8], PLAN, PLAN_L, 7.5, pulo=1.2, destaque=2, chega=0.3),
+    {**bloco("quadrilatero-cruls-1892", [1892.8, 1892.85, 1892.95], PLAN_L, PEDRA_W, 11.0, pulo=0.2, destaque=2, pulso=False),
+     "globo": {"raster": True, "entra": 1.0, "some": 1.3, "br_ate": 9000, "uf": None,
                "chaves": [[0, {"lon": PLAN_L["lon"], "lat": PLAN_L["lat"], "ls": ls(14.3, PLAN_L["lat"])}],
                           [0.32, {"lon": -48.104, "lat": -15.738, "ls": 10.55}], [0.72, {"lon": -48.104, "lat": -15.738, "ls": 10.55}],
-                          [1, {"lon": DFTOP["lon"], "lat": DFTOP["lat"], "ls": ls(DFTOP["zoom"], DFTOP["lat"])}]],
+                          [1, {"lon": PEDRA_W["lon"], "lat": PEDRA_W["lat"], "ls": ls(PEDRA_W["zoom"], PEDRA_W["lat"])}]],
                "poligonos": [{"coords": CRULS, "de": 9000, "ate": 52000, "cor": "#FACC15", "preench": "rgba(250,204,21,.12)", "largura": 5}],
                "rotulos": [{"lon": -46.98, "lat": -15.74, "texto": "160 × 90 KM", "de": 14000, "ate": 52000, "tam": 44, "cor": "#FACC15"},
                            {"lon": -47.662, "lat": -15.622, "texto": "MESTRE D'ARMAS", "de": 14000, "ate": 90000, "tam": 34, "ponto": True},
                            {"lon": -47.86, "lat": -15.85, "texto": "ESTE MAPA", "de": 14000, "ate": 90000, "tam": 34}]}},
-    bloco("acampamento-cruls-1894", [1892.95, 1894.85, 1894.9], DFTOP, VALE, 9.5, pulo=0.8, destaque=2, rotulos=RIOS),
-    bloco("pedra-fundamental-planalto-1922", [1894.9, 1922.68, 1922.8], VALE, PEDRA, 10.0, pulo=1.4, destaque=2, destaca=["marco:pedra"]),
-    bloco("brazlandia-1933", [1922.8, 1933.42, 1933.6], PEDRA, OESTE, 8.0, pulo=0.8, destaque=1, numero="POVOADO",
-          **seta("← BRAZLÂNDIA", "povoado de 1933 · fora do mapa")),
-    bloco("constituicao-1946", [1933.6, 1946.71, 1946.8], OESTE, DF, 8.5, pulo=0.8, destaque=1, **seta("↘ RIO DE JANEIRO", "a capital do país")),
-    bloco("sitio-castanho-1955", [1946.8, 1955.29, 1955.35], DF, CAST, 10.0, pulo=0.8, destaque=2, pulso_r=2500),
-    bloco("fazenda-bananal-1955", [1955.35, 1955.99, 1956.0], CAST, PLANO, 9.5, pulo=0.4, destaque=2,
-          detalhe="A desapropriação começou pelo decreto de Goiás. No total, cerca de mil fazendas foram desapropriadas, no todo ou em parte (Agência Brasil)."),
-    # ------------------------------------------------ 3. o comando da obra
-    bloco("novacap-1956", [1956.0, 1956.72, 1956.74], PLANO, DF, 9.0, pulo=0.4, destaque=2, **seta("↘ RIO DE JANEIRO", "JK assina a lei no Catete")),
-    bloco("jk-primeira-visita-1956", [1956.74, 1956.75, 1956.79], DF, GAMA, 9.0, pulo=0.2, destaque=2),
-    bloco("novacap-sede-1956", [1956.79, 1956.8, 1956.85], GAMA, NOVA, 10.0, pulo=0.2, destaque=2, destaca=["marco:novacap"]),
-    bloco("catetinho-1956", [1956.85, 1956.86, 1956.95], NOVA, CATET, 9.5, pulo=0.2, destaque=2, destaca=["marco:catetinho"]),
-    bloco("cidade-livre-1956", [1956.95, 1956.97, 1957.02], CATET, CLIVRE, 8.5, pulo=0.2, destaque=1),
-    bloco("comando-1957", [1957.02, 1957.04, 1957.06], CLIVRE, COMANDO, 11.0, pulo=0.2, destaque=2, numero="3 LUGARES", pulso=False,
+    bloco("pedra-fundamental-planalto-1922", [1892.95, 1922.68, 1922.8], PEDRA_W, PEDRA, 8.5, pulo=1.2, destaque=2, chega=0.3, destaca=["marco:pedra"]),
+    # ------------------------------------------------ 2. a escolha do sítio (uma viagem: Planaltina → Plano)
+    bloco("constituicao-1946", [1922.8, 1946.71, 1946.8], PEDRA, PLANO_W, 8.5, pulo=0.8, destaque=1, **seta("↘ RIO DE JANEIRO", "a capital do país")),
+    bloco("sitio-castanho-1955", [1946.8, 1955.29, 1955.35], PLANO_W, CAST, 8.5, pulo=0.8, destaque=2, pulso_r=2500, chega=0.3),
+    # ------------------------------------------------ 3. o comando da obra (Gama, Candangolândia, Cidade Livre: tudo a ~10 km)
+    bloco("novacap-1956", [1955.35, 1956.72, 1956.74], CAST, SUL_W, 8.5, pulo=0.4, destaque=2, **seta("↘ RIO DE JANEIRO", "JK assina a lei no Catete")),
+    bloco("jk-primeira-visita-1956", [1956.74, 1956.75, 1956.79], SUL_W, CATET_W, 7.5, pulo=0.2, destaque=2, chega=0.3),
+    bloco("catetinho-1956", [1956.79, 1956.8, 1956.83], CATET_W, CATET, 7.5, pulo=0.2, destaque=2, chega=0.3, destaca=["marco:catetinho"]),
+    bloco("novacap-sede-1956", [1956.83, 1956.84, 1956.9], CATET, NOVA, 8.5, pulo=0.2, destaque=2, destaca=["marco:novacap"]),
+    bloco("cidade-livre-1956", [1956.9, 1956.97, 1957.0], NOVA, CLIVRE, 7.5, pulo=0.2, destaque=1, chega=0.3),
+    bloco("comando-1957", [1957.0, 1957.02, 1957.05], CLIVRE, COMANDO_W, 10.0, pulo=0.2, destaque=2, numero="3 LUGARES", pulso=False, chega=0.3,
           setas_tela=[{"texto": "↘ RIO DE JANEIRO", "sub": "as leis e o governo", "x": 1440, "y": 600},
                       {"texto": "↙ CATETINHO · 11 KM", "sub": "as visitas de JK", "x": 60, "y": 520}]),
-    bloco("vila-planalto-1957", [1957.06, 1957.09, 1957.15], COMANDO, VPLAN, 9.5, pulo=0.2, destaque=2, destaca=["marco:vp1", "marco:vp2", "marco:vp3"]),
-    bloco("plano-piloto-1957", [1957.15, 1957.2, 1957.3], VPLAN, PLANO, 11.0, pulo=0.2, destaque=2, chega=0.3,
+    # ------------------------------------------------ 4. a obra, no Plano (vista média, poucos metros de câmera)
+    bloco("vila-planalto-1957", [1957.05, 1957.09, 1957.15], COMANDO_W, VPLAN, 9.0, pulo=0.2, destaque=2, destaca=["marco:vp1", "marco:vp2", "marco:vp3"]),
+    bloco("plano-piloto-1957", [1957.15, 1957.2, 1957.3], VPLAN, PLANO, 9.5, pulo=0.2, destaque=2, chega=0.3,
           destaca=["linha:eixo_l", "linha:eixo_o", "linha:eixo_n", "linha:eixo_s"]),
-    bloco("primeira-missa-1957", [1957.3, 1957.337, 1957.4], PLANO, CRUZ, 8.5, pulo=0.2, destaque=2),
-    bloco("barragem-paranoa-obra-1957", [1957.4, 1957.44, 1957.47], CRUZ, BARR, 9.0, pulo=0.2, destaque=2, numero="12/6/1957",
-          legenda="Na garganta onde o Paranoá sai do vale, a Novacap contrata a barragem que vai criar o lago",
-          detalhe="A americana Raymond Concrete Pile tinha 17 meses; atrasou e a obra passou a seis firmas brasileiras. A barragem só fechou em 12/9/1959."),
-    bloco("hjko-1957", [1957.47, 1957.51, 1957.7], BARR, HJKO, 9.0, pulo=0.2, destaque=2, destaca=["marco:hjko"]),
-    bloco("lei-3273-1957", [1957.7, 1957.75, 1958.1], HJKO, PLANO, 9.0, pulo=0.3, destaque=2, numero="1/10/1957", **seta("↘ RIO DE JANEIRO", "JK sanciona a lei")),
-    # ------------------------------------------------ 4. a obra
-    bloco("contagem-1958", [1958.1, 1958.2, 1958.2], PLANO, PLANO_A, 8.5, pulo=0.3, destaque=1, numero="28.804"),
-    bloco("alvorada-1958", [1958.4, 1958.49, 1958.492], PLANO_A, ALV, 10.0, pulo=0.3, destaque=2,
+    bloco("primeira-missa-1957", [1957.3, 1957.337, 1957.4], PLANO, CRUZ, 7.5, pulo=0.2, destaque=2, chega=0.3),
+    bloco("lei-3273-1957", [1957.4, 1957.75, 1958.1], CRUZ, PLANO_A, 7.5, pulo=0.3, destaque=2, numero="1/10/1957", chega=0.3, **seta("↘ RIO DE JANEIRO", "JK sanciona a lei")),
+    bloco("contagem-1958", [1958.1, 1958.2, 1958.2], PLANO_A, PLANO_A, 7.0, pulo=0.3, destaque=1, numero="28.804", titulo="A CONTAGEM DE 1958"),
+    bloco("fatima-1958", [1958.2, 1958.488, 1958.489], PLANO_A, FATIMA, 8.0, pulo=0.3, destaque=2, chega=0.3, destaca=["marco:fatima"]),
+    bloco("alvorada-1958", [1958.489, 1958.494, 1958.6], FATIMA, ALV, 9.0, pulo=0.2, destaque=2,
+          legenda="O 1º palácio de concreto da nova capital: a residência do presidente, à beira do futuro lago",
           detalhe="Barra de vidro de 110 × 30,75 m cercada pelas colunas que só tocam o chão.", destaca=["marco:alvorada"]),
-    bloco("fatima-1958", [1958.492, 1958.493, 1958.6], ALV, FATIMA, 9.0, pulo=0.2, destaque=2, destaca=["marco:fatima"]),
-    bloco("rota-anapolis", [1958.6, 1958.7, 1958.95], FATIMA, SUDOESTE, 9.0, pulo=0.3, destaque=2, pulso=False,
-          **seta("↙ ANÁPOLIS · 139 KM", "fim dos trilhos")),
-    bloco("massacre-geb-1959", [1958.95, 1959.1, 1959.3], SUDOESTE, VPLAN, 9.0, pulo=0.3, destaque=2, tom=VERMELHO),
-    bloco("censo-experimental-1959", [1959.3, 1959.37, 1959.3701], VPLAN, PLANO_A, 8.5, pulo=0.2, destaque=2),
-    bloco("congresso-obra-1959", [1959.3701, 1959.5, 1959.65], PLANO_A, CONG, 10.0, pulo=0.2, destaque=2, destaca=["marco:congresso"]),
-    bloco("vila-amaury-1957", [1959.65, 1959.66, 1959.69], CONG, AMAURY, 9.0, pulo=0.2, destaque=2, numero="1957–1959",
+    bloco("massacre-geb-1959", [1958.6, 1959.1, 1959.3], ALV, VPLAN, 8.5, pulo=0.3, destaque=2, tom=VERMELHO, chega=0.3),
+    bloco("censo-experimental-1959", [1959.3, 1959.37, 1959.3701], VPLAN, PLANO_A, 7.5, pulo=0.2, destaque=2, chega=0.3),
+    bloco("congresso-obra-1959", [1959.3701, 1959.5, 1959.65], PLANO_A, CONG, 8.5, pulo=0.2, destaque=2, chega=0.3, destaca=["marco:congresso"]),
+    bloco("vila-amaury-1957", [1959.65, 1959.66, 1959.69], CONG, AMAURY, 7.5, pulo=0.2, destaque=2, numero="1957–1959", chega=0.3,
           legenda="A Vila Amaury, de operários com família, cresceu na beira do Bananal: chegou a cerca de 16 mil"),
-    bloco("lago-paranoa-1959", [1959.69, 1959.7, 1959.76], AMAURY, LAGO, 10.0, pulo=0.2, destaque=1),
-    bloco("esplanada-1959", [1959.85, 1959.9, 1960.1], LAGO, ESPL, 9.5, pulo=0.2, destaque=2),
-    bloco("inauguracao-1960", [1960.1, 1960.3, 1960.6], ESPL, PRACA, 12.0, pulo=0.3, destaque=2, numero="41 MESES", destaca=["marco:congresso", "marco:planalto", "marco:stf", "marco:catedral"],
+    bloco("lago-paranoa-1959", [1959.69, 1959.7, 1959.76], AMAURY, LAGO, 9.5, pulo=0.2, destaque=1, chega=0.3),
+    bloco("esplanada-1959", [1959.85, 1959.9, 1960.1], LAGO, ESPL, 8.5, pulo=0.2, destaque=2, chega=0.3),
+    # ------------------------------------------------ 5. ápice: a inauguração e a cidade inteira de cima
+    bloco("inauguracao-1960", [1960.1, 1960.3, 1960.6], ESPL, PRACA, 12.0, pulo=0.3, destaque=2, numero="41 MESES", chega=0.3,
+          destaca=["marco:congresso", "marco:planalto", "marco:stf", "marco:catedral"],
           detalhe="A data é o Dia de Tiradentes. Inauguram juntos o Congresso, o Planalto, o STF e a Esplanada; a Catedral ainda era só a estrutura das colunas.",),
-    bloco("censo-1960", [1960.6, 1960.67, 1960.6701], PRACA, FIM, 9.0, pulo=0.2, destaque=2),
-    {"id": "fecho", "anos": [1960.67, 1960.67], "cam": [FIM, FIM2], "dur": 14.0},
+    bloco("censo-1960", [1960.6, 1960.67, 1960.6701], PRACA, REVELA, 11.0, pulo=0.2, destaque=2, chega=0.55,
+          rotulos=[{"lon": lo, "lat": la, "texto": t, "z": round(zc(lo, la) + 150, 1), "tam": 40} for t, lo, la in
+                   [("ASA SUL", -47.897, -15.818), ("EIXO MONUMENTAL", -47.893, -15.776), ("PRAÇA DOS TRÊS PODERES", -47.861, -15.801),
+                    ("LAGO PARANOÁ", -47.835, -15.770)]]),
+    # epílogo: a cruz riscada em 1960 vira a cidade de hoje (os prédios nascem no ano do bairro até 2022)
+    bloco("censo-2022", [1960.6701, 2022.6, 2022.6], REVELA, REVELA2, 11.0, pulo=3.5, destaque=2, chega=0.5),
+    {"id": "fecho", "anos": [2022.6, 2022.6], "cam": [REVELA2, REVELA3], "dur": 12.0},
 ]
 
 # ---------------------------------------------------------------- imagens de época
@@ -267,9 +286,9 @@ roteiro = {
     "titulo": "A construção de Brasília",
     "exz": EXZ, "exb": 1.5, "marcos_ez": 1.25, "predios_neutros": True, "voo_alto": True, "cartaoDireita": 660, "cartaoEsquerda": 500,
     "hud_de_bloco": "igreja-sao-sebastiao-planaltina",
-    "linha": {"de": 1800, "ate": 1961},
+    "linha": {"de": 1800, "ate": 2023},
     "popRotulo": "habitantes na área do DF",
-    "fim": {"titulo": "A construção de Brasília", "sub": "1892 Cruls demarca → 1955 Sítio Castanho → 1956 Novacap → 41 meses de obra → 21/4/1960",
+    "fim": {"titulo": "A construção de Brasília", "sub": "1892 Cruls demarca → 1956 Novacap → 41 meses de obra → 21/4/1960 → 2,8 milhões em 2022",
             "marca": "INEMA<span>.CLUB</span>", "fica": True, "escuro": 0.25, "dura": 7.0},
     "longe": {"auto": True},
     "regimes": REG,

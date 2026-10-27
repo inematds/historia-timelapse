@@ -10,12 +10,12 @@
  "hud_de_bloco": "igreja-sao-sebastiao-planaltina",
  "linha": {
   "de": 1800,
-  "ate": 1961
+  "ate": 2023
  },
  "popRotulo": "habitantes na área do DF",
  "fim": {
   "titulo": "A construção de Brasília",
-  "sub": "1892 Cruls demarca → 1955 Sítio Castanho → 1956 Novacap → 41 meses de obra → 21/4/1960",
+  "sub": "1892 Cruls demarca → 1956 Novacap → 41 meses de obra → 21/4/1960 → 2,8 milhões em 2022",
   "marca": "INEMA<span>.CLUB</span>",
   "fica": true,
   "escuro": 0.25,
@@ -4609,10 +4609,10 @@
      "z": 1754.8
     }
    ],
-   "dur": 5.5,
+   "dur": 5.0,
    "capa": {
     "imagem": "assets/capa_full.jpg",
-    "segura": 5.5,
+    "segura": 5.0,
     "some": 0.8
    }
   },
@@ -4640,7 +4640,7 @@
      "z": 1754.8
     }
    ],
-   "dur": 9.5,
+   "dur": 9.0,
    "corte": true,
    "globo": {
     "raster": true,
@@ -4729,13 +4729,13 @@
     {
      "lon": -47.66222,
      "lat": -15.62233,
-     "zoom": 18.2,
+     "zoom": 17.6,
      "pitch": 55,
      "bearing": 160,
      "z": 1513.2
     }
    ],
-   "dur": 9.5,
+   "dur": 9.0,
    "cartao": {
     "titulo": "A IGREJA MAIS <b>ANTIGA DO DF</b>",
     "numero": "1810",
@@ -4778,7 +4778,7 @@
     {
      "lon": -47.66222,
      "lat": -15.62233,
-     "zoom": 18.2,
+     "zoom": 17.6,
      "pitch": 55,
      "bearing": 160,
      "z": 1513.2
@@ -4792,7 +4792,7 @@
      "z": 1513.1
     }
    ],
-   "dur": 8.5,
+   "dur": 7.5,
    "cartao": {
     "titulo": "O ARRAIAL DE <b>MESTRE D'ARMAS</b>",
     "numero": "1859",
@@ -4804,7 +4804,8 @@
      -15.623547
     ]
    },
-   "pulo": 1.4,
+   "pulo": 1.2,
+   "chega": 0.3,
    "rotulos": [
     {
      "lon": -47.6615,
@@ -4840,7 +4841,7 @@
      "z": 1509.1
     }
    ],
-   "dur": 9.5,
+   "dur": 7.5,
    "cartao": {
     "titulo": "A MISSÃO <b>CRULS CHEGA</b>",
     "numero": "22 HOMENS",
@@ -4852,7 +4853,8 @@
      -15.623547
     ]
    },
-   "pulo": 1.4,
+   "pulo": 1.2,
+   "chega": 0.3,
    "imagem": {
     "src": "assets/epoca/n00.jpg",
     "legenda": "Os membros da Missão Cruls",
@@ -4876,15 +4878,15 @@
      "z": 1509.1
     },
     {
-     "lon": -47.86,
-     "lat": -15.75,
-     "zoom": 12.4,
-     "pitch": 0,
-     "bearing": 0,
-     "z": 1600.0
+     "lon": -47.672,
+     "lat": -15.668,
+     "zoom": 14.4,
+     "pitch": 48,
+     "bearing": 185,
+     "z": 1489.2
     }
    ],
-   "dur": 12.0,
+   "dur": 11.0,
    "cartao": {
     "titulo": "O <b>QUADRILÁTERO CRULS</b>",
     "numero": "14.400 KM²",
@@ -4900,8 +4902,8 @@
    "pulso": false,
    "globo": {
     "raster": true,
-    "entra": 1.2,
-    "some": 1.4,
+    "entra": 1.0,
+    "some": 1.3,
     "br_ate": 9000,
     "uf": null,
     "chaves": [
@@ -4932,9 +4934,9 @@
      [
       1,
       {
-       "lon": -47.86,
-       "lat": -15.75,
-       "ls": 12.339
+       "lon": -47.672,
+       "lat": -15.668,
+       "ls": 13.725
       }
      ]
     ],
@@ -5001,105 +5003,31 @@
    }
   },
   {
-   "id": "acampamento-cruls-1894",
-   "anos": [
-    1892.95,
-    1894.85,
-    1894.9
-   ],
-   "cam": [
-    {
-     "lon": -47.86,
-     "lat": -15.75,
-     "zoom": 12.4,
-     "pitch": 0,
-     "bearing": 0,
-     "z": 1600.0
-    },
-    {
-     "lon": -47.86,
-     "lat": -15.73,
-     "zoom": 13.2,
-     "pitch": 48,
-     "bearing": 160,
-     "z": 1623.1
-    }
-   ],
-   "dur": 9.5,
-   "cartao": {
-    "titulo": "CRULS ACAMPA <b>NO PARANOÁ</b>",
-    "numero": "20 A 25 KM DE LAGO",
-    "legenda": "Na 2ª missão, Cruls monta o acampamento-geral no vale do Paranoá, na beira do Bananal",
-    "detalhe": "O botânico Glaziou anda pelo vale dos rios Torto, Gama, Riacho Fundo e Bananal e propõe fechar a garganta do Paranoá com um dique para formar 'um lago navegável'. O relatório de 1896 aponta o platô Gama–Torto.",
-    "fonte": "Senado; doc.brazilia.jor.br; Wikipédia",
-    "local": [
-     -47.912798,
-     -15.728406
-    ]
-   },
-   "pulo": 0.8,
-   "rotulos": [
-    {
-     "lon": -47.885,
-     "lat": -15.838,
-     "texto": "RIACHO FUNDO · GAMA",
-     "z": 1161.7,
-     "tam": 28
-    },
-    {
-     "lon": -47.85,
-     "lat": -15.745,
-     "texto": "TORTO · BANANAL",
-     "z": 1177.2,
-     "tam": 28
-    },
-    {
-     "lon": -47.795,
-     "lat": -15.8,
-     "texto": "RIO PARANOÁ",
-     "z": 1183.2,
-     "tam": 28
-    },
-    {
-     "lon": -47.85,
-     "lat": -15.79,
-     "texto": "VALE DO PARANOÁ · ONDE GLAZIOU QUER O LAGO",
-     "z": 1174.4,
-     "tam": 30
-    }
-   ],
-   "imagem": {
-    "src": "assets/epoca/n01.jpg",
-    "legenda": "Um acampamento da Comissão Exploradora",
-    "credito": "Henrique Morize · 1894 · domínio público (Wikimedia Commons)"
-   }
-  },
-  {
    "id": "pedra-fundamental-planalto-1922",
    "anos": [
-    1894.9,
+    1892.95,
     1922.68,
     1922.8
    ],
    "cam": [
     {
-     "lon": -47.86,
-     "lat": -15.73,
-     "zoom": 13.2,
+     "lon": -47.672,
+     "lat": -15.668,
+     "zoom": 14.4,
      "pitch": 48,
-     "bearing": 160,
-     "z": 1623.1
+     "bearing": 185,
+     "z": 1489.2
     },
     {
      "lon": -47.679135,
      "lat": -15.68555,
-     "zoom": 19.0,
+     "zoom": 17.6,
      "pitch": 45,
      "bearing": 180,
      "z": 1630.1
     }
    ],
-   "dur": 10.0,
+   "dur": 8.5,
    "cartao": {
     "titulo": "A PEDRA <b>NO MORRO</b>",
     "numero": "3,75 M",
@@ -5111,7 +5039,8 @@
      -15.685365
     ]
    },
-   "pulo": 1.4,
+   "pulo": 1.2,
+   "chega": 0.3,
    "destaca": [
     "marco:pedra"
    ],
@@ -5122,75 +5051,28 @@
    }
   },
   {
-   "id": "brazlandia-1933",
-   "anos": [
-    1922.8,
-    1933.42,
-    1933.6
-   ],
-   "cam": [
-    {
-     "lon": -47.679135,
-     "lat": -15.68555,
-     "zoom": 19.0,
-     "pitch": 45,
-     "bearing": 180,
-     "z": 1630.1
-    },
-    {
-     "lon": -47.98,
-     "lat": -15.78,
-     "zoom": 12.9,
-     "pitch": 45,
-     "bearing": 260,
-     "z": 1774.4
-    }
-   ],
-   "dur": 8.0,
-   "cartao": {
-    "titulo": "BRAZLÂNDIA <b></b>",
-    "numero": "POVOADO",
-    "legenda": "O povoado de Brazlândia, no oeste, é o outro núcleo antigo da área do futuro DF",
-    "detalhe": "Nasceu como distrito de Santa Luzia (Luziânia) em 1932. Em 1959 o censo experimental ainda o chamava de 'povoado', ao lado da cidade de Planaltina e da zona rural.",
-    "fonte": "Wikipédia; IBGE",
-    "local": [
-     -48.20083,
-     -15.675
-    ]
-   },
-   "pulo": 0.8,
-   "setas_tela": [
-    {
-     "texto": "← BRAZLÂNDIA",
-     "sub": "povoado de 1933 · fora do mapa",
-     "x": 60,
-     "y": 520
-    }
-   ]
-  },
-  {
    "id": "constituicao-1946",
    "anos": [
-    1933.6,
+    1922.8,
     1946.71,
     1946.8
    ],
    "cam": [
     {
-     "lon": -47.98,
-     "lat": -15.78,
-     "zoom": 12.9,
+     "lon": -47.679135,
+     "lat": -15.68555,
+     "zoom": 17.6,
      "pitch": 45,
-     "bearing": 260,
-     "z": 1774.4
+     "bearing": 180,
+     "z": 1630.1
     },
     {
-     "lon": -47.86,
-     "lat": -15.77,
-     "zoom": 12.4,
-     "pitch": 30,
-     "bearing": -10,
-     "z": 1643.7
+     "lon": -47.885,
+     "lat": -15.79,
+     "zoom": 13.0,
+     "pitch": 45,
+     "bearing": -14,
+     "z": 1755.1
     }
    ],
    "dur": 8.5,
@@ -5224,12 +5106,12 @@
    ],
    "cam": [
     {
-     "lon": -47.86,
-     "lat": -15.77,
-     "zoom": 12.4,
-     "pitch": 30,
-     "bearing": -10,
-     "z": 1643.7
+     "lon": -47.885,
+     "lat": -15.79,
+     "zoom": 13.0,
+     "pitch": 45,
+     "bearing": -14,
+     "z": 1755.1
     },
     {
      "lon": -47.905,
@@ -5240,7 +5122,7 @@
      "z": 1821.9
     }
    ],
-   "dur": 10.0,
+   "dur": 8.5,
    "cartao": {
     "titulo": "O <b>SÍTIO CASTANHO</b>",
     "numero": "867 PONTOS",
@@ -5254,6 +5136,7 @@
    },
    "pulo": 0.8,
    "pulso_r": 2500,
+   "chega": 0.3,
    "rotulos": [
     {
      "lon": -47.915365,
@@ -5265,11 +5148,11 @@
    ]
   },
   {
-   "id": "fazenda-bananal-1955",
+   "id": "novacap-1956",
    "anos": [
     1955.35,
-    1955.99,
-    1955.9901
+    1956.72,
+    1956.74
    ],
    "cam": [
     {
@@ -5281,63 +5164,15 @@
      "z": 1821.9
     },
     {
-     "lon": -47.875,
-     "lat": -15.792,
-     "zoom": 12.6,
-     "pitch": 45,
-     "bearing": -14,
-     "z": 1718.2
+     "lon": -47.965,
+     "lat": -15.885,
+     "zoom": 13.6,
+     "pitch": 50,
+     "bearing": -20,
+     "z": 1712.0
     }
    ],
-   "dur": 9.5,
-   "cartao": {
-    "titulo": "A <b>FAZENDA BANANAL</b>",
-    "numero": "4.330 ALQUEIRES",
-    "legenda": "Goiás compra a Fazenda Bananal, 4.330 alqueires onde hoje está quase toda Brasília",
-    "detalhe": "A desapropriação começou pelo decreto de Goiás. No total, cerca de mil fazendas foram desapropriadas, no todo ou em parte (Agência Brasil).",
-    "fonte": "edicao.correiobraziliense.com.br; jornalopcao.com.br; agenciabrasil.ebc.com.br",
-    "local": [
-     -47.8828,
-     -15.7939
-    ]
-   },
-   "pulo": 0.4,
-   "rotulos": [
-    {
-     "lon": -47.88,
-     "lat": -15.79,
-     "texto": "FAZENDA BANANAL",
-     "z": 1233.7,
-     "tam": 30
-    }
-   ]
-  },
-  {
-   "id": "novacap-1956",
-   "anos": [
-    1956.0,
-    1956.72,
-    1956.74
-   ],
-   "cam": [
-    {
-     "lon": -47.875,
-     "lat": -15.792,
-     "zoom": 12.6,
-     "pitch": 45,
-     "bearing": -14,
-     "z": 1718.2
-    },
-    {
-     "lon": -47.86,
-     "lat": -15.77,
-     "zoom": 12.4,
-     "pitch": 30,
-     "bearing": -10,
-     "z": 1643.7
-    }
-   ],
-   "dur": 9.0,
+   "dur": 8.5,
    "cartao": {
     "titulo": "A LEI <b>DA NOVACAP</b>",
     "numero": "19/9/1956",
@@ -5368,23 +5203,23 @@
    ],
    "cam": [
     {
-     "lon": -47.86,
-     "lat": -15.77,
-     "zoom": 12.4,
-     "pitch": 30,
-     "bearing": -10,
-     "z": 1643.7
-    },
-    {
-     "lon": -47.978,
-     "lat": -15.912,
-     "zoom": 14.2,
+     "lon": -47.965,
+     "lat": -15.885,
+     "zoom": 13.6,
      "pitch": 50,
      "bearing": -20,
-     "z": 1781.6
+     "z": 1712.0
+    },
+    {
+     "lon": -47.9883,
+     "lat": -15.944,
+     "zoom": 15.6,
+     "pitch": 52,
+     "bearing": -20,
+     "z": 1879.7
     }
    ],
-   "dur": 9.0,
+   "dur": 7.5,
    "cartao": {
     "titulo": "JK PISA <b>NO CERRADO</b>",
     "numero": "2/10/1956",
@@ -5397,6 +5232,7 @@
     ]
    },
    "pulo": 0.2,
+   "chega": 0.3,
    "rotulos": [
     {
      "lon": -47.988333,
@@ -5408,31 +5244,79 @@
    ]
   },
   {
-   "id": "novacap-sede-1956",
+   "id": "catetinho-1956",
    "anos": [
     1956.79,
     1956.8,
-    1956.85
+    1956.83
    ],
    "cam": [
     {
-     "lon": -47.978,
-     "lat": -15.912,
-     "zoom": 14.2,
-     "pitch": 50,
+     "lon": -47.9883,
+     "lat": -15.944,
+     "zoom": 15.6,
+     "pitch": 52,
      "bearing": -20,
-     "z": 1781.6
+     "z": 1879.7
+    },
+    {
+     "lon": -47.9883,
+     "lat": -15.9472,
+     "zoom": 17.6,
+     "pitch": 55,
+     "bearing": -20,
+     "z": 1887.6
+    }
+   ],
+   "dur": 7.5,
+   "cartao": {
+    "titulo": "PALÁCIO DE TÁBUAS EM <b>10 DIAS</b>",
+    "numero": "10 DIAS",
+    "legenda": "O Catetinho, de Niemeyer, é a 1ª residência oficial do presidente no cerrado",
+    "detalhe": "Casa de madeira sobre pilotis, erguida por cerca de vinte homens em dez dias. O nome brinca com o Palácio do Catete, sede do governo no Rio.",
+    "fonte": "Wikipédia",
+    "local": [
+     -47.988333,
+     -15.9475
+    ]
+   },
+   "pulo": 0.2,
+   "chega": 0.3,
+   "destaca": [
+    "marco:catetinho"
+   ],
+   "imagem": {
+    "src": "assets/epoca/e00.jpg",
+    "legenda": "O Catetinho, o 'palácio de tábuas', em 1956",
+    "credito": "Agência Nacional · 1956 · domínio público (Wikimedia Commons)"
+   }
+  },
+  {
+   "id": "novacap-sede-1956",
+   "anos": [
+    1956.83,
+    1956.84,
+    1956.9
+   ],
+   "cam": [
+    {
+     "lon": -47.9883,
+     "lat": -15.9472,
+     "zoom": 17.6,
+     "pitch": 55,
+     "bearing": -20,
+     "z": 1887.6
     },
     {
      "lon": -47.9499,
      "lat": -15.8543,
-     "zoom": 18.4,
+     "zoom": 17.4,
      "pitch": 56,
      "bearing": -30,
      "z": 1660.1
     }
    ],
-   "dur": 10.0,
+   "dur": 8.5,
    "cartao": {
     "titulo": "O QUARTEL-GENERAL <b>DA OBRA</b>",
     "numero": "1956–1959",
@@ -5455,78 +5339,31 @@
    }
   },
   {
-   "id": "catetinho-1956",
-   "anos": [
-    1956.85,
-    1956.86,
-    1956.95
-   ],
-   "cam": [
-    {
-     "lon": -47.9499,
-     "lat": -15.8543,
-     "zoom": 18.4,
-     "pitch": 56,
-     "bearing": -30,
-     "z": 1660.1
-    },
-    {
-     "lon": -47.9883,
-     "lat": -15.9472,
-     "zoom": 18.7,
-     "pitch": 55,
-     "bearing": -20,
-     "z": 1887.6
-    }
-   ],
-   "dur": 9.5,
-   "cartao": {
-    "titulo": "PALÁCIO DE TÁBUAS EM <b>10 DIAS</b>",
-    "numero": "10 DIAS",
-    "legenda": "O Catetinho, de Niemeyer, é a 1ª residência oficial do presidente no cerrado",
-    "detalhe": "Casa de madeira sobre pilotis, erguida por cerca de vinte homens em dez dias. O nome brinca com o Palácio do Catete, sede do governo no Rio.",
-    "fonte": "Wikipédia",
-    "local": [
-     -47.988333,
-     -15.9475
-    ]
-   },
-   "pulo": 0.2,
-   "destaca": [
-    "marco:catetinho"
-   ],
-   "imagem": {
-    "src": "assets/epoca/e00.jpg",
-    "legenda": "O Catetinho, o 'palácio de tábuas', em 1956",
-    "credito": "Agência Nacional · 1956 · domínio público (Wikimedia Commons)"
-   }
-  },
-  {
    "id": "cidade-livre-1956",
    "anos": [
-    1956.95,
+    1956.9,
     1956.97,
     1956.9701
    ],
    "cam": [
     {
-     "lon": -47.9883,
-     "lat": -15.9472,
-     "zoom": 18.7,
-     "pitch": 55,
-     "bearing": -20,
-     "z": 1887.6
+     "lon": -47.9499,
+     "lat": -15.8543,
+     "zoom": 17.4,
+     "pitch": 56,
+     "bearing": -30,
+     "z": 1660.1
     },
     {
-     "lon": -47.966,
-     "lat": -15.866,
-     "zoom": 14.6,
+     "lon": -47.962,
+     "lat": -15.864,
+     "zoom": 15.4,
      "pitch": 52,
      "bearing": -25,
-     "z": 1647.4
+     "z": 1630.6
     }
    ],
-   "dur": 8.5,
+   "dur": 7.5,
    "cartao": {
     "titulo": "A CIDADE <b>LIVRE</b>",
     "numero": "1956",
@@ -5539,6 +5376,7 @@
     ]
    },
    "pulo": 0.2,
+   "chega": 0.3,
    "imagem": {
     "src": "assets/epoca/n12.jpg",
     "legenda": "A primeira igreja da Cidade Livre, 1957",
@@ -5557,29 +5395,29 @@
   {
    "id": "comando-1957",
    "anos": [
+    1957.0,
     1957.02,
-    1957.04,
-    1957.06
+    1957.05
    ],
    "cam": [
     {
-     "lon": -47.966,
-     "lat": -15.866,
-     "zoom": 14.6,
+     "lon": -47.962,
+     "lat": -15.864,
+     "zoom": 15.4,
      "pitch": 52,
      "bearing": -25,
-     "z": 1647.4
+     "z": 1630.6
     },
     {
-     "lon": -47.95,
-     "lat": -15.8546,
-     "zoom": 17.4,
+     "lon": -47.957,
+     "lat": -15.862,
+     "zoom": 14.8,
      "pitch": 52,
      "bearing": -30,
-     "z": 1659.1
+     "z": 1638.1
     }
    ],
-   "dur": 11.0,
+   "dur": 10.0,
    "cartao": {
     "titulo": "DE ONDE <b>SE MANDAVA</b>",
     "numero": "3 LUGARES",
@@ -5593,6 +5431,7 @@
    },
    "pulo": 0.2,
    "pulso": false,
+   "chega": 0.3,
    "setas_tela": [
     {
      "texto": "↘ RIO DE JANEIRO",
@@ -5620,29 +5459,29 @@
   {
    "id": "vila-planalto-1957",
    "anos": [
-    1957.06,
+    1957.05,
     1957.09,
     1957.15
    ],
    "cam": [
     {
-     "lon": -47.95,
-     "lat": -15.8546,
-     "zoom": 17.4,
+     "lon": -47.957,
+     "lat": -15.862,
+     "zoom": 14.8,
      "pitch": 52,
      "bearing": -30,
-     "z": 1659.1
+     "z": 1638.1
     },
     {
      "lon": -47.8508,
      "lat": -15.7938,
-     "zoom": 17.2,
+     "zoom": 16.4,
      "pitch": 56,
      "bearing": 0,
      "z": 1658.4
     }
    ],
-   "dur": 9.5,
+   "dur": 9.0,
    "cartao": {
     "titulo": "OS ACAMPAMENTOS <b>DA OBRA</b>",
     "numero": "22 ACAMPAMENTOS",
@@ -5686,7 +5525,7 @@
     {
      "lon": -47.8508,
      "lat": -15.7938,
-     "zoom": 17.2,
+     "zoom": 16.4,
      "pitch": 56,
      "bearing": 0,
      "z": 1658.4
@@ -5700,7 +5539,7 @@
      "z": 1718.2
     }
    ],
-   "dur": 11.0,
+   "dur": 9.5,
    "cartao": {
     "titulo": "O SINAL <b>DA CRUZ</b>",
     "numero": "26 PROJETOS",
@@ -5752,15 +5591,15 @@
      "z": 1718.2
     },
     {
-     "lon": -47.914,
-     "lat": -15.784,
-     "zoom": 15.8,
+     "lon": -47.91,
+     "lat": -15.79,
+     "zoom": 15.2,
      "pitch": 55,
      "bearing": 106,
-     "z": 1873.4
+     "z": 1834.5
     }
    ],
-   "dur": 8.5,
+   "dur": 7.5,
    "cartao": {
     "titulo": "A <b>PRIMEIRA MISSA</b>",
     "numero": "3/5/1957",
@@ -5773,6 +5612,7 @@
     ]
    },
    "pulo": 0.2,
+   "chega": 0.3,
    "imagem": {
     "src": "assets/epoca/e02.jpg",
     "legenda": "A primeira missa de Brasília, 1957",
@@ -5789,131 +5629,31 @@
    ]
   },
   {
-   "id": "barragem-paranoa-obra-1957",
-   "anos": [
-    1957.4,
-    1957.44,
-    1957.47
-   ],
-   "cam": [
-    {
-     "lon": -47.914,
-     "lat": -15.784,
-     "zoom": 15.8,
-     "pitch": 55,
-     "bearing": 106,
-     "z": 1873.4
-    },
-    {
-     "lon": -47.79,
-     "lat": -15.803,
-     "zoom": 15.6,
-     "pitch": 55,
-     "bearing": 40,
-     "z": 1697.8
-    }
-   ],
-   "dur": 9.0,
-   "cartao": {
-    "titulo": "A BARRAGEM <b>DO PARANOÁ</b>",
-    "numero": "12/6/1957",
-    "legenda": "Na garganta onde o Paranoá sai do vale, a Novacap contrata a barragem que vai criar o lago",
-    "detalhe": "A americana Raymond Concrete Pile tinha 17 meses; atrasou e a obra passou a seis firmas brasileiras. A barragem só fechou em 12/9/1959.",
-    "fonte": "Senado; Wikipédia",
-    "local": [
-     -47.784798,
-     -15.799752
-    ]
-   },
-   "pulo": 0.2,
-   "imagem": {
-    "src": "assets/epoca/n07.jpg",
-    "legenda": "A crista da barragem pronta, 1960",
-    "credito": "Agência Nacional · 1960 · domínio público (Wikimedia Commons)"
-   },
-   "rotulos": [
-    {
-     "lon": -47.784798,
-     "lat": -15.799752,
-     "texto": "BARRAGEM DO PARANOÁ",
-     "z": 1148.4,
-     "tam": 30
-    }
-   ]
-  },
-  {
-   "id": "hjko-1957",
-   "anos": [
-    1957.47,
-    1957.51,
-    1957.7
-   ],
-   "cam": [
-    {
-     "lon": -47.79,
-     "lat": -15.803,
-     "zoom": 15.6,
-     "pitch": 55,
-     "bearing": 40,
-     "z": 1697.8
-    },
-    {
-     "lon": -47.9596,
-     "lat": -15.8608,
-     "zoom": 18.2,
-     "pitch": 56,
-     "bearing": -30,
-     "z": 1662.9
-    }
-   ],
-   "dur": 9.0,
-   "cartao": {
-    "titulo": "O HOSPITAL <b>DOS CANDANGOS</b>",
-    "numero": "23 PRÉDIOS",
-    "legenda": "O Hospital JK, 23 prédios de madeira erguidos em dois meses, atende operários acidentados",
-    "detalhe": "Primeiro hospital do novo DF, perto da sede da Novacap e da Cidade Livre: hospital, casas de médicos e alojamentos. Fechou em 1974; desde 1990 é o Museu Vivo da Memória Candanga.",
-    "fonte": "Wikipédia",
-    "local": [
-     -47.959553,
-     -15.860222
-    ]
-   },
-   "pulo": 0.2,
-   "destaca": [
-    "marco:hjko"
-   ],
-   "imagem": {
-    "src": "assets/epoca/n13.jpg",
-    "legenda": "Os galpões do Hospital JK hoje (foto de 2017)",
-    "credito": "Gabriel de Abreu Costa Pinto · 2017 · CC BY-SA 4.0 (Wikimedia Commons)"
-   }
-  },
-  {
    "id": "lei-3273-1957",
    "anos": [
-    1957.7,
+    1957.4,
     1957.75,
     1957.95
    ],
    "cam": [
     {
-     "lon": -47.9596,
-     "lat": -15.8608,
-     "zoom": 18.2,
-     "pitch": 56,
-     "bearing": -30,
-     "z": 1662.9
+     "lon": -47.91,
+     "lat": -15.79,
+     "zoom": 15.2,
+     "pitch": 55,
+     "bearing": 106,
+     "z": 1834.5
     },
     {
-     "lon": -47.875,
-     "lat": -15.792,
-     "zoom": 12.6,
-     "pitch": 45,
-     "bearing": -14,
-     "z": 1718.2
+     "lon": -47.885,
+     "lat": -15.795,
+     "zoom": 13.4,
+     "pitch": 42,
+     "bearing": 106,
+     "z": 1751.2
     }
    ],
-   "dur": 9.0,
+   "dur": 7.5,
    "cartao": {
     "titulo": "DATA <b>MARCADA: 21/4/1960</b>",
     "numero": "1/10/1957",
@@ -5926,6 +5666,7 @@
     ]
    },
    "pulo": 0.3,
+   "chega": 0.3,
    "setas_tela": [
     {
      "texto": "↘ RIO DE JANEIRO",
@@ -5949,25 +5690,25 @@
    ],
    "cam": [
     {
-     "lon": -47.875,
-     "lat": -15.792,
-     "zoom": 12.6,
-     "pitch": 45,
-     "bearing": -14,
-     "z": 1718.2
+     "lon": -47.885,
+     "lat": -15.795,
+     "zoom": 13.4,
+     "pitch": 42,
+     "bearing": 106,
+     "z": 1751.2
     },
     {
-     "lon": -47.882,
-     "lat": -15.793,
-     "zoom": 12.9,
-     "pitch": 40,
+     "lon": -47.885,
+     "lat": -15.795,
+     "zoom": 13.4,
+     "pitch": 42,
      "bearing": 106,
-     "z": 1742.4
+     "z": 1751.2
     }
    ],
-   "dur": 8.5,
+   "dur": 7.0,
    "cartao": {
-    "titulo": "28.804 <b>PESSOAS</b>",
+    "titulo": "A CONTAGEM DE 1958",
     "numero": "28.804",
     "legenda": "Oito meses depois da contagem de 1957, o IBGE conta 28.804 pessoas no futuro DF",
     "detalhe": "Eram cerca de 500 em alojamentos no fim de 1956 e 2.500 em janeiro de 1957. Crescia em média 2.100 pessoas por mês.",
@@ -5980,78 +5721,31 @@
    "pulo": 0.3
   },
   {
-   "id": "alvorada-1958",
-   "anos": [
-    1958.4,
-    1958.49,
-    1958.492
-   ],
-   "cam": [
-    {
-     "lon": -47.882,
-     "lat": -15.793,
-     "zoom": 12.9,
-     "pitch": 40,
-     "bearing": 106,
-     "z": 1742.4
-    },
-    {
-     "lon": -47.8226,
-     "lat": -15.7928,
-     "zoom": 18.3,
-     "pitch": 56,
-     "bearing": 90,
-     "z": 1617.1
-    }
-   ],
-   "dur": 10.0,
-   "cartao": {
-    "titulo": "PALÁCIO <b>DA ALVORADA</b>",
-    "numero": "18 MESES DE OBRA",
-    "legenda": "O 1º palácio inaugurado na nova capital: a residência do presidente, à beira do futuro lago",
-    "detalhe": "Barra de vidro de 110 × 30,75 m cercada pelas colunas que só tocam o chão.",
-    "fonte": "Wikipédia; ufrgs.br",
-    "local": [
-     -47.822175,
-     -15.792772
-    ]
-   },
-   "pulo": 0.3,
-   "destaca": [
-    "marco:alvorada"
-   ],
-   "imagem": {
-    "src": "assets/epoca/e05.jpg",
-    "legenda": "O Alvorada recém-concluído, 1958",
-    "credito": "Agência Nacional · 1958 · domínio público (Wikimedia Commons)"
-   }
-  },
-  {
    "id": "fatima-1958",
    "anos": [
-    1958.492,
-    1958.493,
-    1958.6
+    1958.2,
+    1958.488,
+    1958.489
    ],
    "cam": [
     {
-     "lon": -47.8226,
-     "lat": -15.7928,
-     "zoom": 18.3,
-     "pitch": 56,
-     "bearing": 90,
-     "z": 1617.1
+     "lon": -47.885,
+     "lat": -15.795,
+     "zoom": 13.4,
+     "pitch": 42,
+     "bearing": 106,
+     "z": 1751.2
     },
     {
      "lon": -47.9038,
      "lat": -15.8145,
-     "zoom": 17.6,
+     "zoom": 16.8,
      "pitch": 56,
      "bearing": -20,
      "z": 1763.6
     }
    ],
-   "dur": 9.0,
+   "dur": 8.0,
    "cartao": {
     "titulo": "A IGREJINHA EM <b>100 DIAS</b>",
     "numero": "100 DIAS",
@@ -6063,7 +5757,8 @@
      -15.813973
     ]
    },
-   "pulo": 0.2,
+   "pulo": 0.3,
+   "chega": 0.3,
    "destaca": [
     "marco:fatima"
    ],
@@ -6074,84 +5769,78 @@
    }
   },
   {
-   "id": "rota-anapolis",
+   "id": "alvorada-1958",
    "anos": [
-    1958.6,
-    1958.7,
-    1958.95
+    1958.489,
+    1958.494,
+    1958.6
    ],
    "cam": [
     {
      "lon": -47.9038,
      "lat": -15.8145,
-     "zoom": 17.6,
+     "zoom": 16.8,
      "pitch": 56,
      "bearing": -20,
      "z": 1763.6
     },
     {
-     "lon": -47.95,
-     "lat": -15.85,
-     "zoom": 13.0,
-     "pitch": 50,
-     "bearing": 230,
-     "z": 1673.7
+     "lon": -47.8226,
+     "lat": -15.7928,
+     "zoom": 17.2,
+     "pitch": 56,
+     "bearing": 90,
+     "z": 1617.1
     }
    ],
    "dur": 9.0,
    "cartao": {
-    "titulo": "O TREM PARAVA <b>EM ANÁPOLIS</b>",
-    "numero": "139 KM",
-    "legenda": "O material chegava de trem até Anápolis, a 139 km do canteiro, e seguia de caminhão",
-    "detalhe": "Não havia materiais no planalto além de pedra, tijolo e madeira; muito vinha de avião. O asfalto só chegou a Brasília em 1960, na fase final da obra.",
-    "fonte": "Wikipédia",
+    "titulo": "PALÁCIO <b>DA ALVORADA</b>",
+    "numero": "18 MESES DE OBRA",
+    "legenda": "O 1º palácio de concreto da nova capital: a residência do presidente, à beira do futuro lago",
+    "detalhe": "Barra de vidro de 110 × 30,75 m cercada pelas colunas que só tocam o chão.",
+    "fonte": "Wikipédia; ufrgs.br",
     "local": [
-     -48.9528,
-     -16.32694
+     -47.822175,
+     -15.792772
     ]
    },
-   "pulo": 0.3,
-   "pulso": false,
-   "setas_tela": [
-    {
-     "texto": "↙ ANÁPOLIS · 139 KM",
-     "sub": "fim dos trilhos",
-     "x": 60,
-     "y": 560
-    }
+   "pulo": 0.2,
+   "destaca": [
+    "marco:alvorada"
    ],
    "imagem": {
-    "src": "assets/epoca/n11.jpg",
-    "legenda": "A estação de Anápolis, ponta dos trilhos, 1958",
-    "credito": "desconhecido · 1958 · domínio público (Wikimedia Commons)"
+    "src": "assets/epoca/e05.jpg",
+    "legenda": "O Alvorada recém-concluído, 1958",
+    "credito": "Agência Nacional · 1958 · domínio público (Wikimedia Commons)"
    }
   },
   {
    "id": "massacre-geb-1959",
    "anos": [
-    1958.95,
+    1958.6,
     1959.1,
     1959.3
    ],
    "cam": [
     {
-     "lon": -47.95,
-     "lat": -15.85,
-     "zoom": 13.0,
-     "pitch": 50,
-     "bearing": 230,
-     "z": 1673.7
+     "lon": -47.8226,
+     "lat": -15.7928,
+     "zoom": 17.2,
+     "pitch": 56,
+     "bearing": 90,
+     "z": 1617.1
     },
     {
      "lon": -47.8508,
      "lat": -15.7938,
-     "zoom": 17.2,
+     "zoom": 16.4,
      "pitch": 56,
      "bearing": 0,
      "z": 1658.4
     }
    ],
-   "dur": 9.0,
+   "dur": 8.5,
    "cartao": {
     "titulo": "MASSACRE <b>NO ACAMPAMENTO</b>",
     "numero": "CARNAVAL DE 1959",
@@ -6167,7 +5856,8 @@
    "tom": {
     "cor": "#a15050",
     "forca": 0.3
-   }
+   },
+   "chega": 0.3
   },
   {
    "id": "censo-experimental-1959",
@@ -6180,21 +5870,21 @@
     {
      "lon": -47.8508,
      "lat": -15.7938,
-     "zoom": 17.2,
+     "zoom": 16.4,
      "pitch": 56,
      "bearing": 0,
      "z": 1658.4
     },
     {
-     "lon": -47.882,
-     "lat": -15.793,
-     "zoom": 12.9,
-     "pitch": 40,
+     "lon": -47.885,
+     "lat": -15.795,
+     "zoom": 13.4,
+     "pitch": 42,
      "bearing": 106,
-     "z": 1742.4
+     "z": 1751.2
     }
    ],
-   "dur": 8.5,
+   "dur": 7.5,
    "cartao": {
     "titulo": "64 MIL <b>NO CANTEIRO</b>",
     "numero": "64.314",
@@ -6207,6 +5897,7 @@
     ]
    },
    "pulo": 0.2,
+   "chega": 0.3,
    "imagem": {
     "src": "assets/epoca/e01.jpg",
     "legenda": "Candangos no refeitório da obra",
@@ -6222,23 +5913,23 @@
    ],
    "cam": [
     {
-     "lon": -47.882,
-     "lat": -15.793,
-     "zoom": 12.9,
-     "pitch": 40,
+     "lon": -47.885,
+     "lat": -15.795,
+     "zoom": 13.4,
+     "pitch": 42,
      "bearing": 106,
-     "z": 1742.4
+     "z": 1751.2
     },
     {
      "lon": -47.8645,
      "lat": -15.7994,
-     "zoom": 17.2,
-     "pitch": 64,
+     "zoom": 16.6,
+     "pitch": 62,
      "bearing": 106,
      "z": 1692.8
     }
    ],
-   "dur": 10.0,
+   "dur": 8.5,
    "cartao": {
     "titulo": "AS <b>CÚPULAS SOBEM</b>",
     "numero": "28 ANDARES",
@@ -6251,6 +5942,7 @@
     ]
    },
    "pulo": 0.2,
+   "chega": 0.3,
    "destaca": [
     "marco:congresso"
    ],
@@ -6271,8 +5963,8 @@
     {
      "lon": -47.8645,
      "lat": -15.7994,
-     "zoom": 17.2,
-     "pitch": 64,
+     "zoom": 16.6,
+     "pitch": 62,
      "bearing": 106,
      "z": 1692.8
     },
@@ -6285,7 +5977,7 @@
      "z": 1618.4
     }
    ],
-   "dur": 9.0,
+   "dur": 7.5,
    "cartao": {
     "titulo": "A VILA QUE <b>VIROU LAGO</b>",
     "numero": "1957–1959",
@@ -6298,6 +5990,7 @@
     ]
    },
    "pulo": 0.2,
+   "chega": 0.3,
    "rotulos": [
     {
      "lon": -47.856,
@@ -6333,7 +6026,7 @@
      "z": 1614.2
     }
    ],
-   "dur": 10.0,
+   "dur": 9.5,
    "cartao": {
     "titulo": "O LAGO COMEÇA A <b>ENCHER</b>",
     "numero": "48 KM²",
@@ -6346,6 +6039,7 @@
     ]
    },
    "pulo": 0.2,
+   "chega": 0.3,
    "imagem": {
     "src": "assets/epoca/n08.jpg",
     "legenda": "O lago formado e a barragem ao fundo, 1960",
@@ -6386,7 +6080,7 @@
      "z": 1716.8
     }
    ],
-   "dur": 9.5,
+   "dur": 8.5,
    "cartao": {
     "titulo": "17 <b>BLOCOS IGUAIS</b>",
     "numero": "17 MINISTÉRIOS",
@@ -6399,6 +6093,7 @@
     ]
    },
    "pulo": 0.2,
+   "chega": 0.3,
    "imagem": {
     "src": "assets/epoca/e08.jpg",
     "legenda": "Os blocos dos ministérios em obra",
@@ -6443,6 +6138,7 @@
     ]
    },
    "pulo": 0.3,
+   "chega": 0.3,
    "destaca": [
     "marco:congresso",
     "marco:planalto",
@@ -6472,15 +6168,15 @@
      "z": 1690.3
     },
     {
-     "lon": -47.87,
-     "lat": -15.7968,
-     "zoom": 15.4,
-     "pitch": 55,
+     "lon": -47.865,
+     "lat": -15.79,
+     "zoom": 12.55,
+     "pitch": 18,
      "bearing": 106,
-     "z": 1713.9
+     "z": 1661.0
     }
    ],
-   "dur": 9.0,
+   "dur": 11.0,
    "cartao": {
     "titulo": "140 <b>MIL MORADORES</b>",
     "numero": "140.164",
@@ -6492,33 +6188,104 @@
      -15.79389
     ]
    },
-   "pulo": 0.2
+   "pulo": 0.2,
+   "chega": 0.55,
+   "rotulos": [
+    {
+     "lon": -47.897,
+     "lat": -15.818,
+     "texto": "ASA SUL",
+     "z": 1227.4,
+     "tam": 40
+    },
+    {
+     "lon": -47.893,
+     "lat": -15.776,
+     "texto": "EIXO MONUMENTAL",
+     "z": 1266.0,
+     "tam": 40
+    },
+    {
+     "lon": -47.861,
+     "lat": -15.801,
+     "texto": "PRAÇA DOS TRÊS PODERES",
+     "z": 1205.5,
+     "tam": 40
+    },
+    {
+     "lon": -47.835,
+     "lat": -15.77,
+     "texto": "LAGO PARANOÁ",
+     "z": 1150.0,
+     "tam": 40
+    }
+   ]
+  },
+  {
+   "id": "censo-2022",
+   "anos": [
+    1960.6701,
+    2022.6,
+    2022.6000999999999
+   ],
+   "cam": [
+    {
+     "lon": -47.865,
+     "lat": -15.79,
+     "zoom": 12.55,
+     "pitch": 18,
+     "bearing": 106,
+     "z": 1661.0
+    },
+    {
+     "lon": -47.88,
+     "lat": -15.8,
+     "zoom": 12.3,
+     "pitch": 22,
+     "bearing": 112,
+     "z": 1727.7
+    }
+   ],
+   "dur": 11.0,
+   "cartao": {
+    "titulo": "2,8 MILHÕES <b>NO DF</b>",
+    "numero": "2.817.381",
+    "legenda": "O Censo de 2022 conta 2.817.381 moradores no Distrito Federal",
+    "detalhe": "Em 1960 eram 140.164 — vinte vezes menos. O Plano Piloto, pensado para 500 mil, é hoje uma pequena parte do DF.",
+    "fonte": "ftp.ibge.gov.br; Wikipédia",
+    "local": [
+     -47.88278,
+     -15.79389
+    ]
+   },
+   "pulo": 3.5,
+   "chega": 0.5
   },
   {
    "id": "fecho",
    "anos": [
-    1960.67,
-    1960.67
+    2022.6,
+    2022.6
    ],
    "cam": [
     {
-     "lon": -47.87,
-     "lat": -15.7968,
-     "zoom": 15.4,
-     "pitch": 55,
-     "bearing": 106,
-     "z": 1713.9
+     "lon": -47.88,
+     "lat": -15.8,
+     "zoom": 12.3,
+     "pitch": 22,
+     "bearing": 112,
+     "z": 1727.7
     },
     {
-     "lon": -47.8735,
-     "lat": -15.7958,
-     "zoom": 15.1,
-     "pitch": 50,
-     "bearing": 106,
-     "z": 1721.2
+     "lon": -47.88,
+     "lat": -15.8,
+     "zoom": 12.2,
+     "pitch": 20,
+     "bearing": 116,
+     "z": 1727.7
     }
    ],
-   "dur": 14.0,
+   "dur": 12.0,
    "galeria": {
     "fica": true,
     "titulo": "Imagens <b>da época</b>",
